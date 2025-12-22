@@ -1,0 +1,37 @@
+{
+  "name": "eBay",
+  "domain": "ebay.com",
+  "version": "1.0.1",
+  "search": {
+    "url_template": "https://www.ebay.com/sch/i.html?_nkw={query}",
+    "query_encoding": "plus"
+  },
+  "extraction": {
+    "method": "semantic",
+    "container_hints": [
+      ".s-item__wrapper",
+      ".s-item",
+      "li.s-item",
+      "[data-viewport]",
+      ".srp-results li"
+    ],
+    "fields": {
+      "name": {
+        "semantic_type": "product_name",
+        "fallback_selectors": [".s-item__title span", ".s-item__title"]
+      },
+      "price": {
+        "semantic_type": "price",
+        "fallback_selectors": [".s-item__price"]
+      },
+      "image": {
+        "semantic_type": "product_image",
+        "fallback_selectors": [".s-item__image-wrapper img", ".s-item__image img"]
+      },
+      "url": {
+        "semantic_type": "product_url",
+        "fallback_selectors": [".s-item__link"]
+      }
+    }
+  }
+}

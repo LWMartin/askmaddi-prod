@@ -1,0 +1,31 @@
+{
+  "name": "Best Buy",
+  "domain": "bestbuy.com",
+  "version": "1.0.0",
+  "search": {
+    "url_template": "https://www.bestbuy.com/site/searchpage.jsp?st={query}",
+    "query_encoding": "plus"
+  },
+  "extraction": {
+    "method": "semantic",
+    "container_hints": [".sku-item", "[class*='sku-item']", ".list-item"],
+    "fields": {
+      "name": {
+        "semantic_type": "product_name",
+        "fallback_selectors": [".sku-title a", ".sku-header a"]
+      },
+      "price": {
+        "semantic_type": "price",
+        "fallback_selectors": [".priceView-customer-price span"]
+      },
+      "image": {
+        "semantic_type": "product_image",
+        "fallback_selectors": [".product-image img", "img.product-image"]
+      },
+      "url": {
+        "semantic_type": "product_url",
+        "fallback_selectors": [".sku-title a", ".sku-header a"]
+      }
+    }
+  }
+}

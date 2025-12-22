@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Maddi</title>
+    <link rel="stylesheet" href="css/maddi.css">
+</head>
+<body>
+    <div class="container">
+        <!-- LANDING STATE -->
+        <div id="state-landing" class="state active">
+            <header class="hero">
+                <h1>Ask Maddi</h1>
+                <p class="tagline">What are you looking for?</p>
+            </header>
+            
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="wireless headphones, standing desk, running shoes..."
+                    autofocus
+                >
+                <button id="search-button">Ask Maddi</button>
+            </div>
+            
+            <div class="examples">
+                <p>Try asking:</p>
+                <button class="example-chip" data-query="wireless headphones under $100">wireless headphones under $100</button>
+                <button class="example-chip" data-query="mechanical keyboard">mechanical keyboard</button>
+                <button class="example-chip" data-query="laptop for programming">laptop for programming</button>
+            </div>
+        </div>
+        
+        <!-- LOADING STATE -->
+        <div id="state-loading" class="state">
+            <header class="hero">
+                <h1>Ask Maddi</h1>
+                <p class="tagline">Searching for you...</p>
+            </header>
+            
+            <div class="loading-indicator">
+                <div class="spinner"></div>
+                <div id="loading-status"></div>
+            </div>
+            
+            <button id="cancel-search" class="secondary">Cancel</button>
+        </div>
+        
+        <!-- RESULTS STATE -->
+        <div id="state-results" class="state">
+            <header class="results-header">
+                <button id="new-search" class="back-button">← New Search</button>
+                <h2>Maddi found <span id="result-count">0</span> products</h2>
+                <p class="search-echo">for "<span id="search-echo"></span>"</p>
+            </header>
+            
+            <div class="results-meta">
+                <span id="sources-checked">Checked 0 sources</span>
+                <span id="dupes-hidden"></span>
+            </div>
+            
+            <div id="results-grid" class="results-grid"></div>
+        </div>
+        
+        <!-- ERROR STATE -->
+        <div id="state-error" class="state">
+            <header class="hero">
+                <h1>Hmm...</h1>
+                <p class="tagline">Maddi ran into a problem</p>
+            </header>
+            
+            <div class="error-message">
+                <p id="error-text">Something went wrong. Please try again.</p>
+                <button id="retry-search">Try Again</button>
+            </div>
+        </div>
+        
+        <!-- SETUP STATE -->
+        <div id="state-setup" class="state">
+            <header class="hero">
+                <h1>Setting up Maddi</h1>
+                <p class="tagline">One-time setup for private search</p>
+            </header>
+            
+            <div class="setup-progress">
+                <div class="progress-bar">
+                    <div id="setup-progress-fill" class="progress-fill"></div>
+                </div>
+                <p id="setup-status">Downloading intelligence model...</p>
+                <p class="setup-note">This stays on your device. Your searches never leave your browser.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="site-footer">
+        <p><strong>Privacy first:</strong> Your searches stay on your device.</p>
+        <p class="credit">Built at <a href="https://aisciencecenter.com">AI Science Center</a></p>
+    </footer>
+    
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>

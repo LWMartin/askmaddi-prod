@@ -1,0 +1,31 @@
+{
+  "name": "Newegg",
+  "domain": "newegg.com",
+  "version": "1.0.0",
+  "search": {
+    "url_template": "https://www.newegg.com/p/pl?d={query}",
+    "query_encoding": "plus"
+  },
+  "extraction": {
+    "method": "semantic",
+    "container_hints": [".item-cell", ".item-container", "[class*='item']"],
+    "fields": {
+      "name": {
+        "semantic_type": "product_name",
+        "fallback_selectors": [".item-title", "a.item-title"]
+      },
+      "price": {
+        "semantic_type": "price",
+        "fallback_selectors": [".price-current", ".price-current strong"]
+      },
+      "image": {
+        "semantic_type": "product_image",
+        "fallback_selectors": [".item-img img", "img.item-img"]
+      },
+      "url": {
+        "semantic_type": "product_url",
+        "fallback_selectors": [".item-title", "a.item-title"]
+      }
+    }
+  }
+}
