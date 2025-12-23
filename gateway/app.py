@@ -151,9 +151,8 @@ def cleanup(exception=None):
 
 if __name__ == '__main__':
     load_manifests()
-    print("\n=== AskMaddi Gateway ===")
-    print("http://localhost:5000")
-    print("Privacy: Queries stay in browser")
-    print("         Sources see us, not users")
+    port = int(os.environ.get('PORT', 5000))
+    print(f"\n=== AskMaddi Gateway ===")
+    print(f"Running on port {port}")
     print("========================\n")
-    app.run(debug=True, port=5000, threaded=True)
+    app.run(host='0.0.0.0', port=port)
