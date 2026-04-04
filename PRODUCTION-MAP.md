@@ -174,11 +174,12 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Affiliate Status
 
-- **Amazon Associates:** Approved. Tag unknown (check affiliate.js on VPS for real value).
-- **eBay Partner Network:** Approved. Campaign ID unknown.
-- **Impact:** Two verification meta tags present — likely for affiliate network onboarding.
+- **Amazon Associates:** Approved. **Tag NOT configured** — `affiliate.js` still has `YOUR_AMAZON_TAG`.
+- **eBay Partner Network:** Approved. **Campaign ID NOT configured** — still `YOUR_EBAY_CAMPID`.
+- **Impact:** Two verification meta tags in index.html — likely for affiliate network onboarding.
 - **Best Buy, Newegg, Walmart:** Denied (insufficient traffic).
 - **API access:** None from any platform — headless scraping is the only path.
+- **Revenue status:** ZERO — no affiliate codes are wired. Approved but not earning.
 
 ---
 
@@ -220,9 +221,10 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Next Actions
 
-1. **Sync repo with VPS** — pull mission.html, privacy.html, terms.html, api.php, logo.png, live index.html, live app.py into repo
-2. **Get real affiliate codes** — check VPS affiliate.js for actual Amazon tag + eBay campaign ID
+1. **Wire affiliate codes** — Amazon tag + eBay campaign ID into `affiliate.js`. Approved but earning $0. Fastest path to revenue.
+2. **Sync repo with VPS** — pull mission.html, privacy.html, terms.html, api.php, logo.png, live index.html, live app.py into repo
 3. **AlmaLinux 8 migration** — use this map as the preservation checklist
 4. **Install Chrome on new box** — unblocks headless scraping (Amazon)
 5. **Merge gateway versions** — best of VPS (rate limiting) + repo (validation)
 6. **Security hardening** — run through the 10-item checklist post-migration
+7. **Add Amazon manifest** — gateway has bestbuy/ebay/newegg but no amazon.json
