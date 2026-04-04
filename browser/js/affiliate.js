@@ -24,10 +24,10 @@ class AffiliateManager {
                 cookieDays: 7
             },
             'ebay.com': {
-                enabled: false,  // Set true after approval
+                enabled: true,
                 name: 'eBay Partner Network',
                 param: 'campid',
-                code: 'YOUR_EBAY_CAMPID',
+                code: '5339138080',
                 // eBay also uses additional params
                 extraParams: {
                     'toolid': '10001',

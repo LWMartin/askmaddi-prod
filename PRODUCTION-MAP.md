@@ -175,7 +175,7 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 ## Affiliate Status
 
 - **Amazon Associates:** Approved. Tag: `askmaddi-20`. **Wired in repo, needs deploy to VPS.**
-- **eBay Partner Network:** Approved. **Campaign ID NOT configured** — still `YOUR_EBAY_CAMPID`.
+- **eBay Partner Network:** Approved. Campaign ID: `5339138080`. **Wired in repo, needs deploy to VPS.**
 - **Impact:** Two verification meta tags in index.html — likely for affiliate network onboarding.
 - **Best Buy, Newegg, Walmart:** Denied (insufficient traffic).
 - **API access:** None from any platform — headless scraping is the only path.
@@ -221,7 +221,7 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Next Actions
 
-1. **Wire affiliate codes** — Amazon tag + eBay campaign ID into `affiliate.js`. Approved but earning $0. Fastest path to revenue.
+1. **Deploy affiliate codes to VPS** — Amazon (askmaddi-20) + eBay (5339138080) wired in repo, need to update VPS `affiliate.js`. Fastest path to revenue.
 2. **Sync repo with VPS** — pull mission.html, privacy.html, terms.html, api.php, logo.png, live index.html, live app.py into repo
 3. **AlmaLinux 8 migration** — use this map as the preservation checklist
 4. **Install Chrome on new box** — unblocks headless scraping (Amazon)
