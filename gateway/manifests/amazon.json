@@ -1,0 +1,94 @@
+{
+    "name": "Amazon",
+    "domain": "amazon.com",
+    "version": "1.0.0",
+    "search": {
+        "url_template": "https://www.amazon.com/s?k={query}",
+        "query_encoding": "plus"
+    },
+    "extraction": {
+        "method": "semantic",
+        "needs_headless": true,
+        "container_hints": [
+            "[data-component-type='s-search-result']",
+            ".s-result-item",
+            ".sg-col-inner .s-result-item",
+            "[data-asin]"
+        ],
+        "fields": {
+            "name": {
+                "semantic_type": "product_name",
+                "fallback_selectors": [
+                    "h2 a span",
+                    ".a-size-medium.a-color-base.a-text-normal",
+                    ".a-size-base-plus.a-color-base.a-text-normal"
+                ]
+            },
+            "price": {
+                "semantic_type": "price",
+                "fallback_selectors": [
+                    ".a-price .a-offscreen",
+                    ".a-price-whole",
+                    ".a-color-price"
+                ]
+            },
+            "rating": {
+                "semantic_type": "rating",
+                "fallback_selectors": [
+                    ".a-icon-alt",
+                    "i.a-icon-star-small span"
+                ]
+            },
+            "review_count": {
+                "semantic_type": "review_count",
+                "fallback_selectors": [
+                    ".a-size-base.s-underline-text",
+                    "a[href*='customerReviews'] span"
+                ]
+            },
+            "image": {
+                "semantic_type": "product_image",
+                "fallback_selectors": [
+                    ".s-image",
+                    "img.s-image"
+                ]
+            },
+            "url": {
+                "semantic_type": "product_url",
+                "fallback_selectors": [
+                    "h2 a[href]",
+                    ".a-link-normal[href*='/dp/']"
+                ]
+            },
+            "badge": {
+                "semantic_type": "badge",
+                "fallback_selectors": [
+                    ".a-badge-text",
+                    ".a-badge-label-inner"
+                ]
+            },
+            "seller": {
+                "semantic_type": "seller",
+                "fallback_selectors": [
+                    ".a-size-small .a-color-secondary",
+                    ".a-row.a-size-base .a-color-secondary"
+                ]
+            }
+        },
+        "identity": {
+            "asin_from_url": "/dp/([A-Z0-9]{10})",
+            "asin_from_attr": "data-asin"
+        },
+        "filters": {
+            "skip_sponsored": true,
+            "min_review_count": 5,
+            "condition": "new"
+        }
+    },
+    "scraping": {
+        "wait_for": "[data-component-type='s-search-result']",
+        "wait_time": 3,
+        "scroll_for_lazy_load": true,
+        "max_results_per_page": 48
+    }
+}
