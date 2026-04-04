@@ -45,10 +45,10 @@ class AffiliateManager {
                 cookieDays: 1
             },
             'amazon.com': {
-                enabled: false,  // Set true after approval
+                enabled: true,
                 name: 'Amazon Associates',
                 param: 'tag',
-                code: 'YOUR_AMAZON_TAG',
+                code: 'askmaddi-20',
                 commission: '1-4%',
                 cookieDays: 1
             },

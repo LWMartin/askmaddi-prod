@@ -174,7 +174,7 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Affiliate Status
 
-- **Amazon Associates:** Approved. **Tag NOT configured** — `affiliate.js` still has `YOUR_AMAZON_TAG`.
+- **Amazon Associates:** Approved. Tag: `askmaddi-20`. **Wired in repo, needs deploy to VPS.**
 - **eBay Partner Network:** Approved. **Campaign ID NOT configured** — still `YOUR_EBAY_CAMPID`.
 - **Impact:** Two verification meta tags in index.html — likely for affiliate network onboarding.
 - **Best Buy, Newegg, Walmart:** Denied (insufficient traffic).
