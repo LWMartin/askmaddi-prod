@@ -6,7 +6,19 @@
 # Components:
 #   affiliate     Deploy browser/js/affiliate.js → <docroot>/js/affiliate.js
 #
-# Pattern (steps 4–6 of primer/airlock-protocol.md, repo-side steps 1–3 done by commit):
+# IMPORTANT — architecture note:
+#   In normal operation, askmaddi.com is served *directly* by Apache out of
+#   the repo working tree (DocumentRoot is /opt/askmaddi-prod/browser/), so
+#   the primary deploy path is `git pull` (or tag checkout) executed as the
+#   askmaddi user. See DEPLOYMENT.md.
+#
+#   This script exists for the *occasional* one-file deploy where you want
+#   airlock guarantees (timestamped backup, checksum verify, auto-rollback
+#   on mismatch) without a full tag bump — e.g. staging a robots.txt fix,
+#   a single SSL cert drop, or a hot-fix that shouldn't ride a release tag.
+#   It is NOT the standard deploy path. For routine deploys, `git pull`.
+#
+# Pattern (steps 4–6 of airlock-protocol; repo-side steps 1–3 done by commit):
 #   1. Backup current production file with timestamp
 #   2. Copy from repo into docroot
 #   3. Restore ownership + SELinux context
@@ -14,13 +26,13 @@
 #   5. Print rollback command + smoke-test hints
 #
 # Env overrides:
-#   ASKMADDI_DOCROOT (default: /home/askmaddi/public_html)
+#   ASKMADDI_DOCROOT (default: /opt/askmaddi-prod/browser — Apache DocumentRoot)
 #   ASKMADDI_USER    (default: askmaddi)
 
 set -euo pipefail
 
 REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-DOCROOT="${ASKMADDI_DOCROOT:-/home/askmaddi/public_html}"
+DOCROOT="${ASKMADDI_DOCROOT:-/opt/askmaddi-prod/browser}"
 SERVICE_USER="${ASKMADDI_USER:-askmaddi}"
 COMPONENT="${1:-}"
 
