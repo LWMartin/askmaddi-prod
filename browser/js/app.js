@@ -6,7 +6,7 @@ import { UI } from './ui.js';
 
 class AskMaddi {
     constructor() {
-        this.gateway = 'http://localhost:5000';
+        this.gateway = '';  // same-origin: Apache proxies /health,/instructions,/proxy,/ping → gateway:5001
         this.manifests = null;
         this.fetcher = new Fetcher(this.gateway);
         this.extractor = new Extractor();
@@ -34,6 +34,7 @@ class AskMaddi {
             console.log('Loaded manifests:', Object.keys(this.manifests.sites));
         } catch (error) {
             console.error('Failed to load manifests:', error);
+            this.manifestError = error;
         }
         
         this.ui.showState('landing');
@@ -69,6 +70,11 @@ class AskMaddi {
         const query = input.value.trim();
         
         if (!query || this.isSearching) return;
+        
+        if (!this.manifests || !this.manifests.sites) {
+            this.ui.showError('Could not load source configuration. Please refresh the page.');
+            return;
+        }
         
         this.currentQuery = query;
         this.isSearching = true;
