@@ -64,19 +64,31 @@ def get_headless():
 MANIFESTS = {}
 MANIFEST_DIR = os.path.join(os.path.dirname(__file__), 'manifests')
 
+# Sites we currently have active affiliate relationships with.
+# Manifests for other sites can stay on disk but won't be loaded
+# (frontend won't see them, proxy will reject their domains).
+# To enable a new site: add its name here and redeploy.
+ENABLED_SITES = {'amazon', 'ebay'}
+
 
 def load_manifests():
-    """Load all site manifests from JSON files."""
+    """Load enabled site manifests from JSON files."""
     global MANIFESTS
     if not os.path.exists(MANIFEST_DIR):
         print(f"Warning: {MANIFEST_DIR} does not exist")
         return
+    skipped = []
     for filename in os.listdir(MANIFEST_DIR):
         if filename.endswith('.json'):
             site_name = filename.replace('.json', '')
+            if site_name not in ENABLED_SITES:
+                skipped.append(site_name)
+                continue
             with open(os.path.join(MANIFEST_DIR, filename), 'r') as f:
                 MANIFESTS[site_name] = json.load(f)
     print(f"Loaded {len(MANIFESTS)} site manifests: {list(MANIFESTS.keys())}")
+    if skipped:
+        print(f"Skipped (not in ENABLED_SITES): {skipped}")
 
 
 # --- Domain Allowlist ---

@@ -61,6 +61,35 @@ body {
 .hero h1 { font-size: 48px; font-weight: 600; margin-bottom: var(--space-sm); }
 .tagline { font-size: 24px; color: var(--color-text-secondary); }
 
+.logo-title {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    justify-content: center;
+}
+
+.site-logo {
+    height: 64px;
+    width: auto;
+    display: block;
+}
+
+/* Privacy/terms page header logos — smaller, link-wrapped, no class */
+.privacy-header img,
+.terms-header img {
+    height: 48px;
+    width: auto;
+}
+
+.privacy-header a,
+.terms-header a {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-md);
+    text-decoration: none;
+    color: inherit;
+}
+
 .search-box {
     max-width: 800px;
     margin: 0 auto var(--space-xl);
