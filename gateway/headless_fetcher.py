@@ -24,6 +24,41 @@ class HeadlessFetcher:
         self.driver = None
         self.initialized = False
     
+    def _detect_chrome_major(self):
+        """Detect installed Chrome major version so uc fetches a matching driver.
+        
+        uc by default grabs the latest chromedriver, which can be ahead of the
+        system Chrome (e.g. driver 149 vs Chrome 148.x → SessionNotCreated).
+        Pinning version_main keeps the pair aligned through auto-updates.
+        Returns int major version, or None if detection fails (uc falls back to default).
+        """
+        import shutil
+        import subprocess
+        chrome_path = (
+            shutil.which('google-chrome')
+            or shutil.which('chromium')
+            or shutil.which('chromium-browser')
+        )
+        if not chrome_path:
+            print("[headless] WARN: no chrome binary found, uc will use default driver")
+            return None
+        try:
+            out = subprocess.check_output(
+                [chrome_path, '--version'], stderr=subprocess.STDOUT, timeout=5
+            ).decode().strip()
+            # Output looks like: "Google Chrome 148.0.7778.96"
+            parts = out.split()
+            for token in parts:
+                if token[0].isdigit() and '.' in token:
+                    major = int(token.split('.')[0])
+                    print(f"[headless] detected Chrome major {major} from: {out}")
+                    return major
+            print(f"[headless] WARN: could not parse Chrome version from: {out}")
+            return None
+        except Exception as e:
+            print(f"[headless] WARN: Chrome version detect failed: {type(e).__name__}: {e}")
+            return None
+    
     def start(self):
         """Initialize the headless browser"""
         if self.initialized:
@@ -40,8 +75,13 @@ class HeadlessFetcher:
         options.add_argument('--window-size=1920,1080')
         options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
         
+        chrome_major = self._detect_chrome_major()
+        
         try:
-            self.driver = uc.Chrome(options=options)
+            if chrome_major is not None:
+                self.driver = uc.Chrome(options=options, version_main=chrome_major)
+            else:
+                self.driver = uc.Chrome(options=options)
             self.initialized = True
             print("Headless browser ready!")
         except Exception as e:
