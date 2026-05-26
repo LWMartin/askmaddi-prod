@@ -126,6 +126,7 @@ class Extractor {
     const doc = this.parser.parseFromString(html, 'text/html');
     const products = [];
     const siteName = manifest.name;
+    this.currentDomain = manifest.domain;  // stashed for normalizeUrl relative-resolution
     
     const containers = this.findContainers(doc, manifest.extraction.container_hints);
     
@@ -351,6 +352,17 @@ class Extractor {
         if (!url) return null;
         if (url.startsWith('http')) return url;
         if (url.startsWith('//')) return 'https:' + url;
+        // Relative URL — resolve against the site we're extracting from
+        if (this.currentDomain) {
+            const base = `https://www.${this.currentDomain}`;
+            try {
+                return new URL(url, base).toString();
+            } catch (e) {
+                // Fallback for malformed input
+                if (url.startsWith('/')) return base + url;
+                return `${base}/${url}`;
+            }
+        }
         return url;
     }
 }
