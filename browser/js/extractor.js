@@ -326,7 +326,11 @@ class Extractor {
                         if (href) return this.normalizeUrl(href);
                     }
                     if (config.semantic_type === 'price') {
-                        return this.normalizePrice(element.textContent.trim());
+                        const raw = element.textContent.trim();
+                        // Defense in depth: only treat node as price if it actually contains a currency marker.
+                        // Prevents picking up "JBL Tune 720BT" → fabricating "$720".
+                        if (!/[\$€£¥]/.test(raw)) continue;
+                        return this.normalizePrice(raw);
                     }
                     const text = element.textContent.trim();
                     if (text) return text.replace(/\s+/g, ' ');
@@ -339,13 +343,17 @@ class Extractor {
     }
     
     normalizePrice(text) {
-        const match = text.match(/[\$€£]?\s*[\d,]+\.?\d*/);
+        if (!text) return null;
+        // Require a currency marker — otherwise we'd be fabricating a price
+        // from arbitrary text (e.g. "JBL Tune 720BT" → "$720" is a bug class).
+        if (!/[\$€£¥]/.test(text)) return null;
+        // Extract the first dollar-anchored number sequence to avoid mistakes
+        // like grabbing "720" from a name when there's also a "$89.95" nearby.
+        const match = text.match(/[\$€£¥]\s*[\d,]+\.?\d*/);
         if (match) {
-            let price = match[0].trim();
-            if (!/^[\$€£]/.test(price)) price = '$' + price;
-            return price;
+            return match[0].replace(/\s+/g, '').trim();
         }
-        return text;
+        return null;
     }
     
     normalizeUrl(url) {
