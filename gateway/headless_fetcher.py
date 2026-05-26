@@ -98,6 +98,23 @@ class HeadlessFetcher:
             self.driver = None
             self.initialized = False
     
+    def is_healthy(self):
+        """Check if the driver is still responsive."""
+        if not self.initialized or not self.driver:
+            return False
+        try:
+            # Quick probe — if the session is dead this throws
+            _ = self.driver.title
+            return True
+        except Exception:
+            return False
+
+    def _reinitialize(self):
+        """Kill the old driver and start fresh."""
+        print("[headless] Driver unhealthy — reinitializing...")
+        self.stop()
+        self.start()
+
     def fetch(self, url, wait_for_selector=None, wait_time=3):
         """
         Fetch a URL and return the rendered HTML.
@@ -112,6 +129,10 @@ class HeadlessFetcher:
         """
         if not self.initialized:
             self.start()
+        
+        # Health check before fetch — catches stale/crashed driver
+        if not self.is_healthy():
+            self._reinitialize()
         
         try:
             print(f"Fetching: {url[:80]}...")
@@ -142,13 +163,17 @@ class HeadlessFetcher:
             
         except Exception as e:
             print(f"Fetch error: {e}")
+            # If the driver died mid-fetch, mark for reinit on next call
+            if not self.is_healthy():
+                print("[headless] Driver died during fetch — will reinitialize on next request")
+                self.stop()
             raise
 
 
 # Site-specific configurations
 SITE_CONFIG = {
     'ebay.com': {
-        'needs_headless': False,
+        'needs_headless': True,   # 2026-05-26: eBay now returns 403 on simple fetch
         'wait_for': '.s-item__title',
         'wait_time': 3
     },

@@ -50,13 +50,16 @@ except ImportError:
 
 
 def get_headless():
-    """Get or create headless browser instance."""
+    """Get or create headless browser instance. Reinitializes if the driver is stale."""
     global headless
     if not HAS_HEADLESS:
         return None
     if headless is None:
         headless = HeadlessFetcher()
         headless.start()
+    elif not headless.is_healthy():
+        print("[gateway] Headless instance unhealthy — reinitializing")
+        headless._reinitialize()
     return headless
 
 
@@ -124,7 +127,7 @@ def health():
     return jsonify({
         'status': 'ok',
         'manifests_loaded': len(MANIFESTS),
-        'headless_ready': headless is not None and hasattr(headless, 'initialized') and headless.initialized,
+        'headless_ready': headless is not None and headless.is_healthy(),
         'rate_limiting': HAS_LIMITER
     })
 
