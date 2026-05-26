@@ -96,20 +96,24 @@ class AskMaddi {
     async search(query) {
     const allProducts = [];
     const sites = Object.entries(this.manifests.sites);
+    const diagnostics = {};
     
     this.ui.updateLoadingStatus(sites.map(([name]) => ({ name, status: 'pending' })));
     
     // Fetch ALL sites in parallel
     const fetchPromises = sites.map(async ([siteName, manifest]) => {
+        const diag = { site: siteName, status: 'ok', htmlBytes: 0, containers: 0, products: 0 };
         try {
             this.ui.updateSourceStatus(siteName, 'fetching');
             
             const searchUrl = manifest.search.url_template.replace('{query}', encodeURIComponent(query));
             const html = await this.fetcher.fetchViaProxy(searchUrl);
+            diag.htmlBytes = html ? html.length : 0;
             
             this.ui.updateSourceStatus(siteName, 'extracting');
             
             const products = await this.extractor.extract(html, manifest);
+            diag.products = products.length;
             
             products.forEach(p => {
                 p.source = manifest.name;
@@ -117,10 +121,14 @@ class AskMaddi {
             });
             
             this.ui.updateSourceStatus(siteName, 'done');
+            diagnostics[siteName] = diag;
             return products;
             
         } catch (error) {
             console.error(`Failed to fetch ${siteName}:`, error);
+            diag.status = 'error';
+            diag.error = error.message;
+            diagnostics[siteName] = diag;
             this.ui.updateSourceStatus(siteName, 'error');
             return [];
         }
@@ -134,6 +142,11 @@ class AskMaddi {
         allProducts.push(...products);
     }
     
+    // Log diagnostics on zero results
+    if (allProducts.length === 0) {
+        console.warn('ZERO RESULTS — diagnostics:', JSON.stringify(diagnostics, null, 2));
+    }
+    
     this.sendAnalytics(query, sites.length);
     
     const deduped = this.deduper.deduplicate(allProducts);
@@ -144,7 +157,8 @@ class AskMaddi {
         products: ranked,
         totalFound: allProducts.length,
         afterDedup: deduped.length,
-        sourcesChecked: sites.length
+        sourcesChecked: sites.length,
+        diagnostics: allProducts.length === 0 ? diagnostics : undefined
     };
 }
     

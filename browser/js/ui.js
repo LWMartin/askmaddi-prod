@@ -60,7 +60,22 @@ class UI {
         document.getElementById('dupes-hidden').textContent = dupeCount > 0 ? `${dupeCount} duplicates hidden` : '';
         
         const grid = document.getElementById('results-grid');
-        grid.innerHTML = results.products.map(product => this.renderProductCard(product)).join('');
+        
+        if (results.products.length === 0 && results.diagnostics) {
+            // Show diagnostic info so the user (Lee) can see why
+            const diagLines = Object.entries(results.diagnostics).map(([site, d]) => {
+                if (d.status === 'error') return `${site}: fetch error — ${d.error}`;
+                if (d.htmlBytes === 0) return `${site}: empty response (0 bytes)`;
+                if (d.htmlBytes < 5000) return `${site}: suspiciously small response (${d.htmlBytes} bytes — possible CAPTCHA or block)`;
+                return `${site}: got ${d.htmlBytes} bytes but extracted 0 products (selector mismatch?)`;
+            });
+            grid.innerHTML = `<div style="grid-column: 1/-1; padding: 2rem; text-align: center; color: var(--text-secondary, #666);">
+                <p style="margin-bottom: 1rem;">No products found. Diagnostic info:</p>
+                <pre style="text-align: left; font-size: 0.85rem; max-width: 500px; margin: 0 auto;">${diagLines.join('\n')}</pre>
+            </div>`;
+        } else {
+            grid.innerHTML = results.products.map(product => this.renderProductCard(product)).join('');
+        }
         
         // Attach click handlers for affiliate tracking
         this.attachClickHandlers();

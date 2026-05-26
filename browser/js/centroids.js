@@ -8,6 +8,40 @@
  */
 
 const SITE_EXAMPLES = {
+    amazon: {
+        domain: "amazon.com",
+        product_name: [
+            "Sony WH-1000XM5 Wireless Industry Leading Noise Canceling Headphones",
+            "JBL Tune 760NC - Lightweight, Foldable Over-Ear Wireless Headphones",
+            "Apple AirPods Pro (2nd Generation) Wireless Ear Buds with USB-C Charging",
+            "Bose QuietComfort Wireless Noise Cancelling Headphones, Bluetooth Over Ear",
+            "Samsung Galaxy Buds2 Pro True Wireless Bluetooth Earbuds",
+            "Anker Soundcore Life Q20 Hybrid Active Noise Cancelling Headphones"
+        ],
+        price: [
+            "$348.00",
+            "$49.95",
+            "$189.99",
+            "$249.00",
+            "$159.99",
+            "$55.99",
+            "$29.99",
+            "$89.95"
+        ],
+        not_product_name: [
+            "Add to Cart",
+            "Shop now",
+            "FREE delivery",
+            "Amazon's Choice",
+            "Best Seller",
+            "Sponsored",
+            "Climate Pledge Friendly",
+            "Limited time deal",
+            "Typical price",
+            "List price"
+        ]
+    },
+
     newegg: {
         domain: "newegg.com",
         product_name: [
@@ -132,7 +166,7 @@ class CentroidManager {
         this.centroids = {};
         this.negativeCentroids = {};
         this.embedder = null;
-        this.cacheKey = 'maddi-centroids-v1';
+        this.cacheKey = 'maddi-centroids-v2';  // bumped: added amazon centroids
     }
     
     /**

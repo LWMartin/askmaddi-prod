@@ -131,6 +131,14 @@ class Extractor {
     const containers = this.findContainers(doc, manifest.extraction.container_hints);
     
     console.log(`Found ${containers.length} containers on ${siteName}`);
+    if (containers.length === 0) {
+        // Log what we got to help diagnose — was it a CAPTCHA, empty page, or selector mismatch?
+        const title = doc.querySelector('title')?.textContent || '(no title)';
+        const bodyLen = doc.body?.textContent?.length || 0;
+        console.warn(`[${siteName}] ZERO containers. Page title: "${title}", body text length: ${bodyLen}`);
+    }
+    
+    console.log(`Found ${containers.length} containers on ${siteName}`);
     
     for (const container of containers) {
         let product;
