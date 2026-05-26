@@ -73,7 +73,9 @@ class HeadlessFetcher:
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_argument('--window-size=1920,1080')
-        options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
+        # No manual user-agent — let Chrome use its real UA string.
+        # Hardcoding Chrome/120 while actual binary is 148 is a TLS/UA
+        # fingerprint mismatch that CDN bot-detection (Akamai, Cloudflare) catches.
         
         chrome_major = self._detect_chrome_major()
         

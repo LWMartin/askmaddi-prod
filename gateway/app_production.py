@@ -71,7 +71,11 @@ MANIFEST_DIR = os.path.join(os.path.dirname(__file__), 'manifests')
 # Manifests for other sites can stay on disk but won't be loaded
 # (frontend won't see them, proxy will reject their domains).
 # To enable a new site: add its name here and redeploy.
-ENABLED_SITES = {'amazon', 'ebay'}
+# 2026-05-26: eBay disabled — Akamai edge CDN blocks Hetzner IP range entirely
+# (both simple fetch 403 and headless "Access Denied"). Re-enable when:
+#   (a) PA-API path opens after 3 Amazon purchases, or
+#   (b) residential proxy is set up for eBay traffic
+ENABLED_SITES = {'amazon'}
 
 
 def load_manifests():
