@@ -58,7 +58,7 @@ function renderTeaserCard(card) {
     const axes = (card.top_axes || []).slice(0, 3).map(renderAxisBar).join('');
 
     const imageContent = card.image_thumb
-        ? `<img src="${card.image_thumb}" alt="${card.display_name}" loading="lazy">`
+        ? `<img src="${card.image_thumb}" alt="${card.display_name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="image-placeholder" style="display:none">📷</div>`
         : `<div class="image-placeholder">📷</div>`;
 
     const newLabel = formatPrice(card.pricing?.new_price);
