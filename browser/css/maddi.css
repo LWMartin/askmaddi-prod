@@ -47,6 +47,15 @@ body {
     flex-direction: column;
 }
 
+.affiliate-disclosure-bar {
+    background: var(--color-surface);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    text-align: center;
+    padding: 3px var(--space-md);
+    border-bottom: 1px solid var(--color-border-light);
+}
+
 .container {
     flex: 1;
     max-width: 1200px;
@@ -65,9 +74,9 @@ body {
 
 /* ─── Hero (compact v0.2) ──────────────────────────────────────── */
 
-.hero { text-align: center; padding: var(--space-xl) 0 var(--space-lg); }
-.hero h1 { font-size: 32px; font-weight: 600; margin-bottom: var(--space-xs); }
-.tagline { font-size: 18px; color: var(--color-text-secondary); margin-bottom: var(--space-md); }
+.hero { text-align: center; padding: var(--space-md) 0 var(--space-sm); }
+.hero h1 { font-size: 32px; font-weight: 600; margin-bottom: 2px; }
+.tagline { font-size: 18px; color: var(--color-text-secondary); margin-bottom: var(--space-sm); }
 
 .logo-title {
     display: inline-flex;
@@ -136,7 +145,7 @@ body {
 
 .search-box button:hover { background: var(--color-primary-dark); }
 
-.examples { text-align: center; color: var(--color-text-muted); margin-bottom: var(--space-xl); }
+.examples { text-align: center; color: var(--color-text-muted); margin-bottom: var(--space-md); }
 .examples p { margin-bottom: var(--space-sm); font-size: 14px; }
 
 .example-chip {
@@ -189,8 +198,8 @@ body {
 /* ─── Review Cards Section ─────────────────────────────────────── */
 
 .review-cards {
-    margin-top: var(--space-lg);
-    padding-top: var(--space-lg);
+    margin-top: var(--space-sm);
+    padding-top: var(--space-sm);
 }
 
 .section-heading {
@@ -205,8 +214,8 @@ body {
 
 .card-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--space-lg);
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-md);
 }
 
 /* ─── Teaser Card ──────────────────────────────────────────────── */
@@ -228,12 +237,12 @@ body {
 }
 
 .teaser-card .card-image {
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     background: linear-gradient(135deg, var(--color-background) 0%, var(--color-border-light) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: var(--space-lg);
+    padding: var(--space-md);
     position: relative;
     overflow: hidden;
 }

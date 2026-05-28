@@ -30,7 +30,6 @@
             </div>
 
             <div class="examples">
-                <p>Try asking:</p>
                 <button class="example-chip" data-query="wireless headphones under $100">wireless headphones under $100</button>
                 <button class="example-chip" data-query="mechanical keyboard">mechanical keyboard</button>
                 <button class="example-chip" data-query="sigma 35mm lens">sigma 35mm lens</button>
@@ -152,6 +151,44 @@
     <script type="module">
         import { renderCardGrid } from './js/cards.js';
         renderCardGrid('#card-grid');
+
+        // Wire persistent search bars on results/error states to the main search
+        function wireSecondarySearch(inputId, buttonId) {
+            const input = document.getElementById(inputId);
+            const button = document.getElementById(buttonId);
+            if (!input || !button) return;
+
+            function doSearch() {
+                const query = input.value.trim();
+                if (!query) return;
+                // Copy to main input and trigger the app's search
+                const mainInput = document.getElementById('search-input');
+                mainInput.value = query;
+                document.getElementById('search-button').click();
+            }
+
+            button.addEventListener('click', doSearch);
+            input.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') doSearch();
+            });
+        }
+
+        wireSecondarySearch('results-search-input', 'results-search-button');
+        wireSecondarySearch('error-search-input', 'error-search-button');
+
+        // Keep results search bar in sync with current query
+        const origShowState = document.querySelector;
+        const observer = new MutationObserver(() => {
+            const resultsState = document.getElementById('state-results');
+            if (resultsState && resultsState.classList.contains('active')) {
+                const mainVal = document.getElementById('search-input').value;
+                const resultsInput = document.getElementById('results-search-input');
+                if (resultsInput && !resultsInput.value) {
+                    resultsInput.value = mainVal;
+                }
+            }
+        });
+        observer.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['class'] });
     </script>
 </body>
 </html>
