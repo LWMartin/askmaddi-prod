@@ -20,6 +20,7 @@ from flask_cors import CORS
 import requests
 import json
 import os
+import hashlib
 
 
 def _load_dotenv():
@@ -65,6 +66,17 @@ def get_proxy_config():
         'url': PROXY_URL,
         'requests_proxies': {'http': PROXY_URL, 'https': PROXY_URL},
     }
+
+
+# --- eBay Marketplace Account Deletion ---
+# eBay requires every app using its APIs to host an endpoint that (a) answers a
+# one-time GET challenge handshake and (b) acknowledges POST deletion events.
+# The challenge response is a SHA-256 hash over the EXACT concatenation:
+#   challengeCode + verificationToken + endpointURL
+# (order matters — wrong order is the #1 cause of portal save failures).
+# Both values come from env so they match the dev-portal entry character-for-char.
+EBAY_VERIFICATION_TOKEN = os.environ.get('EBAY_VERIFICATION_TOKEN', '')
+EBAY_DELETION_ENDPOINT = os.environ.get('EBAY_DELETION_ENDPOINT', '')
 
 
 app = Flask(__name__)
@@ -264,6 +276,34 @@ if HAS_LIMITER:
     )
 else:
     proxy_fetch = app.route('/proxy', methods=['POST'])(_proxy_handler)
+
+
+@app.route('/ebay/deletion', methods=['GET', 'POST'])
+def ebay_deletion():
+    """eBay Marketplace Account Deletion/Closure notification endpoint.
+
+    GET  — one-time verification handshake. eBay sends ?challenge_code=XXX;
+           we respond 200 with {"challengeResponse": sha256(code+token+url)}.
+    POST — actual deletion event. AskMaddi stores product data, not eBay user
+           PII, so there is nothing to purge; we log and acknowledge with 200.
+    """
+    if request.method == 'GET':
+        challenge_code = request.args.get('challenge_code')
+        if not challenge_code:
+            return jsonify({'error': 'missing challenge_code'}), 400
+        if not EBAY_VERIFICATION_TOKEN or not EBAY_DELETION_ENDPOINT:
+            print("[ebay] ERROR: EBAY_VERIFICATION_TOKEN or EBAY_DELETION_ENDPOINT not set")
+            return jsonify({'error': 'endpoint not configured'}), 500
+        # Hash order is fixed by eBay: challengeCode + verificationToken + endpoint
+        h = hashlib.sha256()
+        h.update(challenge_code.encode('utf-8'))
+        h.update(EBAY_VERIFICATION_TOKEN.encode('utf-8'))
+        h.update(EBAY_DELETION_ENDPOINT.encode('utf-8'))
+        return jsonify({'challengeResponse': h.hexdigest()}), 200
+
+    # POST — deletion notification. Acknowledge fast; no eBay PII stored here.
+    print("[ebay] account deletion notification received — no stored PII to purge")
+    return jsonify({'status': 'acknowledged'}), 200
 
 
 @app.route('/ping', methods=['POST'])
