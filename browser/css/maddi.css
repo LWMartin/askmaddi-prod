@@ -1,8 +1,9 @@
-/* AskMaddi Design System */
+/* AskMaddi Design System — v0.2 Card Evolution */
 
 :root {
     --color-primary: #e07850;
     --color-primary-dark: #c4623f;
+    --color-primary-light: rgba(224, 120, 80, 0.08);
     --color-background: #faf8f6;
     --color-surface: #ffffff;
     --color-text: #2d2a26;
@@ -10,9 +11,13 @@
     --color-text-muted: #9a938c;
     --color-success: #5a9a6e;
     --color-error: #c45c4a;
+    --color-neutral: #9a938c;
     --color-border: #e5e0db;
     --color-border-light: #f0ece8;
-    
+
+    --shadow-card: 0 2px 8px rgba(45, 42, 38, 0.06);
+    --shadow-card-hover: 0 6px 20px rgba(45, 42, 38, 0.12);
+
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --space-xs: 4px;
     --space-sm: 8px;
@@ -21,7 +26,8 @@
     --space-xl: 32px;
     --space-2xl: 48px;
     --space-3xl: 64px;
-    
+
+    --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 16px;
     --radius-full: 9999px;
@@ -57,24 +63,26 @@ body {
     to { opacity: 1; transform: translateY(0); }
 }
 
-.hero { text-align: center; padding: var(--space-3xl) 0; }
-.hero h1 { font-size: 48px; font-weight: 600; margin-bottom: var(--space-sm); }
-.tagline { font-size: 24px; color: var(--color-text-secondary); }
+/* ─── Hero (compact v0.2) ──────────────────────────────────────── */
+
+.hero { text-align: center; padding: var(--space-xl) 0 var(--space-lg); }
+.hero h1 { font-size: 32px; font-weight: 600; margin-bottom: var(--space-xs); }
+.tagline { font-size: 18px; color: var(--color-text-secondary); margin-bottom: var(--space-md); }
 
 .logo-title {
     display: inline-flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-sm);
     justify-content: center;
 }
 
 .site-logo {
-    height: 64px;
+    height: 40px;
     width: auto;
     display: block;
 }
 
-/* Privacy/terms page header logos — smaller, link-wrapped, no class */
+/* Privacy/terms page header logos */
 .privacy-header img,
 .terms-header img {
     height: 48px;
@@ -90,17 +98,19 @@ body {
     color: inherit;
 }
 
+/* ─── Search Box ───────────────────────────────────────────────── */
+
 .search-box {
-    max-width: 800px;
-    margin: 0 auto var(--space-xl);
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
     display: flex;
-    gap: var(--space-md);
+    gap: var(--space-sm);
 }
 
 .search-box input {
     flex: 1;
-    padding: var(--space-md) var(--space-lg);
-    font-size: 18px;
+    padding: var(--space-sm) var(--space-md);
+    font-size: 16px;
     border: 2px solid var(--color-border);
     border-radius: var(--radius-lg);
     background: var(--color-surface);
@@ -113,26 +123,27 @@ body {
 }
 
 .search-box button {
-    padding: var(--space-md) var(--space-xl);
-    font-size: 18px;
+    padding: var(--space-sm) var(--space-lg);
+    font-size: 16px;
     font-weight: 500;
     background: var(--color-primary);
     color: white;
     border: none;
     border-radius: var(--radius-lg);
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .search-box button:hover { background: var(--color-primary-dark); }
 
-.examples { text-align: center; color: var(--color-text-muted); }
-.examples p { margin-bottom: var(--space-md); font-size: 14px; }
+.examples { text-align: center; color: var(--color-text-muted); margin-bottom: var(--space-xl); }
+.examples p { margin-bottom: var(--space-sm); font-size: 14px; }
 
 .example-chip {
     display: inline-block;
-    padding: var(--space-sm) var(--space-md);
+    padding: var(--space-xs) var(--space-md);
     margin: var(--space-xs);
-    font-size: 14px;
+    font-size: 13px;
     background: var(--color-surface);
     border: 1px solid var(--color-border);
     border-radius: var(--radius-full);
@@ -143,6 +154,254 @@ body {
     border-color: var(--color-primary);
     color: var(--color-primary);
 }
+
+/* ─── Compact Header (results + card detail pages) ─────────────── */
+
+.header-compact {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md) 0;
+    border-bottom: 1px solid var(--color-border-light);
+    margin-bottom: var(--space-lg);
+}
+
+.header-compact .site-logo { height: 28px; }
+
+.header-compact .search-box {
+    max-width: 480px;
+    margin: 0;
+    flex: 1;
+}
+
+.header-compact .search-box input {
+    font-size: 14px;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+.header-compact .search-box button {
+    font-size: 14px;
+    padding: var(--space-xs) var(--space-md);
+    border-radius: var(--radius-md);
+}
+
+/* ─── Review Cards Section ─────────────────────────────────────── */
+
+.review-cards {
+    margin-top: var(--space-lg);
+    padding-top: var(--space-lg);
+}
+
+.section-heading {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-border-light);
+    letter-spacing: -0.01em;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-lg);
+}
+
+/* ─── Teaser Card ──────────────────────────────────────────────── */
+
+.teaser-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: all var(--transition-normal);
+    display: flex;
+    flex-direction: column;
+}
+
+.teaser-card:hover {
+    box-shadow: var(--shadow-card-hover);
+    transform: translateY(-3px);
+    border-color: var(--color-border);
+}
+
+.teaser-card .card-image {
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, var(--color-background) 0%, var(--color-border-light) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+    position: relative;
+    overflow: hidden;
+}
+
+.teaser-card .card-image img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+}
+
+.teaser-card .card-image .image-placeholder {
+    font-size: 36px;
+    opacity: 0.2;
+}
+
+.teaser-card .source-badge {
+    position: absolute;
+    top: var(--space-sm);
+    right: var(--space-sm);
+    background: rgba(45, 42, 38, 0.75);
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px var(--space-sm);
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(4px);
+}
+
+.teaser-card .card-body {
+    padding: var(--space-md);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.teaser-card .product-name {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 2px;
+    line-height: 1.3;
+    color: var(--color-text);
+}
+
+.teaser-card .product-meta {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+/* ─── Sentiment Bars ───────────────────────────────────────────── */
+
+.axes-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+}
+
+.axis-row {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 12px;
+}
+
+.axis-label {
+    width: 110px;
+    flex-shrink: 0;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.axis-bar {
+    flex: 1;
+    height: 6px;
+    background: var(--color-border-light);
+    border-radius: 3px;
+    overflow: hidden;
+    display: flex;
+}
+
+.axis-bar .bar-pos {
+    background: var(--color-success);
+    height: 100%;
+    border-radius: 3px 0 0 3px;
+    transition: width var(--transition-normal);
+}
+
+.axis-bar .bar-neg {
+    background: var(--color-error);
+    height: 100%;
+    border-radius: 0 3px 3px 0;
+    transition: width var(--transition-normal);
+    margin-left: auto;
+}
+
+.axis-pct {
+    width: 36px;
+    text-align: right;
+    flex-shrink: 0;
+    color: var(--color-success);
+    font-weight: 600;
+    font-size: 11px;
+}
+
+/* ─── Affiliate Buttons ────────────────────────────────────────── */
+
+.card-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-top: auto;
+    padding-top: var(--space-md);
+}
+
+.btn-affiliate {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    transition: all var(--transition-fast);
+    cursor: pointer;
+}
+
+.btn-buy-new {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.btn-buy-new:hover { background: var(--color-primary-dark); }
+
+.btn-buy-used {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.btn-buy-used:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.card-link {
+    display: block;
+    text-align: center;
+    padding: var(--space-sm);
+    font-size: 13px;
+    color: var(--color-primary);
+    text-decoration: none;
+    border-top: 1px solid var(--color-border-light);
+    margin-top: var(--space-md);
+    transition: background var(--transition-fast);
+}
+
+.card-link:hover {
+    background: var(--color-primary-light);
+}
+
+/* ─── Loading / Spinner ────────────────────────────────────────── */
 
 .loading-indicator { text-align: center; padding: var(--space-xl); }
 
@@ -172,7 +431,9 @@ body {
     cursor: pointer;
 }
 
-.results-header { margin-bottom: var(--space-lg); }
+/* ─── Results ──────────────────────────────────────────────────── */
+
+.results-header { margin-bottom: var(--space-md); }
 
 .back-button {
     background: none;
@@ -181,9 +442,10 @@ body {
     cursor: pointer;
     padding: var(--space-sm) 0;
     margin-bottom: var(--space-md);
+    display: none;
 }
 
-.results-header h2 { font-size: 24px; margin-bottom: var(--space-xs); }
+.results-header h2 { font-size: 22px; margin-bottom: var(--space-xs); }
 .search-echo { color: var(--color-text-secondary); }
 
 .results-meta {
@@ -201,6 +463,8 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: var(--space-lg);
 }
+
+/* ─── Existing Product Cards (scraper results) ─────────────────── */
 
 .product-card {
     background: var(--color-surface);
@@ -252,6 +516,29 @@ body {
 .product-card .price { font-size: 18px; font-weight: 600; margin-bottom: var(--space-sm); }
 .product-card .source { font-size: 14px; color: var(--color-text-muted); }
 
+/* Build card button on scraper results */
+.build-card-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    margin-top: var(--space-sm);
+    font-size: 12px;
+    color: var(--color-primary);
+    background: transparent;
+    border: 1px solid var(--color-primary);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.build-card-btn:hover {
+    background: var(--color-primary);
+    color: white;
+}
+
+/* ─── Setup Progress ───────────────────────────────────────────── */
+
 .setup-progress { max-width: 400px; margin: 0 auto; text-align: center; }
 
 .progress-bar {
@@ -269,6 +556,8 @@ body {
     transition: width var(--transition-normal);
 }
 
+/* ─── Error ────────────────────────────────────────────────────── */
+
 .error-message { text-align: center; padding: var(--space-xl); }
 .error-message p { color: var(--color-error); margin-bottom: var(--space-lg); }
 
@@ -281,20 +570,36 @@ body {
     cursor: pointer;
 }
 
+/* ─── Footer ───────────────────────────────────────────────────── */
+
 .site-footer {
     text-align: center;
-    padding: var(--space-xl);
+    padding: var(--space-lg);
     color: var(--color-text-muted);
-    font-size: 14px;
+    font-size: 13px;
     border-top: 1px solid var(--color-border-light);
 }
 
 .site-footer a { color: var(--color-primary); text-decoration: none; }
 
+/* ─── Responsive ───────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
 @media (max-width: 600px) {
-    .hero h1 { font-size: 32px; }
-    .tagline { font-size: 18px; }
+    .hero h1 { font-size: 24px; }
+    .tagline { font-size: 16px; }
     .search-box { flex-direction: column; }
     .search-box button { width: 100%; }
     .results-grid { grid-template-columns: 1fr; }
+    .card-grid { grid-template-columns: 1fr; }
+
+    .header-compact { flex-wrap: wrap; }
+    .header-compact .search-box { min-width: 100%; order: 2; }
+
+    .card-actions { flex-direction: column; }
 }

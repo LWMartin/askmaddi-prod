@@ -6,6 +6,7 @@
     <meta name="impact-site-verification" value="7df1af86-9e21-40a6-9a75-6f3ac2b051a2">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AskMaddi.com - Private Product Search</title>
+    <meta name="description" content="AskMaddi synthesizes product reviews from dozens of sources into clear comparison cards. Search, compare, and buy with confidence.">
     <link rel="stylesheet" href="css/maddi.css">
 </head>
 <body>
@@ -14,15 +15,15 @@
         <!-- LANDING STATE -->
         <div id="state-landing" class="state active">
             <header class="hero">
-                <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi.com</h1>
-                <p class="tagline">What are you looking for?</p>
+                <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</h1>
+                <p class="tagline">Product reviews, synthesized</p>
             </header>
 
             <div class="search-box">
                 <input
                     type="text"
                     id="search-input"
-                    placeholder="wireless headphones, standing desk, running shoes..."
+                    placeholder="What are you looking for?"
                     autofocus
                 >
                 <button id="search-button">Ask Maddi</button>
@@ -32,32 +33,56 @@
                 <p>Try asking:</p>
                 <button class="example-chip" data-query="wireless headphones under $100">wireless headphones under $100</button>
                 <button class="example-chip" data-query="mechanical keyboard">mechanical keyboard</button>
-                <button class="example-chip" data-query="laptop for programming">laptop for programming</button>
+                <button class="example-chip" data-query="sigma 35mm lens">sigma 35mm lens</button>
             </div>
+
+            <!-- Review Cards Section (populated by cards.js from manifest) -->
+            <section class="review-cards" style="display: none;">
+                <h2 class="section-heading">Recent review comparisons</h2>
+                <div id="card-grid" class="card-grid">
+                    <!-- Teaser cards rendered here by JS -->
+                </div>
+            </section>
         </div>
 
         <!-- LOADING STATE -->
         <div id="state-loading" class="state">
-            <header class="hero">
-                <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi.com</h1>
-                <p class="tagline">Searching for you...</p>
+            <header class="header-compact">
+                <a href="/"><img src="images/logo.png" alt="AskMaddi" class="site-logo"></a>
+                <div class="search-box">
+                    <input type="text" id="loading-search-input" disabled>
+                    <button disabled>Ask Maddi</button>
+                </div>
             </header>
 
             <div class="loading-indicator">
                 <div class="spinner"></div>
+                <p class="tagline">Searching for you...</p>
                 <div id="loading-status"></div>
             </div>
 
-            <button id="cancel-search" class="secondary">Cancel</button>
+            <div style="text-align: center;">
+                <button id="cancel-search" class="secondary">Cancel</button>
+            </div>
         </div>
 
         <!-- RESULTS STATE -->
         <div id="state-results" class="state">
-            <header class="results-header">
-                <button id="new-search" class="back-button">← New Search</button>
+            <header class="header-compact">
+                <a href="/"><img src="images/logo.png" alt="AskMaddi" class="site-logo"></a>
+                <div class="search-box">
+                    <input type="text" id="results-search-input" placeholder="Search again...">
+                    <button id="results-search-button">Ask Maddi</button>
+                </div>
+            </header>
+
+            <!-- Matched review cards (shown when search matches existing cards) -->
+            <div id="matched-cards" style="display: none;"></div>
+
+            <div class="results-header">
                 <h2>Maddi found <span id="result-count">0</span> products</h2>
                 <p class="search-echo">for "<span id="search-echo"></span>"</p>
-            </header>
+            </div>
 
             <div class="results-meta">
                 <span id="sources-checked">Checked 0 sources</span>
@@ -69,12 +94,16 @@
 
         <!-- ERROR STATE -->
         <div id="state-error" class="state">
-            <header class="hero">
-                <h1>Hmm...</h1>
-                <p class="tagline">Maddi ran into a problem</p>
+            <header class="header-compact">
+                <a href="/"><img src="images/logo.png" alt="AskMaddi" class="site-logo"></a>
+                <div class="search-box">
+                    <input type="text" id="error-search-input" placeholder="Try a new search...">
+                    <button id="error-search-button">Ask Maddi</button>
+                </div>
             </header>
 
-            <div class="error-message">
+            <div class="error-message" style="margin-top: var(--space-xl);">
+                <h2 style="margin-bottom: var(--space-sm);">Hmm...</h2>
                 <p id="error-text">Something went wrong. Please try again.</p>
                 <button id="retry-search">Try Again</button>
             </div>
@@ -83,8 +112,8 @@
         <!-- SETUP STATE -->
         <div id="state-setup" class="state">
             <header class="hero">
-                <h1>Setting up Maddi</h1>
-                <p class="tagline">Browser download for private search</p>
+                <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</h1>
+                <p class="tagline">Setting up private search</p>
             </header>
 
             <div class="setup-progress">
@@ -92,15 +121,15 @@
                     <div id="setup-progress-fill" class="progress-fill"></div>
                 </div>
                 <p id="setup-status">Downloading intelligence model...</p>
-                <p class="setup-note">This stays on your device. Your searches never leave your browser.</p>
+                <p class="setup-note" style="margin-top: var(--space-md); font-size: 13px; color: var(--color-text-muted);">This stays on your device. Your searches never leave your browser.</p>
             </div>
         </div>
     </div>
 
-    <!-- Static footer for landing page -->
+    <!-- Footer -->
     <footer class="site-footer">
         <p><strong>Privacy first:</strong> Your searches stay on your device.</p>
-        <p class="credit">Built at <a href="https://aisciencecenter.com">AI Science Center</a> · <a href="mission.html">Our Mission</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
+        <p>Built at <a href="https://aisciencecenter.com">AI Science Center</a> · <a href="mission.html">Our Mission</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
     </footer>
 
     <!-- Sticky banner for results (hidden by default, shown on scroll) -->
@@ -119,5 +148,9 @@
     </div>
 
     <script type="module" src="js/app.js"></script>
+    <script type="module">
+        import { renderCardGrid } from './js/cards.js';
+        renderCardGrid('#card-grid');
+    </script>
 </body>
 </html>
