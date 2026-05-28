@@ -441,8 +441,8 @@ body {
     color: var(--color-primary);
     cursor: pointer;
     padding: var(--space-sm) 0;
-    margin-bottom: var(--space-md);
-    display: none;
+    margin-bottom: var(--space-sm);
+    font-size: 13px;
 }
 
 .results-header h2 { font-size: 22px; margin-bottom: var(--space-xs); }
