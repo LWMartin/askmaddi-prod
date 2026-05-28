@@ -106,6 +106,14 @@ try:
 except ImportError:
     pass
 
+# --- eBay Browse API ---
+HAS_EBAY_API = False
+try:
+    import ebay_api
+    HAS_EBAY_API = True
+except ImportError:
+    pass
+
 
 def get_headless():
     """Get or create headless browser instance. Reinitializes if the driver is stale."""
@@ -194,6 +202,7 @@ def health():
         'rate_limiting': HAS_LIMITER,
         'proxy_enabled': PROXY_ENABLED,
         'proxy_configured': bool(PROXY_URL),
+        'ebay_api_configured': HAS_EBAY_API and ebay_api.is_configured(),
     })
 
 
@@ -304,6 +313,31 @@ def ebay_deletion():
     # POST — deletion notification. Acknowledge fast; no eBay PII stored here.
     print("[ebay] account deletion notification received — no stored PII to purge")
     return jsonify({'status': 'acknowledged'}), 200
+
+
+@app.route('/ebay/search', methods=['GET'])
+def ebay_search():
+    """Server-side eBay product search via the Browse API.
+
+    Replaces the HTML-scrape path. Returns clean JSON the frontend renders
+    directly — no proxy, no extraction, affiliate-tagged URLs.
+    """
+    if not HAS_EBAY_API or not ebay_api.is_configured():
+        return jsonify({'error': 'eBay API not configured', 'items': []}), 503
+    query = request.args.get('q', '').strip()
+    if not query:
+        return jsonify({'error': 'missing q', 'items': []}), 400
+    try:
+        limit = int(request.args.get('limit', 10))
+    except ValueError:
+        limit = 10
+    try:
+        items = ebay_api.search(query, limit=limit)
+        return jsonify({'items': items, 'count': len(items)}), 200
+    except ebay_api.EbayAPIError as e:
+        # Error type only, never the query (privacy) and never the secret
+        print(f"[ebay] search error: {e}")
+        return jsonify({'error': str(e), 'items': []}), 502
 
 
 @app.route('/ping', methods=['POST'])
