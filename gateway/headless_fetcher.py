@@ -13,6 +13,76 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import random
+import os
+import zipfile
+import tempfile
+from urllib.parse import urlparse
+
+
+def _parse_proxy(proxy_url):
+    """Split a proxy URL into (scheme, host, port, user, password).
+
+    Accepts forms like http://user:pass@host:port or host:port.
+    Returns a dict; user/password are None when absent.
+    """
+    raw = proxy_url
+    if '://' not in raw:
+        raw = 'http://' + raw
+    p = urlparse(raw)
+    return {
+        'scheme': p.scheme or 'http',
+        'host': p.hostname,
+        'port': p.port or 80,
+        'user': p.username,
+        'password': p.password,
+    }
+
+
+def _build_proxy_auth_extension(host, port, user, password):
+    """Build a minimal MV2 Chrome extension (zip on disk) that sets the proxy
+    and answers the 407 auth challenge with the given credentials.
+
+    Chrome's --proxy-server flag cannot carry inline user:pass credentials, so
+    authenticated proxies require either selenium-wire or this extension shim.
+    The extension is the lighter dependency-free path. Returns the zip path;
+    caller is responsible for cleanup (we keep it for the driver's lifetime).
+    """
+    manifest = """{
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "name": "AskMaddi Proxy Auth",
+  "permissions": [
+    "proxy", "tabs", "unlimitedStorage", "storage",
+    "<all_urls>", "webRequest", "webRequestBlocking"
+  ],
+  "background": { "scripts": ["background.js"] },
+  "minimum_chrome_version": "76.0.0"
+}"""
+    background = """
+var config = {
+  mode: "fixed_servers",
+  rules: {
+    singleProxy: { scheme: "http", host: "%s", port: parseInt(%s) },
+    bypassList: ["localhost"]
+  }
+};
+chrome.proxy.settings.set({ value: config, scope: "regular" }, function() {});
+function callbackFn(details) {
+  return { authCredentials: { username: "%s", password: "%s" } };
+}
+chrome.webRequest.onAuthRequired.addListener(
+  callbackFn,
+  { urls: ["<all_urls>"] },
+  ["blocking"]
+);
+""" % (host, port, user, password)
+
+    fd, path = tempfile.mkstemp(suffix='.zip', prefix='maddi_proxy_auth_')
+    os.close(fd)
+    with zipfile.ZipFile(path, 'w') as zf:
+        zf.writestr('manifest.json', manifest)
+        zf.writestr('background.js', background)
+    return path
 
 
 class HeadlessFetcher:
@@ -20,9 +90,11 @@ class HeadlessFetcher:
     Manages a pool of headless Chrome instances for fetching JS-rendered pages.
     """
     
-    def __init__(self):
+    def __init__(self, proxy_url=None):
         self.driver = None
         self.initialized = False
+        self.proxy_url = proxy_url
+        self._proxy_ext_path = None
     
     def _detect_chrome_major(self):
         """Detect installed Chrome major version so uc fetches a matching driver.
@@ -73,6 +145,23 @@ class HeadlessFetcher:
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-blink-features=AutomationControlled')
         options.add_argument('--window-size=1920,1080')
+
+        # Route through residential proxy if configured. Chrome's --proxy-server
+        # flag cannot carry inline user:pass credentials, so for authenticated
+        # proxies (Webshare username/password) we load a tiny background-script
+        # extension that sets the proxy AND answers the 407 challenge. For
+        # credential-less proxies (IP-allowlist auth) the plain flag suffices.
+        if self.proxy_url:
+            pp = _parse_proxy(self.proxy_url)
+            if pp['user'] and pp['password']:
+                self._proxy_ext_path = _build_proxy_auth_extension(
+                    pp['host'], pp['port'], pp['user'], pp['password']
+                )
+                options.add_extension(self._proxy_ext_path)
+                print(f"[headless] proxy enabled (authenticated) via {pp['host']}:{pp['port']}")
+            else:
+                options.add_argument(f"--proxy-server={pp['host']}:{pp['port']}")
+                print(f"[headless] proxy enabled via {pp['host']}:{pp['port']}")
         
         # UA must match installed Chrome major version to avoid TLS/UA fingerprint mismatch
         chrome_major = self._detect_chrome_major()
@@ -99,6 +188,12 @@ class HeadlessFetcher:
                 pass
             self.driver = None
             self.initialized = False
+        if self._proxy_ext_path and os.path.exists(self._proxy_ext_path):
+            try:
+                os.remove(self._proxy_ext_path)
+            except OSError:
+                pass
+            self._proxy_ext_path = None
     
     def is_healthy(self):
         """Check if the driver is still responsive."""

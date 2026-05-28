@@ -21,6 +21,52 @@ import requests
 import json
 import os
 
+
+def _load_dotenv():
+    """Minimal .env loader — parses gateway/.env into os.environ if present.
+
+    No external dependency (python-dotenv not guaranteed on VPS). Only sets
+    keys not already in the environment, so systemd EnvironmentFile or shell
+    exports still take precedence. Silent no-op if the file is absent.
+    """
+    env_path = os.path.join(os.path.dirname(__file__), '.env')
+    if not os.path.exists(env_path):
+        return
+    try:
+        with open(env_path, 'r') as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#') or '=' not in line:
+                    continue
+                key, _, value = line.partition('=')
+                key = key.strip()
+                value = value.strip().strip('"').strip("'")
+                if key and key not in os.environ:
+                    os.environ[key] = value
+    except Exception as e:
+        print(f"[gateway] WARN: .env load failed: {type(e).__name__}")
+
+
+_load_dotenv()
+
+# --- Proxy Config ---
+# Residential proxy (Webshare) routes scraper traffic through consumer IPs,
+# defeating datacenter-IP bot detection at Amazon/eBay. Single PROXY_URL env
+# var is shared by headless Chrome (--proxy-server) and the requests fallback.
+PROXY_URL = os.environ.get('PROXY_URL', '')
+PROXY_ENABLED = os.environ.get('PROXY_ENABLED', 'false').lower() == 'true'
+
+
+def get_proxy_config():
+    """Return proxy config dict, or None if disabled/unconfigured."""
+    if not PROXY_ENABLED or not PROXY_URL:
+        return None
+    return {
+        'url': PROXY_URL,
+        'requests_proxies': {'http': PROXY_URL, 'https': PROXY_URL},
+    }
+
+
 app = Flask(__name__)
 CORS(app)
 
@@ -55,7 +101,8 @@ def get_headless():
     if not HAS_HEADLESS:
         return None
     if headless is None:
-        headless = HeadlessFetcher()
+        proxy = get_proxy_config()
+        headless = HeadlessFetcher(proxy_url=proxy['url'] if proxy else None)
         headless.start()
     elif not headless.is_healthy():
         print("[gateway] Headless instance unhealthy — reinitializing")
@@ -71,11 +118,11 @@ MANIFEST_DIR = os.path.join(os.path.dirname(__file__), 'manifests')
 # Manifests for other sites can stay on disk but won't be loaded
 # (frontend won't see them, proxy will reject their domains).
 # To enable a new site: add its name here and redeploy.
-# 2026-05-26: eBay disabled — Akamai edge CDN blocks Hetzner IP range entirely
-# (both simple fetch 403 and headless "Access Denied"). Re-enable when:
-#   (a) PA-API path opens after 3 Amazon purchases, or
-#   (b) residential proxy is set up for eBay traffic
-ENABLED_SITES = {'amazon'}
+# 2026-05-26: eBay disabled — Akamai edge CDN blocks Hetzner IP range entirely.
+# 2026-05-28: eBay RE-ENABLED — residential proxy (Webshare) routes traffic
+#   through consumer IPs, bypassing the datacenter-IP block. The Akamai block
+#   was on the Hetzner IP range, not site config; manifest was always on disk.
+ENABLED_SITES = {'amazon', 'ebay'}
 
 
 def load_manifests():
@@ -132,7 +179,9 @@ def health():
         'status': 'ok',
         'manifests_loaded': len(MANIFESTS),
         'headless_ready': headless is not None and headless.is_healthy(),
-        'rate_limiting': HAS_LIMITER
+        'rate_limiting': HAS_LIMITER,
+        'proxy_enabled': PROXY_ENABLED,
+        'proxy_configured': bool(PROXY_URL),
     })
 
 
@@ -194,7 +243,10 @@ def _proxy_handler():
                 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
                 'Accept-Language': 'en-US,en;q=0.5',
             }
-            response = requests.get(url, headers=headers, timeout=15)
+            response = requests.get(
+                url, headers=headers, timeout=15,
+                proxies=(get_proxy_config() or {}).get('requests_proxies')
+            )
             html = response.text
 
         return Response(html, status=200, content_type='text/html; charset=utf-8')
