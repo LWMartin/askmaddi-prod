@@ -139,9 +139,10 @@ MANIFEST_DIR = os.path.join(os.path.dirname(__file__), 'manifests')
 # (frontend won't see them, proxy will reject their domains).
 # To enable a new site: add its name here and redeploy.
 # 2026-05-26: eBay disabled — Akamai edge CDN blocks Hetzner IP range entirely.
-# 2026-05-28: eBay RE-ENABLED — residential proxy (Webshare) routes traffic
-#   through consumer IPs, bypassing the datacenter-IP block. The Akamai block
-#   was on the Hetzner IP range, not site config; manifest was always on disk.
+# 2026-05-28: eBay served via the official Browse API (/ebay/search), NOT scraped.
+#   It stays in ENABLED_SITES so its manifest loads and the frontend lists eBay
+#   as a source — but the frontend routes eBay to the API branch, never /proxy.
+#   The manifest's extraction config is now vestigial (kept for schema parity).
 ENABLED_SITES = {'amazon', 'ebay'}
 
 

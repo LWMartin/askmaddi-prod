@@ -9,6 +9,22 @@ class Fetcher {
         return await response.json();
     }
     
+    async searchEbay(query) {
+        // Official eBay Browse API (server-side). Returns structured listings
+        // with EPN affiliate attribution baked into each URL — no scrape, no
+        // proxy, no Akamai. Response: { count, items: [{name, price, currency,
+        // image, url, condition, seller}] }.
+        const response = await fetch(
+            `${this.gateway}/ebay/search?q=${encodeURIComponent(query)}`
+        );
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            throw new Error(error.error || `eBay search failed: ${response.status}`);
+        }
+        const data = await response.json();
+        return Array.isArray(data.items) ? data.items : [];
+    }
+
     async fetchViaProxy(url) {
         const response = await fetch(`${this.gateway}/proxy`, {
             method: 'POST',

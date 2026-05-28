@@ -133,9 +133,17 @@ class AskMaddi {
         const allProducts = [];
         const diagnostics = {};
         let sourcesComplete = 0;
-        
+
+        // eBay is served by the official Browse API, not the scrape loop.
+        // Pull it out of `sites` so it isn't double-fetched via /proxy.
+        const scrapeSites = sites.filter(
+            ([, manifest]) => (manifest.domain || '').toLowerCase() !== 'ebay.com'
+        );
+        const hasEbay = sites.length !== scrapeSites.length;
+        const totalSources = scrapeSites.length + (hasEbay ? 1 : 0);
+
         // Fire all site fetches in parallel — each one renders as it arrives
-        const fetchPromises = sites.map(async ([siteName, manifest]) => {
+        const fetchPromises = scrapeSites.map(async ([siteName, manifest]) => {
             const diag = { site: siteName, status: 'ok', htmlBytes: 0, containers: 0, products: 0 };
             try {
                 this.ui.updateStreamingSource(siteName, 'fetching');
@@ -172,10 +180,45 @@ class AskMaddi {
                 this.ui.updateStreamingSource(siteName, 'error');
             } finally {
                 sourcesComplete++;
-                this.ui.updateStreamingProgress(sourcesComplete, sites.length);
+                this.ui.updateStreamingProgress(sourcesComplete, totalSources);
             }
         });
-        
+
+        // === eBay via official Browse API (parallel branch, not /proxy) ===
+        if (hasEbay) {
+            const diag = { site: 'eBay', status: 'ok', htmlBytes: 0, containers: 0, products: 0 };
+            fetchPromises.push((async () => {
+                try {
+                    this.ui.updateStreamingSource('eBay', 'fetching');
+                    const products = await this.fetcher.searchEbay(query);
+                    diag.products = products.length;
+
+                    products.forEach(p => {
+                        p.source = 'eBay';
+                        p.sourceDomain = 'ebay.com';
+                    });
+
+                    if (products.length > 0) {
+                        allProducts.push(...products);
+                        const ranked = this.ranker.rank([...allProducts], query);
+                        this.ui.replaceProductGrid(ranked, query);
+                    }
+
+                    this.ui.updateStreamingSource('eBay', 'done');
+                    diagnostics['eBay'] = diag;
+                } catch (error) {
+                    console.error('Failed to fetch eBay:', error);
+                    diag.status = 'error';
+                    diag.error = error.message;
+                    diagnostics['eBay'] = diag;
+                    this.ui.updateStreamingSource('eBay', 'error');
+                } finally {
+                    sourcesComplete++;
+                    this.ui.updateStreamingProgress(sourcesComplete, totalSources);
+                }
+            })());
+        }
+
         // Wait for all to complete
         await Promise.all(fetchPromises);
         

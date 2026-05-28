@@ -268,12 +268,9 @@ class HeadlessFetcher:
 
 
 # Site-specific configurations
+# NOTE: eBay intentionally absent — served via the official Browse API
+# (gateway/ebay_api.py), never scraped. See app_production.py /ebay/search.
 SITE_CONFIG = {
-    'ebay.com': {
-        'needs_headless': True,   # 2026-05-26: eBay now returns 403 on simple fetch
-        'wait_for': '.s-item__title',
-        'wait_time': 3
-    },
     'amazon.com': {
         'needs_headless': True,
         'wait_for': '[data-component-type="s-search-result"]',
