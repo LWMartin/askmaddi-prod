@@ -3,10 +3,11 @@ import { Extractor } from './extractor.js';
 import { Deduper } from './deduper.js';
 import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
+import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
 
 class AskMaddi {
     constructor() {
-        this.gateway = '';  // same-origin: Apache proxies /health,/instructions,/proxy,/ping → gateway:5001
+        this.gateway = '';
         this.manifests = null;
         this.fetcher = new Fetcher(this.gateway);
         this.extractor = new Extractor();
@@ -15,6 +16,7 @@ class AskMaddi {
         this.ui = new UI();
         this.currentQuery = '';
         this.isSearching = false;
+        this.cardManifest = null;
     }
     
     async init() {
@@ -36,9 +38,21 @@ class AskMaddi {
             console.error('Failed to load manifests:', error);
             this.manifestError = error;
         }
+
+        // Preload card manifest for instant matching
+        this.cardManifest = await loadManifest();
         
         this.ui.showState('landing');
         console.log('AskMaddi ready!');
+
+        // Win 3: Preload extraction model silently in background
+        // If model is cached, this is instant. If not, starts download
+        // so it's warm by the time user searches.
+        this.extractor.needsSetup().then(needs => {
+            if (!needs) {
+                this.extractor.warmup && this.extractor.warmup();
+            }
+        });
     }
     
     bindEvents() {
@@ -78,93 +92,105 @@ class AskMaddi {
         
         this.currentQuery = query;
         this.isSearching = true;
-        
         console.log('Searching for:', query);
-        this.ui.showState('loading');
         
+        // === WIN 1: Instant card matches ===
+        // Check card manifest FIRST — zero latency, shows results immediately
+        const matchedCards = matchCards(query, this.cardManifest);
+        
+        // Switch to results state IMMEDIATELY (not after scraper completes)
+        const sites = Object.entries(this.manifests.sites);
+        this.ui.showState('results');
+        this.ui.initStreamingResults(query, sites.length);
+        
+        // Show matched review cards instantly (user sees content in <100ms)
+        if (matchedCards.length > 0) {
+            renderMatchedCards(matchedCards, '#matched-cards');
+        } else {
+            const mc = document.getElementById('matched-cards');
+            if (mc) mc.style.display = 'none';
+        }
+        
+        // Populate the results search bar with current query
+        const resultsInput = document.getElementById('results-search-input');
+        if (resultsInput) resultsInput.value = query;
+        
+        // === WIN 2: Stream scraper results as they arrive ===
         try {
-            const results = await this.search(query);
-            this.displayResults(results);
+            await this.streamSearch(query, sites);
         } catch (error) {
             console.error('Search failed:', error);
-            this.ui.showError(error.message);
+            // Don't switch to error state if we already have card matches showing
+            if (matchedCards.length === 0) {
+                this.ui.showError(error.message);
+            }
         } finally {
             this.isSearching = false;
         }
     }
     
-    async search(query) {
-    const allProducts = [];
-    const sites = Object.entries(this.manifests.sites);
-    const diagnostics = {};
-    
-    this.ui.updateLoadingStatus(sites.map(([name]) => ({ name, status: 'pending' })));
-    
-    // Fetch ALL sites in parallel
-    const fetchPromises = sites.map(async ([siteName, manifest]) => {
-        const diag = { site: siteName, status: 'ok', htmlBytes: 0, containers: 0, products: 0 };
-        try {
-            this.ui.updateSourceStatus(siteName, 'fetching');
-            
-            const searchUrl = manifest.search.url_template.replace('{query}', encodeURIComponent(query));
-            const html = await this.fetcher.fetchViaProxy(searchUrl);
-            diag.htmlBytes = html ? html.length : 0;
-            
-            this.ui.updateSourceStatus(siteName, 'extracting');
-            
-            const products = await this.extractor.extract(html, manifest);
-            diag.products = products.length;
-            
-            products.forEach(p => {
-                p.source = manifest.name;
-                p.sourceDomain = manifest.domain;
-            });
-            
-            this.ui.updateSourceStatus(siteName, 'done');
-            diagnostics[siteName] = diag;
-            return products;
-            
-        } catch (error) {
-            console.error(`Failed to fetch ${siteName}:`, error);
-            diag.status = 'error';
-            diag.error = error.message;
-            diagnostics[siteName] = diag;
-            this.ui.updateSourceStatus(siteName, 'error');
-            return [];
+    async streamSearch(query, sites) {
+        const allProducts = [];
+        const diagnostics = {};
+        let sourcesComplete = 0;
+        
+        // Fire all site fetches in parallel — each one renders as it arrives
+        const fetchPromises = sites.map(async ([siteName, manifest]) => {
+            const diag = { site: siteName, status: 'ok', htmlBytes: 0, containers: 0, products: 0 };
+            try {
+                this.ui.updateStreamingSource(siteName, 'fetching');
+                
+                const searchUrl = manifest.search.url_template.replace('{query}', encodeURIComponent(query));
+                const html = await this.fetcher.fetchViaProxy(searchUrl);
+                diag.htmlBytes = html ? html.length : 0;
+                
+                this.ui.updateStreamingSource(siteName, 'extracting');
+                
+                const products = await this.extractor.extract(html, manifest);
+                diag.products = products.length;
+                
+                products.forEach(p => {
+                    p.source = manifest.name;
+                    p.sourceDomain = manifest.domain;
+                });
+                
+                // === Stream: append these products to the grid NOW ===
+                if (products.length > 0) {
+                    allProducts.push(...products);
+                    const ranked = this.ranker.rank([...allProducts], query);
+                    this.ui.replaceProductGrid(ranked, query);
+                }
+                
+                this.ui.updateStreamingSource(siteName, 'done');
+                diagnostics[siteName] = diag;
+                
+            } catch (error) {
+                console.error(`Failed to fetch ${siteName}:`, error);
+                diag.status = 'error';
+                diag.error = error.message;
+                diagnostics[siteName] = diag;
+                this.ui.updateStreamingSource(siteName, 'error');
+            } finally {
+                sourcesComplete++;
+                this.ui.updateStreamingProgress(sourcesComplete, sites.length);
+            }
+        });
+        
+        // Wait for all to complete
+        await Promise.all(fetchPromises);
+        
+        // === Final pass: full dedup + rank ===
+        if (allProducts.length > 0) {
+            const deduped = this.deduper.deduplicate(allProducts);
+            const ranked = this.ranker.rank(deduped, query);
+            this.ui.replaceProductGrid(ranked, query);
+            this.ui.finalizeResults(ranked.length, allProducts.length, deduped.length);
+        } else if (allProducts.length === 0) {
+            console.warn('ZERO RESULTS — diagnostics:', JSON.stringify(diagnostics, null, 2));
+            this.ui.showEmptyResults(diagnostics);
         }
-    });
-    
-    // Wait for all to complete
-    const results = await Promise.all(fetchPromises);
-    
-    // Flatten results
-    for (const products of results) {
-        allProducts.push(...products);
-    }
-    
-    // Log diagnostics on zero results
-    if (allProducts.length === 0) {
-        console.warn('ZERO RESULTS — diagnostics:', JSON.stringify(diagnostics, null, 2));
-    }
-    
-    this.sendAnalytics(query, sites.length);
-    
-    const deduped = this.deduper.deduplicate(allProducts);
-    const ranked = this.ranker.rank(deduped, query);
-    
-    return {
-        query,
-        products: ranked,
-        totalFound: allProducts.length,
-        afterDedup: deduped.length,
-        sourcesChecked: sites.length,
-        diagnostics: allProducts.length === 0 ? diagnostics : undefined
-    };
-}
-    
-    displayResults(results) {
-        this.ui.showState('results');
-        this.ui.displayResults(results);
+        
+        this.sendAnalytics(query, sites.length);
     }
     
     cancelSearch() {
