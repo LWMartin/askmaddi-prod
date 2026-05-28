@@ -1,8 +1,70 @@
 # AskMaddi — Production Map
 
+> **⚠️ CURRENT STATE (verified 2026-05-28) is the section immediately below.**
+> Everything under "HISTORICAL SURVEY (2026-04-04)" describes the *old CentOS 7 / cPanel*
+> box AskMaddi was migrated away from. It's kept for migration provenance, but its
+> port numbers, paths, service names, and "needs deploy" notes are all superseded.
+
+---
+
+## CURRENT STATE — verified 2026-05-28 (post-Hetzner)
+
+**Host:** phantom-ops-prod (Hetzner, AlmaLinux 9). Same box as Ramish API & phantom-ops.
+**Domain:** askmaddi.com — Apache (`/etc/httpd/conf.d/`), Let's Encrypt SSL.
+
+### Serving topology
+```
+Browser ──HTTPS──→ Apache (askmaddi.com-le-ssl.conf)
+   │
+   ├── DocumentRoot /opt/askmaddi-prod/browser   ← static frontend, served from repo tree
+   │       (the auto-pull IS the deploy; no separate docroot copy)
+   │
+   └── ProxyPass /health /instructions /proxy /ping /ebay  ──→ 127.0.0.1:5001
+                                                                   │
+                              gunicorn (2 workers, app_production:app)
+                              service: askmaddi-gateway.service
+                              user: askmaddi   (NOT root — hardening done)
+```
+
+### Canonical files (all under `/opt/askmaddi-prod/`, owner `askmaddi`)
+| File | Role |
+|------|------|
+| `gateway/app_production.py` | **THE live gateway** (app:app on :5001). `app.py` is legacy, NOT served. |
+| `gateway/ebay_api.py` | eBay Browse API client (OAuth2 client-creds, EPN affiliate attribution) |
+| `gateway/headless_fetcher.py` | Headless Chrome path for scrape sites (Amazon). Chrome IS installed. |
+| `gateway/.env` | Secrets: EBAY_* creds, PROXY_* (Webshare residential). Never committed. |
+| `browser/` | Frontend (DocumentRoot). `app.js`, `fetcher.js`, etc. served directly. |
+| `gateway/manifests/` | Site manifests. `ENABLED_SITES = {amazon, ebay}` in app_production.py. |
+
+### Source routing (per-site)
+- **eBay** → official Browse API via `/ebay/search` (server-side, structured JSON, EPN-tagged). NOT scraped. Frontend `fetcher.searchEbay()` hits it; `app.js` filters eBay out of the `/proxy` scrape loop.
+- **Amazon** → headless scrape via `/proxy` (still fingerprint-blocked; PA-API path pending Amy's-daughter purchases).
+- BestBuy/Newegg/Walmart → manifests on disk but not in ENABLED_SITES.
+
+### Deploy mechanism
+- Cron (`crontab -u askmaddi`): `*/5 * * * * cd /opt/askmaddi-prod && git pull origin master --quiet 2>&1 | logger -t askmaddi-pull`
+- **VERIFIED WORKING 2026-05-28** via rollback test (reset box to prior commit, watched the next tick self-heal HEAD to remote). The push IS the deploy; allow up to 5 min.
+- **Monitoring caveat:** `git pull --quiet` prints nothing on success, so `journalctl -t askmaddi-pull` is EMPTY when the cron is healthy. Do NOT read a silent journal as "broken" — diagnose by outcome (`git -C /opt/askmaddi-prod log -1` vs remote), not by logs. To get positive log confirmation, drop `--quiet` or append `&& logger -t askmaddi-pull "pulled $(git rev-parse --short HEAD)"`.
+
+### Ports on this box (don't confuse them)
+- **5001** = AskMaddi gateway (`askmaddi-gateway.service`, user `askmaddi`)
+- **5000** = Ramish API (`ramish-api.service`, user `ramish`) — unrelated to AskMaddi
+
+### Affiliate status (verified live)
+- **eBay Partner Network:** LIVE. Campaign `5339138080` attaches to every `/ebay/search` URL (`campid=` confirmed in responses). Earning-capable now.
+- **Amazon Associates:** approved (`askmaddi-20`), PA-API not yet active (awaiting purchases to unblock).
+
+---
+
+## HISTORICAL SURVEY (2026-04-04) — PRE-HETZNER, SUPERSEDED
+
 **Surveyed:** 2026-04-04 by Claude + Lee (PuTTY/WinSCP session)
 **VPS:** server-606198.aisciencecenter.com (CentOS 7, cPanel)
 **Domain:** askmaddi.com (Let's Encrypt SSL via `/etc/letsencrypt/live/askmaddi.com`)
+
+> Everything below predates the Hetzner/AlmaLinux migration. Port 5000, root user,
+> `api.php` bridge, `app.py`-as-canonical, "Chrome not installed", and "revenue ZERO"
+> are all OUT OF DATE. Read the Current State section above for reality.
 
 ---
 
