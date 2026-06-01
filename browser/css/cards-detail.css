@@ -1,0 +1,214 @@
+/* ─────────────────────────────────────────────────────────────────
+   cards-detail.css — AskMaddi card detail page (Phase 2)
+   Extends the shared design tokens defined in maddi.css (:root vars).
+   Do not redefine tokens here; only layout + detail-specific components.
+   ───────────────────────────────────────────────────────────────── */
+
+.card-detail {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+}
+
+/* ─── Hero ─────────────────────────────────────────────────────── */
+.card-hero {
+    display: flex;
+    gap: var(--space-lg);
+    align-items: flex-start;
+    padding: var(--space-lg) 0 var(--space-xl);
+    border-bottom: 1px solid var(--color-border);
+}
+@media (max-width: 560px) {
+    .card-hero { flex-direction: column; gap: var(--space-md); }
+}
+
+.hero-media { flex-shrink: 0; width: 200px; }
+@media (max-width: 560px) { .hero-media { width: 100%; } }
+
+.hero-product-img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    background: var(--color-surface);
+    box-shadow: var(--shadow-card);
+    object-fit: contain;
+    aspect-ratio: 1 / 1;
+}
+.hero-product-img.placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+    font-size: 13px;
+    border: 1px dashed var(--color-border);
+    box-shadow: none;
+}
+
+.hero-body { flex: 1; min-width: 0; }
+.hero-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--color-text);
+    line-height: 1.2;
+    margin: 0 0 var(--space-xs);
+}
+.hero-descriptor {
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    margin: 0 0 var(--space-md);
+}
+.hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-md);
+    flex-wrap: wrap;
+}
+.hero-actions .btn-affiliate { flex: 1 1 auto; min-width: 140px; }
+.hero-meta {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    flex-wrap: wrap;
+}
+.hero-meta strong { color: var(--color-text-secondary); }
+
+/* ─── Confidence badge ─────────────────────────────────────────── */
+.conf-badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    padding: 2px 7px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+}
+.conf-high    { background: rgba(90,154,110,0.14);  color: var(--color-success); }
+.conf-med     { background: rgba(224,120,80,0.14);  color: var(--color-primary-dark); }
+.conf-low     { background: rgba(154,147,140,0.16); color: var(--color-text-secondary); }
+.conf-unknown { background: var(--color-border-light); color: var(--color-text-muted); }
+
+/* ─── Sections ─────────────────────────────────────────────────── */
+.card-section { padding: var(--space-lg) 0; border-bottom: 1px solid var(--color-border-light); }
+.card-section-head {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--color-text-muted);
+    margin: 0 0 var(--space-md);
+}
+.card-section-head.inline { display: inline; margin: 0; }
+
+.synthesis-text {
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* ─── Axes ─────────────────────────────────────────────────────── */
+.axes-stack { display: flex; flex-direction: column; gap: var(--space-lg); }
+.detail-axis { }
+.detail-axis-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-xs);
+}
+.detail-axis-name { font-size: 14px; font-weight: 600; color: var(--color-text); }
+
+/* axis-row / axis-bar / bar-pos / bar-neg inherited from maddi.css;
+   counts label is detail-specific */
+.axis-counts {
+    flex-shrink: 0;
+    font-size: 11px;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+}
+.detail-axis .axis-bar { height: 8px; }
+
+.axis-quote {
+    margin: var(--space-sm) 0 0;
+    padding: var(--space-sm) var(--space-md);
+    border-left: 3px solid var(--color-border);
+    background: var(--color-background);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--color-text-secondary);
+    font-style: italic;
+}
+.quote-cite {
+    display: inline;
+    font-style: normal;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    text-decoration: none;
+}
+.quote-cite:hover { color: var(--color-primary); }
+
+/* ─── Issue clusters ───────────────────────────────────────────── */
+.issue-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: var(--space-sm); }
+.issue { font-size: 14px; color: var(--color-text); }
+.issue-warn { color: var(--color-primary); margin-right: var(--space-xs); }
+.issue-cites { color: var(--color-text-muted); font-size: 12px; }
+
+/* ─── Detail axes toggle ───────────────────────────────────────── */
+.detail-axes-toggle summary {
+    cursor: pointer;
+    list-style: none;
+    user-select: none;
+}
+.detail-axes-toggle summary::-webkit-details-marker { display: none; }
+.detail-axes-toggle summary::before {
+    content: "\25B8";
+    display: inline-block;
+    margin-right: var(--space-sm);
+    color: var(--color-text-muted);
+    transition: transform var(--transition-fast);
+}
+.detail-axes-toggle[open] summary::before { transform: rotate(90deg); }
+.detail-axes-toggle .axes-stack { margin-top: var(--space-lg); }
+
+/* ─── Used market bands ────────────────────────────────────────── */
+.band-grid { display: flex; gap: var(--space-sm); flex-wrap: wrap; }
+.band {
+    flex: 1 1 80px;
+    text-align: center;
+    padding: var(--space-sm);
+    background: var(--color-background);
+    border: 1px solid var(--color-border-light);
+    border-radius: var(--radius-md);
+}
+.band-label { display: block; font-size: 11px; color: var(--color-text-muted); text-transform: uppercase; }
+.band-price { display: block; font-size: 16px; font-weight: 700; color: var(--color-text); margin-top: 2px; }
+.band-note { font-size: 12px; color: var(--color-text-muted); margin: var(--space-sm) 0 0; }
+
+/* ─── Sources ──────────────────────────────────────────────────── */
+.src-total, .src-count { color: var(--color-text-muted); font-weight: 400; }
+.src-intro { font-size: 13px; color: var(--color-text-secondary); margin: 0 0 var(--space-md); }
+.src-group { margin-bottom: var(--space-md); }
+.src-group-head { font-size: 13px; font-weight: 600; color: var(--color-text); margin: 0 0 var(--space-sm); }
+.src-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.src-list li { font-size: 13px; line-height: 1.4; }
+.src-list a { color: var(--color-primary); text-decoration: none; }
+.src-list a:hover { text-decoration: underline; }
+.src-by { color: var(--color-text-muted); font-size: 12px; }
+
+/* ─── Footer ───────────────────────────────────────────────────── */
+.card-footer {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: var(--space-lg) var(--space-md) var(--space-xl);
+    text-align: center;
+    font-size: 13px;
+    color: var(--color-text-muted);
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+}
+.card-footer a { color: var(--color-primary); text-decoration: none; }
+.card-footer a:hover { text-decoration: underline; }
