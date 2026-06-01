@@ -212,3 +212,55 @@
 }
 .card-footer a { color: var(--color-primary); text-decoration: none; }
 .card-footer a:hover { text-decoration: underline; }
+
+/* ─── Specifications (product-forward; fact-pipeline output) ──────── */
+/* Two-column key/value grid. Sits directly under the hero, above the
+   synthesis, so the hard facts are the first thing after price. Omitted
+   entirely by build_site.py when the card carries no specs. */
+.spec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: var(--space-xs) var(--space-lg);
+}
+.spec-row {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-xs) 0;
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: 14px;
+}
+.spec-label { color: var(--color-text-secondary); }
+.spec-value { color: var(--color-text); font-weight: 600; text-align: right; }
+@media (max-width: 560px) {
+    .spec-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Sources — 3-column below-fold grid ─────────────────────────── */
+/* Source-type groups flow into columns so the 100+ source list reads as a
+   compact reference block rather than a long vertical scroll. Groups keep
+   their internal vertical link list; columns collapse on narrow viewports. */
+.src-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-lg);
+    align-items: start;
+}
+.src-grid .src-group { margin-bottom: 0; break-inside: avoid; }
+@media (max-width: 760px) {
+    .src-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+    .src-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Detail header wordmark — match landing page branding ───────── */
+/* .logo-title on the landing page is an <h1> (inherits --color-text). Here it
+   is an <a>, so pin the text to the brand black-brown, not the link color. */
+.header-compact .logo-title {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 20px;
+    font-weight: 600;
+}
+.header-compact .logo-title .site-logo { height: 28px; }

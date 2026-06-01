@@ -164,7 +164,6 @@ def axis_block(axis):
         <div class="detail-axis">
           <div class="detail-axis-head">
             <span class="detail-axis-name">{esc(name)}</span>
-            {confidence_badge(axis.get("confidence"))}
           </div>
           <div class="axis-row">
             <div class="axis-bar">
@@ -204,7 +203,7 @@ def sources_section(sources):
             f'<span class="src-count">({len(items)})</span></h3>'
             f'<ul class="src-list">{"".join(links)}</ul></div>'
         )
-    return "\n".join(blocks)
+    return f'<div class="src-grid">{"".join(blocks)}</div>'
 
 
 def price_history_section(card):
@@ -226,8 +225,49 @@ def price_history_section(card):
       </section>"""
 
 
+# ─── Specs (product-forward; honest about absence) ──────────────────────────
+# Specs are a facts-pipeline output (manufacturer-canonical key/value pairs).
+# The card schema may not carry them yet — when absent or empty, the section
+# is omitted entirely rather than rendered as an empty box (same discipline as
+# pricing/issue_clusters). Numeric conflicts arrive pre-resolved as an honest
+# spread string from the fact pipeline; we render the value verbatim.
+def specs_section(card):
+    specs = card.get("specs") or {}
+    # Accept either a flat dict {label: value} or a list of {label, value}.
+    rows = []
+    if isinstance(specs, dict):
+        items = specs.get("items", specs) if "items" in specs else specs
+        if isinstance(items, dict):
+            rows = [(k, v) for k, v in items.items() if v not in (None, "", [])]
+        elif isinstance(items, list):
+            rows = [(d.get("label", ""), d.get("value")) for d in items
+                    if d.get("value") not in (None, "", [])]
+    elif isinstance(specs, list):
+        rows = [(d.get("label", ""), d.get("value")) for d in specs
+                if d.get("value") not in (None, "", [])]
+    if not rows:
+        return ""
+    cells = "".join(
+        f'<div class="spec-row"><span class="spec-label">{esc(label)}</span>'
+        f'<span class="spec-value">{esc(value)}</span></div>'
+        for label, value in rows
+    )
+    return f"""
+      <section class="card-section">
+        <h2 class="card-section-head">Specifications</h2>
+        <div class="spec-grid">{cells}</div>
+      </section>"""
+
+
+def _has_sentiment(axis):
+    """True if an axis carries any rated sentiment. Axes with total==0 are
+    empty (no reviewer touched them) and are suppressed from the page entirely
+    rather than rendered as a 0/0/0 bar."""
+    return ((axis.get("sentiment", {}) or {}).get("total", 0) or 0) > 0
+
+
 # ─── Page assembly ──────────────────────────────────────────────────────────
-def render_page(card):
+def render_page(card, image_url=None):
     ident = card["identity"]
     name = ident["display_name"]
     brand = ident.get("brand", "")
@@ -247,8 +287,10 @@ def render_page(card):
 
     synth = (card.get("synthesis", {}) or {}).get("consensus_paragraph", "")
 
-    lead = card.get("lead_axes", []) or []
-    detail = card.get("detail_axes", []) or []
+    # Empty axes (sentiment.total == 0) are suppressed entirely — no reviewer
+    # touched them, so rendering a 0/0/0 bar is noise, not information.
+    lead = [a for a in (card.get("lead_axes", []) or []) if _has_sentiment(a)]
+    detail = [a for a in (card.get("detail_axes", []) or []) if _has_sentiment(a)]
 
     lead_html = "\n".join(axis_block(a) for a in lead)
     detail_html = "\n".join(axis_block(a) for a in detail)
@@ -270,9 +312,22 @@ def render_page(card):
 
     sources_html = sources_section(card.get("sources", []) or [])
     price_html = price_history_section(card)
+    specs_html = specs_section(card)
+
+    # Key Axes header only renders if at least one non-empty lead axis survives.
+    lead_section = (
+        f'''<section class="card-section">
+        <h2 class="card-section-head">Key Axes</h2>
+        <div class="axes-stack">{lead_html}</div>
+      </section>''' if lead else ''
+    )
 
     # Product image — use card identity image if present, else a placeholder block.
-    img_url = ident.get("image_hero") or ident.get("image_thumb") or card.get("image_thumb")
+    # Product image precedence: card's own fields first (Phase 3 will populate
+    # identity.image_hero), then an explicitly supplied URL (e.g. the
+    # manufacturer shot already in cards-manifest.json), then placeholder.
+    img_url = (ident.get("image_hero") or ident.get("image_thumb")
+               or card.get("image_thumb") or image_url)
     img_html = (
         f'<img class="hero-product-img" src="{esc(img_url)}" alt="{esc(name)}" loading="eager">'
         if img_url else '<div class="hero-product-img placeholder">No image yet</div>'
@@ -300,7 +355,7 @@ def render_page(card):
   <div class="container">
 
     <header class="header-compact">
-      <a href="/"><img src="/images/logo.png" alt="AskMaddi" class="site-logo"></a>
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
       <div class="search-box">
         <input type="text" id="detail-search-input" placeholder="Search another product\u2026">
         <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
@@ -321,20 +376,18 @@ def render_page(card):
           <p class="hero-meta">
             Synthesized from <strong>{source_count}</strong> reviewer sources
             {f"\u00b7 Last updated {esc(last_built)}" if last_built else ""}
-            \u00b7 {confidence_badge(conf)}
           </p>
         </div>
       </section>
+
+      {specs_html}
 
       {f'''<section class="card-section">
         <h2 class="card-section-head">What reviewers agree on</h2>
         <p class="synthesis-text">{esc(synth)}</p>
       </section>''' if synth else ''}
 
-      <section class="card-section">
-        <h2 class="card-section-head">Key Axes</h2>
-        <div class="axes-stack">{lead_html}</div>
-      </section>
+      {lead_section}
 
       {clusters_html}
 
@@ -370,8 +423,18 @@ def render_page(card):
 # ─── Manifest (teaser grid) regeneration ────────────────────────────────────
 def teaser_entry(card):
     ident = card["identity"]
-    new_label, new_url = new_cta(card)
-    used_label, used_url = used_cta(card)
+    # cards.js reads pricing.new_price / used_price (numbers) and runs its own
+    # formatPrice() -> "$899" or "Check price" on zero/null. It appends the
+    # " new" / " used" suffix itself, so we hand it raw numerics + URLs, NOT
+    # the pre-labelled strings the detail page uses.
+    pricing = card.get("pricing", {}) or {}
+    new_price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
+    _, new_url = new_cta(card)
+    used = pricing.get("used_market", {}) or {}
+    used_bands = [v for v in (used.get("bands", {}) or {}).values()
+                  if isinstance(v, (int, float)) and v > 0]
+    used_price = min(used_bands) if used_bands else 0
+    _, used_url = used_cta(card)
     top = sorted(
         (card.get("lead_axes", []) or []),
         key=lambda a: (a.get("sentiment", {}) or {}).get("total", 0),
@@ -396,8 +459,8 @@ def teaser_entry(card):
             for a in top
         ],
         "pricing": {
-            "new_label": new_label, "new_url": new_url,
-            "used_label": used_label, "used_url": used_url,
+            "new_price": int(new_price) if new_price else 0, "new_url": new_url,
+            "used_price": int(used_price) if used_price else 0, "used_url": used_url,
         },
         "card_url": f"cards/{card['card_id']}/",
     }
@@ -419,6 +482,8 @@ def main():
     ap.add_argument("--cards-dir", help="Directory of card JSONs (*.json).")
     ap.add_argument("--output-dir", default="browser", help="Output root (default: browser/).")
     ap.add_argument("--manifest", action="store_true", help="Also regenerate cards-manifest.json.")
+    ap.add_argument("--image-url", help="Fallback product image URL when the card carries none "
+                                        "(single-card builds only; card fields take precedence).")
     args = ap.parse_args()
 
     if not args.card and not args.cards_dir:
@@ -436,7 +501,7 @@ def main():
         page_dir = out / "cards" / cid
         page_dir.mkdir(parents=True, exist_ok=True)
         page = page_dir / "index.html"
-        page.write_text(render_page(card), encoding="utf-8")
+        page.write_text(render_page(card, image_url=args.image_url), encoding="utf-8")
         written.append(str(page))
         print(f"  \u2713 {cid} \u2192 {page}")
 
