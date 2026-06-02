@@ -45,6 +45,18 @@ class AskMaddi {
         this.ui.showState('landing');
         console.log('AskMaddi ready!');
 
+        // Deep-link: if arriving with ?q=… (e.g. from a card detail page's
+        // search bar), populate the input and run the search automatically.
+        const params = new URLSearchParams(window.location.search);
+        const incomingQuery = params.get('q');
+        if (incomingQuery && incomingQuery.trim()) {
+            const input = document.getElementById('search-input');
+            if (input) {
+                input.value = incomingQuery.trim();
+                this.handleSearch();
+            }
+        }
+
         // Win 3: Preload extraction model silently in background
         // If model is cached, this is instant. If not, starts download
         // so it's warm by the time user searches.

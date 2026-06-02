@@ -357,7 +357,7 @@ def render_page(card, image_url=None):
     <header class="header-compact">
       <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
       <div class="search-box">
-        <input type="text" id="detail-search-input" placeholder="Search another product\u2026">
+        <input type="text" id="detail-search-input" placeholder="Search another product\u2026" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
         <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
       </div>
     </header>
