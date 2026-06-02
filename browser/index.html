@@ -133,21 +133,6 @@
         <p>Built at <a href="https://aisciencecenter.com">AI Science Center</a> · <a href="mission.html">Our Mission</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
     </footer>
 
-    <!-- Sticky banner for results (hidden by default, shown on scroll) -->
-    <div id="sticky-banner" class="sticky-banner">
-        <button id="banner-new-search" class="banner-btn banner-btn-left">
-            <span class="banner-arrow">←</span> New Search
-        </button>
-        <div class="banner-center">
-            <span class="banner-disclosure">
-                <a href="mission.html">Our Mission</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a>
-            </span>
-        </div>
-        <button id="banner-to-top" class="banner-btn banner-btn-right">
-            To Top <span class="banner-arrow">↑</span>
-        </button>
-    </div>
-
     <script type="module" src="js/app.js"></script>
     <script type="module">
         import { renderCardGrid } from './js/cards.js';
@@ -178,7 +163,6 @@
         wireSecondarySearch('error-search-input', 'error-search-button');
 
         // Keep results search bar in sync with current query
-        const origShowState = document.querySelector;
         const observer = new MutationObserver(() => {
             const resultsState = document.getElementById('state-results');
             if (resultsState && resultsState.classList.contains('active')) {
