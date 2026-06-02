@@ -151,6 +151,13 @@ def axis_block(axis):
     for ref in (sent.get("sources") or []):
         q = ref.get("quote_excerpt") or ref.get("quote") or ref.get("text")
         if q:
+            # Defensive cleanup for legacy corpus fragments: collapse any
+            # dangling separator artifacts (e.g. "sensor,." or "sensor ,")
+            # left by older comma-split extraction, and trim stray edges.
+            q = str(q).strip()
+            q = re.sub(r'\s*,\s*\.', '.', q)      # "sensor,." -> "sensor."
+            q = re.sub(r'\s+([,.;:])', r'\1', q)   # " ," -> ","
+            q = q.strip().strip(',;:').strip()
             reviewer = ref.get("reviewer") or _reviewer_from_source_id(ref.get("source_id", ""))
             url = ref.get("url", "")
             attribution = (
