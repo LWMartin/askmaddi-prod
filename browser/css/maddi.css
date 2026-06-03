@@ -357,6 +357,30 @@ body {
     font-size: 11px;
 }
 
+/* Role micro-labels on teaser axis bars (most discussed / highest rated /
+   biggest gripe). Absent on entries without a role — layout unchanged. */
+.axis-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.axis-role {
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+.axis-role.role-high {
+    color: var(--color-success);
+}
+
+.axis-role.role-low {
+    color: var(--color-error);
+}
+
 /* ─── Affiliate Buttons ────────────────────────────────────────── */
 
 .card-actions {

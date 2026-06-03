@@ -428,6 +428,84 @@ def render_page(card, image_url=None):
 
 
 # ─── Manifest (teaser grid) regeneration ────────────────────────────────────
+
+# Axes excluded from the highest-rated / biggest-gripe teaser slots. These are
+# meta-axes (relative context, value-for-money) — true but uninformative as a
+# headline "high" or "low" next to concrete product qualities. They remain
+# eligible for the most-discussed slot and always render on the detail page.
+# Excluding CATEGORIES of axis by role is a design rule, not result-picking.
+TEASER_META_AXES = {"generation_context", "price"}
+
+TEASER_ROLE_MOST = "most_discussed"
+TEASER_ROLE_HIGH = "highest_rated"
+TEASER_ROLE_LOW = "biggest_gripe"
+
+
+def select_teaser_axes(card):
+    """Pick three role-based teaser axes (2026-06-03 design):
+
+      1. most_discussed — highest claim volume (meta-axes eligible)
+      2. highest_rated  — best pos-ratio among qualifying non-meta axes
+      3. biggest_gripe  — worst pos-ratio among qualifying non-meta axes
+
+    Qualifying = sentiment.total >= max(15, 0.1 * top axis volume). The
+    relative floor scales across corpus sizes; the absolute floor stops a
+    4-claim axis headlining a slot on noise.
+
+    Collisions resolve to the next distinct axis (an axis fills one slot
+    only). If fewer than three axes qualify, remaining slots fill in plain
+    volume order with role=None (renderer shows no label on those).
+
+    Returns a list of (axis_dict, role_or_None), length <= 3.
+    """
+    axes = (card.get("lead_axes") or []) + (card.get("detail_axes") or [])
+    scored = []
+    for a in axes:
+        s = a.get("sentiment", {}) or {}
+        total = s.get("total", 0) or 0
+        if total <= 0:
+            continue
+        scored.append((a, total, (s.get("pos", 0) or 0) / total))
+    if not scored:
+        return []
+    scored.sort(key=lambda t: t[1], reverse=True)
+    floor = max(15, 0.1 * scored[0][1])
+    qualifying = [t for t in scored if t[1] >= floor]
+
+    def _aid(a):
+        return a.get("axis_id") or a.get("display_name") or id(a)
+
+    picks, used = [], set()
+
+    def take(entry, role):
+        used.add(_aid(entry[0]))
+        picks.append((entry[0], role))
+
+    if qualifying:
+        take(qualifying[0], TEASER_ROLE_MOST)
+
+    def pool():
+        return [t for t in qualifying
+                if _aid(t[0]) not in used
+                and (t[0].get("axis_id") or "") not in TEASER_META_AXES]
+
+    cands = pool()
+    if cands:
+        take(max(cands, key=lambda t: t[2]), TEASER_ROLE_HIGH)
+    cands = pool()
+    if cands:
+        take(min(cands, key=lambda t: t[2]), TEASER_ROLE_LOW)
+
+    # Sparse-card fallback: fill remaining slots in volume order, unlabeled.
+    for t in scored:
+        if len(picks) >= 3:
+            break
+        if _aid(t[0]) not in used:
+            take(t, None)
+
+    return picks
+
+
 def teaser_entry(card):
     ident = card["identity"]
     # cards.js reads pricing.new_price / used_price (numbers) and runs its own
@@ -442,11 +520,7 @@ def teaser_entry(card):
                   if isinstance(v, (int, float)) and v > 0]
     used_price = min(used_bands) if used_bands else 0
     _, used_url = used_cta(card)
-    top = sorted(
-        (card.get("lead_axes", []) or []),
-        key=lambda a: (a.get("sentiment", {}) or {}).get("total", 0),
-        reverse=True,
-    )[:3]
+    top = select_teaser_axes(card)
     return {
         "card_id": card["card_id"],
         "display_name": ident["display_name"],
@@ -462,8 +536,9 @@ def teaser_entry(card):
                 "pos": (a.get("sentiment", {}) or {}).get("pos", 0),
                 "neg": (a.get("sentiment", {}) or {}).get("neg", 0),
                 "total": (a.get("sentiment", {}) or {}).get("total", 0),
+                "role": role,
             }
-            for a in top
+            for a, role in top
         ],
         "pricing": {
             "new_price": int(new_price) if new_price else 0, "new_url": new_url,

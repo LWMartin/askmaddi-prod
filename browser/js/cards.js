@@ -24,21 +24,38 @@ export async function loadManifest() {
 
 /**
  * Render a single sentiment axis bar.
+ * Axes may carry a `role` (most_discussed / highest_rated / biggest_gripe)
+ * rendered as a micro-label above the bar. Entries without a role (older
+ * manifest entries, sparse-card fallback fills) render exactly as before.
  */
+const AXIS_ROLE_LABELS = {
+    most_discussed: ['most discussed', 'role-volume'],
+    highest_rated: ['highest rated', 'role-high'],
+    biggest_gripe: ['biggest gripe', 'role-low'],
+};
+
 function renderAxisBar(axis) {
     const { pos, neg, total } = axis;
     if (!total) return '';
     const posPct = Math.round((pos / total) * 100);
     const negPct = Math.round((neg / total) * 100);
 
+    const roleMeta = AXIS_ROLE_LABELS[axis.role];
+    const roleHtml = roleMeta
+        ? `<span class="axis-role ${roleMeta[1]}">${roleMeta[0]}</span>`
+        : '';
+
     return `
-        <div class="axis-row">
-            <span class="axis-label">${axis.axis}</span>
-            <div class="axis-bar">
-                <div class="bar-pos" style="width: ${posPct}%"></div>
-                <div class="bar-neg" style="width: ${negPct}%"></div>
+        <div class="axis-group">
+            ${roleHtml}
+            <div class="axis-row">
+                <span class="axis-label">${axis.axis}</span>
+                <div class="axis-bar">
+                    <div class="bar-pos" style="width: ${posPct}%"></div>
+                    <div class="bar-neg" style="width: ${negPct}%"></div>
+                </div>
+                <span class="axis-pct">${posPct}%</span>
             </div>
-            <span class="axis-pct">${posPct}%</span>
         </div>
     `;
 }
