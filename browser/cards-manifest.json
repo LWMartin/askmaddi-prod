@@ -44,25 +44,26 @@
       "category": "Camera",
       "subcategory": "Mirrorless",
       "image_thumb": "https://www.adorama.com/images/300x300/sony-alpha-a7-iv-mirrorless-camera_isoa7m4.webp",
-      "source_count": 24,
+      "source_count": 29,
+      "confidence": "medium",
       "top_axes": [
         {
-          "axis": "Image Quality",
+          "axis": "Video Capability",
           "pos": 85,
-          "neg": 15,
-          "total": 105
+          "neg": 150,
+          "total": 242
         },
         {
-          "axis": "Autofocus",
-          "pos": 72,
-          "neg": 18,
-          "total": 95
+          "axis": "Burst Buffer",
+          "pos": 42,
+          "neg": 140,
+          "total": 190
         },
         {
-          "axis": "Video",
-          "pos": 45,
-          "neg": 28,
-          "total": 78
+          "axis": "Sensor Performance",
+          "pos": 58,
+          "neg": 54,
+          "total": 115
         }
       ],
       "pricing": {
