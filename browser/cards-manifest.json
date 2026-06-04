@@ -1,86 +1,6 @@
 {
-  "generated_at": "2026-05-28T16:30:00Z",
+  "generated_at": "2026-06-04T15:22:38Z",
   "cards": [
-    {
-      "card_id": "sigma-35-art-dg-dn-ii",
-      "display_name": "Sigma 35mm f/1.4 DG DN Art II",
-      "brand": "Sigma",
-      "category": "Lens",
-      "subcategory": "Prime",
-      "image_thumb": "https://www.sigma-global.com/lenses/a021_35_14_product_img01.png",
-      "source_count": 35,
-      "confidence": "low",
-      "top_axes": [
-        {
-          "axis": "Optical Performance",
-          "pos": 108,
-          "neg": 18,
-          "total": 131,
-          "role": "most_discussed"
-        },
-        {
-          "axis": "Color Rendition",
-          "pos": 12,
-          "neg": 3,
-          "total": 15,
-          "role": "highest_rated"
-        },
-        {
-          "axis": "Filter Thread",
-          "pos": 4,
-          "neg": 11,
-          "total": 15,
-          "role": "biggest_gripe"
-        }
-      ],
-      "pricing": {
-        "new_price": 899,
-        "new_url": "https://www.amazon.com/s?k=Sigma+35mm+f1.4+DG+DN+Art+II&tag=askmaddi-20",
-        "used_price": 679,
-        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sigma+35mm+1.4+dg+dn+art+ii&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
-      },
-      "card_url": "cards/sigma-35-art-dg-dn-ii/"
-    },
-    {
-      "card_id": "sony-a7iv",
-      "display_name": "Sony A7 IV",
-      "brand": "Sony",
-      "category": "Camera",
-      "subcategory": "Mirrorless",
-      "image_thumb": "https://www.adorama.com/images/300x300/sony-alpha-a7-iv-mirrorless-camera_isoa7m4.webp",
-      "source_count": 29,
-      "confidence": "medium",
-      "top_axes": [
-        {
-          "axis": "Video Capability",
-          "pos": 85,
-          "neg": 150,
-          "total": 242,
-          "role": "most_discussed"
-        },
-        {
-          "axis": "Autofocus Body",
-          "pos": 64,
-          "neg": 38,
-          "total": 108,
-          "role": "highest_rated"
-        },
-        {
-          "axis": "Burst Buffer",
-          "pos": 42,
-          "neg": 140,
-          "total": 190,
-          "role": "biggest_gripe"
-        }
-      ],
-      "pricing": {
-        "new_price": 2498,
-        "new_url": "https://www.amazon.com/s?k=Sony+A7+IV+ILCE-7M4&tag=askmaddi-20",
-        "used_price": 1899,
-        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a7+iv+ilce-7m4&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
-      },
-      "card_url": "cards/sony-a7iv/"
-    },
     {
       "card_id": "peak-design-travel-tripod",
       "display_name": "Peak Design Travel Tripod",
@@ -114,12 +34,92 @@
         }
       ],
       "pricing": {
-        "new_price": 349,
+        "new_price": 0,
         "new_url": "https://www.amazon.com/s?k=Peak+Design+Travel+Tripod&tag=askmaddi-20",
-        "used_price": 249,
+        "used_price": 0,
         "used_url": "https://www.ebay.com/sch/i.html?_nkw=peak+design+travel+tripod&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
       },
       "card_url": "cards/peak-design-travel-tripod/"
+    },
+    {
+      "card_id": "sigma-35-art-dg-dn-ii",
+      "display_name": "Sigma 35mm f/1.4 DG DN Art II",
+      "brand": "Sigma",
+      "category": "Lens",
+      "subcategory": "Prime",
+      "image_thumb": "https://www.sigma-global.com/lenses/a021_35_14_product_img01.png",
+      "source_count": 35,
+      "confidence": "low",
+      "top_axes": [
+        {
+          "axis": "Optical Performance",
+          "pos": 108,
+          "neg": 18,
+          "total": 131,
+          "role": "most_discussed"
+        },
+        {
+          "axis": "Color Rendition",
+          "pos": 12,
+          "neg": 3,
+          "total": 15,
+          "role": "highest_rated"
+        },
+        {
+          "axis": "Filter Thread",
+          "pos": 4,
+          "neg": 11,
+          "total": 15,
+          "role": "biggest_gripe"
+        }
+      ],
+      "pricing": {
+        "new_price": 0,
+        "new_url": "https://www.amazon.com/s?k=Sigma+35mm+f%2F1.4+DG+DN+Art+II&tag=askmaddi-20",
+        "used_price": 0,
+        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sigma+35mm+f%2F1.4+dg+dn+art+ii&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
+      },
+      "card_url": "cards/sigma-35-art-dg-dn-ii/"
+    },
+    {
+      "card_id": "sony-a7iv",
+      "display_name": "Sony A7 IV",
+      "brand": "Sony",
+      "category": "Body",
+      "subcategory": "Mirrorless",
+      "image_thumb": "https://www.adorama.com/images/300x300/sony-alpha-a7-iv-mirrorless-camera_isoa7m4.webp",
+      "source_count": 29,
+      "confidence": "medium",
+      "top_axes": [
+        {
+          "axis": "Video Capability",
+          "pos": 85,
+          "neg": 150,
+          "total": 242,
+          "role": "most_discussed"
+        },
+        {
+          "axis": "Autofocus Body",
+          "pos": 64,
+          "neg": 38,
+          "total": 108,
+          "role": "highest_rated"
+        },
+        {
+          "axis": "Burst Buffer",
+          "pos": 42,
+          "neg": 140,
+          "total": 190,
+          "role": "biggest_gripe"
+        }
+      ],
+      "pricing": {
+        "new_price": 0,
+        "new_url": "https://www.amazon.com/s?k=Sony+A7+IV&tag=askmaddi-20",
+        "used_price": 0,
+        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a7+iv&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
+      },
+      "card_url": "cards/sony-a7iv/"
     }
   ]
 }
