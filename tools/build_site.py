@@ -209,7 +209,7 @@ def axis_block(axis):
               <div class="bar-pos" style="width:{p}%"></div>
               <div class="bar-neg" style="width:{n}%"></div>
             </div>
-            <span class="axis-counts">{pos} pos \u00b7 {neu} neu \u00b7 {neg} neg</span>
+            <span class="axis-counts">{pos} pos · {neu} neu · {neg} neg</span>
           </div>
           {quote_html}
         </div>"""
@@ -313,7 +313,7 @@ def render_page(card, image_url=None):
     subcat = (ident.get("subcategory") or "").title()
     cat = (ident.get("category") or "").title()
     year = ident.get("year_introduced") or ""
-    descriptor = " \u00b7 ".join([x for x in [brand, f"{subcat} {cat}".strip(), str(year)] if x])
+    descriptor = " · ".join([x for x in [brand, f"{subcat} {cat}".strip(), str(year)] if x])
 
     fresh = card.get("freshness", {}) or {}
     source_count = fresh.get("source_count", len(card.get("sources", [])))
@@ -414,7 +414,7 @@ def render_page(card, image_url=None):
           </div>
           <p class="hero-meta">
             Synthesized from <strong>{source_count}</strong> reviewer sources
-            {f"\u00b7 Last updated {esc(last_built)}" if last_built else ""}
+            {f"· Last updated {esc(last_built)}" if last_built else ""}
           </p>
         </div>
       </section>
@@ -432,7 +432,7 @@ def render_page(card, image_url=None):
 
       {f'''<section class="card-section">
         <details class="detail-axes-toggle">
-          <summary><h2 class="card-section-head inline">More detail \u2014 {len(detail)} additional axes</h2></summary>
+          <summary><h2 class="card-section-head inline">More detail — {len(detail)} additional axes</h2></summary>
           <div class="axes-stack">{detail_html}</div>
         </details>
       </section>''' if detail else ''}
@@ -449,7 +449,7 @@ def render_page(card, image_url=None):
 
     <footer class="card-footer">
       <a href="/">\u2190 Back to AskMaddi</a>
-      <span>\u00b7</span>
+      <span>·</span>
       <a href="/mission.html">Our method</a>
     </footer>
 
@@ -634,3 +634,4 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
