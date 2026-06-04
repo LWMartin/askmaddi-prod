@@ -36,6 +36,34 @@ AMAZON_TAG = "askmaddi-20"
 EBAY_CAMPID = "5339138080"
 EBAY_RID = "711-53200-19255-0"
 
+
+def ensure_affiliate_tag(url):
+    """Guarantee the affiliate tag on any amazon/ebay URL, idempotently.
+
+    Cards built on-demand carry raw product URLs in pricing.current_new_url
+    (cron populates affiliate_url later, or never for fresh builds). Every
+    CTA URL must pass through here so no untagged link reaches the page.
+    Sets params via urllib so existing tags are overwritten, never doubled.
+    """
+    if not url:
+        return url
+    from urllib.parse import urlsplit, urlunsplit, parse_qsl, urlencode
+    try:
+        parts = urlsplit(url)
+    except ValueError:
+        return url
+    host = parts.netloc.lower()
+    q = dict(parse_qsl(parts.query, keep_blank_values=True))
+    if "amazon." in host:
+        q["tag"] = AMAZON_TAG
+    elif "ebay." in host:
+        q["campid"] = EBAY_CAMPID
+        q.setdefault("mkcid", "1")
+        q.setdefault("mkrid", EBAY_RID)
+    else:
+        return url
+    return urlunsplit(parts._replace(query=urlencode(q)))
+
 # Source-type display grouping for the Sources section.
 SOURCE_TYPE_LABELS = {
     "lab": ("\U0001F52C", "Lab & Measurement"),       # microscope
@@ -101,7 +129,9 @@ def new_cta(card):
     """Return (label, url) for the 'buy new' CTA, honest about missing price."""
     pricing = card.get("pricing", {})
     name = card["identity"]["display_name"]
-    url = pricing.get("affiliate_url") or pricing.get("current_new_url") or amazon_search_url(name)
+    url = ensure_affiliate_tag(
+        pricing.get("affiliate_url") or pricing.get("current_new_url") or amazon_search_url(name)
+    )
     price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
     label = f"${int(price)} new" if price and price > 0 else "Check current price"
     return label, url
@@ -112,7 +142,9 @@ def used_cta(card):
     pricing = card.get("pricing", {})
     used = pricing.get("used_market", {}) or {}
     name = card["identity"]["display_name"]
-    url = used.get("affiliate_url") or used.get("search_url") or ebay_search_url(name)
+    url = ensure_affiliate_tag(
+        used.get("affiliate_url") or used.get("search_url") or ebay_search_url(name)
+    )
     # Prefer a representative band midpoint if present; else just label "used".
     bands = used.get("bands", {}) or {}
     band_prices = [v for v in bands.values() if isinstance(v, (int, float)) and v > 0]

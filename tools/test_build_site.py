@@ -145,3 +145,55 @@ def test_teaser_entry_carries_role_field():
 
 def test_empty_card_yields_no_axes():
     assert select_teaser_axes(_card([])) == []
+
+
+# ─── Affiliate tag enforcement (revenue regression: untagged /dp/ CTAs) ─────
+from build_site import ensure_affiliate_tag, new_cta, used_cta
+
+
+def test_raw_amazon_product_url_gets_tagged():
+    out = ensure_affiliate_tag("https://www.amazon.com/dp/B09JZT6XXX")
+    assert "tag=askmaddi-20" in out
+
+
+def test_already_tagged_amazon_url_not_doubled():
+    url = "https://www.amazon.com/dp/B09JZT6XXX?tag=askmaddi-20"
+    out = ensure_affiliate_tag(url)
+    assert out.count("tag=askmaddi-20") == 1
+
+
+def test_raw_ebay_item_url_gets_campaign_params():
+    out = ensure_affiliate_tag("https://www.ebay.com/itm/123456789")
+    assert "campid=5339138080" in out and "mkrid=711-53200-19255-0" in out
+
+
+def test_non_program_domain_passthrough():
+    url = "https://www.bhphotovideo.com/c/product/123"
+    assert ensure_affiliate_tag(url) == url
+
+
+def test_new_cta_tags_current_new_url_when_affiliate_url_null():
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {
+            "affiliate_url": None,
+            "current_new_url": "https://www.amazon.com/dp/B09JZT6XXX",
+            "current_new_usd": 2498,
+        },
+    }
+    _, url = new_cta(card)
+    assert "tag=askmaddi-20" in url
+
+
+def test_used_cta_tags_raw_search_url():
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {
+            "used_market": {
+                "affiliate_url": None,
+                "search_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a7+iv",
+            }
+        },
+    }
+    _, url = used_cta(card)
+    assert "campid=5339138080" in url
