@@ -305,6 +305,18 @@ def _has_sentiment(axis):
     return ((axis.get("sentiment", {}) or {}).get("total", 0) or 0) > 0
 
 
+# Meta-axes suppressed from the card page entirely (ratified 2026-06-05).
+# generation_context is extractor discourse-context, not a product quality —
+# rendering it as a sentiment bar misleads. Distinct from TEASER_META_AXES:
+# price stays visible on the page, it is only barred from teaser high/low roles.
+CARD_HIDDEN_META_AXES = {"generation_context"}
+
+
+def _card_visible(axis):
+    return (_has_sentiment(axis)
+            and (axis.get("axis_id") or "") not in CARD_HIDDEN_META_AXES)
+
+
 # ─── Page assembly ──────────────────────────────────────────────────────────
 def render_page(card, image_url=None):
     ident = card["identity"]
@@ -328,8 +340,9 @@ def render_page(card, image_url=None):
 
     # Empty axes (sentiment.total == 0) are suppressed entirely — no reviewer
     # touched them, so rendering a 0/0/0 bar is noise, not information.
-    lead = [a for a in (card.get("lead_axes", []) or []) if _has_sentiment(a)]
-    detail = [a for a in (card.get("detail_axes", []) or []) if _has_sentiment(a)]
+    # Meta-axes in CARD_HIDDEN_META_AXES are likewise suppressed from the page.
+    lead = [a for a in (card.get("lead_axes", []) or []) if _card_visible(a)]
+    detail = [a for a in (card.get("detail_axes", []) or []) if _card_visible(a)]
 
     lead_html = "\n".join(axis_block(a) for a in lead)
     detail_html = "\n".join(axis_block(a) for a in detail)
