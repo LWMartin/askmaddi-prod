@@ -223,3 +223,120 @@ def test_new_cta_search_fallback_without_asin():
     card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
     _, url = new_cta(card)
     assert "/s?k=" in url and "tag=askmaddi-20" in url
+
+
+# ─── SEO/OG batch (2026-06-10): head meta, JSON-LD, as-of, sitemap ──────────
+import json as _json
+import re as _re
+
+from build_site import (  # noqa: E402
+    render_page, schema_org_jsonld, write_sitemap, card_lastmod,
+    used_price_asof, fmt_date_human, abs_url, BASE_URL,
+)
+
+
+def _seo_card(card_id="test-cam", bands=None, price_updated_at=None,
+          image=None, last_built="2026-06-04T23:47:35+00:00"):
+    used = {"source": "ebay"}
+    if bands is not None:
+        used["bands"] = bands
+        used["sample_size"] = 5
+    if price_updated_at:
+        used["price_updated_at"] = price_updated_at
+    ident = {"display_name": "Test Cam X1", "brand": "TestBrand",
+             "category": "camera", "subcategory": "mirrorless"}
+    if image:
+        ident["image_hero"] = image
+    return {
+        "card_id": card_id,
+        "identity": ident,
+        "pricing": {"used_market": used},
+        "freshness": {"last_built": last_built, "source_count": 7},
+        "confidence": {"overall": "medium"},
+        "synthesis": {"consensus_paragraph": "Reviewers broadly like it."},
+        "sources": [], "lead_axes": [], "detail_axes": [],
+    }
+
+
+def test_head_carries_canonical_og_url_twitter():
+    page = render_page(_seo_card(bands={"pre_owned": 400.0},
+                             price_updated_at="2026-06-10T15:00:00+00:00"))
+    assert f'<link rel="canonical" href="{BASE_URL}/cards/test-cam/">' in page
+    assert f'<meta property="og:url" content="{BASE_URL}/cards/test-cam/">' in page
+    assert '<meta property="og:site_name" content="AskMaddi">' in page
+    assert '<meta name="twitter:card" content="' in page
+
+
+def test_og_image_absolute_when_card_has_image():
+    page = render_page(_seo_card(image="https://cdn.example.com/x1.jpg"))
+    assert '<meta property="og:image" content="https://cdn.example.com/x1.jpg">' in page
+    assert 'twitter:card" content="summary_large_image"' in page
+
+
+def test_jsonld_product_with_used_aggregate_offer():
+    card = _seo_card(bands={"pre_owned": 400.0, "open_box": 500.0},
+                 price_updated_at="2026-06-10T15:00:00+00:00")
+    page = render_page(card)
+    m = _re.search(r'<script type="application/ld\+json">\n(.*?)\n  </script>',
+                   page, _re.S)
+    assert m, "JSON-LD block missing"
+    obj = _json.loads(m.group(1).replace("<\\/", "</"))
+    assert obj["@type"] == "Product"
+    assert obj["brand"]["name"] == "TestBrand"
+    offer = obj["offers"]
+    assert offer["@type"] == "AggregateOffer"
+    assert offer["lowPrice"] == "400.00" and offer["highPrice"] == "500.00"
+    assert offer["itemCondition"].endswith("UsedCondition")
+    assert offer["offerCount"] == 5
+    assert "aggregateRating" not in obj  # honesty: no invented star scale
+
+
+def test_jsonld_no_offer_when_bands_empty():
+    obj = _json.loads(schema_org_jsonld(_seo_card(bands={}), "u", None, "d")
+                      .replace("<\\/", "</"))
+    assert "offers" not in obj  # Sigma-style gating carries into markup
+
+
+def test_asof_renders_only_with_band_and_date():
+    with_both = render_page(_seo_card(bands={"pre_owned": 400.0},
+                                  price_updated_at="2026-06-10T15:50:21+00:00"))
+    assert "Used price as of Jun 10, 2026" in with_both
+    no_date = render_page(_seo_card(bands={"pre_owned": 400.0}))
+    assert "Used price as of" not in no_date  # build time is not a price observation
+    no_band = render_page(_seo_card(bands={}, price_updated_at="2026-06-10T15:00:00+00:00"))
+    assert "Used price as of" not in no_band
+
+
+def test_used_market_section_asof_line():
+    page = render_page(_seo_card(bands={"pre_owned": 400.0},
+                             price_updated_at="2026-06-10T15:50:21+00:00"))
+    assert "Prices as of Jun 10, 2026" in page
+
+
+def test_card_lastmod_prefers_newest_observation():
+    c = _seo_card(bands={"pre_owned": 400.0},
+              price_updated_at="2026-06-10T15:50:21+00:00",
+              last_built="2026-06-04T23:47:35+00:00")
+    assert card_lastmod(c) == "2026-06-10"
+    assert card_lastmod(_seo_card()) == "2026-06-04"
+
+
+def test_sitemap_contains_static_and_cards(tmp_path):
+    cards = [_seo_card("alpha", bands={"pre_owned": 100.0},
+                   price_updated_at="2026-06-10T00:00:01+00:00"),
+             _seo_card("beta")]
+    p = write_sitemap(tmp_path, cards)
+    xml = p.read_text()
+    assert f"<loc>{BASE_URL}/</loc>" in xml
+    for s in ("/mission.html", "/privacy.html", "/terms.html"):
+        assert f"<loc>{BASE_URL}{s}</loc>" in xml
+    assert f"<loc>{BASE_URL}/cards/alpha/</loc>" in xml
+    assert f"<loc>{BASE_URL}/cards/beta/</loc>" in xml
+    assert "<lastmod>2026-06-10</lastmod>" in xml  # alpha price date wins; homepage too
+
+
+def test_fmt_date_and_abs_url_edges():
+    assert fmt_date_human("") == "" and fmt_date_human("garbage") == ""
+    assert abs_url("images/logo.png") == f"{BASE_URL}/images/logo.png"
+    assert abs_url("https://x.com/a.jpg") == "https://x.com/a.jpg"
+    assert used_price_asof({"pricing": {}}) == ""

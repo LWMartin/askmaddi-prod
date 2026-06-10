@@ -36,6 +36,38 @@ AMAZON_TAG = "askmaddi-20"
 EBAY_CAMPID = "5339138080"
 EBAY_RID = "711-53200-19255-0"
 
+# ─── Site identity (canonical URLs, OG, sitemap) ────────────────────────────
+BASE_URL = "https://askmaddi.com"
+SITE_NAME = "AskMaddi"
+
+
+def abs_url(path_or_url):
+    """Absolute URL for OG/JSON-LD/sitemap. Pass-through if already absolute."""
+    if not path_or_url:
+        return ""
+    if path_or_url.startswith(("http://", "https://")):
+        return path_or_url
+    return BASE_URL + ("" if path_or_url.startswith("/") else "/") + path_or_url
+
+
+def fmt_date_human(iso_str):
+    """ISO timestamp -> 'Jun 10, 2026'. Empty string on anything unparseable."""
+    if not iso_str:
+        return ""
+    try:
+        dt = datetime.fromisoformat(str(iso_str).replace("Z", "+00:00"))
+        return f"{dt:%b} {dt.day}, {dt.year}"
+    except (ValueError, TypeError):
+        return ""
+
+
+def used_price_asof(card):
+    """ISO date the used band was fetched, or '' (honest absence, no fallback
+    to build time — a build is not a price observation)."""
+    pricing = card.get("pricing", {}) or {}
+    used = pricing.get("used_market", {}) or {}
+    return used.get("price_updated_at") or ""
+
 
 def ensure_affiliate_tag(url):
     """Guarantee the affiliate tag on any amazon/ebay URL, idempotently.
@@ -274,11 +306,14 @@ def price_history_section(card):
         cells.append(f'<div class="band"><span class="band-label">{esc(band)}</span><span class="band-price">{val}</span></div>')
     sold = used.get("sold_last_90d", 0)
     sold_line = f'<p class="band-note">{sold} sold in the last 90 days on {esc(used.get("source","eBay"))}.</p>' if sold else ""
+    asof = fmt_date_human(used.get("price_updated_at") or "")
+    asof_line = f'<p class="band-note">Prices as of {esc(asof)} — lowest active listing per condition.</p>' if asof else ""
     return f"""
       <section class="card-section">
         <h2 class="card-section-head">Used Market</h2>
         <div class="band-grid">{"".join(cells)}</div>
         {sold_line}
+        {asof_line}
       </section>"""
 
 
@@ -336,6 +371,50 @@ def _card_visible(axis):
 
 
 # ─── Page assembly ──────────────────────────────────────────────────────────
+# ─── schema.org Product/Offer JSON-LD ────────────────────────────────────────
+# Honesty discipline carries through markup: we only assert prices we display.
+# Used bands (eBay active asks, precision-gated upstream) -> AggregateOffer
+# with UsedCondition. No bands -> Product without offers (Sigma-style gating).
+# No ratings markup: our pos/neg ratios are not a star scale; inventing a
+# mapping to win rich results would be result-picking. Offers only.
+def schema_org_jsonld(card, canonical_url, img_url, description):
+    ident = card["identity"]
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": ident["display_name"],
+        "url": canonical_url,
+    }
+    if ident.get("brand"):
+        obj["brand"] = {"@type": "Brand", "name": ident["brand"]}
+    if img_url:
+        obj["image"] = abs_url(img_url)
+    if description:
+        obj["description"] = description
+
+    used = (card.get("pricing", {}) or {}).get("used_market", {}) or {}
+    bands = used.get("bands", {}) or {}
+    prices = [v for v in bands.values() if isinstance(v, (int, float)) and v > 0]
+    if prices:
+        _, used_url = used_cta(card)
+        offer = {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": f"{min(prices):.2f}",
+            "highPrice": f"{max(prices):.2f}",
+            "itemCondition": "https://schema.org/UsedCondition",
+            "availability": "https://schema.org/InStock",
+            "url": used_url,
+        }
+        sample = used.get("sample_size")
+        if isinstance(sample, int) and sample > 0:
+            offer["offerCount"] = sample
+        obj["offers"] = offer
+
+    # `</` escaped so card text can never close the script element.
+    return json.dumps(obj, indent=2).replace("</", "<\\/")
+
+
 def render_page(card, image_url=None):
     ident = card["identity"]
     name = ident["display_name"]
@@ -405,6 +484,17 @@ def render_page(card, image_url=None):
 
     meta_desc = (synth[:155] + "\u2026") if len(synth) > 155 else (synth or f"{name} — reviews synthesized from {source_count} sources.")
 
+    canonical = f"{BASE_URL}/cards/{card['card_id']}/"
+    asof_human = fmt_date_human(used_price_asof(card))
+    _used_bands = ((card.get("pricing", {}) or {}).get("used_market", {}) or {}).get("bands", {}) or {}
+    has_used_band = any(isinstance(v, (int, float)) and v > 0 for v in _used_bands.values())
+    asof_html = (
+        f'<p class="price-asof">Used price as of {esc(asof_human)} · active listings</p>'
+        if (asof_human and has_used_band) else ""
+    )
+    jsonld = schema_org_jsonld(card, canonical, img_url, meta_desc)
+    twitter_card = "summary_large_image" if img_url else "summary"
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -412,10 +502,20 @@ def render_page(card, image_url=None):
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{esc(name)} review — synthesized from {source_count} sources | AskMaddi</title>
   <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{esc(canonical)}">
   <meta property="og:title" content="{esc(name)} — AskMaddi">
   <meta property="og:description" content="{esc(meta_desc)}">
   <meta property="og:type" content="product">
-  {f'<meta property="og:image" content="{esc(img_url)}">' if img_url else ''}
+  <meta property="og:url" content="{esc(canonical)}">
+  <meta property="og:site_name" content="{SITE_NAME}">
+  {f'<meta property="og:image" content="{esc(abs_url(img_url))}">' if img_url else ''}
+  <meta name="twitter:card" content="{twitter_card}">
+  <meta name="twitter:title" content="{esc(name)} — AskMaddi">
+  <meta name="twitter:description" content="{esc(meta_desc)}">
+  {f'<meta name="twitter:image" content="{esc(abs_url(img_url))}">' if img_url else ''}
+  <script type="application/ld+json">
+{jsonld}
+  </script>
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
@@ -443,6 +543,7 @@ def render_page(card, image_url=None):
             <a class="btn-affiliate btn-buy-new" href="{esc(new_url)}" target="_blank" rel="nofollow noopener sponsored">{esc(new_label)} \u2192</a>
             <a class="btn-affiliate btn-buy-used" href="{esc(used_url)}" target="_blank" rel="nofollow noopener sponsored">{esc(used_label)} \u2192</a>
           </div>
+          {asof_html}
           <p class="hero-meta">
             Synthesized from <strong>{source_count}</strong> reviewer sources
             {f"· Last updated {esc(last_built)}" if last_built else ""}
@@ -621,12 +722,48 @@ def load_cards(args):
     return cards
 
 
+def card_lastmod(card):
+    """Most recent observation date for a card: max(content build, price fetch).
+    YYYY-MM-DD or '' — sitemap omits lastmod rather than inventing one."""
+    fresh = (card.get("freshness", {}) or {}).get("last_built") or ""
+    price = used_price_asof(card)
+    best = max(d for d in (str(fresh), str(price), "")) if (fresh or price) else ""
+    return best[:10]
+
+
+SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html"]
+
+
+def write_sitemap(out_dir, cards):
+    """browser/sitemap.xml — static pages + every card page, lastmod from card
+    data. Derived artifact: regenerates from cards, so Stage 6 additions are
+    indexed for free."""
+    card_mods = {c["card_id"]: card_lastmod(c) for c in cards}
+    home_mod = max([m for m in card_mods.values() if m], default="")
+
+    def url_el(loc, lastmod=""):
+        lm = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
+        return f"  <url>\n    <loc>{loc}</loc>{lm}\n  </url>"
+
+    entries = [url_el(BASE_URL + "/", home_mod)]
+    entries += [url_el(BASE_URL + p) for p in SITEMAP_STATIC_PAGES[1:]]
+    entries += [url_el(f"{BASE_URL}/cards/{cid}/", mod) for cid, mod in sorted(card_mods.items())]
+
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           + "\n".join(entries) + "\n</urlset>\n")
+    path = Path(out_dir) / "sitemap.xml"
+    path.write_text(xml, encoding="utf-8")
+    return path
+
+
 def main():
     ap = argparse.ArgumentParser(description="Generate AskMaddi card detail pages.")
     ap.add_argument("--card", help="Path to a single card JSON.")
     ap.add_argument("--cards-dir", help="Directory of card JSONs (*.json).")
     ap.add_argument("--output-dir", default="browser", help="Output root (default: browser/).")
     ap.add_argument("--manifest", action="store_true", help="Also regenerate cards-manifest.json.")
+    ap.add_argument("--sitemap", action="store_true", help="Also regenerate sitemap.xml.")
     ap.add_argument("--image-url", help="Fallback product image URL when the card carries none "
                                         "(single-card builds only; card fields take precedence).")
     args = ap.parse_args()
@@ -658,6 +795,10 @@ def main():
         mpath = out / "cards-manifest.json"
         mpath.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
         print(f"  \u2713 manifest \u2192 {mpath} ({len(cards)} cards)")
+
+    if args.sitemap:
+        spath = write_sitemap(out, cards)
+        print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(SITEMAP_STATIC_PAGES)} static)")
 
     print(f"\nDone. {len(written)} card page(s) written.")
     return 0

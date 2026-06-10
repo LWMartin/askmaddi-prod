@@ -279,3 +279,10 @@
     font-weight: 600;
 }
 .header-compact .logo-title .site-logo { height: 28px; }
+
+/* Price as-of date — honesty line under the buy CTAs (2026-06-10 SEO/OG batch) */
+.price-asof {
+    color: var(--color-text-muted);
+    font-size: 12px;
+    margin: 6px 0 0;
+}
