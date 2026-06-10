@@ -112,6 +112,11 @@ def pct(pos, total):
 
 
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
+def amazon_product_url(asin):
+    """Direct product-detail (SKU) URL. Tag is stamped by ensure_affiliate_tag."""
+    return f"https://www.amazon.com/dp/{asin}"
+
+
 def amazon_search_url(display_name):
     q = re.sub(r"\s+", "+", display_name.strip())
     return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
@@ -126,11 +131,21 @@ def ebay_search_url(display_name):
 
 
 def new_cta(card):
-    """Return (label, url) for the 'buy new' CTA, honest about missing price."""
+    """Return (label, url) for the 'buy new' CTA, honest about missing price.
+
+    URL preference: explicit affiliate_url > raw product URL > ASIN /dp/ link
+    > search-results fallback. The ASIN rung (pricing.amazon_asin) lands the
+    buyer on the exact SKU page instead of search results — same field the
+    future PA-API price job will key on.
+    """
     pricing = card.get("pricing", {})
     name = card["identity"]["display_name"]
+    asin = pricing.get("amazon_asin")
     url = ensure_affiliate_tag(
-        pricing.get("affiliate_url") or pricing.get("current_new_url") or amazon_search_url(name)
+        pricing.get("affiliate_url")
+        or pricing.get("current_new_url")
+        or (amazon_product_url(asin) if asin else None)
+        or amazon_search_url(name)
     )
     price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
     label = f"${int(price)} new" if price and price > 0 else "Check current price"

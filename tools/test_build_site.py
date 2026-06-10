@@ -197,3 +197,29 @@ def test_used_cta_tags_raw_search_url():
     }
     _, url = used_cta(card)
     assert "campid=5339138080" in url
+
+
+def test_new_cta_prefers_asin_dp_link_over_search():
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {"amazon_asin": "B09JZT6YK5", "affiliate_url": None, "current_new_url": None},
+    }
+    _, url = new_cta(card)
+    assert "/dp/B09JZT6YK5" in url
+    assert "tag=askmaddi-20" in url
+    assert "/s?k=" not in url
+
+
+def test_new_cta_explicit_urls_outrank_asin():
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {"amazon_asin": "B09JZT6YK5", "current_new_url": "https://www.amazon.com/dp/BEXPLICIT01"},
+    }
+    _, url = new_cta(card)
+    assert "/dp/BEXPLICIT01" in url and "B09JZT6YK5" not in url
+
+
+def test_new_cta_search_fallback_without_asin():
+    card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
+    _, url = new_cta(card)
+    assert "/s?k=" in url and "tag=askmaddi-20" in url
