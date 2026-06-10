@@ -88,7 +88,7 @@ function renderTeaserCard(card) {
         <article class="teaser-card">
             <div class="card-image">
                 ${imageContent}
-                <span class="source-badge">${card.source_count} reviews</span>
+                <a href="${card.card_url || '#'}#sources" class="source-badge" title="See all ${card.source_count} source reviews">${card.source_count} reviews</a>
             </div>
             <div class="card-body">
                 <h3 class="product-name">${card.display_name}</h3>

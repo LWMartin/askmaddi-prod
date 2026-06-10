@@ -275,6 +275,14 @@ body {
     padding: 2px var(--space-sm);
     border-radius: var(--radius-full);
     backdrop-filter: blur(4px);
+    /* now an <a> deep-linking to the card's #sources list */
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.teaser-card .source-badge:hover {
+    background: rgba(45, 42, 38, 0.95);
+    color: white;
 }
 
 .teaser-card .card-body {

@@ -176,28 +176,31 @@ def axis_block(axis):
     p = pct(pos, total)
     n = pct(neg, total)
 
-    # Top quote: first source ref that carries excerpt text, if any.
-    # Real card schema uses `quote_excerpt`; reviewer is derived from source_id
-    # when no explicit reviewer field is present.
+    # Card-face blurb: the pipeline stamps a gated `face_quote` per axis
+    # (unambiguous-subset doctrine, 2026-06-10) with a display-ready
+    # excerpt and a joined review URL. The renderer shows it or shows
+    # NOTHING — it never scans raw evidence refs for display text, so an
+    # axis without a gate-passing quote suppresses its blurb and the
+    # sentiment bar carries the axis alone. When a URL is present the
+    # whole blurb is the link (like what you hear -> click through).
     quote_html = ""
-    for ref in (sent.get("sources") or []):
-        q = ref.get("quote_excerpt") or ref.get("quote") or ref.get("text")
-        if q:
-            # Defensive cleanup for legacy corpus fragments: collapse any
-            # dangling separator artifacts (e.g. "sensor,." or "sensor ,")
-            # left by older comma-split extraction, and trim stray edges.
-            q = str(q).strip()
-            q = re.sub(r'\s*,\s*\.', '.', q)      # "sensor,." -> "sensor."
-            q = re.sub(r'\s+([,.;:])', r'\1', q)   # " ," -> ","
-            q = q.strip().strip(',;:').strip()
-            reviewer = ref.get("reviewer") or _reviewer_from_source_id(ref.get("source_id", ""))
-            url = ref.get("url", "")
-            attribution = (
-                f' <a class="quote-cite" href="{esc(url)}" target="_blank" rel="nofollow noopener">\u2014 {esc(reviewer)}</a>'
-                if url else f' <span class="quote-cite">\u2014 {esc(reviewer)}</span>'
+    fq = axis.get("face_quote") or {}
+    q = str(fq.get("quote_excerpt") or "").strip()
+    if q:
+        reviewer = fq.get("reviewer") or _reviewer_from_source_id(fq.get("source_id", ""))
+        url = fq.get("url", "")
+        cite = f'<span class="quote-cite">\u2014 {esc(reviewer)}</span>'
+        if url:
+            quote_html = (
+                f'<blockquote class="axis-quote axis-quote-linked">'
+                f'<a class="quote-link" href="{esc(url)}" target="_blank" '
+                f'rel="nofollow noopener">\u201c{esc(q)}\u201d {cite}</a>'
+                f'</blockquote>'
             )
-            quote_html = f'<blockquote class="axis-quote">\u201c{esc(q)}\u201d{attribution}</blockquote>'
-            break
+        else:
+            quote_html = (
+                f'<blockquote class="axis-quote">\u201c{esc(q)}\u201d {cite}</blockquote>'
+            )
 
     return f"""
         <div class="detail-axis">
@@ -452,7 +455,7 @@ def render_page(card, image_url=None):
 
       {price_html}
 
-      <section class="card-section">
+      <section class="card-section" id="sources">
         <h2 class="card-section-head">Sources <span class="src-total">({source_count})</span></h2>
         <p class="src-intro">Every claim above traces to these original reviews. We don't write opinions \u2014 we synthesize theirs.</p>
         {sources_html}
