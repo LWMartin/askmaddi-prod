@@ -45,8 +45,10 @@ def test_token_gate_rejects_wrong_generation():
 
 
 def test_stopwords_not_required():
-    toks = significant_tokens("Peak Design Travel Tripod carbon")
-    assert "carbon" not in toks and "body" not in significant_tokens("Sony A7 IV body")
+    assert "body" not in significant_tokens("Sony A7 IV body")
+    assert "kit" not in significant_tokens("camera kit")
+    # variant discriminators are NOT stopwords — they must bind (2026-06-10 fix)
+    assert "carbon" in significant_tokens("Peak Design Travel Tripod carbon")
 
 
 # ── band computation ─────────────────────────────────────────────────────────
@@ -131,3 +133,10 @@ def test_build_site_renders_from_price_label():
     label, url = used_cta(card)
     assert label == "from $1450 used"
     assert "campid=5339138080" in url
+
+
+def test_variant_token_binds_carbon_query_rejects_aluminum():
+    toks = significant_tokens("Peak Design Travel Tripod carbon")
+    assert "carbon" in toks
+    assert not listing_matches("Peak Design Travel Tripod Aluminum", toks)
+    assert listing_matches("Peak Design Travel Tripod Carbon Fiber TT-CB-5", toks)

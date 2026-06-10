@@ -42,7 +42,11 @@ KIT_CEILING = 2.5       # drop price > 2.5 x median (multi-item bundles)
 FETCH_LIMIT = 50
 
 # Query tokens that must NOT be required to appear in listing titles.
-TOKEN_STOPWORDS = {"body", "the", "for", "with", "and", "kit", "only", "carbon", "fiber"}
+# NOTE: variant discriminators (e.g. "carbon") are deliberately ABSENT —
+# a variant token in the query must bind, or wrong-variant listings
+# contaminate the bands (caught live 2026-06-10: aluminum tripods passed
+# the carbon query's gate while carbon/fiber sat in this set).
+TOKEN_STOPWORDS = {"body", "the", "for", "with", "and", "kit", "only"}
 
 # A listing whose title contains any of these is not the product itself.
 TITLE_BLACKLIST = [
