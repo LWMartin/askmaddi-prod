@@ -715,10 +715,10 @@ def teaser_entry(card):
 def load_cards(args):
     cards = []
     if args.card:
-        cards.append(json.loads(Path(args.card).read_text()))
+        cards.append(json.loads(Path(args.card).read_text(encoding="utf-8")))
     if args.cards_dir:
         for p in sorted(Path(args.cards_dir).glob("*.json")):
-            cards.append(json.loads(p.read_text()))
+            cards.append(json.loads(p.read_text(encoding="utf-8")))
     return cards
 
 
