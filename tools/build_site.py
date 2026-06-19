@@ -722,6 +722,36 @@ def load_cards(args):
     return cards
 
 
+ASIN_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "asin_registry.json"
+
+
+def apply_asin_registry(cards):
+    """Inject durable Amazon ASINs into each card's pricing block.
+
+    Aggregator rebuilds regenerate data/cards/*.json from extraction output,
+    which carries no amazon_asin — so a backfilled ASIN is lost on every
+    rebuild, and new_cta() falls through to a search-results URL (the tag
+    survives but Amazon strips it on click-through to a product). The registry
+    (data/asin_registry.json, keyed by card_id) is the durable source of truth
+    re-applied at build time. A card that already carries an ASIN wins (a fresh
+    PA-API value should never be clobbered by a static registry entry).
+    """
+    try:
+        reg = json.loads(ASIN_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cards  # registry optional; absence degrades to prior behavior
+    asins = reg.get("asins", {})
+    for card in cards:
+        cid = card.get("card_id")
+        asin = asins.get(cid)
+        if not asin:
+            continue
+        pricing = card.setdefault("pricing", {})
+        if not pricing.get("amazon_asin"):
+            pricing["amazon_asin"] = asin
+    return cards
+
+
 def card_lastmod(card):
     """Most recent observation date for a card: max(content build, price fetch).
     YYYY-MM-DD or '' — sitemap omits lastmod rather than inventing one."""
@@ -776,6 +806,7 @@ def main():
     if not cards:
         print("No cards found.", file=sys.stderr)
         return 1
+    apply_asin_registry(cards)
 
     written = []
     for card in cards:
