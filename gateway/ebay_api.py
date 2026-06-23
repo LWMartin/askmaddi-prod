@@ -152,6 +152,44 @@ def search(query, limit=10, customid=None):
     return results
 
 
+def _search_candidates(query, limit=10):
+    """Identity-resolution search: like search() but rows carry item_id.
+
+    The public search() shape is frozen (the frontend depends on it — spec
+    decision #4), so this is a SEPARATE path for the search->tap->resolve flow
+    (back-fill, future /ebay/resolve). Rows include the RESTful item_id needed
+    to call resolve(), plus epid/brand where the summary supplies them, so a
+    scorer can rank candidates before paying the per-item resolve() cost.
+
+    Returns list of dicts: {item_id, title, price, currency, condition, epid, brand}.
+    Raises EbayAPIError on failure.
+    """
+    if not query:
+        return []
+
+    token = _get_token()
+    headers = _affiliate_headers(token)
+    params = {'q': query, 'limit': str(min(int(limit), 50))}
+    resp = requests.get(BROWSE_SEARCH_URL, headers=headers, params=params, timeout=15)
+    if resp.status_code != 200:
+        raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}')
+
+    items = resp.json().get('itemSummaries', []) or []
+    out = []
+    for it in items:
+        price = it.get('price', {}) or {}
+        out.append({
+            'item_id': it.get('itemId', ''),
+            'title': it.get('title', ''),
+            'price': price.get('value', ''),
+            'currency': price.get('currency', ''),
+            'condition': it.get('condition', ''),
+            'epid': it.get('epid', ''),
+            'brand': it.get('brand', ''),
+        })
+    return out
+
+
 def _extract_identity(item):
     """Map an eBay getItem payload to the skus.json `identity` block (lossless).
 
