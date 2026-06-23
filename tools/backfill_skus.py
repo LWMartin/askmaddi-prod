@@ -27,6 +27,7 @@ Usage:
 """
 import argparse
 import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -34,6 +35,36 @@ from pathlib import Path
 # gateway/ is the home of ebay_api + skus_registry; add it to the path.
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT / 'gateway'))
+
+
+def _load_gateway_env():
+    """Source gateway/.env into os.environ BEFORE importing ebay_api.
+
+    ebay_api reads creds from os.environ at *import* time, and the gateway's
+    own .env loader only runs when app_production starts — which this tool does
+    not import. So without this, the back-fill sees EBAY_* unset even with the
+    .env file present on the box. Mirrors app_production._load_dotenv: no
+    external dep, only sets keys not already in the environment (so systemd
+    EnvironmentFile / shell exports still win). Silent no-op if absent.
+    """
+    env_path = ROOT / 'gateway' / '.env'
+    if not env_path.exists():
+        return
+    try:
+        for line in env_path.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith('#') or '=' not in line:
+                continue
+            key, _, value = line.partition('=')
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+            if key and key not in os.environ:
+                os.environ[key] = value
+    except Exception as e:
+        print(f'[backfill] WARN: .env load failed: {type(e).__name__}')
+
+
+_load_gateway_env()           # MUST precede ebay_api import (module-level cred reads)
 
 import ebay_api          # noqa: E402
 import skus_registry     # noqa: E402
