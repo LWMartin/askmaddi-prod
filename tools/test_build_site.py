@@ -220,9 +220,15 @@ def test_new_cta_explicit_urls_outrank_asin():
 
 
 def test_new_cta_search_fallback_without_asin():
+    # No ASIN, no EPID -> the ladder resolves to an EPN-tagged eBay search,
+    # NOT Amazon search. Amazon search would dump the buyer on a results page
+    # whose top hit is a different product (the e930bea CTA fix). This test is
+    # the regression guard for that reroute: a no-ASIN card must land on eBay.
     card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
     _, url = new_cta(card)
-    assert "/s?k=" in url and "tag=askmaddi-20" in url
+    assert "ebay.com" in url
+    assert "campid=5339138080" in url
+    assert "/s?k=" not in url  # must NOT fall back to Amazon search
 
 
 # ─── SEO/OG batch (2026-06-10): head meta, JSON-LD, as-of, sitemap ──────────
