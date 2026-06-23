@@ -78,16 +78,18 @@ def test_gate_auto_accepts_strong_match(monkeypatch):
     assert entry['contamination_key'] == 'sony-a7-iv'
 
 
-def test_gate_needs_review_when_no_strong_match(monkeypatch):
-    # Only weak/wrong candidates -> no auto-accept, no entry produced.
+def test_gate_no_survivors_when_all_fail_coarse_gate(monkeypatch):
+    # A7 III (wrong generation) is disqualified by the generation gate; the
+    # strap fails on overlap. Nothing survives -> no_survivors (distinct from
+    # needs_review, which means survivors exist but are too close to call).
     cands = [
         {'item_id': 'v1|9|0', 'title': 'Sony A7 III ILCE-7M3 Body', 'epid': '', 'brand': ''},
         {'item_id': 'v1|8|0', 'title': 'Camera strap universal', 'epid': '', 'brand': ''},
     ]
     _patch(monkeypatch, cands)
     entry, review = bf.backfill_card('sony-a7iv', SONY_CARD)
-    assert review['decision'] == 'needs_review'
-    assert entry is None  # nothing seeded on a weak match — the whole point
+    assert review['decision'] == 'no_survivors'
+    assert entry is None  # nothing seeded on a failed gate — the whole point
 
 
 def test_gate_no_candidates(monkeypatch):
@@ -148,3 +150,126 @@ def test_category_backfill_flagged(monkeypatch):
     entry, review = bf.backfill_card('sigma-35-art-dg-dn-ii', lens_card)
     assert review.get('category_backfilled') == 'lens'
     assert entry['category'] == 'lens'
+
+
+# ─── 2026-06-23 lesson: coarse-gate + refuse-to-guess (real failure cases) ──
+
+def _real(slug):
+    import json as _j
+    return _j.load(open(f'data/cards/{slug}.json'))['identity']
+
+
+def test_generation_gate_disqualifies_wrong_generation():
+    # Sigma Art II card: an Art I (DG DN Art, no II) candidate must score 0.
+    idn = _real('sigma-35-art-dg-dn-ii')
+    assert bf._score(idn, 'Sigma 35mm f/1.4 DG DN Art Lens for Sony E - 303965') == 0.0
+    # The right Art II candidate survives.
+    assert bf._score(idn, 'Sigma Art 35mm f/1.4 DG II Lens for Sony E-Mount') > 0
+
+
+def test_generation_gate_disqualifies_a7_iii_for_a7_iv_card():
+    idn = _real('sony-a7iv')
+    assert bf._score(idn, 'Sony Alpha A7 III ILCE-7M3 Mirrorless Camera') == 0.0
+
+
+def test_close_survivors_escalate_not_autopick(monkeypatch):
+    # Pro tripod range: Pro / Pro Tall / base cluster within the margin ->
+    # the scorer must NOT auto-pick; it escalates (needs_review w/o gemma).
+    cands = [
+        {'item_id': 'v1|f', 'title': 'Peak Design Pro Tall Carbon Fiber Tripod Ball Head PT-T-BK-1', 'epid': '', 'brand': ''},
+        {'item_id': 'v1|g', 'title': 'Peak Design Pro Carbon Fiber Tripod Ball Head PT-T-BK-1', 'epid': '', 'brand': ''},
+        {'item_id': 'v1|h', 'title': 'Peak Design Pro Tripod', 'epid': '', 'brand': ''},
+    ]
+    monkeypatch.setattr(bf.ebay_api, '_search_candidates', lambda q, limit=10: cands)
+    card = {'identity': _real('peak-design-pro-tripod'), 'category': 'support'}
+    entry, review = bf.backfill_card('peak-design-pro-tripod', card, use_gemma=False)
+    assert review['decision'] == 'needs_review'   # close cluster -> refuse to guess
+    assert entry is None
+
+
+def test_clear_winner_auto_accepts(monkeypatch):
+    # One strong match, no close runner-up -> auto_accept.
+    cands = [
+        {'item_id': 'v1|x', 'title': 'Sony Alpha A7 IV ILCE-7M4 Mirrorless Camera Body', 'epid': '', 'brand': ''},
+        {'item_id': 'v1|y', 'title': 'Generic camera cleaning kit', 'epid': '', 'brand': ''},
+    ]
+    monkeypatch.setattr(bf.ebay_api, '_search_candidates', lambda q, limit=10: cands)
+    monkeypatch.setattr(bf.ebay_api, 'resolve',
+                        lambda item_id, customid=None: {'identity': {'epid': 'E'}, 'affiliate_url': 'u', '_raw': {}})
+    card = {'identity': _real('sony-a7iv'), 'category': 'body'}
+    entry, review = bf.backfill_card('sony-a7iv', card, use_gemma=False)
+    assert review['decision'] == 'auto_accept'
+    assert entry is not None
+
+
+def test_gemma_resolves_close_survivors(monkeypatch):
+    # Same close Pro cluster, but with --gemma the shim picks the base member.
+    cands = [
+        {'item_id': 'v1|f', 'title': 'Peak Design Pro Tall Carbon Tripod PT-T-BK-1', 'epid': '', 'brand': ''},
+        {'item_id': 'v1|h', 'title': 'Peak Design Pro Tripod', 'epid': '', 'brand': ''},
+    ]
+    monkeypatch.setattr(bf.ebay_api, '_search_candidates', lambda q, limit=10: cands)
+    monkeypatch.setattr(bf.ebay_api, 'resolve',
+                        lambda item_id, customid=None: {'identity': {'epid': 'E'}, 'affiliate_url': 'u', '_raw': {}})
+    monkeypatch.setattr(bf, '_gemma_adjudicate', lambda idn, c: 'v1|h')  # base member
+    card = {'identity': _real('peak-design-pro-tripod'), 'category': 'support'}
+    entry, review = bf.backfill_card('peak-design-pro-tripod', card, use_gemma=True)
+    assert review['decision'] == 'gemma_accept'
+    assert review['chosen']['item_id'] == 'v1|h'
+    assert entry is not None
+
+
+# ─── Gemma shim contract: text-in/text-out /orient (real wiring) ────────────
+
+def test_gemma_prompt_numbers_candidates():
+    cands = [{'item_id': 'v1|a', 'title': 'Peak Design Pro Tripod'},
+             {'item_id': 'v1|b', 'title': 'Peak Design Pro Tall Tripod'}]
+    p = bf._build_gemma_prompt(_real('peak-design-pro-tripod'), cands)
+    assert '1. Peak Design Pro Tripod' in p
+    assert '2. Peak Design Pro Tall Tripod' in p
+    assert 'single number' in p.lower()
+
+
+def test_gemma_adjudicate_parses_numbered_reply(monkeypatch):
+    cands = [{'item_id': 'v1|a', 'title': 'Pro Tripod'},
+             {'item_id': 'v1|b', 'title': 'Pro Tall Tripod'}]
+
+    class _Resp:
+        status_code = 200
+        def json(self): return {'text': '1'}      # shim returns text, not item_id
+
+    import requests
+    monkeypatch.setattr(requests, 'post', lambda *a, **k: _Resp())
+    chosen = bf._gemma_adjudicate({'brand': 'Peak Design', 'model': 'Pro Tripod'}, cands)
+    assert chosen == 'v1|a'                          # number 1 -> first candidate
+
+
+def test_gemma_adjudicate_zero_means_none(monkeypatch):
+    cands = [{'item_id': 'v1|a', 'title': 'x'}]
+
+    class _Resp:
+        status_code = 200
+        def json(self): return {'text': '0'}        # 0 = none qualifies
+
+    import requests
+    monkeypatch.setattr(requests, 'post', lambda *a, **k: _Resp())
+    assert bf._gemma_adjudicate({'model': 'y'}, cands) is None
+
+
+def test_gemma_adjudicate_unparseable_falls_to_none(monkeypatch):
+    cands = [{'item_id': 'v1|a', 'title': 'x'}]
+
+    class _Resp:
+        status_code = 200
+        def json(self): return {'text': 'I think none of these match well.'}
+
+    import requests
+    monkeypatch.setattr(requests, 'post', lambda *a, **k: _Resp())
+    assert bf._gemma_adjudicate({'model': 'y'}, cands) is None
+
+
+def test_gemma_adjudicate_shim_down_falls_to_none(monkeypatch):
+    import requests
+    def _boom(*a, **k): raise requests.exceptions.ConnectionError('refused')
+    monkeypatch.setattr(requests, 'post', _boom)
+    assert bf._gemma_adjudicate({'model': 'y'}, [{'item_id': 'v1|a', 'title': 'x'}]) is None

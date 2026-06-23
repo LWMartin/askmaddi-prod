@@ -75,6 +75,12 @@ CARDS_DIR = ROOT / 'data' / 'cards'
 # Below this -> needs_review (or Gemma escalation if --gemma).
 ACCEPT_THRESHOLD = 0.60
 
+# A clear single winner must beat the runner-up by at least this margin to
+# auto-accept. When several survivors cluster within the margin (range cards,
+# material splits, same-generation siblings), the scorer refuses to guess and
+# escalates to Gemma / review — the 2026-06-23 lesson.
+DOMINANCE_MARGIN = 0.15
+
 # contamination_key bridge: prod slug -> hyphenated editorial key. The two
 # differ in form by design (spec decision #6); this is the explicit mapping,
 # not a generated transform. Seed cadre only; extend as cards are added.
@@ -96,58 +102,141 @@ def _tokens(text):
     return set(_TOKEN_RE.findall((text or '').lower()))
 
 
-def _score(card_idn, candidate_title):
-    """Token-overlap score (0..1) of a candidate title vs the card's identity.
+# Generation/ordinal marks: if the card carries one, a candidate lacking it is
+# a different generation and is disqualified by the coarse gate (Sigma Art II
+# vs Art I). Roman/ordinal only — category-general, no part-number guessing
+# (which falsely tripped on '35mm','a7iv','33mp' — that discrimination is now
+# Gemma's job, not the scorer's).
+_GENERATION_TOKENS = {'ii', 'iii', 'iv', 'v', 'mark', 'mk', 'm2', 'm3', 'm4'}
 
-    Uses brand + model + alt-names as the reference token set — the card's
-    own facts, which are richer than display_name alone. Score is the fraction
-    of reference tokens present in the candidate title (recall-weighted: we
-    care that the candidate contains the product's identifying tokens, not that
-    it's free of extra ones — eBay titles are keyword-stuffed).
-    """
+# Noise tokens that match everything — never identity-bearing.
+_NOISE_TOKENS = {'the', 'a', 'an', 'for', 'with', 'and', 'mm', 'f',
+                 'new', 'in', 'box', 'sale', 'free', 'shipping', 'tag', 'tags',
+                 'lens', 'camera', 'mirrorless', 'body', 'black'}
+
+
+def _ref_tokens(card_idn):
+    """The card's identity token set: brand + model + alt-names, noise removed."""
     ref = set()
     ref |= _tokens(card_idn.get('brand'))
     ref |= _tokens(card_idn.get('model'))
     for alt in (card_idn.get('sku_alt_names') or []):
         ref |= _tokens(alt)
-    # Drop pure noise tokens that match everything.
-    ref -= {'the', 'a', 'an', 'for', 'with', 'and', 'mm', 'f'}
+    return ref - _NOISE_TOKENS
+
+
+def _score(card_idn, candidate_title):
+    """COARSE identity score (0..1): generation hard-gate + overlap ranking.
+
+    Deliberately does ONE robust, category-general hard filter and otherwise
+    just ranks — it does NOT try to make the fine same-model/variant call that
+    token patterns are bad at (the 2026-06-23 lesson: '35mm', 'a7iv', '33mp'
+    all falsely tripped an MPN regex). Fine discrimination is Gemma's job.
+
+      - HARD GATE: any generation token the card carries (e.g. 'ii' for the
+        Sigma Art II) MUST appear in the candidate, else 0.0. Kills the
+        Art-vs-Art-II / Mark-II class of miss. Roman/ordinal marks only —
+        category-general, no part-number guessing.
+      - RANK: recall-weighted token overlap (fraction of the card's identity
+        tokens present in the candidate). Orders survivors for Gemma / review;
+        the top score is NOT treated as a confident single winner when several
+        survivors are close (the caller escalates).
+    """
+    ref = _ref_tokens(card_idn)
     if not ref:
         return 0.0
     cand = _tokens(candidate_title)
+
+    required = ref & _GENERATION_TOKENS
+    if required and not required.issubset(cand):
+        return 0.0
+
     hit = ref & cand
     return len(hit) / len(ref)
 
 
-def _gemma_adjudicate(card_idn, candidates):
-    """Optional Gemma escalation for ambiguous picks (loopback shim :5101).
+def _build_gemma_prompt(card_idn, candidates):
+    """Text prompt for the orient shim: pick the representative candidate by NUMBER.
 
-    Off unless --gemma. Returns the chosen item_id or None. Kept deliberately
-    thin — a hook, not a dependency; if the shim is down it returns None and
-    the card falls to needs_review rather than erroring the whole back-fill.
+    The shim is text-in/text-out ({prompt}->{text}); it does not accept
+    structured JSON. So we number the candidates and ask Gemma to reply with the
+    number of the representative (or 0 for none). Mirrors the proven
+    gemma_orienter prompt style: explicit rules, single-token-ish answer.
     """
+    alts = ', '.join(card_idn.get('sku_alt_names') or []) or '(none)'
+    lines = [
+        'You are matching an eBay listing to a known product.',
+        '',
+        f"PRODUCT: {card_idn.get('brand', '')} {card_idn.get('model', '')}".strip(),
+        f"  also known as: {alts}",
+        '',
+        'CANDIDATE LISTINGS:',
+    ]
+    for i, c in enumerate(candidates, 1):
+        lines.append(f"  {i}. {c['title']}")
+    lines += [
+        '',
+        'Reply with ONLY the number of the listing that is the canonical',
+        'REPRESENTATIVE of this exact product, or 0 if none qualifies. Rules:',
+        '1. Same generation and model ONLY. Reject siblings (A7 IV vs A7R IV;',
+        '   DG DN Art vs DG DN Art II).',
+        '2. For a RANGE product (several variants like Lite/Tall, or a material',
+        '   split like aluminum/carbon), choose the BASE/STANDARD member,',
+        '   preferring carbon over aluminum and the plain variant over Tall/Lite.',
+        '3. Prefer a clean canonical listing over a used bundle when both are the',
+        '   right model.',
+        '',
+        'Answer (a single number):',
+    ]
+    return '\n'.join(lines)
+
+
+def _gemma_adjudicate(card_idn, candidates):
+    """Adjudicate close survivors via the Gemma orient shim (127.0.0.1:5101).
+
+    Off unless --gemma. Returns the chosen item_id or None. Speaks the REAL
+    shim contract: POST {prompt, max_tokens, temperature} -> {text}. We send a
+    numbered-choice prompt and parse the integer Gemma replies; map it back to
+    the candidate's item_id. A hook, not a hard dependency: shim down / parse
+    fail -> None, and the card falls to review rather than erroring the run.
+    """
+    import re as _re
     try:
         import requests
-        prompt = {
-            'product': {
-                'brand': card_idn.get('brand'),
-                'model': card_idn.get('model'),
-                'display_name': card_idn.get('display_name'),
-            },
-            'candidates': [{'item_id': c['item_id'], 'title': c['title']} for c in candidates],
-            'task': 'pick the single candidate that is the SAME product, or null if none',
-        }
+        prompt = _build_gemma_prompt(card_idn, candidates)
         r = requests.post('http://127.0.0.1:5101/orient',
-                          json=prompt, timeout=30)
-        if r.status_code == 200:
-            return (r.json() or {}).get('item_id')
+                          json={'prompt': prompt, 'max_tokens': 8, 'temperature': 0.0},
+                          timeout=60)
+        if r.status_code != 200:
+            print(f'  [gemma] shim HTTP {r.status_code}; falling to review')
+            return None
+        text = (r.json() or {}).get('text', '')
+        m = _re.search(r'\d+', text)
+        if not m:
+            print(f'  [gemma] unparseable reply {text!r}; falling to review')
+            return None
+        pick = int(m.group(0))
+        if pick < 1 or pick > len(candidates):
+            return None          # 0 = none qualifies, or out of range
+        return candidates[pick - 1]['item_id']
     except Exception as e:
-        print(f'  [gemma] escalation unavailable ({e}); falling to needs_review')
+        print(f'  [gemma] escalation unavailable ({e}); falling to review')
     return None
 
 
 def backfill_card(slug, card, use_gemma=False, limit=10):
-    """Resolve one card -> proposed skus entry + a review record. No writes."""
+    """Resolve one card -> proposed skus entry + a review record. No writes.
+
+    Two-stage selection (coarse scorer + semantic adjudicator):
+      1. _score() coarse-filters (generation hard-gate) and ranks survivors.
+      2. If ONE survivor clearly dominates (top >= ACCEPT_THRESHOLD and well
+         clear of #2), auto-accept it.
+      3. If survivors are CLOSE (the range / material-split / same-generation-
+         sibling ambiguity — Pro vs Pro Tall, AL vs CF, A7 IV vs A7R IV), the
+         scorer must NOT guess. Escalate to Gemma when --gemma, else mark
+         needs_review. Gemma picks the representative (base/standard variant,
+         carbon-preferred for range cards) or returns none.
+    """
     idn = card.get('identity', {})
     display = idn.get('display_name', slug)
     review = {'slug': slug, 'query': display, 'decision': None,
@@ -162,27 +251,38 @@ def backfill_card(slug, card, use_gemma=False, limit=10):
         ((_score(idn, c['title']), c) for c in candidates),
         key=lambda t: t[0], reverse=True,
     )
-    top_score, top = scored[0]
+    survivors = [(s, c) for s, c in scored if s > 0]   # passed the generation gate
     review['rejected'] = [
         {'title': c['title'][:80], 'score': round(s, 3)} for s, c in scored[1:5]
     ]
+    if not survivors:
+        review['decision'] = 'no_survivors'   # everything failed the coarse gate
+        review['score'] = 0.0
+        return None, review
+
+    top_score, top = survivors[0]
+    runner = survivors[1][0] if len(survivors) > 1 else 0.0
+    review['score'] = round(top_score, 3)
+
+    # Clear single winner: dominant AND meaningfully ahead of #2.
+    clear_winner = (top_score >= ACCEPT_THRESHOLD
+                    and (len(survivors) == 1 or top_score - runner >= DOMINANCE_MARGIN))
 
     chosen = None
-    if top_score >= ACCEPT_THRESHOLD:
+    if clear_winner:
         chosen = top
         review['decision'] = 'auto_accept'
     elif use_gemma:
-        gid = _gemma_adjudicate(idn, [c for _, c in scored[:5]])
+        gid = _gemma_adjudicate(idn, [c for _, c in survivors[:5]])
         review['gemma_used'] = True
         if gid:
-            chosen = next((c for _, c in scored if c['item_id'] == gid), None)
+            chosen = next((c for _, c in survivors if c['item_id'] == gid), None)
             review['decision'] = 'gemma_accept' if chosen else 'gemma_no_match'
         else:
             review['decision'] = 'gemma_no_match'
     else:
-        review['decision'] = 'needs_review'
+        review['decision'] = 'needs_review'   # close survivors, no Gemma -> human
 
-    review['score'] = round(top_score, 3)
     if chosen is None:
         review['chosen'] = {'title': top['title'][:80], 'item_id': top['item_id']}
         return None, review
