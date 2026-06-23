@@ -154,29 +154,71 @@ def amazon_search_url(display_name):
     return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
 
 
-def ebay_search_url(display_name):
+def ebay_search_url(display_name, category_id=None):
+    """Tagged eBay website-search CTA, scoped to `display_name`.
+
+    For RANGE cards (e.g. Peak Design Pro = Lite/Pro/Tall) there is no single
+    canonical product page, so a search that shows all variants is the honest
+    target — but a bare keyword search drags in accessories (the live Browse
+    probe returned a leveling base, a quick-release plate, and a backpack under
+    "Peak Design Pro Tripod"). Pinning eBay's category via `_sacat` is the
+    durable fix: it leans on eBay's own taxonomy instead of brittle hand-tuned
+    `-plate -base` keyword exclusions that silently over-filter and rot. Camera
+    Tripods & Monopods = 30093. Affiliate params stamped by ensure_affiliate_tag.
+    """
     q = re.sub(r"\s+", "+", display_name.strip().lower())
+    sacat = f"&_sacat={category_id}" if category_id else ""
     return (
-        f"https://www.ebay.com/sch/i.html?_nkw={q}"
+        f"https://www.ebay.com/sch/i.html?_nkw={q}{sacat}"
         f"&mkcid=1&mkrid={EBAY_RID}&campid={EBAY_CAMPID}"
     )
+
+
+# eBay leaf category ids for CTA scoping (eBay's own taxonomy, stable).
+EBAY_CATEGORY = {
+    "support": "30093",   # Camera Tripods & Monopods
+}
+
+
+def ebay_product_url(epid):
+    """Direct eBay catalog (EPID) product page — the eBay analogue of
+    amazon_product_url(asin). Lands the buyer on the catalog product page
+    instead of search results. Affiliate params are stamped by
+    ensure_affiliate_tag (campid/mkcid/mkrid), same as every other eBay CTA.
+    EPID is eBay's durable catalog id; a single listing can vanish but the
+    catalog entry persists, so this is the right rung to store in the registry.
+    """
+    return f"https://www.ebay.com/p/{epid}"
 
 
 def new_cta(card):
     """Return (label, url) for the 'buy new' CTA, honest about missing price.
 
-    URL preference: explicit affiliate_url > raw product URL > ASIN /dp/ link
-    > search-results fallback. The ASIN rung (pricing.amazon_asin) lands the
-    buyer on the exact SKU page instead of search results — same field the
-    future PA-API price job will key on.
+    URL preference:
+      explicit affiliate_url > raw product URL > Amazon ASIN /dp/ link
+      > eBay EPID /p/ link > eBay search > Amazon search (last resort).
+
+    The ASIN rung (pricing.amazon_asin) lands the buyer on the exact Amazon SKU
+    page; same field the future PA-API price job keys on. When a card has NO
+    Amazon ASIN — because the product isn't sold on Amazon (e.g. Peak Design Pro
+    Tripod) — falling to Amazon search would dump the buyer onto a results page
+    whose top hit is a DIFFERENT product (the Travel Tripod). So the no-ASIN
+    path resolves to eBay instead: a catalog EPID /p/ deep-link when the
+    registry carries one, else an eBay search scoped to this product. Amazon
+    search remains only as the final last-resort rung for the degenerate case
+    where neither marketplace id is available. All URLs pass ensure_affiliate_tag.
     """
     pricing = card.get("pricing", {})
     name = card["identity"]["display_name"]
     asin = pricing.get("amazon_asin")
+    epid = pricing.get("ebay_epid")
+    ebay_cat = EBAY_CATEGORY.get(card.get("category"))
     url = ensure_affiliate_tag(
         pricing.get("affiliate_url")
         or pricing.get("current_new_url")
         or (amazon_product_url(asin) if asin else None)
+        or (ebay_product_url(epid) if epid else None)
+        or (ebay_search_url(name, ebay_cat) if not asin else None)
         or amazon_search_url(name)
     )
     price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
@@ -189,8 +231,9 @@ def used_cta(card):
     pricing = card.get("pricing", {})
     used = pricing.get("used_market", {}) or {}
     name = card["identity"]["display_name"]
+    ebay_cat = EBAY_CATEGORY.get(card.get("category"))
     url = ensure_affiliate_tag(
-        used.get("affiliate_url") or used.get("search_url") or ebay_search_url(name)
+        used.get("affiliate_url") or used.get("search_url") or ebay_search_url(name, ebay_cat)
     )
     # Prefer a representative band midpoint if present; else just label "used".
     bands = used.get("bands", {}) or {}
@@ -723,6 +766,7 @@ def load_cards(args):
 
 
 ASIN_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "asin_registry.json"
+EBAY_EPID_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "ebay_epid_registry.json"
 
 
 def apply_asin_registry(cards):
@@ -749,6 +793,33 @@ def apply_asin_registry(cards):
         pricing = card.setdefault("pricing", {})
         if not pricing.get("amazon_asin"):
             pricing["amazon_asin"] = asin
+    return cards
+
+
+def apply_ebay_epid_registry(cards):
+    """Inject durable eBay catalog EPIDs into each card's pricing block.
+
+    The eBay analogue of apply_asin_registry. Same rebuild-survival rationale:
+    aggregator rebuilds drop marketplace ids, so the durable EPID lives in
+    data/ebay_epid_registry.json (keyed by card_id) and is re-applied here at
+    build time. A card that already carries an ebay_epid wins (a live-resolved
+    value should never be clobbered by a static registry entry). Absence is
+    fine — new_cta() then degrades a no-ASIN card to a tagged eBay search rather
+    than an eBay /p/ deep-link, which is still correct and earning-capable.
+    """
+    try:
+        reg = json.loads(EBAY_EPID_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cards  # registry optional; absence degrades to prior behavior
+    epids = reg.get("epids", {})
+    for card in cards:
+        cid = card.get("card_id")
+        epid = epids.get(cid)
+        if not epid:
+            continue
+        pricing = card.setdefault("pricing", {})
+        if not pricing.get("ebay_epid"):
+            pricing["ebay_epid"] = epid
     return cards
 
 
@@ -807,6 +878,7 @@ def main():
         print("No cards found.", file=sys.stderr)
         return 1
     apply_asin_registry(cards)
+    apply_ebay_epid_registry(cards)
 
     written = []
     for card in cards:

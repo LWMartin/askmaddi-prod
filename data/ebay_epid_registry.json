@@ -1,0 +1,5 @@
+{
+  "_comment": "Durable eBay catalog EPID registry, keyed by card_id. The eBay analogue of asin_registry.json. build_site.py merges these into pricing.ebay_epid at build time so they survive aggregator rebuilds (which regenerate data/cards/*.json without marketplace ids). An EPID is eBay's durable CATALOG product id — a single seller listing (legacy itemId) can vanish, but the catalog entry persists, so the EPID is the right thing to store. new_cta() turns a present EPID into an ebay.com/p/<epid> deep-link for any card lacking an Amazon ASIN. Each EPID must be captured live from the eBay Browse API resolve path (itemSummary.epid), NEVER hand-guessed — hand-aliased identity is the exact bug class skus.json exists to kill. When a card's EPID changes, update HERE, not in the card JSON (that gets overwritten). A card may legitimately have NO epid yet (catalog entry not minted) — it then degrades to a tagged eBay search scoped to the product, which is still correct and earning-capable.",
+  "epids": {},
+  "verified": {}
+}
