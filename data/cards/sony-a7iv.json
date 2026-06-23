@@ -21095,5 +21095,17 @@
       "ingested_at": "2026-06-22T16:51:36.577586+00:00",
       "weight": 0.75
     }
-  ]
+  ],
+  "pricing": {
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 697.0,
+        "open_box": 1750.0,
+        "refurbished": 1337.3
+      },
+      "sample_size": 32,
+      "price_updated_at": "2026-06-23T10:10:04.578865+00:00"
+    }
+  }
 }
