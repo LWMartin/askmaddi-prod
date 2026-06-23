@@ -115,6 +115,18 @@ _NOISE_TOKENS = {'the', 'a', 'an', 'for', 'with', 'and', 'mm', 'f',
                  'lens', 'camera', 'mirrorless', 'body', 'black'}
 
 
+# Markers that a listing is a multi-item BUNDLE rather than the clean single
+# product. Down-weighted so they don't AUTO-win (they often spell out the MPN
+# and over-score) — they escalate to Gemma, whose rules prefer a clean
+# canonical listing. NOT a precise used-vs-new classifier (tokens can't do that
+# reliably — that's Gemma's job); just enough to stop a bundle auto-accepting.
+# Deliberately EXCLUDES common legit-listing words (shutter/count/read/fair):
+# those appear on clean body listings too and would muddy the ranking Gemma
+# sees. Targets genuine multi-item signals only.
+_USED_BUNDLE_TOKENS = {'bundle', 'lenses', 'kit', 'combo', 'lot'}
+_USED_BUNDLE_PENALTY = 0.6   # multiplier; enough to drop below DOMINANCE_MARGIN
+
+
 def _ref_tokens(card_idn):
     """The card's identity token set: brand + model + alt-names, noise removed."""
     ref = set()
@@ -137,10 +149,10 @@ def _score(card_idn, candidate_title):
         Sigma Art II) MUST appear in the candidate, else 0.0. Kills the
         Art-vs-Art-II / Mark-II class of miss. Roman/ordinal marks only —
         category-general, no part-number guessing.
-      - RANK: recall-weighted token overlap (fraction of the card's identity
-        tokens present in the candidate). Orders survivors for Gemma / review;
-        the top score is NOT treated as a confident single winner when several
-        survivors are close (the caller escalates).
+      - RANK: recall-weighted token overlap, then a used/bundle DOWN-weight so
+        a noisy used-copy listing does not auto-win over a clean canonical one
+        (it escalates to Gemma instead). The top score is NOT a confident single
+        winner when survivors are close — the caller escalates.
     """
     ref = _ref_tokens(card_idn)
     if not ref:
@@ -152,7 +164,13 @@ def _score(card_idn, candidate_title):
         return 0.0
 
     hit = ref & cand
-    return len(hit) / len(ref)
+    score = len(hit) / len(ref)
+
+    # Down-weight used/bundle listings so they escalate rather than auto-accept.
+    if cand & _USED_BUNDLE_TOKENS:
+        score *= _USED_BUNDLE_PENALTY
+
+    return score
 
 
 def _build_gemma_prompt(card_idn, candidates):
