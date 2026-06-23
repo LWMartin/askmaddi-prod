@@ -273,3 +273,49 @@ def test_gemma_adjudicate_shim_down_falls_to_none(monkeypatch):
     def _boom(*a, **k): raise requests.exceptions.ConnectionError('refused')
     monkeypatch.setattr(requests, 'post', _boom)
     assert bf._gemma_adjudicate({'model': 'y'}, [{'item_id': 'v1|a', 'title': 'x'}]) is None
+
+
+# ─── Gemma adjudicator speaks the REAL shim contract ({prompt}->{text}) ─────
+
+def test_gemma_adjudicator_parses_real_text_response(monkeypatch):
+    # The shim is text-in/text-out: POST {prompt,...} -> {"text": "..."}.
+    # Adjudicator must build a numbered prompt and parse the integer reply,
+    # mapping it back to the candidate item_id. Guards against regressing to a
+    # structured {item_id} contract the shim does not speak.
+    cands = [{'item_id': 'v1|f', 'title': 'Peak Design Pro Tall Carbon Tripod'},
+             {'item_id': 'v1|h', 'title': 'Peak Design Pro Tripod'}]
+    idn = {'brand': 'Peak Design', 'model': 'Pro Tripod', 'sku_alt_names': ['Pro Tall Tripod']}
+
+    class _R:
+        status_code = 200
+        def json(self):
+            return {'text': '2'}   # Gemma picks listing #2
+
+    import requests
+    monkeypatch.setattr(requests, 'post', lambda *a, **k: _R())
+    assert bf._gemma_adjudicate(idn, cands) == 'v1|h'
+
+
+def test_gemma_adjudicator_zero_means_none(monkeypatch):
+    cands = [{'item_id': 'v1|f', 'title': 'x'}, {'item_id': 'v1|h', 'title': 'y'}]
+    idn = {'brand': 'B', 'model': 'M', 'sku_alt_names': []}
+
+    class _R:
+        status_code = 200
+        def json(self):
+            return {'text': '0'}   # none qualifies
+
+    import requests
+    monkeypatch.setattr(requests, 'post', lambda *a, **k: _R())
+    assert bf._gemma_adjudicate(idn, cands) is None
+
+
+def test_gemma_adjudicator_shim_down_returns_none(monkeypatch):
+    cands = [{'item_id': 'v1|f', 'title': 'x'}]
+    idn = {'brand': 'B', 'model': 'M', 'sku_alt_names': []}
+
+    import requests
+    def _boom(*a, **k):
+        raise requests.exceptions.ConnectionError('refused')
+    monkeypatch.setattr(requests, 'post', _boom)
+    assert bf._gemma_adjudicate(idn, cands) is None   # falls to review, no raise
