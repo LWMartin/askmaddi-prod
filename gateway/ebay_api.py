@@ -31,6 +31,9 @@ EBAY_MARKETPLACE = os.environ.get('EBAY_MARKETPLACE', 'EBAY_US')
 # Production endpoints (sandbox uses api.sandbox.ebay.com)
 TOKEN_URL = 'https://api.ebay.com/identity/v1/oauth2/token'
 BROWSE_SEARCH_URL = 'https://api.ebay.com/buy/browse/v1/item_summary/search'
+# getItem — full per-item detail for lossless identity capture (skus registry).
+# item_id is the RESTful form: v1|<legacyId>|<variationId>.
+BROWSE_ITEM_URL = 'https://api.ebay.com/buy/browse/v1/item'
 # Browse API public-data scope
 SCOPE = 'https://api.ebay.com/oauth/api_scope'
 
@@ -83,27 +86,46 @@ def _get_token():
     return token
 
 
-def search(query, limit=10):
+def _affiliate_headers(token, customid=None):
+    """Standard Browse API headers, including EPN affiliate context.
+
+    When EBAY_CAMPAIGN_ID is set, the X-EBAY-C-ENDUSERCTX header makes the
+    returned itemAffiliateWebUrl trackable. An optional `customid` adds the
+    EPN SubID (affiliateReferenceId, <=256 chars) so eBay bakes it into the
+    affiliate URL — used for card-level revenue attribution. Per eBay docs the
+    SubID is embedded in the customid part of the returned EPN link; we never
+    string-append it ourselves (eBay constructs the tagged URL).
+    """
+    headers = {
+        'Authorization': f'Bearer {token}',
+        'X-EBAY-C-MARKETPLACE-ID': EBAY_MARKETPLACE,
+        'Content-Type': 'application/json',
+    }
+    if EBAY_CAMPAIGN_ID:
+        ctx = f'affiliateCampaignId={EBAY_CAMPAIGN_ID}'
+        if customid:
+            # 256-char cap per EPN spec; truncate defensively rather than 400.
+            ref = str(customid)[:256]
+            ctx += f',affiliateReferenceId={ref}'
+        headers['X-EBAY-C-ENDUSERCTX'] = ctx
+    return headers
+
+
+def search(query, limit=10, customid=None):
     """Search eBay for `query`, return a list of normalized product dicts.
 
     Each dict: {name, price, currency, image, url, condition, seller}.
-    URLs are affiliate-tagged when EBAY_CAMPAIGN_ID is set.
+    URLs are affiliate-tagged when EBAY_CAMPAIGN_ID is set. An optional
+    `customid` threads an EPN SubID through for card-level attribution; the
+    thin result shape is unchanged so existing /ebay/search callers are
+    unaffected (the param defaults to None).
     Raises EbayAPIError on failure.
     """
     if not query:
         return []
 
     token = _get_token()
-    headers = {
-        'Authorization': f'Bearer {token}',
-        'X-EBAY-C-MARKETPLACE-ID': EBAY_MARKETPLACE,
-        'Content-Type': 'application/json',
-    }
-    # Affiliate context — makes returned itemAffiliateWebUrl trackable.
-    if EBAY_CAMPAIGN_ID:
-        headers['X-EBAY-C-ENDUSERCTX'] = (
-            f'affiliateCampaignId={EBAY_CAMPAIGN_ID}'
-        )
+    headers = _affiliate_headers(token, customid)
 
     params = {'q': query, 'limit': str(min(int(limit), 50))}
     resp = requests.get(BROWSE_SEARCH_URL, headers=headers, params=params, timeout=15)
@@ -128,3 +150,92 @@ def search(query, limit=10):
             'seller': seller,
         })
     return results
+
+
+def _extract_identity(item):
+    """Map an eBay getItem payload to the skus.json `identity` block (lossless).
+
+    Pulls the registry-schema fields (epid, legacy_item_id, ebay_category_id,
+    brand, mpn, market_title, image, price_seen) defensively — getItem returns
+    some fields top-level and some inside the `product` container depending on
+    fieldgroups, so each is read from both possible homes. brand/mpn that the
+    live search() normalizer discards are the whole point of capture here.
+    """
+    product = item.get('product', {}) or {}
+    price = item.get('price', {}) or {}
+    image = (item.get('image', {}) or {}).get('imageUrl', '')
+    if not image:
+        # product.imageUrls is a list of {imageUrl: ...} in some payloads
+        imgs = product.get('imageUrls', []) or []
+        if imgs:
+            image = (imgs[0] or {}).get('imageUrl', '') if isinstance(imgs[0], dict) else ''
+
+    # brand / mpn live under product.brand/product.mpn, or in localizedAspects.
+    brand = product.get('brand', '') or item.get('brand', '')
+    mpn = product.get('mpn', '') or item.get('mpn', '')
+    if not brand or not mpn:
+        for asp in (item.get('localizedAspects', []) or []):
+            name = (asp.get('name') or '').lower()
+            val = asp.get('value') or ''
+            if not brand and name == 'brand':
+                brand = val
+            if not mpn and name in ('mpn', 'manufacturer part number'):
+                mpn = val
+
+    return {
+        'epid': item.get('epid', '') or product.get('epid', ''),
+        'legacy_item_id': item.get('legacyItemId', ''),
+        'ebay_category_id': item.get('categoryId', ''),
+        'brand': brand,
+        'mpn': mpn,
+        'market_title': item.get('title', ''),
+        'image': image,
+        'price_seen': {
+            'value': price.get('value', ''),
+            'currency': price.get('currency', ''),
+            'as_of': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+        },
+    }
+
+
+def resolve(item_id, customid=None):
+    """Re-fetch one eBay item's full detail for lossless identity capture.
+
+    Sibling to search(): search() returns thin display rows for many items;
+    resolve() returns the full canonical identity for ONE tapped item, the
+    seed for a skus.json registry entry (demand-factory Stage 1). Only the
+    chosen item pays the lossless-capture cost — display stays fast.
+
+    Args:
+      item_id:  RESTful eBay item id, form v1|<legacyId>|<variationId>.
+      customid: optional EPN SubID for card-level affiliate attribution.
+
+    Returns a dict:
+      {'identity': {...registry schema...},
+       'affiliate_url': <itemAffiliateWebUrl or itemWebUrl>,
+       '_raw': <full getItem payload, nothing dropped at the seam>}
+
+    Pure fetch — no filesystem side effects. The idempotent/atomic skus.json
+    write is the registry-writer's job; this is the capture function it calls.
+    Raises EbayAPIError on failure (incl. unknown item id).
+    """
+    if not item_id:
+        raise EbayAPIError('resolve() requires an item_id')
+
+    token = _get_token()
+    headers = _affiliate_headers(token, customid)
+    # PRODUCT fieldgroup surfaces brand/mpn/aspects — the alias source the
+    # registry needs and the bare default response omits.
+    params = {'fieldgroups': 'PRODUCT'}
+    url = f"{BROWSE_ITEM_URL}/{item_id}"
+    resp = requests.get(url, headers=headers, params=params, timeout=15)
+    if resp.status_code != 200:
+        raise EbayAPIError(f'getItem failed: HTTP {resp.status_code}')
+
+    item = resp.json()
+    affiliate_url = item.get('itemAffiliateWebUrl') or item.get('itemWebUrl', '')
+    return {
+        'identity': _extract_identity(item),
+        'affiliate_url': affiliate_url,
+        '_raw': item,
+    }
