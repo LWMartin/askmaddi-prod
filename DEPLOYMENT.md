@@ -62,14 +62,14 @@ python3 tools/build_site.py --cards-dir <dir-of-card-jsons> --output-dir browser
 
 `build_site.py` enforces affiliate tags on every CTA (`ensure_affiliate_tag`) and
 reads images from `identity.image_thumb` on the card — no `--image-url` needed for
-the three live SKUs.
+the four live SKUs.
 
 ## Sanity checks after a deploy
 
 ```bash
 curl -sI https://askmaddi.com/                                   # 200
 curl -s  https://askmaddi.com/health                             # gateway alive (via proxy)
-curl -s  https://askmaddi.com/cards-manifest.json | grep -c "tag=askmaddi-20"      # 3
+curl -s  https://askmaddi.com/cards-manifest.json | grep -c "tag=askmaddi-20"      # 4
 curl -s  https://askmaddi.com/cards/sigma-35-art-dg-dn-ii/ | grep -c synthesis-text # 1
 # Untagged-link tripwire (expect no output):
 curl -s https://askmaddi.com/cards-manifest.json | grep -Eo 'amazon\.com[^"]*' | grep -v askmaddi-20
