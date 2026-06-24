@@ -68,6 +68,7 @@ _load_gateway_env()           # MUST precede ebay_api import (module-level cred 
 
 import ebay_api          # noqa: E402
 import skus_registry     # noqa: E402
+import slug_normalizer   # noqa: E402  (graduated into gateway/, 2026-06-24)
 
 CARDS_DIR = ROOT / 'data' / 'cards'
 
@@ -242,7 +243,70 @@ def _gemma_adjudicate(card_idn, candidates):
     return None
 
 
-def backfill_card(slug, card, use_gemma=False, limit=10):
+class SlugRejected(Exception):
+    """A card's frozen slug failed the registry slug gate — HARD reject.
+
+    Raised before build_entry when slug_normalizer says the card's authored
+    slug is ambiguous (an unreviewed generated proposal) or collides with an
+    existing-but-different spine slug under normalization. We do NOT write a
+    flagged/quarantined entry into skus.json (the spine stays pure — the
+    2026-06-23 Sigma lesson: a wrong value in canonical data defended only by
+    readers remembering to check a flag is the silent-failure class the
+    join-check exists to kill). Instead we stop, surface the proposal + the
+    collision, and let Lee decide and re-run with an explicit --override.
+    """
+
+
+def _gate_slug(slug, vendor, model, *, override=None):
+    """Verify the card's frozen filename-slug agrees with the registry's view,
+    and is collision-free, BEFORE it is frozen into skus.json.
+
+    The filename slug is itself a hand-authored fact (the card file was named
+    deliberately). So this is not "what should the slug be" — it is "does the
+    authored slug agree with what the override table resolves, and does it clash
+    with any existing spine slug under normalization." For the seed cadre this
+    is a no-op: identity-lookup resolves vendor/model to the frozen slug, which
+    equals the filename, no collision. For a genuinely new card it is the gate.
+
+    Resolution passes the filename slug as the explicit override so the SAME
+    slug the writer will freeze is the one checked for collisions against the
+    rest of the spine. Returns the resolution on PASS; raises SlugRejected on a
+    collision (or, when the authored slug is absent, on an unreviewed generated
+    proposal). An operator-supplied --override is honored verbatim but STILL
+    collision-checked — a human override that clashes is still a hard reject.
+
+    Reachability note: from backfill_card the `needs_review` reject is NOT
+    reachable — backfill always supplies the card's filename as the authored
+    slug, and an override always resolves needs_review=False, so COLLISION is
+    backfill's live reject path. The needs_review branch is for the FUTURE route
+    writer, which has no filename to lean on and will call this with no authored
+    slug; there a generated proposal must hard-reject (→ 409 + review queue)
+    rather than silently freeze. Keeping the branch here means both callers share
+    one gate, per decision #3 ("the same function from the request handler").
+    """
+    chosen_override = override or slug
+    res = slug_normalizer.resolve_slug(vendor, model, override=chosen_override)
+
+    if res.collision:
+        raise SlugRejected(
+            f"slug '{res.slug}' normalizes the same as existing spine slug "
+            f"'{res.collision}' (sony-a7iv ~ sony-a7-iv class). Refusing to "
+            f"freeze a colliding slug into the spine. Resolve the clash, then "
+            f"re-run with an explicit --override."
+        )
+    if res.needs_review:
+        # Only reachable if the authored slug did not resolve to a frozen fact
+        # AND no override was given — i.e. a generated proposal. The slug must
+        # be human-confirmed before it enters the spine.
+        raise SlugRejected(
+            f"slug for {vendor!r} {model!r} is an UNREVIEWED generated proposal "
+            f"({res.line()}). The spine only accretes slugs that were never in "
+            f"doubt. Confirm the slug and re-run with --override <slug>."
+        )
+    return res
+
+
+def backfill_card(slug, card, use_gemma=False, limit=10, override=None):
     """Resolve one card -> proposed skus entry + a review record. No writes.
 
     Two-stage selection (coarse scorer + semantic adjudicator):
@@ -312,10 +376,21 @@ def backfill_card(slug, card, use_gemma=False, limit=10):
     category = card.get('category') or CATEGORY_DEFAULT.get(slug)
     if card.get('category') is None and slug in CATEGORY_DEFAULT:
         review['category_backfilled'] = category
+
+    vendor = idn.get('brand') or idn.get('vendor') or ''
+    model = idn.get('model') or ''
+    # GATE: the authored slug must agree with the registry's view and be
+    # collision-free before it is frozen. No-op for the seed cadre (identity
+    # resolves to the frozen slug); a hard wall for a new/ambiguous/colliding
+    # slug. Raises SlugRejected (caught in main) rather than writing a flagged
+    # entry — the spine never accretes a slug that was in doubt.
+    res = _gate_slug(slug, vendor, model, override=override)
+    review['slug_gate'] = res.source   # 'override' on pass
+
     entry = skus_registry.build_entry(
         slug=slug,
-        vendor=idn.get('brand') or idn.get('vendor') or '',
-        model=idn.get('model') or '',
+        vendor=vendor,
+        model=model,
         category=category,
         contamination_key=CONTAMINATION_KEY.get(slug, slug),
         resolved=resolved,
@@ -326,6 +401,10 @@ def backfill_card(slug, card, use_gemma=False, limit=10):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--card', help='back-fill a single slug (default: all)')
+    ap.add_argument('--override',
+                    help='explicit authored slug for the --card being seeded; '
+                         'honored verbatim but still collision-checked. Use to '
+                         'confirm a new card whose generated slug was rejected.')
     ap.add_argument('--commit', action='store_true',
                     help='write gate-passing entries to skus.json (default: dry-run)')
     ap.add_argument('--gemma', action='store_true',
@@ -336,6 +415,10 @@ def main():
     slugs = ([args.card] if args.card
              else sorted(p.stem for p in CARDS_DIR.glob('*.json')))
 
+    if args.override and not args.card:
+        ap.error('--override only applies to a single --card; it is a per-card '
+                 'slug confirmation, not a run-wide setting.')
+
     results = []
     for slug in slugs:
         card_path = CARDS_DIR / f'{slug}.json'
@@ -345,7 +428,15 @@ def main():
         card = json.loads(card_path.read_text(encoding='utf-8'))
         print(f'\n=== {slug} ===')
         try:
-            entry, review = backfill_card(slug, card, use_gemma=args.gemma, limit=args.limit)
+            entry, review = backfill_card(slug, card, use_gemma=args.gemma,
+                                          limit=args.limit, override=args.override)
+        except SlugRejected as e:
+            # HARD reject — the slug was ambiguous or colliding. Nothing written;
+            # the spine stays pure. Surface the reason and how to resolve it.
+            print(f'  SLUG REJECTED: {e}')
+            results.append({'slug': slug, 'decision': 'slug_rejected', 'score': 0.0,
+                            'chosen': None, 'rejected': []})
+            continue
         except ebay_api.EbayAPIError as e:
             print(f'  eBay API error: {e}')
             if 'not set' in str(e):

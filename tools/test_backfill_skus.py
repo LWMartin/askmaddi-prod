@@ -319,3 +319,80 @@ def test_gemma_adjudicator_shim_down_returns_none(monkeypatch):
         raise requests.exceptions.ConnectionError('refused')
     monkeypatch.setattr(requests, 'post', _boom)
     assert bf._gemma_adjudicate(idn, cands) is None   # falls to review, no raise
+
+
+# ─── slug gate (2026-06-24 wire flag): hard-reject ambiguous/colliding slugs ─
+# The gate runs in backfill_card before build_entry. For the seed cadre it is a
+# no-op (identity resolves to the frozen slug against the live data/skus.json).
+# For a new/ambiguous/colliding slug it raises SlugRejected — nothing is seeded.
+# We drive the reject paths by patching slug_normalizer.resolve_slug so the test
+# is deterministic and does not depend on live registry contents.
+
+import slug_normalizer as _sn  # noqa: E402
+
+
+def _resolution(slug, source, needs_review, collision=None):
+    return _sn.SlugResolution(slug=slug, source=source, input_text='x',
+                              needs_review=needs_review, collision=collision)
+
+
+def test_gate_passes_for_frozen_cadre_slug(monkeypatch):
+    # Real path, no patch: sony-a7iv resolves to the frozen slug via the live
+    # registry → gate is a no-op and the strong match seeds as before.
+    cands = [{'item_id': 'v1|1|0', 'title': 'Sony Alpha A7 IV ILCE-7M4 Body',
+              'epid': '', 'brand': ''}]
+    _patch(monkeypatch, cands, _resolved())
+    entry, review = bf.backfill_card('sony-a7iv', SONY_CARD)
+    assert review['decision'] == 'auto_accept'
+    assert review.get('slug_gate') == 'override'   # resolved as a frozen fact
+    assert entry is not None
+
+
+def test_gate_rejects_colliding_slug(monkeypatch):
+    # The chosen item passes the scorer, but the slug collides with an existing
+    # spine slug under normalization (sony-a7iv ~ sony-a7-iv class). HARD reject:
+    # backfill_card raises, nothing is seeded.
+    cands = [{'item_id': 'v1|1|0', 'title': 'Sony Alpha A7 IV ILCE-7M4 Body',
+              'epid': '', 'brand': ''}]
+    _patch(monkeypatch, cands, _resolved())
+    monkeypatch.setattr(bf.slug_normalizer, 'resolve_slug',
+                        lambda v, m, override=None, **k:
+                        _resolution('sony-a7-iv', 'override', False, collision='sony-a7iv'))
+    with __import__('pytest').raises(bf.SlugRejected) as ei:
+        bf.backfill_card('sony-a7-iv', SONY_CARD)
+    assert 'sony-a7iv' in str(ei.value)
+
+
+def test_gate_rejects_unreviewed_generated_slug(monkeypatch):
+    # NOTE: from backfill_card this branch is NOT reachable — backfill always
+    # passes the card's authored filename slug as the override, and an override
+    # always resolves needs_review=False. So we test _gate_slug DIRECTLY with no
+    # authored slug, the way the FUTURE route writer (no filename to lean on)
+    # will call it: a generated proposal with no override → HARD reject.
+    monkeypatch.setattr(bf.slug_normalizer, 'resolve_slug',
+                        lambda v, m, override=None, **k:
+                        _resolution('tamron-28-75mm-f-2-8-g2', 'generated', True))
+    with __import__('pytest').raises(bf.SlugRejected) as ei:
+        # slug='' so chosen_override is falsy → resolve_slug sees override=None,
+        # exactly the no-authored-slug case the route will hit.
+        bf._gate_slug('', 'Tamron', '28-75mm f/2.8 G2')
+    assert 'UNREVIEWED' in str(ei.value)
+
+
+def test_gate_override_confirms_new_slug(monkeypatch):
+    # The operator re-runs with --override: the same slug, now confirmed and
+    # collision-free, resolves as an override fact → gate passes, card seeds.
+    cands = [{'item_id': 'v1|1|0', 'title': 'Tamron 28-75 G2', 'epid': '', 'brand': ''}]
+    _patch(monkeypatch, cands, _resolved())
+    monkeypatch.setattr(bf.slug_normalizer, 'resolve_slug',
+                        lambda v, m, override=None, **k:
+                        _resolution(override or 'x', 'override', False, collision=None))
+    monkeypatch.setattr(bf, '_score', lambda idn, title: 0.9)  # force clear winner
+    entry, review = bf.backfill_card(
+        'tamron-28-75-g2',
+        {'identity': {'display_name': 'Tamron 28-75 G2',
+                      'brand': 'Tamron', 'model': '28-75mm f/2.8 G2'},
+         'category': 'lens'},
+        override='tamron-28-75-g2')
+    assert entry is not None
+    assert review.get('slug_gate') == 'override'
