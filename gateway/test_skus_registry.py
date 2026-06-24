@@ -78,7 +78,7 @@ def test_upsert_two_skus_coexist(tmp_path):
     reg.upsert('sony-a7iv', _entry(), path=p)
     lens = reg.build_entry(
         slug='sigma-35-art-dg-dn-ii', vendor='Sigma', model='35mm f/1.4 DG DN Art II',
-        category='lens', contamination_key='sigma-35-dg-dn-art-ii',
+        category='lens', contamination_key='sigma-35-art-dg-dn-ii',
         resolved=_resolved(epid='22222', legacy='888', mpn='340969', title='Sigma 35'),
     )
     reg.upsert('sigma-35-art-dg-dn-ii', lens, path=p)

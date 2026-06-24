@@ -341,6 +341,45 @@ def ebay_search():
         return jsonify({'error': str(e), 'items': []}), 502
 
 
+@app.route('/ebay/resolve', methods=['GET'])
+def ebay_resolve():
+    """Lossless identity capture for ONE tapped eBay item (demand-factory Stage 1).
+
+    Sibling to /ebay/search: search returns thin display rows for many items;
+    resolve re-fetches the full canonical identity for one item id — the seed
+    for a skus.json registry entry. Guarded by the same HAS_EBAY_API /
+    is_configured() gate as /ebay/search and proxied via the existing
+    Apache /ebay → :5001 ProxyPass (no Apache change needed).
+
+    Query params:
+      item_id  (required) RESTful eBay item id (v1|<legacyId>|<variationId>).
+      customid (optional) EPN SubID for card-level affiliate attribution.
+      raw      (optional) raw=1 includes the full getItem payload (_raw).
+               Omitted by default — the full payload is heavy and only the
+               registry-writer needs it; the browser path stays lean.
+    """
+    if not HAS_EBAY_API or not ebay_api.is_configured():
+        return jsonify({'error': 'eBay API not configured'}), 503
+    item_id = request.args.get('item_id', '').strip()
+    if not item_id:
+        return jsonify({'error': 'missing item_id'}), 400
+    customid = request.args.get('customid', '').strip() or None
+    include_raw = request.args.get('raw', '') == '1'
+    try:
+        result = ebay_api.resolve(item_id, customid=customid)
+        payload = {
+            'identity': result['identity'],
+            'affiliate_url': result['affiliate_url'],
+        }
+        if include_raw:
+            payload['_raw'] = result['_raw']
+        return jsonify(payload), 200
+    except ebay_api.EbayAPIError as e:
+        # Error type only, never the item_id (privacy) and never the secret
+        print(f"[ebay] resolve error: {e}")
+        return jsonify({'error': str(e)}), 502
+
+
 @app.route('/ping', methods=['POST'])
 def analytics_ping():
     """Anonymous analytics — category only, never the query."""

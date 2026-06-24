@@ -86,7 +86,7 @@ DOMINANCE_MARGIN = 0.15
 # not a generated transform. Seed cadre only; extend as cards are added.
 CONTAMINATION_KEY = {
     'sony-a7iv': 'sony-a7-iv',
-    'sigma-35-art-dg-dn-ii': 'sigma-35-dg-dn-art-ii',
+    'sigma-35-art-dg-dn-ii': 'sigma-35-art-dg-dn-ii',
     'peak-design-travel-tripod': 'peak-design-travel-tripod',
     'peak-design-pro-tripod': 'peak-design-pro-tripod',
 }
