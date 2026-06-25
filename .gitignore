@@ -2,3 +2,11 @@ __pycache__/
 *.pyc
 venv/
 .env
+
+# Runtime-written demand-factory stores — captured on the production box by live
+# taps, NOT authored in the repo. Tracking them would let a repo->box auto-pull
+# overwrite accumulated live demand/queue state on every commit. The spine
+# (skus.json, cards/, registries) IS tracked — it's authored state flowing
+# down; these flow up (via a future reader/dashboard), never through git.
+data/demand_log.jsonl
+data/review_queue.json

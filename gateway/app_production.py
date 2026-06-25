@@ -114,6 +114,21 @@ try:
 except ImportError:
     pass
 
+# --- Demand factory (capture path) ---
+# demand_log (upstream want-signal) + review_queue (slug-ambiguous subset) +
+# slug_normalizer (the gate). Guarded together so a gateway missing any of them
+# degrades to read-only resolve rather than 500-ing the whole service. The
+# capture path is opt-in (capture=1); without these modules it is simply
+# unavailable, never a hard error on the existing read-only contract.
+HAS_CAPTURE = False
+try:
+    import demand_log
+    import review_queue
+    import slug_normalizer
+    HAS_CAPTURE = True
+except ImportError:
+    pass
+
 
 def get_headless():
     """Get or create headless browser instance. Reinitializes if the driver is stale."""
@@ -357,6 +372,34 @@ def ebay_resolve():
       raw      (optional) raw=1 includes the full getItem payload (_raw).
                Omitted by default — the full payload is heavy and only the
                registry-writer needs it; the browser path stays lean.
+
+    Capture mode (Phase 3 — opt-in via capture=1):
+      When capture=1, this read-only route becomes the live demand WRITER.
+      Two writes, in strict order, both OUTSIDE the skus.json spine:
+
+        1. demand_log.log_unmet(category, identity)  — UNCONDITIONAL.
+           Fires on every capture tap, the moment the want exists. This is the
+           durable want-signal; it does not depend on the slug decision and is
+           logged even if everything downstream is clean. category + ts +
+           resolved identity only — never the raw query (privacy line).
+
+        2. review_queue.enqueue(...)  — ONLY when the slug gate trips.
+           slug_normalizer.resolve_slug(vendor, model) runs the SAME gate
+           backfill uses. If the resolution is ambiguous (needs_review or a
+           collision), the resolved identity is enqueued for async human
+           adjudication. A clean resolution enqueues NOTHING — the tap is
+           recorded as demand but needs no review.
+
+      Capture NEVER writes skus.json. Promotion into the spine stays the
+      human-authorized review_queue.promote() path; this route only captures.
+
+      Capture requires vendor, model, category (the controlled-vocab human
+      identity resolve() can't infer from a market title). Missing any → 400.
+      The response gains a `capture` block reporting what was written:
+        {'demand_logged': True,
+         'queued': <queue_id or None>,
+         'slug': <proposed/frozen slug>,
+         'needs_review': <bool>}
     """
     if not HAS_EBAY_API or not ebay_api.is_configured():
         return jsonify({'error': 'eBay API not configured'}), 503
@@ -365,6 +408,23 @@ def ebay_resolve():
         return jsonify({'error': 'missing item_id'}), 400
     customid = request.args.get('customid', '').strip() or None
     include_raw = request.args.get('raw', '') == '1'
+    capture = request.args.get('capture', '') == '1'
+
+    # Capture-mode preflight: validate the human-identity params BEFORE the
+    # (billable, network) resolve() call, so a malformed capture request fails
+    # fast without burning an eBay round-trip. Read-only resolve is unaffected.
+    if capture:
+        if not HAS_CAPTURE:
+            return jsonify({'error': 'capture not available'}), 503
+        vendor = request.args.get('vendor', '').strip()
+        model = request.args.get('model', '').strip()
+        category = request.args.get('category', '').strip()
+        missing = [n for n, v in
+                   (('vendor', vendor), ('model', model), ('category', category))
+                   if not v]
+        if missing:
+            return jsonify({'error': f'capture requires {", ".join(missing)}'}), 400
+
     try:
         result = ebay_api.resolve(item_id, customid=customid)
         payload = {
@@ -373,6 +433,27 @@ def ebay_resolve():
         }
         if include_raw:
             payload['_raw'] = result['_raw']
+
+        if capture:
+            # (1) Unconditional want-signal, upstream of any slug decision.
+            demand_log.log_unmet(category, identity=result['identity'])
+
+            # (2) Slug gate — same function backfill/promote use. Enqueue ONLY
+            #     the ambiguous subset; a clean resolution needs no review.
+            res = slug_normalizer.resolve_slug(vendor, model)
+            queued_id = None
+            if res.needs_review or res.collision:
+                record = review_queue.enqueue(
+                    res, result, vendor, model, category)
+                queued_id = record['queue_id']
+
+            payload['capture'] = {
+                'demand_logged': True,
+                'queued': queued_id,
+                'slug': res.slug,
+                'needs_review': bool(res.needs_review or res.collision),
+            }
+
         return jsonify(payload), 200
     except ebay_api.EbayAPIError as e:
         # Error type only, never the item_id (privacy) and never the secret
