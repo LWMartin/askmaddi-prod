@@ -29,6 +29,14 @@ prod-only checkout with no phantom-ops beside it), the affected tests SKIP with 
 clear reason rather than false-failing — but wherever both repos are present
 (CI, local, sandbox) they run and bite.
 """
+# PEP 604 union syntax (`Path | None`, below) is evaluated lazily under this
+# import, so it works on the VPS's Python 3.9 (AlmaLinux 9 system python). Without
+# it, 3.9 raises TypeError at import and crashes pytest COLLECTION (exit 2) — which
+# silently failed the nightly writeback gate (bot_push) for days before it was
+# caught 2026-06-25. The sandbox runs 3.11+ so it never saw this; 3.9 is the
+# deployment target, so annotation syntax must stay 3.9-legal.
+from __future__ import annotations
+
 import importlib.util
 import json
 import os

@@ -22,6 +22,11 @@ with no phantom-ops beside it, these tests SKIP with a clear reason rather than
 false-failing — but wherever both repos are present (CI, local, sandbox) they
 run and bite. A drift in either frozen primitive turns this red.
 """
+# PEP 604 union syntax (`Path | None` below) deferred to a string under this
+# import, so it parses on the VPS's Python 3.9 (same fix + rationale as
+# test_contamination_bridge.py — the 3.9-vs-3.12 gate blind spot caught 2026-06-25).
+from __future__ import annotations
+
 import importlib.util
 import os
 import sys
