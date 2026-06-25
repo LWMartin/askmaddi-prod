@@ -2,6 +2,13 @@ __pycache__/
 *.pyc
 venv/
 .env
+# .env backups (e.g. gateway/.env.bak0 from auth refactors) — these are not
+# secrets-in-repo risk (they're gitignored), but an UNtracked backup reads as a
+# dirty working tree, which aborts the nightly used-price cron's clean-tree
+# preflight. Ignoring the pattern keeps the tree clean so the cron runs.
+# (Root cause of the 2026-06-25 nightly ABORT.)
+.env.bak*
+*.env.bak*
 
 # Runtime-written demand-factory stores — captured on the production box by live
 # taps, NOT authored in the repo. Tracking them would let a repo->box auto-pull
