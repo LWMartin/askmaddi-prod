@@ -129,6 +129,16 @@ try:
 except ImportError:
     pass
 
+# Admin review surface (Phase 4) — the human end of the write-back loop. Depends
+# on review_queue (the same import HAS_CAPTURE guards), so it registers only when
+# capture is available. Fails closed on its own if ADMIN_TOKEN is unset.
+if HAS_CAPTURE:
+    try:
+        import admin_surface
+        admin_surface.register_admin(app)
+    except ImportError:
+        pass
+
 
 def get_headless():
     """Get or create headless browser instance. Reinitializes if the driver is stale."""
