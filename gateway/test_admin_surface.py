@@ -123,6 +123,13 @@ def _enqueue_one(collision=False):
     return review_queue.enqueue(res, _resolved(), 'Sony', 'A7 IV', 'body')
 
 
+def _auth(user='admin', password=TOKEN):
+    """HTTP Basic Authorization header for the test client."""
+    import base64
+    raw = base64.b64encode(f'{user}:{password}'.encode()).decode()
+    return {'Authorization': f'Basic {raw}'}
+
+
 # ── auth: the surface is a spine writer, so it must fail closed ─────────────
 
 def test_no_token_configured_fails_closed(isolated_store, monkeypatch):
@@ -130,37 +137,45 @@ def test_no_token_configured_fails_closed(isolated_store, monkeypatch):
     app = Flask(__name__)
     admin_surface.register_admin(app)
     c = app.test_client()
-    assert c.get('/admin?token=anything').status_code == 503
-    assert c.post('/admin/promote', data={'token': 'x'}).status_code == 503
-    assert c.post('/admin/reject', data={'token': 'x'}).status_code == 503
+    # Even WITH valid-looking credentials, an unconfigured surface serves 503.
+    assert c.get('/admin', headers=_auth()).status_code == 503
+    assert c.post('/admin/promote', headers=_auth()).status_code == 503
+    assert c.post('/admin/reject', headers=_auth()).status_code == 503
 
 
-def test_missing_or_wrong_token_unauthorized(client):
-    assert client.get('/admin').status_code == 401
-    assert client.get('/admin?token=wrong').status_code == 401
-    assert client.post('/admin/promote',
-                       data={'token': 'wrong', 'queue_id': 'q',
-                             'override_slug': 's'}).status_code == 401
-    assert client.post('/admin/reject',
-                       data={'token': 'wrong', 'queue_id': 'q',
-                             'reason': 'duplicate'}).status_code == 401
+def test_missing_credentials_challenges(client):
+    # No Authorization header → 401 with a Basic challenge so the browser prompts.
+    r = client.get('/admin')
+    assert r.status_code == 401
+    assert r.headers.get('WWW-Authenticate', '').startswith('Basic')
 
 
-def test_correct_token_authorized(client):
-    assert client.get(f'/admin?token={TOKEN}').status_code == 200
+def test_wrong_credentials_unauthorized(client):
+    assert client.get('/admin', headers=_auth(password='wrong')).status_code == 401
+    assert client.get('/admin', headers=_auth(user='root')).status_code == 401
+    assert client.post('/admin/promote', headers=_auth(password='wrong'),
+                       data={'queue_id': 'q', 'override_slug': 's'}
+                       ).status_code == 401
+    assert client.post('/admin/reject', headers=_auth(password='wrong'),
+                       data={'queue_id': 'q', 'reason': 'duplicate'}
+                       ).status_code == 401
+
+
+def test_correct_credentials_authorized(client):
+    assert client.get('/admin', headers=_auth()).status_code == 200
 
 
 # ── render: the card preview is part of the review ─────────────────────────
 
 def test_empty_queue_renders(client):
-    body = client.get(f'/admin?token={TOKEN}').get_data(as_text=True)
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
     assert 'Queue is empty' in body
     assert '0 pending' in body
 
 
 def test_render_shows_frozen_card_and_decision_metadata(client):
     _enqueue_one(collision=True)
-    body = client.get(f'/admin?token={TOKEN}').get_data(as_text=True)
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
     # frozen card preview fields
     assert 'Sony Alpha A7 IV Body' in body
     assert 'ILCE-7M4' in body            # mpn
@@ -180,7 +195,7 @@ def test_render_escapes_record_fields(client):
         _ambiguous_generated(),
         _resolved(title='<script>alert(1)</script>'),
         'Sony', 'A7 IV', 'body')
-    body = client.get(f'/admin?token={TOKEN}').get_data(as_text=True)
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
     assert '<script>alert(1)</script>' not in body
     assert '&lt;script&gt;' in body
 
@@ -190,8 +205,8 @@ def test_render_escapes_record_fields(client):
 def test_promote_writes_spine_and_clears_pending(client, isolated_store):
     rec = _enqueue_one()
     qid = rec['queue_id']
-    resp = client.post('/admin/promote',
-                       data={'token': TOKEN, 'queue_id': qid,
+    resp = client.post('/admin/promote', headers=_auth(),
+                       data={'queue_id': qid,
                              'override_slug': 'sony-a7-iv-body'})
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)
@@ -210,8 +225,8 @@ def test_promote_colliding_override_is_banner_not_500(client, isolated_store):
     rec = review_queue.enqueue(
         _ambiguous_generated(), _resolved(epid='EP999'),
         'Sony', 'A7-IV', 'body')
-    resp = client.post('/admin/promote',
-                       data={'token': TOKEN, 'queue_id': rec['queue_id'],
+    resp = client.post('/admin/promote', headers=_auth(),
+                       data={'queue_id': rec['queue_id'],
                              'override_slug': 'sony-a7-iv'})
     assert resp.status_code == 200          # NOT a 500
     body = resp.get_data(as_text=True)
@@ -223,8 +238,8 @@ def test_promote_colliding_override_is_banner_not_500(client, isolated_store):
 
 def test_promote_missing_fields_banner(client):
     _enqueue_one()
-    resp = client.post('/admin/promote',
-                       data={'token': TOKEN, 'queue_id': '', 'override_slug': ''})
+    resp = client.post('/admin/promote', headers=_auth(),
+                       data={'queue_id': '', 'override_slug': ''})
     assert resp.status_code == 200
     assert 'required' in resp.get_data(as_text=True)
 
@@ -233,8 +248,8 @@ def test_promote_missing_fields_banner(client):
 
 def test_reject_marks_record_and_writes_no_spine(client, isolated_store):
     rec = _enqueue_one()
-    resp = client.post('/admin/reject',
-                       data={'token': TOKEN, 'queue_id': rec['queue_id'],
+    resp = client.post('/admin/reject', headers=_auth(),
+                       data={'queue_id': rec['queue_id'],
                              'reason': 'not_the_product'})
     assert resp.status_code == 200
     assert 'Rejected' in resp.get_data(as_text=True)
@@ -245,8 +260,8 @@ def test_reject_marks_record_and_writes_no_spine(client, isolated_store):
 
 def test_reject_bad_reason_banner(client):
     rec = _enqueue_one()
-    resp = client.post('/admin/reject',
-                       data={'token': TOKEN, 'queue_id': rec['queue_id'],
+    resp = client.post('/admin/reject', headers=_auth(),
+                       data={'queue_id': rec['queue_id'],
                              'reason': 'because-i-said-so'})
     assert resp.status_code == 200
     body = resp.get_data(as_text=True)

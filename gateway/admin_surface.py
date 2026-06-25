@@ -27,12 +27,14 @@ Design contract
 Auth
 ----
 Single ADMIN_TOKEN env secret (loaded via app_production's .env loader or
-systemd EnvironmentFile). If unset, the surface refuses to serve at all
-(503) — fail closed, never an open spine-writer. The token is carried as
-?token= on the GET and a hidden field on the POST, compared with
-hmac.compare_digest. This is a sole-operator tool behind the Apache proxy,
-not a multi-user auth system; the bar is "no unauthenticated spine write,"
-met by a required constant-time-checked shared secret.
+systemd EnvironmentFile), used as the HTTP Basic-auth PASSWORD under a fixed
+ADMIN_USER. If unset, the surface refuses to serve at all (503) — fail closed,
+never an open spine-writer. The browser holds the credential and re-sends the
+Authorization header on every request, so the secret never enters the URL,
+browser history, or a bookmark. Compared with hmac.compare_digest. This is a
+sole-operator tool behind the Apache proxy, not a multi-user auth system; the
+bar is "no unauthenticated spine write," met by a required, constant-time-checked
+shared secret the browser carries out of band.
 
 Registration
 ------------
@@ -51,28 +53,47 @@ import review_queue
 
 
 # --- Auth ---------------------------------------------------------------
+#
+# HTTP Basic auth. The ADMIN_TOKEN env secret is the PASSWORD; the username is
+# fixed to ADMIN_USER ('admin'). Chosen over a ?token= query param because the
+# secret then never enters the URL bar, browser history, or a bookmark — the
+# browser holds it in its session credential store and re-sends the header on
+# every request. Structural, not a "remember not to bookmark this" promise.
+# Same fail-closed posture: no ADMIN_TOKEN configured => the surface refuses to
+# serve at all (503), never an open spine writer.
+
+ADMIN_USER = 'admin'
+
 
 def _admin_token():
-    """The configured admin secret, or '' if unset (=> surface fails closed)."""
+    """The configured admin secret (the Basic-auth password), or '' if unset
+    (=> surface fails closed)."""
     return os.environ.get('ADMIN_TOKEN', '')
 
 
-def _supplied_token():
-    """Token from query (GET) or form (POST). Form takes precedence on POST."""
-    return (request.form.get('token')
-            or request.args.get('token', '')
-            or '')
-
-
 def _authed():
-    """Constant-time check. False if no token is configured (fail closed)."""
+    """Constant-time check of the Basic-auth credentials against ADMIN_USER /
+    ADMIN_TOKEN. False if no secret is configured (fail closed) or no/!match
+    credentials supplied."""
     configured = _admin_token()
     if not configured:
         return False
-    supplied = _supplied_token()
-    if not supplied:
+    auth = request.authorization
+    if not auth or auth.type != 'basic':
         return False
-    return hmac.compare_digest(supplied, configured)
+    user_ok = hmac.compare_digest(auth.username or '', ADMIN_USER)
+    pass_ok = hmac.compare_digest(auth.password or '', configured)
+    # Evaluate both halves regardless of the first, so timing doesn't leak which
+    # field was wrong.
+    return user_ok and pass_ok
+
+
+def _challenge():
+    """401 with a WWW-Authenticate header so the browser shows its native
+    credential prompt."""
+    return Response(
+        'unauthorized', status=401,
+        headers={'WWW-Authenticate': 'Basic realm="AskMaddi Admin"'})
 
 
 # --- Render helpers -----------------------------------------------------
@@ -122,7 +143,6 @@ def _card_html(record):
     epid = ident.get('epid', '')
     badge_label, badge_detail = _reason_badge(record)
     proposed = record.get('proposed_slug', '')
-    token = _supplied_token()
 
     brand_mpn = ' · '.join(p for p in (brand, mpn) if p)
     collision_block = ''
@@ -162,7 +182,6 @@ def _card_html(record):
         <div class="badge {badge_label.replace(' ', '-')}">{_esc(badge_label)}</div>
         {collision_block}
         <form class="promote" method="post" action="/admin/promote">
-          <input type="hidden" name="token" value="{_esc(token)}">
           <input type="hidden" name="queue_id" value="{_esc(qid)}">
           <label>authorize slug
             <input type="text" name="override_slug" value="{_esc(proposed)}"
@@ -171,7 +190,6 @@ def _card_html(record):
           <button type="submit" class="go">Promote to spine</button>
         </form>
         <form class="reject" method="post" action="/admin/reject">
-          <input type="hidden" name="token" value="{_esc(token)}">
           <input type="hidden" name="queue_id" value="{_esc(qid)}">
           <label>reject reason
             <select name="reason">{reason_opts}</select>
@@ -262,20 +280,28 @@ def register_admin(app):
     """Attach the admin review surface to a Flask app. Called by
     app_production under the HAS_CAPTURE guard."""
 
-    @app.route('/admin', methods=['GET'])
-    def admin_index():
+    def _gate():
+        """Shared auth preamble. Returns a Response to short-circuit (503 if the
+        surface isn't configured, 401 Basic challenge if unauthenticated), or
+        None when the request is cleared to proceed."""
         if not _admin_token():
             return Response('admin surface not configured', status=503)
         if not _authed():
-            return Response('unauthorized', status=401)
+            return _challenge()
+        return None
+
+    @app.route('/admin', methods=['GET'])
+    def admin_index():
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
         return _render_page()
 
     @app.route('/admin/promote', methods=['POST'])
     def admin_promote():
-        if not _admin_token():
-            return Response('admin surface not configured', status=503)
-        if not _authed():
-            return Response('unauthorized', status=401)
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
         qid = request.form.get('queue_id', '').strip()
         override_slug = request.form.get('override_slug', '').strip()
         if not qid or not override_slug:
@@ -293,10 +319,9 @@ def register_admin(app):
 
     @app.route('/admin/reject', methods=['POST'])
     def admin_reject():
-        if not _admin_token():
-            return Response('admin surface not configured', status=503)
-        if not _authed():
-            return Response('unauthorized', status=401)
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
         qid = request.form.get('queue_id', '').strip()
         reason = request.form.get('reason', '').strip()
         if not qid:
