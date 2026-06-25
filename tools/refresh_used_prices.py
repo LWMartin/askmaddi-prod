@@ -36,6 +36,8 @@ from datetime import datetime, timezone
 from pathlib import Path
 from statistics import median
 
+import price_sidecar
+
 MIN_SAMPLE = 3          # minimum surviving listings before bands are asserted
 JUNK_FLOOR = 0.4        # drop price < 0.4 x median (accessories, parts slipped through)
 KIT_CEILING = 2.5       # drop price > 2.5 x median (multi-item bundles)
@@ -147,7 +149,7 @@ def fetch_gateway(gateway, query):
     return data.get("items", []) or []
 
 
-def refresh_card(path, items, dry_run=False):
+def refresh_card(path, items, dry_run=False, sidecar_path=price_sidecar.SIDECAR_PATH):
     card = json.loads(path.read_text(encoding="utf-8"))
     pricing = card.setdefault("pricing", {})
     query = pricing.get("used_query") or card["identity"]["display_name"]
@@ -157,17 +159,23 @@ def refresh_card(path, items, dry_run=False):
         print(f"  ~ {path.stem}: gated ({n} survivors < {MIN_SAMPLE}) — used_market untouched")
         return False
 
-    used = pricing.setdefault("used_market", {})
-    used.update({
+    # Prices are CAPTURED state -> the gitignored sidecar, NOT the tracked card
+    # JSON. Writing into the card would dirty the spine on every refresh and risk
+    # a git-pull conflict on the box (the 2026-06-25 dirty-tree finding). The
+    # card keeps used_query (authored); the sidecar holds what the search found.
+    used_market = {
         "source": "ebay",
         "bands": bands,
         "sample_size": n,
         "price_updated_at": datetime.now(timezone.utc).isoformat(),
-    })
+    }
     lo = min(bands.values())
     print(f"  + {path.stem}: from ${int(lo)} used | {n} listings | bands={list(bands)}")
     if not dry_run:
-        path.write_text(json.dumps(card, indent=2, ensure_ascii=False), encoding="utf-8")
+        # card_id == filename stem by invariant; fall back to stem so a fixture
+        # or hand-made card without the field still keys correctly.
+        card_id = card.get("card_id") or path.stem
+        price_sidecar.set_used_market(card_id, used_market, path=sidecar_path)
     return True
 
 

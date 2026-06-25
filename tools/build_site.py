@@ -30,6 +30,8 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
+import price_sidecar
+
 
 # ─── Affiliate tags (match the live frontend / cards-manifest) ──────────────
 AMAZON_TAG = "askmaddi-20"
@@ -762,6 +764,13 @@ def load_cards(args):
     if args.cards_dir:
         for p in sorted(Path(args.cards_dir).glob("*.json")):
             cards.append(json.loads(p.read_text(encoding="utf-8")))
+    # Overlay captured used-market prices from the gitignored sidecar onto each
+    # card's pricing.used_market BEFORE any renderer reads it. The card JSON is
+    # static/tracked (authored state); prices are box-refreshed (captured state)
+    # and live in data/used_prices.json. A card with no sidecar entry keeps its
+    # honest "See used" fallback — identical to a never-refreshed card.
+    for card in cards:
+        price_sidecar.overlay(card)
     return cards
 
 

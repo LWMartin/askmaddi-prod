@@ -10,3 +10,8 @@ venv/
 # down; these flow up (via a future reader/dashboard), never through git.
 data/demand_log.jsonl
 data/review_queue.json
+# Captured used-market prices — refreshed on the box, overlaid at build time.
+# Same captured-state rationale as the two above: tracking it would let a
+# repo->box auto-pull clobber the box's fresh prices. The card spine stays
+# tracked; prices live here, gitignored.
+data/used_prices.json

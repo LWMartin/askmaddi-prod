@@ -7,6 +7,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 
+import price_sidecar
 from refresh_used_prices import (
     compute_bands, condition_slug, listing_matches, significant_tokens,
     refresh_card, MIN_SAMPLE,
@@ -96,30 +97,83 @@ def test_non_usd_excluded():
 
 
 # ── card write + sold_last_90d honesty ───────────────────────────────────────
-def test_refresh_card_writes_bands_and_never_fakes_sold_counts(tmp_path):
+def test_refresh_card_writes_bands_to_sidecar_not_card(tmp_path):
+    # Prices are captured state -> sidecar, NOT the tracked card JSON. The card
+    # file must stay byte-clean (only used_query, authored); the bands land in
+    # the gitignored sidecar keyed by card_id.
     card = {
+        "card_id": "sony-a7iv",
         "identity": {"display_name": "Sony A7 IV"},
         "pricing": {"amazon_asin": "B09JZT6YK5", "used_query": "Sony A7 IV body"},
     }
     p = tmp_path / "sony-a7iv.json"
     p.write_text(json.dumps(card))
+    sidecar = tmp_path / "used_prices.json"
     items = [_item("Sony A7 IV camera", v, "Pre-owned") for v in (1500, 1450, 1600)]
-    assert refresh_card(p, items)
-    out = json.loads(p.read_text())
-    um = out["pricing"]["used_market"]
+
+    assert refresh_card(p, items, sidecar_path=sidecar)
+
+    # Card on disk is UNTOUCHED — no used_market written into the spine.
+    on_disk = json.loads(p.read_text())
+    assert "used_market" not in on_disk["pricing"]
+    assert on_disk["pricing"]["amazon_asin"] == "B09JZT6YK5"  # untouched
+
+    # Bands landed in the sidecar, keyed by card_id.
+    um = price_sidecar.get_used_market("sony-a7iv", path=sidecar)
+    assert um is not None
     assert um["bands"]["pre_owned"] == 1450
     assert um["sample_size"] == 3 and um["source"] == "ebay"
     assert "price_updated_at" in um
     assert "sold_last_90d" not in um  # Browse API = active asks; never fabricate sold comps
-    assert out["pricing"]["amazon_asin"] == "B09JZT6YK5"  # untouched
 
 
-def test_refresh_card_gated_leaves_card_unmodified(tmp_path):
-    card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
+def test_refresh_card_gated_writes_nothing_to_sidecar(tmp_path):
+    # Too few survivors -> gated -> sidecar gets no entry, so the card keeps its
+    # honest fallback. Same semantics as the old "used_market untouched".
+    card = {"card_id": "c", "identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
     p = tmp_path / "c.json"
     p.write_text(json.dumps(card))
-    assert not refresh_card(p, [_item("Sony A7 IV camera", 1500)])
+    sidecar = tmp_path / "used_prices.json"
+    assert not refresh_card(p, [_item("Sony A7 IV camera", 1500)], sidecar_path=sidecar)
+    assert price_sidecar.get_used_market("c", path=sidecar) is None
+    # And the card is untouched on disk.
     assert "used_market" not in json.loads(p.read_text())["pricing"]
+
+
+def test_overlay_populates_card_used_market_from_sidecar(tmp_path):
+    # The build-side half of the contract: a static card with no prices gets its
+    # used_market populated from the sidecar at overlay time, so every existing
+    # renderer (used_cta, JSON-LD, bands table) reads it unchanged.
+    sidecar = tmp_path / "used_prices.json"
+    price_sidecar.set_used_market(
+        "sony-a7iv",
+        {"source": "ebay", "bands": {"pre_owned": 1450}, "sample_size": 3,
+         "price_updated_at": "2026-06-25T00:00:00Z"},
+        path=sidecar)
+    card = {"card_id": "sony-a7iv", "identity": {"display_name": "Sony A7 IV"},
+            "pricing": {"used_query": "Sony A7 IV body"}}
+
+    price_sidecar.overlay(card, path=sidecar)
+
+    assert card["pricing"]["used_market"]["bands"]["pre_owned"] == 1450
+    assert card["pricing"]["used_query"] == "Sony A7 IV body"  # authored field survives
+
+    from build_site import used_cta
+    label, _url = used_cta(card)
+    assert label == "from $1450 used"
+
+
+def test_overlay_no_sidecar_entry_leaves_card_fallback(tmp_path):
+    # A card the box has never priced: overlay is a no-op, card keeps its honest
+    # "See used" fallback. No sidecar entry == never-refreshed.
+    sidecar = tmp_path / "used_prices.json"
+    card = {"card_id": "never-priced", "identity": {"display_name": "Mystery Cam"},
+            "pricing": {"used_query": "Mystery Cam"}}
+    price_sidecar.overlay(card, path=sidecar)
+    assert "used_market" not in card["pricing"]
+    from build_site import used_cta
+    label, _url = used_cta(card)
+    assert label == "See used"
 
 
 # ── end-to-end: bands -> used_cta label ──────────────────────────────────────
