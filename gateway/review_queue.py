@@ -54,6 +54,19 @@ import slug_normalizer
 REVIEW_QUEUE_PATH = Path(__file__).parent.parent / 'data' / 'review_queue.json'
 SCHEMA_VERSION = '0.1.0'
 
+# Structured ENQUEUE reasons — why a resolved product landed in the queue instead
+# of flowing straight to the spine. The first two are slug-gate verdicts (the live
+# user-tap path: slug_normalizer.resolve_slug tripped). The third is a RESOLVE-side
+# verdict from the demand factory: the slug resolved cleanly, but the eBay-candidate
+# disambiguation (which item_id IS this product) was below the confidence floor, so
+# a human must pick the right listing from the competing candidates. Same queue, same
+# /admin cockpit, same promote/reject gate — a different REASON the human is here.
+#
+#   collision              slug normalizes the same as an existing spine slug
+#   needs_review           slug is a generated proposal (ambiguous normalization)
+#   low_resolve_confidence factory's Gemma pick was uncertain — see `candidates`
+ENQUEUE_REASONS = ('collision', 'needs_review', 'low_resolve_confidence')
+
 # Structured reject reasons — a reject is a pipeline-bug signal, so the reason is
 # a controlled vocab the upstream-fix workflow can key on, not freetext.
 REJECT_REASONS = (
@@ -138,7 +151,8 @@ def _now():
 
 
 def enqueue(resolution, resolved, vendor, model, category,
-            contamination_key=None, path=REVIEW_QUEUE_PATH):
+            contamination_key=None, path=REVIEW_QUEUE_PATH,
+            *, reason_override=None, candidates=None):
     """Capture one slug-ambiguous resolved product for async review.
 
     Called by the live route exactly where backfill's _gate_slug would raise
@@ -159,6 +173,19 @@ def enqueue(resolution, resolved, vendor, model, category,
     contamination_key : str | None
         Best-guess editorial bridge key; correctable at promote time. Defaults to
         the proposed slug when not supplied (a starting point, not a commitment).
+    reason_override : str | None
+        Force the record's `reason` (must be in ENQUEUE_REASONS). The live user-tap
+        path leaves this None and the reason is derived from the slug gate
+        (collision vs needs_review). The demand FACTORY passes
+        'low_resolve_confidence' — its slug resolved cleanly, but the eBay-candidate
+        pick was uncertain, so the human is here to choose the listing, not the slug.
+    candidates : list[dict] | None
+        The ranked competing eBay candidates the factory's disambiguator weighed,
+        attached ONLY for a low_resolve_confidence enqueue. Each is the human's
+        "did the machine overlook the right product?" surface (the resolve-time
+        analog of the extract-time near-miss sidecar). Shape per candidate:
+        {item_id, title, price, currency, condition, score, chosen}. Frozen into
+        the record so /admin renders them with no eBay re-fetch.
 
     Idempotent: same product (vendor|model|epid) twice -> the existing pending
     record is returned untouched, no duplicate. A record already promoted/rejected
@@ -179,7 +206,15 @@ def enqueue(resolution, resolved, vendor, model, category,
         # don't reopen. Return what's there.
         return existing
 
-    reason = 'collision' if resolution.collision else 'needs_review'
+    if reason_override is not None:
+        if reason_override not in ENQUEUE_REASONS:
+            raise ValueError(
+                f"reason_override {reason_override!r} not in {ENQUEUE_REASONS} — "
+                f"the enqueue reason is a controlled vocab, not freetext."
+            )
+        reason = reason_override
+    else:
+        reason = 'collision' if resolution.collision else 'needs_review'
     record = {
         'queue_id': qid,
         'reason': reason,
@@ -196,6 +231,10 @@ def enqueue(resolution, resolved, vendor, model, category,
         'status': 'pending',
         'reject_reason': None,
     }
+    if candidates:
+        # Frozen ranked candidates — the "was a valid product overlooked?" surface.
+        # Only present for low_resolve_confidence; absent for slug-gate enqueues.
+        record['candidates'] = candidates
     q[qid] = record
     queue['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(queue, path)
@@ -293,6 +332,93 @@ def promote(queue_id, override_slug, *, skus_path=skus_registry.SKUS_PATH,
     queue['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(queue, path)
     return record, status
+
+
+def reresolve(queue_id, chosen_item_id, *, ebay, path=REVIEW_QUEUE_PATH):
+    """Re-freeze a low_resolve_confidence record onto a DIFFERENT candidate.
+
+    The correction loop for "the machine picked the wrong eBay listing." When the
+    demand factory's disambiguator was uncertain (reason=low_resolve_confidence)
+    and the human, looking at the visible `candidates`, sees a different listing is
+    the real product, this swaps the record's frozen identity to that listing —
+    then the human promotes through the SAME slug-gated promote() path as always.
+
+    The loop is sanctioned; the abuse is fenced out by construction:
+
+      1. SCOPED — only a low_resolve_confidence record can be re-resolved. A
+         collision/needs_review record is a SLUG decision, not a listing decision;
+         re-resolving it is meaningless and refused.
+      2. CLOSED SET — chosen_item_id MUST be one of THIS record's own candidates.
+         The human picks among what the factory actually weighed; they cannot
+         inject an arbitrary item_id. (Overlooked != unconstrained.)
+      3. REAL RESOLVE — the new identity comes from a genuine ebay.resolve() round
+         trip, never hand-supplied fields. The human chooses WHICH listing; they
+         never author WHAT the identity says. The review surface stays a judgment
+         surface, never an editing surface.
+      4. STILL PENDING — re-resolve does NOT promote. It re-freezes identity and
+         re-marks the chosen candidate, leaving the record pending so the normal
+         collision-gated promote() is still the only door into the spine.
+
+    Parameters
+    ----------
+    queue_id : str
+    chosen_item_id : str
+        An item_id drawn from record['candidates']. Anything else -> ValueError.
+    ebay : module/obj
+        Injected eBay resolver exposing .resolve(item_id) -> {'identity', ...}.
+        Injected (not imported) so this is unit-testable offline with a mock, the
+        same discipline resolve_sku uses.
+
+    Returns the updated record (still status=pending).
+
+    Raises KeyError if absent, ValueError if not pending, not low_resolve_confidence,
+    or chosen_item_id is not among the record's candidates.
+    """
+    queue = load_queue(path)
+    q = queue.get('queue', {})
+    record = q.get(queue_id)
+    if record is None:
+        raise KeyError(f"no review-queue record {queue_id!r}")
+    if record.get('status') != 'pending':
+        raise ValueError(
+            f"record {queue_id!r} is {record.get('status')!r}, not pending — "
+            f"cannot re-resolve an already-adjudicated record."
+        )
+    if record.get('reason') != 'low_resolve_confidence':
+        raise ValueError(
+            f"record {queue_id!r} reason is {record.get('reason')!r}; re-resolve "
+            f"only applies to a low_resolve_confidence record (a listing decision). "
+            f"A collision/needs_review record is a SLUG decision — fix it at promote."
+        )
+
+    candidates = record.get('candidates') or []
+    cand_ids = {c.get('item_id') for c in candidates}
+    if chosen_item_id not in cand_ids:
+        raise ValueError(
+            f"item_id {chosen_item_id!r} is not among this record's candidates — "
+            f"re-resolve is constrained to the listings the factory actually "
+            f"weighed; an arbitrary item_id is refused (overlooked, not unbounded)."
+        )
+
+    # Real eBay round-trip for the chosen listing — identity is a fact from the
+    # marketplace, never hand-edited.
+    resolved = ebay.resolve(chosen_item_id)
+    record['identity'] = dict((resolved or {}).get('identity', {}))
+    record['affiliate_url'] = (resolved or {}).get('affiliate_url', '')
+
+    # Re-mark which candidate is chosen so the /admin render and any later audit
+    # reflect the human's correction; confidence on the human-chosen row is 1.0
+    # (a human decision, not a model score).
+    for c in candidates:
+        is_chosen = (c.get('item_id') == chosen_item_id)
+        c['chosen'] = is_chosen
+        if is_chosen:
+            c['score'] = 1.0
+            c['human_chosen'] = True
+    record['reresolved_at'] = _now()
+    queue['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(queue, path)
+    return record
 
 
 def reject(queue_id, reason, *, path=REVIEW_QUEUE_PATH):

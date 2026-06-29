@@ -51,6 +51,17 @@ from flask import request, Response
 
 import review_queue
 
+# ebay_api is needed only by the /admin/reresolve correction loop (a real
+# resolve() round-trip when a human picks a different listing). Guarded: if the
+# gateway is missing eBay creds/module, the rest of /admin still serves and
+# re-resolve fails visibly (503-style banner) rather than 500ing.
+try:
+    import ebay_api
+    _HAS_EBAY = True
+except ImportError:
+    ebay_api = None
+    _HAS_EBAY = False
+
 
 # --- Auth ---------------------------------------------------------------
 #
@@ -117,12 +128,85 @@ def _price_line(identity):
     return line
 
 
+def _candidates_block(record):
+    """Render the ranked eBay candidates for a low_resolve_confidence record.
+
+    The resolve-time analog of the 2026-06-17 near-miss sidecar: surface what the
+    disambiguator weighed so a human catches an OVERLOOKED product — a listing the
+    machine passed over that is actually the right one. The chosen row is marked;
+    every row carries a one-click "re-resolve to this listing" button that re-freezes
+    the record's identity onto that candidate (via a real eBay round-trip) and leaves
+    it pending for the normal collision-gated promote. Renders nothing for records
+    without candidates (collision/needs_review), so the existing surface is unchanged.
+    """
+    candidates = record.get('candidates') or []
+    if not candidates:
+        return ''
+    qid = record.get('queue_id', '')
+
+    rows = []
+    for c in candidates:
+        chosen = c.get('chosen')
+        human = c.get('human_chosen')
+        item_id = c.get('item_id', '')
+        price = f"{_esc(c.get('price',''))} {_esc(c.get('currency',''))}".strip()
+        cond = _esc(c.get('condition', ''))
+        score = c.get('score')
+        if human:
+            mark = '<span class="pick human">your pick</span>'
+        elif chosen:
+            score_txt = f"{score:.0%}" if isinstance(score, (int, float)) else ''
+            mark = f'<span class="pick machine">machine pick · {score_txt}</span>'
+        else:
+            mark = ''
+        # One-click re-resolve. Disabled (no button) for the row already chosen —
+        # re-resolving to the current pick is a no-op round-trip.
+        action = '' if chosen else (
+            f'<form class="reresolve" method="post" action="/admin/reresolve">'
+            f'<input type="hidden" name="queue_id" value="{_esc(qid)}">'
+            f'<input type="hidden" name="item_id" value="{_esc(item_id)}">'
+            f'<button type="submit" class="pickbtn">use this listing</button>'
+            f'</form>'
+        )
+        rows.append(
+            f'<tr class="{"chosen" if chosen else ""}">'
+            f'<td class="ctitle">{_esc(c.get("title",""))}</td>'
+            f'<td class="cprice">{price}</td>'
+            f'<td class="ccond">{cond}</td>'
+            f'<td class="cmark">{mark}</td>'
+            f'<td class="cact">{action}</td>'
+            f'</tr>'
+        )
+
+    return (
+        '<div class="candidates">'
+        '<p class="clegend">The factory was UNSURE which listing is this product. '
+        'Below is what it weighed — scan for an OVERLOOKED listing the machine '
+        'passed over. If the machine pick is wrong, choose the right listing; '
+        'identity re-freezes from eBay and you still promote through the slug gate. '
+        'If none fits, reject as <code>not_the_product</code> (a disambiguator bug).</p>'
+        '<table class="candtable"><thead><tr>'
+        '<th>listing title</th><th>price</th><th>cond</th><th>pick</th><th></th>'
+        '</tr></thead><tbody>'
+        + ''.join(rows) +
+        '</tbody></table></div>'
+    )
+
+
 def _reason_badge(record):
-    """The decision driver: collision (clash with an existing spine slug) vs
-    needs_review (ambiguous normalization, no direct clash)."""
+    """The decision driver: collision (clash with an existing spine slug),
+    needs_review (ambiguous normalization, no direct clash), or
+    low_resolve_confidence (slug resolved clean but the demand factory's eBay-pick
+    was uncertain — the human picks the right listing from `candidates`)."""
     reason = record.get('reason', '')
     if reason == 'collision':
         return ('collision', record.get('collision_with') or '?')
+    if reason == 'low_resolve_confidence':
+        chosen = next((c for c in (record.get('candidates') or [])
+                       if c.get('chosen')), None)
+        conf = chosen.get('score') if chosen else None
+        detail = f"machine pick {conf:.0%} confident" if isinstance(conf, (int, float)) else ''
+        return ('low resolve confidence', detail)
     return ('needs review', '')
 
 
@@ -181,6 +265,7 @@ def _card_html(record):
       <div class="adjudication">
         <div class="badge {badge_label.replace(' ', '-')}">{_esc(badge_label)}</div>
         {collision_block}
+        {_candidates_block(record)}
         <form class="promote" method="post" action="/admin/promote">
           <input type="hidden" name="queue_id" value="{_esc(qid)}">
           <label>authorize slug
@@ -331,5 +416,29 @@ def register_admin(app):
         except (KeyError, ValueError) as e:
             return _render_page(_banner('err', str(e)))
         return _render_page(_banner('ok', f'Rejected ({reason}) — routed upstream.'))
+
+    @app.route('/admin/reresolve', methods=['POST'])
+    def admin_reresolve():
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        qid = request.form.get('queue_id', '').strip()
+        item_id = request.form.get('item_id', '').strip()
+        if not qid or not item_id:
+            return _render_page(_banner('err', 'queue_id and item_id required'))
+        if not _HAS_EBAY or not ebay_api.is_configured():
+            return _render_page(_banner(
+                'err', 're-resolve needs the eBay API (creds/module unavailable).'))
+        try:
+            review_queue.reresolve(qid, item_id, ebay=ebay_api)
+        except ebay_api.EbayAPIError as e:
+            return _render_page(_banner('err', f'eBay re-resolve failed: {e}'))
+        except (KeyError, ValueError) as e:
+            # Not pending / wrong reason / item_id not among candidates — all
+            # visible, never a 500. The constraint is the message.
+            return _render_page(_banner('err', str(e)))
+        return _render_page(_banner(
+            'ok', 'Re-resolved to chosen listing — review the refreshed identity, '
+                  'then promote through the slug gate.'))
 
     return app
