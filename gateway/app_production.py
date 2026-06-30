@@ -26,26 +26,14 @@ import hashlib
 def _load_dotenv():
     """Minimal .env loader — parses gateway/.env into os.environ if present.
 
-    No external dependency (python-dotenv not guaranteed on VPS). Only sets
-    keys not already in the environment, so systemd EnvironmentFile or shell
-    exports still take precedence. Silent no-op if the file is absent.
+    Thin wrapper preserved for call-site stability; the logic now lives in the
+    shared env_bootstrap module (extracted 2026-06-30, item 3) so the cron entry
+    points load the same secrets file the same way. No external dependency; only
+    sets keys not already in the environment (systemd EnvironmentFile or shell
+    exports still take precedence); silent no-op if the file is absent.
     """
-    env_path = os.path.join(os.path.dirname(__file__), '.env')
-    if not os.path.exists(env_path):
-        return
-    try:
-        with open(env_path, 'r') as f:
-            for line in f:
-                line = line.strip()
-                if not line or line.startswith('#') or '=' not in line:
-                    continue
-                key, _, value = line.partition('=')
-                key = key.strip()
-                value = value.strip().strip('"').strip("'")
-                if key and key not in os.environ:
-                    os.environ[key] = value
-    except Exception as e:
-        print(f"[gateway] WARN: .env load failed: {type(e).__name__}")
+    import env_bootstrap
+    return env_bootstrap.load_dotenv()
 
 
 _load_dotenv()

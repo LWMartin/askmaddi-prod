@@ -268,6 +268,19 @@ def main(argv=None):
         print("[resolve_pass] --dry-run: not resolving.")
         return 0
 
+    # Bootstrap the gateway/.env BEFORE importing ebay_api. ebay_api reads
+    # EBAY_APP_ID / EBAY_CERT_ID from os.environ at MODULE-LEVEL, so the env must
+    # be populated before its import line executes. Under the gateway service
+    # app_production does this; but the cron entry point (this main) is invoked
+    # by a plain crontab line that inherits a minimal env — nothing would load
+    # the secrets file, ebay_api would read empty creds, and every resolve would
+    # fail "not configured." This call closes that gap. It runs AFTER the
+    # --dry-run return so dry-run / tests stay creds-free (the lazy-import
+    # discipline below is preserved). Fallback-only: a real shell export or
+    # systemd EnvironmentFile still wins (load_dotenv never overrides).
+    import env_bootstrap
+    env_bootstrap.load_dotenv()
+
     # Live collaborators (box-only). Imported lazily so --dry-run and tests don't
     # require eBay creds / a live ollama just to load the module.
     import ebay_api
