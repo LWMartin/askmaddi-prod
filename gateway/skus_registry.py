@@ -85,7 +85,8 @@ def _same_identity(a, b):
 
 
 def build_entry(slug, vendor, model, category, contamination_key,
-                resolved, amazon_asin=None):
+                resolved, amazon_asin=None,
+                source='resolved', minted_needs_review=False):
     """Assemble one skus.json entry from a resolve() result.
 
     `resolved` is the dict returned by ebay_api.resolve():
@@ -94,6 +95,22 @@ def build_entry(slug, vendor, model, category, contamination_key,
     bridges. `_raw` is intentionally NOT persisted into skus.json (it's large
     and the schema fields already capture what downstream needs); callers that
     want it can archive it separately.
+
+    PROVENANCE (minting wire, 2026-06-30):
+      source : 'resolved' | 'generated'
+        How this entry's slug came to be. 'resolved' (default) = a tapped/
+        hand-curated slug that was already a registry fact when enriched — the
+        historical path, and what the four frozen entries implicitly are.
+        'generated' = the slug was MINTED by slug_normalizer.resolve_slug from a
+        demand-discovered vendor/model that had no prior registry entry. The
+        publish review surfaces this so Lee knows to look harder at a machine-
+        minted card before it goes live.
+      minted_needs_review : bool
+        True only on the mint path (a generated slug, or a mint whose category
+        came back unknown). Rides into the entry so the /admin publish view can
+        badge it. The publish gate is the air-gap review; this flag tells the
+        reviewer WHICH cards are machine-originated. The four frozen entries lack
+        the field entirely -> read as the trusted default (False) via .get().
     """
     identity = dict(resolved.get('identity', {}))
     return {
@@ -106,6 +123,8 @@ def build_entry(slug, vendor, model, category, contamination_key,
             'ebay_epn_url': resolved.get('affiliate_url', ''),
             'amazon_asin': amazon_asin,
         },
+        'source': source,
+        'minted_needs_review': minted_needs_review,
         'resolved_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
     }
 

@@ -54,6 +54,8 @@ import urllib.request
 from pathlib import Path
 
 import skus_registry
+import slug_normalizer
+import ebay_category_map
 
 # Default eBay-candidate disambiguation model — the locked, validated checkpoint
 # (gemma4:e2b-it-qat), same tag the comparator typer uses. Single-sourced default.
@@ -114,6 +116,109 @@ def lookup_proposal(slug, *, skus_path=skus_registry.SKUS_PATH):
         'contamination_key': entry.get('contamination_key', slug),
         'label': f"{vendor} {model}".strip(),
         'aliases': list(aliases),
+        # Identity provenance for the resolver's routing. An existing entry is a
+        # frozen registry fact -> 'resolved', never minted, never a collision.
+        'source': 'resolved',
+        'minted': False,
+        'resolution': None,
+    }
+
+
+def lookup_or_mint(slug, *, vendor=None, model=None,
+                   skus_path=skus_registry.SKUS_PATH):
+    """Resolve a proposal's buildable identity, MINTING one if the slug is new.
+
+    The minting wire's part (b/c). Supersedes the bare lookup_proposal() call in
+    resolve_proposal: the demand miner proposes slugs from a vocab that is a
+    SUPERSET of the registry, so a proposal slug frequently has no entry yet.
+    Rather than the historical hard ResolveError, this:
+
+      1. Tries the registry (lookup_proposal) — the ENRICH path, unchanged. An
+         existing entry returns exactly as before, source='resolved', minted=False.
+
+      2. On a registry miss, MINTS — but only if vendor+model travelled with the
+         proposal (the identity shape). It calls slug_normalizer.resolve_slug(
+         vendor, model), which is the ONE sanctioned slug minter:
+           - frozen-by-identity: if this vendor/model secretly already has a
+             registry entry under a hand-authored slug, resolve_slug returns that
+             FROZEN slug (needs_review=False). We then re-enter the registry under
+             the real slug — an enrich, not a mint. (Guards the sony-a7iv ~
+             sony-a7-iv class.)
+           - generated: a brand-new slug, needs_review=True, possibly with a
+             collision flag (the Sigma sigma-35-f12-dg-dn vs minted form case).
+         Category is NOT known yet on a mint (no registry row) — it is derived
+         from eBay downstream (part e), so it returns '' here, filled in by the
+         resolver after resolve().
+
+      3. On a registry miss WITHOUT vendor/model (a legacy tuple-shape proposal,
+         no identity): raises ResolveError, same as the historical behaviour —
+         we cannot mint an identity we were never given, and a silent skip would
+         lose the demand signal. Loud, not papered over.
+
+    Returns the same dict shape as lookup_proposal plus:
+      source     : 'resolved' (existing) | 'generated' (freshly minted)
+      minted     : bool — True only for a genuinely new generated slug
+      resolution : slug_normalizer.SlugResolution | None — carried so the
+                   resolver can route a collision to review with the real
+                   collision_with, and badge a generated mint.
+    The returned 'slug' is the RESOLVED slug (may differ from the proposed one
+    when resolve_slug froze it to a hand-authored form).
+    """
+    registry = skus_registry.load_registry(skus_path)
+    entry = (registry.get('skus') or {}).get(slug)
+    if entry is not None:
+        # Existing -> the enrich path, byte-for-byte the old behaviour.
+        return lookup_proposal(slug, skus_path=skus_path)
+
+    # Registry miss. Mint only if identity travelled with the proposal.
+    if not (vendor and model):
+        raise ResolveError(
+            f"proposal slug {slug!r} has no registry entry AND the proposal "
+            f"carried no vendor/model to mint from. The factory can enrich an "
+            f"existing SKU or mint a new one from identity, but a slug with "
+            f"neither is unbuildable — emit the identity shape (vendor+model) "
+            f"to enable minting, or register the slug."
+        )
+
+    res = slug_normalizer.resolve_slug(vendor, model, skus_path=Path(skus_path))
+
+    if res.needs_review:
+        # Genuinely new slug — a mint. Category derived from eBay later (part e),
+        # so '' for now. contamination_key seeds to the minted slug (a starting
+        # point a human can correct at review), matching review_queue's default.
+        return {
+            'slug': res.slug,
+            'vendor': vendor,
+            'model': model,
+            'category': '',
+            'contamination_key': res.slug,
+            'label': f"{vendor} {model}".strip(),
+            'aliases': [],
+            'source': 'generated',
+            'minted': True,
+            'resolution': res,
+        }
+
+    # resolve_slug returned a FROZEN slug (override/identity/slug match) — the
+    # vendor/model actually IS already registered, just under res.slug rather
+    # than the proposed one. Re-enter the registry under the real slug: an
+    # enrich, not a mint. (If res.slug also has no entry — a frozen-by-slug edge
+    # where the slug exists in the override set but not as a full entry — fall
+    # back to a mint-shaped identity so we never hard-fail a buildable product.)
+    real = (registry.get('skus') or {}).get(res.slug)
+    if real is not None:
+        return lookup_proposal(res.slug, skus_path=skus_path)
+    return {
+        'slug': res.slug,
+        'vendor': vendor,
+        'model': model,
+        'category': '',
+        'contamination_key': res.slug,
+        'label': f"{vendor} {model}".strip(),
+        'aliases': [],
+        'source': 'generated',
+        'minted': True,
+        'resolution': res,
     }
 
 
@@ -262,6 +367,7 @@ class GemmaDisambiguator:
 # Step 3 — orchestration: lookup -> search -> pick -> route into the EXISTING chain
 # ──────────────────────────────────────────────────────────────────────────────
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
+                     vendor=None, model=None,
                      floor=DEFAULT_CONFIDENCE_FLOOR,
                      candidate_limit=DEFAULT_CANDIDATE_LIMIT,
                      skus_path=skus_registry.SKUS_PATH,
@@ -275,20 +381,59 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
       gemma        — a GemmaDisambiguator (production: client=None -> live ollama)
       demand_log   — the demand_log module (.log_unmet)
       review_queue — the review_queue module (.enqueue)
+      vendor, model — OPTIONAL identity carried by the proposal (the minting-wire
+                     identity shape). When present, a slug that is NOT yet a
+                     registry entry is MINTED rather than erroring; when absent,
+                     the historical enrich-only behaviour holds (ResolveError on
+                     a missing slug).
 
     Returns a structured outcome dict (never raises on a routing decision; only on
     a genuine precondition/API error):
       {'slug', 'outcome', 'detail', ...}
     where outcome is one of:
       'resolved'        — confident pick, written to spine. detail = upsert status.
-      'queued'          — low-confidence pick, enqueued w/ candidates. detail=queue_id.
+                          May be a freshly MINTED entry (source='generated',
+                          minted_needs_review=True) or an enriched existing one.
+      'queued'          — enqueued for review. detail=queue_id. Two reasons:
+                          'collision' (a minted slug clashes with an existing
+                          spine slug — reconcile before building) or
+                          'low_resolve_confidence' (uncertain eBay pick).
       'no_candidate'    — search/disambiguation found nothing; logged as unmet demand.
 
-    Raises ResolveError if the slug has no registry entry. eBay API failures
-    propagate as ebay_api.EbayAPIError (a transient problem the caller retries),
-    NOT swallowed into a routing outcome — a network blip is not "no demand."
+    Raises ResolveError only when the slug has no registry entry AND no identity
+    to mint from. eBay API failures propagate as ebay_api.EbayAPIError (a
+    transient problem the caller retries), NOT swallowed into a routing outcome.
     """
-    target = lookup_proposal(slug, skus_path=skus_path)
+    target = lookup_or_mint(slug, vendor=vendor, model=model, skus_path=skus_path)
+    # The resolved slug may differ from the proposed one (resolve_slug can freeze
+    # a hand-authored form). Use it consistently from here on.
+    slug = target['slug']
+
+    # ── Route 0 (mint only): slug COLLISION -> review before building ──────────
+    # A minted slug that normalizes the same as an existing spine slug (the Sigma
+    # sigma-35-f12-dg-dn ~ sigma-35mm-f-1-2-dg-dn-art class) is a silent
+    # duplicate-under-different-punctuation hazard the publish eyeball won't
+    # reliably catch — it corrupts the registry join. Unlike a clean mint (which
+    # the publish air-gap reviews), a collision must be reconciled at the SLUG
+    # level by a human, so it never reaches the spine. Routed before eBay is even
+    # touched: there's nothing to build until the slug question is settled.
+    resolution = target.get('resolution')
+    if target.get('minted') and resolution is not None and resolution.collision:
+        eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+        # No eBay identity yet (we stopped before search), so enqueue with an
+        # empty resolved block; review_queue freezes what identity it's given and
+        # the human resolves the slug clash. reason derives from the resolution
+        # (collision is set) -> 'collision', the badge /admin already renders.
+        record = review_queue.enqueue(
+            resolution, {}, target['vendor'], target['model'], target['category'],
+            contamination_key=target['contamination_key'],
+            **eq_kwargs,
+        )
+        return {
+            'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+            'reason': 'collision', 'collision_with': resolution.collision,
+            'source': target['source'],
+        }
 
     # Build the search query from label + any aliases (aliases widen recall for
     # products whose market title differs from the controlled-vocab model string).
@@ -306,21 +451,24 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
         return {
             'slug': slug, 'outcome': 'no_candidate',
             'detail': verdict['why'], 'confidence': verdict['confidence'],
-            'candidates_seen': len(candidates),
+            'candidates_seen': len(candidates), 'source': target['source'],
         }
 
     # ── Route 2: low-confidence pick -> review with candidates visible ──
     if verdict['confidence'] < floor:
         resolved = ebay.resolve(verdict['item_id'])
-        # A synthetic resolution carrying the proposal's frozen slug — the factory
-        # already KNOWS the slug (it's a registry entry), so this enqueue is about
-        # the eBay pick, not the slug. needs_review/collision are False; the reason
-        # is forced to low_resolve_confidence.
+        # A synthetic resolution carrying the (resolved) slug — the enqueue is
+        # about the eBay PICK, not the slug, so the reason is forced to
+        # low_resolve_confidence regardless of whether the slug was minted.
         resolution = _FactoryResolution(slug=slug, input_text=target['label'])
         eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+        # On the mint path category is still '' (eBay-derived); fill it from the
+        # resolved item so the review record carries a best-effort category.
+        category = target['category'] or ebay_category_map.category_for(
+            resolved.get('identity', {}).get('ebay_category_id', ''))
         record = review_queue.enqueue(
             resolution, resolved,
-            target['vendor'], target['model'], target['category'],
+            target['vendor'], target['model'], category,
             contamination_key=target['contamination_key'],
             reason_override='low_resolve_confidence',
             candidates=verdict['ranked'],
@@ -330,17 +478,35 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
             'slug': slug, 'outcome': 'queued',
             'detail': record['queue_id'], 'confidence': verdict['confidence'],
             'why': verdict['why'], 'candidates_seen': len(candidates),
+            'source': target['source'],
         }
 
     # ── Route 3: confident pick -> resolve + write spine (the existing chain) ──
     resolved = ebay.resolve(verdict['item_id'])
+
+    # Category: an existing entry already has its controlled-vocab category; a
+    # MINTED entry has none yet, so derive it from the eBay item (part e, the
+    # "marketplace truth, no hand-tagging" decision). An unknown category id maps
+    # to '' -> the mint stays needs_review so Lee fills it at the publish gate.
+    category = target['category']
+    minted = target.get('minted', False)
+    if not category:
+        category = ebay_category_map.category_for(
+            resolved.get('identity', {}).get('ebay_category_id', ''))
+    # A mint needs review at publish if it was generated OR its category came
+    # back unknown (blank) — either is a "look harder" signal for the air gap.
+    minted_needs_review = bool(minted) and (
+        target.get('source') == 'generated' or not category)
+
     entry = skus_registry.build_entry(
         slug=slug,
         vendor=target['vendor'],
         model=target['model'],
-        category=target['category'],
+        category=category,
         contamination_key=target['contamination_key'],
         resolved=resolved,
+        source=target.get('source', 'resolved'),
+        minted_needs_review=minted_needs_review,
     )
     status = skus_registry.upsert(slug, entry, path=skus_path)
     return {
@@ -348,6 +514,9 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
         'detail': status, 'confidence': verdict['confidence'],
         'why': verdict['why'], 'item_id': verdict['item_id'],
         'candidates_seen': len(candidates),
+        'source': target.get('source', 'resolved'),
+        'minted': minted, 'category': category,
+        'minted_needs_review': minted_needs_review,
     }
 
 

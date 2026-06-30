@@ -344,3 +344,194 @@ def test_admin_collision_record_has_no_candidates_block(queue_path):
                                'body', path=queue_path)
     html = admin_surface._card_html(rec)
     assert 'use this listing' not in html    # no candidates surface for slug-gate
+
+
+# ── MINTING WIRE (2026-06-30): enrich-or-mint, the demand→build connection ────
+# These prove the previously-unbuilt wire: a proposal slug NOT in the registry is
+# minted (not errored), routed per Lee's publish-air-gap decision — clean confident
+# mint -> spine; collision -> review; low-conf -> review; no identity -> error.
+
+def _mint_seed(tmp_path):
+    """A spine that does NOT contain the proposal slug being minted, plus one
+    existing entry so identity-freeze and collision can be exercised."""
+    p = tmp_path / 'skus.json'
+    p.write_text(json.dumps({
+        '_description': 'test', 'version': '0.1.0', 'as_of': '2026-06-30',
+        'skus': {
+            'sigma-35-art-dg-dn-ii': {
+                'contamination_key': 'sigma-35-art-dg-dn-ii',
+                'vendor': 'Sigma', 'model': '35mm F1.4 Art DG DN II',
+                'category': 'lens',
+            },
+        },
+    }))
+    return p
+
+
+def test_lookup_or_mint_existing_is_enrich_not_mint(skus_path):
+    """An existing slug returns the enrich identity, source='resolved', minted=False
+    — byte-for-byte the historical lookup_proposal behaviour."""
+    t = resolve_sku.lookup_or_mint('sony-a7s-iii', skus_path=skus_path)
+    assert t['source'] == 'resolved'
+    assert t['minted'] is False
+    assert t['resolution'] is None
+    assert t['vendor'] == 'Sony' and t['category'] == 'body'
+
+
+def test_lookup_or_mint_new_slug_mints_with_identity(tmp_path):
+    """A registry MISS with vendor+model mints a fresh generated slug, flagged
+    minted + needs review, category empty (eBay-derived downstream)."""
+    skus = _mint_seed(tmp_path)
+    t = resolve_sku.lookup_or_mint('canon-r5-ii', vendor='Canon', model='R5 II',
+                                   skus_path=skus)
+    assert t['minted'] is True
+    assert t['source'] == 'generated'
+    assert t['slug'] == 'canon-r5-ii'
+    assert t['category'] == ''           # not known until eBay resolves it
+    assert t['resolution'] is not None and t['resolution'].needs_review is True
+
+
+def test_lookup_or_mint_miss_without_identity_raises(tmp_path):
+    """A registry miss with NO vendor/model cannot mint — loud ResolveError, never
+    a silent skip (the demand signal must not be lost)."""
+    skus = _mint_seed(tmp_path)
+    with pytest.raises(resolve_sku.ResolveError):
+        resolve_sku.lookup_or_mint('canon-r5-ii', skus_path=skus)
+
+
+def test_lookup_or_mint_frozen_by_identity_is_enrich(tmp_path):
+    """vendor/model that already has an entry (under a possibly hand-authored slug)
+    resolves to that FROZEN slug as an enrich — not a second mint."""
+    skus = _mint_seed(tmp_path)
+    t = resolve_sku.lookup_or_mint(
+        'sigma-whatever', vendor='Sigma', model='35mm F1.4 Art DG DN II',
+        skus_path=skus)
+    assert t['slug'] == 'sigma-35-art-dg-dn-ii'
+    assert t['minted'] is False and t['source'] == 'resolved'
+
+
+def test_route_mint_clean_confident_writes_spine_with_provenance(tmp_path, queue_path, demand_path):
+    """The headline path: a NEW slug, confident pick, clean (no collision) ->
+    spine write carrying source='generated' + minted_needs_review. This is what
+    yesterday errored 10/10; it now builds. The publish air-gap is the review."""
+    skus = _mint_seed(tmp_path)
+    # eBay returns a body-category item (88433 -> 'body' in the map) so category
+    # is derived cleanly from marketplace truth.
+    ebay = MockEbay(
+        candidates=[{'item_id': 'v1|900|0', 'title': 'Canon EOS R5 Mark II Body',
+                     'price': '4299', 'currency': 'USD', 'condition': 'New',
+                     'epid': '', 'brand': 'Canon'}],
+        resolve_map={'v1|900|0': {
+            'identity': {'epid': 'EP-R5II', 'legacy_item_id': 'v1|900|0',
+                         'ebay_category_id': '88433', 'brand': 'Canon',
+                         'mpn': '', 'market_title': 'Canon EOS R5 Mark II Body',
+                         'image': 'https://img/r5ii.jpg',
+                         'price_seen': {'value': '4299', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': 'https://ebay/itm/v1|900|0?campid=5339138080'}})
+    out = resolve_sku.resolve_proposal(
+        'canon-r5-ii', ebay=ebay, gemma=_gemma(0, 0.95),
+        vendor='Canon', model='R5 II',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'
+    assert out['source'] == 'generated' and out['minted'] is True
+    assert out['category'] == 'body'              # derived from ebay 88433
+    assert out['minted_needs_review'] is True     # generated -> review at publish
+    # The spine now has a fresh entry under the minted slug with provenance.
+    reg = skus_registry.load_registry(skus)
+    entry = reg['skus']['canon-r5-ii']
+    assert entry['source'] == 'generated'
+    assert entry['minted_needs_review'] is True
+    assert entry['category'] == 'body'
+    assert entry['identity']['legacy_item_id'] == 'v1|900|0'
+    # No review record — a clean mint goes straight through to the publish gate.
+    assert not queue_path.exists() or review_queue.load_pending(queue_path) == []
+
+
+def test_route_mint_unknown_category_still_writes_but_flags_review(tmp_path, queue_path, demand_path):
+    """A confident mint whose eBay category id is UNKNOWN writes the spine (cards
+    cost ~nothing; the publish gate reviews) but category='' and needs_review
+    stays True so Lee fills the blank category at publish."""
+    skus = _mint_seed(tmp_path)
+    ebay = MockEbay(
+        candidates=[{'item_id': 'v1|901|0', 'title': 'DJI RS 4 Gimbal',
+                     'price': '549', 'currency': 'USD', 'condition': 'New',
+                     'epid': '', 'brand': 'DJI'}],
+        resolve_map={'v1|901|0': {
+            'identity': {'epid': '', 'legacy_item_id': 'v1|901|0',
+                         'ebay_category_id': '99999999',  # unmapped
+                         'brand': 'DJI', 'mpn': '',
+                         'market_title': 'DJI RS 4 Gimbal', 'image': '',
+                         'price_seen': {'value': '549', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': 'https://ebay/itm/v1|901|0?campid=5339138080'}})
+    out = resolve_sku.resolve_proposal(
+        'dji-rs-4', ebay=ebay, gemma=_gemma(0, 0.95),
+        vendor='DJI', model='RS 4',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'
+    assert out['category'] == ''                  # unknown id -> abstain, no guess
+    assert out['minted_needs_review'] is True
+    reg = skus_registry.load_registry(skus)
+    assert reg['skus']['dji-rs-4']['category'] == ''
+    assert reg['skus']['dji-rs-4']['minted_needs_review'] is True
+
+
+def test_route_mint_collision_goes_to_review_before_ebay(tmp_path, queue_path, demand_path):
+    """A minted slug that normalizes the same as an existing spine slug (the Sigma
+    class) routes to review_queue reason='collision' BEFORE eBay is touched — the
+    one duplicate hazard the publish eyeball won't reliably catch. The spine is
+    NOT written; eBay search is never called."""
+    skus = _mint_seed(tmp_path)
+    ebay = MockEbay(candidates=CANDS)  # if reached, search_calls would be non-empty
+    out = resolve_sku.resolve_proposal(
+        'sigma-35-art-dgdn-ii', ebay=ebay, gemma=_gemma(0, 0.99),
+        vendor='Sigma', model='35 art dgdn ii',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued'
+    assert out['reason'] == 'collision'
+    assert out['collision_with'] == 'sigma-35-art-dg-dn-ii'
+    # eBay was never hit — the collision short-circuits before search.
+    assert ebay.search_calls == []
+    assert ebay.resolve_calls == []
+    # Review record carries the collision badge data.
+    pend = review_queue.load_pending(queue_path)
+    assert len(pend) == 1
+    assert pend[0]['reason'] == 'collision'
+    assert pend[0]['collision_with'] == 'sigma-35-art-dg-dn-ii'
+    # Spine got no new entry — only the original seed remains.
+    reg = skus_registry.load_registry(skus)
+    assert set(reg['skus']) == {'sigma-35-art-dg-dn-ii'}
+
+
+def test_route_mint_low_confidence_goes_to_review(tmp_path, queue_path, demand_path):
+    """A minted slug with a LOW-confidence eBay pick routes to review just like an
+    enrich low-conf — reason low_resolve_confidence, candidates frozen, no spine
+    write. Mint and enrich share the resolve-time review path."""
+    skus = _mint_seed(tmp_path)
+    ebay = MockEbay(
+        candidates=[{'item_id': 'v1|902|0', 'title': 'Canon R5 II (maybe?)',
+                     'price': '4000', 'currency': 'USD', 'condition': 'Used',
+                     'epid': '', 'brand': 'Canon'}],
+        resolve_map={'v1|902|0': {
+            'identity': {'epid': '', 'legacy_item_id': 'v1|902|0',
+                         'ebay_category_id': '88433', 'brand': 'Canon', 'mpn': '',
+                         'market_title': 'Canon R5 II', 'image': '',
+                         'price_seen': {'value': '4000', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': 'https://ebay/itm/v1|902|0'}})
+    out = resolve_sku.resolve_proposal(
+        'canon-r5-ii', ebay=ebay, gemma=_gemma(0, 0.40),  # below floor
+        vendor='Canon', model='R5 II',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued'
+    pend = review_queue.load_pending(queue_path)
+    assert len(pend) == 1 and pend[0]['reason'] == 'low_resolve_confidence'
+    # No spine entry for the minted slug — low-conf never writes the spine.
+    reg = skus_registry.load_registry(skus)
+    assert 'canon-r5-ii' not in reg['skus']

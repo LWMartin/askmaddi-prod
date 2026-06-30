@@ -62,10 +62,13 @@ def load_proposals(path):
 
     Accepts either:
       - a JSON list of objects: [{"slug": "...", "fork_n": N}, ...]
+        (optionally with "vendor"/"model" — the minting-wire identity shape)
       - a JSON list of [fork_n, slug, ...] tuples (proposals() native shape)
-    Returns a normalized list of {'slug': str, 'fork_n': int} dicts, sorted by
-    fork_n descending (highest demand first — the drip builds the most-wanted
-    products soonest).
+    Returns a normalized list of {'slug': str, 'fork_n': int, 'vendor': str|None,
+    'model': str|None} dicts, sorted by fork_n descending (highest demand first —
+    the drip builds the most-wanted products soonest). vendor/model are None on
+    the legacy tuple/dict shapes; present only on the identity shape, where they
+    let resolve_proposal MINT a slug that isn't yet a registry entry.
 
     Raises ValueError on a malformed artifact (a corrupt proposals file is a real
     error the operator should see, not a silently-empty pass).
@@ -77,9 +80,15 @@ def load_proposals(path):
 
     out = []
     for item in raw:
+        vendor = model = None
         if isinstance(item, dict):
             slug = item.get('slug')
             fork_n = int(item.get('fork_n', 0))
+            # Identity-shape rows (minting wire) carry vendor+model so a slug not
+            # yet in the registry can be MINTED at resolve time. Absent on legacy
+            # rows -> stays None -> resolve_proposal can enrich but not mint.
+            vendor = item.get('vendor') or None
+            model = item.get('model') or None
         elif isinstance(item, (list, tuple)) and len(item) >= 2:
             # proposals() native tuple: (fork_n, comp_id, pos_n, abs_n)
             fork_n = int(item[0])
@@ -88,7 +97,8 @@ def load_proposals(path):
             raise ValueError(f"unrecognized proposal entry: {item!r}")
         if not slug:
             raise ValueError(f"proposal entry missing slug: {item!r}")
-        out.append({'slug': slug, 'fork_n': fork_n})
+        out.append({'slug': slug, 'fork_n': fork_n,
+                    'vendor': vendor, 'model': model})
 
     out.sort(key=lambda d: d['fork_n'], reverse=True)
     return out
@@ -148,8 +158,17 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         summary['total'] += 1
         event = {'slug': slug, 'fork_n': prop.get('fork_n')}
 
+        # Per-proposal identity (minting wire): carried on the identity shape so a
+        # not-yet-registered slug can be minted. None on legacy shapes -> enrich
+        # only. Passed per-proposal, so it's added to a copy of the shared kwargs.
+        call_kwargs = dict(rp_kwargs)
+        if prop.get('vendor'):
+            call_kwargs['vendor'] = prop['vendor']
+        if prop.get('model'):
+            call_kwargs['model'] = prop['model']
+
         try:
-            outcome = resolve_fn(slug, **rp_kwargs)
+            outcome = resolve_fn(slug, **call_kwargs)
         except resolve_sku.ResolveError as e:
             # No registry entry — an upstream bug (proposed something unregistered).
             # Count and continue; one bad proposal does not abort the batch.
@@ -166,19 +185,25 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         if kind == 'resolved':
             # Confident resolve -> a buildable SKU. Enroll it into the work queue.
             # The build identity (label, category, aliases, mount) comes from the
-            # registry entry the resolver just enriched; re-look it up rather than
-            # widen resolve_proposal's tested return contract.
-            ident = resolve_sku.lookup_proposal(slug, skus_path=skus_path)
+            # registry entry the resolver just enriched OR minted; re-look it up
+            # rather than widen resolve_proposal's tested return contract.
+            #
+            # Use the RESOLVED slug from the outcome, not the proposed loop slug:
+            # a mint can freeze the slug to a hand-authored form (resolve_slug),
+            # so the registry entry now lives under outcome['slug']. After a mint,
+            # upsert() ran, so lookup_proposal succeeds on that slug.
+            resolved_slug = outcome.get('slug', slug)
+            ident = resolve_sku.lookup_proposal(resolved_slug, skus_path=skus_path)
             enroll_kwargs = {}
             if work_queue_path is not None:
                 enroll_kwargs['path'] = work_queue_path
             work_queue.enroll(
-                slug, ident['label'], ident['category'],
+                resolved_slug, ident['label'], ident['category'],
                 aliases=ident.get('aliases'),
                 **enroll_kwargs,
             )
             summary['enrolled'] += 1
-            summary['enrolled_slugs'].append(slug)
+            summary['enrolled_slugs'].append(resolved_slug)
         elif kind == 'queued':
             # Low-confidence -> already in review_queue as a straggler. Not built.
             summary['already_queued'] += 1

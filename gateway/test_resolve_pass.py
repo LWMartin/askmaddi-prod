@@ -153,15 +153,46 @@ def test_load_proposals_dict_shape(tmp_path):
 
 
 def test_load_proposals_tuple_shape(tmp_path):
-    # proposals() native shape: (fork_n, comp_id, pos_n, abs_n)
+    # proposals() native shape: (fork_n, comp_id, pos_n, abs_n). Legacy tuple
+    # rows carry no identity, so vendor/model normalize to None — meaning the
+    # resolver can enrich an existing slug but cannot MINT a missing one from a
+    # tuple-shape proposal (it has no vendor/model to mint from).
     p = tmp_path / 'proposals.json'
     p.write_text(json.dumps([
         [9, 'canon-r5-ii', 2, 0],
         [13, 'sony-a7s-iii', 4, 1],
     ]))
     out = resolve_pass.load_proposals(p)
-    assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13}
-    assert out[1] == {'slug': 'canon-r5-ii', 'fork_n': 9}
+    assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
+                      'vendor': None, 'model': None}
+    assert out[1] == {'slug': 'canon-r5-ii', 'fork_n': 9,
+                      'vendor': None, 'model': None}
+
+
+def test_load_proposals_identity_shape_carries_vendor_model(tmp_path):
+    # The minting-wire identity shape: {slug, fork_n, vendor, model}. vendor and
+    # model survive normalization so resolve_proposal can mint a slug that isn't
+    # yet a registry entry. fork_n-desc sort still applies.
+    p = tmp_path / 'proposals.json'
+    p.write_text(json.dumps([
+        {'slug': 'canon-r5-ii', 'fork_n': 9, 'vendor': 'Canon', 'model': 'R5 II'},
+        {'slug': 'sony-a7s-iii', 'fork_n': 13, 'vendor': 'Sony', 'model': 'A7S III'},
+    ]))
+    out = resolve_pass.load_proposals(p)
+    assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
+                      'vendor': 'Sony', 'model': 'A7S III'}
+    assert out[1] == {'slug': 'canon-r5-ii', 'fork_n': 9,
+                      'vendor': 'Canon', 'model': 'R5 II'}
+
+
+def test_load_proposals_dict_shape_without_identity_is_none(tmp_path):
+    # A legacy dict row {slug, fork_n} with no vendor/model normalizes vendor and
+    # model to None — same enrich-only constraint as the tuple shape.
+    p = tmp_path / 'proposals.json'
+    p.write_text(json.dumps([{'slug': 'sony-a7s-iii', 'fork_n': 13}]))
+    out = resolve_pass.load_proposals(p)
+    assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
+                      'vendor': None, 'model': None}
 
 
 def test_load_proposals_rejects_non_list(tmp_path):
