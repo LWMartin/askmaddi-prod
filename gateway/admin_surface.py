@@ -44,12 +44,43 @@ If review_queue is unavailable the surface is simply not registered.
 """
 
 import hmac
+import json
 import os
+import subprocess
+import sys
 import html as _html
+from pathlib import Path
 
 from flask import request, Response
 
 import review_queue
+
+# work_queue is the card-factory build-lifecycle store (Piece 4). The Review
+# Ready section reads load_by_state('review_ready') for built cards awaiting the
+# publish gate, load_by_state('failed') for the pipeline-health panel, counts()
+# for the cockpit, and drives mark_published / reject_card. Guarded like the rest
+# so a gateway without the factory store still serves the slug-review surface.
+try:
+    import work_queue
+    _HAS_WORK_QUEUE = True
+except ImportError:
+    work_queue = None
+    _HAS_WORK_QUEUE = False
+
+# skus_registry is the IDENTITY + PROVENANCE spine. The Review Ready section
+# joins each review_ready record's slug back to its spine entry to read the mint
+# provenance (source, minted_needs_review, category) — three orthogonal facts
+# about one slug, each read from its authoritative home (build state from
+# work_queue, content from the assembled card.json, provenance from the spine).
+# A review_ready card whose slug is ABSENT from the spine is publish-disabled
+# (option 2): visible, with the reason shown, but barred from going live without
+# an identity behind it.
+try:
+    import skus_registry
+    _HAS_SKUS = True
+except ImportError:
+    skus_registry = None
+    _HAS_SKUS = False
 
 # ebay_api is needed only by the /admin/reresolve correction loop (a real
 # resolve() round-trip when a human picks a different listing). Guarded: if the
@@ -61,6 +92,52 @@ try:
 except ImportError:
     ebay_api = None
     _HAS_EBAY = False
+
+
+# --- Publish render runner ----------------------------------------------
+#
+# Publishing a review_ready card means rendering it LIVE: build_site.py reads the
+# assembled card.json and emits browser/cards/{card_id}/index.html (+ refreshes
+# the teaser manifest). That render is the one human-approved touch the factory
+# deliberately stops short of (card_factory stops at 'assemble'). It's a
+# subprocess that needs the repo filesystem, so — same discipline as the
+# factory's injected build runner — the route takes an INJECTED callable. The
+# real default shells out to build_site; tests pass a fake so the publish gate's
+# state/auth/provenance logic is exercised with no filesystem render.
+#
+# A render runner is callable(card_path) -> (rc, detail): rc 0 == card is live.
+
+_REPO_ROOT = Path(__file__).resolve().parent.parent
+_BUILD_SITE = _REPO_ROOT / 'tools' / 'build_site.py'
+_BROWSER_OUT = _REPO_ROOT / 'browser'
+
+
+def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
+                      python=None):
+    """Produce the PRODUCTION publish runner: callable(card_path) -> (rc, detail).
+
+    Shells out to `build_site.py --card <card_path> --output-dir browser/
+    --manifest` — rendering the one approved card live and refreshing the teaser
+    grid so it appears on the homepage. Returns (returncode, detail): rc 0 means
+    the card is live; non-zero carries the stderr tail for the publish banner.
+    """
+    python = python or sys.executable
+    build_site_path = Path(build_site_path)
+
+    def _run(card_path):
+        cmd = [
+            python, str(build_site_path),
+            '--card', str(card_path),
+            '--output-dir', str(output_dir),
+            '--manifest',
+        ]
+        proc = subprocess.run(cmd, capture_output=True, text=True)
+        if proc.returncode == 0:
+            return 0, 'ok'
+        tail = (proc.stderr or proc.stdout or '').strip().splitlines()
+        return proc.returncode, (tail[-1] if tail else f'exit {proc.returncode}')
+
+    return _run
 
 
 # --- Auth ---------------------------------------------------------------
@@ -286,6 +363,300 @@ def _card_html(record):
     """
 
 
+# ========================================================================
+# Piece 4 — Review Ready section (the card-factory PUBLISH gate)
+# ========================================================================
+#
+# The slug-review surface above adjudicates AMBIGUOUS identity into the spine
+# (review_queue.promote writes a slug — an identity decision). This section is a
+# different gate in kind: a clean-resolved/minted card the factory has already
+# BUILT (work_queue state review_ready), awaiting the human's one in-the-loop
+# touch — render it live, yes/no (work_queue.mark_published — a publish decision).
+#
+# Three orthogonal facts about one slug converge here for that decision, each
+# read from its authoritative home:
+#   - BUILD state   work_queue.load_by_state('review_ready')  (the list itself)
+#   - CONTENT       the assembled card.json at record['card_path']  (the preview)
+#   - PROVENANCE    the spine entry skus.json[slug]  (source / minted_needs_review)
+# This is not three copies of one fact; it's the one place all three meet.
+
+
+def _load_card(card_path):
+    """Load an assembled card.json from a work_queue record's card_path.
+
+    Returns the parsed dict, or None if the path is missing/unreadable/corrupt —
+    a built card whose artifact we can't read is publish-disabled (option 2),
+    surfaced with the reason, never a 500 and never silently published.
+    """
+    if not card_path:
+        return None
+    try:
+        return json.loads(Path(card_path).read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return None
+
+
+def _spine_entry(slug):
+    """The spine (skus.json) entry for a slug, or None if absent / spine module
+    unavailable. The provenance join: build state lives in work_queue, identity
+    and provenance live here. A review_ready slug missing from the spine is the
+    publish-disabled integrity case (option 2)."""
+    if not _HAS_SKUS:
+        return None
+    try:
+        return skus_registry.load_registry().get('skus', {}).get(slug)
+    except (OSError, ValueError):
+        return None
+
+
+def _provenance_trace(entry):
+    """Render the machine-mint provenance trace from a spine entry.
+
+    The robust treatment (Lee, 2026-06-30): not just a badge but a visible note
+    pulling the mint specifics, so a foul card is traceable to its mint at a
+    glance. A 'resolved' entry (hand-curated / tapped slug) gets a quiet trusted
+    marker; a 'generated' (machine-minted) entry gets a loud badge PLUS the
+    trace: source, the eBay-derived category, and — the spec's explicit 'look
+    harder' trigger — a flag when category fell back to '' on an unknown eBay
+    category id. The four frozen entries lack the provenance fields entirely, so
+    .get() reads them as the trusted default ('resolved' / False).
+    """
+    source = entry.get('source', 'resolved')
+    needs_review = entry.get('minted_needs_review', False)
+    category = entry.get('category', '')
+    cat_id = (entry.get('identity', {}) or {}).get('ebay_category_id', '')
+
+    if source != 'generated' and not needs_review:
+        # Hand-curated / tapped identity — the trusted historical path.
+        return ('<div class="prov trusted">'
+                '<span class="provbadge ok">curated identity</span>'
+                '</div>')
+
+    # Machine-minted: badge + the trace that makes a foul card traceable.
+    rows = [
+        f'<li><b>source</b>: {_esc(source)} '
+        '<span class="provhint">(slug minted by resolve_slug from '
+        'demand-discovered vendor/model)</span></li>',
+        f'<li><b>eBay category id</b>: {_esc(cat_id) or "—"}</li>',
+    ]
+    # The spec's loud "look harder" trigger: category empty on a mint means the
+    # eBay category id didn't map to controlled vocab — the card has no category.
+    if not category:
+        rows.append(
+            '<li class="provalert"><b>category fell back to empty</b> — the eBay '
+            'category id did not map to controlled vocab; this card has NO '
+            'category. Verify the product type before publishing.</li>')
+    else:
+        rows.append(f'<li><b>category</b>: {_esc(category)} '
+                    '<span class="provhint">(derived from eBay, not hand-tagged)'
+                    '</span></li>')
+
+    return (
+        '<div class="prov minted">'
+        '<span class="provbadge minted">machine-minted · look harder</span>'
+        '<ul class="provtrace">' + ''.join(rows) + '</ul>'
+        '</div>'
+    )
+
+
+def _ready_card_html(record):
+    """One review_ready work_queue record rendered as a publish-gate card.
+
+    Preview built from the assembled card.json (CONTENT) joined to the spine
+    entry (PROVENANCE). If the card.json is unreadable OR the slug is missing
+    from the spine, the card renders publish-DISABLED with the reason shown —
+    visible so Lee sees what's stuck and why, but barred from going live without
+    a readable artifact and an identity behind it (option 2). Reject stays
+    available regardless: a card you can't publish you can still decline.
+    """
+    slug = record.get('slug', '')
+    card = _load_card(record.get('card_path'))
+    entry = _spine_entry(slug)
+
+    # Gate the publish action: need both a readable card AND a spine entry.
+    blockers = []
+    if card is None:
+        blockers.append('assembled card.json is missing or unreadable')
+    if entry is None:
+        blockers.append('no spine entry — identity/provenance unavailable')
+    publishable = not blockers
+
+    ident = (card or {}).get('identity', {}) or {}
+    title = (ident.get('display_name')
+             or record.get('label') or slug or '<untitled>')
+    brand_model = ' · '.join(
+        p for p in (ident.get('brand', ''), ident.get('model', '')) if p)
+    cat_line = ' / '.join(
+        p for p in (ident.get('category', ''), ident.get('subcategory', '')) if p)
+    image = ident.get('image_thumb', '')
+
+    pricing = (card or {}).get('pricing', {}) or {}
+    new_usd = pricing.get('current_new_usd') or 0
+    price_line = (f'${new_usd:,.2f}' if new_usd
+                  else 'no live price — “check current price” CTA on card')
+
+    fresh = (card or {}).get('freshness', {}) or {}
+    src_count = fresh.get('source_count', 0)
+    build_model = fresh.get('build_model', '')
+    conf = ((card or {}).get('confidence', {}) or {}).get('overall', '')
+
+    img_html = (
+        f'<img class="thumb" src="{_esc(image)}" alt="" loading="lazy">'
+        if image else '<div class="thumb noimg">no image</div>')
+
+    prov_html = _provenance_trace(entry) if entry is not None else (
+        '<div class="prov missing">'
+        '<span class="provbadge alert">no provenance</span>'
+        '<ul class="provtrace"><li class="provalert">'
+        'slug absent from the spine — cannot verify identity or mint origin'
+        '</li></ul></div>')
+
+    blocker_html = ''
+    if blockers:
+        items = ''.join(f'<li>{_esc(b)}</li>' for b in blockers)
+        blocker_html = (
+            f'<div class="blocked">Publish disabled: <ul>{items}</ul>'
+            'Fix the integrity issue (rebuild the card / restore the spine '
+            'entry) — or reject if the build is genuinely bad.</div>')
+
+    if publishable:
+        publish_form = (
+            '<form class="promote" method="post" action="/admin/publish">'
+            f'<input type="hidden" name="slug" value="{_esc(slug)}">'
+            '<button type="submit" class="go">Publish live</button>'
+            '</form>')
+    else:
+        publish_form = ('<button type="button" class="go disabled" disabled '
+                        'title="resolve the integrity blocker first">'
+                        'Publish live</button>')
+
+    reject_opts = ''.join(
+        f'<option value="{_esc(r)}">{_esc(r)}</option>'
+        for r in (work_queue.CARD_REJECT_REASONS if _HAS_WORK_QUEUE else ()))
+
+    return f"""
+    <article class="card ready">
+      <div class="preview">
+        {img_html}
+        <div class="meta">
+          <h2>{_esc(title)}</h2>
+          <div class="sub">{_esc(brand_model)}</div>
+          <div class="price">{_esc(price_line)}</div>
+          <div class="ids">
+            <span class="cat">{_esc(cat_line)}</span>
+            <span>{_esc(src_count)} sources</span>
+            {f'<span>conf: {_esc(conf)}</span>' if conf else ''}
+            {f'<span class="bm">{_esc(build_model)}</span>' if build_model else ''}
+          </div>
+        </div>
+      </div>
+      <div class="adjudication">
+        {prov_html}
+        {blocker_html}
+        {publish_form}
+        <form class="reject" method="post" action="/admin/reject-card">
+          <input type="hidden" name="slug" value="{_esc(slug)}">
+          <label>reject reason
+            <select name="reason">{reject_opts}</select>
+          </label>
+          <button type="submit" class="no">Reject (pipeline bug)</button>
+        </form>
+      </div>
+    </article>
+    """
+
+
+def _cockpit_html():
+    """The factory-health header: work_queue.counts() as queue depths + cap.
+
+    One glance at the build pipeline — how many cards are resolved-and-waiting,
+    building, ready to publish, already promoted, or failed, plus today's build
+    count against the cap. Reads straight off the store the design note
+    earmarked for this. Renders nothing if work_queue is unavailable.
+    """
+    if not _HAS_WORK_QUEUE:
+        return ''
+    try:
+        c = work_queue.counts()
+    except (OSError, ValueError):
+        return ''
+    cells = [
+        ('resolved', c.get('resolved', 0)),
+        ('building', c.get('building', 0)),
+        ('review ready', c.get('review_ready', 0)),
+        ('promoted', c.get('promoted', 0)),
+        ('failed', c.get('failed', 0)),
+    ]
+    stat_html = ''.join(
+        f'<div class="stat"><span class="n">{_esc(n)}</span>'
+        f'<span class="k">{_esc(k)}</span></div>'
+        for k, n in cells)
+    built = c.get('built_today', 0)
+    return (
+        '<section class="cockpit">'
+        f'{stat_html}'
+        f'<div class="stat cap"><span class="n">{_esc(built)}</span>'
+        '<span class="k">built today</span></div>'
+        '</section>')
+
+
+def _failed_panel_html():
+    """Collapsed pipeline-health panel: work_queue.load_by_state('failed').
+
+    Distinct from the rejected cards — a `failed` record is a build that CRASHED
+    (build_card.py exhausted retries), a mechanical pipeline-health signal, not a
+    content-quality judgment. Collapsed by default (it's a diagnostic, not the
+    daily flow); each row shows slug, attempts, and the last error tail.
+    """
+    if not _HAS_WORK_QUEUE:
+        return ''
+    try:
+        failed = work_queue.load_by_state('failed')
+    except (OSError, ValueError):
+        return ''
+    if not failed:
+        return ''
+    rows = ''.join(
+        f'<tr><td class="fslug">{_esc(r.get("slug",""))}</td>'
+        f'<td class="fatt">{_esc(r.get("build_attempts",0))}</td>'
+        f'<td class="ferr">{_esc(r.get("last_error","") or "")}</td></tr>'
+        for r in failed)
+    return (
+        f'<details class="failed-panel"><summary>{len(failed)} failed build(s) '
+        '— pipeline health (build crashes, not rejects)</summary>'
+        '<table class="ftable"><thead><tr><th>slug</th><th>attempts</th>'
+        '<th>last error</th></tr></thead><tbody>'
+        f'{rows}</tbody></table></details>')
+
+
+def _review_ready_section_html():
+    """The Review Ready section: cockpit + built cards awaiting publish.
+
+    Leads the page (the daily publish flow — what Lee touches most). Renders the
+    cockpit header, then one publish-gate card per review_ready record, then the
+    collapsed failed panel. Empty state is explicit so an empty factory reads as
+    'nothing to publish', not a broken page.
+    """
+    if not _HAS_WORK_QUEUE:
+        return ''
+    try:
+        ready = work_queue.load_by_state('review_ready')
+    except (OSError, ValueError):
+        ready = []
+    cockpit = _cockpit_html()
+    if ready:
+        cards = ''.join(_ready_card_html(r) for r in ready)
+    else:
+        cards = ('<div class="empty">No cards awaiting publish — the factory has '
+                 'nothing review-ready right now.</div>')
+    return (
+        '<section class="ready-section">'
+        '<h2 class="section-h">Review Ready '
+        '<span class="section-sub">built cards awaiting the publish gate</span></h2>'
+        f'{cockpit}{cards}{_failed_panel_html()}'
+        '</section>')
+
+
 _PAGE = """<!doctype html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,22 +707,83 @@ _PAGE = """<!doctype html>
   button.go {{ background: #15803d; color: #fff; }}
   button.no {{ background: transparent; color: #b91c1c;
               border: 1px solid currentColor; }}
+  button.go.disabled {{ background: color-mix(in srgb, currentColor 20%, transparent);
+              color: color-mix(in srgb, currentColor 50%, transparent);
+              cursor: not-allowed; }}
+
+  /* --- Piece 4: Review Ready section --- */
+  .section-h {{ font-size: 16px; margin: 28px 0 12px; display: flex;
+              align-items: baseline; gap: 10px; }}
+  .section-h.slug {{ margin-top: 40px; padding-top: 20px;
+              border-top: 2px solid color-mix(in srgb, currentColor 14%, transparent); }}
+  .section-sub {{ font-size: 12px; font-weight: 400; opacity: .55; }}
+  .cockpit {{ display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }}
+  .cockpit .stat {{ display: flex; flex-direction: column; align-items: center;
+              padding: 8px 14px; border-radius: 8px; min-width: 64px;
+              background: color-mix(in srgb, currentColor 5%, transparent); }}
+  .cockpit .stat .n {{ font-size: 20px; font-weight: 700;
+              font-variant-numeric: tabular-nums; }}
+  .cockpit .stat .k {{ font-size: 10px; text-transform: uppercase;
+              letter-spacing: .05em; opacity: .6; }}
+  .cockpit .stat.cap {{ background: color-mix(in srgb, #15803d 12%, transparent); }}
+  .card.ready {{ border-left: 3px solid #15803d; }}
+  .bm {{ font-family: ui-monospace, monospace; opacity: .5; }}
+  .prov {{ flex-basis: 100%; }}
+  .provbadge {{ font-size: 11px; font-weight: 700; text-transform: uppercase;
+              letter-spacing: .05em; padding: 3px 8px; border-radius: 999px; }}
+  .provbadge.ok {{ background: color-mix(in srgb, #15803d 14%, transparent);
+              color: #15803d; }}
+  .provbadge.minted {{ background: #fef3c7; color: #78350f; }}
+  .provbadge.alert {{ background: #fde7e7; color: #7f1d1d; }}
+  .provtrace {{ margin: 8px 0 0; padding-left: 18px; font-size: 12px;
+              opacity: .85; }}
+  .provtrace li {{ margin: 2px 0; }}
+  .provhint {{ opacity: .55; }}
+  .provalert {{ color: #7f1d1d; font-weight: 600; }}
+  .blocked {{ flex-basis: 100%; font-size: 13px; color: #7f1d1d;
+              background: #fde7e7; padding: 10px 12px; border-radius: 8px; }}
+  .blocked ul {{ margin: 4px 0; }}
+  .failed-panel {{ margin-top: 24px; font-size: 13px; }}
+  .failed-panel summary {{ cursor: pointer; opacity: .7; }}
+  .ftable {{ width: 100%; border-collapse: collapse; margin-top: 10px;
+              font-size: 12px; }}
+  .ftable th, .ftable td {{ text-align: left; padding: 4px 8px;
+              border-bottom: 1px solid color-mix(in srgb, currentColor 10%, transparent);
+              vertical-align: top; }}
+  .ftable .fslug {{ font-family: ui-monospace, monospace; }}
+  .ftable .ferr {{ opacity: .7; }}
+  .candtable {{ width: 100%; border-collapse: collapse; margin: 8px 0;
+              font-size: 12px; }}
 </style></head>
 <body>
-  <h1>Review Queue</h1>
-  <p class="lead">{count} pending · adjudicate into the skus.json spine or reject upstream</p>
-  {banner}
   {body}
 </body></html>"""
 
 
+_SLUG_SECTION_HEADER = (
+    '<h2 class="section-h slug">Review Queue '
+    '<span class="section-sub">{count} pending · adjudicate ambiguous identity '
+    'into the skus.json spine or reject upstream</span></h2>')
+
+
 def _render_page(banner_html=''):
+    """Render the full /admin page: Review Ready (publish gate) leads, the slug
+    Review Queue (identity adjudication) follows, the failed panel sits inside
+    Review Ready as a collapsed health signal. A banner (from a POST outcome)
+    renders above both sections."""
+    ready_section = _review_ready_section_html()
+
     pending = review_queue.load_pending()
     if pending:
-        body = ''.join(_card_html(r) for r in pending)
+        slug_cards = ''.join(_card_html(r) for r in pending)
     else:
-        body = '<div class="empty">Queue is empty — nothing awaiting review.</div>'
-    page = _PAGE.format(count=len(pending), banner=banner_html, body=body)
+        slug_cards = ('<div class="empty">Queue is empty — '
+                      'nothing awaiting identity review.</div>')
+    slug_section = (
+        _SLUG_SECTION_HEADER.format(count=len(pending)) + slug_cards)
+
+    body = '<h1>AskMaddi Admin</h1>' + banner_html + ready_section + slug_section
+    page = _PAGE.format(body=body)
     return Response(page, mimetype='text/html')
 
 
@@ -361,9 +793,18 @@ def _banner(kind, msg):
 
 # --- Route registration -------------------------------------------------
 
-def register_admin(app):
+def register_admin(app, render_runner=None):
     """Attach the admin review surface to a Flask app. Called by
-    app_production under the HAS_CAPTURE guard."""
+    app_production under the HAS_CAPTURE guard.
+
+    `render_runner` is the publish-time card renderer, callable(card_path) ->
+    (rc, detail) (rc 0 == card is live). Defaults to the real build_site shell-
+    out; tests inject a fake so the publish gate's auth/state/provenance logic is
+    exercised with no filesystem render. Same injection discipline as the
+    factory's build runner — the route stays pure, the subprocess is swappable.
+    """
+    if render_runner is None:
+        render_runner = build_site_runner()
 
     def _gate():
         """Shared auth preamble. Returns a Response to short-circuit (503 if the
@@ -440,5 +881,78 @@ def register_admin(app):
         return _render_page(_banner(
             'ok', 'Re-resolved to chosen listing — review the refreshed identity, '
                   'then promote through the slug gate.'))
+
+    # --- Piece 4: the card-factory publish gate ------------------------
+
+    @app.route('/admin/publish', methods=['POST'])
+    def admin_publish():
+        """Publish a review_ready card LIVE: render it via build_site, then
+        advance work_queue review_ready -> promoted. The render is the human's
+        one in-the-loop touch; mark_published only runs AFTER a clean render, so
+        a render failure leaves the record review_ready (retry-able), never a
+        promoted state with no live card behind it. Re-asserts the integrity
+        gate server-side (a readable card + a spine entry) so a stale/forged
+        form can't publish a card the page disabled."""
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        if not _HAS_WORK_QUEUE:
+            return _render_page(_banner('err', 'work_queue unavailable'))
+        slug = request.form.get('slug', '').strip()
+        if not slug:
+            return _render_page(_banner('err', 'slug required'))
+        record = work_queue.get(slug)
+        if record is None:
+            return _render_page(_banner('err', f'no work-queue record {slug!r}'))
+        if record.get('state') != 'review_ready':
+            return _render_page(_banner(
+                'err', f'{slug} is {record.get("state")!r}, not review_ready'))
+        # Server-side re-assertion of the option-2 integrity gate.
+        card_path = record.get('card_path')
+        if _load_card(card_path) is None:
+            return _render_page(_banner(
+                'err', f'{slug}: assembled card.json missing/unreadable — '
+                       'cannot publish.'))
+        if _spine_entry(slug) is None:
+            return _render_page(_banner(
+                'err', f'{slug}: no spine entry — identity unavailable, '
+                       'cannot publish.'))
+        # Render live FIRST; only advance state on a clean render.
+        rc, detail = render_runner(card_path)
+        if rc != 0:
+            return _render_page(_banner(
+                'err', f'Render failed for {slug}: {detail} — left review_ready, '
+                       'retry after fixing.'))
+        try:
+            work_queue.mark_published(slug)
+        except (KeyError, ValueError) as e:
+            return _render_page(_banner(
+                'err', f'Rendered live but state advance failed: {e}'))
+        return _render_page(_banner(
+            'ok', f'Published {slug} — card is live.'))
+
+    @app.route('/admin/reject-card', methods=['POST'])
+    def admin_reject_card():
+        """Reject a CLEAN review_ready card the human declines to publish — a
+        content-quality signal routed upstream (work_queue.reject_card with a
+        CARD_REJECT_REASONS code). Distinct from a build CRASH (failed) and from
+        a slug reject (review_queue). Publishes nothing; parks the record in
+        `rejected` as the adjudication log."""
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        if not _HAS_WORK_QUEUE:
+            return _render_page(_banner('err', 'work_queue unavailable'))
+        slug = request.form.get('slug', '').strip()
+        reason = request.form.get('reason', '').strip()
+        if not slug:
+            return _render_page(_banner('err', 'slug required'))
+        try:
+            work_queue.reject_card(slug, reason)
+        except (KeyError, ValueError) as e:
+            # Unknown reason / not review_ready — visible banner, never a 500.
+            return _render_page(_banner('err', str(e)))
+        return _render_page(_banner(
+            'ok', f'Rejected {slug} ({reason}) — routed upstream, not published.'))
 
     return app
