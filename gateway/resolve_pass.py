@@ -53,8 +53,23 @@ import json
 import sys
 from pathlib import Path
 
-import resolve_sku
-import work_queue
+# --- sibling-import bootstrap (cron robustness) -------------------------------
+# resolve_pass is the cron entry point of the emit->resolve chain, invoked across
+# two service users on the spool path. The gateway modules use flat sibling
+# imports (import resolve_sku, import work_queue) — the repo-wide convention,
+# which Python satisfies via sys.path[0] ONLY when the file is run as a direct
+# script (python3 /abs/gateway/resolve_pass.py). It FAILS under `python3 -m
+# gateway.resolve_pass` (repo root goes on the path, not gateway/) and when this
+# module is imported from elsewhere. Putting this file's own directory on
+# sys.path makes the flat imports resolve under every invocation style without
+# changing the convention the other modules rely on. Idempotent (guarded), and a
+# no-op when already first on the path (the direct-script case).
+_HERE = str(Path(__file__).resolve().parent)
+if _HERE not in sys.path:
+    sys.path.insert(0, _HERE)
+
+import resolve_sku       # noqa: E402  (after the path bootstrap above)
+import work_queue        # noqa: E402
 
 
 def load_proposals(path):
