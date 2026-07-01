@@ -23,6 +23,8 @@ import time
 import base64
 import requests
 
+import gtin_extract
+
 EBAY_APP_ID = os.environ.get('EBAY_APP_ID', '')
 EBAY_CERT_ID = os.environ.get('EBAY_CERT_ID', '')
 EBAY_CAMPAIGN_ID = os.environ.get('EBAY_CAMPAIGN_ID', '')
@@ -220,12 +222,23 @@ def _extract_identity(item):
             if not mpn and name in ('mpn', 'manufacturer part number'):
                 mpn = val
 
+    # GTIN extraction (substrate spec step 5). `item` here IS the raw payload
+    # (resolve() stores it as _raw), so the code containers the probe read —
+    # product.gtins / additionalProductIdentities / localizedAspects — are all
+    # reachable directly. extract_gtin returns a canonical GTIN-14 + a full
+    # provenance receipt (every code seen, source, validity, conflict flag).
+    # Lands in identity.gtin / identity.gtin_provenance; the later substrate
+    # migration hoists gtin to the top-level Axis A anchor. Additive, non-breaking.
+    gtin_result = gtin_extract.extract_gtin(item)
+
     return {
         'epid': item.get('epid', '') or product.get('epid', ''),
         'legacy_item_id': item.get('legacyItemId', ''),
         'ebay_category_id': item.get('categoryId', ''),
         'brand': brand,
         'mpn': mpn,
+        'gtin': gtin_result['gtin'],
+        'gtin_provenance': gtin_result['gtin_provenance'],
         'market_title': item.get('title', ''),
         'image': image,
         'price_seen': {
