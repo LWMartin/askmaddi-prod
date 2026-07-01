@@ -1,14 +1,24 @@
 #!/usr/bin/env python3
 """
-secondpass_gtin.py — registry-level GTIN second-pass sweep (substrate step 5b).
+secondpass_gtin.py — registry-level GTIN recovery sweep (substrate step 5b).
 ========================================================================
-Sweeps skus.json for entries where identity.gtin is null/absent and runs the
-eBay second-pass recovery (gtin_secondpass.recover_gtin) on each. This is THE
-production entry point for L2 — a registry-level pass, deliberately NOT a
-hook inside any mint path (see gtin_secondpass module docstring: recursion,
-tap-path latency, review_queue's frozen-identity contract). All three mint
-paths (tap/capture, factory, backfill) converge on the same spine, so one
-sweep heals every path, including future express mints.
+Sweeps skus.json for entries where identity.gtin is null/absent and recovers
+a GTIN with strict provenance precedence:
+
+  1. OWN LISTING FIRST — re-resolve the SKU's own legacy_item_id and read the
+     L1 extraction off its own payload (true first-pass provenance; no gate
+     needed — no cross-listing corroboration is happening). This heals the
+     provenance inversion: pre-substrate-5 entries have null gtin even when
+     their own payload carries one (7/14 measured 2026-06-30).
+  2. SECOND PASS on miss — barren payload, dead listing (used goods sell),
+     or no legacy_item_id: eBay brand+mpn search -> catalog-associated
+     candidates -> 4-clause admission gate (gtin_secondpass.recover_gtin).
+
+This is THE production entry point for L2 — a registry-level pass,
+deliberately NOT a hook inside any mint path (see gtin_secondpass module
+docstring: recursion, tap-path latency, review_queue's frozen-identity
+contract). All three mint paths (tap/capture, factory, backfill) converge on
+the same spine, so one sweep heals every path, including future express mints.
 
 WRITE DISCIPLINE
   - Dry-run by default; --commit to write. Same convention as backfill_skus.
@@ -38,7 +48,7 @@ import gtin_secondpass as sp  # noqa: E402
 import skus_registry  # noqa: E402
 
 # Verdicts that persist a write under --commit.
-WRITE_VERDICTS = (sp.ADMIT, sp.CONFLICT_DROP)
+WRITE_VERDICTS = (sp.OWN_LISTING_L1, sp.ADMIT, sp.CONFLICT_DROP)
 
 
 def null_gtin_tail(skus):
@@ -46,6 +56,31 @@ def null_gtin_tail(skus):
     (no gtin key at all) and L1-null mints. .get() treats them identically."""
     return {slug: e for slug, e in skus.items()
             if not (e.get('identity', {}) or {}).get('gtin')}
+
+
+def recover(entry, *, ebay, max_resolves=5):
+    """Per-SKU recovery: OWN LISTING FIRST, second-pass search only on miss.
+
+    Ordering rationale (provenance inversion, first live sweep 2026-07-01):
+    pre-substrate-5 entries carry null gtin even when their own payload has
+    one; the own listing's L1 GTIN is strictly stronger provenance than a
+    cross-listing recovery and needs no gate. Fall-through cases: barren own
+    payload, dead listing (used goods sell), no legacy_item_id.
+    """
+    ident = entry.get('identity', {}) or {}
+
+    own = sp.recover_own_listing(ident.get('legacy_item_id'), ebay=ebay)
+    if own['verdict'] == sp.OWN_LISTING_L1:
+        own['query'] = None
+        return own
+
+    second = sp.recover_gtin(
+        ident.get('brand'), ident.get('mpn'),
+        model=entry.get('model') or ident.get('market_title'),
+        ebay=ebay, max_resolves=max_resolves)
+    # Keep the own-listing outcome in the report so a fall-through is auditable.
+    second['own_listing'] = own['verdict']
+    return second
 
 
 def run(skus_path='data/skus.json', card=None, commit=False,
@@ -73,25 +108,28 @@ def run(skus_path='data/skus.json', card=None, commit=False,
 
     summary = {}
     for i, (slug, entry) in enumerate(tail.items(), 1):
-        ident = entry.get('identity', {}) or {}
-        res = sp.recover_gtin(
-            ident.get('brand'), ident.get('mpn'),
-            model=entry.get('model') or ident.get('market_title'),
-            ebay=ebay, max_resolves=max_resolves)
+        res = recover(entry, ebay=ebay, max_resolves=max_resolves)
 
         verdict = res['verdict']
         summary.setdefault(verdict.split(':')[0], []).append(slug)
 
         out(f"\n=== [{i}/{len(tail)}] {slug} ===")
-        out(f"    query:   {res['query']!r}")
-        rec = ((res.get('gtin_provenance') or {}).get('recovery') or {})
-        for c in rec.get('candidates', []):
-            if c.get('error'):
-                out(f"      - {c['item_id']}  ERROR {c['error']}")
-            else:
-                out(f"      - epid={c.get('epid')}  gtin={c.get('gtin')}  "
-                    f"src={c.get('chosen_source')}  tok={c.get('token_match')}  "
-                    f"\"{c.get('title', '')}\"")
+        if verdict == sp.OWN_LISTING_L1:
+            prov = res['gtin_provenance'] or {}
+            out(f"    own listing: GTIN {res['gtin']}  src={prov.get('chosen_source')}"
+                f"  conflict={prov.get('conflict')}")
+        else:
+            out(f"    own listing: {res.get('own_listing', '(skipped)')}"
+                f"  ->  second pass")
+            out(f"    query:   {res['query']!r}")
+            rec = ((res.get('gtin_provenance') or {}).get('recovery') or {})
+            for c in rec.get('candidates', []):
+                if c.get('error'):
+                    out(f"      - {c['item_id']}  ERROR {c['error']}")
+                else:
+                    out(f"      - epid={c.get('epid')}  gtin={c.get('gtin')}  "
+                        f"src={c.get('chosen_source')}  tok={c.get('token_match')}  "
+                        f"\"{c.get('title', '')}\"")
         out(f"    VERDICT: {verdict}"
             + (f"  ->  GTIN {res['gtin']}" if res['gtin'] else ""))
 
@@ -110,10 +148,12 @@ def run(skus_path='data/skus.json', card=None, commit=False,
         out(f'  {v:22s} {len(slugs):2d}  {", ".join(slugs)}')
     out('-' * 64)
     n = len(tail)
+    l1 = len(summary.get(sp.OWN_LISTING_L1, []))
     admitted = len(summary.get(sp.ADMIT, []))
     conflicts = len(summary.get(sp.CONFLICT_DROP, []))
-    out(f'Admitted: {admitted}/{n}   (+{conflicts} conflict -> /admin)   '
-        f'residual tail falls to Gemma+title fallback (designed behavior).')
+    out(f'Recovered: {l1} own-listing L1 + {admitted} second-pass of {n}   '
+        f'(+{conflicts} conflict -> /admin)')
+    out('Residual tail falls to Gemma+title fallback (designed behavior).')
     return 0
 
 

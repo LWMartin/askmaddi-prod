@@ -251,7 +251,134 @@ def test_recover_gtin_search_failure_is_verdict_not_raise():
     assert res['gtin'] is None
 
 
-# ─── skus_registry.set_gtin (surgical, upgrade-only, atomic) ─────────────────
+# ─── recover_own_listing (L1-first step) ─────────────────────────────────────
+
+class OwnListingEbay:
+    """resolve()-only fake keyed on the reconstructed v1|legacy|0 id."""
+    def __init__(self, resolves):
+        self.resolves = resolves
+        self.resolve_calls = []
+        self.search_calls = []
+
+    def resolve(self, item_id, customid=None):
+        self.resolve_calls.append(item_id)
+        r = self.resolves[item_id]
+        if isinstance(r, Exception):
+            raise r
+        return r
+
+    def search_candidates(self, query, limit=10):
+        self.search_calls.append(query)
+        return []
+
+
+def test_own_listing_l1_recovers_with_unmodified_l1_provenance_plus_audit():
+    l1_prov = {'chosen_source': 'product.gtins', 'conflict': False,
+               'observations': [{'source': 'product.gtins', 'raw': G_A7IV,
+                                 'gtin14': G_A7IV, 'valid': True,
+                                 'identifier_type': 'GTIN'}]}
+    fake = OwnListingEbay({'v1|555|0': {
+        'identity': {'gtin': G_A7IV, 'gtin_provenance': l1_prov},
+        'affiliate_url': '', '_raw': {}}})
+    res = sp.recover_own_listing('555', ebay=fake)
+    assert res['verdict'] == sp.OWN_LISTING_L1
+    assert res['gtin'] == G_A7IV
+    prov = res['gtin_provenance']
+    # L1 shape unmodified — NOT secondpass-namespaced (same trust as mint)
+    assert prov['chosen_source'] == 'product.gtins'
+    assert prov['observations'] == l1_prov['observations']
+    # additive audit key: backfilled always distinguishable from minted
+    assert prov['recovered_by'] == 'sweep-own-listing'
+    assert prov['recovered_at'].endswith('Z')
+    assert fake.resolve_calls == ['v1|555|0']  # probe's exact reconstruction
+
+
+def test_own_listing_l1_internal_conflict_persists_as_is():
+    # Mint-uniform: an L1 conflict flag rides through untouched.
+    fake = OwnListingEbay({'v1|555|0': {
+        'identity': {'gtin': G_A7IV,
+                     'gtin_provenance': {'chosen_source': 'product.gtins',
+                                         'conflict': True}},
+        'affiliate_url': '', '_raw': {}}})
+    res = sp.recover_own_listing('555', ebay=fake)
+    assert res['verdict'] == sp.OWN_LISTING_L1
+    assert res['gtin_provenance']['conflict'] is True
+
+
+def test_own_listing_bare_and_dead_and_no_legacy():
+    bare = OwnListingEbay({'v1|1|0': {'identity': {'gtin': None},
+                                      'affiliate_url': '', '_raw': {}}})
+    assert sp.recover_own_listing('1', ebay=bare)['verdict'] == sp.OWN_LISTING_BARE
+
+    dead = OwnListingEbay({'v1|2|0': RuntimeError('getItem failed: HTTP 404')})
+    v = sp.recover_own_listing('2', ebay=dead)['verdict']
+    assert v.startswith(sp.OWN_LISTING_DEAD)  # expected path, not an error
+
+    assert sp.recover_own_listing('', ebay=bare)['verdict'] == sp.NO_LEGACY_ID
+    assert sp.recover_own_listing(None, ebay=bare)['verdict'] == sp.NO_LEGACY_ID
+
+
+# ─── sweep recover(): L1-first ordering + fall-through ───────────────────────
+
+def _tool():
+    import sys
+    sys.path.insert(0, 'tools')
+    import secondpass_gtin
+    return secondpass_gtin
+
+
+def test_sweep_own_listing_wins_search_never_called():
+    tool = _tool()
+    fake = OwnListingEbay({'v1|777|0': {
+        'identity': {'gtin': G_A1,
+                     'gtin_provenance': {'chosen_source': 'product.gtins',
+                                         'conflict': False}},
+        'affiliate_url': '', '_raw': {}}})
+    entry = {'model': 'a1', 'identity': {'brand': 'Sony', 'mpn': 'ILCE-1',
+                                         'legacy_item_id': '777'}}
+    res = tool.recover(entry, ebay=fake)
+    assert res['verdict'] == sp.OWN_LISTING_L1
+    assert res['gtin'] == G_A1
+    assert fake.search_calls == []  # gate never consulted; no search paid
+
+
+def test_sweep_falls_through_to_second_pass_on_dead_listing():
+    tool = _tool()
+
+    class Fake:
+        def __init__(self):
+            self.search_calls = []
+
+        def resolve(self, item_id, customid=None):
+            if item_id == 'v1|888|0':          # own listing: sold/ended
+                raise RuntimeError('getItem failed: HTTP 404')
+            return _resolve_payload(G_A7IV, 'product.gtins',
+                                    'Sony a7IV ILCE-7M4', mpn='ILCE-7M4')
+
+        def search_candidates(self, query, limit=10):
+            self.search_calls.append(query)
+            return [{'item_id': 'v1|1|0', 'epid': 'e1', 'title': 'Sony a7IV ILCE-7M4'},
+                    {'item_id': 'v1|2|0', 'epid': 'e2', 'title': 'Sony a7 IV ILCE-7M4'}]
+
+    fake = Fake()
+    entry = {'model': 'a7 IV', 'identity': {'brand': 'Sony', 'mpn': 'ILCE-7M4',
+                                            'legacy_item_id': '888'}}
+    res = tool.recover(entry, ebay=fake)
+    assert res['verdict'] == sp.ADMIT           # second pass ran and admitted
+    assert res['own_listing'].startswith(sp.OWN_LISTING_DEAD)  # auditable fall-through
+    assert fake.search_calls == ['Sony ILCE-7M4']
+
+
+def test_sweep_no_legacy_id_goes_straight_to_second_pass():
+    tool = _tool()
+    fake = FakeEbay(summaries=[], resolves={})
+    entry = {'model': 'F38', 'identity': {'brand': 'Ulanzi', 'mpn': 'F38'}}
+    res = tool.recover(entry, ebay=fake)
+    assert res['own_listing'] == sp.NO_LEGACY_ID
+    assert res['verdict'] == sp.NO_CANDIDATES
+
+
+
 
 @pytest.fixture
 def tmp_registry(tmp_path):

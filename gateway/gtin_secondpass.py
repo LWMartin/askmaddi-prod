@@ -66,6 +66,62 @@ NO_CANDIDATES = "NO-CANDIDATES"                # wire: no catalog-assoc results 
 NO_KEYS = "NO-KEYS"                            # wire: SKU lacks brand and mpn/model
 SEARCH_FAILED = "SEARCH-FAILED"                # wire: Browse search raised
 
+# Own-listing (L1-first) verdicts — the step that runs BEFORE the second pass.
+OWN_LISTING_L1 = "OWN-LISTING-L1"              # own payload carries GTIN: true L1
+OWN_LISTING_BARE = "OWN-LISTING-BARE"          # own payload has no GTIN -> second pass
+OWN_LISTING_DEAD = "OWN-LISTING-DEAD"          # listing ended/gone -> second pass
+NO_LEGACY_ID = "NO-LEGACY-ID"                  # entry lacks legacy_item_id -> second pass
+
+
+def recover_own_listing(legacy_item_id, *, ebay=None):
+    """L1-first step: re-resolve the SKU's OWN listing and read its L1 GTIN.
+
+    WHY THIS EXISTS (provenance inversion, found on the first live sweep):
+    L1 extraction only fires at mint-time, so every entry minted BEFORE
+    substrate-5 landed has a null gtin even when its own listing's payload
+    carries one (the 2026-06-30 probe measured 7/14 such). Recovering those
+    via the second-pass search would stamp 'secondpass:' provenance on SKUs
+    whose strictly-stronger first-pass GTIN is one resolve() away — and would
+    consult the admission gate (built for cross-listing corroboration) where
+    no corroboration is needed. Own listing first; search only when the own
+    payload is genuinely barren.
+
+    The returned provenance is the UNMODIFIED L1 shape from _extract_identity
+    (same listing, same extraction, same trust as a mint-time L1), plus an
+    additive audit key `recovered_by: 'sweep-own-listing'` + timestamp so a
+    backfilled L1 is always distinguishable from a minted one without
+    inventing a third trust tier. An L1-internal conflict flag persists as-is
+    — identical to mint behavior, no special-casing.
+
+    A dead listing (used goods sell; resolve raises) is an expected path,
+    not an error — verdict OWN-LISTING-DEAD, caller falls through to the
+    second pass, which exists for exactly that case.
+
+    Returns {'gtin', 'gtin_provenance', 'verdict'}.
+    """
+    if ebay is None:
+        import ebay_api as ebay  # deferred: keeps module importable creds-free
+
+    if not legacy_item_id:
+        return {'gtin': None, 'gtin_provenance': None, 'verdict': NO_LEGACY_ID}
+
+    item_id = f'v1|{legacy_item_id}|0'  # same reconstruction as the L1 probe
+    try:
+        r = ebay.resolve(item_id)
+    except Exception as e:
+        return {'gtin': None, 'gtin_provenance': None,
+                'verdict': f'{OWN_LISTING_DEAD}: {e}'}
+
+    idn = r.get('identity', {}) or {}
+    gtin = idn.get('gtin')
+    if not gtin:
+        return {'gtin': None, 'gtin_provenance': None, 'verdict': OWN_LISTING_BARE}
+
+    prov = dict(idn.get('gtin_provenance') or {})
+    prov['recovered_by'] = 'sweep-own-listing'
+    prov['recovered_at'] = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
+    return {'gtin': gtin, 'gtin_provenance': prov, 'verdict': OWN_LISTING_L1}
+
 
 def _norm(s):
     """Casefold + strip non-alphanumerics for containment matching.
