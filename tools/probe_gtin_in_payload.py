@@ -26,6 +26,18 @@ import json, os, sys, re
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "gateway"))
 sys.path.insert(0, "gateway")
+# ebay_api reads EBAY_APP_ID / EBAY_CERT_ID from os.environ at MODULE LEVEL, so
+# the gateway/.env must be loaded BEFORE it is imported — otherwise, under a
+# plain shell/cron invocation (no systemd EnvironmentFile), the creds are empty
+# and every resolve() fails "not configured" before eBay is touched. This is the
+# same latent-cron-break env_bootstrap.py was extracted to fix; resolve_pass.py
+# does the identical load. Default path resolves to gateway/.env via the module's
+# own dir, independent of cwd. Fallback-only: a real export/EnvironmentFile wins.
+try:
+    import env_bootstrap
+    _loaded = env_bootstrap.load_dotenv()
+except ImportError:
+    _loaded = []  # absent in some sandbox layouts; ebay_api will report creds-absent
 try:
     import ebay_api
     import skus_registry
@@ -96,6 +108,7 @@ def main():
     reg = json.load(open(skus_path))
     skus = reg.get("skus", reg)
     print(f"# GTIN-in-payload probe — {len(skus)} SKUs in {skus_path}")
+    print(f"# env_bootstrap loaded: {_loaded or '(none — using pre-set env)'}")
     print(f"# EBAY_APP_ID set: {bool(os.environ.get('EBAY_APP_ID'))}\n")
     summary = {}
     for slug, entry in skus.items():
