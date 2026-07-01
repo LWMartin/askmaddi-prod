@@ -154,14 +154,21 @@ def search(query, limit=10, customid=None):
     return results
 
 
-def _search_candidates(query, limit=10):
+def search_candidates(query, limit=10):
     """Identity-resolution search: like search() but rows carry item_id.
 
     The public search() shape is frozen (the frontend depends on it — spec
     decision #4), so this is a SEPARATE path for the search->tap->resolve flow
-    (back-fill, future /ebay/resolve). Rows include the RESTful item_id needed
-    to call resolve(), plus epid/brand where the summary supplies them, so a
-    scorer can rank candidates before paying the per-item resolve() cost.
+    (back-fill, /ebay/resolve, GTIN second-pass). Rows include the RESTful
+    item_id needed to call resolve(), plus epid/brand where the summary
+    supplies them, so a scorer can rank candidates before paying the per-item
+    resolve() cost.
+
+    PROMOTED to public 2026-07-01 (substrate Amendment A build implication):
+    the GTIN second-pass wire is a production caller and must not depend on an
+    underscore-prefixed shape. `_search_candidates` remains as an alias so the
+    existing call sites (resolve_sku, backfill_skus) and duck-typed test
+    doubles are untouched; new code should use this name.
 
     Returns list of dicts: {item_id, title, price, currency, condition, epid, brand}.
     Raises EbayAPIError on failure.
@@ -190,6 +197,12 @@ def _search_candidates(query, limit=10):
             'brand': it.get('brand', ''),
         })
     return out
+
+
+# Back-compat alias (promotion 2026-07-01): existing callers (resolve_sku,
+# backfill_skus) and duck-typed test doubles bind the underscore name. New
+# code uses search_candidates.
+_search_candidates = search_candidates
 
 
 def _extract_identity(item):

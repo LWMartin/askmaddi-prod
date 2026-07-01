@@ -154,3 +154,41 @@ def upsert(slug, entry, path=SKUS_PATH):
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return status
+
+
+def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
+    """Surgically write identity.{gtin, gtin_provenance} for one SKU. UPGRADE-ONLY.
+
+    The GTIN second-pass sweep's writer (substrate Amendment A / step 5b).
+    This exists as a SEPARATE function because upsert() cannot carry a
+    gtin-only change: gtin is deliberately NOT one of the identity
+    idempotency keys (epid, legacy_item_id, mpn), so upsert would return
+    'unchanged' and silently skip the write. Widening upsert's keys would
+    change idempotency semantics for all three mint paths — wrong fix.
+    Spine writes stay in this module (resolve_sku doctrine), so the field
+    writer lives here, not in the sweep tool.
+
+    UPGRADE-ONLY: refuses to touch an entry whose identity.gtin is already
+    non-null. A first-pass (L1) GTIN is never overwritten by a recovered one.
+    `gtin` may be None with a provenance receipt — that persists a
+    CONFLICT-DROP flag for /admin visibility while the anchor stays null
+    (disagreement = CONFLICT, never silent-pick).
+
+    Returns: 'written' | 'skipped-has-gtin' | 'missing-slug'.
+    Atomic via the same _atomic_write as upsert.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    identity = entry.setdefault('identity', {})
+    if identity.get('gtin'):
+        return 'skipped-has-gtin'
+
+    identity['gtin'] = gtin
+    identity['gtin_provenance'] = provenance
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'written'
