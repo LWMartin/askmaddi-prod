@@ -125,16 +125,27 @@ def load_queue(path=WORK_QUEUE_PATH):
 
 
 def _atomic_write(queue, path=WORK_QUEUE_PATH):
-    """Atomic whole-file write (temp in same dir + os.replace).
+    """Atomic whole-file write (temp in same dir + os.replace), GROUP-RW.
 
     Build state is a mutable map (status transitions rewrite a record), so this
     uses temp+replace like skus_registry / review_queue — a reader never observes
     a half-written queue.
+
+    CROSS-USER STORE (found live, 2026-07-02 factory startup): this store is
+    written by BOTH sides of the pipeline-group seam — the factory (phantomops:
+    claim/mark) and the gateway (askmaddi: publish/reject). mkstemp creates
+    temps 0600, and os.replace carries that mode onto the store, so every
+    rewrite by one user would strip the OTHER user's read and blind either the
+    drip or /admin on the next tick. fchmod 0o664 before replace keeps the
+    store group-readable/writable across every rewrite (the data/ dir's setgid
+    bit keeps it in the pipeline group). skus_registry/review_queue don't need
+    this — their stores are written by askmaddi alone.
     """
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent), prefix='.wq-', suffix='.tmp')
     try:
+        os.fchmod(fd, 0o664)
         with os.fdopen(fd, 'w', encoding='utf-8') as fh:
             json.dump(queue, fh, indent=2, ensure_ascii=False)
             fh.write('\n')

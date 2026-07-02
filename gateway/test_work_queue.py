@@ -309,3 +309,16 @@ def test_set_seed_urls_missing_slug(tmp_path):
     path = _seedable_queue(tmp_path)
     assert wq.set_seed_urls('nope', '/x.json',
                                     path=path) == 'missing-slug'
+
+
+def test_atomic_write_keeps_store_group_rw(tmp_path):
+    """Cross-user store contract (2026-07-02 live find): every rewrite must
+    leave the file group-readable/writable, or the OTHER pipeline-group user
+    (factory<->gateway) goes blind on the next tick. mkstemp's 0600 must not
+    leak through os.replace."""
+    import os, stat
+    path = tmp_path / 'work_queue.json'
+    wq.enroll('s1', 'L', 'lens', path=path)          # first write
+    wq.claim_next(path=path)                          # a rewrite
+    mode = stat.S_IMODE(os.stat(path).st_mode)
+    assert mode & 0o060 == 0o060, oct(mode)           # group r+w survive rewrites
