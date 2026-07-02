@@ -52,10 +52,11 @@ WRITE_VERDICTS = (sp.OWN_LISTING_L1, sp.ADMIT, sp.CONFLICT_DROP)
 
 
 def null_gtin_tail(skus):
-    """Entries whose identity.gtin is falsy — covers BOTH pre-L1 entries
-    (no gtin key at all) and L1-null mints. .get() treats them identically."""
+    """Entries whose GTIN anchor is falsy — covers pre-L1 entries (no gtin key
+    at all), L1-null mints, and both spine shapes (the accessor reads the
+    substrate top-level anchor first, identity.gtin as old-shape fallback)."""
     return {slug: e for slug, e in skus.items()
-            if not (e.get('identity', {}) or {}).get('gtin')}
+            if not skus_registry.get_gtin(e)}
 
 
 def recover(entry, *, ebay, max_resolves=5):
@@ -69,7 +70,9 @@ def recover(entry, *, ebay, max_resolves=5):
     """
     ident = entry.get('identity', {}) or {}
 
-    own = sp.recover_own_listing(ident.get('legacy_item_id'), ebay=ebay)
+    own = sp.recover_own_listing(
+        skus_registry.get_marketplace_id(entry, 'ebay_legacy_item_id'),
+        ebay=ebay)
     if own['verdict'] == sp.OWN_LISTING_L1:
         own['query'] = None
         return own

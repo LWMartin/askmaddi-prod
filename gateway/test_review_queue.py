@@ -142,7 +142,7 @@ def test_promote_writes_spine_via_upsert(queue_path, skus_path):
     # The spine now carries the entry under the AUTHORIZED slug.
     spine = skus_registry.load_registry(skus_path)['skus']
     assert 'sony-a7iv' in spine
-    assert spine['sony-a7iv']['identity']['epid'] == 'EP123'
+    assert spine['sony-a7iv']['marketplace_ids']['ebay_epid'] == 'EP123'
     assert spine['sony-a7iv']['vendor'] == 'Sony'
 
 

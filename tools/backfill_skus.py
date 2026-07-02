@@ -391,7 +391,7 @@ def backfill_card(slug, card, use_gemma=False, limit=10, override=None):
         slug=slug,
         vendor=vendor,
         model=model,
-        category=category,
+        facet=category,
         contamination_key=CONTAMINATION_KEY.get(slug, slug),
         resolved=resolved,
     )

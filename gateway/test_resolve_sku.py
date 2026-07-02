@@ -173,8 +173,8 @@ def test_route_confident_writes_spine(skus_path, queue_path, demand_path):
     # The spine now carries the enriched identity for the proposal slug.
     reg = skus_registry.load_registry(skus_path)
     entry = reg['skus']['sony-a7s-iii']
-    assert entry['identity']['legacy_item_id'] == 'v1|100|0'
-    assert entry['category'] == 'body'
+    assert entry['marketplace_ids']['ebay_legacy_item_id'] == 'v1|100|0'
+    assert entry['facet'] == 'body'
     # No review record, no demand event — a clean confident resolve.
     assert not queue_path.exists() or review_queue.load_pending(queue_path) == []
 
@@ -322,7 +322,8 @@ def test_reresolve_then_promote_writes_corrected_identity(skus_path, queue_path)
         qid, 'sony-a7s-iii-kit', skus_path=skus_path, path=queue_path)
     reg = skus_registry.load_registry(skus_path)
     # The CORRECTED identity (candidate 2) is what reached the spine.
-    assert reg['skus']['sony-a7s-iii-kit']['identity']['legacy_item_id'] == 'v1|200|0'
+    assert reg['skus']['sony-a7s-iii-kit']['marketplace_ids'][
+        'ebay_legacy_item_id'] == 'v1|200|0'
 
 
 # ── admin render ────────────────────────────────────────────────────────────
@@ -443,8 +444,8 @@ def test_route_mint_clean_confident_writes_spine_with_provenance(tmp_path, queue
     entry = reg['skus']['canon-r5-ii']
     assert entry['source'] == 'generated'
     assert entry['minted_needs_review'] is True
-    assert entry['category'] == 'body'
-    assert entry['identity']['legacy_item_id'] == 'v1|900|0'
+    assert entry['facet'] == 'body'
+    assert entry['marketplace_ids']['ebay_legacy_item_id'] == 'v1|900|0'
     # No review record — a clean mint goes straight through to the publish gate.
     assert not queue_path.exists() or review_queue.load_pending(queue_path) == []
 
@@ -475,7 +476,7 @@ def test_route_mint_unknown_category_still_writes_but_flags_review(tmp_path, que
     assert out['category'] == ''                  # unknown id -> abstain, no guess
     assert out['minted_needs_review'] is True
     reg = skus_registry.load_registry(skus)
-    assert reg['skus']['dji-rs-4']['category'] == ''
+    assert reg['skus']['dji-rs-4']['facet'] == ''
     assert reg['skus']['dji-rs-4']['minted_needs_review'] is True
 
 

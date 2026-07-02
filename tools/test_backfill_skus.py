@@ -74,7 +74,7 @@ def test_gate_auto_accepts_strong_match(monkeypatch):
     assert review['decision'] == 'auto_accept'
     assert review['chosen']['item_id'] == 'v1|1|0'
     assert entry is not None
-    assert entry['identity']['epid'] == '15042899333'
+    assert entry['marketplace_ids']['ebay_epid'] == '15042899333'
     assert entry['contamination_key'] == 'sony-a7-iv'
 
 
@@ -149,7 +149,7 @@ def test_category_backfill_flagged(monkeypatch):
     _patch(monkeypatch, cands, _resolved())
     entry, review = bf.backfill_card('sigma-35-art-dg-dn-ii', lens_card)
     assert review.get('category_backfilled') == 'lens'
-    assert entry['category'] == 'lens'
+    assert entry['facet'] == 'lens'
 
 
 # ─── 2026-06-23 lesson: coarse-gate + refuse-to-guess (real failure cases) ──

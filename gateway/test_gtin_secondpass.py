@@ -401,7 +401,7 @@ def test_set_gtin_writes_null_and_absent_key_entries(tmp_registry):
     assert skus_registry.set_gtin('sigma-35-art-dg-dn-ii', '00085126340698', prov,
                                   path=tmp_registry) == 'written'
     reg = json.load(open(tmp_registry))
-    assert reg['skus']['sony-a7iv']['identity']['gtin'] == G_A7IV
+    assert reg['skus']['sony-a7iv']['gtin'] == G_A7IV
     assert reg['skus']['sony-a7iv']['identity']['gtin_provenance'] == prov
 
 
@@ -422,9 +422,9 @@ def test_set_gtin_persists_conflict_receipt_with_null_gtin(tmp_registry):
     prov = {'chosen_source': None, 'conflict': True, 'observations': []}
     assert skus_registry.set_gtin('sony-a7iv', None, prov,
                                   path=tmp_registry) == 'written'
-    idn = json.load(open(tmp_registry))['skus']['sony-a7iv']['identity']
-    assert idn['gtin'] is None
-    assert idn['gtin_provenance']['conflict'] is True
+    entry = json.load(open(tmp_registry))['skus']['sony-a7iv']
+    assert skus_registry.get_gtin(entry) is None      # anchor null, both shapes
+    assert entry['identity']['gtin_provenance']['conflict'] is True
 
 
 # ─── adjudicate_gtin: the abstain->human writing half, APPEND-ONLY ───────────
@@ -475,9 +475,9 @@ def test_adjudicate_assign_sets_gtin_appends_event_preserves_receipt(tmp_path):
     assert skus_registry.adjudicate_gtin(
         'pd-tripod', 'assign', gtin='00000000000017',
         path=path) == 'assigned'
-    idn = json.load(open(path))['skus']['pd-tripod']['identity']
-    assert idn['gtin'] == '00000000000017'
-    prov = idn['gtin_provenance']
+    e = json.load(open(path))['skus']['pd-tripod']
+    assert e['gtin'] == '00000000000017'              # top-level Axis A anchor
+    prov = e['identity']['gtin_provenance']
     # receipt intact — nothing overwritten
     assert prov['conflict'] is True
     assert prov['recovery']['verdict'] == 'CONFLICT_DROP'

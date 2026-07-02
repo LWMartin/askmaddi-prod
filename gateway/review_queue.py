@@ -315,7 +315,7 @@ def promote(queue_id, override_slug, *, skus_path=skus_registry.SKUS_PATH,
         slug=override_slug,
         vendor=vendor,
         model=model,
-        category=record['category'],
+        facet=record['category'],
         contamination_key=record['contamination_key'],
         resolved={
             'identity': record['identity'],

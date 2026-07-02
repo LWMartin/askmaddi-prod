@@ -31,7 +31,7 @@ def _resolved(epid='15042899333', legacy='123456789012', mpn='ILCE-7M4',
 
 def _entry(**kw):
     return reg.build_entry(
-        slug='sony-a7iv', vendor='Sony', model='A7 IV', category='body',
+        slug='sony-a7iv', vendor='Sony', model='A7 IV', facet='body',
         contamination_key='sony-a7-iv', resolved=_resolved(**kw),
     )
 
@@ -48,7 +48,7 @@ def test_upsert_creates(tmp_path):
     assert status == 'created'
     data = json.loads(p.read_text())
     assert 'sony-a7iv' in data['skus']
-    assert data['skus']['sony-a7iv']['identity']['epid'] == '15042899333'
+    assert data['skus']['sony-a7iv']['marketplace_ids']['ebay_epid'] == '15042899333'
     assert data['skus']['sony-a7iv']['contamination_key'] == 'sony-a7-iv'
 
 
@@ -70,7 +70,7 @@ def test_upsert_updates_on_identity_change(tmp_path):
     status = reg.upsert('sony-a7iv', _entry(epid='99999999999'), path=p)
     assert status == 'updated'
     data = json.loads(p.read_text())
-    assert data['skus']['sony-a7iv']['identity']['epid'] == '99999999999'
+    assert data['skus']['sony-a7iv']['marketplace_ids']['ebay_epid'] == '99999999999'
 
 
 def test_upsert_two_skus_coexist(tmp_path):
@@ -78,7 +78,7 @@ def test_upsert_two_skus_coexist(tmp_path):
     reg.upsert('sony-a7iv', _entry(), path=p)
     lens = reg.build_entry(
         slug='sigma-35-art-dg-dn-ii', vendor='Sigma', model='35mm f/1.4 DG DN Art II',
-        category='lens', contamination_key='sigma-35-art-dg-dn-ii',
+        facet='lens', contamination_key='sigma-35-art-dg-dn-ii',
         resolved=_resolved(epid='22222', legacy='888', mpn='340969', title='Sigma 35'),
     )
     reg.upsert('sigma-35-art-dg-dn-ii', lens, path=p)

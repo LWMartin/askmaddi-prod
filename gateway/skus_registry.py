@@ -72,29 +72,98 @@ def _atomic_write(registry, path=SKUS_PATH):
             os.unlink(tmp)
 
 
+# ── Substrate shape accessors (Axis A/B, migration-tolerant) ───────────────
+#
+# The substrate migration hoists identity.gtin -> entry.gtin (Axis A anchor),
+# identity.{epid,legacy_item_id} -> marketplace_ids.*, category -> facet, and
+# identity.ebay_category_id -> marketplace_categories.* (spec:
+# maddi-product-substrate, migration note). These accessors read the NEW shape
+# first and fall back to the old one, so every reader stays correct across the
+# pull-lag window and over a mixed registry (new-shape mints landing before
+# migrate_substrate.py runs on the box). WRITERS are strictly new-shape; only
+# reads tolerate both. Once the live spine is migrated and verified, the
+# fallbacks are dead code that can be retired in a later cleanup.
+
+def get_gtin(entry):
+    """The Axis A identity anchor. New shape: entry.gtin; old: identity.gtin."""
+    if 'gtin' in entry:
+        return entry.get('gtin')
+    return (entry.get('identity') or {}).get('gtin')
+
+
+def get_facet(entry):
+    """The authored role vocab (body/lens/support/...). New: facet; old: category."""
+    if 'facet' in entry:
+        return entry.get('facet')
+    return entry.get('category')
+
+
+def get_marketplace_id(entry, key):
+    """A marketplace identity shadow. `key` in {'ebay_epid',
+    'ebay_legacy_item_id', 'amazon_asin'}. Old-shape fallback maps to the
+    identity-block names (epid / legacy_item_id) or affiliate.amazon_asin."""
+    mids = entry.get('marketplace_ids')
+    if isinstance(mids, dict):
+        return mids.get(key)
+    if key == 'amazon_asin':
+        return (entry.get('affiliate') or {}).get('amazon_asin')
+    old = {'ebay_epid': 'epid', 'ebay_legacy_item_id': 'legacy_item_id'}[key]
+    return (entry.get('identity') or {}).get(old)
+
+
+def get_marketplace_category(entry, key='ebay_category_id'):
+    """A marketplace classification shadow (Axis B demoted evidence)."""
+    mcats = entry.get('marketplace_categories')
+    if isinstance(mcats, dict):
+        return mcats.get(key)
+    return (entry.get('identity') or {}).get(key)
+
+
 def _same_identity(a, b):
     """True if two entries carry the same canonical identity (idempotency check).
 
     Compares the stable identity keys — epid + legacy_item_id + mpn. price_seen
     and resolved_at are expected to drift between resolves of the same item and
-    are NOT part of identity; comparing them would defeat idempotency.
+    are NOT part of identity; comparing them would defeat idempotency. Reads
+    through the substrate accessors so old-shape and new-shape entries of the
+    same product compare equal (upsert stays idempotent across the migration).
     """
-    ai, bi = a.get('identity', {}), b.get('identity', {})
-    keys = ('epid', 'legacy_item_id', 'mpn')
-    return all(ai.get(k, '') == bi.get(k, '') for k in keys)
+    def _mpn(e):
+        return (e.get('identity') or {}).get('mpn', '')
+    return (get_marketplace_id(a, 'ebay_epid') == get_marketplace_id(b, 'ebay_epid')
+            and get_marketplace_id(a, 'ebay_legacy_item_id')
+                == get_marketplace_id(b, 'ebay_legacy_item_id')
+            and _mpn(a) == _mpn(b))
 
 
-def build_entry(slug, vendor, model, category, contamination_key,
+def build_entry(slug, vendor, model, facet, contamination_key,
                 resolved, amazon_asin=None,
                 source='resolved', minted_needs_review=False):
-    """Assemble one skus.json entry from a resolve() result.
+    """Assemble one skus.json entry from a resolve() result — SUBSTRATE SHAPE.
 
     `resolved` is the dict returned by ebay_api.resolve():
       {'identity': {...}, 'affiliate_url': ..., '_raw': ...}
-    The entry persists the lossless identity block + the affiliate/editorial
-    bridges. `_raw` is intentionally NOT persisted into skus.json (it's large
-    and the schema fields already capture what downstream needs); callers that
-    want it can archive it separately.
+    The entry persists the identity block + the affiliate/editorial bridges.
+    `_raw` is intentionally NOT persisted into skus.json (it's large and the
+    schema fields already capture what downstream needs); callers that want it
+    can archive it separately.
+
+    SUBSTRATE (spec: maddi-product-substrate; formerly `category`, now `facet`
+    — verbatim vocab, renamed param, three call sites updated):
+      Axis A — `gtin` hoisted to the top-level anchor (from _extract_identity's
+        write into resolved identity; null if unresolved). `gtin_provenance`
+        STAYS in the identity block: the anchor is canonical, the receipt is
+        evidence, and the architecture demotes evidence deliberately.
+        identity.{epid, legacy_item_id} land in `marketplace_ids` as demoted
+        per-marketplace shadows; affiliate.amazon_asin is mirrored there
+        (affiliate block itself unchanged — it serves the affiliate flow).
+      Axis B — `facet` is the authored role vocab; `unspsc` starts null until
+        the Gemma mapper backfills; identity.ebay_category_id lands in
+        `marketplace_categories`.
+      `needs_review` — the substrate's per-entry contract: any unmapped anchor
+        (gtin null | unspsc null) forces true. Distinct from the slug-level
+        SlugResolution.needs_review and from minted_needs_review, which keep
+        their existing meanings.
 
     PROVENANCE (minting wire, 2026-06-30):
       source : 'resolved' | 'generated'
@@ -106,23 +175,38 @@ def build_entry(slug, vendor, model, category, contamination_key,
         publish review surfaces this so Lee knows to look harder at a machine-
         minted card before it goes live.
       minted_needs_review : bool
-        True only on the mint path (a generated slug, or a mint whose category
+        True only on the mint path (a generated slug, or a mint whose facet
         came back unknown). Rides into the entry so the /admin publish view can
         badge it. The publish gate is the air-gap review; this flag tells the
         reviewer WHICH cards are machine-originated. The four frozen entries lack
         the field entirely -> read as the trusted default (False) via .get().
     """
     identity = dict(resolved.get('identity', {}))
+    gtin = identity.pop('gtin', None)
+    marketplace_ids = {
+        'ebay_epid': identity.pop('epid', ''),
+        'ebay_legacy_item_id': identity.pop('legacy_item_id', ''),
+        'amazon_asin': amazon_asin,
+    }
+    marketplace_categories = {
+        'ebay_category_id': identity.pop('ebay_category_id', ''),
+    }
+    unspsc = None
     return {
         'contamination_key': contamination_key,
         'vendor': vendor,
         'model': model,
-        'category': category,
+        'gtin': gtin,
+        'marketplace_ids': marketplace_ids,
+        'unspsc': unspsc,
+        'facet': facet,
+        'marketplace_categories': marketplace_categories,
         'identity': identity,
         'affiliate': {
             'ebay_epn_url': resolved.get('affiliate_url', ''),
             'amazon_asin': amazon_asin,
         },
+        'needs_review': gtin is None or unspsc is None,
         'source': source,
         'minted_needs_review': minted_needs_review,
         'resolved_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
@@ -157,7 +241,7 @@ def upsert(slug, entry, path=SKUS_PATH):
 
 
 def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
-    """Surgically write identity.{gtin, gtin_provenance} for one SKU. UPGRADE-ONLY.
+    """Surgically write the GTIN anchor + its receipt for one SKU. UPGRADE-ONLY.
 
     The GTIN second-pass sweep's writer (substrate Amendment A / step 5b).
     This exists as a SEPARATE function because upsert() cannot carry a
@@ -168,11 +252,17 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     Spine writes stay in this module (resolve_sku doctrine), so the field
     writer lives here, not in the sweep tool.
 
-    UPGRADE-ONLY: refuses to touch an entry whose identity.gtin is already
-    non-null. A first-pass (L1) GTIN is never overwritten by a recovered one.
-    `gtin` may be None with a provenance receipt — that persists a
-    CONFLICT-DROP flag for /admin visibility while the anchor stays null
-    (disagreement = CONFLICT, never silent-pick).
+    SUBSTRATE SHAPE: the anchor is written to the TOP-LEVEL `gtin` (Axis A);
+    the receipt goes to identity.gtin_provenance (evidence layer). On a
+    not-yet-migrated entry this yields a legal mixed shape the accessors read
+    correctly, and migrate_substrate.py normalizes on its pass.
+
+    UPGRADE-ONLY: refuses to touch an entry whose gtin anchor is already
+    non-null (read through get_gtin, so an old-shape identity.gtin blocks the
+    write exactly as a new-shape anchor does). A first-pass (L1) GTIN is never
+    overwritten by a recovered one. `gtin` may be None with a provenance
+    receipt — that persists a CONFLICT-DROP flag for /admin visibility while
+    the anchor stays null (disagreement = CONFLICT, never silent-pick).
 
     ADJUDICATION-TERMINAL: also refuses an entry whose provenance carries an
     `adjudications` event (see adjudicate_gtin). A dismissed conflict has
@@ -190,13 +280,14 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
         return 'missing-slug'
 
     identity = entry.setdefault('identity', {})
-    if identity.get('gtin'):
+    if get_gtin(entry):
         return 'skipped-has-gtin'
     existing_prov = identity.get('gtin_provenance')
     if isinstance(existing_prov, dict) and existing_prov.get('adjudications'):
         return 'skipped-adjudicated'
 
-    identity['gtin'] = gtin
+    entry['gtin'] = gtin
+    identity.pop('gtin', None)      # single anchor location, no stale shadow
     identity['gtin_provenance'] = provenance
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
@@ -249,7 +340,7 @@ def adjudicate_gtin(slug, action, gtin=None, reason=None, actor='admin',
 
     identity = entry.setdefault('identity', {})
     prov = identity.get('gtin_provenance')
-    if (identity.get('gtin') or not isinstance(prov, dict)
+    if (get_gtin(entry) or not isinstance(prov, dict)
             or prov.get('conflict') is not True):
         return 'not-in-conflict'
     if prov.get('adjudications'):
@@ -266,7 +357,8 @@ def adjudicate_gtin(slug, action, gtin=None, reason=None, actor='admin',
         if not gtin or gtin not in evidenced:
             return 'gtin-not-evidenced'
         event['gtin'] = gtin
-        identity['gtin'] = gtin          # the null->value upgrade, human path
+        entry['gtin'] = gtin            # the null->value upgrade, human path
+        identity.pop('gtin', None)      # single anchor location (substrate)
     else:  # dismiss
         if reason not in DISMISS_REASONS:
             return 'bad-reason'

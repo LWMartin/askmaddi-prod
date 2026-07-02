@@ -451,10 +451,10 @@ def test_gtin_resolve_assign_roundtrip(client, isolated_store):
     body = resp.get_data(as_text=True)
     assert 'Assigned 00850004509715' in body
     assert 'GTIN Conflicts' not in body            # resolved -> gone from page
-    idn = json.loads(isolated_store['skus'].read_text())[
-        'skus']['peak-design-travel-tripod']['identity']
-    assert idn['gtin'] == '00850004509715'
-    prov = idn['gtin_provenance']
+    entry = json.loads(isolated_store['skus'].read_text())[
+        'skus']['peak-design-travel-tripod']
+    assert entry['gtin'] == '00850004509715'          # top-level Axis A anchor
+    prov = entry['identity']['gtin_provenance']       # receipt stays evidence-side
     assert prov['recovery']['verdict'] == 'CONFLICT_DROP'   # receipt intact
     assert prov['adjudications'][0]['action'] == 'assign'
 

@@ -423,8 +423,9 @@ def _provenance_trace(entry):
     """
     source = entry.get('source', 'resolved')
     needs_review = entry.get('minted_needs_review', False)
-    category = entry.get('category', '')
-    cat_id = (entry.get('identity', {}) or {}).get('ebay_category_id', '')
+    category = skus_registry.get_facet(entry) or '' if skus_registry else ''
+    cat_id = (skus_registry.get_marketplace_category(entry) or ''
+              if skus_registry else '')
 
     if source != 'generated' and not needs_review:
         # Hand-curated / tapped identity — the trusted historical path.
@@ -804,7 +805,7 @@ def _gtin_conflicts():
     out = []
     for slug, entry in sorted(skus.items()):
         identity = entry.get('identity') if isinstance(entry, dict) else None
-        if not isinstance(identity, dict) or identity.get('gtin'):
+        if not isinstance(identity, dict) or skus_registry.get_gtin(entry):
             continue
         prov = identity.get('gtin_provenance')
         if not isinstance(prov, dict) or prov.get('conflict') is not True:
