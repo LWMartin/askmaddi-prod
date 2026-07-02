@@ -269,3 +269,148 @@ def test_reject_bad_reason_banner(client):
     # still pending — a malformed reject changed nothing
     assert any(r['queue_id'] == rec['queue_id']
                for r in review_queue.load_pending())
+
+
+# ── GTIN conflict receipts: read-only Axis A abstain rendering ──────────────
+#
+# Fixtures modeled on the two live receipt families the first sweep persisted:
+# an L1-internal conflict (own listing's observations disagree — the regional
+# EAN/UPC case) and an L2 CONFLICT_DROP (admission gate saw >=2 catalog
+# candidates on distinct GTINs — the Peak Design variant case).
+
+def _l1_conflict_prov():
+    return {
+        'chosen_source': 'product.gtins',
+        'conflict': True,
+        'observations': [
+            {'source': 'product.gtins', 'identifier_type': 'EAN',
+             'raw': '4548736128338', 'gtin14': '04548736128338',
+             'valid': True},
+            {'source': 'aspect', 'identifier_type': 'UPC',
+             'raw': '027242923355', 'gtin14': '00027242923355',
+             'valid': True},
+        ],
+    }
+
+
+def _l2_conflict_prov():
+    return {
+        'chosen_source': None,
+        'conflict': True,
+        'observations': [
+            {'source': 'secondpass:candidate', 'identifier_type': 'GTIN',
+             'raw': '00850004509715', 'gtin14': '00850004509715',
+             'valid': True, 'item_id': 'v1|111|0', 'epid': 'EP1'},
+            {'source': 'secondpass:candidate', 'identifier_type': 'GTIN',
+             'raw': '00850004509722', 'gtin14': '00850004509722',
+             'valid': True, 'item_id': 'v1|222|0', 'epid': 'EP2'},
+        ],
+        'recovery': {
+            'method': 'ebay-secondpass',
+            'query': 'Peak Design TT-CB-5-150-1',
+            'verdict': 'CONFLICT_DROP',
+            'recovered_at': '2026-07-01T18:00:00Z',
+            'n_candidates': 3,
+            'n_gtin_bearing': 2,
+            'distinct_gtins': ['00850004509715', '00850004509722'],
+            'model_token': 'TT-CB-5-150-1',
+            'candidates': [
+                {'item_id': 'v1|111|0', 'epid': 'EP1',
+                 'gtin': '00850004509715', 'chosen_source': 'product.gtins',
+                 'title': 'Peak Design Travel Tripod Carbon',
+                 'token_match': True},
+                {'item_id': 'v1|222|0', 'epid': 'EP2',
+                 'gtin': '00850004509722', 'chosen_source': 'product.gtins',
+                 'title': 'Peak Design Travel Tripod Aluminum',
+                 'token_match': True},
+                {'item_id': 'v1|333|0', 'epid': '',
+                 'gtin': None, 'chosen_source': None,
+                 'title': 'tripod bag only', 'token_match': False,
+                 'error': 'resolve timeout'},
+            ],
+        },
+    }
+
+
+def _spine_with(isolated_store, slug, identity):
+    spine = json.loads(isolated_store['skus'].read_text())
+    spine['skus'][slug] = {'identity': identity}
+    isolated_store['skus'].write_text(json.dumps(spine))
+
+
+def test_no_conflicts_no_section(client):
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'GTIN Conflicts' not in body
+
+
+def test_l1_conflict_renders_observations(client, isolated_store):
+    _spine_with(isolated_store, 'canon-r5',
+                {'vendor': 'canon', 'model': 'R5', 'gtin': None,
+                 'gtin_provenance': _l1_conflict_prov()})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'GTIN Conflicts' in body
+    assert 'canon-r5' in body
+    assert 'L1 own-listing' in body
+    assert '04548736128338' in body and '00027242923355' in body
+    assert 'product.gtins' in body and 'aspect' in body
+    assert '2 distinct GTINs' in body
+
+
+def test_l2_conflict_renders_gate_receipt(client, isolated_store):
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': None, 'gtin_provenance': _l2_conflict_prov()})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'L2 second-pass' in body
+    assert 'CONFLICT_DROP' in body
+    assert 'Peak Design TT-CB-5-150-1' in body        # the query
+    assert '00850004509715' in body and '00850004509722' in body
+    assert 'resolve timeout' in body                   # errored candidate kept
+    assert 'TT-CB-5-150-1' in body                     # model token shown
+
+
+def test_adjudicated_entry_drops_out(client, isolated_store):
+    # set_gtin's upgrade-only write IS the resolution: gtin present -> no render
+    prov = _l2_conflict_prov()
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': '00850004509715', 'gtin_provenance': prov})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'GTIN Conflicts' not in body
+
+
+def test_non_conflict_provenance_not_rendered(client, isolated_store):
+    prov = _l1_conflict_prov()
+    prov['conflict'] = False
+    _spine_with(isolated_store, 'sony-a7iv',
+                {'vendor': 'sony', 'model': 'a7iv', 'gtin': None,
+                 'gtin_provenance': prov})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'GTIN Conflicts' not in body
+
+
+def test_conflict_receipt_fields_escaped(client, isolated_store):
+    prov = _l1_conflict_prov()
+    prov['observations'][0]['raw'] = '<script>alert(1)</script>'
+    _spine_with(isolated_store, 'hostile-sku',
+                {'vendor': '<b>v</b>', 'model': 'm', 'gtin': None,
+                 'gtin_provenance': prov})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert '<script>alert(1)</script>' not in body
+    assert '&lt;script&gt;' in body
+    assert '<b>v</b>' not in body
+
+
+def test_malformed_provenance_skipped_not_500(client, isolated_store):
+    _spine_with(isolated_store, 'broken-a',
+                {'vendor': 'x', 'model': 'y', 'gtin': None,
+                 'gtin_provenance': 'not-a-dict'})
+    _spine_with(isolated_store, 'broken-b',
+                {'vendor': 'x', 'model': 'y', 'gtin': None,
+                 'gtin_provenance': {'conflict': True}})  # no observations
+    resp = client.get('/admin', headers=_auth())
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    # non-dict skipped entirely; empty-evidence conflict still renders a card
+    assert 'broken-a' not in body
+    assert 'broken-b' in body

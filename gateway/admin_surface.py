@@ -754,6 +754,10 @@ _PAGE = """<!doctype html>
   .ftable .ferr {{ opacity: .7; }}
   .candtable {{ width: 100%; border-collapse: collapse; margin: 8px 0;
               font-size: 12px; }}
+  .card.conflictcard {{ border-left: 3px solid #b91c1c; }}
+  .gtinchip {{ font-family: ui-monospace, monospace; font-size: 12px;
+              padding: 2px 6px; border-radius: 6px;
+              background: color-mix(in srgb, #b91c1c 10%, transparent); }}
 </style></head>
 <body>
   {body}
@@ -764,6 +768,152 @@ _SLUG_SECTION_HEADER = (
     '<h2 class="section-h slug">Review Queue '
     '<span class="section-sub">{count} pending · adjudicate ambiguous identity '
     'into the skus.json spine or reject upstream</span></h2>')
+
+
+_GTIN_SECTION_HEADER = (
+    '<h2 class="section-h slug">GTIN Conflicts '
+    '<span class="section-sub">{count} receipt(s) · Axis A abstains — '
+    'evidence preserved, human judgment pending</span></h2>')
+
+
+# --- GTIN conflict receipts (substrate-5b, read-only this pass) ----------
+
+def _gtin_conflicts():
+    """Spine entries carrying an unresolved GTIN conflict receipt.
+
+    A conflict receipt is `identity.gtin_provenance.conflict == True` with
+    `identity.gtin` still null — the persisted output of either layer's
+    abstain path (L1: the listing's own observations disagree; L2: the
+    admission gate's CONFLICT_DROP, >=2 catalog candidates on distinct GTINs).
+    An entry whose gtin is later set (set_gtin is upgrade-only, so that write
+    IS the adjudication) drops out of this filter naturally — resolution
+    semantics without a status field.
+
+    Defensive by construction: a malformed provenance block (non-dict, missing
+    keys) is skipped, never a 500 — this is a render of receipts, not a
+    validator of them.
+    """
+    if skus_registry is None:
+        return []
+    try:
+        skus = skus_registry.load_registry().get('skus', {})
+    except (OSError, ValueError):
+        return []
+    out = []
+    for slug, entry in sorted(skus.items()):
+        identity = entry.get('identity') if isinstance(entry, dict) else None
+        if not isinstance(identity, dict) or identity.get('gtin'):
+            continue
+        prov = identity.get('gtin_provenance')
+        if not isinstance(prov, dict) or prov.get('conflict') is not True:
+            continue
+        out.append((slug, identity, prov))
+    return out
+
+
+def _gtin_distinct(prov):
+    """The disagreeing GTIN set, layer-appropriately.
+
+    L2 receipts carry the gate's own `recovery.distinct_gtins`; L1 receipts
+    derive it the same way the extractor's conflict flag did — distinct valid
+    normalized codes across observations.
+    """
+    recovery = prov.get('recovery')
+    if isinstance(recovery, dict) and recovery.get('distinct_gtins'):
+        return [g for g in recovery['distinct_gtins'] if g]
+    return sorted({o.get('gtin14') for o in prov.get('observations', ())
+                   if isinstance(o, dict) and o.get('valid') and o.get('gtin14')})
+
+
+def _gtin_l1_evidence_html(prov):
+    """L1 evidence: every observation, in discovery order — source, raw,
+    normalized GTIN-14, check-digit validity. The extractor's promise was
+    'auditable without re-running'; this is where that promise is kept."""
+    rows = ''.join(
+        f'<tr><td>{_esc(o.get("source", ""))}</td>'
+        f'<td class="fslug">{_esc(o.get("raw", ""))}</td>'
+        f'<td class="fslug">{_esc(o.get("gtin14", "") or "")}</td>'
+        f'<td>{"valid" if o.get("valid") else "invalid"}</td></tr>'
+        for o in prov.get('observations', ()) if isinstance(o, dict))
+    return (
+        '<table class="ftable"><thead><tr><th>source</th><th>raw</th>'
+        '<th>gtin-14</th><th>check</th></tr></thead>'
+        f'<tbody>{rows}</tbody></table>')
+
+
+def _gtin_l2_evidence_html(prov):
+    """L2 evidence: the admission-gate receipt — query, verdict, timestamp,
+    then every candidate with its clause-relevant facts (gtin, chosen_source,
+    token_match, truncated title, resolve error if any)."""
+    recovery = prov.get('recovery', {})
+    if not isinstance(recovery, dict):
+        return ''
+    head = (
+        '<div class="ids">'
+        f'<span>query <code>{_esc(recovery.get("query", ""))}</code></span>'
+        f'<span>verdict <code>{_esc(recovery.get("verdict", ""))}</code></span>'
+        f'<span>model token <code>{_esc(recovery.get("model_token", ""))}</code></span>'
+        f'<span>{_esc(recovery.get("recovered_at", ""))}</span>'
+        '</div>')
+    rows = ''.join(
+        f'<tr><td class="fslug">{_esc(c.get("item_id", ""))}</td>'
+        f'<td class="fslug">{_esc(c.get("epid", ""))}</td>'
+        f'<td class="fslug">{_esc(c.get("gtin") or "")}</td>'
+        f'<td>{_esc(c.get("chosen_source") or "")}</td>'
+        f'<td>{"yes" if c.get("token_match") else "no"}</td>'
+        f'<td class="ferr">{_esc(c.get("error") or c.get("title", ""))}</td></tr>'
+        for c in recovery.get('candidates', ()) if isinstance(c, dict))
+    table = (
+        '<table class="ftable"><thead><tr><th>item</th><th>epid</th>'
+        '<th>gtin</th><th>source</th><th>token</th><th>title / error</th>'
+        '</tr></thead>'
+        f'<tbody>{rows}</tbody></table>')
+    return head + table
+
+
+def _gtin_conflict_card_html(slug, identity, prov):
+    """One conflict receipt as a read-only evidence card. Layer badge from the
+    receipt's own shape (a `recovery` block only exists on second-pass
+    receipts), the disagreeing GTIN set up front, full evidence table below."""
+    is_l2 = isinstance(prov.get('recovery'), dict)
+    layer = 'L2 second-pass' if is_l2 else 'L1 own-listing'
+    distinct = _gtin_distinct(prov)
+    gtin_chips = ''.join(
+        f'<code class="gtinchip">{_esc(g)}</code>' for g in distinct)
+    vendor = identity.get('vendor', '')
+    model = identity.get('model', '')
+    evidence = (_gtin_l2_evidence_html(prov) if is_l2
+                else _gtin_l1_evidence_html(prov))
+    return (
+        '<div class="card conflictcard">'
+        f'<div class="meta"><h2>{_esc(slug)}</h2>'
+        f'<div class="sub">{_esc(vendor)} {_esc(model)}</div></div>'
+        '<div class="ids" style="margin-top:8px">'
+        f'<span class="badge collision">{_esc(layer)} conflict</span>'
+        f'<span>{len(distinct)} distinct GTINs</span>{gtin_chips}'
+        '</div>'
+        f'{evidence}'
+        '</div>')
+
+
+def _gtin_conflict_section_html():
+    """The GTIN Conflicts section: unresolved Axis A conflict receipts.
+
+    Read-only in this pass — the abstain->human contract's SEEING half.
+    Adjudication (the writing half: a hand-resolved GTIN via set_gtin with
+    admin provenance) is deliberately a separate change; its write semantics
+    are a design decision, not a rendering detail. Renders nothing when there
+    are no receipts — conflicts are exceptional, not daily flow (failed-panel
+    convention, not review-queue convention).
+    """
+    conflicts = _gtin_conflicts()
+    if not conflicts:
+        return ''
+    cards = ''.join(
+        _gtin_conflict_card_html(slug, identity, prov)
+        for slug, identity, prov in conflicts)
+    header = _GTIN_SECTION_HEADER.format(count=len(conflicts))
+    return header + cards
 
 
 def _render_page(banner_html=''):
@@ -782,7 +932,10 @@ def _render_page(banner_html=''):
     slug_section = (
         _SLUG_SECTION_HEADER.format(count=len(pending)) + slug_cards)
 
-    body = '<h1>AskMaddi Admin</h1>' + banner_html + ready_section + slug_section
+    gtin_section = _gtin_conflict_section_html()
+
+    body = ('<h1>AskMaddi Admin</h1>' + banner_html + ready_section
+            + slug_section + gtin_section)
     page = _PAGE.format(body=body)
     return Response(page, mimetype='text/html')
 
