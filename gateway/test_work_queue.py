@@ -272,3 +272,40 @@ def test_corrupt_file_raises(tmp_path):
     p.write_text('{not valid json', encoding='utf-8')
     with pytest.raises(json.JSONDecodeError):
         wq.load_queue(path=p)
+
+
+# ── set_seed_urls: the sourcing seam (hand-curated today, producer tomorrow) ─
+
+def _seedable_queue(tmp_path):
+    path = tmp_path / 'wq.json'
+    wq.enroll('sony-a7s-iii', 'Sony A7S III', 'body', path=path)
+    return path
+
+
+def test_set_seed_urls_on_resolved(tmp_path):
+    path = _seedable_queue(tmp_path)
+    assert wq.set_seed_urls(
+        'sony-a7s-iii', '/var/lib/askmaddi-pipeline/seeds/sony-a7s-iii.json',
+        path=path) == 'set'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['seed_urls'].endswith('sony-a7s-iii.json')
+    assert rec['seeds_set_at']
+    assert rec['state'] == 'resolved'          # attach does not advance state
+
+
+def test_set_seed_urls_replaces_and_refuses_past_resolved(tmp_path):
+    path = _seedable_queue(tmp_path)
+    wq.set_seed_urls('sony-a7s-iii', '/a.json', path=path)
+    assert wq.set_seed_urls('sony-a7s-iii', '/b.json',
+                                    path=path) == 'set'     # replace ok
+    wq.claim_next(path=path)                        # -> building
+    assert wq.set_seed_urls('sony-a7s-iii', '/c.json',
+                                    path=path) == 'not-resolved'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['seed_urls'] == '/b.json'                    # in-flight inputs intact
+
+
+def test_set_seed_urls_missing_slug(tmp_path):
+    path = _seedable_queue(tmp_path)
+    assert wq.set_seed_urls('nope', '/x.json',
+                                    path=path) == 'missing-slug'

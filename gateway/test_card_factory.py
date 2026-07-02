@@ -208,3 +208,40 @@ def test_build_card_runner_failure_detail(tmp_path, monkeypatch):
         {'slug': 's', 'label': 'L', 'category': 'body'})
     assert rc == 2
     assert 'schema invalid' in detail
+
+
+# ── out_root: the cross-user card spool seam (decision 2026-06-30) ──────────
+
+def test_runner_out_root_threads_spool_to_subprocess_and_card_path(tmp_path, monkeypatch):
+    """The record's card_path and build_card's --out MUST be the same root —
+    /admin previews record['card_path']; a divergence is an empty gate."""
+    captured = {}
+
+    def fake_run(cmd, **kw):
+        captured['cmd'] = cmd
+        class R: returncode, stderr, stdout = 0, '', ''
+        return R()
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root='/var/lib/askmaddi-cards', enrich_client='mock')
+    rc, card_path, detail = runner({'slug': 'sony-a7s-iii',
+                                    'label': 'Sony A7S III',
+                                    'category': 'body'})
+    assert rc == 0
+    i = captured['cmd'].index('--out')
+    assert captured['cmd'][i + 1] == '/var/lib/askmaddi-cards/sony-a7s-iii'
+    assert card_path == '/var/lib/askmaddi-cards/sony-a7s-iii/card.json'
+
+
+def test_runner_default_keeps_historical_out(tmp_path, monkeypatch):
+    def fake_run(cmd, **kw):
+        assert '--out' not in cmd                     # historical path: no flag
+        class R: returncode, stderr, stdout = 0, '', ''
+        return R()
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py', enrich_client='mock')
+    rc, card_path, _ = runner({'slug': 's1', 'label': 'L', 'category': 'lens'})
+    assert card_path == str(tmp_path / 'out' / 's1' / 'card.json')

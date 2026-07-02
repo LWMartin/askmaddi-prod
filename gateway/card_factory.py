@@ -64,7 +64,7 @@ DEFAULT_BUILD_CARD = (
 
 
 def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
-                      enrich_client='flask', python=None):
+                      enrich_client='flask', python=None, out_root=None):
     """Produce the PRODUCTION runner: a callable(record) -> (rc, card_path, detail).
 
     The returned callable shells out to build_card.py --stop-stage assemble for one
@@ -76,9 +76,20 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
         aliases   -> --alias ...   (repeated)
         mount     -> --mount       (when present)
 
+    `out_root` is the cross-user seam (decision 2026-06-30, factory-drip
+    handoff): the factory runs as phantomops (owner of build_card + deps) but
+    the /admin gate reads as askmaddi, so the assembled card must land in the
+    neutral group-shared spool `/var/lib/askmaddi-cards` — never either user's
+    home. When out_root is set, each build gets `--out <out_root>/<slug>` and
+    card_path is derived from the SAME root the subprocess writes to (the
+    record's card_path is what /admin previews and publishes — divergence here
+    is an invisibly empty gate). When out_root is None the historical default
+    holds: build_card's own out/<sku> next to the script (sandbox, tests,
+    manual runs).
+
     Returns (returncode, card_path, detail):
       returncode  build_card.py's exit code (0 clean, non-zero failure)
-      card_path   out/<sku>/card.json the assembled card landed at (for /admin)
+      card_path   <root>/<sku>/card.json the assembled card landed at (for /admin)
       detail      a short human string (stderr tail on failure, 'ok' on success)
 
     The runner is a CLOSURE over the box-specific config so tick() stays pure.
@@ -88,10 +99,14 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
 
     def _run(record):
         slug = record['slug']
-        # Derive the build root the same way build_card does (default out/<sku>),
-        # so we can report the card path back without parsing build_card output.
-        out_root = build_card_path.parent / 'out' / slug
-        card_path = out_root / 'card.json'
+        if out_root is not None:
+            build_root = Path(out_root) / slug
+        else:
+            # Derive the build root the same way build_card does (default
+            # out/<sku>), so we can report the card path back without parsing
+            # build_card output.
+            build_root = build_card_path.parent / 'out' / slug
+        card_path = build_root / 'card.json'
 
         cmd = [
             python, str(build_card_path),
@@ -101,6 +116,8 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             '--stop-stage', 'assemble',
             '--enrich-client', enrich_client,
         ]
+        if out_root is not None:
+            cmd += ['--out', str(build_root)]
         if record.get('seed_urls'):
             cmd += ['--seed-urls', record['seed_urls']]
         for alias in (record.get('aliases') or []):
@@ -234,6 +251,11 @@ def _build_arg_parser():
                    help="Path to build_card.py.")
     p.add_argument('--askmaddi-prod', default=None,
                    help="Path to askmaddi-prod (passed to build_card render input).")
+    p.add_argument('--out', default=None, dest='out_root',
+                   help="Neutral card spool root (box: /var/lib/askmaddi-cards). "
+                        "Each build writes <out>/<slug>/card.json; the record's "
+                        "card_path points there for the /admin gate. Default: "
+                        "build_card's own out/<slug> (sandbox/manual).")
     p.add_argument('--enrich-client', choices=['flask', 'mock'], default='flask',
                    help="enrich backend: flask (VPS gemma) or mock (offline).")
     p.add_argument('--status', action='store_true',
@@ -253,6 +275,7 @@ def main(argv=None):
         build_card_path=args.build_card,
         askmaddi_prod=args.askmaddi_prod,
         enrich_client=args.enrich_client,
+        out_root=args.out_root,
     )
 
     if args.once:

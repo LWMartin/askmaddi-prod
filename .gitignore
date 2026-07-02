@@ -17,3 +17,8 @@ venv/
 # down; these flow up (via a future reader/dashboard), never through git.
 data/demand_log.jsonl
 data/review_queue.json
+# work_queue.json joined the runtime family 2026-06-30 (first factory enrolls)
+# but was missed here — an untracked store reads as a dirty tree, which has
+# been ABORTING the nightly cron's clean-tree preflight since then (same
+# failure class as the 2026-06-25 .env.bak incident). Found 2026-07-02.
+data/work_queue.json

@@ -202,6 +202,37 @@ def enroll(slug, label, category, *, seed_urls=None, aliases=None, mount=None,
     return record
 
 
+def set_seed_urls(slug, seed_urls_path, *, path=WORK_QUEUE_PATH):
+    """Attach (or replace) a seed-urls file on a record STILL AT `resolved`.
+
+    The seam between sourcing and the drip. enroll() is deliberately
+    idempotent/forward-only, so the 9 mint-discovered records enrolled
+    seed-less (2026-06-30 sourcing gap) cannot receive seeds by re-enrolling.
+    This is the surgical writer for that: hand-curated seed files today, the
+    seed producer's write point tomorrow — one seam, two callers, same
+    contract (build_card consumes `--seed-urls <path>` either way).
+
+    RESOLVED-ONLY: refuses any record past `resolved`. A `building` record's
+    inputs are already in flight; retargeting review_ready/promoted would
+    silently desync the built card from its recorded inputs; a failed record
+    is re-opened deliberately via requeue_failed() FIRST, then re-seeded.
+    Fail-closed with a status, never a partial write.
+
+    Returns: 'set' | 'missing-slug' | 'not-resolved'.
+    """
+    queue = load_queue(path)
+    record = queue.get('queue', {}).get(slug)
+    if record is None:
+        return 'missing-slug'
+    if record.get('state') != 'resolved':
+        return 'not-resolved'
+    record['seed_urls'] = str(seed_urls_path)
+    record['seeds_set_at'] = _now()
+    queue['as_of'] = _today()
+    _atomic_write(queue, path)
+    return 'set'
+
+
 def claim_next(path=WORK_QUEUE_PATH):
     """Atomically claim the oldest `resolved` record and mark it `building`.
 
