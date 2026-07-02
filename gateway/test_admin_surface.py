@@ -103,7 +103,8 @@ def isolated_store(tmp_path, monkeypatch):
                review_queue.get, review_queue.promote, review_queue.reject):
         _repoint(fn, path=qpath, skus_path=spath)
     for fn in (skus_registry.load_registry, skus_registry._atomic_write,
-               skus_registry.upsert):
+               skus_registry.upsert, skus_registry.set_gtin,
+               skus_registry.adjudicate_gtin):
         _repoint(fn, path=spath)
 
     return {'queue': qpath, 'skus': spath}
@@ -414,3 +415,87 @@ def test_malformed_provenance_skipped_not_500(client, isolated_store):
     # non-dict skipped entirely; empty-evidence conflict still renders a card
     assert 'broken-a' not in body
     assert 'broken-b' in body
+
+
+# ── /admin/gtin-resolve: adjudication route (thin boundary over the writer) ──
+
+def test_gtin_resolve_requires_auth(client, isolated_store):
+    resp = client.post('/admin/gtin-resolve',
+                       data={'slug': 'x', 'action': 'assign', 'gtin': 'g'})
+    assert resp.status_code == 401
+
+
+def test_conflict_card_offers_evidenced_assigns_and_dismiss(client,
+                                                            isolated_store):
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': None, 'gtin_provenance': _l2_conflict_prov()})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert '/admin/gtin-resolve' in body
+    assert body.count('name="action" value="assign"') == 2   # one per GTIN
+    assert 'value="00850004509715"' in body
+    assert 'value="00850004509722"' in body
+    assert 'name="action" value="dismiss"' in body
+    assert 'variant_ambiguous' in body                        # reason vocab
+
+
+def test_gtin_resolve_assign_roundtrip(client, isolated_store):
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': None, 'gtin_provenance': _l2_conflict_prov()})
+    resp = client.post('/admin/gtin-resolve', headers=_auth(),
+                       data={'slug': 'peak-design-travel-tripod',
+                             'action': 'assign',
+                             'gtin': '00850004509715'})
+    assert resp.status_code == 200
+    body = resp.get_data(as_text=True)
+    assert 'Assigned 00850004509715' in body
+    assert 'GTIN Conflicts' not in body            # resolved -> gone from page
+    idn = json.loads(isolated_store['skus'].read_text())[
+        'skus']['peak-design-travel-tripod']['identity']
+    assert idn['gtin'] == '00850004509715'
+    prov = idn['gtin_provenance']
+    assert prov['recovery']['verdict'] == 'CONFLICT_DROP'   # receipt intact
+    assert prov['adjudications'][0]['action'] == 'assign'
+
+
+def test_gtin_resolve_dismiss_roundtrip(client, isolated_store):
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': None, 'gtin_provenance': _l2_conflict_prov()})
+    resp = client.post('/admin/gtin-resolve', headers=_auth(),
+                       data={'slug': 'peak-design-travel-tripod',
+                             'action': 'dismiss',
+                             'reason': 'variant_ambiguous'})
+    body = resp.get_data(as_text=True)
+    assert 'Dismissed' in body
+    assert 'GTIN Conflicts' not in body            # dismissed -> gone from page
+    idn = json.loads(isolated_store['skus'].read_text())[
+        'skus']['peak-design-travel-tripod']['identity']
+    assert idn['gtin'] is None
+    assert idn['gtin_provenance']['adjudications'][0][
+        'reason'] == 'variant_ambiguous'
+
+
+def test_gtin_resolve_unevidenced_gtin_banner_no_write(client, isolated_store):
+    _spine_with(isolated_store, 'peak-design-travel-tripod',
+                {'vendor': 'peak-design', 'model': 'travel-tripod',
+                 'gtin': None, 'gtin_provenance': _l2_conflict_prov()})
+    resp = client.post('/admin/gtin-resolve', headers=_auth(),
+                       data={'slug': 'peak-design-travel-tripod',
+                             'action': 'assign',
+                             'gtin': '00099999999999'})
+    body = resp.get_data(as_text=True)
+    assert 'gtin-not-evidenced' in body
+    assert 'GTIN Conflicts' in body                # still pending on the page
+    idn = json.loads(isolated_store['skus'].read_text())[
+        'skus']['peak-design-travel-tripod']['identity']
+    assert idn['gtin'] is None
+
+
+def test_gtin_resolve_bad_inputs_banner_not_500(client, isolated_store):
+    for data in ({'slug': '', 'action': 'assign'},
+                 {'slug': 'nope', 'action': 'assign', 'gtin': 'g'},
+                 {'slug': 'nope', 'action': 'frobnicate'}):
+        resp = client.post('/admin/gtin-resolve', headers=_auth(), data=data)
+        assert resp.status_code == 200

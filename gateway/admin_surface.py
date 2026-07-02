@@ -787,7 +787,9 @@ def _gtin_conflicts():
     admission gate's CONFLICT_DROP, >=2 catalog candidates on distinct GTINs).
     An entry whose gtin is later set (set_gtin is upgrade-only, so that write
     IS the adjudication) drops out of this filter naturally — resolution
-    semantics without a status field.
+    semantics without a status field. A DISMISSED receipt (gtin stays null,
+    human ruled no assignable GTIN) drops out on its appended adjudication
+    event — the append-only terminal marker, same discipline.
 
     Defensive by construction: a malformed provenance block (non-dict, missing
     keys) is skipped, never a 500 — this is a render of receipts, not a
@@ -806,6 +808,8 @@ def _gtin_conflicts():
             continue
         prov = identity.get('gtin_provenance')
         if not isinstance(prov, dict) or prov.get('conflict') is not True:
+            continue
+        if prov.get('adjudications'):
             continue
         out.append((slug, identity, prov))
     return out
@@ -871,10 +875,37 @@ def _gtin_l2_evidence_html(prov):
     return head + table
 
 
+def _gtin_adjudication_html(slug, distinct):
+    """The adjudication controls: one assign form per evidenced GTIN (the
+    choice set IS the evidence — no free-text into an identity anchor; the
+    route re-validates server-side, this is presentation not enforcement),
+    plus a dismiss form with the structured reason vocabulary."""
+    assign_forms = ''.join(
+        f'<form method="post" action="/admin/gtin-resolve">'
+        f'<input type="hidden" name="slug" value="{_esc(slug)}">'
+        f'<input type="hidden" name="action" value="assign">'
+        f'<input type="hidden" name="gtin" value="{_esc(g)}">'
+        f'<button class="go" type="submit">assign '
+        f'<code class="gtinchip">{_esc(g)}</code></button></form>'
+        for g in distinct)
+    reason_opts = ''.join(
+        f'<option value="{_esc(r)}">{_esc(r)}</option>'
+        for r in (skus_registry.DISMISS_REASONS if skus_registry else ()))
+    dismiss_form = (
+        '<form method="post" action="/admin/gtin-resolve">'
+        f'<input type="hidden" name="slug" value="{_esc(slug)}">'
+        '<input type="hidden" name="action" value="dismiss">'
+        f'<label>reason<select name="reason">{reason_opts}</select></label>'
+        '<button class="no" type="submit">dismiss — fallback identity</button>'
+        '</form>')
+    return (f'<div class="adjudication">{assign_forms}{dismiss_form}</div>')
+
+
 def _gtin_conflict_card_html(slug, identity, prov):
-    """One conflict receipt as a read-only evidence card. Layer badge from the
-    receipt's own shape (a `recovery` block only exists on second-pass
-    receipts), the disagreeing GTIN set up front, full evidence table below."""
+    """One conflict receipt as an evidence card with adjudication controls.
+    Layer badge from the receipt's own shape (a `recovery` block only exists
+    on second-pass receipts), the disagreeing GTIN set up front, full evidence
+    table below, human ruling forms last — read everything, then decide."""
     is_l2 = isinstance(prov.get('recovery'), dict)
     layer = 'L2 second-pass' if is_l2 else 'L1 own-listing'
     distinct = _gtin_distinct(prov)
@@ -893,18 +924,18 @@ def _gtin_conflict_card_html(slug, identity, prov):
         f'<span>{len(distinct)} distinct GTINs</span>{gtin_chips}'
         '</div>'
         f'{evidence}'
+        f'{_gtin_adjudication_html(slug, distinct)}'
         '</div>')
 
 
 def _gtin_conflict_section_html():
-    """The GTIN Conflicts section: unresolved Axis A conflict receipts.
-
-    Read-only in this pass — the abstain->human contract's SEEING half.
-    Adjudication (the writing half: a hand-resolved GTIN via set_gtin with
-    admin provenance) is deliberately a separate change; its write semantics
-    are a design decision, not a rendering detail. Renders nothing when there
-    are no receipts — conflicts are exceptional, not daily flow (failed-panel
-    convention, not review-queue convention).
+    """The GTIN Conflicts section: unresolved Axis A conflict receipts, each
+    with its full evidence trail and the human ruling controls (assign one of
+    the evidenced GTINs, or dismiss to fallback identity with a structured
+    reason). Resolution is APPEND-ONLY — the receipt is never mutated, the
+    ruling is an event (skus_registry.adjudicate_gtin). Renders nothing when
+    there are no receipts — conflicts are exceptional, not daily flow
+    (failed-panel convention, not review-queue convention).
     """
     conflicts = _gtin_conflicts()
     if not conflicts:
@@ -1107,5 +1138,36 @@ def register_admin(app, render_runner=None):
             return _render_page(_banner('err', str(e)))
         return _render_page(_banner(
             'ok', f'Rejected {slug} ({reason}) — routed upstream, not published.'))
+
+    @app.route('/admin/gtin-resolve', methods=['POST'])
+    def admin_gtin_resolve():
+        """Adjudicate a GTIN conflict receipt — the abstain->human contract's
+        writing half. Delegates entirely to skus_registry.adjudicate_gtin
+        (one gate definition; this route is a thin form boundary, same
+        doctrine as promote/reject). APPEND-ONLY: the receipt survives the
+        ruling intact, the ruling is an event. Every non-success status maps
+        to a visible banner, never a 500 and never a partial write."""
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        if skus_registry is None:
+            return _render_page(_banner('err', 'skus_registry unavailable'))
+        slug = request.form.get('slug', '').strip()
+        action = request.form.get('action', '').strip()
+        gtin = request.form.get('gtin', '').strip() or None
+        reason = request.form.get('reason', '').strip() or None
+        if not slug:
+            return _render_page(_banner('err', 'slug required'))
+        status = skus_registry.adjudicate_gtin(
+            slug, action, gtin=gtin, reason=reason, actor='admin')
+        if status == 'assigned':
+            return _render_page(_banner(
+                'ok', f'Assigned {gtin} to {slug} — receipt preserved, '
+                      'ruling appended.'))
+        if status == 'dismissed':
+            return _render_page(_banner(
+                'ok', f'Dismissed {slug} ({reason}) — falls to fallback '
+                      'identity, ruling appended.'))
+        return _render_page(_banner('err', f'{slug}: {status}'))
 
     return app

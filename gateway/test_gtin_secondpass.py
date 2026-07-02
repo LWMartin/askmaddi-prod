@@ -425,3 +425,143 @@ def test_set_gtin_persists_conflict_receipt_with_null_gtin(tmp_registry):
     idn = json.load(open(tmp_registry))['skus']['sony-a7iv']['identity']
     assert idn['gtin'] is None
     assert idn['gtin_provenance']['conflict'] is True
+
+
+# ─── adjudicate_gtin: the abstain->human writing half, APPEND-ONLY ───────────
+#
+# The receipt is never mutated; the ruling is an event under
+# gtin_provenance.adjudications. set_gtin gains 'skipped-adjudicated' so a
+# machine sweep never clobbers a human ruling (dismiss leaves gtin null,
+# which would otherwise look sweepable).
+
+CONFLICT_PROV = {
+    'chosen_source': None, 'conflict': True,
+    'observations': [],
+    'recovery': {
+        'method': 'ebay-secondpass', 'verdict': 'CONFLICT_DROP',
+        'query': 'q', 'recovered_at': 'T', 'model_token': 'M',
+        'n_candidates': 2, 'n_gtin_bearing': 2,
+        'distinct_gtins': ['00000000000017', '00000000000024'],
+        'candidates': [],
+    },
+}
+
+L1_CONFLICT_PROV = {
+    'chosen_source': 'product.gtins', 'conflict': True,
+    'observations': [
+        {'source': 'product.gtins', 'raw': 'x', 'gtin14': '00000000000017',
+         'valid': True},
+        {'source': 'aspect', 'raw': 'y', 'gtin14': '00000000000024',
+         'valid': True},
+        {'source': 'aspect', 'raw': 'z', 'gtin14': '00000000000031',
+         'valid': False},   # invalid: NOT an assign target
+    ],
+}
+
+
+def _conflict_registry(tmp_path, prov):
+    import copy
+    path = tmp_path / 'skus.json'
+    path.write_text(json.dumps({'as_of': '2026-07-01', 'skus': {
+        'pd-tripod': {'identity': {'gtin': None,
+                                   'gtin_provenance': copy.deepcopy(prov)}},
+        'clean-sku': {'identity': {'gtin': '00013803323114'}},
+    }}))
+    return str(path)
+
+
+def test_adjudicate_assign_sets_gtin_appends_event_preserves_receipt(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'assign', gtin='00000000000017',
+        path=path) == 'assigned'
+    idn = json.load(open(path))['skus']['pd-tripod']['identity']
+    assert idn['gtin'] == '00000000000017'
+    prov = idn['gtin_provenance']
+    # receipt intact — nothing overwritten
+    assert prov['conflict'] is True
+    assert prov['recovery']['verdict'] == 'CONFLICT_DROP'
+    assert prov['recovery']['distinct_gtins'] == CONFLICT_PROV[
+        'recovery']['distinct_gtins']
+    # ruling appended
+    ev = prov['adjudications']
+    assert len(ev) == 1 and ev[0]['action'] == 'assign'
+    assert ev[0]['gtin'] == '00000000000017'
+    assert ev[0]['actor'] == 'admin' and ev[0]['at']
+
+
+def test_adjudicate_assign_rejects_unevidenced_gtin(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'assign', gtin='00099999999999',
+        path=path) == 'gtin-not-evidenced'
+    idn = json.load(open(path))['skus']['pd-tripod']['identity']
+    assert idn['gtin'] is None                     # no partial write
+    assert 'adjudications' not in idn['gtin_provenance']
+
+
+def test_adjudicate_assign_l1_derives_targets_from_valid_observations(tmp_path):
+    path = _conflict_registry(tmp_path, L1_CONFLICT_PROV)
+    # invalid observation's code is not a legal target
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'assign', gtin='00000000000031',
+        path=path) == 'gtin-not-evidenced'
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'assign', gtin='00000000000024',
+        path=path) == 'assigned'
+
+
+def test_adjudicate_dismiss_appends_and_leaves_gtin_null(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'dismiss', reason='variant_ambiguous',
+        path=path) == 'dismissed'
+    idn = json.load(open(path))['skus']['pd-tripod']['identity']
+    assert idn['gtin'] is None
+    ev = idn['gtin_provenance']['adjudications']
+    assert ev[0]['action'] == 'dismiss'
+    assert ev[0]['reason'] == 'variant_ambiguous'
+
+
+def test_adjudicate_dismiss_requires_structured_reason(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'dismiss', reason='because',
+        path=path) == 'bad-reason'
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'dismiss', path=path) == 'bad-reason'
+
+
+def test_adjudicate_one_ruling_per_receipt(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    skus_registry.adjudicate_gtin('pd-tripod', 'dismiss',
+                                  reason='wrong_product', path=path)
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'assign', gtin='00000000000017',
+        path=path) == 'already-adjudicated'
+    ev = json.load(open(path))['skus']['pd-tripod'][
+        'identity']['gtin_provenance']['adjudications']
+    assert len(ev) == 1                            # nothing double-appended
+
+
+def test_adjudicate_preconditions(tmp_path):
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    assert skus_registry.adjudicate_gtin(
+        'nope', 'assign', gtin='x', path=path) == 'missing-slug'
+    assert skus_registry.adjudicate_gtin(
+        'clean-sku', 'assign', gtin='x', path=path) == 'not-in-conflict'
+    assert skus_registry.adjudicate_gtin(
+        'pd-tripod', 'frobnicate', path=path) == 'bad-action'
+
+
+def test_set_gtin_refuses_adjudicated_entry(tmp_path):
+    # A dismissed conflict (gtin null) must be terminal against machine sweeps.
+    path = _conflict_registry(tmp_path, CONFLICT_PROV)
+    skus_registry.adjudicate_gtin('pd-tripod', 'dismiss',
+                                  reason='variant_ambiguous', path=path)
+    assert skus_registry.set_gtin(
+        'pd-tripod', '00000000000017', {'conflict': False},
+        path=path) == 'skipped-adjudicated'
+    idn = json.load(open(path))['skus']['pd-tripod']['identity']
+    assert idn['gtin'] is None                     # ruling stands
+    assert idn['gtin_provenance']['adjudications']  # history intact

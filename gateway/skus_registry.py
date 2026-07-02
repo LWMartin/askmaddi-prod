@@ -174,8 +174,14 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     CONFLICT-DROP flag for /admin visibility while the anchor stays null
     (disagreement = CONFLICT, never silent-pick).
 
-    Returns: 'written' | 'skipped-has-gtin' | 'missing-slug'.
-    Atomic via the same _atomic_write as upsert.
+    ADJUDICATION-TERMINAL: also refuses an entry whose provenance carries an
+    `adjudications` event (see adjudicate_gtin). A dismissed conflict has
+    gtin=null but a human ruling on record — a later machine sweep must not
+    clobber that ruling with a fresh wholesale provenance write. Human
+    judgment is terminal against machine writes; append-only discipline.
+
+    Returns: 'written' | 'skipped-has-gtin' | 'skipped-adjudicated' |
+    'missing-slug'. Atomic via the same _atomic_write as upsert.
     """
     registry = load_registry(path)
     skus = registry.setdefault('skus', {})
@@ -186,9 +192,98 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     identity = entry.setdefault('identity', {})
     if identity.get('gtin'):
         return 'skipped-has-gtin'
+    existing_prov = identity.get('gtin_provenance')
+    if isinstance(existing_prov, dict) and existing_prov.get('adjudications'):
+        return 'skipped-adjudicated'
 
     identity['gtin'] = gtin
     identity['gtin_provenance'] = provenance
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'written'
+
+
+ADJUDICATE_ACTIONS = ('assign', 'dismiss')
+
+DISMISS_REASONS = ('variant_ambiguous', 'wrong_product', 'insufficient_evidence')
+
+
+def adjudicate_gtin(slug, action, gtin=None, reason=None, actor='admin',
+                    path=SKUS_PATH):
+    """Resolve a GTIN conflict receipt by human judgment. APPEND-ONLY.
+
+    The abstain->human contract's writing half. The original conflict receipt
+    (chosen_source, conflict flag, observations, recovery block) is NEVER
+    mutated — resolution is an event appended to `gtin_provenance.adjudications`
+    (list, created on first use). Readers get the full history: what the
+    machine saw, what it refused to decide, and what the human ruled.
+
+    Actions:
+      'assign'  — set identity.gtin to `gtin`. The value MUST be one of the
+                  receipt's evidenced GTINs (the disagreeing set) — a hand
+                  adjudication picks among presented evidence, it does not
+                  introduce a new identity claim. Free-text GTINs are a
+                  different, heavier operation this deliberately does not offer.
+      'dismiss' — leave gtin null with a structured `reason`; the SKU falls to
+                  the substrate's Gemma+title fallback identity (the designed
+                  behavior for genuinely unresolvable cases, e.g. a slug that
+                  is itself ambiguous between two real variants). The event is
+                  the terminal marker: /admin stops rendering it and set_gtin
+                  refuses machine re-writes over it.
+
+    Preconditions (all fail closed with a status, never a partial write):
+      entry exists; identity.gtin is null; provenance is a dict with
+      conflict=True; no prior adjudication event (one ruling per receipt —
+      re-adjudication is a registry-surgery operation, not an /admin one).
+
+    Returns: 'assigned' | 'dismissed' | 'missing-slug' | 'not-in-conflict' |
+    'already-adjudicated' | 'gtin-not-evidenced' | 'bad-action' | 'bad-reason'.
+    """
+    if action not in ADJUDICATE_ACTIONS:
+        return 'bad-action'
+
+    registry = load_registry(path)
+    entry = registry.setdefault('skus', {}).get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    identity = entry.setdefault('identity', {})
+    prov = identity.get('gtin_provenance')
+    if (identity.get('gtin') or not isinstance(prov, dict)
+            or prov.get('conflict') is not True):
+        return 'not-in-conflict'
+    if prov.get('adjudications'):
+        return 'already-adjudicated'
+
+    event = {
+        'action': action,
+        'actor': actor,
+        'at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    }
+
+    if action == 'assign':
+        evidenced = _evidenced_gtins(prov)
+        if not gtin or gtin not in evidenced:
+            return 'gtin-not-evidenced'
+        event['gtin'] = gtin
+        identity['gtin'] = gtin          # the null->value upgrade, human path
+    else:  # dismiss
+        if reason not in DISMISS_REASONS:
+            return 'bad-reason'
+        event['reason'] = reason
+
+    prov.setdefault('adjudications', []).append(event)
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'assigned' if action == 'assign' else 'dismissed'
+
+
+def _evidenced_gtins(prov):
+    """The GTIN set a receipt actually evidences — the only legal assign
+    targets. L2 receipts carry the gate's distinct_gtins; L1 receipts derive
+    from valid observations (same derivation the conflict flag used)."""
+    recovery = prov.get('recovery')
+    if isinstance(recovery, dict) and recovery.get('distinct_gtins'):
+        return {g for g in recovery['distinct_gtins'] if g}
+    return {o.get('gtin14') for o in prov.get('observations', ())
+            if isinstance(o, dict) and o.get('valid') and o.get('gtin14')}
