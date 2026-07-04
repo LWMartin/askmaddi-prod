@@ -110,26 +110,61 @@ except ImportError:
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _BUILD_SITE = _REPO_ROOT / 'tools' / 'build_site.py'
 _BROWSER_OUT = _REPO_ROOT / 'browser'
+_CARDS_DIR = _REPO_ROOT / 'data' / 'cards'
 
 
 def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
-                      python=None):
+                      cards_dir=_CARDS_DIR, python=None):
     """Produce the PRODUCTION publish runner: callable(card_path) -> (rc, detail).
 
-    Shells out to `build_site.py --card <card_path> --output-dir browser/
-    --manifest` — rendering the one approved card live and refreshing the teaser
-    grid so it appears on the homepage. Returns (returncode, detail): rc 0 means
-    the card is live; non-zero carries the stderr tail for the publish banner.
+    PUBLISH MEANS JOINING THE CORPUS, NOT REPLACING IT (found live 2026-07-03,
+    the gate's FIRST real publish): build_site's `--manifest` regenerates
+    cards-manifest.json from only the cards loaded THAT run — correct for
+    `--cards-dir` full rebuilds, destructive composed with `--card`: the first
+    single-card publish shrank the homepage grid to one card (detail pages
+    survived; the manifest is whole-file). The durable shape:
+
+      1. Admit the approved card into data/cards/<card_id>.json — the
+         canonical published corpus (atomic tmp+replace; republish = clean
+         overwrite, naturally idempotent).
+      2. Rebuild from `--cards-dir data/cards/` with `--manifest --sitemap` —
+         the grid always reflects the full corpus, and every publish
+         re-renders all detail pages, propagating the nightly's freshened
+         prices/ASIN registry to the whole site as a side effect.
+
+    Returns (returncode, detail): rc 0 means the card is live; non-zero
+    carries the stderr tail for the publish banner. A card missing card_id
+    fails closed BEFORE touching the corpus.
     """
     python = python or sys.executable
     build_site_path = Path(build_site_path)
+    cards_dir = Path(cards_dir)
 
     def _run(card_path):
+        try:
+            card = json.loads(Path(card_path).read_text(encoding='utf-8'))
+            card_id = card['card_id']
+        except (OSError, ValueError, KeyError) as e:
+            return 1, f'card unreadable or missing card_id: {e}'
+
+        cards_dir.mkdir(parents=True, exist_ok=True)
+        dest = cards_dir / f'{card_id}.json'
+        tmp = cards_dir / f'.{card_id}.json.tmp'
+        try:
+            tmp.write_text(json.dumps(card, indent=2, ensure_ascii=False) + '\n',
+                           encoding='utf-8')
+            os.replace(tmp, dest)
+        except OSError as e:
+            if tmp.exists():
+                tmp.unlink()
+            return 1, f'corpus admit failed: {e}'
+
         cmd = [
             python, str(build_site_path),
-            '--card', str(card_path),
+            '--cards-dir', str(cards_dir),
             '--output-dir', str(output_dir),
             '--manifest',
+            '--sitemap',
         ]
         proc = subprocess.run(cmd, capture_output=True, text=True)
         if proc.returncode == 0:

@@ -499,3 +499,79 @@ def test_gtin_resolve_bad_inputs_banner_not_500(client, isolated_store):
                  {'slug': 'nope', 'action': 'frobnicate'}):
         resp = client.post('/admin/gtin-resolve', headers=_auth(), data=data)
         assert resp.status_code == 200
+
+
+# ── build_site_runner: publish joins the corpus (found live 2026-07-03) ─────
+
+def test_publish_runner_admits_card_and_rebuilds_from_corpus(tmp_path):
+    """The gate's first live publish shrank the homepage to one card:
+    --manifest regenerates from only the cards loaded that run. Publish must
+    ADMIT the card into data/cards/ and rebuild from the whole corpus."""
+    cards_dir = tmp_path / 'cards'
+    cards_dir.mkdir()
+    (cards_dir / 'existing-card.json').write_text(json.dumps(
+        {'card_id': 'existing-card'}))
+    new_card = tmp_path / 'spool' / 'card.json'
+    new_card.parent.mkdir()
+    new_card.write_text(json.dumps({'card_id': 'sony-a7s-iii', 'tier': 't'}))
+
+    captured = {}
+    fake_site = tmp_path / 'build_site.py'
+    fake_site.write_text('')
+
+    import admin_surface as a
+    real_run = a.subprocess.run
+    def fake_run(cmd, **kw):
+        captured['cmd'] = cmd
+        class R: returncode, stderr, stdout = 0, '', ''
+        return R()
+    a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=fake_site,
+                                     output_dir=tmp_path / 'browser',
+                                     cards_dir=cards_dir)
+        rc, detail = runner(str(new_card))
+    finally:
+        a.subprocess.run = real_run
+
+    assert rc == 0
+    # admitted into the corpus, existing member untouched
+    assert (cards_dir / 'sony-a7s-iii.json').exists()
+    assert (cards_dir / 'existing-card.json').exists()
+    # rebuild is corpus-wide, never single-card
+    assert '--cards-dir' in captured['cmd'] and '--card' not in captured['cmd']
+    assert '--manifest' in captured['cmd'] and '--sitemap' in captured['cmd']
+
+
+def test_publish_runner_republish_is_idempotent_overwrite(tmp_path):
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir()
+    src = tmp_path / 'card.json'
+    src.write_text(json.dumps({'card_id': 'x', 'v': 1}))
+    import admin_surface as a
+    real_run = a.subprocess.run
+    a.subprocess.run = lambda cmd, **kw: type('R', (), {
+        'returncode': 0, 'stderr': '', 'stdout': ''})()
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir)
+        runner(str(src))
+        src.write_text(json.dumps({'card_id': 'x', 'v': 2}))
+        rc, _ = runner(str(src))
+    finally:
+        a.subprocess.run = real_run
+    assert rc == 0
+    assert json.loads((cards_dir / 'x.json').read_text())['v'] == 2
+
+
+def test_publish_runner_fails_closed_before_touching_corpus(tmp_path):
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir()
+    bad = tmp_path / 'card.json'
+    bad.write_text(json.dumps({'no_card_id': True}))
+    import admin_surface as a
+    runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                 output_dir=tmp_path / 'o',
+                                 cards_dir=cards_dir)
+    rc, detail = runner(str(bad))
+    assert rc == 1 and 'card_id' in detail
+    assert list(cards_dir.iterdir()) == []          # corpus untouched
