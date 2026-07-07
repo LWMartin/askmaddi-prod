@@ -50,7 +50,20 @@ import work_queue
 
 # Defaults — all tunable via CLI / kwargs. The cap and sleep are deliberately
 # conservative for v1; the point is a steady trickle, not throughput.
-DEFAULT_DAILY_CAP = 12          # cards/day; a steady drip, room to watch quality
+# Mirror of build_card.EXIT_CORPUS_THIN (build_card lives in the phantom-ops
+# workspace — a cross-repo import would couple deploys; the exit code IS the
+# contract, same as rc==0). If build_card ever renumbers, both sides change
+# together via the runbook.
+EXIT_CORPUS_THIN = 3
+
+DEFAULT_DAILY_CAP = 2           # cards/day (was 12 until 2026-07-07). Quality-
+                                # first reframe: 1-2 rich cards/day is the
+                                # service; the YT leg's budget lives in
+                                # build_card's PROFILES (drip ~20 attempts/
+                                # card), so worst case is ~40 jittered
+                                # fetches SPREAD ACROSS A DAY — the bulk era
+                                # did 50 in one sitting. The cap IS the
+                                # politeness budget, not a throughput target.
 DEFAULT_TICK_SLEEP = 300        # seconds between ticks (5 min) when work remains
 DEFAULT_IDLE_SLEEP = 1800       # seconds to sleep when capped or queue-empty (30 min)
 
@@ -64,7 +77,8 @@ DEFAULT_BUILD_CARD = (
 
 
 def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
-                      enrich_client='flask', python=None, out_root=None):
+                      enrich_client='flask', python=None, out_root=None,
+                      yt=False):
     """Produce the PRODUCTION runner: a callable(record) -> (rc, card_path, detail).
 
     The returned callable shells out to build_card.py --stop-stage assemble for one
@@ -126,6 +140,12 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             cmd += ['--mount', record['mount']]
         if askmaddi_prod:
             cmd += ['--askmaddi-prod', str(askmaddi_prod)]
+        if yt:
+            # Stage 1b: paced YT transcript leg into the same triples dir.
+            # Factory-global posture, not per-record — quality-first cards
+            # are what the drip exists to produce. Egress follows PROXY_URL
+            # (inherited env); unset = bare box IP, the honest default.
+            cmd += ['--yt']
 
         proc = subprocess.run(
             cmd, cwd=str(build_card_path.parent),
@@ -152,9 +172,10 @@ def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):
     Outcomes:
       {'action': 'capped',    'remaining': 0}            cap reached for today
       {'action': 'idle',      'remaining': n}            cap left, but queue empty
-      {'action': 'built',     'slug': s, 'card_path': p} clean build -> review_ready
-      {'action': 'retry',     'slug': s, 'detail': d}    build failed, will retry
-      {'action': 'failed',    'slug': s, 'detail': d}    build failed, budget spent
+      {'action': 'built',       'slug': s, 'card_path': p} clean build -> review_ready
+      {'action': 'retry',       'slug': s, 'detail': d}    build failed, will retry
+      {'action': 'failed',      'slug': s, 'detail': d}    build failed, budget spent
+      {'action': 'corpus_thin', 'slug': s, 'detail': d}    floor abstained -> parked
     """
     remaining = work_queue.cap_remaining(cap, path=path)
     if remaining <= 0:
@@ -173,6 +194,12 @@ def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):
         # (mark_review_ready returns the record; persist card_path alongside.)
         _attach_card_path(slug, card_path, path=path)
         return {'action': 'built', 'slug': slug, 'card_path': card_path}
+
+    if rc == EXIT_CORPUS_THIN:
+        # build_card's corpus floor abstained — deterministic verdict, so no
+        # retry (see mark_corpus_thin). Not counted against the daily cap.
+        work_queue.mark_corpus_thin(slug, detail, path=path)
+        return {'action': 'corpus_thin', 'slug': slug, 'detail': detail}
 
     rec, terminal = work_queue.mark_failed_or_retry(slug, detail, path=path)
     return {
@@ -256,6 +283,10 @@ def _build_arg_parser():
                         "Each build writes <out>/<slug>/card.json; the record's "
                         "card_path points there for the /admin gate. Default: "
                         "build_card's own out/<slug> (sandbox/manual).")
+    p.add_argument('--yt', action='store_true',
+                   help='Quality-first: pass --yt to build_card so every drip '
+                        'build runs Stage 1b (paced YouTube transcript leg). '
+                        'Egress follows PROXY_URL from the environment.')
     p.add_argument('--enrich-client', choices=['flask', 'mock'], default='flask',
                    help="enrich backend: flask (VPS gemma) or mock (offline).")
     p.add_argument('--status', action='store_true',
@@ -276,6 +307,7 @@ def main(argv=None):
         askmaddi_prod=args.askmaddi_prod,
         enrich_client=args.enrich_client,
         out_root=args.out_root,
+        yt=args.yt,
     )
 
     if args.once:

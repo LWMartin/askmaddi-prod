@@ -60,7 +60,18 @@ SCHEMA_VERSION = '0.1.0'
 #              judged not good enough). A content-quality signal, NOT a crash.
 # Conflating these would poison the cockpit's analytics: "the factory is breaking"
 # and "the cards aren't good enough" are different problems with different fixes.
-STATES = ('resolved', 'building', 'review_ready', 'promoted', 'failed', 'rejected')
+#
+# A THIRD off-ramp (2026-07-07, corpus-floor doctrine):
+#   corpus_thin — build_card's corpus floor found too little source material to
+#              be worth enriching or gating (EXIT_CORPUS_THIN). Neither a crash
+#              (the pipeline ran clean) nor a human ruling (no card ever
+#              existed): the factory ABSTAINED. A SOURCING signal: this SKU
+#              needs seed-urls and/or the YT transcript leg before retrying.
+#              Terminal without retry — the same corpus re-floors identically,
+#              so retries would burn build budget deterministically for
+#              nothing. Recovery is requeue() after sourcing improves.
+STATES = ('resolved', 'building', 'review_ready', 'promoted', 'failed',
+          'rejected', 'corpus_thin')
 
 # Structured reject reasons for a human-declined clean card — same discipline as
 # review_queue.REJECT_REASONS: a reject is a controlled-vocab BUG REPORT against
@@ -423,7 +434,39 @@ def reject_card(slug, reason, *, path=WORK_QUEUE_PATH):
     return record
 
 
-_REQUEUEABLE = ('failed', 'rejected')
+def mark_corpus_thin(slug, detail, *, path=WORK_QUEUE_PATH):
+    """Park a building record as `corpus_thin` (build_card's floor abstained).
+
+    NO retry path, deliberately: mark_failed_or_retry retries because
+    transient hiccups self-heal across ticks, but a floor verdict is a pure
+    function of the corpus — the same sourcing re-floors identically, so
+    retries would spend the attempt budget on a deterministic outcome. The
+    record parks immediately; requeue() re-opens it once sourcing improves
+    (seed-urls added, YT leg enabled). Does NOT increment built_today — an
+    abstention is not a build.
+
+    Returns the record. Raises KeyError if absent, ValueError if not `building`.
+    """
+    queue = load_queue(path)
+    q = queue.get('queue', {})
+    record = q.get(slug)
+    if record is None:
+        raise KeyError(f"no work-queue record {slug!r}")
+    if record.get('state') != 'building':
+        raise ValueError(
+            f"record {slug!r} is {record.get('state')!r}, not building — "
+            f"only a building record can park corpus_thin."
+        )
+
+    record['state'] = 'corpus_thin'
+    record['last_error'] = str(detail)[:500]
+    record['corpus_thin_at'] = _now()
+    queue['as_of'] = _today()
+    _atomic_write(queue, path)
+    return record
+
+
+_REQUEUEABLE = ('failed', 'rejected', 'corpus_thin')
 
 
 def requeue(slug, *, path=WORK_QUEUE_PATH):
