@@ -1,0 +1,117 @@
+{
+  "card_version": "1.0",
+  "card_id": "sony-a7s-iii",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Sony A7S III",
+    "brand": "Sony",
+    "model": "Sony A7S III",
+    "sku_alt_names": [],
+    "category": "body",
+    "subcategory": "unknown",
+    "year_introduced": null
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {},
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null
+    },
+    "price_updated_at": "2026-07-03T15:30:13.842255+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-07-03T15:30:13.842102+00:00",
+    "last_built": "2026-07-03T15:30:13.842102+00:00",
+    "last_checked": "2026-07-03T15:30:13.842102+00:00",
+    "source_count": 4,
+    "source_types": {
+      "community": 4
+    },
+    "staleness_days": 0,
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {}
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [],
+  "detail_axes": [],
+  "synthesis": {
+    "consensus_paragraph": "",
+    "aspect_breakdown": [],
+    "issue_clusters": []
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "sources": [
+    {
+      "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
+      "source_type": "community",
+      "reviewer": "Unknown",
+      "platform": "web",
+      "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
+      "title": "Sony Alpha 7S III review - Sony's video star still shines",
+      "publication_date": "",
+      "ingested_at": "2026-07-03T15:30:13.842229+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+      "source_type": "community",
+      "reviewer": "Unknown",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+      "title": "Sony A7S III review",
+      "publication_date": "",
+      "ingested_at": "2026-07-03T15:30:13.842237+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
+      "source_type": "community",
+      "reviewer": "Unknown",
+      "platform": "web",
+      "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
+      "title": "Sony A7S III review",
+      "publication_date": "",
+      "ingested_at": "2026-07-03T15:30:13.842240+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+      "source_type": "community",
+      "reviewer": "Unknown",
+      "platform": "web",
+      "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+      "title": "A Review of the Sony a7S III In the Field",
+      "publication_date": "",
+      "ingested_at": "2026-07-03T15:30:13.842244+00:00",
+      "weight": 0.75
+    }
+  ],
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "flask",
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}
