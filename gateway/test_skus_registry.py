@@ -108,3 +108,63 @@ def test_build_entry_drops_raw_from_persisted_entry(tmp_path):
     assert '_raw' not in e['identity']
     assert e['affiliate']['ebay_epn_url'].startswith('https://www.ebay.com/itm/')
     assert e['affiliate']['amazon_asin'] is None
+
+
+# ── set_override + refresh-does-not-clobber (images-on-spine step 5, D3) ─────
+
+def test_set_override_writes_and_rereads(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    status = reg.set_override('sony-a7iv', 'image_thumb',
+                              'https://example.com/hand.jpg', path=p)
+    assert status == 'written'
+    data = json.loads(p.read_text())
+    assert data['skus']['sony-a7iv']['overrides']['image_thumb'] == \
+        'https://example.com/hand.jpg'
+
+
+def test_set_override_missing_slug(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    assert reg.set_override('nope', 'image_thumb', 'x', path=p) == 'missing-slug'
+
+
+def test_set_override_same_value_is_noop_no_rewrite(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    reg.set_override('sony-a7iv', 'subcategory', 'cinema', path=p)
+    mtime = p.stat().st_mtime_ns
+    assert reg.set_override('sony-a7iv', 'subcategory', 'cinema', path=p) == 'no-op'
+    assert p.stat().st_mtime_ns == mtime          # file untouched, upsert discipline
+
+
+def test_set_override_none_clears_and_drops_empty_dict(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    reg.set_override('sony-a7iv', 'image_thumb', 'x', path=p)
+    assert reg.set_override('sony-a7iv', 'image_thumb', None, path=p) == 'cleared'
+    data = json.loads(p.read_text())
+    assert 'overrides' not in data['skus']['sony-a7iv']
+    assert reg.set_override('sony-a7iv', 'image_thumb', None, path=p) == 'no-op'
+
+
+def test_set_override_rejects_bad_field():
+    import pytest
+    with pytest.raises(ValueError):
+        reg.set_override('sony-a7iv', '', 'x')
+
+
+def test_refresh_does_not_clobber_overrides(tmp_path):
+    """D3's construction guarantee: a genuine identity change (new listing)
+    replaces the entry, but the human override layer rides across."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    reg.set_override('sony-a7iv', 'image_thumb', 'https://example.com/hand.jpg',
+                     path=p)
+    # Re-resolve binds a NEW listing -> updated, whole-entry replace path.
+    status = reg.upsert('sony-a7iv', _entry(epid='99999999999'), path=p)
+    assert status == 'updated'
+    data = json.loads(p.read_text())
+    e = data['skus']['sony-a7iv']
+    assert e['marketplace_ids']['ebay_epid'] == '99999999999'   # identity refreshed
+    assert e['overrides']['image_thumb'] == 'https://example.com/hand.jpg'

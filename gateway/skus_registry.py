@@ -234,6 +234,16 @@ def upsert(slug, entry, path=SKUS_PATH):
         return 'unchanged'
 
     status = 'updated' if existing is not None else 'created'
+    if existing is not None:
+        # D3 (images-on-spine): overrides are the HUMAN layer — written only
+        # by /admin set_override, never by resolve. A genuine identity change
+        # replaces the entry wholesale, which without this carry-forward would
+        # silently discard hand corrections. Refresh-proof by construction:
+        # re-resolve rewrites identity.*, never overrides.*.
+        prior_overrides = existing.get('overrides')
+        if prior_overrides and not entry.get('overrides'):
+            entry = dict(entry)
+            entry['overrides'] = prior_overrides
     skus[slug] = entry
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
@@ -292,6 +302,57 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'written'
+
+
+def set_override(slug, field, value, path=SKUS_PATH):
+    """Surgically write one card-identity override field for one SKU (D3).
+
+    The gate's paste-to-replace writer (spec: maddi-images-on-spine). The
+    writable hand-curation layer lives ON THE SPINE as a per-entry
+    `overrides: {}` dict — written ONLY by /admin actions, read by
+    spine_identity() as the top merge layer over the mapped identity. It is
+    a SEPARATE writer for the same reason set_gtin is: upsert cannot carry
+    an override-only change (overrides are deliberately not identity
+    idempotency keys), and resolve must never author this layer.
+
+    Field names are CARD-identity vocabulary (image_thumb, subcategory,
+    year_introduced, ...) — the mapper merges them verbatim, so what the
+    gate writes is exactly what the card build reads.
+
+    `value=None` DELETES the override (the mapper treats None as absent
+    anyway; deleting keeps the spine honest rather than accumulating null
+    tombstones). Deleting the last override drops the empty dict.
+
+    Returns: 'written' | 'cleared' | 'no-op' | 'missing-slug'.
+    Atomic via the same _atomic_write as upsert.
+    """
+    if not field or not isinstance(field, str):
+        raise ValueError('set_override requires a non-empty string field name')
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    overrides = entry.setdefault('overrides', {})
+    if value is None:
+        if field not in overrides:
+            if not overrides:
+                entry.pop('overrides', None)
+            return 'no-op'
+        overrides.pop(field)
+        if not overrides:
+            entry.pop('overrides', None)
+        status = 'cleared'
+    else:
+        if overrides.get(field) == value:
+            return 'no-op'
+        overrides[field] = value
+        status = 'written'
+
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return status
 
 
 ADJUDICATE_ACTIONS = ('assign', 'dismiss')
