@@ -79,7 +79,7 @@ def stores(tmp_path, monkeypatch):
                work_queue.cap_remaining):
         _repoint(monkeypatch, fn, path=wpath)
     for fn in (skus_registry.load_registry, skus_registry._atomic_write,
-               skus_registry.upsert):
+               skus_registry.upsert, skus_registry.set_override):
         _repoint(monkeypatch, fn, path=spath)
 
     return {'work': wpath, 'skus': spath, 'tmp': tmp_path}
@@ -357,3 +357,94 @@ def test_failed_panel_shows_crashed_builds(client, stores):
     assert 'failed build' in body
     assert 'brokenbuild' in body
     assert 'fetch stage 500' in body
+
+
+# ── image on the gate: badge + paste-to-replace (images-on-spine step 6) ────
+
+def test_ready_card_renders_image_source_badge(client, stores):
+    slug = 'sigma-35-art'
+    cp = _card_json(stores, slug)
+    card = json.loads(Path(cp).read_text())
+    card['identity']['image_source'] = 'ebay_catalog'
+    Path(cp).write_text(json.dumps(card))
+    _enroll_ready(stores, slug, card_path=cp)
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'imgsrc ebay_catalog' in body
+    assert '>ebay_catalog<' in body
+
+
+def test_ready_card_renders_override_form(client, stores):
+    _enroll_ready(stores, 'sigma-35-art')
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert '/admin/set-override' in body
+    assert 'name="field" value="image_thumb"' in body
+    assert 'paste replacement image URL' in body
+
+
+def test_pending_note_when_spine_override_differs_from_baked_image(client, stores):
+    slug = 'sigma-35-art'
+    _enroll_ready(stores, slug)
+    reg = json.loads(stores['skus'].read_text())
+    reg['skus'][slug]['overrides'] = {'image_thumb': 'https://example.com/new.jpg'}
+    stores['skus'].write_text(json.dumps(reg))
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 're-assemble to bake it in' in body
+
+
+def test_set_override_writes_spine_and_prompts_reassemble(client, stores):
+    slug = 'sigma-35-art'
+    _enroll_ready(stores, slug)
+    resp = client.post('/admin/set-override', headers=_auth(), data={
+        'slug': slug, 'field': 'image_thumb',
+        'value': 'https://example.com/hand.jpg'})
+    body = resp.get_data(as_text=True)
+    assert 'Override written' in body and 're-assemble' in body
+    reg = json.loads(stores['skus'].read_text())
+    assert reg['skus'][slug]['overrides']['image_thumb'] == \
+        'https://example.com/hand.jpg'
+    # Publish stays behind the gate: nothing rendered, state untouched.
+    assert work_queue.get(slug)['state'] == 'review_ready'
+
+
+def test_set_override_empty_value_clears(client, stores):
+    slug = 'sigma-35-art'
+    _enroll_ready(stores, slug)
+    client.post('/admin/set-override', headers=_auth(), data={
+        'slug': slug, 'field': 'image_thumb', 'value': 'https://example.com/x.jpg'})
+    resp = client.post('/admin/set-override', headers=_auth(), data={
+        'slug': slug, 'field': 'image_thumb', 'value': ''})
+    assert 'Override cleared' in resp.get_data(as_text=True)
+    reg = json.loads(stores['skus'].read_text())
+    assert 'overrides' not in reg['skus'][slug]
+
+
+def test_set_override_rejects_non_whitelisted_field(client, stores):
+    _enroll_ready(stores, 'sigma-35-art')
+    resp = client.post('/admin/set-override', headers=_auth(), data={
+        'slug': 'sigma-35-art', 'field': 'brand', 'value': 'Sneaky'})
+    assert 'not overridable' in resp.get_data(as_text=True)
+    reg = json.loads(stores['skus'].read_text())
+    assert 'overrides' not in reg['skus']['sigma-35-art']
+
+
+def test_set_override_rejects_non_http_image_url(client, stores):
+    _enroll_ready(stores, 'sigma-35-art')
+    resp = client.post('/admin/set-override', headers=_auth(), data={
+        'slug': 'sigma-35-art', 'field': 'image_thumb',
+        'value': 'javascript:alert(1)'})
+    assert 'http(s) URL' in resp.get_data(as_text=True)
+    reg = json.loads(stores['skus'].read_text())
+    assert 'overrides' not in reg['skus']['sigma-35-art']
+
+
+def test_set_override_missing_slug_banner(client, stores):
+    resp = client.post('/admin/set-override', headers=_auth(), data={
+        'slug': 'ghost', 'field': 'image_thumb',
+        'value': 'https://example.com/x.jpg'})
+    assert 'missing-slug' in resp.get_data(as_text=True)
+
+
+def test_set_override_requires_auth(client, stores):
+    resp = client.post('/admin/set-override', data={
+        'slug': 'x', 'field': 'image_thumb', 'value': 'https://e.com/x.jpg'})
+    assert resp.status_code == 401

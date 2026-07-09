@@ -525,6 +525,10 @@ def _ready_card_html(record):
     cat_line = ' / '.join(
         p for p in (ident.get('category', ''), ident.get('subcategory', '')) if p)
     image = ident.get('image_thumb', '')
+    image_source = ident.get('image_source', '')
+    # Live override state from the SPINE (the card.json bakes the state at
+    # assemble time; the spine shows what the NEXT assemble will read).
+    spine_override_img = ((entry or {}).get('overrides') or {}).get('image_thumb', '')
 
     pricing = (card or {}).get('pricing', {}) or {}
     new_usd = pricing.get('current_new_usd') or 0
@@ -537,8 +541,26 @@ def _ready_card_html(record):
     conf = ((card or {}).get('confidence', {}) or {}).get('overall', '')
 
     img_html = (
-        f'<img class="thumb" src="{_esc(image)}" alt="" loading="lazy">'
+        f'<img class="thumb" src="{_esc(image)}" alt="{_esc(title)}" loading="lazy">'
         if image else '<div class="thumb noimg">no image</div>')
+    # Image provenance badge (images-on-spine step 6): where the pick came
+    # from — 'ebay_catalog' (stock shot), 'ebay_listing' (seller photo, the
+    # one-glance "camera on a carpet" check), 'manual' (hand-pasted).
+    if image_source:
+        img_html += (f'<span class="imgsrc {_esc(image_source)}">'
+                     f'{_esc(image_source)}</span>')
+    pending_note = ''
+    if spine_override_img and spine_override_img != image:
+        pending_note = ('<div class="imgpending">override on spine differs '
+                        'from this build — re-assemble to bake it in</div>')
+    override_form = (
+        '<form class="imgoverride" method="post" action="/admin/set-override">'
+        f'<input type="hidden" name="slug" value="{_esc(slug)}">'
+        '<input type="hidden" name="field" value="image_thumb">'
+        '<input type="url" name="value" placeholder="paste replacement image URL" '
+        f'value="{_esc(spine_override_img)}">'
+        '<button type="submit" class="go small">Set image override</button>'
+        '</form>')
 
     prov_html = _provenance_trace(entry) if entry is not None else (
         '<div class="prov missing">'
@@ -588,6 +610,8 @@ def _ready_card_html(record):
       </div>
       <div class="adjudication">
         {prov_html}
+        {pending_note}
+        {override_form}
         {blocker_html}
         {publish_form}
         <form class="reject" method="post" action="/admin/reject-card">
@@ -716,6 +740,18 @@ _PAGE = """<!doctype html>
            flex: 0 0 auto; }}
   .thumb.noimg {{ display: grid; place-items: center; font-size: 11px;
                  opacity: .5; }}
+  .imgsrc {{ display: inline-block; font-size: 10px; padding: 1px 6px;
+            border-radius: 6px; margin-top: 4px; letter-spacing: .02em; }}
+  .imgsrc.ebay_catalog {{ background: #e6f4ea; color: #14532d; }}
+  .imgsrc.ebay_listing {{ background: #fef3c7; color: #713f12; }}
+  .imgsrc.manual {{ background: #e0e7ff; color: #312e81; }}
+  .imgpending {{ font-size: 12px; padding: 6px 10px; border-radius: 8px;
+                background: #fef3c7; color: #713f12; margin-bottom: 6px; }}
+  .imgoverride {{ display: flex; gap: 6px; margin-bottom: 8px; }}
+  .imgoverride input[type=url] {{ flex: 1; font-size: 12px; padding: 4px 8px;
+                border-radius: 6px; border: 1px solid
+                color-mix(in srgb, currentColor 25%, transparent); }}
+  .go.small {{ font-size: 12px; padding: 4px 10px; }}
   .meta h2 {{ font-size: 16px; margin: 0 0 2px; }}
   .sub {{ opacity: .7; font-size: 13px; }}
   .price {{ margin-top: 4px; font-variant-numeric: tabular-nums; }}
@@ -1174,6 +1210,49 @@ def register_admin(app, render_runner=None):
             return _render_page(_banner('err', str(e)))
         return _render_page(_banner(
             'ok', f'Rejected {slug} ({reason}) — routed upstream, not published.'))
+
+    # Card-identity fields the gate may override (images-on-spine step 6).
+    # Deliberately a whitelist: the writer is generic, the ROUTE is not —
+    # expanding the gate's reach is a one-tuple decision, not an open door.
+    OVERRIDE_FIELDS = ('image_thumb',)
+
+    @app.route('/admin/set-override', methods=['POST'])
+    def admin_set_override():
+        """Write one card-identity override to the SPINE (D3's writable
+        layer). Thin form boundary over skus_registry.set_override, same
+        doctrine as reject/gtin-resolve. Writes the spine only — the card
+        bakes it on the NEXT assemble, so the success banner carries the
+        re-assemble prompt. Publish stays behind the gate; this never
+        renders anything live. Empty value CLEARS the override."""
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        if skus_registry is None:
+            return _render_page(_banner('err', 'skus_registry unavailable'))
+        slug = request.form.get('slug', '').strip()
+        field = request.form.get('field', '').strip()
+        value = request.form.get('value', '').strip() or None
+        if not slug:
+            return _render_page(_banner('err', 'slug required'))
+        if field not in OVERRIDE_FIELDS:
+            return _render_page(_banner(
+                'err', f'field {field!r} not overridable from the gate'))
+        if field == 'image_thumb' and value is not None and \
+                not value.startswith(('http://', 'https://')):
+            return _render_page(_banner(
+                'err', 'image override must be an http(s) URL'))
+        status = skus_registry.set_override(slug, field, value)
+        if status == 'written':
+            return _render_page(_banner(
+                'ok', f'Override written: {slug}.{field} — re-assemble '
+                      f'{slug} to bake it into the card, then publish.'))
+        if status == 'cleared':
+            return _render_page(_banner(
+                'ok', f'Override cleared: {slug}.{field} — next assemble '
+                      f'falls back to the spine pick.'))
+        if status == 'no-op':
+            return _render_page(_banner('ok', f'{slug}.{field}: unchanged.'))
+        return _render_page(_banner('err', f'{slug}: {status}'))
 
     @app.route('/admin/gtin-resolve', methods=['POST'])
     def admin_gtin_resolve():
