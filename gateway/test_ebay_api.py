@@ -69,6 +69,39 @@ def test_extract_identity_image_from_product_imageurls_fallback():
     p['product']['imageUrls'] = [{'imageUrl': 'https://i.ebayimg.com/prod.jpg'}]
     idn = ebay_api._extract_identity(p)
     assert idn['image'] == 'https://i.ebayimg.com/prod.jpg'
+    # Fallback case: image WAS the catalog shot, so both fields agree —
+    # downstream source-stamping ('ebay_catalog') derives from the equality.
+    assert idn['image_catalog'] == 'https://i.ebayimg.com/prod.jpg'
+
+
+# ─── image_catalog capture (images-on-spine D4) ─────────────────────────────
+
+def test_extract_identity_captures_both_listing_and_catalog_images():
+    # Both containers present: image keeps the listing photo (precedence
+    # unchanged), image_catalog carries the stock shot alongside it.
+    p = _full_payload()
+    p['product']['imageUrls'] = [{'imageUrl': 'https://i.ebayimg.com/catalog.jpg'}]
+    idn = ebay_api._extract_identity(p)
+    assert idn['image'] == 'https://i.ebayimg.com/x.jpg'
+    assert idn['image_catalog'] == 'https://i.ebayimg.com/catalog.jpg'
+
+
+def test_extract_identity_image_catalog_empty_when_no_product_images():
+    # No product.imageUrls (the _full_payload default): listing photo fills
+    # image, image_catalog stays '' — absence is honest, mapper falls back.
+    idn = ebay_api._extract_identity(_full_payload())
+    assert idn['image'] == 'https://i.ebayimg.com/x.jpg'
+    assert idn['image_catalog'] == ''
+
+
+def test_extract_identity_image_catalog_tolerates_malformed_list():
+    # Defensive shape handling mirrors the existing image fallback: a bare
+    # string entry (non-dict) must not throw and must not populate the field.
+    p = _full_payload()
+    p['product']['imageUrls'] = ['https://i.ebayimg.com/bare-string.jpg']
+    idn = ebay_api._extract_identity(p)
+    assert idn['image'] == 'https://i.ebayimg.com/x.jpg'
+    assert idn['image_catalog'] == ''
 
 
 # ─── _affiliate_headers: the EPN SubID contract ─────────────────────────────

@@ -217,11 +217,20 @@ def _extract_identity(item):
     product = item.get('product', {}) or {}
     price = item.get('price', {}) or {}
     image = (item.get('image', {}) or {}).get('imageUrl', '')
+    # Catalog image (images-on-spine D4): product.imageUrls[0] is the eBay
+    # CATALOG stock shot when present, vs item.image which is the seller's
+    # listing gallery photo. Capture the catalog URL into its own field
+    # whenever the container supplies it — additive, keeps the evidence so
+    # the card mapper decides at consumption (catalog preferred, listing
+    # fallback, human override on top). When item.image is absent the
+    # existing fallback still fills `image` from the same catalog URL, so
+    # image == image_catalog and downstream source-stamping stays exact.
+    imgs = product.get('imageUrls', []) or []
+    image_catalog = ''
+    if imgs and isinstance(imgs[0], dict):
+        image_catalog = imgs[0].get('imageUrl', '') or ''
     if not image:
-        # product.imageUrls is a list of {imageUrl: ...} in some payloads
-        imgs = product.get('imageUrls', []) or []
-        if imgs:
-            image = (imgs[0] or {}).get('imageUrl', '') if isinstance(imgs[0], dict) else ''
+        image = image_catalog
 
     # brand / mpn live under product.brand/product.mpn, or in localizedAspects.
     brand = product.get('brand', '') or item.get('brand', '')
@@ -254,6 +263,7 @@ def _extract_identity(item):
         'gtin_provenance': gtin_result['gtin_provenance'],
         'market_title': item.get('title', ''),
         'image': image,
+        'image_catalog': image_catalog,
         'price_seen': {
             'value': price.get('value', ''),
             'currency': price.get('currency', ''),
