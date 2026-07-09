@@ -140,6 +140,14 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             cmd += ['--mount', record['mount']]
         if askmaddi_prod:
             cmd += ['--askmaddi-prod', str(askmaddi_prod)]
+            # Spine identity (images-on-spine step 4): pass the spine
+            # EXPLICITLY rather than leaning on build_card's prod_root
+            # derivation — the factory knows the root, and an explicit argv
+            # is what the test contract pins. build_card forwards it to the
+            # assemble stage, where spine_identity() maps the SKU's skus.json
+            # entry (image pick + subcategory + brand/model) into card
+            # identity. Absent entry degrades loudly to pre-spine behavior.
+            cmd += ['--spine', str(Path(askmaddi_prod) / 'data' / 'skus.json')]
         if yt:
             # Stage 1b: paced YT transcript leg into the same triples dir.
             # Factory-global posture, not per-record — quality-first cards

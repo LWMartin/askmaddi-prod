@@ -193,6 +193,37 @@ def test_build_card_runner_returns_triple_shape(tmp_path, monkeypatch):
     assert '--alias' in cmd and 'a7iv' in cmd
     assert '--mount' in cmd and 'E' in cmd
     assert '--enrich-client' in cmd and 'mock' in cmd
+    # No askmaddi_prod configured -> no spine argv (sandbox/manual posture)
+    assert '--spine' not in cmd
+
+
+def test_build_card_runner_passes_spine_with_askmaddi_prod(tmp_path, monkeypatch):
+    """images-on-spine step 4: the factory passes --spine explicitly,
+    derived from the askmaddi_prod root it already knows."""
+    captured = {}
+
+    class _Proc:
+        returncode = 0
+        stderr = ''
+        stdout = ''
+
+    def fake_run(cmd, cwd, capture_output, text):
+        captured['cmd'] = cmd
+        return _Proc()
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path='/tmp/aggregator-build/build_card.py',
+        askmaddi_prod='/opt/askmaddi-prod',
+        enrich_client='mock')
+    rc, _, _ = runner({'slug': 'sony-a7s-iii', 'label': 'Sony A7S III',
+                       'category': 'body'})
+    assert rc == 0
+    cmd = captured['cmd']
+    i = cmd.index('--spine')
+    assert cmd[i + 1] == '/opt/askmaddi-prod/data/skus.json'
+    j = cmd.index('--askmaddi-prod')
+    assert cmd[j + 1] == '/opt/askmaddi-prod'
 
 
 def test_build_card_runner_failure_detail(tmp_path, monkeypatch):
