@@ -355,6 +355,50 @@ def set_override(slug, field, value, path=SKUS_PATH):
     return status
 
 
+def set_image_catalog(slug, url, provenance=None, path=SKUS_PATH):
+    """Surgically write a rescued catalog image onto one SKU's identity block.
+
+    The image-second-pass writer (sibling of set_gtin — spine writes stay in
+    this module, evidence-gathering lives in image_secondpass.py). A targeted
+    field write, NOT an upsert: image_catalog is deliberately not an identity
+    idempotency key, so this never disturbs the 'unchanged' short-circuit and
+    never forces a re-resolve — which is exactly why the F2 veteran backfill
+    can land through here on entries whose bound listings are long dead.
+
+    UPGRADE-ONLY: refuses to overwrite a non-empty identity.image_catalog —
+    a resolve-time capture (or an earlier rescue) is never clobbered by a
+    later sweep. HUMAN-TERMINAL: refuses an entry carrying an
+    overrides.image_thumb hand-curation (the /admin paste-box outranks any
+    machine write; same doctrine as GTIN adjudication terminality).
+
+    `provenance` (the rescue receipt) lands additively at
+    identity.image_provenance so a swept image is always distinguishable
+    from a resolve-time one.
+
+    Returns: 'written' | 'skipped-has-catalog' | 'skipped-override' |
+    'missing-slug' | 'bad-url'. Atomic via the same _atomic_write as upsert.
+    """
+    if not url or not isinstance(url, str) or not url.strip():
+        return 'bad-url'
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+    if ((entry.get('overrides', {}) or {}).get('image_thumb')):
+        return 'skipped-override'
+    identity = entry.setdefault('identity', {})
+    if (identity.get('image_catalog') or '').strip():
+        return 'skipped-has-catalog'
+
+    identity['image_catalog'] = url.strip()
+    if provenance is not None:
+        identity['image_provenance'] = provenance
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'written'
+
+
 ADJUDICATE_ACTIONS = ('assign', 'dismiss')
 
 DISMISS_REASONS = ('variant_ambiguous', 'wrong_product', 'insufficient_evidence')
