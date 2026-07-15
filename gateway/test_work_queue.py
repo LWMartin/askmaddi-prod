@@ -314,6 +314,62 @@ def test_set_seed_urls_missing_slug(tmp_path):
                                     path=path) == 'missing-slug'
 
 
+# ── set_aliases: the second sourcing-seam writer (fetch aliases + label) ─────
+
+def test_set_aliases_on_resolved(tmp_path):
+    path = _seedable_queue(tmp_path)
+    assert wq.set_aliases(
+        'sony-a7s-iii', ['Sony a7S III', 'ILCE-7SM3'],
+        label='Sony A7S III body', path=path) == 'set'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['aliases'] == ['Sony a7S III', 'ILCE-7SM3']
+    assert rec['label'] == 'Sony A7S III body'
+    assert rec['aliases_set_at']
+    assert rec['state'] == 'resolved'          # attach does not advance state
+
+
+def test_set_aliases_label_optional_and_replaces(tmp_path):
+    path = _seedable_queue(tmp_path)
+    wq.set_aliases('sony-a7s-iii', ['old alias'], path=path)
+    assert wq.set_aliases('sony-a7s-iii', ['new alias'], path=path) == 'set'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['aliases'] == ['new alias']              # replaced, not merged
+    assert rec['label'] == 'Sony A7S III'               # untouched without arg
+
+
+def test_set_aliases_refuses_past_resolved(tmp_path):
+    path = _seedable_queue(tmp_path)
+    wq.claim_next(path=path)                            # -> building
+    assert wq.set_aliases('sony-a7s-iii', ['x'], path=path) == 'not-resolved'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['aliases'] == []                         # in-flight inputs intact
+
+
+def test_set_aliases_missing_slug_and_empty(tmp_path):
+    path = _seedable_queue(tmp_path)
+    assert wq.set_aliases('nope', ['x'], path=path) == 'missing-slug'
+    assert wq.set_aliases('sony-a7s-iii', [], path=path) == 'empty-aliases'
+    assert wq.set_aliases('sony-a7s-iii', ['  ', ''], path=path) == 'empty-aliases'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['aliases'] == []                         # nothing written
+
+
+def test_set_aliases_after_requeue_from_corpus_thin(tmp_path):
+    """The manfrotto-befree shape end-to-end: corpus_thin -> requeue ->
+    set_aliases -> record is resolved with fresh sourcing inputs."""
+    path = _seedable_queue(tmp_path)
+    wq.claim_next(path=path)
+    wq.mark_corpus_thin('sony-a7s-iii', 'floor abstained', path=path)
+    assert wq.set_aliases('sony-a7s-iii', ['x'], path=path) == 'not-resolved'
+    wq.requeue('sony-a7s-iii', path=path)
+    assert wq.set_aliases('sony-a7s-iii', ['Befree-shaped alias'],
+                          label='sharper label', path=path) == 'set'
+    rec = wq.load_queue(path)['queue']['sony-a7s-iii']
+    assert rec['state'] == 'resolved'
+    assert rec['aliases'] == ['Befree-shaped alias']
+    assert rec['label'] == 'sharper label'
+
+
 def test_atomic_write_keeps_store_group_rw(tmp_path):
     """Cross-user store contract (2026-07-02 live find): every rewrite must
     leave the file group-readable/writable, or the OTHER pipeline-group user

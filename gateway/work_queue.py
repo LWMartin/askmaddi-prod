@@ -283,6 +283,47 @@ def set_seed_urls(slug, seed_urls_path, *, path=WORK_QUEUE_PATH):
     return 'set'
 
 
+def set_aliases(slug, aliases, *, label=None, path=WORK_QUEUE_PATH):
+    """Attach (or replace) fetch aliases on a record STILL AT `resolved`.
+
+    Sibling to set_seed_urls — the second surgical writer on the sourcing
+    seam. Aliases flow enroll -> factory argv (--alias, repeated) -> fetch,
+    where they widen corpus capture; the optional `label` replace sharpens
+    the YT query ("<label> review"). Identity precision is NOT this seam's
+    job — that's spine_identity() at assemble (images-on-spine step 4);
+    aliases exist to get enough of the right corpus IN for the floor, and
+    the human gate holds the line on what a card claims.
+
+    First caller: manfrotto-befree (2026-07-15) — enrolled label-only as
+    'Manfrotto Befree', a line name spanning a dozen variants; floored
+    corpus_thin on 2026-07-09 with zero aliases to hold variant-relevant
+    sources.
+
+    RESOLVED-ONLY, same reasoning as set_seed_urls: a building record's
+    inputs are in flight; terminal records re-open via requeue() FIRST.
+    Refuses an empty alias list (a clear must be deliberate, not a typo'd
+    positional). Fail-closed with a status, never a partial write.
+
+    Returns: 'set' | 'missing-slug' | 'not-resolved' | 'empty-aliases'.
+    """
+    aliases = [str(a).strip() for a in (aliases or []) if str(a).strip()]
+    if not aliases:
+        return 'empty-aliases'
+    queue = load_queue(path)
+    record = queue.get('queue', {}).get(slug)
+    if record is None:
+        return 'missing-slug'
+    if record.get('state') != 'resolved':
+        return 'not-resolved'
+    record['aliases'] = aliases
+    if label is not None and str(label).strip():
+        record['label'] = str(label).strip()
+    record['aliases_set_at'] = _now()
+    queue['as_of'] = _today()
+    _atomic_write(queue, path)
+    return 'set'
+
+
 def claim_next(path=WORK_QUEUE_PATH):
     """Atomically claim the oldest `resolved` record and mark it `building`.
 
