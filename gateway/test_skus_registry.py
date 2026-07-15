@@ -168,3 +168,17 @@ def test_refresh_does_not_clobber_overrides(tmp_path):
     e = data['skus']['sony-a7iv']
     assert e['marketplace_ids']['ebay_epid'] == '99999999999'   # identity refreshed
     assert e['overrides']['image_thumb'] == 'https://example.com/hand.jpg'
+
+
+def test_atomic_write_preserves_group_read(tmp_path):
+    # Cross-user READ seam (2026-07-15): phantomops builds read the spine via
+    # --spine; a full rewrite by any askmaddi-side writer must never strip
+    # group read (mkstemp temps are 0600 by default — the canon-r6/r5
+    # imageless-card incident). Same class as work_queue's 0664 guarantee.
+    import stat
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _resolved(), path=p)             # first write
+    slug = 'sony-a7iv'
+    reg.set_image_catalog(slug, 'https://i.ebayimg.com/x.jpg', path=p)  # rewrite
+    mode = stat.S_IMODE(os.stat(p).st_mode)
+    assert mode & 0o040, oct(mode)                           # group read survives

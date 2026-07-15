@@ -54,15 +54,30 @@ def load_registry(path=SKUS_PATH):
 
 
 def _atomic_write(registry, path=SKUS_PATH):
-    """Write registry to `path` atomically (temp in same dir + os.replace).
+    """Write registry to `path` atomically (temp in same dir + os.replace),
+    GROUP-READABLE.
 
     Same-directory temp guarantees os.replace is a same-filesystem rename
     (atomic), so a reader never observes a half-written file.
+
+    CROSS-USER READ (found live 2026-07-15, canon-r6/r5 imageless cards):
+    since images-on-spine step 4 (2026-07-09), factory builds running as
+    phantomops READ this store via build_card --spine. mkstemp creates temps
+    0600 and os.replace carries that mode onto the store, so any full rewrite
+    by askmaddi (upsert, set_gtin, set_override, set_image_catalog) strips
+    phantomops's read — and build_card's missing-spine path degrades
+    SILENTLY to pre-spine cards (no image, no subcategory, no display_name).
+    The 16:46Z image-sweep commit did exactly this. fchmod 0o640 keeps the
+    store group-readable across every rewrite (the data/ dir's setgid bit
+    keeps it in the pipeline group); group WRITE stays off — the spine is
+    written by askmaddi alone, and that half of the old assumption still
+    holds. Same class as work_queue's 0664 fix, one seam over.
     """
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     fd, tmp = tempfile.mkstemp(dir=str(path.parent), prefix='.skus-', suffix='.tmp')
     try:
+        os.fchmod(fd, 0o640)
         with os.fdopen(fd, 'w', encoding='utf-8') as fh:
             json.dump(registry, fh, indent=2, ensure_ascii=False)
             fh.write('\n')
