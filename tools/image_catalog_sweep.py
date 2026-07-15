@@ -62,7 +62,7 @@ def _load_gateway_env():
 
 
 def run(*, slug=None, commit=False, limit=None, max_resolves=3,
-        sleep_s=0.5, ebay=None, registry_path=None, out=print):
+        sleep_s=0.5, ebay=None, registry_path=None, out=print, verbose=False):
     """Sweep the spine; returns the summary dict (also printed).
 
     Injectable ebay + registry_path keep this unit-testable offline, same
@@ -111,6 +111,13 @@ def run(*, slug=None, commit=False, limit=None, max_resolves=3,
                     summary['written'] += 1
         elif verdict == isp.NO_CATALOG_FOUND:
             summary['no_catalog'] += 1
+            if verbose:
+                for n in res.get('inspected', []):
+                    tag = ('ERR ' + n['error'] if n.get('error')
+                           else ('no-imageUrls' if not n.get('had_catalog')
+                                 else n.get('rejected', '?')))
+                    line += f"\n      - {n.get('epid','')} {tag}: {n.get('title','')[:70]}"
+                line += f"\n      query: {res.get('query')}" 
         elif verdict == isp.NO_CANDIDATES:
             summary['no_candidates'] += 1
         elif verdict in (isp.HAS_CATALOG, isp.SKIPPED_OVERRIDE, isp.NO_KEYS):
@@ -136,13 +143,15 @@ def main(argv=None):
     ap.add_argument('--limit', type=int, help='Max SKUs to sweep this run.')
     ap.add_argument('--max-resolves', type=int, default=3,
                     help='Max getItem calls per SKU (default 3).')
+    ap.add_argument('--verbose', action='store_true',
+                    help='Print per-candidate evidence on NO-CATALOG-FOUND.')
     ap.add_argument('--json', action='store_true',
                     help='Also print the summary as JSON (cron-friendly).')
     args = ap.parse_args(argv)
 
     _load_gateway_env()
     summary = run(slug=args.slug, commit=args.commit, limit=args.limit,
-                  max_resolves=args.max_resolves)
+                  max_resolves=args.max_resolves, verbose=args.verbose)
     if args.json:
         print(json.dumps(summary))
     return 0 if not summary.get('error') else 1

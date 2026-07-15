@@ -115,19 +115,23 @@ def rescue_catalog_image(slug, entry, *, ebay=None,
     ident = _entry_identity(entry)
     brand = ident.get('brand', '')
     mpn = ident.get('mpn', '')
-    model = ident.get('model', '') or (entry or {}).get('label', '')
+    market_title = ident.get('market_title', '')
 
+    # Query chain (spine vocabulary — there is no identity.model field):
+    # brand+mpn is the precise form; the bound listing's market_title is the
+    # broad form (long seller string, Browse handles it fine); the humanized
+    # slug is the floor so a bare entry still gets a look.
     if brand and mpn:
         query = f'{brand} {mpn}'
-    elif brand and model:
-        query = f'{brand} {model}'
-    elif model:
-        query = model
+    elif market_title:
+        query = market_title
+    elif brand or slug:
+        query = f"{brand} {slug.replace('-', ' ')}".strip()
     else:
         return {'image_catalog': None, 'image_provenance': None,
                 'verdict': NO_KEYS, 'query': None}
 
-    model_token = mpn or model
+    model_token = mpn  # tokens gate on mpn only; no mpn -> epid-equality path
 
     try:
         cands = ebay.search_candidates(query, limit=10)
@@ -141,49 +145,79 @@ def rescue_catalog_image(slug, entry, *, ebay=None,
         return {'image_catalog': None, 'image_provenance': None,
                 'verdict': NO_CANDIDATES, 'query': query}
 
-    # Strongest identity first: the entry's own epid, when it has one.
+    # Resolve-order ranking (the resolve budget is the scarce resource):
+    #   0. the entry's own epid — strongest identity match available
+    #   1. summary title already contains the mpn token — cheap positive signal
+    #   2. everything else — seller titles routinely omit the MPN ('Sony a7 IV'
+    #      not 'ILCE-7M4'), so these are NOT rejected here; the firewall runs
+    #      AFTER resolve against getItem's identity.mpn (the gtin_secondpass
+    #      lesson: summaries can't carry the evidence the gate needs).
     own_epid = _entry_epid(entry)
-    if own_epid:
-        assoc.sort(key=lambda c: 0 if c.get('epid') == own_epid else 1)
+
+    def _rank(c):
+        if own_epid and c.get('epid') == own_epid:
+            return 0
+        if model_token and _token_matches(c, model_token):
+            return 1
+        return 2
+
+    assoc.sort(key=_rank)
 
     inspected = []
-    for i, c in enumerate(assoc[:max_resolves]):
-        if not _token_matches(c, model_token):
-            inspected.append({'item_id': c.get('item_id'),
-                              'epid': c.get('epid', ''),
-                              'title': c.get('title', ''),
-                              'skipped': 'token-firewall'})
-            continue
+    resolves_spent = 0
+    winner = None
+    win_url = ''
+    for c in assoc:
+        if resolves_spent >= max_resolves:
+            break
+        if resolves_spent and sleep_s:
+            time.sleep(sleep_s)
+        resolves_spent += 1
+        note = {'item_id': c.get('item_id'), 'epid': c.get('epid', ''),
+                'title': c.get('title', '')}
         try:
             r = ebay.resolve(c['item_id'])
-            r_ident = (r.get('identity', {}) or {})
-            url = (r_ident.get('image_catalog') or '').strip()
         except Exception as e:
-            inspected.append({'item_id': c.get('item_id'),
-                              'epid': c.get('epid', ''),
-                              'title': c.get('title', ''), 'error': str(e)})
-            url = ''
-        else:
-            inspected.append({'item_id': c.get('item_id'),
-                              'epid': c.get('epid', ''),
-                              'title': c.get('title', ''),
-                              'had_catalog': bool(url)})
-        if url:
-            receipt = {
-                'recovered_by': 'image-second-pass',
-                'recovered_at': time.strftime('%Y-%m-%dT%H:%M:%SZ',
-                                              time.gmtime()),
-                'query': query,
-                'winner': {'item_id': c.get('item_id'),
-                           'epid': c.get('epid', ''),
-                           'title': c.get('title', '')},
-                'epid_match': bool(own_epid and c.get('epid') == own_epid),
-                'inspected': inspected,
-            }
-            return {'image_catalog': url, 'image_provenance': receipt,
-                    'verdict': RESCUED, 'query': query}
-        if sleep_s and i + 1 < min(len(assoc), max_resolves):
-            time.sleep(sleep_s)
+            note['error'] = str(e)
+            inspected.append(note)
+            continue
+        r_ident = (r.get('identity', {}) or {})
+        url = (r_ident.get('image_catalog') or '').strip()
+        note['had_catalog'] = bool(url)
+
+        # Acceptance firewall (post-resolve, full evidence in hand). Either:
+        #   (a) epid equality with the entry's own epid — identity-strongest;
+        #   (b) the mpn token matches the summary title OR getItem's mpn.
+        # No mpn and no epid match -> fail closed: a clean stock image of the
+        # WRONG product must never win.
+        epid_ok = bool(own_epid and c.get('epid') == own_epid)
+        token_ok = bool(model_token and (
+            _token_matches(c, model_token)
+            or _token_matches({'title': '', 'mpn': r_ident.get('mpn', '')},
+                              model_token)))
+        note['accepted'] = bool(url and (epid_ok or token_ok))
+        if url and not note['accepted']:
+            note['rejected'] = 'identity-firewall'
+        inspected.append(note)
+
+        if note['accepted']:
+            winner = {'item_id': c.get('item_id'), 'epid': c.get('epid', ''),
+                      'title': c.get('title', ''), 'epid_match': epid_ok}
+            win_url = url
+            break
+
+    if winner:
+        receipt = {
+            'recovered_by': 'image-second-pass',
+            'recovered_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+            'query': query,
+            'winner': {k: winner[k] for k in ('item_id', 'epid', 'title')},
+            'epid_match': winner['epid_match'],
+            'inspected': inspected,
+        }
+        return {'image_catalog': win_url, 'image_provenance': receipt,
+                'verdict': RESCUED, 'query': query}
 
     return {'image_catalog': None, 'image_provenance': None,
-            'verdict': NO_CATALOG_FOUND, 'query': query}
+            'verdict': NO_CATALOG_FOUND, 'query': query,
+            'inspected': inspected}

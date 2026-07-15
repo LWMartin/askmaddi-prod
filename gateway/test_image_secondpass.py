@@ -76,15 +76,73 @@ def test_rescue_happy_path():
     assert prov['winner']['item_id'] == 'v1|1|0'
 
 
-def test_token_firewall_blocks_wrong_product():
-    # Clean stock image of the WRONG product must never win.
+def test_identity_firewall_blocks_wrong_product():
+    # Clean stock image of the WRONG product must never win. v2: the check
+    # runs AFTER resolve (summaries can't carry mpn — the gtin lesson), so
+    # the fetch is spent but the image is rejected with evidence.
     ebay = FakeEbay(
-        candidates=[_cand('v1|1|0', 'Sony Alpha A7 IV ILCE-7M4 Body')],
-        resolves={'v1|1|0': {'image_catalog': CAT_URL}})
+        candidates=[_cand('v1|1|0', 'Sony Alpha A7 IV Body')],  # no token in title
+        resolves={'v1|1|0': {'image_catalog': CAT_URL, 'mpn': 'ILCE-7M4'}})
     res = isp.rescue_catalog_image('sony-a7c-ii', _entry(mpn='ILCE-7CM2'),
                                    ebay=ebay, sleep_s=0)
     assert res['verdict'] == isp.NO_CATALOG_FOUND
-    assert ebay.resolve_calls == []          # firewall fired BEFORE the fetch
+    assert ebay.resolve_calls == ['v1|1|0']
+    assert res['inspected'][0]['rejected'] == 'identity-firewall'
+
+
+def test_resolved_mpn_satisfies_firewall_when_title_lacks_token():
+    # THE 0/14 BUG: seller titles say 'Sony a7 IV', not 'ILCE-7M4'. The token
+    # must be allowed to match getItem's identity.mpn, not just the title.
+    ebay = FakeEbay(
+        candidates=[_cand('v1|1|0', 'Sony a7 IV Mirrorless Camera Body')],
+        resolves={'v1|1|0': {'image_catalog': CAT_URL, 'mpn': 'ILCE-7M4'}})
+    res = isp.rescue_catalog_image('sony-a7iv', _entry(mpn='ILCE-7M4'),
+                                   ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.RESCUED
+    assert res['image_catalog'] == CAT_URL
+
+
+def test_epid_equality_accepts_without_any_mpn():
+    # Keyless entries (Peak Design veterans): no mpn anywhere, but the entry
+    # carries its own epid — epid equality IS the identity check.
+    ebay = FakeEbay(
+        candidates=[_cand('v1|1|0', 'Peak Design Travel Tripod CF', epid='e42')],
+        resolves={'v1|1|0': {'image_catalog': CAT_URL, 'mpn': ''}})
+    entry = {'identity': {'brand': 'Peak Design', 'mpn': '',
+                          'market_title': 'Peak Design Travel Tripod Carbon',
+                          'image_catalog': '', 'epid': 'e42'}}
+    res = isp.rescue_catalog_image('peak-design-travel-tripod', entry,
+                                   ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.RESCUED
+    assert res['image_provenance']['epid_match'] is True
+
+
+def test_no_mpn_no_epid_match_fails_closed():
+    ebay = FakeEbay(
+        candidates=[_cand('v1|1|0', 'Peak Design Travel Tripod CF', epid='e42')],
+        resolves={'v1|1|0': {'image_catalog': CAT_URL, 'mpn': ''}})
+    entry = {'identity': {'brand': 'Peak Design', 'mpn': '',
+                          'market_title': 'Peak Design Travel Tripod',
+                          'image_catalog': ''}}   # no epid to equal
+    res = isp.rescue_catalog_image('peak-design-travel-tripod', entry,
+                                   ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.NO_CATALOG_FOUND
+    assert res['inspected'][0]['rejected'] == 'identity-firewall'
+
+
+def test_query_falls_back_to_market_title_then_slug():
+    # market_title fallback (the NO-KEYS trio fix)
+    ebay = FakeEbay(candidates=[])
+    entry = {'identity': {'brand': '', 'mpn': '',
+                          'market_title': 'Peak Design Travel Tripod Carbon',
+                          'image_catalog': ''}}
+    res = isp.rescue_catalog_image('peak-design-travel-tripod', entry, ebay=ebay)
+    assert res['query'] == 'Peak Design Travel Tripod Carbon'
+    # slug floor: bare entry still gets a look
+    ebay2 = FakeEbay(candidates=[])
+    res2 = isp.rescue_catalog_image(
+        'manfrotto-befree', {'identity': {'image_catalog': ''}}, ebay=ebay2)
+    assert res2['query'] == 'manfrotto befree'
 
 
 def test_epidless_candidates_skipped():
@@ -132,8 +190,10 @@ def test_existing_catalog_and_override_short_circuit():
 
 
 def test_no_keys_verdict():
+    # NO_KEYS is now nearly unreachable (slug floor), but an empty slug +
+    # bare identity still fails closed rather than searching for nothing.
     e = {'identity': {}}
-    assert isp.rescue_catalog_image('s', e, ebay=FakeEbay())['verdict'] == isp.NO_KEYS
+    assert isp.rescue_catalog_image('', e, ebay=FakeEbay())['verdict'] == isp.NO_KEYS
 
 
 def test_search_failure_is_reported_not_raised():
