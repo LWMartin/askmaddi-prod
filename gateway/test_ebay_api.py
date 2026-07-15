@@ -198,3 +198,45 @@ def test_resolve_raises_on_http_error(monkeypatch):
                         lambda *a, **k: _Resp())
     with pytest.raises(ebay_api.EbayAPIError):
         ebay_api.resolve('v1|999|0')
+
+
+# ─── schema correction 2026-07-15: product.image (singular) + mpns (plural) ──
+# Live probe on the box: the product container's real keys are
+# [additionalProductIdentities, aspectGroups, brand, gtins, image, mpns,
+# title]. product.imageUrls and product.mpn were never returned — the D4
+# capture had been silently empty since 2026-07-09.
+
+def test_extract_identity_catalog_image_from_product_image_singular():
+    p = _full_payload()
+    p['product']['image'] = {'imageUrl': 'https://i.ebayimg.com/stock.jpg',
+                             'width': 1000, 'height': 1000}
+    idn = ebay_api._extract_identity(p)
+    assert idn['image_catalog'] == 'https://i.ebayimg.com/stock.jpg'
+    # listing photo untouched in `image` when present
+    assert idn['image'] != '' 
+
+
+def test_extract_identity_product_image_singular_wins_over_plural_fallback():
+    p = _full_payload()
+    p['product']['image'] = {'imageUrl': 'https://i.ebayimg.com/singular.jpg'}
+    p['product']['imageUrls'] = [{'imageUrl': 'https://i.ebayimg.com/plural.jpg'}]
+    idn = ebay_api._extract_identity(p)
+    assert idn['image_catalog'] == 'https://i.ebayimg.com/singular.jpg'
+
+
+def test_extract_identity_product_image_malformed_tolerated():
+    p = _full_payload()
+    p['product']['image'] = 'https://i.ebayimg.com/bare-string.jpg'
+    idn = ebay_api._extract_identity(p)
+    assert idn['image_catalog'] == ''
+
+
+def test_extract_identity_mpn_from_product_mpns_plural():
+    p = _full_payload()
+    p['product'].pop('mpn', None)
+    # strip aspect fallback so the mpns read is what's under test
+    p['localizedAspects'] = []
+    p.pop('mpn', None)
+    p['product']['mpns'] = ['ILCE-7M4']
+    idn = ebay_api._extract_identity(p)
+    assert idn['mpn'] == 'ILCE-7M4'

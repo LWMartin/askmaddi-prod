@@ -61,7 +61,7 @@ def _load_gateway_env():
         pass
 
 
-def run(*, slug=None, commit=False, limit=None, max_resolves=3,
+def run(*, slug=None, commit=False, limit=None, max_resolves=5,
         sleep_s=0.5, ebay=None, registry_path=None, out=print, verbose=False):
     """Sweep the spine; returns the summary dict (also printed).
 
@@ -141,8 +141,8 @@ def main(argv=None):
     ap.add_argument('--commit', action='store_true',
                     help='Write rescued images to the spine (default: dry-run).')
     ap.add_argument('--limit', type=int, help='Max SKUs to sweep this run.')
-    ap.add_argument('--max-resolves', type=int, default=3,
-                    help='Max getItem calls per SKU (default 3).')
+    ap.add_argument('--max-resolves', type=int, default=5,
+                    help='Max getItem calls per SKU (default 5).')
     ap.add_argument('--verbose', action='store_true',
                     help='Print per-candidate evidence on NO-CATALOG-FOUND.')
     ap.add_argument('--json', action='store_true',

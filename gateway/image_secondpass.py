@@ -52,7 +52,9 @@ NO_CANDIDATES = 'NO-CANDIDATES'        # no epid-associated candidates
 NO_CATALOG_FOUND = 'NO-CATALOG-FOUND'  # candidates resolved, none carried one
 RESCUED = 'RESCUED'                    # catalog image found + firewall passed
 
-DEFAULT_MAX_RESOLVES = 3
+DEFAULT_MAX_RESOLVES = 5   # live probe 2026-07-15: only ~1/3 of
+                            # catalog-associated listings carry the
+                            # product container; 3 was too shallow
 DEFAULT_SLEEP_S = 0.5
 
 

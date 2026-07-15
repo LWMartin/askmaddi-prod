@@ -217,24 +217,35 @@ def _extract_identity(item):
     product = item.get('product', {}) or {}
     price = item.get('price', {}) or {}
     image = (item.get('image', {}) or {}).get('imageUrl', '')
-    # Catalog image (images-on-spine D4): product.imageUrls[0] is the eBay
-    # CATALOG stock shot when present, vs item.image which is the seller's
-    # listing gallery photo. Capture the catalog URL into its own field
-    # whenever the container supplies it — additive, keeps the evidence so
-    # the card mapper decides at consumption (catalog preferred, listing
-    # fallback, human override on top). When item.image is absent the
-    # existing fallback still fills `image` from the same catalog URL, so
-    # image == image_catalog and downstream source-stamping stays exact.
-    imgs = product.get('imageUrls', []) or []
-    image_catalog = ''
-    if imgs and isinstance(imgs[0], dict):
-        image_catalog = imgs[0].get('imageUrl', '') or ''
+    # Catalog image (images-on-spine D4; SCHEMA CORRECTED 2026-07-15 after a
+    # live probe): the product container — present on only SOME listings,
+    # roughly the ones created through eBay's catalog flow — carries the
+    # stock shot as `product.image` (a SINGULAR Image object). The original
+    # D4 read `product.imageUrls`, a field the API never returns; capture had
+    # been silently empty since 2026-07-09 (every card stamped ebay_listing,
+    # incl. the a7s-iii flagship). Probe evidence: product keys observed live
+    # = [additionalProductIdentities, aspectGroups, brand, gtins, image,
+    # mpns, title]. The old plural read is retained as a defensive fallback
+    # only. When item.image is absent the existing fallback still fills
+    # `image` from the same catalog URL, so image == image_catalog and
+    # downstream source-stamping stays exact.
+    img_obj = product.get('image') or {}
+    image_catalog = (img_obj.get('imageUrl', '') or '') if isinstance(img_obj, dict) else ''
+    if not image_catalog:
+        imgs = product.get('imageUrls', []) or []
+        if imgs and isinstance(imgs[0], dict):
+            image_catalog = imgs[0].get('imageUrl', '') or ''
     if not image:
         image = image_catalog
 
-    # brand / mpn live under product.brand/product.mpn, or in localizedAspects.
+    # brand / mpn live under product.brand / product.mpns (PLURAL list —
+    # same live probe; the old product.mpn read never matched), or in
+    # localizedAspects.
     brand = product.get('brand', '') or item.get('brand', '')
-    mpn = product.get('mpn', '') or item.get('mpn', '')
+    mpns = product.get('mpns') or []
+    mpn = (product.get('mpn', '')
+           or (mpns[0] if mpns and isinstance(mpns[0], str) else '')
+           or item.get('mpn', ''))
     if not brand or not mpn:
         for asp in (item.get('localizedAspects', []) or []):
             name = (asp.get('name') or '').lower()
