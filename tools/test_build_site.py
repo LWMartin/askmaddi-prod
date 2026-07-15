@@ -346,3 +346,66 @@ def test_fmt_date_and_abs_url_edges():
     assert abs_url("images/logo.png") == f"{BASE_URL}/images/logo.png"
     assert abs_url("https://x.com/a.jpg") == "https://x.com/a.jpg"
     assert used_price_asof({"pricing": {}}) == ""
+
+
+# ─── Clobber guard: --card refuses --manifest/--sitemap (2026-07-15) ─────────
+# Whole-file outputs (manifest, sitemap) regenerate from only the cards loaded
+# in one run; composed with --card that replaces the live grid/sitemap with a
+# single entry (bitten live 2026-07-03). Guard fails loud at argparse level.
+import json as _json
+import subprocess as _subprocess
+
+_BUILD_SITE = str(Path(__file__).parent / "build_site.py")
+
+
+def _run_cli(*argv):
+    return _subprocess.run([sys.executable, _BUILD_SITE, *argv],
+                           capture_output=True, text=True)
+
+
+def _write_min_card(tmp_path, card_id="guard-sku"):
+    card = _card([_axis("video", 85, 150)], card_id=card_id)
+    card["synthesis"] = {"summary": "x"}
+    p = tmp_path / f"{card_id}.json"
+    p.write_text(_json.dumps(card), encoding="utf-8")
+    return p
+
+
+def test_card_plus_manifest_refused(tmp_path):
+    card = _write_min_card(tmp_path)
+    r = _run_cli("--card", str(card), "--manifest",
+                 "--output-dir", str(tmp_path / "out"))
+    assert r.returncode == 2                      # argparse error, loud
+    assert "whole" in r.stderr.lower()
+    assert "--cards-dir" in r.stderr              # the recipe is in the message
+    assert not (tmp_path / "out" / "cards-manifest.json").exists()
+
+
+def test_card_plus_sitemap_refused(tmp_path):
+    card = _write_min_card(tmp_path)
+    r = _run_cli("--card", str(card), "--sitemap",
+                 "--output-dir", str(tmp_path / "out"))
+    assert r.returncode == 2
+    assert not (tmp_path / "out" / "sitemap.xml").exists()
+
+
+def test_card_alone_still_builds_detail_page(tmp_path):
+    # The guard must not break the legitimate single-card detail rebuild.
+    card = _write_min_card(tmp_path)
+    r = _run_cli("--card", str(card), "--output-dir", str(tmp_path / "out"))
+    assert r.returncode == 0, r.stderr
+    assert (tmp_path / "out" / "cards" / "guard-sku" / "index.html").exists()
+    assert not (tmp_path / "out" / "cards-manifest.json").exists()
+
+
+def test_cards_dir_with_manifest_and_sitemap_still_allowed(tmp_path):
+    corpus = tmp_path / "corpus"
+    corpus.mkdir()
+    _write_min_card(corpus, "sku-a")
+    _write_min_card(corpus, "sku-b")
+    r = _run_cli("--cards-dir", str(corpus), "--manifest", "--sitemap",
+                 "--output-dir", str(tmp_path / "out"))
+    assert r.returncode == 0, r.stderr
+    manifest = _json.loads((tmp_path / "out" / "cards-manifest.json").read_text())
+    assert len(manifest["cards"]) == 2            # full corpus, no shrinkage
+    assert (tmp_path / "out" / "sitemap.xml").exists()

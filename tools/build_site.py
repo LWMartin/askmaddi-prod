@@ -872,6 +872,24 @@ def main():
     if not args.card and not args.cards_dir:
         ap.error("provide --card or --cards-dir")
 
+    # ─── Clobber guard (2026-07-09 decision; in code 2026-07-15) ─────────────
+    # cards-manifest.json and sitemap.xml are WHOLE-FILE outputs regenerated
+    # from only the cards loaded THIS run. Composed with --card that means
+    # "replace the site's entire grid/sitemap with this one card" — which is
+    # never the intent and shrank the live homepage to a single card on the
+    # gate's first real publish (7/03). Publishing a single card correctly is
+    # admit-to-corpus THEN full --cards-dir rebuild (admin_surface.
+    # build_site_runner does exactly this). Fail loud with the recipe.
+    if args.card and (args.manifest or args.sitemap):
+        ap.error(
+            "--manifest/--sitemap regenerate WHOLE files from only the cards "
+            "loaded this run; composed with --card they would replace the "
+            "entire grid/sitemap with one entry. Use --cards-dir for "
+            "manifest/sitemap builds. To publish one card: admit it into the "
+            "corpus dir first, then rebuild with "
+            "--cards-dir <corpus> --manifest --sitemap."
+        )
+
     out = Path(args.output_dir)
     cards = load_cards(args)
     if not cards:
