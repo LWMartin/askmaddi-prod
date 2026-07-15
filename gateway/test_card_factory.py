@@ -97,15 +97,34 @@ def test_tick_retry_then_fail(tmp_path):
     p = _path(tmp_path)
     _seed(p, 'flaky', cap_attempts=2)
 
-    out1 = cf.tick(_fail_runner('fetch timeout'), cap=10, path=p)
+    # Deterministic errors only — timeout-shaped strings route to 'cooldown'
+    # (turtle doctrine) and never burn attempts. See test_tick_transient_cooldown.
+    out1 = cf.tick(_fail_runner('extract: parser crashed'), cap=10, path=p)
     assert out1['action'] == 'retry'
     assert wq.get('flaky', path=p)['state'] == 'resolved'   # back for another go
     assert out1['attempts'] == 1
 
-    out2 = cf.tick(_fail_runner('fetch timeout again'), cap=10, path=p)
+    out2 = cf.tick(_fail_runner('extract: parser crashed again'), cap=10, path=p)
     assert out2['action'] == 'failed'                       # budget spent
     assert wq.get('flaky', path=p)['state'] == 'failed'
     assert out2['attempts'] == 2
+
+
+def test_tick_transient_cooldown(tmp_path):
+    # A timeout is weather: no attempts burn, record cools down, action says so.
+    p = _path(tmp_path)
+    _seed(p, 'weather', cap_attempts=2)
+
+    out = cf.tick(_fail_runner('socket.timeout: timed out'), cap=10, path=p)
+    assert out['action'] == 'cooldown'
+    assert out['attempts'] == 0                             # defect budget untouched
+    assert out['transient_retries'] == 1
+    assert out['cooldown_until'] is not None
+
+    rec = wq.get('weather', path=p)
+    assert rec['state'] == 'resolved'
+    # ...but invisible to claim_next until the cooldown expires:
+    assert cf.tick(_fail_runner('should never run'), cap=10, path=p)['action'] == 'idle'
 
 
 def test_retry_keeps_failure_detail(tmp_path):

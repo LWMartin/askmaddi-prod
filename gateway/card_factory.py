@@ -210,10 +210,19 @@ def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):
         return {'action': 'corpus_thin', 'slug': slug, 'detail': detail}
 
     rec, terminal = work_queue.mark_failed_or_retry(slug, detail, path=path)
+    if terminal:
+        action = 'failed'
+    elif rec.get('cooldown_until'):
+        # Transient (turtle path): attempts unburned, record cooling down.
+        action = 'cooldown'
+    else:
+        action = 'retry'
     return {
-        'action': 'failed' if terminal else 'retry',
+        'action': action,
         'slug': slug, 'detail': detail,
         'attempts': rec.get('build_attempts'),
+        'transient_retries': rec.get('transient_retries', 0),
+        'cooldown_until': rec.get('cooldown_until'),
     }
 
 

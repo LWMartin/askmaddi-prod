@@ -94,6 +94,34 @@ CARD_REJECT_REASONS = (
 # retry loop. Tunable per-enroll via max_attempts.
 DEFAULT_MAX_ATTEMPTS = 3
 
+# --- Transient-failure classification (turtle doctrine, 2026-07-15) ---------
+# Weather vs defect: a socket timeout or connection reset says nothing about the
+# SKU or the pipeline — it says the network had a moment. Burning the 3-attempt
+# defect budget on weather is how six launch-week records ended up permanently
+# parked in `failed`. A transient failure therefore does NOT increment
+# build_attempts; it sets a cooldown and returns the record to `resolved`, where
+# claim_next skips it until the cooldown expires ("a timeout can try another
+# day"). A separate, generous transient budget (≈ a week of tries at drip pace)
+# guards against a genuinely-dead endpoint looping forever — exhausting THAT
+# parks the record `failed` with a distinct reason, still visible in /admin.
+# Deterministic failures keep the original 3-strike semantics: they are the
+# pipeline-defect signal and should stay loud.
+TRANSIENT_ERROR_PATTERNS = (
+    'socket.timeout', 'timed out', 'timeouterror', 'read timeout',
+    'connect timeout', 'connectionerror', 'connection refused',
+    'connection reset', 'connection aborted', 'temporary failure in name',
+    'http 429', '429 too many', 'http 500', 'http 502', 'http 503',
+    'http 504', 'bad gateway', 'service unavailable', 'gateway timeout',
+)
+DEFAULT_TRANSIENT_COOLDOWN_S = 6 * 3600      # 6h between retries of one SKU
+DEFAULT_MAX_TRANSIENT_RETRIES = 28           # ≈ a week of chances at 4/day
+
+
+def _is_transient(error_detail):
+    """True if the error text reads as network weather, not a pipeline defect."""
+    text = str(error_detail).lower()
+    return any(p in text for p in TRANSIENT_ERROR_PATTERNS)
+
 
 def _empty_queue():
     return {
@@ -270,7 +298,14 @@ def claim_next(path=WORK_QUEUE_PATH):
     queue = load_queue(path)
     q = queue.get('queue', {})
 
-    resolved = [r for r in q.values() if r.get('state') == 'resolved']
+    now = _now()
+    resolved = [
+        r for r in q.values()
+        if r.get('state') == 'resolved'
+        # Transient cooldown: ISO-Z strings compare lexicographically, so a
+        # plain string comparison is a correct time comparison here.
+        and not (r.get('cooldown_until') and r['cooldown_until'] > now)
+    ]
     if not resolved:
         return None
     resolved.sort(key=lambda r: r.get('enrolled_at', ''))
@@ -339,17 +374,37 @@ def mark_failed_or_retry(slug, error_detail, *, path=WORK_QUEUE_PATH):
             f"only a building record can fail or retry."
         )
 
-    record['build_attempts'] = record.get('build_attempts', 0) + 1
     record['last_error'] = str(error_detail)[:500]
     record['last_failed_at'] = _now()
 
-    if record['build_attempts'] >= record.get('max_attempts', DEFAULT_MAX_ATTEMPTS):
-        record['state'] = 'failed'
-        terminal = True
+    if _is_transient(error_detail):
+        # Weather, not defect: no build_attempts burn. Cool down and let the
+        # drip re-claim it later. Only the (large) transient budget can park it.
+        record['transient_retries'] = record.get('transient_retries', 0) + 1
+        if record['transient_retries'] >= record.get(
+                'max_transient_retries', DEFAULT_MAX_TRANSIENT_RETRIES):
+            record['state'] = 'failed'
+            record['last_error'] = (
+                'transient budget exhausted: ' + record['last_error'])[:500]
+            record['cooldown_until'] = None
+            terminal = True
+        else:
+            record['state'] = 'resolved'
+            record['cooldown_until'] = time.strftime(
+                '%Y-%m-%dT%H:%M:%SZ',
+                time.gmtime(time.time() + record.get(
+                    'transient_cooldown_s', DEFAULT_TRANSIENT_COOLDOWN_S)))
+            terminal = False
     else:
-        # Back to the resolved pool for the next tick to re-claim.
-        record['state'] = 'resolved'
-        terminal = False
+        record['build_attempts'] = record.get('build_attempts', 0) + 1
+        record['cooldown_until'] = None   # deterministic path never cools down
+        if record['build_attempts'] >= record.get('max_attempts', DEFAULT_MAX_ATTEMPTS):
+            record['state'] = 'failed'
+            terminal = True
+        else:
+            # Back to the resolved pool for the next tick to re-claim.
+            record['state'] = 'resolved'
+            terminal = False
 
     queue['as_of'] = _today()
     _atomic_write(queue, path)
@@ -495,6 +550,8 @@ def requeue(slug, *, path=WORK_QUEUE_PATH):
     prior = record['state']
     record['state'] = 'resolved'
     record['build_attempts'] = 0
+    record['transient_retries'] = 0
+    record['cooldown_until'] = None
     record['reject_reason'] = None
     record['requeued_at'] = _now()
     record['requeued_from'] = prior

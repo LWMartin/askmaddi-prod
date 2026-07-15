@@ -109,19 +109,22 @@ def test_failed_build_retries_then_parks_failed(tmp_path):
     wq.enroll('sony-a7iv', 'Sony A7 IV', 'body', max_attempts=2, path=p)
 
     # attempt 1: claim -> fail -> back to resolved (retry remains)
+    # NOTE: error strings here are DETERMINISTIC on purpose — timeout-shaped
+    # errors now route through the transient/cooldown path (turtle doctrine)
+    # and don't burn build_attempts. See the transient tests below.
     wq.claim_next(path=p)
-    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'fetch timeout', path=p)
+    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'schema violation: missing generation_context', path=p)
     assert terminal is False
     assert rec['state'] == 'resolved'
     assert rec['build_attempts'] == 1
 
     # attempt 2: claim -> fail -> budget exhausted -> failed
     wq.claim_next(path=p)
-    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'fetch timeout again', path=p)
+    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'schema violation again', path=p)
     assert terminal is True
     assert rec['state'] == 'failed'
     assert rec['build_attempts'] == 2
-    assert 'fetch timeout again' in rec['last_error']
+    assert 'schema violation again' in rec['last_error']
 
 
 def test_failed_build_does_not_count_against_cap(tmp_path):
@@ -322,3 +325,96 @@ def test_atomic_write_keeps_store_group_rw(tmp_path):
     wq.claim_next(path=path)                          # a rewrite
     mode = stat.S_IMODE(os.stat(path).st_mode)
     assert mode & 0o060 == 0o060, oct(mode)           # group r+w survive rewrites
+
+
+# ── transient failures: the turtle doctrine (2026-07-15) ─────────────────────
+def test_transient_failure_cools_down_without_burning_attempts(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('sony-a7iv', 'Sony A7 IV', 'body', max_attempts=3, path=p)
+    wq.claim_next(path=p)
+    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'socket.timeout: timed out', path=p)
+    assert terminal is False
+    assert rec['state'] == 'resolved'
+    assert rec['build_attempts'] == 0            # weather never burns the defect budget
+    assert rec['transient_retries'] == 1
+    assert rec['cooldown_until'] > wq._now()     # ISO-Z strings compare correctly
+
+
+def test_cooldown_blocks_claim_until_expiry(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('cooling', 'Cooling Cam', 'body', path=p)
+    wq.claim_next(path=p)
+    wq.mark_failed_or_retry('cooling', 'connection reset by peer', path=p)
+    assert wq.claim_next(path=p) is None         # resolved but cooling — invisible
+
+    # Expire the cooldown by hand and it becomes claimable again.
+    q = wq.load_queue(p)
+    q['queue']['cooling']['cooldown_until'] = '2000-01-01T00:00:00Z'
+    wq._atomic_write(q, p)
+    assert wq.claim_next(path=p)['slug'] == 'cooling'
+
+
+def test_cooldown_does_not_shadow_other_resolved_records(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('cooling', 'Cooling Cam', 'body', path=p)
+    time.sleep(0.01)
+    wq.enroll('ready', 'Ready Cam', 'body', path=p)
+    wq.claim_next(path=p)                        # cooling (oldest) -> building
+    wq.mark_failed_or_retry('cooling', 'HTTP 503 service unavailable', path=p)
+    # cooling is resolved-but-cooling; claim_next must skip PAST it to ready.
+    assert wq.claim_next(path=p)['slug'] == 'ready'
+
+
+def test_transient_budget_exhaustion_parks_failed(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('deadhost', 'Dead Host Cam', 'body', path=p)
+    q = wq.load_queue(p)
+    q['queue']['deadhost']['max_transient_retries'] = 2
+    wq._atomic_write(q, p)
+
+    wq.claim_next(path=p)
+    rec, terminal = wq.mark_failed_or_retry('deadhost', 'timed out', path=p)
+    assert terminal is False and rec['transient_retries'] == 1
+
+    # expire cooldown, go again — second transient hits the ceiling
+    q = wq.load_queue(p)
+    q['queue']['deadhost']['cooldown_until'] = '2000-01-01T00:00:00Z'
+    wq._atomic_write(q, p)
+    wq.claim_next(path=p)
+    rec, terminal = wq.mark_failed_or_retry('deadhost', 'timed out', path=p)
+    assert terminal is True
+    assert rec['state'] == 'failed'
+    assert rec['last_error'].startswith('transient budget exhausted:')
+    assert rec['build_attempts'] == 0            # defect budget still untouched
+
+
+def test_deterministic_failure_clears_stale_cooldown(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('mixed', 'Mixed Cam', 'body', max_attempts=3, path=p)
+    wq.claim_next(path=p)
+    wq.mark_failed_or_retry('mixed', 'timed out', path=p)          # transient: cooldown set
+    q = wq.load_queue(p)
+    q['queue']['mixed']['cooldown_until'] = '2000-01-01T00:00:00Z' # expire it
+    wq._atomic_write(q, p)
+    wq.claim_next(path=p)
+    rec, _ = wq.mark_failed_or_retry('mixed', 'schema violation', path=p)  # deterministic
+    assert rec['cooldown_until'] is None         # no ghost cooldown on the defect path
+    assert rec['build_attempts'] == 1
+    assert rec['transient_retries'] == 1         # history preserved
+
+
+def test_requeue_resets_transient_budget(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('reopen', 'Reopen Cam', 'body', path=p)
+    q = wq.load_queue(p)
+    q['queue']['reopen']['max_transient_retries'] = 1
+    wq._atomic_write(q, p)
+    wq.claim_next(path=p)
+    _, terminal = wq.mark_failed_or_retry('reopen', 'timed out', path=p)
+    assert terminal is True                      # budget of 1 exhausted -> failed
+
+    rec = wq.requeue('reopen', path=p)
+    assert rec['state'] == 'resolved'
+    assert rec['transient_retries'] == 0
+    assert rec['cooldown_until'] is None
+    assert wq.claim_next(path=p)['slug'] == 'reopen'
