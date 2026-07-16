@@ -234,3 +234,51 @@ def test_load_snapshot_missing_field(tmp_path):
     p.write_text(json.dumps({"role": "writeback"}))
     with pytest.raises(ValueError):
         load_snapshot(p)
+
+
+# ─── classify_dirt (fence-only preflight) ─────────────────────────────────────
+# The nightly's preflight question, asked against the SAME snapshot the
+# stage-3 fence uses: 0 clean / 3 pipeline-owned dirt / 2 foreign dirt.
+
+from bot_push import classify_dirt  # noqa: E402
+
+
+def test_fence_only_clean_tree_zero(repo_pair, tmp_path):
+    work, _ = repo_pair
+    assert classify_dirt(work, _snapshot(tmp_path)) == 0
+
+
+def test_fence_only_owned_dirt_three(repo_pair, tmp_path):
+    work, _ = repo_pair
+    (work / "data" / "cards" / "cam.json").write_text('{"price": 2}')
+    (work / "cards-manifest.json").write_text('{"n": 1}')
+    assert classify_dirt(work, _snapshot(tmp_path)) == 3
+
+
+def test_fence_only_foreign_dirt_two_and_signals(repo_pair, tmp_path):
+    work, _ = repo_pair
+    (work / "data" / "cards" / "cam.json").write_text('{"price": 2}')  # owned
+    (work / "rogue.py").write_text("x = 1")                             # foreign
+    sig = tmp_path / "signals"
+    rc = classify_dirt(work, _snapshot(tmp_path), signal_dir=sig,
+                       job="cron_used_prices")
+    assert rc == 2
+    files = list(sig.glob("bot_push-cron_used_prices-*.json"))
+    assert len(files) == 1
+    payload = json.loads(files[0].read_text())
+    assert payload["stage"] == "preflight"
+    assert "rogue.py" in payload["detail"]
+
+
+def test_fence_only_untracked_owned_is_owned(repo_pair, tmp_path):
+    # A publish strands a NEW card file (untracked) — still within the writ.
+    work, _ = repo_pair
+    (work / "data" / "cards" / "new-card.json").write_text('{"fresh": true}')
+    assert classify_dirt(work, _snapshot(tmp_path)) == 3
+
+
+def test_fence_only_bad_snapshot_two(repo_pair, tmp_path):
+    work, _ = repo_pair
+    bad = tmp_path / "bad.json"
+    bad.write_text("{not json")
+    assert classify_dirt(work, bad) == 2

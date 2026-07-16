@@ -231,6 +231,53 @@ def run(repo, job, snapshot_path, summary, gate_cmd, signal_dir, dry_run=False):
     return 0
 
 
+# ─── Preflight classification (fence-only) ────────────────────────────────────
+def classify_dirt(repo, snapshot_path, signal_dir=None, job="preflight"):
+    """Classify the working tree's dirt against the snapshot allowlist,
+    WITHOUT committing or pushing. The nightly's preflight question is not
+    'is the tree dirty' but 'is the dirt within the bot's writ' — asked
+    against the SAME frozen snapshot the stage-3 bot_push fences with, so
+    preflight and fence can never disagree (one source of truth).
+
+    Exit-code contract (consumed by nightly_used_prices.sh):
+        0  tree clean — nothing to bank
+        3  dirty, but every path is allowlisted — pipeline-owned writes,
+           safe to proceed and bank through the door
+        2  foreign dirt present — abort posture, paths printed + signaled
+           (committing unknown changes under the bot identity would launder
+           them; recorded failure mode 2026-05-06)
+    """
+    try:
+        snap = load_snapshot(snapshot_path)
+    except (OSError, ValueError, json.JSONDecodeError) as e:
+        if signal_dir:
+            write_signal(signal_dir, job, "snapshot", "snapshot load failed", e)
+        print(f"[fence-only] snapshot load failed: {e}", file=sys.stderr)
+        return 2
+
+    changes = dirty_paths(repo)
+    if not changes:
+        print("[fence-only] tree clean")
+        return 0
+
+    foreign = [p for p in changes if not path_allowed(p, snap["allowlist"])]
+    owned = [p for p in changes if path_allowed(p, snap["allowlist"])]
+    if foreign:
+        if signal_dir:
+            write_signal(signal_dir, job, "preflight",
+                         "foreign dirt outside locked allowlist",
+                         ", ".join(foreign[:20]))
+        print(f"[fence-only] FOREIGN dirt ({len(foreign)} path(s)):", file=sys.stderr)
+        for p in foreign[:20]:
+            print(f"    {p}", file=sys.stderr)
+        return 2
+
+    print(f"[fence-only] pipeline-owned dirt only ({len(owned)} path(s)):")
+    for p in owned[:20]:
+        print(f"    {p}")
+    return 3
+
+
 def main():
     ap = argparse.ArgumentParser(description="Machine-commit door for askmaddi-prod.")
     ap.add_argument("--job", required=True, help="Job name; must hold a policy in the snapshot.")
@@ -242,7 +289,13 @@ def main():
     ap.add_argument("--signal-dir", default="~/.askmaddi-bot/signals",
                     help="Where abort/proposal signals are written.")
     ap.add_argument("--dry-run", action="store_true", help="Fence + gate only; no commit, no push.")
+    ap.add_argument("--fence-only", action="store_true",
+                    help="Classify dirt against the allowlist and exit "
+                         "(0 clean / 3 owned / 2 foreign). No gate, no commit.")
     args = ap.parse_args()
+    if args.fence_only:
+        return classify_dirt(args.repo, args.snapshot,
+                             signal_dir=args.signal_dir, job=args.job)
     return run(args.repo, args.job, args.snapshot, args.summary,
                args.gate, args.signal_dir, dry_run=args.dry_run)
 
