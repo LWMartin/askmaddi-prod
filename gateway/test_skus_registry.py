@@ -304,3 +304,41 @@ def test_rotation_still_carries_overrides(tmp_path):
     reg.upsert('sony-a7iv', _rotate(), path=p)
     e = json.loads(p.read_text())['skus']['sony-a7iv']
     assert e['overrides'] == {'image_thumb': 'https://hand.jpg'}
+
+
+def test_rotation_preserves_null_anchor_receipt(tmp_path):
+    """set_gtin doctrine: gtin=None WITH a receipt = persisted CONFLICT-DROP
+    for /admin. An empty-handed rotation must not erase the receipt."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    data = json.loads(p.read_text())
+    data['skus']['sony-a7iv']['identity']['gtin_provenance'] = {
+        'chosen_source': None, 'conflict': True,
+        'observations': [{'source': 'a', 'gtin14': '00000000000001', 'valid': True},
+                         {'source': 'b', 'gtin14': '00000000000002', 'valid': True}],
+    }
+    p.write_text(json.dumps(data))
+    reg.upsert('sony-a7iv', _rotate(), path=p)   # fresh entry: gtin=None, receipt empty
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['gtin'] is None
+    assert e['identity']['gtin_provenance']['conflict'] is True
+    assert len(e['identity']['gtin_provenance']['observations']) == 2
+
+
+def test_rotation_fresh_evidence_replaces_null_anchor_receipt(tmp_path):
+    """But a rotation that gathered ITS OWN evidence is not empty-handed —
+    the fresh receipt wins (it describes the live listing)."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    data = json.loads(p.read_text())
+    data['skus']['sony-a7iv']['identity']['gtin_provenance'] = {
+        'chosen_source': None, 'conflict': True, 'observations': [{'old': True}],
+    }
+    p.write_text(json.dumps(data))
+    fresh = _rotate()
+    fresh['identity']['gtin_provenance'] = {
+        'chosen_source': None, 'conflict': False, 'observations': [{'new': True}],
+    }
+    reg.upsert('sony-a7iv', fresh, path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['identity']['gtin_provenance']['observations'] == [{'new': True}]

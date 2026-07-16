@@ -300,6 +300,17 @@ def _merge_enrichment(existing, entry):
         merged['superseded'] = identity.get('gtin_provenance')
         merged['conflict'] = True
         identity['gtin_provenance'] = merged
+    elif not new_gtin and isinstance(old_prov, dict) and (
+            old_prov.get('observations') or old_prov.get('conflict')):
+        # Null-anchor receipt (set_gtin doctrine: gtin may be None WITH a
+        # provenance receipt — a persisted CONFLICT-DROP flag or gathered
+        # evidence awaiting adjudication). An incoming empty-handed resolve
+        # must not erase the /admin-visible receipt.
+        new_prov = identity.get('gtin_provenance')
+        incoming_empty = not (isinstance(new_prov, dict) and (
+            new_prov.get('observations') or new_prov.get('conflict')))
+        if incoming_empty:
+            identity['gtin_provenance'] = old_prov
 
     # Catalog image + rescue receipt
     if not (identity.get('image_catalog') or '').strip():
