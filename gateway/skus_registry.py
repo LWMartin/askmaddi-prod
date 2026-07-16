@@ -506,6 +506,45 @@ def set_image_catalog(slug, url, provenance=None, path=SKUS_PATH):
     return 'written'
 
 
+def set_rebind_rejection(slug, receipt, path=SKUS_PATH):
+    """Park a firewall-rejected rebind as a receipt on the standing entry.
+
+    The rebind firewall's writer (sibling of set_gtin / set_image_catalog —
+    spine writes stay in this module, judgment lives in rebind_firewall.py).
+    The standing identity is NOT touched; the fresh-but-suspect identity is
+    preserved at the top-level `rebind_rejected` key for /admin visibility,
+    mirroring how GTIN conflicts persist a receipt rather than silent-pick.
+
+    IDEMPOTENT: the resolve pass runs daily and will re-offer the same junk
+    listing every morning — re-parking an identical rejection (same item_id,
+    same signals) skips the write entirely so the daily pass never churns
+    the file (same discipline as upsert's 'unchanged' short-circuit).
+
+    Lifecycle: a later LAWFUL rebind replaces the entry wholesale via
+    upsert, and `rebind_rejected` is neither in build_entry's shape nor in
+    _merge_enrichment's carry list — the receipt dies with the identity it
+    warned about, by construction.
+
+    Returns: 'written' | 'unchanged' | 'missing-slug'.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    standing = entry.get('rebind_rejected')
+    if (isinstance(standing, dict)
+            and standing.get('item_id') == receipt.get('item_id')
+            and standing.get('signals') == receipt.get('signals')):
+        return 'unchanged'
+
+    entry['rebind_rejected'] = receipt
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'written'
+
+
 ADJUDICATE_ACTIONS = ('assign', 'dismiss')
 
 DISMISS_REASONS = ('variant_ambiguous', 'wrong_product', 'insufficient_evidence')

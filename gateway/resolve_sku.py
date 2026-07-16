@@ -56,6 +56,7 @@ from pathlib import Path
 import skus_registry
 import slug_normalizer
 import ebay_category_map
+import rebind_firewall
 
 # Default eBay-candidate disambiguation model — the locked, validated checkpoint
 # (gemma4:e2b-it-qat), same tag the comparator typer uses. Single-sourced default.
@@ -508,6 +509,35 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
         source=target.get('source', 'resolved'),
         minted_needs_review=minted_needs_review,
     )
+    # ── Rebind firewall (found live 2026-07-16: empty-box rebind) ──
+    # A REBIND — fresh identity differing from a standing spine entry — gets
+    # a sanity gate the disambiguator's confidence verdict does not provide:
+    # confidence judged WHICH candidate wins; this judges whether the winner
+    # is plausibly still the same product. On reject the standing identity
+    # stays, the suspect identity parks as an /admin receipt, and the pass
+    # returns loud. First resolves and idempotent re-resolves never enter.
+    standing = skus_registry.load_registry(skus_path).get('skus', {}).get(slug)
+    if standing is not None and standing.get('identity') and \
+            not skus_registry._same_identity(standing, entry):
+        fw = rebind_firewall.assess(standing, entry)
+        if fw['verdict'] == 'reject':
+            receipt = {
+                'ts': __import__('time').strftime('%Y-%m-%dT%H:%M:%SZ', __import__('time').gmtime()),
+                'item_id': entry.get('marketplace_ids', {}).get('ebay_legacy_item_id', ''),
+                'title': entry.get('identity', {}).get('market_title', ''),
+                'price_seen': entry.get('identity', {}).get('price_seen'),
+                'signals': fw['signals'], 'hard': fw['hard'],
+            }
+            skus_registry.set_rebind_rejection(slug, receipt, path=skus_path)
+            return {
+                'slug': slug, 'outcome': 'rebind_rejected',
+                'detail': ','.join(fw['signals']),
+                'confidence': verdict['confidence'], 'why': verdict['why'],
+                'item_id': verdict['item_id'],
+                'candidates_seen': len(candidates),
+                'source': target.get('source', 'resolved'),
+            }
+
     status = skus_registry.upsert(slug, entry, path=skus_path)
     return {
         'slug': slug, 'outcome': 'resolved',
