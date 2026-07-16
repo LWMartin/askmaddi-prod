@@ -228,6 +228,95 @@ def build_entry(slug, vendor, model, facet, contamination_key,
     }
 
 
+def _merge_enrichment(existing, entry):
+    """Carry enrichment layers across an identity-change replace. Returns a copy.
+
+    upsert()'s 'updated' path replaces the entry wholesale because identity
+    genuinely changed (typically an eBay listing rotation flipping
+    legacy_item_id). But a fresh build_entry() carries ONLY what THIS
+    morning's resolve fetched — every layer written by other authors would
+    silently die in the replace. Found live 2026-07-16: one listing rotation
+    erased the 7/15 image-sweep rescues (identity.image_provenance), collapsed
+    gtin_provenance.observations to [], and would have erased adjudications
+    and Gemma-backfilled unspsc had any existed on the rotated entries.
+
+    Each rule below mirrors the doctrine its surgical writer already enforces
+    — this function makes the bulldozer obey the same law as the scalpels:
+
+    - overrides             HUMAN layer (D3, images-on-spine): /admin-only
+                            author; resolve never writes it. Carried whenever
+                            the incoming entry lacks one.
+    - gtin + gtin_provenance  set_gtin doctrine: an existing non-null anchor
+                            is NEVER overwritten by a machine pass, and an
+                            adjudicated provenance (human ruling) is terminal.
+                            A null incoming anchor never clobbers a non-null
+                            existing one; an adjudicated existing provenance
+                            survives regardless of what resolve found.
+                            An incoming anchor that CONFLICTS with the
+                            existing one does not silently win — the existing
+                            anchor stays, and the incoming receipt is
+                            preserved under gtin_provenance.superseded for
+                            /admin visibility (disagreement = CONFLICT,
+                            never silent-pick).
+    - image_catalog + image_provenance  set_image_catalog doctrine: a capture
+                            on the spine is never clobbered by a pass that
+                            arrives empty-handed. An incoming NON-EMPTY
+                            capture wins (fresh resolve-time evidence for the
+                            new listing); an incoming empty one carries the
+                            existing capture + its provenance forward.
+    - unspsc                Gemma-mapper backfill (Axis B): build_entry always
+                            emits null; a non-null existing classification
+                            carries forward.
+
+    needs_review is recomputed after the merge so a carried gtin/unspsc
+    clears the flag exactly as build_entry would have set it.
+    """
+    entry = dict(entry)
+    identity = dict(entry.get('identity') or {})
+    entry['identity'] = identity
+    old_identity = existing.get('identity') or {}
+
+    # HUMAN layer (existing behavior, D3)
+    prior_overrides = existing.get('overrides')
+    if prior_overrides and not entry.get('overrides'):
+        entry['overrides'] = prior_overrides
+
+    # GTIN anchor + receipt
+    old_gtin = get_gtin(existing)
+    old_prov = old_identity.get('gtin_provenance')
+    old_adjudicated = isinstance(old_prov, dict) and old_prov.get('adjudications')
+    new_gtin = entry.get('gtin')
+    if old_adjudicated or (old_gtin and not new_gtin):
+        # Human ruling terminal, or machine arrived empty-handed against a
+        # standing anchor: existing anchor + receipt survive intact.
+        entry['gtin'] = old_gtin
+        if old_prov is not None:
+            identity['gtin_provenance'] = old_prov
+    elif old_gtin and new_gtin and new_gtin != old_gtin:
+        # Conflict: never silent-pick. Existing anchor stands; the fresh
+        # receipt is preserved for /admin adjudication.
+        entry['gtin'] = old_gtin
+        merged = dict(old_prov) if isinstance(old_prov, dict) else {}
+        merged['superseded'] = identity.get('gtin_provenance')
+        merged['conflict'] = True
+        identity['gtin_provenance'] = merged
+
+    # Catalog image + rescue receipt
+    if not (identity.get('image_catalog') or '').strip():
+        old_img = (old_identity.get('image_catalog') or '').strip()
+        if old_img:
+            identity['image_catalog'] = old_img
+            if 'image_provenance' in old_identity:
+                identity['image_provenance'] = old_identity['image_provenance']
+
+    # Axis B classification
+    if entry.get('unspsc') is None and existing.get('unspsc') is not None:
+        entry['unspsc'] = existing['unspsc']
+
+    entry['needs_review'] = entry.get('gtin') is None or entry.get('unspsc') is None
+    return entry
+
+
 def upsert(slug, entry, path=SKUS_PATH):
     """Insert or update one SKU entry, idempotently and atomically.
 
@@ -250,15 +339,7 @@ def upsert(slug, entry, path=SKUS_PATH):
 
     status = 'updated' if existing is not None else 'created'
     if existing is not None:
-        # D3 (images-on-spine): overrides are the HUMAN layer — written only
-        # by /admin set_override, never by resolve. A genuine identity change
-        # replaces the entry wholesale, which without this carry-forward would
-        # silently discard hand corrections. Refresh-proof by construction:
-        # re-resolve rewrites identity.*, never overrides.*.
-        prior_overrides = existing.get('overrides')
-        if prior_overrides and not entry.get('overrides'):
-            entry = dict(entry)
-            entry['overrides'] = prior_overrides
+        entry = _merge_enrichment(existing, entry)
     skus[slug] = entry
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)

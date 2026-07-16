@@ -182,3 +182,125 @@ def test_atomic_write_preserves_group_read(tmp_path):
     reg.set_image_catalog(slug, 'https://i.ebayimg.com/x.jpg', path=p)  # rewrite
     mode = stat.S_IMODE(os.stat(p).st_mode)
     assert mode & 0o040, oct(mode)                           # group read survives
+
+
+# ---------------------------------------------------------------------------
+# _merge_enrichment: the 'updated' path must obey the surgical writers' law
+# (found live 2026-07-16: a listing rotation erased the 7/15 sweep rescues,
+# collapsed gtin observations, and would have erased adjudications/unspsc).
+# ---------------------------------------------------------------------------
+
+def _rotate(**kw):
+    """A fresh resolve of the same slug on a rotated listing."""
+    kw.setdefault('legacy', '999888777666')
+    return _entry(**kw)
+
+
+def _enrich(p, *, gtin='00027242920000', image=True, adjudicate=False, unspsc=None):
+    """Load the stored entry, decorate its enrichment layers, write back."""
+    data = json.loads(p.read_text())
+    e = data['skus']['sony-a7iv']
+    if gtin:
+        e['gtin'] = gtin
+        e['identity']['gtin_provenance'] = {
+            'chosen_source': 'product.gtins', 'conflict': False,
+            'observations': [{'source': 'product.gtins', 'gtin14': gtin, 'valid': True}],
+        }
+    if adjudicate:
+        e['gtin'] = None
+        e['identity']['gtin_provenance'] = {
+            'chosen_source': None, 'observations': [],
+            'adjudications': [{'action': 'dismiss', 'reason': 'variant_ambiguous', 'actor': 'admin'}],
+        }
+    if image:
+        e['identity']['image_catalog'] = 'https://i.ebayimg.com/catalog-hero.jpg'
+        e['identity']['image_provenance'] = {'source': 'image_secondpass', 'query': 'sweep'}
+    if unspsc is not None:
+        e['unspsc'] = unspsc
+    p.write_text(json.dumps(data))
+
+
+def test_rotation_preserves_image_rescue(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, gtin=None, image=True)
+    status = reg.upsert('sony-a7iv', _rotate(), path=p)
+    assert status == 'updated'
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['identity']['image_catalog'] == 'https://i.ebayimg.com/catalog-hero.jpg'
+    assert e['identity']['image_provenance']['source'] == 'image_secondpass'
+    # rotation itself landed
+    assert e['marketplace_ids']['ebay_legacy_item_id'] == '999888777666'
+
+
+def test_rotation_incoming_capture_beats_carried_image(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, gtin=None, image=True)
+    fresh = _rotate()
+    fresh['identity']['image_catalog'] = 'https://i.ebayimg.com/fresh-capture.jpg'
+    reg.upsert('sony-a7iv', fresh, path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['identity']['image_catalog'] == 'https://i.ebayimg.com/fresh-capture.jpg'
+    # stale rescue receipt must not ride under a fresh capture
+    assert e['identity'].get('image_provenance') is None
+
+
+def test_rotation_null_gtin_never_clobbers_anchor(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, gtin='00027242920000', image=False)
+    reg.upsert('sony-a7iv', _rotate(), path=p)   # build_entry: gtin=None
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['gtin'] == '00027242920000'
+    assert e['identity']['gtin_provenance']['observations'][0]['gtin14'] == '00027242920000'
+    assert e['needs_review'] is True  # unspsc still null
+
+
+def test_rotation_conflicting_gtin_never_silent_picks(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, gtin='00027242920000', image=False)
+    fresh = _rotate()
+    fresh['gtin'] = '00027242999999'
+    fresh['identity']['gtin_provenance'] = {'chosen_source': 'product.gtins', 'observations': ['x']}
+    reg.upsert('sony-a7iv', fresh, path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['gtin'] == '00027242920000'               # standing anchor holds
+    prov = e['identity']['gtin_provenance']
+    assert prov['conflict'] is True
+    assert prov['superseded']['chosen_source'] == 'product.gtins'  # fresh receipt kept for /admin
+
+
+def test_rotation_adjudication_is_terminal(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, adjudicate=True, image=False)
+    fresh = _rotate()
+    fresh['gtin'] = '00027242999999'   # machine found one after the dismissal
+    reg.upsert('sony-a7iv', fresh, path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['gtin'] is None                            # human ruling stands
+    assert e['identity']['gtin_provenance']['adjudications'][0]['action'] == 'dismiss'
+
+
+def test_rotation_carries_unspsc_and_clears_needs_review(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    _enrich(p, gtin='00027242920000', image=False, unspsc='45121504')
+    reg.upsert('sony-a7iv', _rotate(), path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['unspsc'] == '45121504'
+    assert e['needs_review'] is False   # both anchors carried -> flag recomputed clear
+
+
+def test_rotation_still_carries_overrides(tmp_path):
+    """Existing D3 behavior must survive the merge refactor."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    data = json.loads(p.read_text())
+    data['skus']['sony-a7iv']['overrides'] = {'image_thumb': 'https://hand.jpg'}
+    p.write_text(json.dumps(data))
+    reg.upsert('sony-a7iv', _rotate(), path=p)
+    e = json.loads(p.read_text())['skus']['sony-a7iv']
+    assert e['overrides'] == {'image_thumb': 'https://hand.jpg'}
