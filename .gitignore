@@ -22,3 +22,11 @@ data/review_queue.json
 # been ABORTING the nightly cron's clean-tree preflight since then (same
 # failure class as the 2026-06-25 .env.bak incident). Found 2026-07-02.
 data/work_queue.json
+
+# Phase 0 distribution stores (maddi-distribution v2.0, 2026-07-17) — both
+# runtime-written on the box by the gateway; tracking either would (a) trip
+# the nightly clean-tree preflight (the 06-25/06-30 failure class) and, for
+# subscribers.jsonl, (b) put PII in git, which is forbidden ALWAYS. The
+# nightly banker's allowlist must never grow to include subscribers.jsonl.
+data/analytics_log.jsonl
+data/subscribers.jsonl

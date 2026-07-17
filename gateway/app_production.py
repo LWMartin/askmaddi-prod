@@ -102,6 +102,15 @@ try:
 except ImportError:
     pass
 
+# --- Distribution measurement + vault (Phase 0, maddi-distribution v2.0) ---
+# Unguarded imports BY DESIGN: both modules are stdlib-only files in this same
+# directory (no third-party deps to be missing on the box), and the endpoints
+# they back are load-bearing for Phase 0 — a gateway that silently dropped
+# outbound/ai_referral events or subscriber emails would defeat the entire
+# "measure before pushing" gate while looking healthy. Fail loud at import.
+import analytics_log
+import subscribers
+
 # --- Demand factory (capture path) ---
 # demand_log (upstream want-signal) + review_queue (slug-ambiguous subset) +
 # slug_normalizer (the gate). Guarded together so a gateway missing any of them
@@ -461,13 +470,50 @@ def ebay_resolve():
 
 @app.route('/ping', methods=['POST'])
 def analytics_ping():
-    """Anonymous analytics — category only, never the query."""
-    data = request.get_json()
+    """Anonymous analytics — category only, never the query.
+
+    Phase 0 (maddi-distribution v2.0, 2026-07-17): pings that carry a known
+    'event' field ('outbound' | 'ai_referral') are PERSISTED via analytics_log
+    (append-only JSONL, whitelisted values, no user data). Legacy pings — the
+    original search-time category/source_count shape — keep their print-only
+    behavior unchanged; nothing that previously reached this endpoint gains
+    persistence retroactively.
+    """
+    data = request.get_json(silent=True) or {}
+    event = data.get('event')
+    if event in analytics_log.EVENT_TYPES:
+        analytics_log.log_event(
+            event,
+            category=data.get('category'),
+            retailer=data.get('retailer'),
+            engine=data.get('engine'),
+        )
+        return jsonify({'received': True})
+
     category = data.get('category', 'unknown')
     source_count = data.get('source_count', 0)
     # Category-level only. No user tracking. Ever.
     print(f"[PING] category={category}, sources={source_count}")
     return jsonify({'received': True})
+
+
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    """Email capture — the vault (maddi-distribution v2.0 Phase 0).
+
+    Honeypot: the form includes a visually hidden 'website' field. Humans leave
+    it empty; bots fill it. A filled honeypot returns the SAME success response
+    and writes nothing — never teach the bot which field tripped it.
+    Response never distinguishes 'added' from 'exists' (no address-book oracle).
+    """
+    data = request.get_json(silent=True) or {}
+    if data.get('website'):
+        return jsonify({'ok': True})
+    status = subscribers.add(data.get('email'), source='site')
+    if status == 'invalid':
+        return jsonify({'ok': False,
+                        'error': 'Please enter a valid email address.'}), 400
+    return jsonify({'ok': True})
 
 
 @app.teardown_appcontext

@@ -130,15 +130,42 @@ def proxy_fetch():
 def analytics_ping():
     """
     Anonymous analytics - category only, never the query.
+    Phase 0 parity with app_production: known 'event' pings persist via
+    analytics_log; legacy shape stays print-only.
     """
-    data = request.get_json()
+    import analytics_log
+    data = request.get_json(silent=True) or {}
+    event = data.get('event')
+    if event in analytics_log.EVENT_TYPES:
+        analytics_log.log_event(
+            event,
+            category=data.get('category'),
+            retailer=data.get('retailer'),
+            engine=data.get('engine'),
+        )
+        return jsonify({'received': True})
+
     category = data.get('category', 'unknown')
     source_count = data.get('source_count', 0)
-    
+
     # Just log for now. No user tracking. Ever.
     print(f"[PING] category={category}, sources={source_count}")
-    
+
     return jsonify({'received': True})
+
+
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    """Email capture parity with app_production (honeypot: 'website')."""
+    import subscribers
+    data = request.get_json(silent=True) or {}
+    if data.get('website'):
+        return jsonify({'ok': True})
+    status = subscribers.add(data.get('email'), source='site')
+    if status == 'invalid':
+        return jsonify({'ok': False,
+                        'error': 'Please enter a valid email address.'}), 400
+    return jsonify({'ok': True})
 
 
 @app.teardown_appcontext
