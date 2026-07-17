@@ -1,6 +1,46 @@
 {
-  "generated_at": "2026-07-17T21:42:33Z",
+  "generated_at": "2026-07-17T17:37:01Z",
   "cards": [
+    {
+      "card_id": "canon-r5",
+      "display_name": "Canon R5",
+      "brand": "Canon",
+      "category": "Body",
+      "subcategory": "Mirrorless",
+      "image_thumb": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
+      "source_count": 19,
+      "confidence": "low",
+      "top_axes": [
+        {
+          "axis": "Generation Context",
+          "pos": 38,
+          "neg": 1,
+          "total": 51,
+          "role": "most_discussed"
+        },
+        {
+          "axis": "Handling",
+          "pos": 18,
+          "neg": 0,
+          "total": 22,
+          "role": "highest_rated"
+        },
+        {
+          "axis": "AF Noise",
+          "pos": 12,
+          "neg": 3,
+          "total": 20,
+          "role": "biggest_gripe"
+        }
+      ],
+      "pricing": {
+        "new_price": 0,
+        "new_url": "https://www.amazon.com/s?k=04549292157345+Canon+R5&tag=askmaddi-20",
+        "used_price": 0,
+        "used_url": "https://www.ebay.com/sch/i.html?_nkw=canon+r5&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
+      },
+      "card_url": "cards/canon-r5/"
+    },
     {
       "card_id": "canon-r6",
       "display_name": "Canon R6",
@@ -160,6 +200,86 @@
         "used_url": "https://www.ebay.com/sch/i.html?_nkw=sigma+35mm+f%2F1.4+dg+dn+art+ii&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
       },
       "card_url": "cards/sigma-35-art-dg-dn-ii/"
+    },
+    {
+      "card_id": "sony-a1",
+      "display_name": "Sony A1",
+      "brand": "Sony",
+      "category": "Body",
+      "subcategory": "Mirrorless",
+      "image_thumb": "https://i.ebayimg.com/images/g/yKAAAeSwNt5qSsFy/s-l1600.jpg",
+      "source_count": 33,
+      "confidence": "high",
+      "top_axes": [
+        {
+          "axis": "Af Performance.Video",
+          "pos": 118,
+          "neg": 20,
+          "total": 198,
+          "role": "most_discussed"
+        },
+        {
+          "axis": "Optical Performance",
+          "pos": 84,
+          "neg": 7,
+          "total": 118,
+          "role": "highest_rated"
+        },
+        {
+          "axis": "Mount Compatibility",
+          "pos": 13,
+          "neg": 4,
+          "total": 81,
+          "role": "biggest_gripe"
+        }
+      ],
+      "pricing": {
+        "new_price": 0,
+        "new_url": "https://www.amazon.com/s?k=00027242922624+Sony+A1&tag=askmaddi-20",
+        "used_price": 0,
+        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
+      },
+      "card_url": "cards/sony-a1/"
+    },
+    {
+      "card_id": "sony-a7c",
+      "display_name": "Sony A7C",
+      "brand": "Sony",
+      "category": "Body",
+      "subcategory": "Mirrorless",
+      "image_thumb": "https://i.ebayimg.com/images/g/OAYAAOSw97RkuskT/s-l1600.jpg",
+      "source_count": 35,
+      "confidence": "high",
+      "top_axes": [
+        {
+          "axis": "Af Performance.Video",
+          "pos": 85,
+          "neg": 13,
+          "total": 131,
+          "role": "most_discussed"
+        },
+        {
+          "axis": "Color Rendition",
+          "pos": 40,
+          "neg": 4,
+          "total": 52,
+          "role": "highest_rated"
+        },
+        {
+          "axis": "Filter Thread",
+          "pos": 8,
+          "neg": 4,
+          "total": 20,
+          "role": "biggest_gripe"
+        }
+      ],
+      "pricing": {
+        "new_price": 0,
+        "new_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a7c&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080",
+        "used_price": 0,
+        "used_url": "https://www.ebay.com/sch/i.html?_nkw=sony+a7c&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080"
+      },
+      "card_url": "cards/sony-a7c/"
     },
     {
       "card_id": "sony-a7iv",
