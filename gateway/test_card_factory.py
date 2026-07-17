@@ -370,3 +370,38 @@ def test_detail_bounded_under_work_queue_cap(tmp_path, monkeypatch):
     runner = _mk_runner(tmp_path, monkeypatch, proc)
     _, _, detail = runner(_REC)
     assert len(detail) <= 480
+
+
+def test_runner_passes_require_spine_with_spine(tmp_path, monkeypatch):
+    """Factory posture: wherever --spine goes, --require-spine goes."""
+    captured = {}
+
+    def fake_run(cmd, **kw):
+        captured['cmd'] = cmd
+        return _Proc(0, out='ok')
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock',
+        askmaddi_prod=str(tmp_path / 'prod'))
+    runner(_REC)
+    cmd = captured['cmd']
+    assert '--spine' in cmd
+    assert '--require-spine' in cmd
+
+
+def test_runner_no_prod_root_no_require_spine(tmp_path, monkeypatch):
+    """Sandbox/manual posture unchanged: no prod root, no spine, no mandate."""
+    captured = {}
+
+    def fake_run(cmd, **kw):
+        captured['cmd'] = cmd
+        return _Proc(0, out='ok')
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock')
+    runner(_REC)
+    assert '--require-spine' not in captured['cmd']

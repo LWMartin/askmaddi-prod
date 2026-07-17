@@ -148,6 +148,12 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             # entry (image pick + subcategory + brand/model) into card
             # identity. Absent entry degrades loudly to pre-spine behavior.
             cmd += ['--spine', str(Path(askmaddi_prod) / 'data' / 'skus.json')]
+            # Factory posture (2026-07-17, after the 0600-perms silent
+            # degradation): a factory build only exists because the SKU
+            # RESOLVED — its spine entry must exist and must be readable.
+            # Any spine miss is a stop-the-line infra defect (exit 4,
+            # deterministic 3-strike), never a quiet pre-spine card.
+            cmd += ['--require-spine']
         if yt:
             # Stage 1b: paced YT transcript leg into the same triples dir.
             # Factory-global posture, not per-record — quality-first cards
