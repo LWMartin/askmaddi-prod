@@ -1,13 +1,19 @@
 {
-  "_comment": "Durable Amazon ASIN registry, keyed by card_id. build_site.py merges these into pricing.amazon_asin at build time so they survive aggregator rebuilds (which regenerate data/cards/*.json without ASINs). Each ASIN verified live against amazon.com before entry. When a card's ASIN changes, update HERE, not in the card JSON (that gets overwritten).",
-  "asins": {
-    "sony-a7iv": "B09JZT6YK5",
-    "sigma-35-art-dg-dn-ii": "B0GQJ8JMMN",
-    "peak-design-travel-tripod": "B085BQTQMN"
-  },
-  "verified": {
-    "sony-a7iv": "2026-06-19 — Sony Alpha 7 IV, ILCE7M4/BQ",
-    "sigma-35-art-dg-dn-ii": "2026-06-19 — Sigma 35mm F1.4 DG II Art, Sony E (gen-2)",
-    "peak-design-travel-tripod": "2026-06-19 — PD Travel Tripod Carbon Fiber, TT-CB-5-150-CF-1"
-  }
+ "_comment": "Durable Amazon ASIN registry, keyed by card_id. build_site.py merges these into pricing.amazon_asin at build time so they survive aggregator rebuilds (which regenerate data/cards/*.json without ASINs). Each ASIN verified live against amazon.com before entry. When a card's ASIN changes, update HERE, not in the card JSON (that gets overwritten). The 'absent' list is the inverse verdict: card_ids VERIFIED not sold on Amazon (new or at all) \u2014 build_site skips every Amazon rung for these (straight to the eBay chain), because a close-match Amazon page for an absent product is the e930bea wrong-product trap.",
+ "asins": {
+  "sony-a7iv": "B09JZT6YK5",
+  "sigma-35-art-dg-dn-ii": "B0GQJ8JMMN",
+  "peak-design-travel-tripod": "B085BQTQMN"
+ },
+ "verified": {
+  "sony-a7iv": "2026-06-19 \u2014 Sony Alpha 7 IV, ILCE7M4/BQ",
+  "sigma-35-art-dg-dn-ii": "2026-06-19 \u2014 Sigma 35mm F1.4 DG II Art, Sony E (gen-2)",
+  "peak-design-travel-tripod": "2026-06-19 \u2014 PD Travel Tripod Carbon Fiber, TT-CB-5-150-CF-1"
+ },
+ "absent": [
+  "peak-design-pro-tripod"
+ ],
+ "absent_verified": {
+  "peak-design-pro-tripod": "2026-07-17 \u2014 not sold new on Amazon (documented in new_cta since e930bea)"
+ }
 }

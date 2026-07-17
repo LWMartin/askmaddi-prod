@@ -27,6 +27,7 @@ import html
 import json
 import re
 import sys
+import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -159,13 +160,16 @@ AMAZON_FIRST = True
 # used-price bands are eBay-derived.
 
 
-def amazon_gtin_search_url(gtin):
-    """Amazon search keyed on a VERIFIED GTIN — lands on an essentially
-    exact product match, unlike name search (which e930bea demoted to last
-    resort for dumping buyers on lookalike top hits). The GTIN rung is the
-    no-API Amazon-first path for every GTIN-anchored card; the /dp/ ASIN
-    rung above it remains the premium, human-verified landing."""
-    return f"https://www.amazon.com/s?k={gtin}&tag={AMAZON_TAG}"
+def amazon_gtin_search_url(gtin, display_name=""):
+    """Amazon search keyed on a VERIFIED GTIN plus the product name — a
+    graceful-degrading query (2026-07-17, Lee's call): when Amazon knows
+    the GTIN the exact product dominates the results; when it doesn't,
+    the name tokens produce an honest close-match page instead of the
+    dead 'no results' void a bare-GTIN query strands buyers on. The /dp/
+    ASIN rung above remains the premium, human-verified landing; bare
+    name search (no GTIN) stays last-resort per e930bea."""
+    q = urllib.parse.quote_plus(f"{gtin} {display_name}".strip())
+    return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
 
 
 def amazon_search_url(display_name):
@@ -233,11 +237,21 @@ def new_cta(card):
     gtin = pricing.get("gtin")
     epid = pricing.get("ebay_epid")
     ebay_cat = EBAY_CATEGORY.get(card.get("category"))
-    if AMAZON_FIRST:
+    amazon_ok = not pricing.get("amazon_absent")
+    if AMAZON_FIRST and amazon_ok:
         url = ensure_affiliate_tag(
             (amazon_product_url(asin) if asin else None)
-            or (amazon_gtin_search_url(gtin) if gtin else None)
+            or (amazon_gtin_search_url(gtin, name) if gtin else None)
             or pricing.get("affiliate_url")
+            or pricing.get("current_new_url")
+            or (ebay_product_url(epid) if epid else None)
+            or ebay_search_url(name, ebay_cat)
+        )
+    elif AMAZON_FIRST:
+        # Registry-verified absent from Amazon: every Amazon rung skipped —
+        # a close-match page for an absent product is the wrong-product trap.
+        url = ensure_affiliate_tag(
+            pricing.get("affiliate_url")
             or pricing.get("current_new_url")
             or (ebay_product_url(epid) if epid else None)
             or ebay_search_url(name, ebay_cat)
@@ -816,8 +830,11 @@ def apply_asin_registry(cards):
     except (OSError, ValueError):
         return cards  # registry optional; absence degrades to prior behavior
     asins = reg.get("asins", {})
+    absent = set(reg.get("absent", []))
     for card in cards:
         cid = card.get("card_id")
+        if cid in absent:
+            card.setdefault("pricing", {})["amazon_absent"] = True
         asin = asins.get(cid)
         if not asin:
             continue

@@ -452,3 +452,41 @@ def test_cards_dir_with_manifest_and_sitemap_still_allowed(tmp_path):
     manifest = _json.loads((tmp_path / "out" / "cards-manifest.json").read_text())
     assert len(manifest["cards"]) == 2            # full corpus, no shrinkage
     assert (tmp_path / "out" / "sitemap.xml").exists()
+
+
+def test_gtin_search_carries_name_for_close_match_degradation():
+    """2026-07-17: bare-GTIN queries strand buyers on 'no results' when
+    Amazon lacks the GTIN. The hybrid query degrades to close-match."""
+    card = {
+        "identity": {"display_name": "Ulanzi F38 Zero"},
+        "pricing": {"gtin": "00719821437895"},
+    }
+    _, url = new_cta(card)
+    assert "00719821437895" in url and "Ulanzi" in url
+    assert "tag=askmaddi-20" in url
+
+
+def test_amazon_absent_skips_every_amazon_rung():
+    """Registry-verified absent (e.g. PD Pro Tripod): GTIN or not, every
+    Amazon rung is skipped — close-match for an absent product is the
+    e930bea wrong-product trap. eBay chain serves."""
+    card = {
+        "identity": {"display_name": "Peak Design Pro Tripod"},
+        "pricing": {"gtin": "00840262600000", "amazon_absent": True,
+                    "affiliate_url": "https://www.ebay.com/itm/999"},
+    }
+    _, url = new_cta(card)
+    assert "amazon.com" not in url
+    assert "ebay.com/itm/999" in url
+
+
+def test_apply_asin_registry_marks_absent(tmp_path, monkeypatch):
+    import build_site as bs
+    reg = tmp_path / "asin_registry.json"
+    reg.write_text('{"asins": {}, "absent": ["peak-design-pro-tripod"]}')
+    monkeypatch.setattr(bs, "ASIN_REGISTRY_PATH", reg)
+    cards = [{"card_id": "peak-design-pro-tripod", "pricing": {}},
+             {"card_id": "sony-a7iv", "pricing": {}}]
+    bs.apply_asin_registry(cards)
+    assert cards[0]["pricing"].get("amazon_absent") is True
+    assert "amazon_absent" not in cards[1]["pricing"]
