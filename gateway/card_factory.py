@@ -159,14 +159,69 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             cmd, cwd=str(build_card_path.parent),
             capture_output=True, text=True,
         )
+        # Persist the FULL transcript regardless of outcome (2026-07-17,
+        # after two incidents the discard hid: the 0600-perms silent
+        # pre-spine degradation rode a SUCCESSFUL build's discarded stdout,
+        # and a7-v/a7c parked with a [!] warning as their last_error while
+        # the real fatal died with the pipe). One file per build root,
+        # overwritten in place — bounded by construction.
+        _persist_build_log(build_root, cmd, proc)
         if proc.returncode == 0:
             return 0, str(card_path), 'ok'
-        # Tail of stderr is the useful failure signal for the work_queue record.
-        tail = (proc.stderr or proc.stdout or '').strip().splitlines()
-        detail = tail[-1] if tail else f'exit {proc.returncode}'
-        return proc.returncode, str(card_path), detail
+        return proc.returncode, str(card_path), _failure_detail(proc)
 
     return _run
+
+
+def _persist_build_log(build_root, cmd, proc):
+    """Write the full build transcript to <build_root>/build.log. Best-effort:
+    a log-write failure must never convert a build outcome."""
+    try:
+        build_root = Path(build_root)
+        build_root.mkdir(parents=True, exist_ok=True)
+        (build_root / 'build.log').write_text(
+            'cmd: ' + ' '.join(cmd) + '\n'
+            + f'exit: {proc.returncode}\n'
+            + '─── stdout ───\n' + (proc.stdout or '')
+            + '\n─── stderr ───\n' + (proc.stderr or '') + '\n')
+    except OSError:
+        pass
+
+
+# Lines matching these mark the ACTUAL failure; a tail that happens to end on
+# a [!] advisory is how a7-v/a7c parked with a warning as their last_error.
+_FATAL_MARKERS = ('Traceback', 'ERROR', 'FATAL', 'error:', 'Error:',
+                  'Refusing', 'CRITICAL', 'Exception')
+
+
+def _failure_detail(proc, budget=480):
+    """Compose last_error from BOTH streams, fatal-first.
+
+    Old behavior — `(stderr or stdout).splitlines()[-1]` — dropped stdout
+    whenever stderr held so much as one advisory line, and kept one line of
+    whatever won. New: scan both streams for fatal-marker lines (taking the
+    LAST match — for a traceback that's the exception itself), then append
+    each stream's tail for context, inside the work_queue's 500-char cap.
+    """
+    out = (proc.stdout or '').strip()
+    err = (proc.stderr or '').strip()
+    combined = (out + '\n' + err).splitlines()
+
+    fatal = ''
+    for line in combined:
+        s = line.strip()
+        if s and any(m in s for m in _FATAL_MARKERS):
+            fatal = s
+    parts = [f'exit {proc.returncode}']
+    if fatal:
+        parts.append(fatal)
+    for name, stream in (('stderr', err), ('stdout', out)):
+        tail = [l.strip() for l in stream.splitlines() if l.strip()][-2:]
+        for l in tail:
+            if l != fatal and l not in parts:
+                parts.append(f'[{name}] {l}')
+    detail = ' | '.join(parts)
+    return detail[:budget] if detail else f'exit {proc.returncode}'
 
 
 def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):

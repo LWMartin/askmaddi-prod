@@ -295,3 +295,78 @@ def test_runner_default_keeps_historical_out(tmp_path, monkeypatch):
         build_card_path=tmp_path / 'build_card.py', enrich_client='mock')
     rc, card_path, _ = runner({'slug': 's1', 'label': 'L', 'category': 'lens'})
     assert card_path == str(tmp_path / 'out' / 's1' / 'card.json')
+
+
+# ─── failure capture rework (2026-07-17) ─────────────────────────────────────
+# Pins the a7-v shape: advisory [!] warning as stderr's last line, real fatal
+# in stdout — old capture kept the warning, new capture surfaces the fatal.
+
+class _Proc:
+    def __init__(self, rc, out='', err=''):
+        self.returncode, self.stdout, self.stderr = rc, out, err
+
+
+def _mk_runner(tmp_path, monkeypatch, proc):
+    monkeypatch.setattr(cf.subprocess, 'run', lambda cmd, **kw: proc)
+    return cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock')
+
+
+_REC = {'slug': 'sony-a7-v', 'label': 'Sony A7 V', 'category': 'body'}
+
+
+def test_failure_detail_surfaces_fatal_over_advisory(tmp_path, monkeypatch):
+    proc = _Proc(1,
+                 out="stage fetch: 0 pages\nERROR: fetch produced no corpus\n",
+                 err="  [!] sku_id 'sony-a7-v' not in SKU_IDENTITY_REGISTRY "
+                     "and no identity override - falling back\n")
+    runner = _mk_runner(tmp_path, monkeypatch, proc)
+    rc, _, detail = runner(_REC)
+    assert rc == 1
+    assert 'ERROR: fetch produced no corpus' in detail       # the fatal leads
+    assert detail.startswith('exit 1')
+    assert '[stderr]' in detail                              # advisory kept as context
+
+
+def test_failure_detail_traceback_takes_exception_line(tmp_path, monkeypatch):
+    proc = _Proc(1, err="Traceback (most recent call last):\n"
+                        "  File \"build_card.py\", line 9\n"
+                        "PermissionError: [Errno 13] denied: data/skus.json\n")
+    runner = _mk_runner(tmp_path, monkeypatch, proc)
+    _, _, detail = runner(_REC)
+    assert 'PermissionError' in detail
+
+
+def test_build_log_persisted_on_success_and_failure(tmp_path, monkeypatch):
+    for rc in (0, 1):
+        proc = _Proc(rc, out=f'stage log rc={rc}\n', err='warn\n')
+        runner = _mk_runner(tmp_path, monkeypatch, proc)
+        runner(_REC)
+        log = (tmp_path / 'spool' / 'sony-a7-v' / 'build.log').read_text()
+        assert f'exit: {rc}' in log
+        assert f'stage log rc={rc}' in log     # stdout no longer discarded
+        assert 'warn' in log
+
+
+def test_log_write_failure_never_converts_outcome(tmp_path, monkeypatch):
+    """The best-effort guard lives INSIDE _persist_build_log — a failing
+    write must neither raise nor flip the build result."""
+    proc = _Proc(0, out='ok\n')
+    monkeypatch.setattr(cf.subprocess, 'run', lambda cmd, **kw: proc)
+    monkeypatch.setattr(cf.Path, 'write_text',
+                        lambda self, *a, **kw: (_ for _ in ()).throw(
+                            OSError('disk full')))
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock')
+    rc, _, detail = runner(_REC)      # would raise here if the guard leaked
+    assert rc == 0
+    assert detail == 'ok'
+
+
+def test_detail_bounded_under_work_queue_cap(tmp_path, monkeypatch):
+    proc = _Proc(1, out='x' * 2000, err='ERROR: ' + 'y' * 2000)
+    runner = _mk_runner(tmp_path, monkeypatch, proc)
+    _, _, detail = runner(_REC)
+    assert len(detail) <= 480
