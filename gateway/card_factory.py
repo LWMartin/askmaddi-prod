@@ -55,6 +55,11 @@ import work_queue
 # contract, same as rc==0). If build_card ever renumbers, both sides change
 # together via the runbook.
 EXIT_CORPUS_THIN = 3
+# Mirror of build_card.EXIT_ENRICH_PARTIAL: the enrich stage checkpointed a
+# big corpus and exited asking to be resumed. Neither defect (3-strike) nor
+# weather (turtle): the factory's missing verb was "still working"
+# (2026-07-17 — sony-a7-v parked 3/3 twice for having too many reviews).
+EXIT_ENRICH_PARTIAL = 6
 
 DEFAULT_DAILY_CAP = 2           # cards/day (was 12 until 2026-07-07). Quality-
                                 # first reframe: 1-2 rich cards/day is the
@@ -130,6 +135,12 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             '--stop-stage', 'assemble',
             '--enrich-client', enrich_client,
         ]
+        if record.get('resume_stage'):
+            # A prior tick exited ENRICH_PARTIAL: the corpus + fingerprinted
+            # checkpoint are waiting in the spool. Starting from fetch would
+            # rebuild the corpus and orphan the checkpoint (the 1609/929
+            # incident); resume where the work actually is.
+            cmd += ['--start-stage', record['resume_stage']]
         if out_root is not None:
             cmd += ['--out', str(build_root)]
         if record.get('seed_urls'):
@@ -269,6 +280,11 @@ def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):
         # retry (see mark_corpus_thin). Not counted against the daily cap.
         work_queue.mark_corpus_thin(slug, detail, path=path)
         return {'action': 'corpus_thin', 'slug': slug, 'detail': detail}
+
+    if rc == EXIT_ENRICH_PARTIAL:
+        rec = work_queue.mark_enrich_partial(slug, detail, path=path)
+        return {'action': 'enrich_partial', 'slug': slug, 'detail': detail,
+                'attempts': rec.get('build_attempts')}
 
     rec, terminal = work_queue.mark_failed_or_retry(slug, detail, path=path)
     if terminal:

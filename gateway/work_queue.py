@@ -382,6 +382,7 @@ def mark_review_ready(slug, *, path=WORK_QUEUE_PATH):
         )
 
     record['state'] = 'review_ready'
+    record.pop('resume_stage', None)
     record['built_at'] = _now()
     _roll_cap_if_new_day(queue)
     queue['built_today'] = queue.get('built_today', 0) + 1
@@ -562,6 +563,29 @@ def mark_corpus_thin(slug, detail, *, path=WORK_QUEUE_PATH):
     return record
 
 
+def mark_enrich_partial(slug, detail, *, path=WORK_QUEUE_PATH):
+    """Record a budgeted-enrich checkpoint tick: state back to 'resolved'
+    (re-claimable next tick), NO attempt burned, resume_stage='enrich' so
+    the runner resumes at the checkpoint instead of rebuilding the corpus.
+
+    The factory's fifth verb (2026-07-17): built / retry-or-fail /
+    corpus_thin / cooldown said nothing for "the work is big and mid-
+    flight" — sony-a7-v burned two full 3-strike budgets for having too
+    many reviews. last_error carries the progress line as information,
+    not indictment."""
+    queue = load_queue(path)
+    record = queue['queue'].get(slug)
+    if record is None:
+        raise KeyError(f"unknown slug: {slug}")
+    record['state'] = 'resolved'
+    record['resume_stage'] = 'enrich'
+    record['last_error'] = str(detail)[:500]
+    record['enrich_partial_at'] = _now()
+    record['enrich_partial_ticks'] = record.get('enrich_partial_ticks', 0) + 1
+    _atomic_write(queue, path)
+    return record
+
+
 _REQUEUEABLE = ('failed', 'rejected', 'corpus_thin')
 
 
@@ -591,6 +615,7 @@ def requeue(slug, *, path=WORK_QUEUE_PATH):
     prior = record['state']
     record['state'] = 'resolved'
     record['build_attempts'] = 0
+    record.pop('resume_stage', None)
     record['transient_retries'] = 0
     record['cooldown_until'] = None
     record['reject_reason'] = None

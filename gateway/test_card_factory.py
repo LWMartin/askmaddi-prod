@@ -405,3 +405,61 @@ def test_runner_no_prod_root_no_require_spine(tmp_path, monkeypatch):
         out_root=str(tmp_path / 'spool'), enrich_client='mock')
     runner(_REC)
     assert '--require-spine' not in captured['cmd']
+
+
+# ─── enrich_partial: the factory's fifth verb (2026-07-17) ───────────────────
+
+def test_enrich_partial_no_strike_and_resume(tmp_path, monkeypatch):
+    """rc 6 = still working: no attempt burned, state back to resolved,
+    resume_stage set — and the NEXT runner invocation resumes at enrich
+    instead of rebuilding the corpus (the 1609/929 checkpoint-orphan loop
+    that parked sony-a7-v at 3/3 twice)."""
+    qp = tmp_path / 'wq.json'
+    wq.enroll('sony-a7-v', 'Sony A7 V', 'body', path=qp)  # enroll lands at 'resolved'
+
+    cmds = []
+
+    def fake_run(cmd, **kw):
+        cmds.append(cmd)
+        return _Proc(6, out='PARTIAL: 240/929 checkpointed (689 pending). '
+                            'Re-run the same command to resume.')
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock')
+
+    out = cf.tick(runner, path=qp)
+    assert out['action'] == 'enrich_partial'
+    rec = wq.load_queue(qp)['queue']['sony-a7-v']
+    assert rec['state'] == 'resolved'            # re-claimable next tick
+    assert rec['build_attempts'] == 0            # no strike burned
+    assert rec['resume_stage'] == 'enrich'
+    assert rec['enrich_partial_ticks'] == 1
+    assert 'PARTIAL' in rec['last_error']
+    assert '--start-stage' not in cmds[0]        # first tick: full chain
+
+    out2 = cf.tick(runner, path=qp)              # next tick resumes
+    assert out2['action'] == 'enrich_partial'
+    i = cmds[1].index('--start-stage')
+    assert cmds[1][i + 1] == 'enrich'
+    rec2 = wq.load_queue(qp)['queue']['sony-a7-v']
+    assert rec2['enrich_partial_ticks'] == 2
+    assert rec2['build_attempts'] == 0           # still unburned
+
+
+def test_enrich_partial_then_success_clears_resume(tmp_path, monkeypatch):
+    qp = tmp_path / 'wq.json'
+    wq.enroll('sony-a7-v', 'Sony A7 V', 'body', path=qp)
+    rcs = iter([6, 0])
+    monkeypatch.setattr(cf.subprocess, 'run',
+                        lambda cmd, **kw: _Proc(next(rcs), out='x'))
+    runner = cf.build_card_runner(
+        build_card_path=tmp_path / 'build_card.py',
+        out_root=str(tmp_path / 'spool'), enrich_client='mock')
+    cf.tick(runner, path=qp)
+    out = cf.tick(runner, path=qp)
+    assert out['action'] == 'built'
+    rec = wq.load_queue(qp)['queue']['sony-a7-v']
+    assert rec['state'] == 'review_ready'
+    assert 'resume_stage' not in rec             # lifecycle closed
