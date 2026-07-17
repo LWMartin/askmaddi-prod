@@ -583,6 +583,14 @@ def render_page(card, image_url=None):
     jsonld = schema_org_jsonld(card, canonical, img_url, meta_desc)
     twitter_card = "summary_large_image" if img_url else "summary"
 
+    # Phase 0 measurement seam (maddi-distribution v2.0): the BUILD writes the
+    # category and per-CTA retailer as data-attributes; the beacon only ever
+    # reads them. Category is the card's own lowercase category — never user
+    # input — matching the /ping "category only, never the query" line.
+    page_category = (ident.get("category") or "unknown").strip().lower()
+    new_retailer = retailer_from_url(new_url)
+    used_retailer = retailer_from_url(used_url)
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -608,7 +616,7 @@ def render_page(card, image_url=None):
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
 </head>
-<body>
+<body data-category="{esc(page_category)}">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
 
@@ -628,8 +636,8 @@ def render_page(card, image_url=None):
           <h1 class="hero-title">{esc(name)}</h1>
           <p class="hero-descriptor">{esc(descriptor)}</p>
           <div class="hero-actions">
-            <a class="btn-affiliate btn-buy-new" href="{esc(new_url)}" target="_blank" rel="nofollow noopener sponsored">{esc(new_label)} \u2192</a>
-            <a class="btn-affiliate btn-buy-used" href="{esc(used_url)}" target="_blank" rel="nofollow noopener sponsored">{esc(used_label)} \u2192</a>
+            <a class="btn-affiliate btn-buy-new" href="{esc(new_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{new_retailer}" data-category="{esc(page_category)}">{esc(new_label)} \u2192</a>
+            <a class="btn-affiliate btn-buy-used" href="{esc(used_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{used_retailer}" data-category="{esc(page_category)}">{esc(used_label)} \u2192</a>
           </div>
           {asof_html}
           <p class="hero-meta">
@@ -667,13 +675,27 @@ def render_page(card, image_url=None):
 
     </article>
 
+    <section class="card-section subscribe-section">
+      <h2 class="card-section-head">New cards weekly</h2>
+      <p class="subscribe-intro">Get each new review synthesis as it publishes. No spam, unsubscribe anytime.</p>
+      <form data-subscribe class="subscribe-form" autocomplete="off">
+        <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address">
+        <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+        <button type="submit">Subscribe</button>
+      </form>
+      <p class="subscribe-note" aria-live="polite"></p>
+    </section>
+
     <footer class="card-footer">
       <a href="/">\u2190 Back to AskMaddi</a>
       <span>·</span>
       <a href="/mission.html">Our method</a>
+      <span>·</span>
+      <a href="/why.html">Why AskMaddi</a>
     </footer>
 
   </div>
+  <script src="/js/beacon.js" defer></script>
 </body>
 </html>
 """
@@ -932,6 +954,65 @@ def write_sitemap(out_dir, cards):
     return path
 
 
+def retailer_from_url(url):
+    """'amazon' | 'ebay' | 'other' from a CTA href's hostname.
+
+    Feeds the data-retailer attribute the beacon reads; the gateway whitelists
+    the same three values server-side (analytics_log.RETAILERS), so a surprise
+    hostname degrades to 'other' at both ends rather than ever landing as
+    free text. Hostname match, not substring-in-url: a search URL whose QUERY
+    mentions amazon must not count as an Amazon click."""
+    try:
+        host = urllib.parse.urlparse(url or "").hostname or ""
+    except ValueError:
+        return "other"
+    host = host.lower()
+    if host == "amazon.com" or host.endswith(".amazon.com"):
+        return "amazon"
+    if host == "ebay.com" or host.endswith(".ebay.com"):
+        return "ebay"
+    return "other"
+
+
+def write_llms_txt(out_dir, cards):
+    """browser/llms.txt — the two-minute lottery ticket (maddi-distribution
+    v2.0 §10 correction 1: crawlers overwhelmingly skip this file; shipped
+    because it costs one function and might matter to future agents, carried
+    with ZERO priority weight and no maintenance promise beyond this
+    regeneration). Derived artifact like the sitemap: regenerates from cards."""
+    lines = [
+        "# AskMaddi",
+        "",
+        "> AskMaddi synthesizes product reviews from dozens of independent",
+        "> sources into per-product cards: claim-level sentiment on concrete",
+        "> axes, every claim attributed and linked to its original review,",
+        "> used-price bands refreshed nightly. We aggregate others' assessments",
+        "> and never write our own opinions; a human gate reviews every card",
+        "> before publish. Affiliate-supported, disclosed on every page.",
+        "",
+        "## Cards",
+        "",
+    ]
+    for c in sorted(cards, key=lambda c: c.get("card_id", "")):
+        cid = c.get("card_id", "")
+        name = ((c.get("identity", {}) or {}).get("display_name") or cid)
+        n_src = c.get("freshness", {}).get("source_count",
+                                           len(c.get("sources", []) or []))
+        lines.append(f"- [{name}]({BASE_URL}/cards/{cid}/): review synthesis"
+                     f" from {n_src} sources")
+    lines += [
+        "",
+        "## Method",
+        "",
+        f"- [Why AskMaddi]({BASE_URL}/why.html): editorial philosophy",
+        f"- [Our method]({BASE_URL}/mission.html): how synthesis works",
+        "",
+    ]
+    path = Path(out_dir) / "llms.txt"
+    path.write_text("\n".join(lines), encoding="utf-8")
+    return path
+
+
 def main():
     ap = argparse.ArgumentParser(description="Generate AskMaddi card detail pages.")
     ap.add_argument("--card", help="Path to a single card JSON.")
@@ -995,6 +1076,12 @@ def main():
     if args.sitemap:
         spath = write_sitemap(out, cards)
         print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(SITEMAP_STATIC_PAGES)} static)")
+        # llms.txt rides the sitemap flag deliberately: identical whole-file
+        # semantics (regenerated from the cards loaded THIS run), so it gets
+        # the same --card clobber guard for free and no caller can rebuild
+        # one without the other drifting.
+        lpath = write_llms_txt(out, cards)
+        print(f"  \u2713 llms.txt \u2192 {lpath} ({len(cards)} cards)")
 
     print(f"\nDone. {len(written)} card page(s) written.")
     return 0

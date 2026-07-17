@@ -150,11 +150,23 @@
     </div>
 
     <!-- Footer -->
+    <section class="subscribe-section" style="text-align:center; margin: 24px 0;">
+        <h2 style="font-size:18px; margin-bottom:4px;">New cards weekly</h2>
+        <p class="subscribe-intro" style="font-size:14px; margin:4px 0 12px;">Get each new review synthesis as it publishes. No spam, unsubscribe anytime.</p>
+        <form data-subscribe class="subscribe-form" autocomplete="off" style="display:flex; gap:8px; justify-content:center; flex-wrap:wrap;">
+            <input type="email" name="email" placeholder="you@example.com" required aria-label="Email address" style="padding:10px 14px; border-radius:8px; border:1px solid #d8d3c8; font-size:14px; min-width:240px;">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;width:0;">
+            <button type="submit" style="padding:10px 18px; border:none; border-radius:8px; cursor:pointer;">Subscribe</button>
+        </form>
+        <p class="subscribe-note" aria-live="polite" style="font-size:13px; margin-top:8px; min-height:1em;"></p>
+    </section>
+
     <footer class="site-footer">
         <p><strong>Privacy first:</strong> Your searches stay on your device.</p>
         <p>Built at <a href="https://aisciencecenter.com">AI Science Center</a> · <a href="why.html">Why AskMaddi</a> · <a href="mission.html">Our Mission</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></p>
     </footer>
 
+    <script src="js/beacon.js" defer></script>
     <script type="module" src="js/app.js"></script>
     <script type="module">
         import { renderCardGrid } from './js/cards.js';

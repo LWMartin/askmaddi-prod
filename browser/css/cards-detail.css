@@ -286,3 +286,37 @@
     font-size: 12px;
     margin: 6px 0 0;
 }
+
+/* ─── Subscribe (Phase 0, maddi-distribution v2.0) ─────────────────────── */
+.subscribe-section { text-align: center; }
+.subscribe-intro {
+    color: var(--color-text-muted);
+    font-size: 14px;
+    margin: 4px 0 12px;
+}
+.subscribe-form {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.subscribe-form input[type="email"] {
+    padding: 10px 14px;
+    border: 1px solid var(--color-border, #d8d3c8);
+    border-radius: 8px;
+    font-size: 14px;
+    min-width: 240px;
+}
+.subscribe-form button {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.subscribe-form button:hover { opacity: 0.9; }
+.subscribe-note { font-size: 13px; margin-top: 8px; min-height: 1em; }
+.subscribe-note.ok { color: var(--color-positive, #2e7d32); }
+.subscribe-note.err { color: var(--color-negative, #c62828); }
