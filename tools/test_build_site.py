@@ -210,13 +210,56 @@ def test_new_cta_prefers_asin_dp_link_over_search():
     assert "/s?k=" not in url
 
 
-def test_new_cta_explicit_urls_outrank_asin():
+def test_new_cta_asin_outranks_explicit_urls_under_amazon_first():
+    """FLIPPED 2026-07-17 (was: explicit urls outrank asin): under
+    AMAZON_FIRST the verified ASIN /dp/ rung leads the ladder — the
+    Associates-qualification strategy. The historical ordering survives
+    behind AMAZON_FIRST=False (one-line revert when PA-API lands)."""
     card = {
         "identity": {"display_name": "Sony A7 IV"},
         "pricing": {"amazon_asin": "B09JZT6YK5", "current_new_url": "https://www.amazon.com/dp/BEXPLICIT01"},
     }
     _, url = new_cta(card)
-    assert "/dp/BEXPLICIT01" in url and "B09JZT6YK5" not in url
+    assert "/dp/B09JZT6YK5" in url and "BEXPLICIT01" not in url
+
+
+def test_new_cta_gtin_rung_beats_ebay_affiliate_chain():
+    """A GTIN-anchored card with the spine's eBay EPN URL (every new card's
+    shape) now lands on Amazon GTIN search — near-exact match, tagged,
+    qualification-earning. e930bea's name-search demotion is untouched:
+    GTIN search is categorically exact, name search stays last resort."""
+    card = {
+        "identity": {"display_name": "Ulanzi F38 Zero"},
+        "pricing": {"gtin": "00719821437895",
+                    "affiliate_url": "https://www.ebay.com/itm/147441377967"},
+    }
+    _, url = new_cta(card)
+    assert "amazon.com/s?k=00719821437895" in url
+    assert "tag=askmaddi-20" in url
+    assert "ebay.com" not in url
+
+
+def test_new_cta_no_amazon_data_keeps_ebay_chain():
+    """No ASIN, no GTIN: AMAZON_FIRST changes nothing — the eBay EPN chain
+    serves, and name search remains banished (e930bea guard holds)."""
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {"affiliate_url": "https://www.ebay.com/itm/12345"},
+    }
+    _, url = new_cta(card)
+    assert "ebay.com/itm/12345" in url
+
+
+def test_apply_spine_gtins_merges_from_spine(tmp_path, monkeypatch):
+    import build_site as bs
+    spine = tmp_path / "skus.json"
+    spine.write_text('{"skus": {"ulanzi-f38-zero": {"gtin": "00719821437895"}}}')
+    monkeypatch.setattr(bs, "SKUS_SPINE_PATH", spine)
+    cards = [{"card_id": "ulanzi-f38-zero", "pricing": {}},
+             {"card_id": "unknown-card", "pricing": {}}]
+    bs.apply_spine_gtins(cards)
+    assert cards[0]["pricing"]["gtin"] == "00719821437895"
+    assert "gtin" not in cards[1]["pricing"]
 
 
 def test_new_cta_search_fallback_without_asin():

@@ -15,7 +15,9 @@ class Fetcher {
         // proxy, no Akamai. Response: { count, items: [{name, price, currency,
         // image, url, condition, seller}] }.
         const response = await fetch(
-            `${this.gateway}/ebay/search?q=${encodeURIComponent(query)}`
+            // limit=25: the 10-result cap was scrape-era caution; the
+            // Browse API path is fast enough for a fuller shelf (2026-07-17).
+            `${this.gateway}/ebay/search?q=${encodeURIComponent(query)}&limit=25`
         );
         if (!response.ok) {
             const error = await response.json().catch(() => ({}));

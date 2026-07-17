@@ -114,6 +114,16 @@ class AskMaddi {
         const sites = Object.entries(this.manifests.sites);
         this.ui.showState('results');
         this.ui.initStreamingResults(query, sites.length);
+        // Amazon cross-check: an affiliate search deep-link beside the eBay
+        // results — no PA-API yet, so this is the honest interim for mixed
+        // marketplaces, and it feeds the Associates qualification push. The
+        // slot is also where real Amazon results land once PA-API unlocks.
+        const az = document.getElementById('amazon-crosscheck');
+        if (az) {
+            az.href = 'https://www.amazon.com/s?k=' + encodeURIComponent(query)
+                + '&tag=askmaddi-20';
+            az.style.display = 'inline';
+        }
         
         // Show matched review cards instantly (user sees content in <100ms)
         if (matchedCards.length > 0) {

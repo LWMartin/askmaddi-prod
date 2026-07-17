@@ -149,6 +149,25 @@ def amazon_product_url(asin):
     return f"https://www.amazon.com/dp/{asin}"
 
 
+AMAZON_FIRST = True
+# 2026-07-17 (Lee's call): during the Amazon Associates qualification push,
+# the 'buy new' CTA deliberately prefers Amazon rungs over the eBay EPN
+# affiliate chain — three qualifying purchases unlock Associates status and
+# PA-API access. This forgoes eBay commission on new-CTA clicks by explicit
+# strategy, and is a ONE-LINE revert (False) the day PA-API lands. The used
+# CTA is untouched either way: the used market is eBay's domain and our
+# used-price bands are eBay-derived.
+
+
+def amazon_gtin_search_url(gtin):
+    """Amazon search keyed on a VERIFIED GTIN — lands on an essentially
+    exact product match, unlike name search (which e930bea demoted to last
+    resort for dumping buyers on lookalike top hits). The GTIN rung is the
+    no-API Amazon-first path for every GTIN-anchored card; the /dp/ ASIN
+    rung above it remains the premium, human-verified landing."""
+    return f"https://www.amazon.com/s?k={gtin}&tag={AMAZON_TAG}"
+
+
 def amazon_search_url(display_name):
     q = re.sub(r"\s+", "+", display_name.strip())
     return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
@@ -211,16 +230,28 @@ def new_cta(card):
     pricing = card.get("pricing", {})
     name = card["identity"]["display_name"]
     asin = pricing.get("amazon_asin")
+    gtin = pricing.get("gtin")
     epid = pricing.get("ebay_epid")
     ebay_cat = EBAY_CATEGORY.get(card.get("category"))
-    url = ensure_affiliate_tag(
-        pricing.get("affiliate_url")
-        or pricing.get("current_new_url")
-        or (amazon_product_url(asin) if asin else None)
-        or (ebay_product_url(epid) if epid else None)
-        or (ebay_search_url(name, ebay_cat) if not asin else None)
-        or amazon_search_url(name)
-    )
+    if AMAZON_FIRST:
+        url = ensure_affiliate_tag(
+            (amazon_product_url(asin) if asin else None)
+            or (amazon_gtin_search_url(gtin) if gtin else None)
+            or pricing.get("affiliate_url")
+            or pricing.get("current_new_url")
+            or (ebay_product_url(epid) if epid else None)
+            or ebay_search_url(name, ebay_cat)
+        )
+    else:
+        # Historical ladder (e930bea): explicit URLs outrank marketplace ids.
+        url = ensure_affiliate_tag(
+            pricing.get("affiliate_url")
+            or pricing.get("current_new_url")
+            or (amazon_product_url(asin) if asin else None)
+            or (ebay_product_url(epid) if epid else None)
+            or (ebay_search_url(name, ebay_cat) if not asin else None)
+            or amazon_search_url(name)
+        )
     price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
     label = f"${int(price)} new" if price and price > 0 else "Check current price"
     return label, url
@@ -796,6 +827,32 @@ def apply_asin_registry(cards):
     return cards
 
 
+SKUS_SPINE_PATH = Path(__file__).parent.parent / "data" / "skus.json"
+
+
+def apply_spine_gtins(cards):
+    """Inject the spine's verified GTIN into each card's pricing block.
+
+    Third sibling of the registry-merge pair below, but sourced from the
+    LIVE spine (data/skus.json) rather than a hand-kept registry — GTINs
+    are machine-verified with provenance receipts and survive rebuilds on
+    the spine by construction. Enables the Amazon GTIN-search rung of
+    new_cta under AMAZON_FIRST. A card already carrying a gtin wins.
+    """
+    try:
+        skus = json.loads(SKUS_SPINE_PATH.read_text(encoding="utf-8")).get("skus", {})
+    except (OSError, ValueError):
+        return cards  # spine optional here; absence degrades the rung away
+    for card in cards:
+        entry = skus.get(card.get("card_id")) or {}
+        g = entry.get("gtin")
+        if g:
+            pricing = card.setdefault("pricing", {})
+            if not pricing.get("gtin"):
+                pricing["gtin"] = g
+    return cards
+
+
 def apply_ebay_epid_registry(cards):
     """Inject durable eBay catalog EPIDs into each card's pricing block.
 
@@ -897,6 +954,7 @@ def main():
         return 1
     apply_asin_registry(cards)
     apply_ebay_epid_registry(cards)
+    apply_spine_gtins(cards)
 
     written = []
     for card in cards:
