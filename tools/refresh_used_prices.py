@@ -49,13 +49,18 @@ FETCH_LIMIT = 50
 TOKEN_STOPWORDS = {"body", "the", "for", "with", "and", "kit", "only"}
 
 # A listing whose title contains any of these is not the product itself.
-TITLE_BLACKLIST = [
-    "for parts", "parts only", "box only", "as-is", "as is", "broken",
-    "cracked", "faulty", "not working", "read description", "repair",
-    "cap", "strap", "manual", "battery", "charger", "case", "skin",
-    "cover", "plate", "adapter", "screen protector", "grip", "hood",
-    "filter", "mount ring", "replacement",
-]
+# Canonical vocabulary lives in gateway/rebind_firewall.py (single home,
+# 2026-07-17 consolidation) — a strict superset of the historical list
+# here, adding 'empty box' et al. (the 2026-07-16 poison-rebind class,
+# which pollutes used-price bands exactly as it poisons rebinds).
+# Matching stays SUBSTRING (this gate's historical semantics): aggressive
+# is correct for price-band precision — a dropped legit listing costs one
+# sample; an admitted accessory poisons the median. The firewall applies
+# word-boundary matching to the same words for its own, stricter purpose.
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'gateway'))
+from rebind_firewall import JUNK_PHRASES, JUNK_WORDS  # noqa: E402
+
+TITLE_BLACKLIST = list(JUNK_PHRASES) + list(JUNK_WORDS)
 
 # eBay condition strings -> band slug. None = excluded from used bands.
 def condition_slug(cond):

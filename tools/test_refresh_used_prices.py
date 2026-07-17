@@ -140,3 +140,27 @@ def test_variant_token_binds_carbon_query_rejects_aluminum():
     assert "carbon" in toks
     assert not listing_matches("Peak Design Travel Tripod Aluminum", toks)
     assert listing_matches("Peak Design Travel Tripod Carbon Fiber TT-CB-5", toks)
+
+
+# ─── vocabulary consolidation (2026-07-17) ────────────────────────────────────
+
+def test_blacklist_is_firewall_superset_of_historical_list():
+    """TITLE_BLACKLIST now sources from gateway/rebind_firewall (single
+    canonical home). Every term of the pre-consolidation list must still be
+    present — the consolidation may only ADD precision, never lose it."""
+    historical = [
+        "for parts", "parts only", "box only", "as-is", "as is", "broken",
+        "cracked", "faulty", "not working", "read description", "repair",
+        "cap", "strap", "manual", "battery", "charger", "case", "skin",
+        "cover", "plate", "adapter", "screen protector", "grip", "hood",
+        "filter", "mount ring", "replacement",
+    ]
+    import refresh_used_prices as rup
+    missing = [t for t in historical if t not in rup.TITLE_BLACKLIST]
+    assert missing == []
+
+
+def test_blacklist_gains_empty_box_class():
+    """The 2026-07-16 poison class now filters price bands too."""
+    import refresh_used_prices as rup
+    assert "empty box" in rup.TITLE_BLACKLIST
