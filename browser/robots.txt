@@ -1,4 +1,42 @@
+# AskMaddi — crawler policy (maddi-distribution v2.0 Phase 0, 2026-07-17)
+# Everyone welcome, AI retrieval crawlers explicitly so. Explicit stanzas are
+# belt-and-suspenders over the blanket allow: they survive a future tightening
+# of the default and read as an unambiguous invitation today.
+
 User-agent: *
 Allow: /
+
+# OpenAI (training / search retrieval / user-triggered fetch)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google (Gemini / AI features grounding)
+User-agent: Google-Extended
+Allow: /
+
+# Microsoft Copilot rides Bingbot (default-allowed above)
 
 Sitemap: https://askmaddi.com/sitemap.xml
