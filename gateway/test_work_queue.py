@@ -474,3 +474,102 @@ def test_requeue_resets_transient_budget(tmp_path):
     assert rec['transient_retries'] == 0
     assert rec['cooldown_until'] is None
     assert wq.claim_next(path=p)['slug'] == 'reopen'
+
+
+# ── requeue_promoted (rebuild a live card after a gate change) ────────────────
+def _publish_one(p, slug='sony-a7iv'):
+    wq.enroll(slug, 'Sony A7 IV', 'body', path=p)
+    wq.claim_next(path=p)
+    wq.mark_review_ready(slug, path=p)
+    wq.mark_published(slug, path=p)
+    return wq.get(slug, path=p)
+
+
+def test_requeue_promoted_reopens_live_card(tmp_path):
+    p = _path(tmp_path)
+    assert _publish_one(p)['state'] == 'promoted'
+    rec = wq.requeue_promoted('sony-a7iv', path=p)
+    assert rec['state'] == 'resolved'
+    assert rec['build_attempts'] == 0
+    assert rec['transient_retries'] == 0
+    assert rec['cooldown_until'] is None
+    assert rec['requeued_from'] == 'promoted'
+    assert rec['resume_stage'] == 'extract'   # default: cached-triples rebuild
+    # and the drip can claim it again
+    assert wq.claim_next(path=p)['slug'] == 'sony-a7iv'
+
+
+def test_requeue_promoted_full_rebuild_clears_resume_stage(tmp_path):
+    p = _path(tmp_path)
+    _publish_one(p)
+    rec = wq.requeue_promoted('sony-a7iv', resume_stage='fetch', path=p)
+    assert 'resume_stage' not in rec
+    _publish_one_reset = wq.get('sony-a7iv', path=p)
+    assert 'resume_stage' not in _publish_one_reset
+
+
+def test_requeue_promoted_none_means_full_rebuild(tmp_path):
+    p = _path(tmp_path)
+    _publish_one(p)
+    rec = wq.requeue_promoted('sony-a7iv', resume_stage=None, path=p)
+    assert 'resume_stage' not in rec
+
+
+def test_requeue_promoted_rejects_unknown_stage(tmp_path):
+    p = _path(tmp_path)
+    _publish_one(p)
+    with pytest.raises(ValueError):
+        wq.requeue_promoted('sony-a7iv', resume_stage='assemble', path=p)
+
+
+def test_requeue_promoted_refuses_non_promoted(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('sony-a7iv', 'Sony A7 IV', 'body', max_attempts=1, path=p)
+    with pytest.raises(ValueError):
+        wq.requeue_promoted('sony-a7iv', path=p)      # resolved
+    wq.claim_next(path=p)
+    with pytest.raises(ValueError):
+        wq.requeue_promoted('sony-a7iv', path=p)      # building
+    wq.mark_failed_or_retry('sony-a7iv', 'boom', path=p)
+    with pytest.raises(ValueError):
+        wq.requeue_promoted('sony-a7iv', path=p)      # failed -> use requeue()
+    with pytest.raises(KeyError):
+        wq.requeue_promoted('no-such-slug', path=p)
+
+
+def test_general_requeue_still_refuses_promoted(tmp_path):
+    # Pin the fat-finger guard: the general escape hatch must NOT gain the
+    # power to re-open live cards as a side effect of requeue_promoted existing.
+    p = _path(tmp_path)
+    _publish_one(p)
+    with pytest.raises(ValueError):
+        wq.requeue('sony-a7iv', path=p)
+
+
+def test_requeue_promoted_resume_stage_survives_failed_retry(tmp_path):
+    # A deterministic failure with budget remaining returns the record to
+    # `resolved` WITHOUT touching resume_stage — the next tick must resume at
+    # extract again, not silently restart from fetch (checkpoint-orphan class).
+    p = _path(tmp_path)
+    _publish_one(p)
+    wq.requeue_promoted('sony-a7iv', path=p)
+    wq.claim_next(path=p)
+    rec, terminal = wq.mark_failed_or_retry('sony-a7iv', 'boom', path=p)
+    assert not terminal
+    assert rec['state'] == 'resolved'
+    assert rec['resume_stage'] == 'extract'
+
+
+def test_requeue_promoted_rebuild_flow_clears_resume_on_success(tmp_path):
+    # Full rebuild round-trip: promoted -> resolved(extract) -> building ->
+    # review_ready pops resume_stage (existing contract) -> published again.
+    p = _path(tmp_path)
+    _publish_one(p)
+    wq.requeue_promoted('sony-a7iv', path=p)
+    claimed = wq.claim_next(path=p)
+    assert claimed['resume_stage'] == 'extract'   # what card_factory reads
+    rec = wq.mark_review_ready('sony-a7iv', path=p)
+    assert 'resume_stage' not in rec
+    rec = wq.mark_published('sony-a7iv', path=p)
+    assert rec['state'] == 'promoted'
+    assert rec['requeued_from'] == 'promoted'     # audit trail persists

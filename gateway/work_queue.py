@@ -633,6 +633,78 @@ def requeue_failed(slug, *, path=WORK_QUEUE_PATH):
     return requeue(slug, path=path)
 
 
+# Resume points a rebuild can meaningfully start from. 'fetch' means a full
+# rebuild and is stored as NO resume_stage (the factory's default plan);
+# 'extract' re-runs the gate stack against the cached triples in the spool
+# (zero fetch/proxy spend); 'enrich' exists for completeness but is the
+# ENRICH_PARTIAL semantic and rarely what a rebuild wants — a changed gate
+# lives in extract, so resuming past it would rebuild nothing.
+_REBUILD_RESUME_STAGES = ('fetch', 'extract', 'enrich')
+
+
+def requeue_promoted(slug, *, resume_stage='extract', path=WORK_QUEUE_PATH):
+    """Deliberately re-open a `promoted` (live, published) record for rebuild.
+
+    The operator action for "a pipeline gate changed underneath a live card" —
+    e.g. the 2026-07-18 relevance-gate enforcement, which left published cards
+    carrying corpora admitted under the pre-enforcement gate. requeue()
+    deliberately cannot touch promoted records (fat-finger protection for live
+    cards); this is the separate, named, deliberate form, and it stamps
+    requeued_from='promoted' so the rebuild is auditable on the record.
+
+    Safety properties:
+      * THE LIVE CARD IS UNTOUCHED. data/cards/ + browser/ keep serving the
+        existing card; only the queue record moves. The rebuilt card replaces
+        it only after the human gate approves at /admin/publish (render-then-
+        mark, same integrity gate as any publish). A rebuild that exhausts its
+        attempt budget parks `failed` with the live card still up — loud in
+        /admin, dark nowhere.
+      * resume_stage='extract' (the default) rebuilds from the CACHED triples
+        in the spool: zero fetch spend, and the decontamination is diffable —
+        same evidence pool, current gates. The operator verifies
+        <out-root>/<slug>/triples/ exists FIRST; absent triples fail loudly at
+        extract's _require and burn an attempt. Pass resume_stage='fetch' (or
+        None) for a full re-fetch when triples are gone or a corpus refresh is
+        actually wanted.
+      * FIFO note: claim_next orders by enrolled_at, so a requeued veteran is
+        claimed AHEAD of newer mints. Deliberate — a known-contaminated live
+        card outranks a card nobody has seen yet.
+
+    Returns the record. Raises KeyError if absent, ValueError if the record is
+    not `promoted` or resume_stage is unknown.
+    """
+    if resume_stage is not None and resume_stage not in _REBUILD_RESUME_STAGES:
+        raise ValueError(
+            f"resume_stage {resume_stage!r} not in {_REBUILD_RESUME_STAGES} "
+            f"(or None for a full rebuild)."
+        )
+    queue = load_queue(path)
+    q = queue.get('queue', {})
+    record = q.get(slug)
+    if record is None:
+        raise KeyError(f"no work-queue record {slug!r}")
+    if record.get('state') != 'promoted':
+        raise ValueError(
+            f"record {slug!r} is {record.get('state')!r}; requeue_promoted "
+            f"only re-opens a live (promoted) record — use requeue() for "
+            f"terminal records."
+        )
+
+    record['state'] = 'resolved'
+    record['build_attempts'] = 0
+    record['transient_retries'] = 0
+    record['cooldown_until'] = None
+    if resume_stage in (None, 'fetch'):
+        record.pop('resume_stage', None)
+    else:
+        record['resume_stage'] = resume_stage
+    record['requeued_at'] = _now()
+    record['requeued_from'] = 'promoted'
+    queue['as_of'] = _today()
+    _atomic_write(queue, path)
+    return record
+
+
 def cap_remaining(cap, *, path=WORK_QUEUE_PATH):
     """How many more cards may build today under `cap` (rolls the day lazily).
 
