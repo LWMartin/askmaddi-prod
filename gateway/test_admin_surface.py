@@ -529,7 +529,8 @@ def test_publish_runner_admits_card_and_rebuilds_from_corpus(tmp_path):
     try:
         runner = a.build_site_runner(build_site_path=fake_site,
                                      output_dir=tmp_path / 'browser',
-                                     cards_dir=cards_dir)
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None)
         rc, detail = runner(str(new_card))
     finally:
         a.subprocess.run = real_run
@@ -554,7 +555,8 @@ def test_publish_runner_republish_is_idempotent_overwrite(tmp_path):
     try:
         runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
                                      output_dir=tmp_path / 'o',
-                                     cards_dir=cards_dir)
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None)
         runner(str(src))
         src.write_text(json.dumps({'card_id': 'x', 'v': 2}))
         rc, _ = runner(str(src))
@@ -575,3 +577,97 @@ def test_publish_runner_fails_closed_before_touching_corpus(tmp_path):
     rc, detail = runner(str(bad))
     assert rc == 1 and 'card_id' in detail
     assert list(cards_dir.iterdir()) == []          # corpus untouched
+
+
+# ── build_site_runner: indexnow hook (2026-07-18, distribution Next #3) ──────
+
+def _capture_runner(tmp_path, ping_rc=0, ping_stdout='indexnow: HTTP 202 — 14'
+                    ' url(s) submitted', ping_raises=False):
+    """Runner wired to a fake subprocess that records every call and answers
+    the render leg with success, the ping leg per the parameters."""
+    import admin_surface as a
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir(exist_ok=True)
+    card = tmp_path / 'card.json'
+    card.write_text(json.dumps({'card_id': 'x'}))
+    calls = []
+    def fake_run(cmd, **kw):
+        calls.append(cmd)
+        if ping_raises and len(calls) > 1:
+            raise OSError('boom')
+        rc = 0 if len(calls) == 1 else ping_rc
+        out = '' if len(calls) == 1 else ping_stdout
+        return type('R', (), {'returncode': rc, 'stderr': '', 'stdout': out})()
+    return a, card, calls, fake_run, cards_dir
+
+
+def test_publish_runner_pings_indexnow_after_render(tmp_path):
+    a, card, calls, fake_run, cards_dir = _capture_runner(tmp_path)
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'browser',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=tmp_path / 'ping.py')
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0 and detail == 'ok (+indexnow)'
+    assert len(calls) == 2
+    # --browser-dir is passed ABSOLUTELY (the tool's relative default would
+    # resolve against the gateway CWD, not the repo)
+    ping_cmd = calls[1]
+    i = ping_cmd.index('--browser-dir')
+    assert ping_cmd[i + 1] == str(tmp_path / 'browser')
+
+
+def test_publish_runner_indexnow_soft_fail_never_gates_publish(tmp_path):
+    a, card, calls, fake_run, cards_dir = _capture_runner(
+        tmp_path, ping_rc=1, ping_stdout='indexnow: soft-fail — timeout')
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=tmp_path / 'ping.py')
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0                       # the card is live regardless
+    assert detail.startswith('ok (indexnow:')
+
+
+def test_publish_runner_indexnow_exception_never_gates_publish(tmp_path):
+    a, card, calls, fake_run, cards_dir = _capture_runner(
+        tmp_path, ping_raises=True)
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=tmp_path / 'ping.py')
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0 and detail.startswith('ok (indexnow:')
+
+
+def test_publish_runner_no_ping_when_render_fails(tmp_path):
+    import admin_surface as a
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir()
+    card = tmp_path / 'card.json'
+    card.write_text(json.dumps({'card_id': 'x'}))
+    calls = []
+    def fake_run(cmd, **kw):
+        calls.append(cmd)
+        return type('R', (), {'returncode': 2, 'stderr': 'render exploded',
+                              'stdout': ''})()
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=tmp_path / 'ping.py')
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 2 and len(calls) == 1   # no ping on a dead render

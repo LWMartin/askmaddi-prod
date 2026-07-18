@@ -109,12 +109,14 @@ except ImportError:
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _BUILD_SITE = _REPO_ROOT / 'tools' / 'build_site.py'
+_INDEXNOW = _REPO_ROOT / 'tools' / 'indexnow_ping.py'
 _BROWSER_OUT = _REPO_ROOT / 'browser'
 _CARDS_DIR = _REPO_ROOT / 'data' / 'cards'
 
 
 def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
-                      cards_dir=_CARDS_DIR, python=None):
+                      cards_dir=_CARDS_DIR, python=None,
+                      indexnow_path=_INDEXNOW):
     """Produce the PRODUCTION publish runner: callable(card_path) -> (rc, detail).
 
     PUBLISH MEANS JOINING THE CORPUS, NOT REPLACING IT (found live 2026-07-03,
@@ -131,6 +133,8 @@ def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
          the grid always reflects the full corpus, and every publish
          re-renders all detail pages, propagating the nightly's freshened
          prices/ASIN registry to the whole site as a side effect.
+      3. IndexNow ping over the fresh sitemap (soft: never gates the rc —
+         the card is already live; outcome rides the detail string).
 
     Returns (returncode, detail): rc 0 means the card is live; non-zero
     carries the stderr tail for the publish banner. A card missing card_id
@@ -168,7 +172,32 @@ def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
         ]
         proc = subprocess.run(cmd, capture_output=True, text=True)
         if proc.returncode == 0:
-            return 0, 'ok'
+            # 3. IndexNow ping (2026-07-18, maddi-distribution v2.0 Next #3):
+            #    the freshly regenerated sitemap self-announces to Bing at the
+            #    tail of every publish. SOFT BY CONSTRUCTION — the tool
+            #    soft-fails internally, and here neither its exit code nor an
+            #    exception may gate the publish rc: the card IS live at this
+            #    point. --browser-dir passed absolutely; the tool's relative
+            #    default would resolve against the gateway CWD, not the repo.
+            #    Outcome surfaces in the publish banner via detail, the same
+            #    channel Phase 0's first hand-run was verified through.
+            detail = 'ok'
+            if indexnow_path:
+                try:
+                    ping = subprocess.run(
+                        [python, str(indexnow_path),
+                         '--browser-dir', str(output_dir)],
+                        capture_output=True, text=True, timeout=30)
+                    out = (ping.stdout or '').strip()
+                    if ping.returncode == 0 and 'HTTP 20' in out:
+                        detail = 'ok (+indexnow)'
+                    else:
+                        tail = (ping.stderr or ping.stdout or '').strip()
+                        tail = tail.splitlines()[-1] if tail else 'soft-fail'
+                        detail = f'ok (indexnow: {tail})'
+                except Exception as e:
+                    detail = f'ok (indexnow: {e})'
+            return 0, detail
         tail = (proc.stderr or proc.stdout or '').strip().splitlines()
         return proc.returncode, (tail[-1] if tail else f'exit {proc.returncode}')
 
