@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-07-18",
+  "as_of": "2026-07-19",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -575,7 +575,7 @@
       "gtin": "00027242922624",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "800346378156",
+        "ebay_legacy_item_id": "327260192879",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -585,7 +585,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "ILCE-1/B",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -599,13 +599,13 @@
             }
           ]
         },
-        "market_title": "Sony A1 [ILCE-1] Body w/ 116,635 Shutter Count – MUST READ! (2151)",
-        "image": "https://i.ebayimg.com/images/g/4Z8AAeSwzDRqV4-6/s-l1600.jpg",
+        "market_title": "Sony A1 ILCE-1 50MP Mirrorless Digital Camera Body - Black - Shutter Count 2920",
+        "image": "https://i.ebayimg.com/images/g/PMAAAeSw0ZZqVaLM/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/wKMAAOSwqFVkY45P/s-l1600.jpg",
         "price_seen": {
-          "value": "2469.99",
+          "value": "2950.00",
           "currency": "USD",
-          "as_of": "2026-07-18T04:07:43Z"
+          "as_of": "2026-07-19T04:08:52Z"
         },
         "image_provenance": {
           "recovered_by": "image-second-pass",
@@ -629,13 +629,13 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800346378156?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/327260192879?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-18T04:07:43Z"
+      "resolved_at": "2026-07-19T04:08:52Z"
     },
     "sony-a7c": {
       "contamination_key": "sony-a7c",
@@ -644,7 +644,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "257618741875",
+        "ebay_legacy_item_id": "227431245419",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -654,19 +654,19 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7C/S",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Sony Alpha a7C 24.2MP Mirrorless Camera - Silver (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/JoUAAeSwmkxqVDAQ/s-l1600.jpg",
+        "market_title": "Sony Alpha a7C 24.2MP Mirrorless Camera W/Batts & Charger - Silver (Body Only)",
+        "image": "https://i.ebayimg.com/images/g/fs4AAeSwpwZqVoAt/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/OAYAAOSw97RkuskT/s-l1600.jpg",
         "price_seen": {
-          "value": "995.00",
+          "value": "1000.00",
           "currency": "USD",
-          "as_of": "2026-07-13T04:05:40Z"
+          "as_of": "2026-07-19T04:10:13Z"
         },
         "image_provenance": {
           "recovered_by": "image-second-pass",
@@ -690,28 +690,13 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/257618741875?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/227431245419?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xAsS%2BKGxVKb4j1SkhAGdFV%2F6M9h2OO16kx02cxQMGI2wEVOQZrc5g%2BRmnAWv4tTXrFKccKS%2BAYdzRsb9IL0Gy2UuTOe%2Bht0JBP1KvZoabcDXHfGJi%2FYdOFrgB%2BbbQESgOa3YlrQy8amFJkDWAT8M%2FOvSBDFtZrg8RmsN%2Fo8Aub%2BE4eiLRjfnRM17SeSu0pGp6w%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-13T04:05:40Z",
-      "rebind_rejected": {
-        "ts": "2026-07-18T04:09:21Z",
-        "item_id": "227431245419",
-        "title": "Sony Alpha a7C 24.2MP Mirrorless Camera W/Batts & Charger - Silver (Body Only)",
-        "price_seen": {
-          "value": "1000.00",
-          "currency": "USD",
-          "as_of": "2026-07-18T04:09:21Z"
-        },
-        "signals": [
-          "junk_title",
-          "mpn_wiped"
-        ],
-        "hard": true
-      }
+      "resolved_at": "2026-07-19T04:10:13Z"
     },
     "canon-r6": {
       "contamination_key": "canon-r6",
@@ -719,8 +704,8 @@
       "model": "R6",
       "gtin": "00013803325775",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "398167691535",
+        "ebay_epid": "14057872221",
+        "ebay_legacy_item_id": "326450553696",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -730,10 +715,10 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "4082C002",
+        "mpn": "5666C002",
         "gtin_provenance": {
           "chosen_source": "aspect",
-          "conflict": false,
+          "conflict": true,
           "observations": [
             {
               "source": "aspect",
@@ -742,45 +727,59 @@
               "gtin14": "00013803325775",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "product.gtins",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "product.gtins",
+                "identifier_type": "GTIN",
+                "raw": "0013803348910",
+                "gtin14": "00013803348910",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "UPC",
+                "raw": "0013803348910",
+                "gtin14": "00013803348910",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "EAN",
+                "raw": "0013803348910",
+                "gtin14": "00013803348910",
+                "valid": true
+              },
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "0013803348910",
+                "gtin14": "00013803348910",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "Canon EOS R6 Mirrorless Digital Camera Body, Used, Excellent Condition",
-        "image": "https://i.ebayimg.com/images/g/7aYAAeSw2AFqVCMy/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/I44AAOSwLrNgLQ5R/s-l640.jpg",
+        "market_title": "Canon EOS R6 Mark II Mirrorless Digital Camera Body 24.2 MP Full-Frame",
+        "image": "https://i.ebayimg.com/images/g/rbUAAOSwRNtntP19/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/IIoAAOSwnvxntNWr/s-l1600.jpg",
         "price_seen": {
-          "value": "1300.00",
+          "value": "1789.95",
           "currency": "USD",
-          "as_of": "2026-07-17T04:10:45Z"
-        },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-07-15T16:46:05Z",
-          "query": "Canon 4082C002",
-          "winner": {
-            "item_id": "v1|336683401199|0",
-            "epid": "18039720254",
-            "title": "Canon EOS R6 20.1MP Mirrorless Camera (Body Only)"
-          },
-          "epid_match": true,
-          "inspected": [
-            {
-              "item_id": "v1|336683401199|0",
-              "epid": "18039720254",
-              "title": "Canon EOS R6 20.1MP Mirrorless Camera (Body Only)",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
+          "as_of": "2026-07-19T04:11:13Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/398167691535?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/326450553696?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-17T04:10:45Z"
+      "resolved_at": "2026-07-19T04:11:13Z"
     },
     "manfrotto-befree": {
       "contamination_key": "manfrotto-befree",
@@ -908,7 +907,7 @@
       "gtin": "04549292157345",
       "marketplace_ids": {
         "ebay_epid": "22039720829",
-        "ebay_legacy_item_id": "168476326562",
+        "ebay_legacy_item_id": "147443447013",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -974,23 +973,23 @@
             }
           ]
         },
-        "market_title": "Canon EOS R5 45.0MP Mirrorless Camera - Black 24% Shutter Count (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/wLMAAeSwtOZqNpQ8/s-l1600.jpg",
+        "market_title": "Canon EOS R5 45.0MP Mirrorless Camera - Black (Body Only)",
+        "image": "https://i.ebayimg.com/images/g/WicAAeSwJBBqWp-Y/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
         "price_seen": {
-          "value": "1700.00",
+          "value": "2250.00",
           "currency": "USD",
-          "as_of": "2026-07-18T04:12:43Z"
+          "as_of": "2026-07-19T04:13:28Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/168476326562?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xCt7tuhyqs7I4s3GeX7oFF8CRBs%2B7dsuEtlC921GiktiqBNJNDu53EEyUoz4qawt2UsCeZnelGQzRj4j2FEvjt2yODfcoh3MoZdAfJNuyyJiYoX98Rx61Cgfgb8lwXgc0nJGfsaMUZKkCaULcuY70UqJGPB3jEBstO%2BQEEAmkIz%2BzKoeLHvqpMny9i9ez5J5tw%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/147443447013?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-18T04:12:43Z"
+      "resolved_at": "2026-07-19T04:13:28Z"
     },
     "sony-a7r": {
       "contamination_key": "sony-a7r",
@@ -999,7 +998,7 @@
       "gtin": "00027242893832",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "366546709147",
+        "ebay_legacy_item_id": "398111491854",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1009,7 +1008,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7RM3/B",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -1044,13 +1043,13 @@
             }
           ]
         },
-        "market_title": "Sony Alpha a7R III ILCE-7RM3 42.4MP Mirrorless Camera Body",
-        "image": "https://i.ebayimg.com/images/g/Eu8AAeSwcUpqWSKI/s-l1600.jpg",
+        "market_title": "Sony Alpha ILCE-7RM2 A7R ii A7R II 42.4MP Digital Camera(Only Body) with Charger",
+        "image": "https://i.ebayimg.com/images/g/yWgAAeSwYN1qL~Y-/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
         "price_seen": {
-          "value": "749.99",
+          "value": "609.00",
           "currency": "USD",
-          "as_of": "2026-07-17T04:13:55Z"
+          "as_of": "2026-07-19T04:14:13Z"
         },
         "image_provenance": {
           "recovered_by": "image-second-pass",
@@ -1081,28 +1080,13 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/366546709147?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/398111491854?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xC2WjcMuf5RXIaobfmUO2%2FrlDUc3Qcv%2BK37QDkRAbDib2AcWWgnPq9tKvQQy7Tk6rxYV4aaHD0p3Zg3vlNScAuMgiZlxTIH2DXmvzM7qUJzqL1jV1Wzblrz2wEcJTxtOl1qjErGGAI0Z0zFFmyYlQ6JioES%2BO1YxUWAHjlwExGokGGK9UnBJQbhs6iUjmxmzLo%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-17T04:13:55Z",
-      "rebind_rejected": {
-        "ts": "2026-07-18T04:13:32Z",
-        "item_id": "398111491854",
-        "title": "Sony Alpha ILCE-7RM2 A7R ii A7R II 42.4MP Digital Camera(Only Body) with Charger",
-        "price_seen": {
-          "value": "609.00",
-          "currency": "USD",
-          "as_of": "2026-07-18T04:13:32Z"
-        },
-        "signals": [
-          "junk_title",
-          "mpn_wiped"
-        ],
-        "hard": true
-      }
+      "resolved_at": "2026-07-19T04:14:13Z"
     },
     "ulanzi-f38-zero": {
       "contamination_key": "ulanzi-f38",
