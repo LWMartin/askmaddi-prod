@@ -30,3 +30,8 @@ data/work_queue.json
 # nightly banker's allowlist must never grow to include subscribers.jsonl.
 data/analytics_log.jsonl
 data/subscribers.jsonl
+
+# Factory single-flight flock (2026-07-19, card_factory.single_flight). Runtime-
+# written beside the work_queue store; untracked-but-unignored would trip the
+# nightly clean-tree preflight (the 06-25/06-30 failure class).
+data/.factory.lock

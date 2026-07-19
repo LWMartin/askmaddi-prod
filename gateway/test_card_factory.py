@@ -463,3 +463,62 @@ def test_enrich_partial_then_success_clears_resume(tmp_path, monkeypatch):
     rec = wq.load_queue(qp)['queue']['sony-a7-v']
     assert rec['state'] == 'review_ready'
     assert 'resume_stage' not in rec             # lifecycle closed
+
+
+# ── single-flight gate (2026-07-19: midnight cap-reset pile-up, sony-a7c) ─────
+def test_single_flight_second_acquire_locked_out(tmp_path):
+    """flock is per open-file-description: a second open of the same path in the
+    same process contends exactly like a second cron-fired factory process."""
+    lock = tmp_path / '.factory.lock'
+    fd = cf.single_flight(lock)
+    assert fd is not None
+    assert cf.single_flight(lock) is None   # held -> locked out
+    import os
+    os.close(fd)
+
+
+def test_single_flight_release_allows_reacquire(tmp_path):
+    import os
+    lock = tmp_path / '.factory.lock'
+    fd = cf.single_flight(lock)
+    os.close(fd)                             # process exit stand-in
+    fd2 = cf.single_flight(lock)
+    assert fd2 is not None                   # kernel released it, no stale state
+    os.close(fd2)
+
+
+def test_single_flight_lockfile_group_writable(tmp_path):
+    """Mirror work_queue's fchmod discipline: 0664 regardless of umask, so the
+    pipeline group keeps rw on shared runtime files."""
+    import os
+    lock = tmp_path / '.factory.lock'
+    fd = cf.single_flight(lock)
+    try:
+        assert (os.fstat(fd).st_mode & 0o777) == 0o664
+    finally:
+        os.close(fd)
+
+
+def test_main_once_locked_out_exits_zero_and_skips_tick(tmp_path, monkeypatch, capsys):
+    """A locked-out cron tick is a routine skip, not an error: exit 0, one log
+    line in the standard outcome format, and tick() never runs."""
+    import os
+    lock = tmp_path / '.factory.lock'
+    holder = cf.single_flight(lock)          # simulate the running invocation
+    called = []
+    monkeypatch.setattr(cf, 'tick', lambda *a, **k: called.append(1) or {'action': 'idle'})
+    rc = cf.main(['--once', '--lock', str(lock)])
+    assert rc == 0
+    assert called == []                      # gate sits BEFORE any queue touch
+    assert "locked_out" in capsys.readouterr().out
+    os.close(holder)
+
+
+def test_main_once_free_lock_ticks(tmp_path, monkeypatch, capsys):
+    """With the lock free, --once proceeds to exactly one tick."""
+    called = []
+    monkeypatch.setattr(cf, 'tick', lambda *a, **k: called.append(1) or {'action': 'idle', 'remaining': 2})
+    rc = cf.main(['--once', '--lock', str(tmp_path / '.factory.lock')])
+    assert rc == 0
+    assert called == [1]
+    assert "idle" in capsys.readouterr().out

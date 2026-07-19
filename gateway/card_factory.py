@@ -40,6 +40,8 @@ writes only to its own out/ build root). The single human gate downstream is
 untouched.
 """
 import argparse
+import fcntl
+import os
 import subprocess
 import sys
 import time
@@ -79,6 +81,48 @@ DEFAULT_BUILD_CARD = (
     Path.home() / 'phantom-ops' / 'claude' / 'workspace'
     / 'aggregator-build' / 'build_card.py'
 )
+
+# Single-flight lock (2026-07-19). Lives beside the work_queue store — it guards
+# the same resource (one factory invocation at a time). MUST stay in .gitignore's
+# runtime family: an untracked file in the checkout aborts the nightly banker's
+# clean-tree preflight (the 2026-06-25 / 2026-06-30 failure class).
+DEFAULT_LOCK_PATH = work_queue.WORK_QUEUE_PATH.parent / '.factory.lock'
+
+
+def single_flight(lock_path=DEFAULT_LOCK_PATH):
+    """Try to become the only running factory invocation. Returns an open fd
+    (keep it for the process lifetime) or None if another invocation holds it.
+
+    WHY (incident 2026-07-18→19, sony-a7c): the drip cron fires every 15 min
+    with no mutual exclusion. A tick whose build_card is still running (enrich
+    on a big corpus takes ~45 min) overlaps the next tick; at the midnight cap
+    reset TWO fresh builds (canon-r5/r6) piled onto a running a7c enrich, all
+    three contending for the one CPU-bound gemma shim. Per-claim latency
+    climbed 8s -> 17s -> 24s -> socket.timeout: the enrich died at 304/567,
+    the assembled card never refreshed, and the contaminated card stayed live
+    an extra day. The gate makes overlap structurally impossible instead of
+    latency-dependent.
+
+    WHY flock, not a PID/TTL lockfile: flock(2) is released by the kernel when
+    the process exits — cleanly, on crash, or on SIGKILL — so there is no stale
+    lock to reap and no TTL to tune. A skipped tick costs 15 minutes; a wrongly
+    honored stale lock could silence the factory indefinitely. LOCK_NB because
+    cron mode must never queue behind a running build (the next tick will come).
+
+    WHY here and not in tick(): tick() is pure state-machine orchestration over
+    an injected runner (offline-testable, no OS coupling). The overlap being
+    prevented is between PROCESSES, so the process entrypoint owns the lock.
+    """
+    fd = os.open(str(lock_path), os.O_RDWR | os.O_CREAT, 0o664)
+    try:
+        # Mirror work_queue._atomic_write's fchmod: O_CREAT mode is filtered by
+        # the umask, and the pipeline group needs rw on shared runtime files.
+        os.fchmod(fd, 0o664)
+        fcntl.flock(fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        os.close(fd)
+        return None
+    return fd
 
 
 def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
@@ -385,6 +429,10 @@ def _build_arg_parser():
                    help="enrich backend: flask (VPS gemma) or mock (offline).")
     p.add_argument('--status', action='store_true',
                    help="Print work_queue state histogram and exit.")
+    p.add_argument('--lock', default=str(DEFAULT_LOCK_PATH), dest='lock_path',
+                   help="Single-flight lock path (flock). A tick that finds it "
+                        "held logs {'action': 'locked_out'} and exits 0 — the "
+                        "previous invocation's build is still running.")
     return p
 
 
@@ -394,6 +442,15 @@ def main(argv=None):
     if args.status:
         c = work_queue.counts()
         print(f"[factory] queue: {c}")
+        return 0
+
+    # Single-flight gate: held for the entire invocation (claim + build), in
+    # both cron (--once) and loop modes. Deliberately NOT applied to --status,
+    # which is a read-only peek and must work while a build runs. The fd is
+    # kept referenced until process exit; the kernel releases the flock then.
+    lock_fd = single_flight(Path(args.lock_path))
+    if lock_fd is None:
+        print("[factory] tick: {'action': 'locked_out'}")
         return 0
 
     runner = build_card_runner(
