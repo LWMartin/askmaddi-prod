@@ -21,26 +21,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 899.95,
-        "refurbished": 1009.0,
-        "open_box": 1199.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 35,
-      "price_updated_at": "2026-07-20T10:10:06.640810+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-07-17T17:21:14.744711+00:00"
+    "price_updated_at": "2026-07-20T00:23:29.477551+00:00"
   },
   "freshness": {
-    "created_at": "2026-07-17T17:21:14.736263+00:00",
-    "last_built": "2026-07-17T17:21:14.736263+00:00",
-    "last_checked": "2026-07-17T17:21:14.736263+00:00",
-    "source_count": 35,
+    "created_at": "2026-07-20T00:23:29.469165+00:00",
+    "last_built": "2026-07-20T00:23:29.469165+00:00",
+    "last_checked": "2026-07-20T00:23:29.469165+00:00",
+    "source_count": 34,
     "source_types": {
-      "pro": 35
+      "pro": 34
     },
     "staleness_days": 0,
     "build_model": "classifier-v1",
@@ -50,8 +44,8 @@
     "overall": "high",
     "per_axis": {
       "af_performance.video": "high",
-      "generation_context": "high",
       "mount_compat": "high",
+      "generation_context": "high",
       "color_rendition": "high",
       "optical_performance": "high",
       "price": "high",
@@ -83,17 +77,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 85,
-        "neu": 33,
-        "neg": 13,
-        "total": 131,
+        "neu": 35,
+        "neg": 10,
+        "total": 130,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Despite its new 66.8MP stacked sensor, 30fps burst shooting and flagship-level autofocus, it couldn't overtake the Sony A7 V ."
-          },
           {
             "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
             "source_type": "youtube",
@@ -1008,447 +995,13 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 30,
-        "polarity_agreement": 0.8,
+        "source_count": 29,
+        "polarity_agreement": 0.793,
         "dominant_polarity": "pos",
-        "max_source_share": 0.084,
+        "max_source_share": 0.085,
         "contested": false
       },
       "notes": []
-    },
-    {
-      "axis_id": "generation_context",
-      "display_name": "Generation Context",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 33,
-        "neu": 21,
-        "neg": 4,
-        "total": 58,
-        "sources": [
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Now, new sales data from Map Camera show that four of Japan's ten best-selling cameras in June are point-and-shoot models that launched years ago."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Canon PowerShot G7X Mark III 9."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "The PowerShot G7X Mark III retains the sleek, pocket-friendly design of its predecessor while introducing improved video features, making it a favorite among vloggers and creators looking for a compact camera."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Ricoh GR IV The cult compact gets its biggest upgrade yet Ricoh's beloved pocket-sized street camera returns with a new BSI sensor, redesigned lens, and major usability upgrades – all while keeping its cult-classic formula intact (Image credit: Gareth Bevan / Digital Camera World) The Ricoh GR IV…"
-          },
-          {
-            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
-            "weight": 0.75,
-            "quote_excerpt": "It’s been over a year since the Nikon Zf topped Map Camera ’s used sales charts, but if I was surprised to find a nearly three-year-old full-frame retro camera at the top of the pile, I was doubly surprised to find a ‘Big N’ lockout in first and second place."
-          },
-          {
-            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
-            "weight": 0.75,
-            "quote_excerpt": "I’m not surprised to find the Canon EOS R6 Mark II on this list, although I would have backed it to sit higher than seventh, given the buzz around the Canon EOS R6 Mark III and the Mark II’s position as a fantastic budget alternative."
-          },
-          {
-            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
-            "weight": 0.75,
-            "quote_excerpt": "You need only look at the Nikon Zf to get caught up in its romantic retro aesthetic, but however good looking this full-frame mirrorless camera is, it’s been over a year since it topped Map Camera’s used ranking."
-          },
-          {
-            "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now",
-            "weight": 0.75,
-            "quote_excerpt": "The Canon EOS R6 Mark II was replaced in November 2025 by the new R6 Mark III, a 32.5MP full-frame 7K open gate camera that has been listed among several new camera top ten lists since its launch ."
-          },
-          {
-            "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now",
-            "weight": 0.75,
-            "quote_excerpt": "200-600mm f/5.6-6.3 G OSS Canon EF 50mm f/1.8 STM Used trends don’t directly match the trendiest new cameras from Japan"
-          },
-          {
-            "source_id": "rss-digital-camera-world-world-s-smallest-and-lightest-full-frame-mirrorless-camera-w-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/worlds-smallest-and-lightest-full-frame-mirrorless-camera-with-viewfinder-is-japans-no-1-bestseller",
-            "weight": 0.75,
-            "quote_excerpt": "Despite newer flagship releases from Canon , Sony , and Nikon , one full-frame camera launched in 2023 continues to outperform far newer models in Japan's sales charts."
-          },
-          {
-            "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk",
-            "weight": 0.75,
-            "quote_excerpt": "Sony released their a7c Mark III in September 2023 and although that's clearly a fantastic camera with tons of features in this video I want to talk about its predecessor the original a7c this is a camera I've been using for over 3 years now as my main camera for photography and YouTube content…"
-          },
-          {
-            "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk",
-            "weight": 0.75,
-            "quote_excerpt": "deal in 2024 so let's get into it reason number one is that this camera has a fantastic 24 megap fullframe sensor if you've never shot full frame before I've got to tell you there's something just amazing about it when compared to smaller crop sensors like apsc for example compared to smaller…"
-          },
-          {
-            "source_id": "youtube-benj-haisch-the-most-versatile-camera-money-can-buy-sony-a7cr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=pZ-GwrkuwnA",
-            "weight": 0.75,
-            "quote_excerpt": "already invested in the A7 R5 yes I would have bought the A7 C2 but since I already have that 60 megapixel sensor in another camera having a portable version of that same camera as well as the professional version of that same camera just made a ton of sense to me to be able to match footage to be"
-          },
-          {
-            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
-            "weight": 0.75,
-            "quote_excerpt": "this camera to come out or be announced already the a7c Mark II as it was predicted a while back yet the chip shortage and supply chain issues have stubbornly not been resolved so a lot of product lines had to adapt to the circumstances but after hearing a lot of people's experiences with the a74…"
-          },
-          {
-            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
-            "weight": 0.75,
-            "quote_excerpt": "so let's not get too spoiled with how amazing our world is and all the tools we now have at our fingertips I'd much rather have an evf than not so I think between the a7c Mark II and an fx30 I still think the a7c2 which will obviously be a full frame 33 megapixel camera with an avf will"
-          },
-          {
-            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
-            "weight": 0.75,
-            "quote_excerpt": "next month and for me it's not even a question anymore of what camera I'm going to take with me it's always going to be the a7c over any other that's why I still reach for it and that's why I think the A7 NC is still worth it so thank you for your time and attention I've got a"
-          },
-          {
-            "source_id": "youtube-createdbyzyaire-why-i-got-the-sony-a7c-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=pWl3lkhU99c",
-            "weight": 0.75,
-            "quote_excerpt": "The A7C Mark II is Sony's new focus, which is why it's discontinued, and those go for about maybe 1,200 to,500 on the resale market."
-          },
-          {
-            "source_id": "youtube-createdbyzyaire-why-i-got-the-sony-a7c-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=pWl3lkhU99c",
-            "weight": 0.75,
-            "quote_excerpt": "Speaking of compact cameras, Sony just announced the new RX1 R Mark III."
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7c-hands-on-review-comparisons-to-sony-a7-iii",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yVpLoNYeG0E",
-            "weight": 0.75,
-            "quote_excerpt": "although improved is still not up to this spec not even close so what about the sony a7 a73 what about that well it is a little bit larger not much it handles very nicely i like the interface better but really for me it comes down to the real time tracking autofocus i think that's still worthwhile…"
-          },
-          {
-            "source_id": "youtube-dylan-blackburn-should-you-buy-the-sony-a7c-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=TIfit7rk62g",
-            "weight": 0.75,
-            "quote_excerpt": "really comes down to is you and your level of experience rather than the camera itself and I think the original Sony a7c is the perfect camera to begin that Journey with so even though this camera is old by today's standards I would still recommend it to anyone it's important to remember that all…"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7c-review-smarter-smaller-and-clumsier",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VA9da9aXfRQ",
-            "weight": 0.75,
-            "quote_excerpt": "even with extra competition from canon sony still rules the full-frame camera market thanks to innovative products like the a7 r4 and a7s3 on the aps-c side though it keeps building the same cameras over and over with the only real improvement being the autofocus so when sony announced the a7c i…"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7c-review-smarter-smaller-and-clumsier",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VA9da9aXfRQ",
-            "weight": 0.75,
-            "quote_excerpt": "didn't gain the much improved menu system from the a7s iii either instead sony retained the confusing menus from the a7 iii to avoid any fumbling you'll want to set up the custom menus and buttons before using this camera another issue that will annoy hybrid shooters is the lack of separation…"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
-            "weight": 0.75,
-            "quote_excerpt": "Okay, so I'm going to start with the a7 III because I have a lot more experience with that one and know what to expect from its audio, and I've just got a line coming out from my regular audio setup and then coming into the camera here."
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
-            "weight": 0.75,
-            "quote_excerpt": "Now, we do get some of the improvements we've seen on the a7 III's successors though, like a better illuminated focus selection instead of that hard to see grey box and the inclusion of auto white balance lock."
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
-            "weight": 0.75,
-            "quote_excerpt": "So, those are a lot of the differences and improvements over the a7 III but unfortunately, the reason why I'm comparing it to the a7 III so much is because the sensor and image performance are, for better or worse, the same."
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
-            "weight": 0.75,
-            "quote_excerpt": "And while this camera will likely bring more customers to Sony that want a smaller, full frame body, and also satisfy current Sony shooters that need a second body with fewer quirks, I'm more excited about what this camera suggests for the future."
-          },
-          {
-            "source_id": "youtube-jason-hermann-sony-a7c-review-long-term-real-world-style",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yG8iLex2NkI",
-            "weight": 0.75,
-            "quote_excerpt": "me just cut right here and i'm going to switch to the sony a7c with the fe 35 millimeter 4.8 lens and you'll be able to see how the scene changes and so forth as compared to the a6400 which does a really good job in my opinion especially with the sigma 30 millimeter so all right guys so i"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7c-one-year-later-user-experience-review-2021",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=oqT5MzuLEek",
-            "weight": 0.75,
-            "quote_excerpt": "to finally introduce the flip out screen was the pocket vlogging camera the zv1 we'll say we'll go ahead and say that's entry level and the second one being the mighty a7s3 we'll put that at the pro level the a7c was swiftly announced right after those two cameras putting it right in the middle of…"
-          },
-          {
-            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
-            "weight": 0.75,
-            "quote_excerpt": "hey everyone with the new release of the Sony a7c2 you might be asking which one should you buy out of the two or if it's worth upgrading to the a7c2 if you already have the original a7c today I'm going to be comparing both of these camera bodies for photography at a portrait photo shoot and for…"
-          },
-          {
-            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
-            "weight": 0.75,
-            "quote_excerpt": "shoot so if you're a photographer thinking of upgrading from the a7c to the a7c2 this will be super important next we have our photo shoot comparisons but first if you run a photography business or are thinking about starting one the sponsor of today's video PPA have lots of resources to help you…"
-          },
-          {
-            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
-            "weight": 0.75,
-            "quote_excerpt": "oh that looks so cool there as a photographer I feel like it's getting harder to decide whether to upgrade camera bodies as a lot of new features we're seeing are video orientated if you are an a7c owner already in my personal opinion I would only update to the a7c2 for a few reasons like if you're…"
-          },
-          {
-            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
-            "weight": 0.75,
-            "quote_excerpt": "with the ergonomics if you're having issues with autofocus or you really want these slightly larger images from my personal experience with portrait and travel photography I find that both these cameras are more than capable of capturing anything I want in terms of autofocus so let's move on to…"
-          },
-          {
-            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
-            "weight": 0.75,
-            "quote_excerpt": "crop but already right there I see the a7c2 being worthy of an upgrade from the a7c if you are a heavy or balanced photo and video specifically user 4K is so handy for video Work especially if you work in both horizontal and vertical video formats if you film in 4k you can utilize both formats…"
-          },
-          {
-            "source_id": "youtube-mark-bennetts-camera-crisis-the-ultimate-comparison-sony-a7c-vs-sony-a6700",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DmKHurxvkWs",
-            "weight": 0.75,
-            "quote_excerpt": "hi guys today we have an interesting one this is the newly released Sony a6700 AN aps-c camera that packs a lot of value in its little compact body and we have over here the a7c the original I've already compared the a7c2 to the a6700 but those two are very different in price a lot of people have…"
-          },
-          {
-            "source_id": "youtube-mark-bennetts-camera-crisis-the-ultimate-comparison-sony-a7c-vs-sony-a6700",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DmKHurxvkWs",
-            "weight": 0.75,
-            "quote_excerpt": "which is a good upgrade but the original a7c it doesn't have it and while we're at it the a6700 has one more customizable button and of course it has that fantastic switch to go from uh the photos and my in Focus there photos to video to S and Q whereas you can't do that at all on the"
-          },
-          {
-            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
-            "weight": 0.75,
-            "quote_excerpt": "So after talking about the pros and I do think um there's some cons uh which I've been using for quite a while now and I do feel like some of the things could be improved which it has been improved already for the new cameras."
-          },
-          {
-            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
-            "weight": 0.75,
-            "quote_excerpt": "Um which I think it got improved on the newer version, but still like even A7C and all these they still have >> I actually removed all of my those are called I think strap eyelets."
-          },
-          {
-            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
-            "weight": 0.75,
-            "quote_excerpt": "I actually own this camera before and I upgraded to the A7C Mark II just to match my A74."
-          },
-          {
-            "source_id": "youtube-mark-galers-alpha-creative-skills-sony-a7c-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=X6N1XDs3jyo",
-            "weight": 0.75,
-            "quote_excerpt": "a few things improvements over say an alpha 7-3 but all of the features here marked yellow are improvements over the a7 iii now many of these are to do with the focus it's the next generation autofocus systems that we're enjoying with the alpha 7c camera and i have to say it's the next best thing…"
-          },
-          {
-            "source_id": "youtube-mark-galers-alpha-creative-skills-sony-a7c-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=X6N1XDs3jyo",
-            "weight": 0.75,
-            "quote_excerpt": "think i prefer the sony version at half the price but what we do on we have a very interesting lens on the right side we have a one three five two point eight now sony make a beautiful one three five prime 1.8 prime but because of that longer focal length with the f 1.8 aperture it does start"
-          },
-          {
-            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
-            "weight": 0.75,
-            "quote_excerpt": "down below in the description I like to shoot a lot of street photography so I highly value a camera that's small light discreet and beautiful so for my Leica killer build I'm going to use the a7c as the platform to start from sure the Q2 does have more megapixels than the a7c but it also has a…"
-          },
-          {
-            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
-            "weight": 0.75,
-            "quote_excerpt": "know what I don't care I like it I think it looks pretty cool I'm gonna leave it on there for now again I love the a7c and there are rumors of an a7c Mark II coming out soon so watch out for that I'm probably most definitely going to get that if the specs warranted I personally have never"
-          },
-          {
-            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
-            "weight": 0.75,
-            "quote_excerpt": "remove the lens now that means that the a7c setup is 60 less than the Q2 and that's not including things like the Leica batteries which cost 285 dollars per battery so you guys do the math like I said I'm sure if you're like a user I'm sure you love it and I'm sure you get amazing images from"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7c-review-tiny-cinematic-beast",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=H1W6Xd9jzB4",
-            "weight": 0.75,
-            "quote_excerpt": "right now but it's still really great it's nice to have 4k it's nice to have 120 frames per second in 1080 but it still looks good the ibis the stabilization is kind of in that sweet spot where it's not too much so you're not getting the wobbles here um but it's still cutting out all of that small"
-          },
-          {
-            "source_id": "youtube-ryan-richards-why-the-sony-a7c-surprised-me",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dT1Sdu96F4I",
-            "weight": 0.75,
-            "quote_excerpt": "But my current obsession is the Sony A7 Mark II series of cameras."
-          },
-          {
-            "source_id": "youtube-ryan-richards-why-the-sony-a7c-surprised-me",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dT1Sdu96F4I",
-            "weight": 0.75,
-            "quote_excerpt": "Now, maybe the Mark III and the Mark IV A7 have a bit more of a more modern feel, but compared to the Mark II cameras, the A7C feels really quite nice."
-          },
-          {
-            "source_id": "youtube-stay-focused-sony-a7c-review-best-budget-friendly-full-frame-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5ffQY82GUBI",
-            "weight": 0.75,
-            "quote_excerpt": "a great stabilized lens which is perfect for vlogging so if you want to check that out then please do so what other upgrades are there well sony's removed the 30 minute recording limit for mirrorless cameras which is great but the main reason why i purchased this camera is the colors that come…"
-          },
-          {
-            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
-            "weight": 0.75,
-            "quote_excerpt": "hello my friends in today's video we will take a look at sony a7c the a7c is sony's new full-frame camera which basically addresses the needs of modern content creators it uses internal components that we already know from other sony cameras but it is still an important camera in this video we will…"
-          },
-          {
-            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
-            "weight": 0.75,
-            "quote_excerpt": "is in my opinion the better looking version in person it is also available in black a7c uses 24 megapixel backside illuminated imx 410 full frame sensor i've been using this sensor for the past three years in a7 3 and i can say that the image quality and output of a7c is identical to a7 3 and that…"
-          },
-          {
-            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
-            "weight": 0.75,
-            "quote_excerpt": "a repackage and it doesn't bring any major innovation but in my opinion it is the most meaningful repackage on the market there are two main groups of users who should consider a7c the first one are content creators who want compact simple to use all-round camera with flawless autofocus and they…"
-          },
-          {
-            "source_id": "youtube-the-verge-sony-a7c-review-a-little-ripper",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xHEh2b-cM_A",
-            "weight": 0.75,
-            "quote_excerpt": "I mean, it's pretty much an A7 Mark III from 2018 put into a smaller body, but it's a lot of good parts put into that smaller body, and hopefully it will only get better."
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
-            "weight": 0.75,
-            "quote_excerpt": "that means you get 33 megapixels instead of 24 megapixels it means you get a vastly better autofocus system especially for video that's going to make a big difference but the body the viewfinder all of that is the same the original a7c has the same guts as the A7 III the new a7c II has the same…"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
-            "weight": 0.75,
-            "quote_excerpt": "the Sony a74 so if you want to understand the performance differences you can check our review comparing the A7 III to the a74 but here are some highlights the A7 III and a7c have human eye attack then it works well enough but sometimes it jumps to the nose the a74 and a7c2 have faster more…"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
-            "weight": 0.75,
-            "quote_excerpt": "which gives you 60 megapixels instead of just 24 megapixels and that will produce vastly sharper images as well as giving you the better autofocus and the new user interface so overall yeah I think it's a pretty good upgrade if you're in any way dissatisfied with your original a7c these cameras are…"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
-            "weight": 0.75,
-            "quote_excerpt": "are going to be just fine for any social media shooting or even making 10 by 12 photos that's 33 megapixels is still a lot now for sports the a7c2 has some distinct advantages it shoots at 10 frames per second with either the mechanical or electronic shutter compared to only eight with the r and if…"
-          },
-          {
-            "source_id": "youtube-zachary-mcgee-should-you-buy-the-sony-a7c-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vNjVlqKCpIM",
-            "weight": 0.75,
-            "quote_excerpt": "the Sony a7c was originally released in September of 2020 and since then Sony has released 12 new cameras including the a7c Mark I so how does the original a7c Stand Out from all these new cameras and more importantly should you buy the Sony a7c in 2024 in my opinion this camera kind of fell under…"
-          },
-          {
-            "source_id": "youtube-zachary-mcgee-should-you-buy-the-sony-a7c-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vNjVlqKCpIM",
-            "weight": 0.75,
-            "quote_excerpt": "it was originally released Sony was originally marketing toward kind of the apsc crowd who wanted to transition to a full-frame camera but still wanted to keep the same type of camera that was super light and very travel friendly and honestly Sony did a great job of this in my opinion the Sony a7c…"
-          },
-          {
-            "source_id": "youtube-zy-cheng-sony-a7c-vs-a7iii-16-differences",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=fz2LSHQ8E_w",
-            "weight": 0.75,
-            "quote_excerpt": "should you get the new sony a7c or the a7 mark iii these are two very comparable cameras so much so that to some people the a7c was even regarded as being completely underwhelming because it just seemed to be the exact same camera as the a7 3 just in a body that's ever so slightly smaller as…"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 27,
-        "polarity_agreement": 0.519,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.086,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "The PowerShot G7X Mark III retains the sleek, pocket-friendly design of its predecessor while introducing improved video features, making it a favorite among vloggers and creators looking for a compact camera.",
-        "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-        "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1"
-      }
     },
     {
       "axis_id": "mount_compat",
@@ -1457,9 +1010,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 28,
-        "neu": 29,
+        "neu": 26,
         "neg": 1,
-        "total": 58,
+        "total": 55,
         "sources": [
           {
             "source_id": "rss-amateur-photographer-explore-the-beauty-of-panama-s-wildlife-and-landscape-with-t-2026",
@@ -1467,27 +1020,6 @@
             "url": "https://amateurphotographer.com/technique/interviews/explore-the-beauty-of-panamas-wildlife-and-landscape-with-these-stunning-photos/",
             "weight": 0.75,
             "quote_excerpt": "I currently shoot with a Sony A7C II , primarily paired with a Tamron 28-75mm f/2.8 and a Rokinon 35mm f/1.8."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Canon PowerShot SX740 HS / Lite 7."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Ricoh GR IV Fujifilm X100VI Don't mess with a winner This is a hard-to-get compact camera."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "In 2025, the X100VI received an iF Design Award , with the jury highlighting the camera for opening \"up the joy of camera ownership and the wonder of photography to a broad range of users.\" Canon PowerShot SX740 HS / Lite Canon's best photo-focused compact camera?"
           },
           {
             "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
@@ -1871,17 +1403,423 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 19,
-        "polarity_agreement": 0.579,
+        "source_count": 18,
+        "polarity_agreement": 0.611,
         "dominant_polarity": "pos",
-        "max_source_share": 0.155,
-        "contested": true
+        "max_source_share": 0.164,
+        "contested": false
       },
       "notes": [],
       "face_quote": {
         "quote_excerpt": "While Canon took two of the top three camera bodies, Z Mount glass is the most popular mount on the platform at 30 percent of sales.",
         "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
         "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 31,
+        "neu": 19,
+        "neg": 4,
+        "total": 54,
+        "sources": [
+          {
+            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
+            "weight": 0.75,
+            "quote_excerpt": "It’s been over a year since the Nikon Zf topped Map Camera ’s used sales charts, but if I was surprised to find a nearly three-year-old full-frame retro camera at the top of the pile, I was doubly surprised to find a ‘Big N’ lockout in first and second place."
+          },
+          {
+            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
+            "weight": 0.75,
+            "quote_excerpt": "I’m not surprised to find the Canon EOS R6 Mark II on this list, although I would have backed it to sit higher than seventh, given the buzz around the Canon EOS R6 Mark III and the Mark II’s position as a fantastic budget alternative."
+          },
+          {
+            "source_id": "rss-digital-camera-world-retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
+            "weight": 0.75,
+            "quote_excerpt": "You need only look at the Nikon Zf to get caught up in its romantic retro aesthetic, but however good looking this full-frame mirrorless camera is, it’s been over a year since it topped Map Camera’s used ranking."
+          },
+          {
+            "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now",
+            "weight": 0.75,
+            "quote_excerpt": "The Canon EOS R6 Mark II was replaced in November 2025 by the new R6 Mark III, a 32.5MP full-frame 7K open gate camera that has been listed among several new camera top ten lists since its launch ."
+          },
+          {
+            "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now",
+            "weight": 0.75,
+            "quote_excerpt": "200-600mm f/5.6-6.3 G OSS Canon EF 50mm f/1.8 STM Used trends don’t directly match the trendiest new cameras from Japan"
+          },
+          {
+            "source_id": "rss-digital-camera-world-world-s-smallest-and-lightest-full-frame-mirrorless-camera-w-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/worlds-smallest-and-lightest-full-frame-mirrorless-camera-with-viewfinder-is-japans-no-1-bestseller",
+            "weight": 0.75,
+            "quote_excerpt": "Despite newer flagship releases from Canon , Sony , and Nikon , one full-frame camera launched in 2023 continues to outperform far newer models in Japan's sales charts."
+          },
+          {
+            "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk",
+            "weight": 0.75,
+            "quote_excerpt": "Sony released their a7c Mark III in September 2023 and although that's clearly a fantastic camera with tons of features in this video I want to talk about its predecessor the original a7c this is a camera I've been using for over 3 years now as my main camera for photography and YouTube content…"
+          },
+          {
+            "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk",
+            "weight": 0.75,
+            "quote_excerpt": "deal in 2024 so let's get into it reason number one is that this camera has a fantastic 24 megap fullframe sensor if you've never shot full frame before I've got to tell you there's something just amazing about it when compared to smaller crop sensors like apsc for example compared to smaller…"
+          },
+          {
+            "source_id": "youtube-benj-haisch-the-most-versatile-camera-money-can-buy-sony-a7cr",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=pZ-GwrkuwnA",
+            "weight": 0.75,
+            "quote_excerpt": "already invested in the A7 R5 yes I would have bought the A7 C2 but since I already have that 60 megapixel sensor in another camera having a portable version of that same camera as well as the professional version of that same camera just made a ton of sense to me to be able to match footage to be"
+          },
+          {
+            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
+            "weight": 0.75,
+            "quote_excerpt": "this camera to come out or be announced already the a7c Mark II as it was predicted a while back yet the chip shortage and supply chain issues have stubbornly not been resolved so a lot of product lines had to adapt to the circumstances but after hearing a lot of people's experiences with the a74…"
+          },
+          {
+            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
+            "weight": 0.75,
+            "quote_excerpt": "so let's not get too spoiled with how amazing our world is and all the tools we now have at our fingertips I'd much rather have an evf than not so I think between the a7c Mark II and an fx30 I still think the a7c2 which will obviously be a full frame 33 megapixel camera with an avf will"
+          },
+          {
+            "source_id": "youtube-brian-catalano-is-the-sony-a7c-still-worth-it-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
+            "weight": 0.75,
+            "quote_excerpt": "next month and for me it's not even a question anymore of what camera I'm going to take with me it's always going to be the a7c over any other that's why I still reach for it and that's why I think the A7 NC is still worth it so thank you for your time and attention I've got a"
+          },
+          {
+            "source_id": "youtube-createdbyzyaire-why-i-got-the-sony-a7c-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=pWl3lkhU99c",
+            "weight": 0.75,
+            "quote_excerpt": "The A7C Mark II is Sony's new focus, which is why it's discontinued, and those go for about maybe 1,200 to,500 on the resale market."
+          },
+          {
+            "source_id": "youtube-createdbyzyaire-why-i-got-the-sony-a7c-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=pWl3lkhU99c",
+            "weight": 0.75,
+            "quote_excerpt": "Speaking of compact cameras, Sony just announced the new RX1 R Mark III."
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7c-hands-on-review-comparisons-to-sony-a7-iii",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yVpLoNYeG0E",
+            "weight": 0.75,
+            "quote_excerpt": "although improved is still not up to this spec not even close so what about the sony a7 a73 what about that well it is a little bit larger not much it handles very nicely i like the interface better but really for me it comes down to the real time tracking autofocus i think that's still worthwhile…"
+          },
+          {
+            "source_id": "youtube-dylan-blackburn-should-you-buy-the-sony-a7c-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TIfit7rk62g",
+            "weight": 0.75,
+            "quote_excerpt": "really comes down to is you and your level of experience rather than the camera itself and I think the original Sony a7c is the perfect camera to begin that Journey with so even though this camera is old by today's standards I would still recommend it to anyone it's important to remember that all…"
+          },
+          {
+            "source_id": "youtube-engadget-sony-a7c-review-smarter-smaller-and-clumsier",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VA9da9aXfRQ",
+            "weight": 0.75,
+            "quote_excerpt": "even with extra competition from canon sony still rules the full-frame camera market thanks to innovative products like the a7 r4 and a7s3 on the aps-c side though it keeps building the same cameras over and over with the only real improvement being the autofocus so when sony announced the a7c i…"
+          },
+          {
+            "source_id": "youtube-engadget-sony-a7c-review-smarter-smaller-and-clumsier",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VA9da9aXfRQ",
+            "weight": 0.75,
+            "quote_excerpt": "didn't gain the much improved menu system from the a7s iii either instead sony retained the confusing menus from the a7 iii to avoid any fumbling you'll want to set up the custom menus and buttons before using this camera another issue that will annoy hybrid shooters is the lack of separation…"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
+            "weight": 0.75,
+            "quote_excerpt": "Okay, so I'm going to start with the a7 III because I have a lot more experience with that one and know what to expect from its audio, and I've just got a line coming out from my regular audio setup and then coming into the camera here."
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
+            "weight": 0.75,
+            "quote_excerpt": "Now, we do get some of the improvements we've seen on the a7 III's successors though, like a better illuminated focus selection instead of that hard to see grey box and the inclusion of auto white balance lock."
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
+            "weight": 0.75,
+            "quote_excerpt": "So, those are a lot of the differences and improvements over the a7 III but unfortunately, the reason why I'm comparing it to the a7 III so much is because the sensor and image performance are, for better or worse, the same."
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7c-why-this-camera-is-important",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
+            "weight": 0.75,
+            "quote_excerpt": "And while this camera will likely bring more customers to Sony that want a smaller, full frame body, and also satisfy current Sony shooters that need a second body with fewer quirks, I'm more excited about what this camera suggests for the future."
+          },
+          {
+            "source_id": "youtube-jason-hermann-sony-a7c-review-long-term-real-world-style",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yG8iLex2NkI",
+            "weight": 0.75,
+            "quote_excerpt": "me just cut right here and i'm going to switch to the sony a7c with the fe 35 millimeter 4.8 lens and you'll be able to see how the scene changes and so forth as compared to the a6400 which does a really good job in my opinion especially with the sigma 30 millimeter so all right guys so i"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7c-one-year-later-user-experience-review-2021",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oqT5MzuLEek",
+            "weight": 0.75,
+            "quote_excerpt": "to finally introduce the flip out screen was the pocket vlogging camera the zv1 we'll say we'll go ahead and say that's entry level and the second one being the mighty a7s3 we'll put that at the pro level the a7c was swiftly announced right after those two cameras putting it right in the middle of…"
+          },
+          {
+            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
+            "weight": 0.75,
+            "quote_excerpt": "hey everyone with the new release of the Sony a7c2 you might be asking which one should you buy out of the two or if it's worth upgrading to the a7c2 if you already have the original a7c today I'm going to be comparing both of these camera bodies for photography at a portrait photo shoot and for…"
+          },
+          {
+            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
+            "weight": 0.75,
+            "quote_excerpt": "shoot so if you're a photographer thinking of upgrading from the a7c to the a7c2 this will be super important next we have our photo shoot comparisons but first if you run a photography business or are thinking about starting one the sponsor of today's video PPA have lots of resources to help you…"
+          },
+          {
+            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
+            "weight": 0.75,
+            "quote_excerpt": "oh that looks so cool there as a photographer I feel like it's getting harder to decide whether to upgrade camera bodies as a lot of new features we're seeing are video orientated if you are an a7c owner already in my personal opinion I would only update to the a7c2 for a few reasons like if you're…"
+          },
+          {
+            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
+            "weight": 0.75,
+            "quote_excerpt": "with the ergonomics if you're having issues with autofocus or you really want these slightly larger images from my personal experience with portrait and travel photography I find that both these cameras are more than capable of capturing anything I want in terms of autofocus so let's move on to…"
+          },
+          {
+            "source_id": "youtube-julia-trotti-sony-a7c-vs-a7cii-comparison-worth-the-upgrade",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
+            "weight": 0.75,
+            "quote_excerpt": "crop but already right there I see the a7c2 being worthy of an upgrade from the a7c if you are a heavy or balanced photo and video specifically user 4K is so handy for video Work especially if you work in both horizontal and vertical video formats if you film in 4k you can utilize both formats…"
+          },
+          {
+            "source_id": "youtube-mark-bennetts-camera-crisis-the-ultimate-comparison-sony-a7c-vs-sony-a6700",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DmKHurxvkWs",
+            "weight": 0.75,
+            "quote_excerpt": "hi guys today we have an interesting one this is the newly released Sony a6700 AN aps-c camera that packs a lot of value in its little compact body and we have over here the a7c the original I've already compared the a7c2 to the a6700 but those two are very different in price a lot of people have…"
+          },
+          {
+            "source_id": "youtube-mark-bennetts-camera-crisis-the-ultimate-comparison-sony-a7c-vs-sony-a6700",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DmKHurxvkWs",
+            "weight": 0.75,
+            "quote_excerpt": "which is a good upgrade but the original a7c it doesn't have it and while we're at it the a6700 has one more customizable button and of course it has that fantastic switch to go from uh the photos and my in Focus there photos to video to S and Q whereas you can't do that at all on the"
+          },
+          {
+            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
+            "weight": 0.75,
+            "quote_excerpt": "So after talking about the pros and I do think um there's some cons uh which I've been using for quite a while now and I do feel like some of the things could be improved which it has been improved already for the new cameras."
+          },
+          {
+            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
+            "weight": 0.75,
+            "quote_excerpt": "Um which I think it got improved on the newer version, but still like even A7C and all these they still have >> I actually removed all of my those are called I think strap eyelets."
+          },
+          {
+            "source_id": "youtube-mark-friday-should-you-buy-the-a6400-or-a7c-in-2025-shutter-secrets-ep2-sonya6400-sonya7",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
+            "weight": 0.75,
+            "quote_excerpt": "I actually own this camera before and I upgraded to the A7C Mark II just to match my A74."
+          },
+          {
+            "source_id": "youtube-mark-galers-alpha-creative-skills-sony-a7c-camera-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X6N1XDs3jyo",
+            "weight": 0.75,
+            "quote_excerpt": "a few things improvements over say an alpha 7-3 but all of the features here marked yellow are improvements over the a7 iii now many of these are to do with the focus it's the next generation autofocus systems that we're enjoying with the alpha 7c camera and i have to say it's the next best thing…"
+          },
+          {
+            "source_id": "youtube-mark-galers-alpha-creative-skills-sony-a7c-camera-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X6N1XDs3jyo",
+            "weight": 0.75,
+            "quote_excerpt": "think i prefer the sony version at half the price but what we do on we have a very interesting lens on the right side we have a one three five two point eight now sony make a beautiful one three five prime 1.8 prime but because of that longer focal length with the f 1.8 aperture it does start"
+          },
+          {
+            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
+            "weight": 0.75,
+            "quote_excerpt": "down below in the description I like to shoot a lot of street photography so I highly value a camera that's small light discreet and beautiful so for my Leica killer build I'm going to use the a7c as the platform to start from sure the Q2 does have more megapixels than the a7c but it also has a…"
+          },
+          {
+            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
+            "weight": 0.75,
+            "quote_excerpt": "know what I don't care I like it I think it looks pretty cool I'm gonna leave it on there for now again I love the a7c and there are rumors of an a7c Mark II coming out soon so watch out for that I'm probably most definitely going to get that if the specs warranted I personally have never"
+          },
+          {
+            "source_id": "youtube-matt-yamamoto-leica-killer-sony-a7c-street-travel-photography-build-40mm-f25-g-lens-clev",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
+            "weight": 0.75,
+            "quote_excerpt": "remove the lens now that means that the a7c setup is 60 less than the Q2 and that's not including things like the Leica batteries which cost 285 dollars per battery so you guys do the math like I said I'm sure if you're like a user I'm sure you love it and I'm sure you get amazing images from"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7c-review-tiny-cinematic-beast",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=H1W6Xd9jzB4",
+            "weight": 0.75,
+            "quote_excerpt": "right now but it's still really great it's nice to have 4k it's nice to have 120 frames per second in 1080 but it still looks good the ibis the stabilization is kind of in that sweet spot where it's not too much so you're not getting the wobbles here um but it's still cutting out all of that small"
+          },
+          {
+            "source_id": "youtube-ryan-richards-why-the-sony-a7c-surprised-me",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=dT1Sdu96F4I",
+            "weight": 0.75,
+            "quote_excerpt": "But my current obsession is the Sony A7 Mark II series of cameras."
+          },
+          {
+            "source_id": "youtube-ryan-richards-why-the-sony-a7c-surprised-me",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=dT1Sdu96F4I",
+            "weight": 0.75,
+            "quote_excerpt": "Now, maybe the Mark III and the Mark IV A7 have a bit more of a more modern feel, but compared to the Mark II cameras, the A7C feels really quite nice."
+          },
+          {
+            "source_id": "youtube-stay-focused-sony-a7c-review-best-budget-friendly-full-frame-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5ffQY82GUBI",
+            "weight": 0.75,
+            "quote_excerpt": "a great stabilized lens which is perfect for vlogging so if you want to check that out then please do so what other upgrades are there well sony's removed the 30 minute recording limit for mirrorless cameras which is great but the main reason why i purchased this camera is the colors that come…"
+          },
+          {
+            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
+            "weight": 0.75,
+            "quote_excerpt": "hello my friends in today's video we will take a look at sony a7c the a7c is sony's new full-frame camera which basically addresses the needs of modern content creators it uses internal components that we already know from other sony cameras but it is still an important camera in this video we will…"
+          },
+          {
+            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
+            "weight": 0.75,
+            "quote_excerpt": "is in my opinion the better looking version in person it is also available in black a7c uses 24 megapixel backside illuminated imx 410 full frame sensor i've been using this sensor for the past three years in a7 3 and i can say that the image quality and output of a7c is identical to a7 3 and that…"
+          },
+          {
+            "source_id": "youtube-the-hybrid-shooter-sony-a7c-review-after-the-hype-master-of-packaging",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
+            "weight": 0.75,
+            "quote_excerpt": "a repackage and it doesn't bring any major innovation but in my opinion it is the most meaningful repackage on the market there are two main groups of users who should consider a7c the first one are content creators who want compact simple to use all-round camera with flawless autofocus and they…"
+          },
+          {
+            "source_id": "youtube-the-verge-sony-a7c-review-a-little-ripper",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xHEh2b-cM_A",
+            "weight": 0.75,
+            "quote_excerpt": "I mean, it's pretty much an A7 Mark III from 2018 put into a smaller body, but it's a lot of good parts put into that smaller body, and hopefully it will only get better."
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
+            "weight": 0.75,
+            "quote_excerpt": "that means you get 33 megapixels instead of 24 megapixels it means you get a vastly better autofocus system especially for video that's going to make a big difference but the body the viewfinder all of that is the same the original a7c has the same guts as the A7 III the new a7c II has the same…"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
+            "weight": 0.75,
+            "quote_excerpt": "the Sony a74 so if you want to understand the performance differences you can check our review comparing the A7 III to the a74 but here are some highlights the A7 III and a7c have human eye attack then it works well enough but sometimes it jumps to the nose the a74 and a7c2 have faster more…"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
+            "weight": 0.75,
+            "quote_excerpt": "which gives you 60 megapixels instead of just 24 megapixels and that will produce vastly sharper images as well as giving you the better autofocus and the new user interface so overall yeah I think it's a pretty good upgrade if you're in any way dissatisfied with your original a7c these cameras are…"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-sony-a7c-ii-a7c-r-review-best-full-frame-mirrorless-cameras-for-tr",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
+            "weight": 0.75,
+            "quote_excerpt": "are going to be just fine for any social media shooting or even making 10 by 12 photos that's 33 megapixels is still a lot now for sports the a7c2 has some distinct advantages it shoots at 10 frames per second with either the mechanical or electronic shutter compared to only eight with the r and if…"
+          },
+          {
+            "source_id": "youtube-zachary-mcgee-should-you-buy-the-sony-a7c-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vNjVlqKCpIM",
+            "weight": 0.75,
+            "quote_excerpt": "the Sony a7c was originally released in September of 2020 and since then Sony has released 12 new cameras including the a7c Mark I so how does the original a7c Stand Out from all these new cameras and more importantly should you buy the Sony a7c in 2024 in my opinion this camera kind of fell under…"
+          },
+          {
+            "source_id": "youtube-zachary-mcgee-should-you-buy-the-sony-a7c-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vNjVlqKCpIM",
+            "weight": 0.75,
+            "quote_excerpt": "it was originally released Sony was originally marketing toward kind of the apsc crowd who wanted to transition to a full-frame camera but still wanted to keep the same type of camera that was super light and very travel friendly and honestly Sony did a great job of this in my opinion the Sony a7c…"
+          },
+          {
+            "source_id": "youtube-zy-cheng-sony-a7c-vs-a7iii-16-differences",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=fz2LSHQ8E_w",
+            "weight": 0.75,
+            "quote_excerpt": "should you get the new sony a7c or the a7 mark iii these are two very comparable cameras so much so that to some people the a7c was even regarded as being completely underwhelming because it just seemed to be the exact same camera as the a7 3 just in a body that's ever so slightly smaller as…"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 26,
+        "polarity_agreement": 0.538,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.093,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Sony released their a7c Mark III in September 2023 and although that's clearly a fantastic camera with tons of features in this video I want to talk about its predecessor the original a7c this is a camera I've been using for over 3 years now as my main camera for photography and YouTube content…",
+        "source_id": "youtube-arran-brown-the-original-sony-a7c-is-now-a-bargain",
+        "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk"
       }
     },
     {
@@ -2283,24 +2221,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 30,
-        "neu": 7,
+        "neu": 5,
         "neg": 11,
-        "total": 48,
+        "total": 46,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "which gives a big step up in image quality from most point-and-shoot cameras (Image credit: Digital Camera World) Since its launch in 2019"
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Its excellent image quality and handling have been recognized with several major awards, including the Good Design Award , the DGP Imaging Award last year, and Best APS-C Compact Camera at the Technical Image Press Association (TIPA) World Awards."
-          },
           {
             "source_id": "youtube-benj-haisch-the-most-versatile-camera-money-can-buy-sony-a7cr",
             "source_type": "youtube",
@@ -2627,10 +2551,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 20,
-        "polarity_agreement": 0.7,
+        "source_count": 19,
+        "polarity_agreement": 0.737,
         "dominant_polarity": "pos",
-        "max_source_share": 0.25,
+        "max_source_share": 0.261,
         "contested": false
       },
       "notes": [],
@@ -2647,24 +2571,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 26,
-        "neu": 12,
+        "neu": 10,
         "neg": 4,
-        "total": 42,
+        "total": 40,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Check the best Fujifilm X100VI deals: get the best price and check stock (Image credit: Chris George) More than two years after its launch, the Fujifilm X100VI is still one of the hardest cameras to buy as the retro-inspired APS-C compact has remained in near-constant short supply."
-          },
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "The X100VI continues to attract buyers with its combination of premium image quality and classic rangefinder-inspired design."
-          },
           {
             "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
             "source_type": "reviewer_blog",
@@ -2949,10 +2859,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 22,
-        "polarity_agreement": 0.682,
+        "source_count": 21,
+        "polarity_agreement": 0.762,
         "dominant_polarity": "pos",
-        "max_source_share": 0.143,
+        "max_source_share": 0.15,
         "contested": false
       },
       "notes": [],
@@ -3266,18 +3176,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 18,
+        "pos": 17,
         "neu": 13,
         "neg": 5,
-        "total": 36,
+        "total": 35,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-            "weight": 0.75,
-            "quote_excerpt": "Published by Map Times, the rankings show that photographers continue to buy established compact camera models – many of them award-winning cameras that have become cult favorites thanks to their pocketable designs and distinctive shooting experience."
-          },
           {
             "source_id": "rss-digital-camera-world-this-canon-mirrorless-camera-is-so-popular-that-both-of-its-2026",
             "source_type": "reviewer_blog",
@@ -3527,10 +3430,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 20,
-        "polarity_agreement": 0.55,
+        "source_count": 19,
+        "polarity_agreement": 0.526,
         "dominant_polarity": "pos",
-        "max_source_share": 0.139,
+        "max_source_share": 0.143,
         "contested": true
       },
       "notes": [],
@@ -3547,8 +3450,8 @@
       "measurement": null,
       "sentiment": {
         "pos": 16,
-        "neu": 7,
-        "neg": 5,
+        "neu": 6,
+        "neg": 6,
         "total": 28,
         "sources": [
           {
@@ -4148,8 +4051,8 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 11,
-        "neu": 1,
+        "pos": 10,
+        "neu": 2,
         "neg": 0,
         "total": 12,
         "sources": [
@@ -4585,28 +4488,28 @@
     }
   ],
   "synthesis": {
-    "consensus_paragraph": "Across 35 sources, af performance.video draws the most discussion: 131 claims, 65% positive. Reviewers are most positive about color rendition (77% of 52 claims). The most criticism lands on filter thread, where 20% of 20 claims are negative. Opinion is split on generation context (33 positive vs 4 negative claims).",
+    "consensus_paragraph": "Across 34 sources, af performance.video draws the most discussion: 130 claims, 65% positive. Reviewers are most positive about color rendition (77% of 52 claims). The most criticism lands on filter thread, where 20% of 20 claims are negative. Opinion is split on generation context (31 positive vs 4 negative claims).",
     "aspect_breakdown": [
       {
         "aspect": "af_performance.video",
         "pos": 85,
-        "neu": 33,
-        "neg": 13,
-        "total": 131
-      },
-      {
-        "aspect": "generation_context",
-        "pos": 33,
-        "neu": 21,
-        "neg": 4,
-        "total": 58
+        "neu": 35,
+        "neg": 10,
+        "total": 130
       },
       {
         "aspect": "mount_compat",
         "pos": 28,
-        "neu": 29,
+        "neu": 26,
         "neg": 1,
-        "total": 58
+        "total": 55
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 31,
+        "neu": 19,
+        "neg": 4,
+        "total": 54
       },
       {
         "aspect": "color_rendition",
@@ -4618,16 +4521,16 @@
       {
         "aspect": "optical_performance",
         "pos": 30,
-        "neu": 7,
+        "neu": 5,
         "neg": 11,
-        "total": 48
+        "total": 46
       },
       {
         "aspect": "price",
         "pos": 26,
-        "neu": 12,
+        "neu": 10,
         "neg": 4,
-        "total": 42
+        "total": 40
       },
       {
         "aspect": "af_performance.stills",
@@ -4638,16 +4541,16 @@
       },
       {
         "aspect": "dimensions",
-        "pos": 18,
+        "pos": 17,
         "neu": 13,
         "neg": 5,
-        "total": 36
+        "total": 35
       },
       {
         "aspect": "handling",
         "pos": 16,
-        "neu": 7,
-        "neg": 5,
+        "neu": 6,
+        "neg": 6,
         "total": 28
       },
       {
@@ -4666,8 +4569,8 @@
       },
       {
         "aspect": "bokeh",
-        "pos": 11,
-        "neu": 1,
+        "pos": 10,
+        "neu": 2,
         "neg": 0,
         "total": 12
       },
@@ -4709,11 +4612,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 580,
-      "evaluated": 479,
-      "non_evaluative": 101,
+      "examined": 567,
+      "evaluated": 469,
+      "non_evaluative": 98,
       "non_evaluative_breakdown": {
-        "non_claim": 101
+        "non_claim": 98
       },
       "off_axis": 0,
       "ruleset": {
@@ -4721,7 +4624,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "580 examined · 479 evaluated under askmaddi-polarity",
+      "receipt_line": "567 examined · 469 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -4740,18 +4643,7 @@
       "url": "https://amateurphotographer.com/technique/interviews/explore-the-beauty-of-panamas-wildlife-and-landscape-with-these-stunning-photos/",
       "title": "Explore the beauty of Panama’s wildlife and landscape with these stunning photos",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744549+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "rss-digital-camera-world-cult-compact-cameras-make-up-40-of-japan-s-top-10-sales-char-2026",
-      "source_type": "pro",
-      "reviewer": "Digital Camera World",
-      "platform": "web",
-      "url": "https://www.digitalcameraworld.com/cameras/cult-compact-cameras-make-up-40-percent-of-japans-top-10-sales-chart-as-sonys-newest-flagship-fails-to-get-to-no-1",
-      "title": "Cult compact cameras make up 40% of Japan's Top 10 sales chart as Sony's newest flagship fails to get to No.1",
-      "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744564+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477394+00:00",
       "weight": 0.75
     },
     {
@@ -4762,7 +4654,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
       "title": "Retro Nikon Zf mirrorless camera tops used sales charts for the first time in over a year, beating out trendy Fujifilm",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744569+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477408+00:00",
       "weight": 0.75
     },
     {
@@ -4773,7 +4665,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/this-canon-mirrorless-camera-is-so-popular-that-both-of-its-older-versions-are-all-in-the-top-three-used-cameras-in-japan-right-now",
       "title": "This Canon mirrorless camera is so popular that both of its older versions are all in the top three used cameras in Japan right now",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744573+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477413+00:00",
       "weight": 0.75
     },
     {
@@ -4784,7 +4676,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/worlds-smallest-and-lightest-full-frame-mirrorless-camera-with-viewfinder-is-japans-no-1-bestseller",
       "title": "\"World's smallest and lightest full-frame mirrorless camera\" with viewfinder is Japan's No.1 bestseller",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744576+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477416+00:00",
       "weight": 0.75
     },
     {
@@ -4795,7 +4687,7 @@
       "url": "https://www.youtube.com/watch?v=7Wgp66q9PMk",
       "title": "The ORIGINAL Sony A7C is now a BARGAIN!",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744579+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477419+00:00",
       "weight": 0.75
     },
     {
@@ -4806,7 +4698,7 @@
       "url": "https://www.youtube.com/watch?v=pZ-GwrkuwnA",
       "title": "The Most Versatile Camera Money Can Buy | SONY A7CR",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744582+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477422+00:00",
       "weight": 0.75
     },
     {
@@ -4817,7 +4709,7 @@
       "url": "https://www.youtube.com/watch?v=QWD3kGYHkmo",
       "title": "Is the SONY A7C Still WORTH IT in 2026?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744585+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477424+00:00",
       "weight": 0.75
     },
     {
@@ -4828,7 +4720,7 @@
       "url": "https://www.youtube.com/watch?v=pWl3lkhU99c",
       "title": "Why I Got The Sony A7C in 2025",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744588+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477427+00:00",
       "weight": 0.75
     },
     {
@@ -4839,7 +4731,7 @@
       "url": "https://www.youtube.com/watch?v=yVpLoNYeG0E",
       "title": "Sony a7C Hands-on Review + comparisons to Sony a7 III",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744590+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477429+00:00",
       "weight": 0.75
     },
     {
@@ -4850,7 +4742,7 @@
       "url": "https://www.youtube.com/watch?v=TIfit7rk62g",
       "title": "Should You Buy the Sony A7C in 2026?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744593+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477432+00:00",
       "weight": 0.75
     },
     {
@@ -4861,7 +4753,7 @@
       "url": "https://www.youtube.com/watch?v=6b6uKFrewMc",
       "title": "The Sony A7C 5 Years Later",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744595+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477434+00:00",
       "weight": 0.75
     },
     {
@@ -4872,7 +4764,7 @@
       "url": "https://www.youtube.com/watch?v=VA9da9aXfRQ",
       "title": "Sony A7C review: Smarter, smaller and clumsier",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744598+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477437+00:00",
       "weight": 0.75
     },
     {
@@ -4883,7 +4775,7 @@
       "url": "https://www.youtube.com/watch?v=QJsEww2j7Ro",
       "title": "The SONY a7C: Why THIS Camera Is IMPORTANT!",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744600+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477439+00:00",
       "weight": 0.75
     },
     {
@@ -4894,7 +4786,7 @@
       "url": "https://www.youtube.com/watch?v=yG8iLex2NkI",
       "title": "Sony A7C Review - Long Term Real World Style",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744603+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477442+00:00",
       "weight": 0.75
     },
     {
@@ -4905,7 +4797,7 @@
       "url": "https://www.youtube.com/watch?v=oqT5MzuLEek",
       "title": "Sony a7C One Year Later! User Experience Review 2021",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744605+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477444+00:00",
       "weight": 0.75
     },
     {
@@ -4916,7 +4808,7 @@
       "url": "https://www.youtube.com/watch?v=zZRNw2ptUjQ",
       "title": "Sony A7c Real World Review + Photoshoot and Video Quality",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744607+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477447+00:00",
       "weight": 0.75
     },
     {
@@ -4927,7 +4819,7 @@
       "url": "https://www.youtube.com/watch?v=WY9-PsJB0qc",
       "title": "Sony A7C vs A7CII Comparison - Worth the upgrade?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744610+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477449+00:00",
       "weight": 0.75
     },
     {
@@ -4938,7 +4830,7 @@
       "url": "https://www.youtube.com/watch?v=DmKHurxvkWs",
       "title": "The Ultimate Comparison: Sony A7C vs Sony A6700",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744612+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477451+00:00",
       "weight": 0.75
     },
     {
@@ -4949,7 +4841,7 @@
       "url": "https://www.youtube.com/watch?v=gT4h8rta6ms",
       "title": "Should You Buy the A6400 or A7C in 2025? Shutter Secrets Ep2 #sonya6400 #sonya7c",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744615+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477454+00:00",
       "weight": 0.75
     },
     {
@@ -4960,7 +4852,7 @@
       "url": "https://www.youtube.com/watch?v=X6N1XDs3jyo",
       "title": "Sony A7C Camera Review",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744617+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477456+00:00",
       "weight": 0.75
     },
     {
@@ -4971,7 +4863,7 @@
       "url": "https://www.youtube.com/watch?v=EkWryTJLgS0",
       "title": "Leica KILLER! Sony A7C Street & Travel Photography Build! 40mm f2.5 G Lens, Clever Supply Co, K&F",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744620+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477459+00:00",
       "weight": 0.75
     },
     {
@@ -4982,7 +4874,7 @@
       "url": "https://www.youtube.com/watch?v=H1W6Xd9jzB4",
       "title": "Sony A7C Review - Tiny Cinematic Beast 👍👍",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744623+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477461+00:00",
       "weight": 0.75
     },
     {
@@ -4993,7 +4885,7 @@
       "url": "https://www.youtube.com/watch?v=gXIrI1igRXQ",
       "title": "6 Reasons Why I Bought A Sony A7C In 2025 And So Should You",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744625+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477463+00:00",
       "weight": 0.75
     },
     {
@@ -5004,7 +4896,7 @@
       "url": "https://www.youtube.com/watch?v=dT1Sdu96F4I",
       "title": "Why the Sony A7C surprised me",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744628+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477466+00:00",
       "weight": 0.75
     },
     {
@@ -5015,7 +4907,7 @@
       "url": "https://www.youtube.com/watch?v=PVswq8zHgdo",
       "title": "Sony a7C Hands On Review! AMAZING Full-Frame Camera But...",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744630+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477468+00:00",
       "weight": 0.75
     },
     {
@@ -5026,7 +4918,7 @@
       "url": "https://www.youtube.com/watch?v=5ffQY82GUBI",
       "title": "Sony A7C Review 📷 Best Budget Friendly Full Frame Camera?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744633+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477471+00:00",
       "weight": 0.75
     },
     {
@@ -5037,7 +4929,7 @@
       "url": "https://www.youtube.com/watch?v=IW84ZM-7Cjw",
       "title": "Sony A7c (2026) - Watch Before You Buy",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744636+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477473+00:00",
       "weight": 0.75
     },
     {
@@ -5048,7 +4940,7 @@
       "url": "https://www.youtube.com/watch?v=e6zh4f1VizQ",
       "title": "Sony A7C II vs Sony A6700 — which one is better?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744638+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477475+00:00",
       "weight": 0.75
     },
     {
@@ -5059,7 +4951,7 @@
       "url": "https://www.youtube.com/watch?v=ssKzJ1oQiAU",
       "title": "Sony A7C Review After the Hype: Master of Packaging",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744641+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477478+00:00",
       "weight": 0.75
     },
     {
@@ -5070,7 +4962,7 @@
       "url": "https://www.youtube.com/watch?v=xHEh2b-cM_A",
       "title": "Sony A7C Review: a little ripper!",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744643+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477480+00:00",
       "weight": 0.75
     },
     {
@@ -5081,7 +4973,7 @@
       "url": "https://www.youtube.com/watch?v=yceWpI2ClhE",
       "title": "Sony a7C II & a7C R Review: Best full-frame mirrorless cameras for travel photography!",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744646+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477488+00:00",
       "weight": 0.75
     },
     {
@@ -5092,7 +4984,7 @@
       "url": "https://www.youtube.com/watch?v=GtJCVx4w5kw",
       "title": "Sony a7C Review: Tiny 4k, full frame mirrorless vlog camera!",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744648+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477491+00:00",
       "weight": 0.75
     },
     {
@@ -5103,7 +4995,7 @@
       "url": "https://www.youtube.com/watch?v=vNjVlqKCpIM",
       "title": "Should You Buy The Sony A7C in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744651+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477493+00:00",
       "weight": 0.75
     },
     {
@@ -5114,7 +5006,7 @@
       "url": "https://www.youtube.com/watch?v=fz2LSHQ8E_w",
       "title": "Sony A7C vs A7III - 16 Differences",
       "publication_date": "",
-      "ingested_at": "2026-07-17T17:21:14.744653+00:00",
+      "ingested_at": "2026-07-20T00:23:29.477495+00:00",
       "weight": 0.75
     }
   ],
