@@ -522,3 +522,28 @@ def test_main_once_free_lock_ticks(tmp_path, monkeypatch, capsys):
     assert rc == 0
     assert called == [1]
     assert "idle" in capsys.readouterr().out
+
+
+# ── drip-log timestamps (papercut fix, 2026-07-20) ───────────────────────────
+
+def test_drip_log_lines_are_utc_stamped(tmp_path, monkeypatch, capsys):
+    """Every line the cron appends to drip.log self-dates: ISO-8601 Z prefix on
+    both the --once outcome line and the locked_out line. Third-session papercut
+    — 30 undatable idle ticks in the 2026-07-20 morning verify."""
+    import re
+    stamp = r'^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z \[factory\] tick: '
+    lock = tmp_path / '.factory.lock'
+
+    monkeypatch.setattr(cf, 'tick', lambda *a, **k: {'action': 'idle', 'remaining': 2})
+    rc = cf.main(['--once', '--lock', str(lock)])
+    assert rc == 0
+    out = capsys.readouterr().out.strip()
+    assert re.match(stamp, out), out
+
+    # main() keeps its lock fd for the process lifetime, so within this test
+    # process the first call above IS the running invocation — the second call
+    # is naturally locked out. No manual holder needed.
+    rc = cf.main(['--once', '--lock', str(lock)])
+    assert rc == 0
+    out = capsys.readouterr().out.strip()
+    assert re.match(stamp, out) and 'locked_out' in out, out

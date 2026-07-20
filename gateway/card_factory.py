@@ -82,6 +82,19 @@ DEFAULT_BUILD_CARD = (
     / 'aggregator-build' / 'build_card.py'
 )
 
+def _log_line(msg):
+    """Print a drip-log line prefixed with a UTC timestamp.
+
+    WHY (papercut, three sessions running — 2026-07-19/20 morning verifies):
+    drip.log lines carried no timestamps, so 30 idle ticks were undatable and
+    the midnight-collision forensics had to be reconstructed from work_queue
+    timestamps instead of the log itself. Every line the cron appends to
+    drip.log now self-dates. Format matches work_queue's _now() (ISO-8601 Z,
+    second precision) so log lines and queue records sort together.
+    """
+    print(f"{time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())} {msg}")
+
+
 # Single-flight lock (2026-07-19). Lives beside the work_queue store — it guards
 # the same resource (one factory invocation at a time). MUST stay in .gitignore's
 # runtime family: an untracked file in the checkout aborts the nightly banker's
@@ -364,7 +377,7 @@ def _attach_card_path(slug, card_path, *, path=work_queue.WORK_QUEUE_PATH):
 
 def run_loop(runner, *, cap=DEFAULT_DAILY_CAP, tick_sleep=DEFAULT_TICK_SLEEP,
              idle_sleep=DEFAULT_IDLE_SLEEP, max_ticks=None,
-             path=work_queue.WORK_QUEUE_PATH, sleep=time.sleep, log=print):
+             path=work_queue.WORK_QUEUE_PATH, sleep=time.sleep, log=_log_line):
     """The thin 24/7 wrapper: tick -> sleep -> repeat.
 
     Sleeps `tick_sleep` after doing work (steady drip), `idle_sleep` when capped or
@@ -450,7 +463,7 @@ def main(argv=None):
     # kept referenced until process exit; the kernel releases the flock then.
     lock_fd = single_flight(Path(args.lock_path))
     if lock_fd is None:
-        print("[factory] tick: {'action': 'locked_out'}")
+        _log_line("[factory] tick: {'action': 'locked_out'}")
         return 0
 
     runner = build_card_runner(
@@ -463,7 +476,7 @@ def main(argv=None):
 
     if args.once:
         outcome = tick(runner, cap=args.cap)
-        print(f"[factory] tick: {outcome}")
+        _log_line(f"[factory] tick: {outcome}")
         return 0
 
     run_loop(runner, cap=args.cap,
