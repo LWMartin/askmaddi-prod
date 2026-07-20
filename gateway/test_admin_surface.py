@@ -607,7 +607,8 @@ def test_publish_runner_pings_indexnow_after_render(tmp_path):
         runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
                                      output_dir=tmp_path / 'browser',
                                      cards_dir=cards_dir,
-                                     indexnow_path=tmp_path / 'ping.py')
+                                     indexnow_path=tmp_path / 'ping.py',
+                                     bank_bot_push_path=None)
         rc, detail = runner(str(card))
     finally:
         a.subprocess.run = real
@@ -628,7 +629,8 @@ def test_publish_runner_indexnow_soft_fail_never_gates_publish(tmp_path):
         runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
                                      output_dir=tmp_path / 'o',
                                      cards_dir=cards_dir,
-                                     indexnow_path=tmp_path / 'ping.py')
+                                     indexnow_path=tmp_path / 'ping.py',
+                                     bank_bot_push_path=None)
         rc, detail = runner(str(card))
     finally:
         a.subprocess.run = real
@@ -644,7 +646,8 @@ def test_publish_runner_indexnow_exception_never_gates_publish(tmp_path):
         runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
                                      output_dir=tmp_path / 'o',
                                      cards_dir=cards_dir,
-                                     indexnow_path=tmp_path / 'ping.py')
+                                     indexnow_path=tmp_path / 'ping.py',
+                                     bank_bot_push_path=None)
         rc, detail = runner(str(card))
     finally:
         a.subprocess.run = real
@@ -666,8 +669,143 @@ def test_publish_runner_no_ping_when_render_fails(tmp_path):
         runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
                                      output_dir=tmp_path / 'o',
                                      cards_dir=cards_dir,
-                                     indexnow_path=tmp_path / 'ping.py')
+                                     indexnow_path=tmp_path / 'ping.py',
+                                     bank_bot_push_path=None)
         rc, detail = runner(str(card))
     finally:
         a.subprocess.run = real
     assert rc == 2 and len(calls) == 1   # no ping on a dead render
+
+# ── build_site_runner: bank hook (2026-07-20 wire — a7c tree-dirt class) ─────
+
+def _bank_runner(tmp_path, bank_rc=0, bank_stderr='', bank_raises=False,
+                 snapshot=True):
+    """Runner with indexnow disabled and the bank leg wired to a fake
+    subprocess. Fake answers render (call 1) with success and the bank
+    (call 2) per the parameters."""
+    import admin_surface as a
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir(exist_ok=True)
+    card = tmp_path / 'card.json'
+    card.write_text(json.dumps({'card_id': 'x'}))
+    snap = tmp_path / 'writeback.json'
+    if snapshot:
+        snap.write_text(json.dumps({'role': 'writeback', 'allowlist': [],
+                                    'policies': {}, 'crucible_hash': 'h'}))
+    calls = []
+    def fake_run(cmd, **kw):
+        calls.append((cmd, kw))
+        if bank_raises and len(calls) > 1:
+            raise OSError('door jammed')
+        rc = 0 if len(calls) == 1 else bank_rc
+        err = '' if len(calls) == 1 else bank_stderr
+        return type('R', (), {'returncode': rc, 'stderr': err, 'stdout': ''})()
+    return a, card, calls, fake_run, cards_dir, snap
+
+
+def test_publish_runner_banks_after_render(tmp_path):
+    a, card, calls, fake_run, cards_dir, snap = _bank_runner(tmp_path)
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None,
+                                     bank_bot_push_path=tmp_path / 'bp.py',
+                                     bank_snapshot=snap,
+                                     bank_repo=tmp_path)
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0 and detail == 'ok (+bank)'
+    assert len(calls) == 2
+    bank_cmd = calls[1][0]
+    # the door is invoked with the frozen snapshot, the admin_publish job,
+    # and a card-scoped summary — audit trail starts at the invocation
+    assert '--job' in bank_cmd and \
+        bank_cmd[bank_cmd.index('--job') + 1] == 'admin_publish'
+    assert bank_cmd[bank_cmd.index('--snapshot') + 1] == str(snap)
+    assert 'admin publish: x' in bank_cmd[bank_cmd.index('--summary') + 1]
+    assert calls[1][1].get('timeout') == 600
+
+
+def test_publish_runner_bank_fail_never_gates_publish(tmp_path):
+    a, card, calls, fake_run, cards_dir, snap = _bank_runner(
+        tmp_path, bank_rc=2, bank_stderr='[bot:admin_publish] BLOCKED — gate failed')
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None,
+                                     bank_bot_push_path=tmp_path / 'bp.py',
+                                     bank_snapshot=snap,
+                                     bank_repo=tmp_path)
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0                        # the card is live regardless
+    assert detail.startswith('ok (bank:') and 'BLOCKED' in detail
+
+
+def test_publish_runner_bank_exception_never_gates_publish(tmp_path):
+    a, card, calls, fake_run, cards_dir, snap = _bank_runner(
+        tmp_path, bank_raises=True)
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None,
+                                     bank_bot_push_path=tmp_path / 'bp.py',
+                                     bank_snapshot=snap,
+                                     bank_repo=tmp_path)
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0 and detail.startswith('ok (bank:')
+
+
+def test_publish_runner_missing_snapshot_is_loud_skip(tmp_path):
+    a, card, calls, fake_run, cards_dir, snap = _bank_runner(
+        tmp_path, snapshot=False)
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None,
+                                     bank_bot_push_path=tmp_path / 'bp.py',
+                                     bank_snapshot=snap,
+                                     bank_repo=tmp_path)
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 0
+    assert len(calls) == 1               # door never invoked without its snapshot
+    assert 'bank: skipped' in detail and str(snap) in detail
+
+
+def test_publish_runner_no_bank_when_render_fails(tmp_path):
+    import admin_surface as a
+    cards_dir = tmp_path / 'cards'; cards_dir.mkdir()
+    card = tmp_path / 'card.json'
+    card.write_text(json.dumps({'card_id': 'x'}))
+    snap = tmp_path / 'writeback.json'; snap.write_text('{}')
+    calls = []
+    def fake_run(cmd, **kw):
+        calls.append(cmd)
+        return type('R', (), {'returncode': 2, 'stderr': 'render exploded',
+                              'stdout': ''})()
+    real = a.subprocess.run; a.subprocess.run = fake_run
+    try:
+        runner = a.build_site_runner(build_site_path=tmp_path / 'b.py',
+                                     output_dir=tmp_path / 'o',
+                                     cards_dir=cards_dir,
+                                     indexnow_path=None,
+                                     bank_bot_push_path=tmp_path / 'bp.py',
+                                     bank_snapshot=snap,
+                                     bank_repo=tmp_path)
+        rc, detail = runner(str(card))
+    finally:
+        a.subprocess.run = real
+    assert rc == 2 and len(calls) == 1   # a dead render banks nothing

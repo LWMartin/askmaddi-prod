@@ -110,13 +110,24 @@ except ImportError:
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _BUILD_SITE = _REPO_ROOT / 'tools' / 'build_site.py'
 _INDEXNOW = _REPO_ROOT / 'tools' / 'indexnow_ping.py'
+_BOT_PUSH = _REPO_ROOT / 'tools' / 'bot_push.py'
 _BROWSER_OUT = _REPO_ROOT / 'browser'
 _CARDS_DIR = _REPO_ROOT / 'data' / 'cards'
+# The frozen Crucible writeback snapshot (mode 444, installed by root — see
+# hotspot Production Box table). Env override for non-standard boxes.
+_WRITEBACK_SNAPSHOT = os.environ.get(
+    'ASKMADDI_WRITEBACK_SNAPSHOT',
+    '/home/askmaddi/.askmaddi-bot/writeback.json')
 
 
 def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
                       cards_dir=_CARDS_DIR, python=None,
-                      indexnow_path=_INDEXNOW):
+                      indexnow_path=_INDEXNOW,
+                      bank_bot_push_path=_BOT_PUSH,
+                      bank_snapshot=_WRITEBACK_SNAPSHOT,
+                      bank_repo=_REPO_ROOT,
+                      bank_job='admin_publish',
+                      bank_timeout=600):
     """Produce the PRODUCTION publish runner: callable(card_path) -> (rc, detail).
 
     PUBLISH MEANS JOINING THE CORPUS, NOT REPLACING IT (found live 2026-07-03,
@@ -135,6 +146,17 @@ def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
          prices/ASIN registry to the whole site as a side effect.
       3. IndexNow ping over the fresh sitemap (soft: never gates the rc —
          the card is already live; outcome rides the detail string).
+      4. Bank through the machine-commit door (2026-07-20 wire: the a7c
+         publish sat as tree dirt because the runner rendered but never
+         banked — hand-banked as e5dbf92). Synchronous with bot_push's FULL
+         gate, by decision: the human who clicked publish sees the bank
+         outcome in the same banner, and at ~2 publishes/day the gate cost
+         is irrelevant. Same soft posture as indexnow — the card is live,
+         so bank failure may never gate the rc; it surfaces loudly in
+         detail AND in bot_push's own signal file (never silent, incident
+         2026-05-06). A missing snapshot is a loud skip in detail (prod
+         misconfiguration must surface); bank_bot_push_path=None disables
+         the leg entirely (tests, boxes without a writeback identity).
 
     Returns (returncode, detail): rc 0 means the card is live; non-zero
     carries the stderr tail for the publish banner. A card missing card_id
@@ -197,6 +219,32 @@ def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
                         detail = f'ok (indexnow: {tail})'
                 except Exception as e:
                     detail = f'ok (indexnow: {e})'
+            # 4. Bank the publish footprint (data/cards/<id>.json + browser/**,
+            #    both inside the frozen allowlist) through bot_push. rc is
+            #    already decided — nothing below may change it.
+            if bank_bot_push_path:
+                if not Path(bank_snapshot).exists():
+                    detail += ' (bank: skipped — no snapshot at '\
+                              f'{bank_snapshot})'
+                else:
+                    try:
+                        bank = subprocess.run(
+                            [python, str(bank_bot_push_path),
+                             '--repo', str(bank_repo),
+                             '--job', bank_job,
+                             '--snapshot', str(bank_snapshot),
+                             '--summary', f'admin publish: {card_id}'],
+                            capture_output=True, text=True,
+                            timeout=bank_timeout)
+                        if bank.returncode == 0:
+                            detail += ' (+bank)'
+                        else:
+                            tail = (bank.stderr or bank.stdout or '').strip()
+                            tail = tail.splitlines()[-1] if tail else \
+                                f'exit {bank.returncode}'
+                            detail += f' (bank: {tail})'
+                    except Exception as e:
+                        detail += f' (bank: {e})'
             return 0, detail
         tail = (proc.stderr or proc.stdout or '').strip().splitlines()
         return proc.returncode, (tail[-1] if tail else f'exit {proc.returncode}')
