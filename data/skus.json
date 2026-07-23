@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-07-21",
+  "as_of": "2026-07-23",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -455,8 +455,8 @@
       "model": "A7S III",
       "gtin": "00027242920569",
       "marketplace_ids": {
-        "ebay_epid": "10043287076",
-        "ebay_legacy_item_id": "334360560240",
+        "ebay_epid": "6030664074",
+        "ebay_legacy_item_id": "366558692638",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -466,10 +466,10 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7SM3",
+        "mpn": "TEDSILCE7M3B",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
-          "conflict": false,
+          "conflict": true,
           "observations": [
             {
               "source": "product.gtins",
@@ -499,25 +499,59 @@
               "gtin14": "00027242920569",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "product.gtins",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "product.gtins",
+                "identifier_type": "GTIN",
+                "raw": "0635322939679",
+                "gtin14": "00635322939679",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "UPC",
+                "raw": "0635322939679",
+                "gtin14": "00635322939679",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "EAN",
+                "raw": "0635322939679",
+                "gtin14": "00635322939679",
+                "valid": true
+              },
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "0635322939679",
+                "gtin14": "00635322939679",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "Sony Alpha a7S III Mirrorless Digital Camera Body - ILCE7SM3/B",
-        "image": "https://i.ebayimg.com/images/g/p7gAAOSwbdpiK4uy/s-l1600.jpg",
-        "image_catalog": "",
+        "market_title": "Sony a7s III 24.2 MP Mirrorless Digital Camera - Black (Body Only)",
+        "image": "https://i.ebayimg.com/images/g/LScAAeSwo4NqYNRt/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/yIgAAOSwKd9hwYSt/s-l640.jpg",
         "price_seen": {
-          "value": "2739.95",
+          "value": "2400.00",
           "currency": "USD",
-          "as_of": "2026-07-21T04:07:10Z"
+          "as_of": "2026-07-23T04:14:12Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/334360560240?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xCkklfRCpReGbCRS3oksWPN0g6wuPvAvRa8FPvMxV4MzGVb0snkOjOz0BIB3WQ1BXEqPw706aN5UMOzkvf1KkZ6sxU543iXMwUSHG%2BifJOiFHdGKl5g%2BkXm2TQVdNKKXeJ%2Fc8G4KFj1dh1eUUnLfR5MFtKpLctmF6ABzByVHxqbRre1nvc7UgyICgHvYuFSkNY%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/366558692638?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-21T04:07:10Z"
+      "resolved_at": "2026-07-23T04:14:12Z"
     },
     "sony-a7-v": {
       "contamination_key": "sony-a7-v",
@@ -526,7 +560,7 @@
       "gtin": "00027242934061",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "800360149900",
+        "ebay_legacy_item_id": "137380035321",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -536,7 +570,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE-7M5",
+        "mpn": "ILCE7M5/B, ILCE7M5B, ILCE-7M5/B",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -550,23 +584,23 @@
             }
           ]
         },
-        "market_title": "Sony Alpha A7 V ILCE-7M5 33MP Mirrorless Camera Body Only - A7V (Zero Shutter)",
-        "image": "https://i.ebayimg.com/images/g/AdIAAeSw9apqWmrc/s-l1600.jpg",
+        "market_title": "Sony A7V (ILCE-7M5/B) Mirrorless Camera  - US model / Brand New",
+        "image": "https://i.ebayimg.com/images/g/-jsAAeSw6SNqCrn3/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "2750.00",
+          "value": "2599.00",
           "currency": "USD",
-          "as_of": "2026-07-20T04:06:25Z"
+          "as_of": "2026-07-23T04:14:54Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800360149900?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/137380035321?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-20T04:06:25Z"
+      "resolved_at": "2026-07-23T04:14:54Z"
     },
     "sony-a1": {
       "contamination_key": "sony-a1",
@@ -574,8 +608,8 @@
       "model": "A1",
       "gtin": "00027242922624",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "800346378156",
+        "ebay_epid": "8044612442",
+        "ebay_legacy_item_id": "236939133829",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -585,11 +619,32 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "ILCE1B",
         "gtin_provenance": {
-          "chosen_source": "aspect",
+          "chosen_source": "product.gtins",
           "conflict": false,
           "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0027242922624",
+              "gtin14": "00027242922624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0027242922624",
+              "gtin14": "00027242922624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0027242922624",
+              "gtin14": "00027242922624",
+              "valid": true
+            },
             {
               "source": "aspect",
               "identifier_type": "UPC",
@@ -599,43 +654,23 @@
             }
           ]
         },
-        "market_title": "Sony A1 [ILCE-1] Body w/ 116,635 Shutter Count – MUST READ! (2151)",
-        "image": "https://i.ebayimg.com/images/g/4Z8AAeSwzDRqV4-6/s-l1600.jpg",
+        "market_title": "SONY a1 ILCE-1 Mirrorless Digital Camera(ShutterCount:87803) [Near Mint] #7947TH",
+        "image": "https://i.ebayimg.com/images/g/c5YAAeSwgm9qVw9X/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/wKMAAOSwqFVkY45P/s-l1600.jpg",
         "price_seen": {
-          "value": "2469.99",
+          "value": "2839.68",
           "currency": "USD",
-          "as_of": "2026-07-20T04:07:03Z"
-        },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-07-15T16:46:03Z",
-          "query": "Sony ILCE-1/B",
-          "winner": {
-            "item_id": "v1|306986193187|0",
-            "epid": "8044612442",
-            "title": "424 cuts!! SONY a1 ILCE-1 Mirrorless Digital Camera [English OK] 10792"
-          },
-          "epid_match": true,
-          "inspected": [
-            {
-              "item_id": "v1|306986193187|0",
-              "epid": "8044612442",
-              "title": "424 cuts!! SONY a1 ILCE-1 Mirrorless Digital Camera [English OK] 10792",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
+          "as_of": "2026-07-23T04:15:29Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800346378156?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/236939133829?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-20T04:07:03Z"
+      "resolved_at": "2026-07-23T04:15:29Z"
     },
     "sony-a7c": {
       "contamination_key": "sony-a7c",
@@ -713,8 +748,8 @@
       "model": "R6",
       "gtin": "00013803325775",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "236952285992",
+        "ebay_epid": "14057872221",
+        "ebay_legacy_item_id": "326450553696",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -724,7 +759,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "4082C002",
+        "mpn": "5666C002",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": true,
@@ -772,23 +807,23 @@
             ]
           }
         },
-        "market_title": "Canon EOS R6 20.1MP Mirrorless Camera (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/hFwAAeSw6wpqXtUk/s-l1600.jpg",
+        "market_title": "Canon EOS R6 Mark II Mirrorless Digital Camera Body 24.2 MP Full-Frame",
+        "image": "https://i.ebayimg.com/images/g/rbUAAOSwRNtntP19/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/IIoAAOSwnvxntNWr/s-l1600.jpg",
         "price_seen": {
-          "value": "1049.00",
+          "value": "1789.95",
           "currency": "USD",
-          "as_of": "2026-07-21T04:10:55Z"
+          "as_of": "2026-07-23T04:17:37Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/236952285992?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/326450553696?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xAMislh55H2buj8V7O%2BWRUpZr4yiAmaA8alIr0CxehDo8uEoLSLP8VVMDJYVU2Sd%2BUtUEAKkZJiSnac%2FFPvNTVAahvvfDwHGyTbNGYpNC5Qf1T5A52gM4oqBi1HA%2BUqQGXjajUOvKtzcWdFaZzCeeijoBgmd1BqTZovs7hw%2Ba4VdoG7pB5RzQiyugGRb8ym73s%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-21T04:10:55Z"
+      "resolved_at": "2026-07-23T04:17:37Z"
     },
     "manfrotto-befree": {
       "contamination_key": "manfrotto-befree",
@@ -864,10 +899,10 @@
       "contamination_key": "sigma-35-f12-dg-dn",
       "vendor": "Sigma",
       "model": "35mm F1.2 DG DN Art",
-      "gtin": null,
+      "gtin": "00085126341657",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "358823381998",
+        "ebay_epid": "9033904742",
+        "ebay_legacy_item_id": "287467031108",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -876,38 +911,38 @@
         "ebay_category_id": "3323"
       },
       "identity": {
-        "brand": "SIGMA",
-        "mpn": "",
+        "brand": "Sigma",
+        "mpn": "341965",
         "gtin_provenance": {
-          "chosen_source": null,
+          "chosen_source": "aspect",
           "conflict": false,
           "observations": [
             {
               "source": "aspect",
               "identifier_type": "UPC",
-              "raw": "85126341695",
-              "gtin14": null,
-              "valid": false
+              "raw": "0085126341657",
+              "gtin14": "00085126341657",
+              "valid": true
             }
           ]
         },
-        "market_title": "SIGMA 35mm F1.2 DG DN Art SONYE -EXC- 5653",
-        "image": "https://i.ebayimg.com/images/g/n0gAAeSwYelqXt6J/s-l1600.jpg",
-        "image_catalog": "",
+        "market_title": "[Mint] SIGMA Art 35mm F/1.2 DG DN Lens for Sony E Mount",
+        "image": "https://i.ebayimg.com/images/g/PkQAAeSwBmlqK2bD/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/00/s/NjAyWDkwMA==/z/l5kAAOSwxnllzJ~i/$_57.JPG?set_id=880000500F",
         "price_seen": {
-          "value": "761.30",
+          "value": "619.99",
           "currency": "USD",
-          "as_of": "2026-07-21T04:12:26Z"
+          "as_of": "2026-07-23T04:19:23Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/358823381998?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/287467031108?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xBFn7D%2B0m6YRXOYwPggkcqeZ2J3h%2FWx6LkHFk%2FmfnpGBL7yFjezVMdX5w5WMnBFX6J2g6%2FEEuFwlDd%2BhFFYOgwQoSKzASxovrPffxf1XMUrvNKOyJz5sV6ZVSwl13qRZkL4RXrd16Fk6bsaAoPWZq5GxPmHLXP0g5So6XERwmeGqUCBIp%2F21LGnlw%2BqddNmsxo%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-21T04:12:26Z"
+      "resolved_at": "2026-07-23T04:19:23Z"
     },
     "canon-r5": {
       "contamination_key": "canon-r5",
@@ -915,8 +950,8 @@
       "model": "R5",
       "gtin": "04549292157345",
       "marketplace_ids": {
-        "ebay_epid": "22039720829",
-        "ebay_legacy_item_id": "147449890634",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336691521164",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -926,7 +961,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "4147C002",
+        "mpn": "DS126836",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -982,23 +1017,23 @@
             }
           ]
         },
-        "market_title": "Canon EOS R5 Mirrorless Camera Body (#114) *USED*",
-        "image": "https://i.ebayimg.com/images/g/C4oAAeSw2OhqXm2d/s-l1600.jpg",
+        "market_title": "Canon EOS R5 45MP Mirrorless Camera in Black | RF Mount *Body Only*",
+        "image": "https://i.ebayimg.com/images/g/HsoAAeSwmkxqWN-y/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
         "price_seen": {
-          "value": "1699.00",
+          "value": "1649.99",
           "currency": "USD",
-          "as_of": "2026-07-21T04:13:05Z"
+          "as_of": "2026-07-23T04:20:08Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/147449890634?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/336691521164?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xBcpv7PXipAs7dPFKMScQMRVbBG8Aihet4I88Ne38fgOryPsIFv1pn7HM0kRkQTNQ4xhsOsqsltXR2v3YmvY9km6qvTuxUqgeteD96YK2HH9WU1ENv91EHV9RpF2fBI40YAyMg5RGyTN9usMFaACc20kBJ05FPh%2FWJWO3ei5QeZSteLwibv0b%2FfgX8CLNE7FgQ%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-21T04:13:05Z"
+      "resolved_at": "2026-07-23T04:20:08Z"
     },
     "sony-a7r": {
       "contamination_key": "sony-a7r",
@@ -1007,7 +1042,7 @@
       "gtin": "00027242893832",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "307046109794",
+        "ebay_legacy_item_id": "366442568914",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1017,7 +1052,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE-7RM2/B",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -1031,13 +1066,13 @@
             }
           ]
         },
-        "market_title": "Sony A7R II 42.4MP Mirrorless Camera Body Only",
-        "image": "https://i.ebayimg.com/images/g/N6EAAeSwFolqTBIA/s-l1600.jpg",
+        "market_title": "Sony Alpha A7R ILCE-7R 36.4MP Digital Camera Body only - Black English Language",
+        "image": "https://i.ebayimg.com/images/g/FBMAAeSwOgJqGcGV/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
         "price_seen": {
-          "value": "595.00",
+          "value": "402.99",
           "currency": "USD",
-          "as_of": "2026-07-20T04:12:34Z"
+          "as_of": "2026-07-23T04:20:54Z"
         },
         "image_provenance": {
           "recovered_by": "image-second-pass",
@@ -1068,28 +1103,13 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/307046109794?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/366442568914?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xCOVnJlh0rQ1wHtwADGRq7F%2FnXTRmHr4WjUrS0pMIakOVBmvHFv3DADWpjVGuS01oST2vI2iIugg69M%2BfR0SRRWmEJ%2FqBNUs8AXXUZU%2F7CBetsqCVVnCfDV6Z68nf7mf7JzArccXK3pj45CthtTnSH2Zq61sKJBu0EdlCq6Zr1PyBBAWjlzrHpvFLZw63IC0DA%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-20T04:12:34Z",
-      "rebind_rejected": {
-        "ts": "2026-07-21T04:13:46Z",
-        "item_id": "168549580098",
-        "title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only",
-        "price_seen": {
-          "value": "740.00",
-          "currency": "USD",
-          "as_of": "2026-07-21T04:13:46Z"
-        },
-        "signals": [
-          "mpn_wiped",
-          "category_flip"
-        ],
-        "hard": false
-      }
+      "resolved_at": "2026-07-23T04:20:54Z"
     },
     "ulanzi-f38-zero": {
       "contamination_key": "ulanzi-f38",
