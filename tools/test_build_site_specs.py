@@ -118,3 +118,25 @@ def test_value_is_html_escaped():
     html = specs_section(card)
     assert "<script>" not in html
     assert "&lt;script&gt;" in html
+
+
+# ── § wire — identity.* provenance must NOT leak into the "specs:" line ──
+from build_site import _specs_provenance_line  # noqa: E402
+
+
+def test_specs_provenance_line_ignores_identity_entries():
+    # facts.provenance now carries identity.* fold entries (image/gtin/mpn).
+    # The 'specs:' subtitle must reflect only the sources of actual SPECS.
+    facts = {"provenance": {
+        "specs.weight": {"source": "curated"},
+        "identity.gtin": {"source": "wikidata"},
+        "identity.image_thumb": {"source": "wikidata"},
+    }}
+    line = _specs_provenance_line(facts)
+    assert "curated" in line
+    assert "wikidata" not in line  # identity source did not leak in
+
+
+def test_specs_provenance_line_empty_when_only_identity():
+    facts = {"provenance": {"identity.gtin": {"source": "wikidata"}}}
+    assert _specs_provenance_line(facts) == ""

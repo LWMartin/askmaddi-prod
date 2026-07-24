@@ -16,7 +16,8 @@
     "subcategory": "mirrorless",
     "year_introduced": 2020,
     "image_thumb": "https://i.ebayimg.com/images/g/wXcAAeSwT55qUrMc/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "ILCE-7SM3"
   },
   "pricing": {
     "msrp_usd": null,
@@ -4171,6 +4172,74 @@
       }
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 699,
+        "high": 699,
+        "anchor": 699,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/wXcAAeSwT55qUrMc/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_α7S_III_21_Oct_2020a.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 24 sources, af performance.video draws the most discussion: 151 claims, 64% positive. Reviewers are most positive about color rendition (84% of 43 claims). Opinion is split on handling (10 positive vs 4 negative claims).",
     "aspect_breakdown": [

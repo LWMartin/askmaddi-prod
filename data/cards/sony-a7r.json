@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "ILCE-7R"
   },
   "pricing": {
     "msrp_usd": null,
@@ -8687,6 +8688,74 @@
       "notes": []
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 650,
+        "high": 650,
+        "anchor": 650,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q20653320",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q20653320",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q20653320",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q20653320",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_Alpha_ILCE-7R_front_2014_CP+.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 37 sources, af performance.video draws the most discussion: 193 claims, 55% positive. Reviewers are most positive about bokeh (86% of 28 claims). The most criticism lands on mount compatibility, where 5% of 166 claims are negative. Opinion is split on price & value (63 positive vs 12 negative claims).",
     "aspect_breakdown": [

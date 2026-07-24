@@ -472,7 +472,12 @@ def _specs_provenance_line(facts):
     if not isinstance(prov, dict):
         return ""
     seen = []
-    for entry in prov.values():
+    for key, entry in prov.items():
+        # This is the "specs:" line — reflect ONLY spec sources. The provenance
+        # map also carries identity.* entries (image/gtin/mpn fold, § wire);
+        # those must not masquerade as a spec source here.
+        if not str(key).startswith("specs."):
+            continue
         src = (entry or {}).get("source") if isinstance(entry, dict) else None
         if src and src not in seen:
             seen.append(src)

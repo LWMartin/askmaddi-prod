@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/zawAAOSwYBVkqB9H/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "ILCE-7C"
   },
   "pricing": {
     "msrp_usd": null,
@@ -5060,6 +5061,74 @@
       "notes": []
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 509,
+        "high": 509,
+        "anchor": 509,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q101247282",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q101247282",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q101247282",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q101247282",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/zawAAOSwYBVkqB9H/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_A7C_with_Sony_FE_28-60mm_F4-5.6_-_by_Henry_Söderlund_(50558516523,_cropped).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 34 sources, af performance.video draws the most discussion: 130 claims, 65% positive. Reviewers are most positive about color rendition (77% of 52 claims). The most criticism lands on filter thread, where 20% of 20 claims are negative. Opinion is split on generation context (31 positive vs 4 negative claims).",
     "aspect_breakdown": [

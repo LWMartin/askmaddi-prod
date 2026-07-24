@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/wKMAAOSwqFVkY45P/s-l1600.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "ILCE-1"
   },
   "pricing": {
     "msrp_usd": null,
@@ -7415,6 +7416,74 @@
       "notes": []
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 737,
+        "high": 737,
+        "anchor": 737,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/wKMAAOSwqFVkY45P/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/SONY_ILCE-1.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 32 sources, af performance.video draws the most discussion: 187 claims, 60% positive. Reviewers are most positive about optical performance (72% of 118 claims). The most criticism lands on mount compatibility, where 5% of 79 claims are negative. Opinion is split on price & value (42 positive vs 9 negative claims).",
     "aspect_breakdown": [

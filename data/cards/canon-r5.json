@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "Canon EOS R5"
   },
   "pricing": {
     "msrp_usd": null,
@@ -3117,6 +3118,44 @@
       "notes": []
     }
   ],
+  "facts": {
+    "specs": {
+      "mount": {
+        "value": "Canon RF lens mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q85750498",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q85750498",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Canon_EOS_R5_(cropped).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 16 sources, af performance.video draws the most discussion: 86 claims, 53% positive. Reviewers are most positive about handling (82% of 17 claims). The most criticism lands on color rendition, where 15% of 26 claims are negative. Opinion is split on af performance.video (46 positive vs 17 negative claims).",
     "aspect_breakdown": [

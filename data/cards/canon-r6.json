@@ -2035,6 +2035,52 @@
       "notes": []
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 699,
+        "high": 699,
+        "anchor": 699,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Canon RF lens mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q136721340",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q136721340",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/IIoAAOSwnvxntNWr/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Canon_EOS_R6_Mark_III_26_nov_2025a.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
+  },
   "synthesis": {
     "consensus_paragraph": "Across 14 sources, af performance.video draws the most discussion: 73 claims, 56% positive. Reviewers are most positive about af performance.stills (84% of 19 claims). The most criticism lands on optical performance, where 19% of 26 claims are negative. Opinion is split on generation context (8 positive vs 4 negative claims).",
     "aspect_breakdown": [
