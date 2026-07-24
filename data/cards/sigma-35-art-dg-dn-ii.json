@@ -11334,6 +11334,133 @@
       }
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 525,
+        "high": 525,
+        "anchor": 525,
+        "anchor_source": "curated",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_aperture": {
+        "value": "f/1.4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "filter_thread": {
+        "value": null,
+        "low": 67,
+        "high": 67,
+        "anchor": 67,
+        "anchor_source": "curated",
+        "unit": "mm"
+      },
+      "elements": {
+        "value": "15 elements in 12 groups",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "aperture_blades": {
+        "value": null,
+        "low": 11,
+        "high": 11,
+        "anchor": 11,
+        "anchor_source": "curated",
+        "unit": ""
+      },
+      "min_focus": {
+        "value": null,
+        "low": 28,
+        "high": 28,
+        "anchor": 28,
+        "anchor_source": "curated",
+        "unit": "cm"
+      },
+      "max_magnification": {
+        "value": "1:5.4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a), Sony E-mount variant (L-mount is 530g). Curated: this SKU has no Wikidata entity (§4.2 long-tail, measured live 2026-07-24) and no automated fact source."
+      },
+      "specs.mount": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet; this card is the Sony E-mount variant of a dual-mount (L / Sony E) lens. Curated: no Wikidata entity for this SKU."
+      },
+      "specs.max_aperture": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a). Curated: no Wikidata entity for this SKU."
+      },
+      "specs.filter_thread": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a). Curated: no Wikidata entity for this SKU."
+      },
+      "specs.elements": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a): 15 elements in 12 groups (2 SLD, 4 aspherical). Curated: no Wikidata entity for this SKU."
+      },
+      "specs.aperture_blades": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a): 11 rounded blades. Curated: no Wikidata entity for this SKU."
+      },
+      "specs.min_focus": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a): minimum focusing distance 28cm. Curated: no Wikidata entity for this SKU."
+      },
+      "specs.max_magnification": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "Sigma official spec sheet (sigmaphoto.com/35mm-f1-4-dg-ii-a). Curated: no Wikidata entity for this SKU."
+      }
+    },
+    "conflicts": []
+  },
   "synthesis": {
     "consensus_paragraph": "Across 50 sources, optical performance draws the most discussion: 249 claims, 71% positive. Reviewers are most positive about bokeh (71% of 95 claims). The most criticism lands on filter thread, where 24% of 46 claims are negative. Opinion is split on mount compatibility (41 positive vs 55 negative claims). On optical performance, 86% of the 44 sources covering it point the same direction.",
     "aspect_breakdown": [
