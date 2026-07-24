@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-07-23",
+  "as_of": "2026-07-24",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -455,8 +455,8 @@
       "model": "A7S III",
       "gtin": "00027242920569",
       "marketplace_ids": {
-        "ebay_epid": "6030664074",
-        "ebay_legacy_item_id": "366558692638",
+        "ebay_epid": "10043287076",
+        "ebay_legacy_item_id": "334360560240",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -466,10 +466,10 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "TEDSILCE7M3B",
+        "mpn": "ILCE7SM3",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
-          "conflict": true,
+          "conflict": false,
           "observations": [
             {
               "source": "product.gtins",
@@ -499,59 +499,25 @@
               "gtin14": "00027242920569",
               "valid": true
             }
-          ],
-          "superseded": {
-            "chosen_source": "product.gtins",
-            "conflict": false,
-            "observations": [
-              {
-                "source": "product.gtins",
-                "identifier_type": "GTIN",
-                "raw": "0635322939679",
-                "gtin14": "00635322939679",
-                "valid": true
-              },
-              {
-                "source": "product.additionalProductIdentities",
-                "identifier_type": "UPC",
-                "raw": "0635322939679",
-                "gtin14": "00635322939679",
-                "valid": true
-              },
-              {
-                "source": "product.additionalProductIdentities",
-                "identifier_type": "EAN",
-                "raw": "0635322939679",
-                "gtin14": "00635322939679",
-                "valid": true
-              },
-              {
-                "source": "aspect",
-                "identifier_type": "UPC",
-                "raw": "0635322939679",
-                "gtin14": "00635322939679",
-                "valid": true
-              }
-            ]
-          }
+          ]
         },
-        "market_title": "Sony a7s III 24.2 MP Mirrorless Digital Camera - Black (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/LScAAeSwo4NqYNRt/s-l1600.jpg",
+        "market_title": "Sony Alpha a7S III Mirrorless Digital Camera Body - ILCE7SM3/B",
+        "image": "https://i.ebayimg.com/images/g/p7gAAOSwbdpiK4uy/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/yIgAAOSwKd9hwYSt/s-l640.jpg",
         "price_seen": {
-          "value": "2400.00",
+          "value": "2739.95",
           "currency": "USD",
-          "as_of": "2026-07-23T04:14:12Z"
+          "as_of": "2026-07-24T04:15:18Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/366558692638?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/334360560240?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xCkklfRCpReGbCRS3oksWPN0g6wuPvAvRa8FPvMxV4MzCxGJc%2FtIK8m%2ByS1xQPfaRdZEf6SRLHe0XM3l6bC655s9gTIRDuLlKn2h7lUnaP%2FjW5FMLjOVPENLLazhYqJY28jOt%2Ft9ZTihbCFQDtBOXUv5VGvgEyFr33rKQ%2BBkTIFVMR6phg%2FREpQ%2BLkX19n3Mxg%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-23T04:14:12Z"
+      "resolved_at": "2026-07-24T04:15:18Z"
     },
     "sony-a7-v": {
       "contamination_key": "sony-a7-v",
