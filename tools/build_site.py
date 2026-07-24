@@ -406,36 +406,117 @@ def price_history_section(card):
 
 
 # ─── Specs (product-forward; honest about absence) ──────────────────────────
-# Specs are a facts-pipeline output (manufacturer-canonical key/value pairs).
-# The card schema may not carry them yet — when absent or empty, the section
-# is omitted entirely rather than rendered as an empty box (same discipline as
-# pricing/issue_clusters). Numeric conflicts arrive pre-resolved as an honest
-# spread string from the fact pipeline; we render the value verbatim.
+# Specs are a facts-pipeline output (fact-pipeline §3). On an external card they
+# live under `facts.specs` as a {slug: FactValue} map — FactValue is the dict
+# {value, low, high, anchor, anchor_source, unit}. Numeric facts carry an honest
+# spread (§3.3): the anchor (manufacturer value) is shown first, and a genuine
+# [low, high] range is appended when third-party sources widen it. Categorical
+# facts use `value`. When absent or empty the section is omitted entirely (same
+# discipline as pricing/issue_clusters), never rendered as an empty box.
+
+# Slugs that carry a canonical casing the naive title-case would mangle.
+_SPEC_LABEL_OVERRIDES = {
+    "iso": "ISO", "gtin": "GTIN", "mpn": "MPN", "af": "AF", "ois": "OIS",
+    "ibis": "IBIS", "nd": "ND", "led": "LED", "usb": "USB", "hdmi": "HDMI",
+    "fps": "FPS", "mp": "MP", "ev": "EV", "id": "ID",
+}
+
+
+def _spec_label(slug):
+    """Humanize a spec slug (e.g. 'sensor_resolution' -> 'Sensor Resolution',
+    'iso' -> 'ISO'). Known acronyms keep their canonical casing."""
+    words = str(slug).replace("_", " ").replace("-", " ").split()
+    return " ".join(_SPEC_LABEL_OVERRIDES.get(w.lower(), w.capitalize())
+                    for w in words) or str(slug)
+
+
+def _fmt_fact_num(n):
+    """Render a numeric fact without false precision: drop a trailing '.0'
+    (665.0 -> '665') but keep genuine decimals (66.5 -> '66.5')."""
+    if isinstance(n, bool) or not isinstance(n, (int, float)):
+        return esc(n)
+    if isinstance(n, float) and n.is_integer():
+        return str(int(n))
+    return str(n)
+
+
+def _fact_display(fv):
+    """One FactValue -> display string, or '' if it carries nothing renderable.
+    Accepts a plain scalar too (legacy flat {label: value} cards)."""
+    if fv is None:
+        return ""
+    if not isinstance(fv, dict):
+        # Legacy flat value — already a display-ready scalar.
+        return "" if fv in ("", []) else esc(fv)
+    unit = str(fv.get("unit") or "").strip()
+    suffix = f" {esc(unit)}" if unit else ""
+    anchor, low, high = fv.get("anchor"), fv.get("low"), fv.get("high")
+    is_num = lambda x: isinstance(x, (int, float)) and not isinstance(x, bool)
+    if is_num(anchor) or is_num(low) or is_num(high):
+        primary = anchor if is_num(anchor) else low
+        out = f"{_fmt_fact_num(primary)}{suffix}"
+        # Only surface the spread when sources genuinely disagree.
+        if is_num(low) and is_num(high) and low != high:
+            out += f" ({_fmt_fact_num(low)}–{_fmt_fact_num(high)})"
+        return out
+    value = fv.get("value")
+    if value in (None, "", []):
+        return ""
+    return f"{esc(value)}{suffix}"
+
+
+def _specs_provenance_line(facts):
+    """Subtle 'specs: manufacturer · wikidata' subtitle (§3.2/§8) — the distinct
+    sources backing the block, in first-seen order. '' when none recorded."""
+    prov = facts.get("provenance") if isinstance(facts, dict) else None
+    if not isinstance(prov, dict):
+        return ""
+    seen = []
+    for entry in prov.values():
+        src = (entry or {}).get("source") if isinstance(entry, dict) else None
+        if src and src not in seen:
+            seen.append(src)
+    if not seen:
+        return ""
+    return (f'<p class="spec-provenance">specs: '
+            f'{esc(" · ".join(seen))}</p>')
+
+
 def specs_section(card):
-    specs = card.get("specs") or {}
-    # Accept either a flat dict {label: value} or a list of {label, value}.
+    facts = card.get("facts") if isinstance(card.get("facts"), dict) else {}
+    # Prefer the external envelope location; fall back to a top-level `specs`
+    # for legacy/internal cards that never went through facts_from_card.
+    specs = facts.get("specs") or card.get("specs") or {}
     rows = []
     if isinstance(specs, dict):
         items = specs.get("items", specs) if "items" in specs else specs
         if isinstance(items, dict):
-            rows = [(k, v) for k, v in items.items() if v not in (None, "", [])]
+            for slug, fv in items.items():
+                disp = _fact_display(fv)
+                if disp:
+                    rows.append((_spec_label(slug), disp))
         elif isinstance(items, list):
-            rows = [(d.get("label", ""), d.get("value")) for d in items
-                    if d.get("value") not in (None, "", [])]
+            for d in items:
+                disp = _fact_display(d.get("value"))
+                if disp:
+                    rows.append((d.get("label", ""), disp))
     elif isinstance(specs, list):
-        rows = [(d.get("label", ""), d.get("value")) for d in specs
-                if d.get("value") not in (None, "", [])]
+        for d in specs:
+            disp = _fact_display(d.get("value"))
+            if disp:
+                rows.append((d.get("label", ""), disp))
     if not rows:
         return ""
     cells = "".join(
         f'<div class="spec-row"><span class="spec-label">{esc(label)}</span>'
-        f'<span class="spec-value">{esc(value)}</span></div>'
+        f'<span class="spec-value">{value}</span></div>'
         for label, value in rows
     )
+    prov_html = _specs_provenance_line(facts)
     return f"""
       <section class="card-section">
         <h2 class="card-section-head">Specifications</h2>
-        <div class="spec-grid">{cells}</div>
+        <div class="spec-grid">{cells}</div>{prov_html}
       </section>"""
 
 

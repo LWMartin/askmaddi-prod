@@ -247,6 +247,14 @@
 }
 .spec-label { color: var(--color-text-secondary); }
 .spec-value { color: var(--color-text); font-weight: 600; text-align: right; }
+/* Subtle attribution under the spec grid — same cite-everything bar as review
+   quotes (fact-pipeline §3.2/§8), but quiet so it never competes with the facts. */
+.spec-provenance {
+    margin: var(--space-sm) 0 0;
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    opacity: 0.8;
+}
 @media (max-width: 560px) {
     .spec-grid { grid-template-columns: 1fr; }
 }

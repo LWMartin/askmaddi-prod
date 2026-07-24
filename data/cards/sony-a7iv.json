@@ -20360,6 +20360,73 @@
       }
     }
   ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 665,
+        "high": 665,
+        "anchor": 665,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_max": {
+        "value": null,
+        "low": 204800,
+        "high": 204800,
+        "anchor": 204800,
+        "anchor_source": "wikidata",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q110068968",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q110068968",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.iso_max": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q110068968",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q110068968",
+        "fetched_at": "",
+        "license": "",
+        "reason": ""
+      }
+    },
+    "conflicts": []
+  },
   "synthesis": {
     "consensus_paragraph": "Across 55 sources, video capability draws the most discussion: 524 claims, 32% positive. Reviewers are most positive about autofocus body (58% of 275 claims). The most criticism lands on connectivity, where 63% of 81 claims are negative. Opinion is split on handling (119 positive vs 97 negative claims).",
     "aspect_breakdown": [
