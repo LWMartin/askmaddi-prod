@@ -15,6 +15,15 @@ def test_outbound_written_and_whitelisted(tmp_path):
     assert on_disk == rec
 
 
+def test_adorama_retailer_whitelisted(tmp_path):
+    # Adorama is the active new-goods affiliate (Partnerize) — it must persist
+    # as 'adorama', not degrade to 'other', or its demand is unmeasurable.
+    p = tmp_path / 'a.jsonl'
+    rec = analytics_log.log_event('outbound', category='camera',
+                                  retailer='adorama', path=p)
+    assert rec['retailer'] == 'adorama'
+
+
 def test_unknown_retailer_coerced_never_freetext(tmp_path):
     p = tmp_path / 'a.jsonl'
     rec = analytics_log.log_event('outbound', category='camera',

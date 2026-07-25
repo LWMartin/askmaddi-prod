@@ -40,7 +40,7 @@ _FORBIDDEN_FIELDS = ('query', 'q', 'search', 'raw_query', 'text', 'user', 'ip',
 # Whitelists — the ONLY values that can be persisted. Anything else -> 'other'.
 EVENT_TYPES = ('outbound', 'ai_referral')
 
-RETAILERS = ('amazon', 'ebay', 'other')
+RETAILERS = ('amazon', 'ebay', 'adorama', 'other')
 
 # AI engines we recognize in document.referrer, keyed by the value the beacon
 # sends. Additions here must be mirrored in browser/js/beacon.js.
