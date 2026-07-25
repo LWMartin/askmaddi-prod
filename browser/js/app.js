@@ -114,14 +114,19 @@ class AskMaddi {
         const sites = Object.entries(this.manifests.sites);
         this.ui.showState('results');
         this.ui.initStreamingResults(query, sites.length);
-        // Amazon cross-check: an affiliate search deep-link beside the eBay
-        // results — no PA-API yet, so this is the honest interim for mixed
-        // marketplaces, and it feeds the Associates qualification push. The
-        // slot is also where real Amazon results land once PA-API unlocks.
-        const az = document.getElementById('amazon-crosscheck');
+        // Adorama cross-check: a Partnerize-wrapped Adorama on-site search beside
+        // the eBay results — mirrors the card 'buy new' CTA (build_site.py
+        // adorama_search_url + partnerize_wrap; camref 1101l5Pw9q). Amazon retired
+        // here 2026-07-25: Associates dropped (3-buy threshold missed, reapply
+        // pending), so a live askmaddi-20 tag was untracked AND a ToS risk — same
+        // reason the card path dropped it 2026-07-24. This buyer-intent slot now
+        // points at the active relationship. Re-add an Amazon cross-check once
+        // reapproval lands with a valid tag.
+        const az = document.getElementById('adorama-crosscheck');
         if (az) {
-            az.href = 'https://www.amazon.com/s?k=' + encodeURIComponent(query)
-                + '&tag=askmaddi-20';
+            const dest = 'https://www.adorama.com/l/?searchinfo='
+                + encodeURIComponent(query).replace(/%20/g, '+');
+            az.href = 'https://adorama.prf.hn/click/camref:1101l5Pw9q/destination:' + dest;
             az.style.display = 'inline';
         }
         

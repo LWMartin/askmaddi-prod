@@ -1021,13 +1021,18 @@ def write_sitemap(out_dir, cards):
 
 
 def retailer_from_url(url):
-    """'amazon' | 'ebay' | 'other' from a CTA href's hostname.
+    """'amazon' | 'ebay' | 'adorama' | 'other' from a CTA href's hostname.
 
     Feeds the data-retailer attribute the beacon reads; the gateway whitelists
-    the same three values server-side (analytics_log.RETAILERS), so a surprise
+    the same four values server-side (analytics_log.RETAILERS), so a surprise
     hostname degrades to 'other' at both ends rather than ever landing as
     free text. Hostname match, not substring-in-url: a search URL whose QUERY
-    mentions amazon must not count as an Amazon click."""
+    mentions amazon must not count as an Amazon click.
+
+    Adorama's new-goods CTAs are Partnerize URL-wraps: the click host is
+    'adorama.prf.hn' (deep-link) or 'prf.hn' (the generic short link), with
+    'adorama.com' only when an un-wrapped destination slips through. AskMaddi
+    uses Partnerize solely for Adorama, so prf.hn maps to 'adorama' for us."""
     try:
         host = urllib.parse.urlparse(url or "").hostname or ""
     except ValueError:
@@ -1037,6 +1042,9 @@ def retailer_from_url(url):
         return "amazon"
     if host == "ebay.com" or host.endswith(".ebay.com"):
         return "ebay"
+    if (host == "adorama.com" or host.endswith(".adorama.com")
+            or host == "prf.hn" or host.endswith(".prf.hn")):
+        return "adorama"
     return "other"
 
 

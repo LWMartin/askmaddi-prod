@@ -25,6 +25,16 @@ def test_retailer_ebay_hosts():
     assert retailer_from_url("https://www.ebay.com/sch/i.html?_nkw=x") == "ebay"
 
 
+def test_retailer_adorama_hosts():
+    # Partnerize deep-link (the wrapped new-goods CTA), generic short link,
+    # and an un-wrapped direct destination all classify as adorama.
+    assert retailer_from_url(
+        "https://adorama.prf.hn/click/camref:1101l5Pw9q/destination:"
+        "https://www.adorama.com/l/?searchinfo=x") == "adorama"
+    assert retailer_from_url("https://prf.hn/l/PlDklJx/") == "adorama"
+    assert retailer_from_url("https://www.adorama.com/l/?searchinfo=x") == "adorama"
+
+
 def test_retailer_query_mention_does_not_count():
     # 'amazon' in the QUERY of another host must not classify as amazon.
     assert retailer_from_url(

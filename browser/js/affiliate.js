@@ -45,7 +45,12 @@ class AffiliateManager {
                 cookieDays: 1
             },
             'amazon.com': {
-                enabled: true,
+                // Disabled 2026-07-25: Associates dropped (3-buy threshold missed,
+                // reapply pending). A live askmaddi-20 tag on a non-active account
+                // is untracked AND a ToS risk — so result links stay unstamped
+                // (same reason build_site.py stopped stamping cards 2026-07-24).
+                // Flip back to true once reapproval lands with a valid tag.
+                enabled: false,
                 name: 'Amazon Associates',
                 param: 'tag',
                 code: 'askmaddi-20',
