@@ -37,6 +37,16 @@ AMAZON_TAG = "askmaddi-20"
 EBAY_CAMPID = "5339138080"
 EBAY_RID = "711-53200-19255-0"
 
+# ─── Adorama (Partnerize / prf.hn) — the 'buy new' affiliate network ─────────
+# Amazon Associates lapsed 2026-07-24 (the qualifying-purchase window closed
+# before three sales landed; reapplication pending), so the new-gear CTA moves
+# to Adorama, an approved Partnerize partner. Partnerize 'tagging' is a URL WRAP
+# (a deep-link that carries a destination adorama.com URL), NOT a query param
+# like amazon/ebay — see partnerize_wrap().
+PARTNERIZE_CAMREF = "1101l5Pw9q"
+PARTNERIZE_CLICK_BASE = f"https://adorama.prf.hn/click/camref:{PARTNERIZE_CAMREF}"
+PARTNERIZE_SHORT = "https://prf.hn/l/PlDklJx/"  # generic homepage fallback
+
 # ─── Site identity (canonical URLs, OG, sitemap) ────────────────────────────
 BASE_URL = "https://askmaddi.com"
 SITE_NAME = "AskMaddi"
@@ -87,9 +97,12 @@ def ensure_affiliate_tag(url):
         return url
     host = parts.netloc.lower()
     q = dict(parse_qsl(parts.query, keep_blank_values=True))
-    if "amazon." in host:
-        q["tag"] = AMAZON_TAG
-    elif "ebay." in host:
+    # Amazon deliberately NOT tagged (Associates lapsed 2026-07-24): a live
+    # askmaddi-20 tag on a non-active account is both untracked and a ToS risk,
+    # so an amazon URL passes through untouched (and trips the untagged-link
+    # tripwire in DEPLOYMENT.md, flagging it for removal). eBay is unchanged;
+    # Adorama tagging is a URL wrap handled by partnerize_wrap(), not here.
+    if "ebay." in host:
         q["campid"] = EBAY_CAMPID
         q.setdefault("mkcid", "1")
         q.setdefault("mkrid", EBAY_RID)
@@ -145,36 +158,32 @@ def pct(pos, total):
 
 
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
-def amazon_product_url(asin):
-    """Direct product-detail (SKU) URL. Tag is stamped by ensure_affiliate_tag."""
-    return f"https://www.amazon.com/dp/{asin}"
+def adorama_search_url(display_name):
+    """Adorama on-site search for a product name — the Adorama analogue of
+    ebay_search_url. Lands the buyer on Adorama results scoped to this product;
+    partnerize_wrap() then makes it an affiliate link. Swap for an exact product
+    URL (pricing.adorama_url) once the Partnerize feed / direct API supplies one."""
+    q = urllib.parse.quote_plus(display_name.strip())
+    return f"https://www.adorama.com/l/?searchinfo={q}"
 
 
-AMAZON_FIRST = True
-# 2026-07-17 (Lee's call): during the Amazon Associates qualification push,
-# the 'buy new' CTA deliberately prefers Amazon rungs over the eBay EPN
-# affiliate chain — three qualifying purchases unlock Associates status and
-# PA-API access. This forgoes eBay commission on new-CTA clicks by explicit
-# strategy, and is a ONE-LINE revert (False) the day PA-API lands. The used
-# CTA is untouched either way: the used market is eBay's domain and our
-# used-price bands are eBay-derived.
-
-
-def amazon_gtin_search_url(gtin, display_name=""):
-    """Amazon search keyed on a VERIFIED GTIN plus the product name — a
-    graceful-degrading query (2026-07-17, Lee's call): when Amazon knows
-    the GTIN the exact product dominates the results; when it doesn't,
-    the name tokens produce an honest close-match page instead of the
-    dead 'no results' void a bare-GTIN query strands buyers on. The /dp/
-    ASIN rung above remains the premium, human-verified landing; bare
-    name search (no GTIN) stays last-resort per e930bea."""
-    q = urllib.parse.quote_plus(f"{gtin} {display_name}".strip())
-    return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
-
-
-def amazon_search_url(display_name):
-    q = re.sub(r"\s+", "+", display_name.strip())
-    return f"https://www.amazon.com/s?k={q}&tag={AMAZON_TAG}"
+def partnerize_wrap(destination_url):
+    """Wrap an adorama.com destination in the Partnerize camref deep-link — the
+    affiliate 'tag' for Adorama is a URL WRAP, not a query param. Idempotent: an
+    already-wrapped prf.hn link returns unchanged; a NON-adorama destination is
+    left untouched (never silently mis-attributed to Adorama). Empty → the
+    generic homepage short link, so a CTA is never dead."""
+    if not destination_url:
+        return PARTNERIZE_SHORT
+    try:
+        host = urllib.parse.urlsplit(destination_url).netloc.lower()
+    except ValueError:
+        return destination_url
+    if "prf.hn" in host:            # already a Partnerize link
+        return destination_url
+    if "adorama." not in host:      # only wrap Adorama destinations
+        return destination_url
+    return f"{PARTNERIZE_CLICK_BASE}/destination:{destination_url}"
 
 
 def ebay_search_url(display_name, category_id=None):
@@ -204,9 +213,8 @@ EBAY_CATEGORY = {
 
 
 def ebay_product_url(epid):
-    """Direct eBay catalog (EPID) product page — the eBay analogue of
-    amazon_product_url(asin). Lands the buyer on the catalog product page
-    instead of search results. Affiliate params are stamped by
+    """Direct eBay catalog (EPID) product page — lands the buyer on the catalog
+    product page instead of search results. Affiliate params are stamped by
     ensure_affiliate_tag (campid/mkcid/mkrid), same as every other eBay CTA.
     EPID is eBay's durable catalog id; a single listing can vanish but the
     catalog entry persists, so this is the right rung to store in the registry.
@@ -215,59 +223,31 @@ def ebay_product_url(epid):
 
 
 def new_cta(card):
-    """Return (label, url) for the 'buy new' CTA, honest about missing price.
+    """Return (label, url) for the 'buy new' CTA → Adorama (Partnerize).
 
-    URL preference:
-      explicit affiliate_url > raw product URL > Amazon ASIN /dp/ link
-      > eBay EPID /p/ link > eBay search > Amazon search (last resort).
+    Amazon rungs retired 2026-07-24: the Associates application lapsed (the
+    qualifying-purchase window closed before three sales landed; reapplication
+    pending), so a live askmaddi-20 tag would be untracked AND a ToS risk.
+    Adorama — an approved Partnerize partner — becomes the new-gear destination.
 
-    The ASIN rung (pricing.amazon_asin) lands the buyer on the exact Amazon SKU
-    page; same field the future PA-API price job keys on. When a card has NO
-    Amazon ASIN — because the product isn't sold on Amazon (e.g. Peak Design Pro
-    Tripod) — falling to Amazon search would dump the buyer onto a results page
-    whose top hit is a DIFFERENT product (the Travel Tripod). So the no-ASIN
-    path resolves to eBay instead: a catalog EPID /p/ deep-link when the
-    registry carries one, else an eBay search scoped to this product. Amazon
-    search remains only as the final last-resort rung for the degenerate case
-    where neither marketplace id is available. All URLs pass ensure_affiliate_tag.
+    Destination preference:
+      pre-wrapped prf.hn affiliate_url (feed/registry) > exact Adorama product
+      URL (pricing.adorama_url, populated by the Partnerize feed later) >
+      a product-scoped Adorama SEARCH.
+    All are Partnerize-wrapped (partnerize_wrap: a deep-link, not a query param),
+    so every new-CTA click is tracked. eBay remains the USED domain (used_cta);
+    Amazon ASIN data may still sit in the card but is never linked.
     """
     pricing = card.get("pricing", {})
     name = card["identity"]["display_name"]
-    asin = pricing.get("amazon_asin")
-    gtin = pricing.get("gtin")
-    epid = pricing.get("ebay_epid")
-    ebay_cat = EBAY_CATEGORY.get(card.get("category"))
-    amazon_ok = not pricing.get("amazon_absent")
-    if AMAZON_FIRST and amazon_ok:
-        url = ensure_affiliate_tag(
-            (amazon_product_url(asin) if asin else None)
-            or (amazon_gtin_search_url(gtin, name) if gtin else None)
-            or pricing.get("affiliate_url")
-            or pricing.get("current_new_url")
-            or (ebay_product_url(epid) if epid else None)
-            or ebay_search_url(name, ebay_cat)
-        )
-    elif AMAZON_FIRST:
-        # Registry-verified absent from Amazon: every Amazon rung skipped —
-        # a close-match page for an absent product is the wrong-product trap.
-        url = ensure_affiliate_tag(
-            pricing.get("affiliate_url")
-            or pricing.get("current_new_url")
-            or (ebay_product_url(epid) if epid else None)
-            or ebay_search_url(name, ebay_cat)
-        )
+    explicit = pricing.get("affiliate_url")
+    if explicit and "prf.hn" in explicit:
+        url = explicit  # already an affiliate link (feed/registry) — honour as-is
     else:
-        # Historical ladder (e930bea): explicit URLs outrank marketplace ids.
-        url = ensure_affiliate_tag(
-            pricing.get("affiliate_url")
-            or pricing.get("current_new_url")
-            or (amazon_product_url(asin) if asin else None)
-            or (ebay_product_url(epid) if epid else None)
-            or (ebay_search_url(name, ebay_cat) if not asin else None)
-            or amazon_search_url(name)
-        )
+        dest = pricing.get("adorama_url") or adorama_search_url(name)
+        url = partnerize_wrap(dest)
     price = pricing.get("current_new_usd") or pricing.get("msrp_usd") or 0
-    label = f"${int(price)} new" if price and price > 0 else "Check current price"
+    label = f"${int(price)} new" if price and price > 0 else "Check price at Adorama"
     return label, url
 
 
@@ -961,8 +941,8 @@ def apply_spine_gtins(cards):
     Third sibling of the registry-merge pair below, but sourced from the
     LIVE spine (data/skus.json) rather than a hand-kept registry — GTINs
     are machine-verified with provenance receipts and survive rebuilds on
-    the spine by construction. Enables the Amazon GTIN-search rung of
-    new_cta under AMAZON_FIRST. A card already carrying a gtin wins.
+    the spine by construction. The gtin is the cross-source join key (Adorama
+    Partnerize feed + Icecat specs); a card already carrying a gtin wins.
     """
     try:
         skus = json.loads(SKUS_SPINE_PATH.read_text(encoding="utf-8")).get("skus", {})

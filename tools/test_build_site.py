@@ -151,15 +151,12 @@ def test_empty_card_yields_no_axes():
 from build_site import ensure_affiliate_tag, new_cta, used_cta
 
 
-def test_raw_amazon_product_url_gets_tagged():
-    out = ensure_affiliate_tag("https://www.amazon.com/dp/B09JZT6XXX")
-    assert "tag=askmaddi-20" in out
-
-
-def test_already_tagged_amazon_url_not_doubled():
-    url = "https://www.amazon.com/dp/B09JZT6XXX?tag=askmaddi-20"
-    out = ensure_affiliate_tag(url)
-    assert out.count("tag=askmaddi-20") == 1
+def test_amazon_url_no_longer_tagged_after_associates_lapse():
+    # Associates lapsed 2026-07-24: we stop stamping askmaddi-20 (untracked +
+    # ToS risk on a non-active account). An amazon URL now passes through
+    # untouched, so the DEPLOYMENT.md untagged-link tripwire can flag it.
+    url = "https://www.amazon.com/dp/B09JZT6XXX"
+    assert ensure_affiliate_tag(url) == url
 
 
 def test_raw_ebay_item_url_gets_campaign_params():
@@ -172,17 +169,15 @@ def test_non_program_domain_passthrough():
     assert ensure_affiliate_tag(url) == url
 
 
-def test_new_cta_tags_current_new_url_when_affiliate_url_null():
-    card = {
-        "identity": {"display_name": "Sony A7 IV"},
-        "pricing": {
-            "affiliate_url": None,
-            "current_new_url": "https://www.amazon.com/dp/B09JZT6XXX",
-            "current_new_usd": 2498,
-        },
-    }
-    _, url = new_cta(card)
-    assert "tag=askmaddi-20" in url
+def test_new_cta_wraps_adorama_search_by_default():
+    # No explicit affiliate link, no exact product URL → product-scoped Adorama
+    # search, Partnerize-wrapped. No Amazon anywhere.
+    card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
+    label, url = new_cta(card)
+    assert url.startswith("https://adorama.prf.hn/click/camref:1101l5Pw9q/destination:")
+    assert "adorama.com/l/?searchinfo=Sony+A7+IV" in url
+    assert "amazon" not in url.lower() and "tag=askmaddi-20" not in url
+    assert label == "Check price at Adorama"
 
 
 def test_used_cta_tags_raw_search_url():
@@ -199,55 +194,52 @@ def test_used_cta_tags_raw_search_url():
     assert "campid=5339138080" in url
 
 
-def test_new_cta_prefers_asin_dp_link_over_search():
+def test_new_cta_prefers_exact_adorama_product_url_over_search():
+    # When the feed/registry supplies an exact Adorama product URL it beats the
+    # search, still Partnerize-wrapped.
     card = {
         "identity": {"display_name": "Sony A7 IV"},
-        "pricing": {"amazon_asin": "B09JZT6YK5", "affiliate_url": None, "current_new_url": None},
+        "pricing": {"adorama_url": "https://www.adorama.com/isoa7iv.html"},
     }
     _, url = new_cta(card)
-    assert "/dp/B09JZT6YK5" in url
-    assert "tag=askmaddi-20" in url
-    assert "/s?k=" not in url
+    assert url == ("https://adorama.prf.hn/click/camref:1101l5Pw9q/"
+                   "destination:https://www.adorama.com/isoa7iv.html")
+    assert "searchinfo" not in url
 
 
-def test_new_cta_asin_outranks_explicit_urls_under_amazon_first():
-    """FLIPPED 2026-07-17 (was: explicit urls outrank asin): under
-    AMAZON_FIRST the verified ASIN /dp/ rung leads the ladder — the
-    Associates-qualification strategy. The historical ordering survives
-    behind AMAZON_FIRST=False (one-line revert when PA-API lands)."""
-    card = {
-        "identity": {"display_name": "Sony A7 IV"},
-        "pricing": {"amazon_asin": "B09JZT6YK5", "current_new_url": "https://www.amazon.com/dp/BEXPLICIT01"},
-    }
+def test_new_cta_honours_prewrapped_partnerize_affiliate_url():
+    # An explicit prf.hn link (e.g. from the feed) is used verbatim, never
+    # double-wrapped.
+    card = {"identity": {"display_name": "X"},
+            "pricing": {"affiliate_url": "https://prf.hn/l/abc123"}}
     _, url = new_cta(card)
-    assert "/dp/B09JZT6YK5" in url and "BEXPLICIT01" not in url
+    assert url == "https://prf.hn/l/abc123"
 
 
-def test_new_cta_gtin_rung_beats_ebay_affiliate_chain():
-    """A GTIN-anchored card with the spine's eBay EPN URL (every new card's
-    shape) now lands on Amazon GTIN search — near-exact match, tagged,
-    qualification-earning. e930bea's name-search demotion is untouched:
-    GTIN search is categorically exact, name search stays last resort."""
-    card = {
-        "identity": {"display_name": "Ulanzi F38 Zero"},
-        "pricing": {"gtin": "00719821437895",
-                    "affiliate_url": "https://www.ebay.com/itm/147441377967"},
-    }
+def test_new_cta_never_emits_amazon_even_with_asin_gtin():
+    # Amazon ASIN/GTIN data may linger in the card; the new CTA must never link
+    # to a dead-tag Amazon URL.
+    card = {"identity": {"display_name": "Ulanzi F38 Zero"},
+            "pricing": {"gtin": "00719821437895", "amazon_asin": "B09JZT6YK5"}}
     _, url = new_cta(card)
-    assert "amazon.com/s?k=00719821437895" in url
-    assert "tag=askmaddi-20" in url
-    assert "ebay.com" not in url
+    assert "amazon" not in url.lower()
+    assert "adorama.prf.hn" in url
 
 
-def test_new_cta_no_amazon_data_keeps_ebay_chain():
-    """No ASIN, no GTIN: AMAZON_FIRST changes nothing — the eBay EPN chain
-    serves, and name search remains banished (e930bea guard holds)."""
-    card = {
-        "identity": {"display_name": "Sony A7 IV"},
-        "pricing": {"affiliate_url": "https://www.ebay.com/itm/12345"},
-    }
-    _, url = new_cta(card)
-    assert "ebay.com/itm/12345" in url
+def test_new_cta_label_shows_price_when_known():
+    card = {"identity": {"display_name": "Sony A7 IV"},
+            "pricing": {"current_new_usd": 2499, "adorama_url":
+                        "https://www.adorama.com/isoa7iv.html"}}
+    label, _ = new_cta(card)
+    assert label == "$2499 new"
+
+
+def test_partnerize_wrap_idempotent_and_scoped():
+    from build_site import partnerize_wrap, PARTNERIZE_SHORT
+    assert partnerize_wrap("https://prf.hn/l/x") == "https://prf.hn/l/x"  # already wrapped
+    # a non-Adorama destination is never mis-attributed to Adorama
+    assert partnerize_wrap("https://www.bhphotovideo.com/x") == "https://www.bhphotovideo.com/x"
+    assert partnerize_wrap("") == PARTNERIZE_SHORT  # never a dead CTA
 
 
 def test_apply_spine_gtins_merges_from_spine(tmp_path, monkeypatch):
@@ -262,16 +254,14 @@ def test_apply_spine_gtins_merges_from_spine(tmp_path, monkeypatch):
     assert "gtin" not in cards[1]["pricing"]
 
 
-def test_new_cta_search_fallback_without_asin():
-    # No ASIN, no EPID -> the ladder resolves to an EPN-tagged eBay search,
-    # NOT Amazon search. Amazon search would dump the buyer on a results page
-    # whose top hit is a different product (the e930bea CTA fix). This test is
-    # the regression guard for that reroute: a no-ASIN card must land on eBay.
-    card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
+def test_new_cta_search_is_product_scoped_not_generic_homepage():
+    # The default Adorama CTA must be scoped to THIS product (search), never the
+    # bare homepage short link — a generic landing kills conversion.
+    from build_site import PARTNERIZE_SHORT
+    card = {"identity": {"display_name": "Canon R5"}, "pricing": {}}
     _, url = new_cta(card)
-    assert "ebay.com" in url
-    assert "campid=5339138080" in url
-    assert "/s?k=" not in url  # must NOT fall back to Amazon search
+    assert url != PARTNERIZE_SHORT
+    assert "searchinfo=Canon+R5" in url
 
 
 # ─── SEO/OG batch (2026-06-10): head meta, JSON-LD, as-of, sitemap ──────────
@@ -454,22 +444,23 @@ def test_cards_dir_with_manifest_and_sitemap_still_allowed(tmp_path):
     assert (tmp_path / "out" / "sitemap.xml").exists()
 
 
-def test_gtin_search_carries_name_for_close_match_degradation():
-    """2026-07-17: bare-GTIN queries strand buyers on 'no results' when
-    Amazon lacks the GTIN. The hybrid query degrades to close-match."""
+def test_new_cta_ignores_gtin_and_asin_routes_to_adorama():
+    """Post-Amazon: GTIN no longer drives an Amazon search rung — the new CTA
+    is Adorama, product-scoped by display name."""
     card = {
         "identity": {"display_name": "Ulanzi F38 Zero"},
         "pricing": {"gtin": "00719821437895"},
     }
     _, url = new_cta(card)
-    assert "00719821437895" in url and "Ulanzi" in url
-    assert "tag=askmaddi-20" in url
+    assert "adorama.com/l/?searchinfo=Ulanzi+F38+Zero" in url
+    assert "amazon" not in url.lower()
 
 
-def test_amazon_absent_skips_every_amazon_rung():
-    """Registry-verified absent (e.g. PD Pro Tripod): GTIN or not, every
-    Amazon rung is skipped — close-match for an absent product is the
-    e930bea wrong-product trap. eBay chain serves."""
+def test_new_cta_does_not_hijack_an_ebay_affiliate_url_for_new():
+    """An eBay affiliate_url is a USED-market link (used_cta's domain). It must
+    NOT become the 'buy new' CTA — only a pre-wrapped prf.hn link is honoured
+    there; anything else falls to the Adorama destination. amazon_absent is now
+    irrelevant (no Amazon rungs exist)."""
     card = {
         "identity": {"display_name": "Peak Design Pro Tripod"},
         "pricing": {"gtin": "00840262600000", "amazon_absent": True,
@@ -477,7 +468,8 @@ def test_amazon_absent_skips_every_amazon_rung():
     }
     _, url = new_cta(card)
     assert "amazon.com" not in url
-    assert "ebay.com/itm/999" in url
+    assert "ebay.com/itm/999" not in url  # eBay link is not the NEW CTA
+    assert "adorama.prf.hn" in url
 
 
 def test_apply_asin_registry_marks_absent(tmp_path, monkeypatch):
