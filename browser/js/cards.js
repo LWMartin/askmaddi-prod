@@ -84,6 +84,18 @@ function renderTeaserCard(card) {
     const newUrl = card.pricing?.new_url || '#';
     const usedUrl = card.pricing?.used_url || '#';
 
+    // Amazon rung — omitted entirely when the build emitted no URL (absent-list
+    // card). The label is a CONSTANT: we hold no Creators API credentials, so
+    // Amazon price / rating / review count may not be displayed. Never swap
+    // this for formatPrice(...) — see the doctrine block in build_site.py.
+    const amazonUrl = card.pricing?.amazon_url || '';
+    const amazonBtn = amazonUrl
+        ? `<a href="${amazonUrl}" target="_blank" rel="nofollow noopener sponsored"
+              data-out data-retailer="amazon" class="btn-affiliate btn-buy-amazon">
+               See price on Amazon
+           </a>`
+        : '';
+
     return `
         <article class="teaser-card">
             <div class="card-image">
@@ -105,6 +117,7 @@ function renderTeaserCard(card) {
                     <a href="${usedUrl}" target="_blank" rel="noopener" class="btn-affiliate btn-buy-used">
                         ${usedLabel} used
                     </a>
+                    ${amazonBtn}
                 </div>
             </div>
             <a href="${card.card_url || '#'}" class="card-link">View full review card →</a>

@@ -111,6 +111,14 @@
                    data-out data-retailer="adorama" data-category="search"
                    style="display: none; margin-left: auto; font-size: 13px;">
                     Check price at Adorama &rarr;</a>
+                <!-- Amazon exit. Deliberately a LINK ONLY: we hold no Creators API
+                     credentials, so Amazon price / rating / review count / imagery
+                     may not be displayed. The label carries no number, ever.
+                     See the display doctrine block in tools/build_site.py. -->
+                <a id="amazon-crosscheck" href="#" target="_blank" rel="nofollow noopener sponsored"
+                   data-out data-retailer="amazon" data-category="search"
+                   style="display: none; font-size: 13px;">
+                    See price on Amazon &rarr;</a>
             </div>
 
             <div id="results-grid" class="results-grid"></div>

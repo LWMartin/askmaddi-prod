@@ -941,6 +941,12 @@ def teaser_entry(card):
                   if isinstance(v, (int, float)) and v > 0]
     used_price = min(used_bands) if used_bands else 0
     _, used_url = used_cta(card)
+    # Amazon rung for the matched-card view in search results. URL only — the
+    # LABEL is a constant baked into cards.js, never a price, and never derived
+    # from card data. Empty string when there is no rung (absent-list card), so
+    # cards.js omits the button rather than rendering a dead one.
+    az = amazon_cta(card)
+    amazon_url = az[1] if az else ""
     top = select_teaser_axes(card)
     return {
         "card_id": card["card_id"],
@@ -964,6 +970,7 @@ def teaser_entry(card):
         "pricing": {
             "new_price": int(new_price) if new_price else 0, "new_url": new_url,
             "used_price": int(used_price) if used_price else 0, "used_url": used_url,
+            "amazon_url": amazon_url,
         },
         "card_url": f"cards/{card['card_id']}/",
     }

@@ -114,20 +114,33 @@ class AskMaddi {
         const sites = Object.entries(this.manifests.sites);
         this.ui.showState('results');
         this.ui.initStreamingResults(query, sites.length);
-        // Adorama cross-check: a Partnerize-wrapped Adorama on-site search beside
-        // the eBay results — mirrors the card 'buy new' CTA (build_site.py
-        // adorama_search_url + partnerize_wrap; camref 1101l5Pw9q). Amazon retired
-        // here 2026-07-25: Associates dropped (3-buy threshold missed, reapply
-        // pending), so a live askmaddi-20 tag was untracked AND a ToS risk — same
-        // reason the card path dropped it 2026-07-24. This buyer-intent slot now
-        // points at the active relationship. Re-add an Amazon cross-check once
-        // reapproval lands with a valid tag.
+        // Retailer cross-checks: buyer-intent exits beside the results.
+        //
+        // Adorama — a Partnerize-wrapped on-site search, mirroring the card
+        // 'buy new' CTA (build_site.py adorama_search_url + partnerize_wrap;
+        // camref 1101l5Pw9q). This is the PRICED relationship: we are licensed
+        // to display Adorama feed pricing.
+        //
+        // Amazon — RESTORED 2026-07-27 (Associates reinstated, askmaddi20-20)
+        // as a LINK ONLY. We hold no Creators API credentials, so displaying
+        // Amazon price, availability, star rating, review count or imagery is
+        // not permitted — which is why Amazon was also dropped from the
+        // gateway's ENABLED_SITES: we no longer scrape it at all. A tagged
+        // search link surfaces nothing of Amazon's and still earns the click.
+        // NEVER interpolate a price into this label.
         const az = document.getElementById('adorama-crosscheck');
         if (az) {
             const dest = 'https://www.adorama.com/l/?searchinfo='
                 + encodeURIComponent(query).replace(/%20/g, '+');
             az.href = 'https://adorama.prf.hn/click/camref:1101l5Pw9q/destination:' + dest;
             az.style.display = 'inline';
+        }
+        const amz = document.getElementById('amazon-crosscheck');
+        if (amz) {
+            amz.href = 'https://www.amazon.com/s?k='
+                + encodeURIComponent(query).replace(/%20/g, '+')
+                + '&tag=askmaddi20-20';
+            amz.style.display = 'inline';
         }
         
         // Show matched review cards instantly (user sees content in <100ms)

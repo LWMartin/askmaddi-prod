@@ -165,7 +165,22 @@ MANIFEST_DIR = os.path.join(os.path.dirname(__file__), 'manifests')
 #   It stays in ENABLED_SITES so its manifest loads and the frontend lists eBay
 #   as a source — but the frontend routes eBay to the API branch, never /proxy.
 #   The manifest's extraction config is now vestigial (kept for schema parity).
-ENABLED_SITES = {'amazon', 'ebay'}
+# 2026-07-27: amazon REMOVED. Associates was reinstated (askmaddi20-20), and it
+#   is precisely BECAUSE we are an Associate again that we must stop scraping.
+#   Two independent reasons, either one sufficient:
+#     1. The agreement forbids displaying Amazon price / availability / star
+#        ratings / review counts / imagery without Creators API credentials,
+#        and this path existed to render exactly that (see manifests/amazon.json
+#        extraction.fields). Untagged links do not cure it — the rule binds the
+#        Associate's site, not just the tagged links on it.
+#     2. It forbids automated access to Amazon at all, so the scrape itself is
+#        exposure independent of what we choose to display.
+#   Amazon is NOT gone from the product: it is now a tagged, price-free exit
+#   (the #amazon-crosscheck link in index.html, and the per-card rung from
+#   build_site.amazon_cta). We surface OUR product data and link out; we no
+#   longer surface theirs. manifests/amazon.json is kept on disk — restoring
+#   the rung is a one-line change here IF Creators API credentials ever land.
+ENABLED_SITES = {'ebay'}
 
 
 def load_manifests():

@@ -45,15 +45,20 @@ class AffiliateManager {
                 cookieDays: 1
             },
             'amazon.com': {
-                // Disabled 2026-07-25: Associates dropped (3-buy threshold missed,
-                // reapply pending). A live askmaddi-20 tag on a non-active account
-                // is untracked AND a ToS risk — so result links stay unstamped
-                // (same reason build_site.py stopped stamping cards 2026-07-24).
-                // Flip back to true once reapproval lands with a valid tag.
-                enabled: false,
+                // Reinstated 2026-07-27 with the new tracking id. Kept ENABLED
+                // as a safety net rather than a primary path: we no longer
+                // scrape Amazon (removed from the gateway's ENABLED_SITES), so
+                // in normal operation no amazon.com URL reaches wrapLink at
+                // all. If one ever does, it must arrive TAGGED rather than
+                // silently untracked — that failure mode is what cost us the
+                // account's tracking once already.
+                // NOTE: tagging a link is always permitted; DISPLAYING Amazon
+                // price / rating / review count / imagery is not, absent
+                // Creators API credentials. This wrapper does links only.
+                enabled: true,
                 name: 'Amazon Associates',
                 param: 'tag',
-                code: 'askmaddi-20',
+                code: 'askmaddi20-20',
                 commission: '1-4%',
                 cookieDays: 1
             },

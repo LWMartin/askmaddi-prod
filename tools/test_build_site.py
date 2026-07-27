@@ -143,6 +143,29 @@ def test_teaser_entry_carries_role_field():
             assert k in a
 
 
+def test_teaser_entry_carries_amazon_rung_url():
+    card = _card([_axis("video", 85, 150)])
+    card.setdefault("pricing", {})["amazon_asin"] = "B09JZT6YK5"
+    entry = teaser_entry(card)
+    assert "/dp/B09JZT6YK5" in entry["pricing"]["amazon_url"]
+    assert "tag=askmaddi20-20" in entry["pricing"]["amazon_url"]
+
+
+def test_teaser_entry_amazon_url_empty_for_absent_card():
+    # Empty string, not a dead '#' link — cards.js omits the button entirely.
+    card = _card([_axis("video", 85, 150)])
+    card.setdefault("pricing", {})["amazon_absent"] = True
+    assert teaser_entry(card)["pricing"]["amazon_url"] == ""
+
+
+def test_teaser_entry_pricing_keeps_prior_keys():
+    # Regression guard: adding amazon_url must not disturb the shape cards.js
+    # already reads (new_price / new_url / used_price / used_url).
+    entry = teaser_entry(_card([_axis("video", 85, 150)]))
+    for k in ("new_price", "new_url", "used_price", "used_url", "amazon_url"):
+        assert k in entry["pricing"]
+
+
 def test_empty_card_yields_no_axes():
     assert select_teaser_axes(_card([])) == []
 
