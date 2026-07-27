@@ -222,6 +222,21 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             # Any spine miss is a stop-the-line infra defect (exit 4,
             # deterministic 3-strike), never a quiet pre-spine card.
             cmd += ['--require-spine']
+            # Mint date (2026-07-27): the PUBLISHED card is the birth
+            # certificate. Passed explicitly for the same reason as --spine —
+            # the factory knows the root and the argv is what the test
+            # contract pins. build_card forwards it to assemble, which carries
+            # freshness.created_at into the rebuild.
+            #
+            # Deliberately NOT gated on existence and deliberately NOT fatal
+            # when it misses, unlike --require-spine. A card built for the
+            # first time has no published counterpart, which is normal, and a
+            # rebuild whose published card is unreadable still has the build
+            # root to fall back on. assemble reports either fallback on stdout,
+            # so the drip log carries the evidence instead of the date quietly
+            # resetting — which is the failure this whole wire exists to end.
+            cmd += ['--prior-card',
+                    str(Path(askmaddi_prod) / 'data' / 'cards' / f'{slug}.json')]
         if yt:
             # Stage 1b: paced YT transcript leg into the same triples dir.
             # Factory-global posture, not per-record — quality-first cards

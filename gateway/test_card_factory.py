@@ -245,6 +245,86 @@ def test_build_card_runner_passes_spine_with_askmaddi_prod(tmp_path, monkeypatch
     assert cmd[j + 1] == '/opt/askmaddi-prod'
 
 
+def test_build_card_runner_passes_prior_card_with_askmaddi_prod(tmp_path,
+                                                                monkeypatch):
+    """Mint-date wire (2026-07-27): the factory passes the PUBLISHED card
+    explicitly, derived from the same root as --spine.
+
+    Before this, every rebuild reset freshness.created_at — 11 of 11 published
+    cards had lost 1-18 days of mint history by the time it was found. The
+    build root alone is not sufficient as a witness: /var/lib/askmaddi-cards
+    can be wiped, and at 2 cards/day a silent reset would have propagated
+    across the whole catalog during the rebuild."""
+    captured = {}
+
+    class _Proc:
+        returncode = 0
+        stderr = ''
+        stdout = ''
+
+    def fake_run(cmd, cwd, capture_output, text):
+        captured['cmd'] = cmd
+        return _Proc()
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    runner = cf.build_card_runner(
+        build_card_path='/tmp/aggregator-build/build_card.py',
+        askmaddi_prod='/opt/askmaddi-prod',
+        enrich_client='mock')
+    rc, _, _ = runner({'slug': 'sony-a7iv', 'label': 'Sony A7 IV',
+                       'category': 'body'})
+    assert rc == 0
+    cmd = captured['cmd']
+    i = cmd.index('--prior-card')
+    assert cmd[i + 1] == '/opt/askmaddi-prod/data/cards/sony-a7iv.json'
+
+
+def test_prior_card_passed_even_when_absent(tmp_path, monkeypatch):
+    """Deliberately NOT gated on existence, unlike --spine.
+
+    A first build has no published card and that is normal, not an error.
+    build_card/assemble degrade to the build root and report it on stdout, so
+    the drip log carries the evidence. Gating here would silently drop the
+    argv and make the fallback invisible — the exact shape of the original
+    bug."""
+    captured = {}
+
+    class _Proc:
+        returncode = 0
+        stderr = ''
+        stdout = ''
+
+    monkeypatch.setattr(cf.subprocess, 'run',
+                        lambda cmd, cwd, capture_output, text:
+                        (captured.__setitem__('cmd', cmd), _Proc())[1])
+    runner = cf.build_card_runner(
+        build_card_path='/tmp/aggregator-build/build_card.py',
+        askmaddi_prod=str(tmp_path / 'nonexistent-root'),
+        enrich_client='mock')
+    runner({'slug': 'brand-new-sku', 'label': 'Brand New', 'category': 'body'})
+    assert '--prior-card' in captured['cmd']
+
+
+def test_no_prod_root_no_prior_card(tmp_path, monkeypatch):
+    """Sandbox/manual posture: no root means no derived published card, same
+    as --spine."""
+    captured = {}
+
+    class _Proc:
+        returncode = 0
+        stderr = ''
+        stdout = ''
+
+    monkeypatch.setattr(cf.subprocess, 'run',
+                        lambda cmd, cwd, capture_output, text:
+                        (captured.__setitem__('cmd', cmd), _Proc())[1])
+    runner = cf.build_card_runner(
+        build_card_path='/tmp/aggregator-build/build_card.py',
+        enrich_client='mock')
+    runner({'slug': 'sony-a7iv', 'label': 'Sony A7 IV', 'category': 'body'})
+    assert '--prior-card' not in captured['cmd']
+
+
 def test_build_card_runner_failure_detail(tmp_path, monkeypatch):
     class _Proc:
         returncode = 2
