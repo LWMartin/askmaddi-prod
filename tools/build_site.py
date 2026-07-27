@@ -92,6 +92,41 @@ def fmt_date_human(iso_str):
         return ""
 
 
+def days_since(iso_str):
+    """Whole days between an ISO timestamp and now, or None if unparseable.
+
+    Computed at RENDER, never read from the card. freshness.staleness_days is
+    stored at build time and frozen — it reads 0 on a card five weeks old,
+    because it was 0 the moment it was written. A derived value with a clock in
+    it must not be persisted. (That field has no readers anywhere in either
+    repo; it is scheduled for removal from the factory writer.)
+    """
+    if not iso_str:
+        return None
+    try:
+        dt = datetime.fromisoformat(str(iso_str).replace("Z", "+00:00"))
+    except (ValueError, TypeError):
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return max(0, (datetime.now(timezone.utc) - dt).days)
+
+
+def synthesis_asof(card):
+    """(date, days_ago) for the REVIEW SYNTHESIS — a different clock from price.
+
+    The two must never be collapsed into one 'Last updated' stamp. Prices
+    refresh nightly and cheaply; synthesis requires re-extracting every source
+    and re-running the models, which does not scale nightly once the catalog
+    reaches hundreds of cards. Showing one date implies the expensive clock
+    ticks as fast as the cheap one — which would be advertising staleness to a
+    recency-weighting engine, and would simply be untrue.
+    """
+    fresh = card.get("freshness", {}) or {}
+    raw = fresh.get("last_built") or ""
+    return fmt_date_human(raw), days_since(raw)
+
+
 def used_price_asof(card):
     """ISO date the used band was fetched, or '' (honest absence, no fallback
     to build time — a build is not a price observation)."""
@@ -646,9 +681,30 @@ def render_page(card, image_url=None):
 
     fresh = card.get("freshness", {}) or {}
     source_count = fresh.get("source_count", len(card.get("sources", [])))
-    last_built = (fresh.get("last_built") or "")[:10]
 
     conf = (card.get("confidence", {}) or {}).get("overall", "unknown")
+
+    # Two clocks, deliberately labelled apart (see synthesis_asof). The hero
+    # meta carries the SYNTHESIS date; price recency is rendered separately by
+    # asof_html. "Last updated" was ambiguous — a reader takes it for the whole
+    # page, so a nightly price tick would appear to vouch for month-old
+    # synthesis. Naming the clock is both honest and the stronger claim.
+    # Parallel phrasing with the price line ("Used price as of …") is doing
+    # real work here: two clauses of identical shape and different nouns read
+    # as two distinct facts, where one generic stamp read as a claim about the
+    # whole page.
+    synth_date, synth_days = synthesis_asof(card)
+    if synth_date and synth_days is not None:
+        if synth_days == 0:
+            synth_meta = f"· Analysis as of {esc(synth_date)} (today)"
+        elif synth_days == 1:
+            synth_meta = f"· Analysis as of {esc(synth_date)} (1 day ago)"
+        else:
+            synth_meta = f"· Analysis as of {esc(synth_date)} ({synth_days} days ago)"
+    elif synth_date:
+        synth_meta = f"· Analysis as of {esc(synth_date)}"
+    else:
+        synth_meta = ""
 
     new_label, new_url = new_cta(card)
     used_label, used_url = used_cta(card)
@@ -789,7 +845,7 @@ def render_page(card, image_url=None):
           {asof_html}
           <p class="hero-meta">
             Synthesized from <strong>{source_count}</strong> reviewer sources
-            {f"· Last updated {esc(last_built)}" if last_built else ""}
+            {synth_meta}
           </p>
         </div>
       </section>

@@ -7,6 +7,7 @@ Run from repo root:  python -m pytest tools/test_build_site_phase0.py -q
 """
 import re
 import sys
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -158,6 +159,64 @@ def test_dead_tag_absent_from_rendered_page():
     card["pricing"]["amazon_asin"] = "B09JZT6YK5"
     html = render_page(card)
     assert not re.search(r"tag=askmaddi-20(?![0-9])", html)
+
+
+def test_stale_card_reports_its_age_honestly():
+    """Staleness is computed at RENDER, not read from the card.
+
+    freshness.staleness_days is frozen at build time and reads 0 on a card
+    five weeks old. A card built 40 days ago must say so on the page — the
+    whole point of surfacing freshness is defeated if the number can lie.
+    """
+    card = _card()
+    old = datetime.now(timezone.utc) - timedelta(days=40)
+    card["freshness"] = {
+        "last_built": old.isoformat(),
+        "staleness_days": 0,          # the frozen lie; must be ignored
+        "source_count": 7,
+    }
+    html = render_page(card)
+    assert "40 days ago" in html
+    assert "Analysis as of" in html
+
+
+def test_fresh_card_says_today():
+    card = _card()
+    card["freshness"] = {
+        "last_built": datetime.now(timezone.utc).isoformat(),
+        "source_count": 7,
+    }
+    assert "(today)" in render_page(card)
+
+
+def test_synthesis_and_price_clocks_are_labelled_apart():
+    """The two clocks must never collapse into one 'Last updated' stamp.
+
+    Prices refresh nightly and cheaply; synthesis re-extraction does not scale
+    nightly at catalog size. One undifferentiated stamp would let a nightly
+    price tick appear to vouch for month-old synthesis.
+    """
+    card = _card()
+    old = datetime.now(timezone.utc) - timedelta(days=30)
+    card["freshness"] = {"last_built": old.isoformat(), "source_count": 7}
+    card["pricing"]["used_market"] = {
+        "price_updated_at": datetime.now(timezone.utc).isoformat(),
+        "bands": {"good": 900},
+    }
+    html = render_page(card)
+    assert "Analysis as of" in html and "30 days ago" in html
+    assert "Used price as of" in html
+    # The ambiguous phrasing must not come back.
+    assert "Last updated" not in html
+
+
+def test_missing_last_built_degrades_silently():
+    # Honest absence: no date claim at all rather than a build-time fallback.
+    card = _card()
+    card["freshness"] = {"source_count": 7}
+    html = render_page(card)
+    assert "Analysis as of" not in html
+    assert "days ago" not in html
 
 
 def test_page_includes_beacon_and_subscribe():
