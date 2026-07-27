@@ -71,7 +71,7 @@ SCHEMA_VERSION = '0.1.0'
 #              so retries would burn build budget deterministically for
 #              nothing. Recovery is requeue() after sourcing improves.
 STATES = ('resolved', 'building', 'review_ready', 'promoted', 'failed',
-          'rejected', 'corpus_thin')
+          'rejected', 'corpus_thin', 'needs_category')
 
 # Structured reject reasons for a human-declined clean card — same discipline as
 # review_queue.REJECT_REASONS: a reject is a controlled-vocab BUG REPORT against
@@ -563,6 +563,45 @@ def mark_corpus_thin(slug, detail, *, path=WORK_QUEUE_PATH):
     return record
 
 
+def mark_needs_category(slug, detail, *, path=WORK_QUEUE_PATH):
+    """Park a building record as `needs_category` (build_card refused to guess).
+
+    The SKU has no authored `facet` in the spine, so no dictionary category
+    could be resolved and the build stopped before spending fetch effort.
+
+    NO retry path, on the same reasoning as mark_corpus_thin: the verdict is
+    a pure function of the spine, so the next tick re-resolves it
+    identically and retries would burn the attempt budget on a settled
+    outcome. Unlike corpus_thin, though, what re-opens it is not better
+    sourcing but a HUMAN DECISION — someone has to say what this product is.
+    That is why this parks visibly instead of failing: a card built as the
+    wrong product is worse than a card not built, and the fix is an
+    authoring act, not an engineering one. requeue() re-opens the record
+    once the facet exists.
+
+    Does NOT increment built_today — a refusal is not a build.
+
+    Returns the record. Raises KeyError if absent, ValueError if not `building`.
+    """
+    queue = load_queue(path)
+    q = queue.get('queue', {})
+    record = q.get(slug)
+    if record is None:
+        raise KeyError(f"no work-queue record {slug!r}")
+    if record.get('state') != 'building':
+        raise ValueError(
+            f"record {slug!r} is {record.get('state')!r}, not building — "
+            f"only a building record can park needs_category."
+        )
+
+    record['state'] = 'needs_category'
+    record['last_error'] = str(detail)[:500]
+    record['needs_category_at'] = _now()
+    queue['as_of'] = _today()
+    _atomic_write(queue, path)
+    return record
+
+
 def mark_enrich_partial(slug, detail, *, path=WORK_QUEUE_PATH):
     """Record a budgeted-enrich checkpoint tick: state back to 'resolved'
     (re-claimable next tick), NO attempt burned, resume_stage='enrich' so
@@ -586,7 +625,7 @@ def mark_enrich_partial(slug, detail, *, path=WORK_QUEUE_PATH):
     return record
 
 
-_REQUEUEABLE = ('failed', 'rejected', 'corpus_thin')
+_REQUEUEABLE = ('failed', 'rejected', 'corpus_thin', 'needs_category')
 
 
 def requeue(slug, *, path=WORK_QUEUE_PATH):

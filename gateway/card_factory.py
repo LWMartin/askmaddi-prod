@@ -62,6 +62,12 @@ EXIT_CORPUS_THIN = 3
 # weather (turtle): the factory's missing verb was "still working"
 # (2026-07-17 — sony-a7-v parked 3/3 twice for having too many reviews).
 EXIT_ENRICH_PARTIAL = 6
+# Mirror of build_card.EXIT_CATEGORY_UNRESOLVED: the SKU has no authored
+# `facet`, so no dictionary category could be resolved and build_card refused
+# to guess rather than extract the product as a prime lens. Deterministic like
+# CORPUS_THIN, so it parks; unlike CORPUS_THIN what re-opens it is a human
+# authoring the facet, not better sourcing.
+EXIT_CATEGORY_UNRESOLVED = 7
 
 DEFAULT_DAILY_CAP = 4           # cards/day. History: 12 until 2026-07-07, then
                                 # 2 (quality-first reframe), then 4 on
@@ -364,6 +370,12 @@ def tick(runner, *, cap=DEFAULT_DAILY_CAP, path=work_queue.WORK_QUEUE_PATH):
         # retry (see mark_corpus_thin). Not counted against the daily cap.
         work_queue.mark_corpus_thin(slug, detail, path=path)
         return {'action': 'corpus_thin', 'slug': slug, 'detail': detail}
+
+    if rc == EXIT_CATEGORY_UNRESOLVED:
+        # Refused before stage 1 — no fetch effort was spent. Parks for a
+        # human to author the facet; requeue() re-opens it.
+        work_queue.mark_needs_category(slug, detail, path=path)
+        return {'action': 'needs_category', 'slug': slug, 'detail': detail}
 
     if rc == EXIT_ENRICH_PARTIAL:
         rec = work_queue.mark_enrich_partial(slug, detail, path=path)
