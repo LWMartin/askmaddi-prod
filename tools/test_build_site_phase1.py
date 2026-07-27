@@ -109,7 +109,7 @@ class TestGroundedPercentages:
     def test_stat_line_carries_denominators(self):
         line = answer_stat_line(_card(), 55)
         assert "524 claims" in line
-        assert "55 sources" in line
+        assert "55 reviews" in line
         assert "positive" in line and "neutral" in line and "negative" in line
 
     @pytest.mark.parametrize("share", ["positive", "neutral", "negative"])
@@ -236,3 +236,53 @@ class TestDateClaimsDescribeTheAnalysisNotTheSources:
         html = render_page(_card())
         title = re.search(r"<title>(.*?)</title>", html, re.S).group(1)
         assert str(datetime.now(timezone.utc).year) in title
+
+
+class TestClaimScope:
+    """We are not exhaustive and must not read as if we were.
+
+    Three distinct overclaims have now been caught on this one sentence, all
+    of the same shape — a true token implying more than the data supports:
+
+      1. a lone "32% positive" on a 62%-negative axis (fixed 7bcba5c),
+      2. "in 2026" on a corpus spanning 2021-2026 (fixed 09d2902),
+      3. "524 claims across 55 sources", exact, but reading as THE review
+         landscape rather than the slice we assembled.
+
+    Coverage and classification get separate qualifiers because they are
+    separate uncertainties: we chose which reviews to compile, and a model
+    chose how to label each claim. The numbers themselves stay concrete —
+    softening them would cost citation value without buying honesty, since the
+    counts are the one part that is not uncertain.
+    """
+
+    def test_coverage_is_scoped_to_what_we_compiled(self):
+        line = answer_stat_line(_card(), 55)
+        assert "reviews we compiled" in line
+
+    def test_classification_is_attributed_to_us(self):
+        line = answer_stat_line(_card(), 55)
+        assert "we read as" in line
+
+    def test_numbers_stay_concrete(self):
+        """Scope qualifiers, not hedged figures."""
+        line = answer_stat_line(_card(), 55)
+        for token in ("524 claims", "55 reviews", "32% positive",
+                      "6% neutral", "62% negative"):
+            assert token in line, token
+        for weasel in ("roughly", "approximately", "about 5", "~"):
+            assert weasel not in line
+
+    @pytest.mark.parametrize("claim", [
+        "all reviews", "every review", "all available", "complete list",
+        "exhaustive", "the internet's",
+    ])
+    def test_no_exhaustiveness_claim_anywhere_on_the_page(self, claim):
+        html = render_page(_card()).lower()
+        assert claim not in html
+
+    def test_reads_as_a_sentence_without_a_date(self):
+        """No leading lowercase when the as-of clause is absent."""
+        card = _card(freshness={"source_count": 55})
+        line = answer_stat_line(card, 55)
+        assert line.startswith("Among the")

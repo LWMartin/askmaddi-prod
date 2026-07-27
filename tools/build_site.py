@@ -339,13 +339,29 @@ def answer_stat_line(card, source_count):
     if not triple:
         return ""
     name = axis.get("display_name") or axis.get("axis_id", "")
-    body = (f"{total} claims across {source_count} sources on "
-            f"{name.lower()}: {triple}.")
+    # Two scope qualifiers, doing different jobs:
+    #
+    #   "among the N reviews we compiled" bounds COVERAGE. We are not
+    #   exhaustive and cannot be — this is the slice we assembled, not the
+    #   review landscape. "N claims across N sources" was exact and still
+    #   overclaimed, because a bare denominator reads as the whole population.
+    #
+    #   "which we read as" attributes CLASSIFICATION. The counts are exact
+    #   within the corpus, but the pos/neu/neg split is a model's reading of
+    #   each claim, not a fact the reviewers stated. Owning that is what makes
+    #   the number trustworthy rather than merely confident.
+    #
+    # Both are scope, not hedging: every figure stays concrete and extractable.
+    # Softening the numbers themselves would cost the citation value AND the
+    # honesty, since the counts are not the uncertain part.
+    body = (f"among the {source_count} reviews we compiled, {name.lower()} "
+            f"drew the most discussion: {total} claims, which we read as "
+            f"{triple}.")
     # The date qualifier LEADS. An extractor lifting the first clause gets the
     # scope of the claim with it, rather than a bare statistic that reads as
     # timeless.
     asof = asof_phrase(card)
-    return f"{asof}, {body[0].lower()}{body[1:]}" if asof else body
+    return f"{asof}, {body}" if asof else f"{body[0].upper()}{body[1:]}"
 
 
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
