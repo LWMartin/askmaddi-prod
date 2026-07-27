@@ -76,7 +76,7 @@ def test_section_reads_facts_specs_location():
     card = _card(specs={"weight": _fv(anchor=665, low=665, high=665, unit="g"),
                         "mount": _fv(value="Sony E-mount")})
     html = specs_section(card)
-    assert "Specifications" in html
+    assert "specifications?" in html.lower()
     assert "665 g" in html
     assert "Sony E-mount" in html
     assert "Weight" in html and "Mount" in html

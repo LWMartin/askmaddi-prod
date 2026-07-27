@@ -213,6 +213,101 @@ def pct(pos, total):
     return round(100 * pos / total) if total else 0
 
 
+def card_name(card):
+    """The product's display name — question-form headings need it in helper
+    sections that only receive the card."""
+    return (card.get("identity", {}) or {}).get("display_name") or ""
+
+
+def specs_heading(card):
+    """Question-form specs heading, degrading to the unnamed form.
+
+    Two branches rather than string interpolation with a possibly-empty name:
+    the naive version renders "What are the  specifications?" with a doubled
+    space on any card lacking a display name. A heading is the most-read line
+    in its section — it does not get to be almost right."""
+    name = card_name(card)
+    return (f"What are the {name} specifications?" if name
+            else "What are the full specifications?")
+
+
+def used_price_heading(card):
+    """Question-form used-market heading, degrading to the unnamed form."""
+    name = card_name(card)
+    return (f"What does a used {name} cost?" if name
+            else "What does this cost on the used market?")
+
+
+def sentiment_triple(sent):
+    """All three shares, or nothing. Never one alone.
+
+    A single share is not a fact about an axis. Before 2026-07-27 the A7 IV
+    card led with "524 claims, 32% positive" on video capability — an axis that
+    is 62% NEGATIVE. The number was accurate and the sentence was misleading,
+    because a lone positive share reads as mild approval and there is no
+    denominator visible to correct it. Worse, that sentence is also the meta
+    description and the schema.org description, so the ungrounded figure was
+    reaching three surfaces at once.
+
+    Pos/neu/neg together are the only grounded form. The neutral share is not
+    filler either: a high neutral rate means the coverage is descriptive rather
+    than evaluative, which changes how much weight the other two deserve.
+
+    Returns "" when there is nothing to divide by — no claims means no shares,
+    and inventing 0%/0%/0% would assert a measurement that was never made."""
+    pos = sent.get("pos", 0) or 0
+    neu = sent.get("neu", 0) or 0
+    neg = sent.get("neg", 0) or 0
+    total = sent.get("total") or (pos + neu + neg)
+    if not total:
+        return ""
+    return (f"{pct(pos, total)}% positive, {pct(neu, total)}% neutral, "
+            f"{pct(neg, total)}% negative")
+
+
+def most_discussed_axis(card):
+    """The axis carrying the most claims — the one the answer block leads on.
+
+    Ranked by claim VOLUME, not by sentiment. What reviewers spend their words
+    on is the honest headline; picking the most favourable axis instead would
+    be the editorial thumb on the scale the whole synthesis-not-opinion posture
+    exists to avoid."""
+    best, best_total = None, 0
+    for axis in (card.get("lead_axes") or []) + (card.get("detail_axes") or []):
+        sent = axis.get("sentiment") or {}
+        total = sent.get("total") or (
+            (sent.get("pos", 0) or 0) + (sent.get("neu", 0) or 0)
+            + (sent.get("neg", 0) or 0))
+        if total > best_total:
+            best, best_total = axis, total
+    return best
+
+
+def answer_stat_line(card, source_count):
+    """The extractable stat sentence: countable, denominated, dated.
+
+    Literal text near the top of the page, in the plainest possible form, so an
+    extractor can lift it whole and a reader can check it. Every number carries
+    what it is a share OF."""
+    axis = most_discussed_axis(card)
+    if axis is None:
+        return ""
+    sent = axis.get("sentiment") or {}
+    total = sent.get("total") or (
+        (sent.get("pos", 0) or 0) + (sent.get("neu", 0) or 0)
+        + (sent.get("neg", 0) or 0))
+    triple = sentiment_triple(sent)
+    if not triple:
+        return ""
+    name = axis.get("display_name") or axis.get("axis_id", "")
+    line = (f"{total} claims across {source_count} sources on "
+            f"{name.lower()}: {triple}.")
+    date, days = synthesis_asof(card)
+    if date:
+        line += f" Analysis as of {date}."
+    return line
+
+
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
 def adorama_search_url(display_name):
     """Adorama on-site search for a product name — the Adorama analogue of
@@ -479,7 +574,7 @@ def price_history_section(card):
     asof_line = f'<p class="band-note">Prices as of {esc(asof)} — lowest active listing per condition.</p>' if asof else ""
     return f"""
       <section class="card-section">
-        <h2 class="card-section-head">Used Market</h2>
+        <h2 class="card-section-head">{esc(used_price_heading(card))}</h2>
         <div class="band-grid">{"".join(cells)}</div>
         {sold_line}
         {asof_line}
@@ -601,7 +696,7 @@ def specs_section(card):
     prov_html = _specs_provenance_line(facts)
     return f"""
       <section class="card-section">
-        <h2 class="card-section-head">Specifications</h2>
+        <h2 class="card-section-head">{esc(specs_heading(card))}</h2>
         <div class="spec-grid">{cells}</div>{prov_html}
       </section>"""
 
@@ -712,6 +807,14 @@ def render_page(card, image_url=None):
 
     synth = (card.get("synthesis", {}) or {}).get("consensus_paragraph", "")
 
+    # Phase 1 (maddi-distribution): year interpolated at RENDER, never stored,
+    # so the heading rolls over at the year boundary with no rebuild. Kept out
+    # of the <h1>: that stays the bare product name, which is the branded-search
+    # anchor and the schema.org `name` — a churning heading buys nothing the
+    # title tag isn't already getting.
+    render_year = datetime.now(timezone.utc).year
+    stat_line = answer_stat_line(card, source_count)
+
     # Empty axes (sentiment.total == 0) are suppressed entirely — no reviewer
     # touched them, so rendering a 0/0/0 bar is noise, not information.
     # Meta-axes in CARD_HIDDEN_META_AXES are likewise suppressed from the page.
@@ -732,7 +835,7 @@ def render_page(card, image_url=None):
         )
         clusters_html = f"""
       <section class="card-section">
-        <h2 class="card-section-head">Common Concerns</h2>
+        <h2 class="card-section-head">What problems do reviewers report?</h2>
         <ul class="issue-list">{items}</ul>
       </section>"""
 
@@ -743,7 +846,7 @@ def render_page(card, image_url=None):
     # Key Axes header only renders if at least one non-empty lead axis survives.
     lead_section = (
         f'''<section class="card-section">
-        <h2 class="card-section-head">Key Axes</h2>
+        <h2 class="card-section-head">What do reviewers praise and criticize?</h2>
         <div class="axes-stack">{lead_html}</div>
       </section>''' if lead else ''
     )
@@ -798,7 +901,7 @@ def render_page(card, image_url=None):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{esc(name)} review — synthesized from {source_count} sources | AskMaddi</title>
+  <title>{esc(name)} review in {render_year} — synthesized from {source_count} sources | AskMaddi</title>
   <meta name="description" content="{esc(meta_desc)}">
   <link rel="canonical" href="{esc(canonical)}">
   <meta property="og:title" content="{esc(name)} — AskMaddi">
@@ -850,12 +953,13 @@ def render_page(card, image_url=None):
         </div>
       </section>
 
-      {specs_html}
-
-      {f'''<section class="card-section">
-        <h2 class="card-section-head">What reviewers agree on</h2>
+      {f'''<section class="card-section answer-first">
+        <h2 class="card-section-head">What do reviewers say about the {esc(name)} in {render_year}?</h2>
+        {f'<p class="answer-stats">{esc(stat_line)}</p>' if stat_line else ''}
         <p class="synthesis-text">{esc(synth)}</p>
       </section>''' if synth else ''}
+
+      {specs_html}
 
       {lead_section}
 
@@ -871,7 +975,7 @@ def render_page(card, image_url=None):
       {price_html}
 
       <section class="card-section" id="sources">
-        <h2 class="card-section-head">Sources <span class="src-total">({source_count})</span></h2>
+        <h2 class="card-section-head">Which reviews is this based on? <span class="src-total">({source_count})</span></h2>
         <p class="src-intro">Every claim above traces to these original reviews. We don't write opinions \u2014 we synthesize theirs.</p>
         {sources_html}
       </section>
