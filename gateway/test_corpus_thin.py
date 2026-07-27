@@ -6,7 +6,7 @@ Covers the askmaddi-prod half of the Stage 1b / corpus-floor wiring:
   - card_factory.tick: EXIT_CORPUS_THIN (3) routes to the park, distinct from
     the failed/retry path; cap is untouched by an abstention.
   - build_card_runner: yt=True appends --yt to the build_card cmd.
-  - DEFAULT_DAILY_CAP is 2 (the politeness budget, pinned by test).
+  - DEFAULT_DAILY_CAP is pinned by test (the politeness budget).
 """
 import sys
 from pathlib import Path
@@ -111,8 +111,13 @@ def test_tick_generic_failure_still_retries(qpath):
     assert out["action"] == "retry"  # rc=1 keeps the existing retry budget path
 
 
-def test_default_cap_is_two():
-    assert card_factory.DEFAULT_DAILY_CAP == 2
+def test_default_cap_is_pinned():
+    """The cap is a politeness budget against upstream fetch volume, not a
+    throughput dial, so its value is pinned — changing it must be a deliberate
+    edit here rather than a drive-by tweak. 2 -> 4 on 2026-07-27 to move toward
+    the breadth gate; the ~20 YT attempts/card in build_card's drip profile
+    make this ~80 jittered fetches/day."""
+    assert card_factory.DEFAULT_DAILY_CAP == 4
 
 
 def test_runner_appends_yt_flag(tmp_path, monkeypatch):

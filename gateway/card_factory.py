@@ -63,14 +63,26 @@ EXIT_CORPUS_THIN = 3
 # (2026-07-17 — sony-a7-v parked 3/3 twice for having too many reviews).
 EXIT_ENRICH_PARTIAL = 6
 
-DEFAULT_DAILY_CAP = 2           # cards/day (was 12 until 2026-07-07). Quality-
-                                # first reframe: 1-2 rich cards/day is the
-                                # service; the YT leg's budget lives in
-                                # build_card's PROFILES (drip ~20 attempts/
-                                # card), so worst case is ~40 jittered
-                                # fetches SPREAD ACROSS A DAY — the bulk era
-                                # did 50 in one sitting. The cap IS the
-                                # politeness budget, not a throughput target.
+DEFAULT_DAILY_CAP = 4           # cards/day. History: 12 until 2026-07-07, then
+                                # 2 (quality-first reframe), then 4 on
+                                # 2026-07-27. The cap IS the politeness budget,
+                                # not a throughput target — the drip profile
+                                # spends ~20 YT fetch attempts per card (see
+                                # build_card's PROFILES), so this is ~80
+                                # jittered fetches SPREAD ACROSS A DAY against
+                                # the bulk era's 50 in one sitting.
+                                #
+                                # Why 4 and not 6+: compute is NOT the binding
+                                # constraint (the 2026-07-19 flock makes
+                                # overlapping builds structurally impossible
+                                # and enrich serializes, so even 6/day would
+                                # occupy ~4.5h), so the only thing this number
+                                # protects is upstream exposure. 4 doubles
+                                # new-card throughput toward the breadth gate
+                                # while leaving headroom to read the drip log
+                                # before going further. Raise deliberately,
+                                # with the log in hand — not because a build
+                                # slot looked idle.
 DEFAULT_TICK_SLEEP = 300        # seconds between ticks (5 min) when work remains
 DEFAULT_IDLE_SLEEP = 1800       # seconds to sleep when capped or queue-empty (30 min)
 
