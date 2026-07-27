@@ -17,8 +17,13 @@ from .scoring import FLAG_DISPLAY
 
 # --- Affiliate Link Wrapping ---
 
+# 2026-07-27: askmaddi-20 was dead from the Associates suspension and was never
+# cleared out of this path (the 07-24 retirement only touched build_site.py and
+# the frontend), so blog/RSS/social output kept emitting untracked links.
+# Reinstated tag below. NOTE: this module tags links only — any Amazon PRICE
+# rendered into a post is subject to the same API gate as the cards.
 AFFILIATE_CONFIG = {
-    'amazon': {'param': 'tag', 'code': 'askmaddi-20'},
+    'amazon': {'param': 'tag', 'code': 'askmaddi20-20'},
     'ebay': {'param': 'campid', 'code': '5339138080',
              'extra': {'toolid': '10001', 'mkevt': '1'}},
 }

@@ -33,16 +33,36 @@ from pathlib import Path
 
 
 # ─── Affiliate tags (match the live frontend / cards-manifest) ──────────────
-AMAZON_TAG = "askmaddi-20"
+# 2026-07-27: Associates REINSTATED after the no-traffic suspension; Lee
+# reapplied at Amazon's direction. New tracking id is askmaddi20-20 (the old
+# askmaddi-20 is dead and must never reappear — note it is NOT a substring of
+# the new one, so any tripwire grepping the old string is silently useless).
+AMAZON_TAG = "askmaddi20-20"
 EBAY_CAMPID = "5339138080"
 EBAY_RID = "711-53200-19255-0"
 
-# ─── Adorama (Partnerize / prf.hn) — the 'buy new' affiliate network ─────────
-# Amazon Associates lapsed 2026-07-24 (the qualifying-purchase window closed
-# before three sales landed; reapplication pending), so the new-gear CTA moves
-# to Adorama, an approved Partnerize partner. Partnerize 'tagging' is a URL WRAP
-# (a deep-link that carries a destination adorama.com URL), NOT a query param
-# like amazon/ebay — see partnerize_wrap().
+# ─── Amazon display doctrine while we have NO catalog API ───────────────────
+# PA-API 5.0 is retired (May 2026) and closed to new registrations; the
+# successor is the Creators API, whose eligibility floor is 10 qualifying sales
+# in the TRAILING 30 DAYS — a recurring bar, not a one-time unlock. Separately,
+# 3 qualifying sales in the first 180 days is what keeps the ASSOCIATES ACCOUNT
+# alive; that is the clock that expired on us the first time. Until we hold API
+# credentials the Associates agreement permits exactly one thing: a tagged link
+# to a product detail page. It forbids displaying Amazon price, availability,
+# star ratings, review counts, and Amazon-hosted imagery sourced any other way.
+#
+# THE INVARIANT: the Amazon rung is a LINK, never a price. amazon_cta() returns
+# a fixed "See price on Amazon" label with no numeric ever interpolated. If you
+# are about to put a number on the Amazon button, you are about to lose the
+# account for the second time. The priced 'new' rung is Adorama, whose feed we
+# are licensed to display — that asymmetry is deliberate, not an oversight.
+#
+# ASINs are exempt from the caching ban (storable indefinitely FOR LINKING),
+# which is why data/asin_registry.json remains lawful and useful right now.
+
+# ─── Adorama (Partnerize / prf.hn) — the priced 'buy new' affiliate network ──
+# Partnerize 'tagging' is a URL WRAP (a deep-link that carries a destination
+# adorama.com URL), NOT a query param like amazon/ebay — see partnerize_wrap().
 PARTNERIZE_CAMREF = "1101l5Pw9q"
 PARTNERIZE_CLICK_BASE = f"https://adorama.prf.hn/click/camref:{PARTNERIZE_CAMREF}"
 PARTNERIZE_SHORT = "https://prf.hn/l/PlDklJx/"  # generic homepage fallback
@@ -97,12 +117,13 @@ def ensure_affiliate_tag(url):
         return url
     host = parts.netloc.lower()
     q = dict(parse_qsl(parts.query, keep_blank_values=True))
-    # Amazon deliberately NOT tagged (Associates lapsed 2026-07-24): a live
-    # askmaddi-20 tag on a non-active account is both untracked and a ToS risk,
-    # so an amazon URL passes through untouched (and trips the untagged-link
-    # tripwire in DEPLOYMENT.md, flagging it for removal). eBay is unchanged;
-    # Adorama tagging is a URL wrap handled by partnerize_wrap(), not here.
-    if "ebay." in host:
+    # Amazon tagging RESTORED 2026-07-27 (Associates reinstated). Tagging a
+    # link is always permitted; it is DISPLAYING Amazon data that is API-gated,
+    # and that restriction is enforced in amazon_cta(), not here. eBay is
+    # unchanged; Adorama tagging is a URL wrap (partnerize_wrap), not a param.
+    if "amazon." in host:
+        q["tag"] = AMAZON_TAG
+    elif "ebay." in host:
         q["campid"] = EBAY_CAMPID
         q.setdefault("mkcid", "1")
         q.setdefault("mkrid", EBAY_RID)
@@ -222,13 +243,58 @@ def ebay_product_url(epid):
     return f"https://www.ebay.com/p/{epid}"
 
 
+def amazon_product_url(asin):
+    """Canonical Amazon detail-page URL for an ASIN. Affiliate params are
+    stamped by ensure_affiliate_tag (tag=), same as every other CTA. ASINs are
+    the one piece of Amazon data we may store indefinitely, and only for this
+    purpose — linking. Never a search URL when an ASIN is known: Amazon strips
+    the tag on an in-site click-through from results to a product page."""
+    return f"https://www.amazon.com/dp/{asin}"
+
+
+def amazon_search_url(display_name):
+    """Product-scoped Amazon search — the no-ASIN fallback rung. Weaker than a
+    /dp/ deep link (see amazon_product_url) but still tagged and still lawful."""
+    q = urllib.parse.quote_plus(display_name.strip())
+    return f"https://www.amazon.com/s?k={q}"
+
+
+def amazon_cta(card):
+    """Return (label, url) for the Amazon rung, or None when there is no rung.
+
+    Returns None in exactly two cases:
+      1. pricing.amazon_absent — the card is VERIFIED not sold on Amazon
+         (data/asin_registry.json 'absent' list). Linking a close-match page
+         for an absent product is the e930bea wrong-product trap; skip it.
+      2. No display_name to scope a search with.
+
+    The label is a CONSTANT. It carries no price, no star rating, no review
+    count — see the display-doctrine block at the top of this module. Amazon
+    permits the link and forbids the data until we hold Creators API
+    credentials, so the honest rendering is an invitation to go look.
+    """
+    pricing = card.get("pricing", {}) or {}
+    if pricing.get("amazon_absent"):
+        return None
+    name = (card.get("identity", {}) or {}).get("display_name") or ""
+    asin = pricing.get("amazon_asin")
+    if asin:
+        url = amazon_product_url(asin)
+    elif name.strip():
+        url = amazon_search_url(name)
+    else:
+        return None
+    return "See price on Amazon", ensure_affiliate_tag(url)
+
+
 def new_cta(card):
     """Return (label, url) for the 'buy new' CTA → Adorama (Partnerize).
 
-    Amazon rungs retired 2026-07-24: the Associates application lapsed (the
-    qualifying-purchase window closed before three sales landed; reapplication
-    pending), so a live askmaddi-20 tag would be untracked AND a ToS risk.
-    Adorama — an approved Partnerize partner — becomes the new-gear destination.
+    Adorama stays the PRICED new-gear rung and this function stays Amazon-free
+    by design. We are licensed to display Adorama's feed pricing; we are not
+    licensed to display Amazon's without Creators API credentials. The Amazon
+    rung is therefore a separate, deliberately price-free button — amazon_cta()
+    — rather than a second destination inside this ladder. Do not merge them.
 
     Destination preference:
       pre-wrapped prf.hn affiliate_url (feed/registry) > exact Adorama product
@@ -586,6 +652,7 @@ def render_page(card, image_url=None):
 
     new_label, new_url = new_cta(card)
     used_label, used_url = used_cta(card)
+    amazon_rung = amazon_cta(card)
 
     synth = (card.get("synthesis", {}) or {}).get("consensus_paragraph", "")
 
@@ -657,6 +724,19 @@ def render_page(card, image_url=None):
     new_retailer = retailer_from_url(new_url)
     used_retailer = retailer_from_url(used_url)
 
+    # Amazon rung: omitted ENTIRELY when amazon_cta() returns None (absent-list
+    # card, or no name to scope). Same doctrine as empty issue_clusters — we
+    # render what the card supports, never an empty box.
+    amazon_html = ""
+    if amazon_rung:
+        az_label, az_url = amazon_rung
+        amazon_html = (
+            f'<a class="btn-affiliate btn-buy-amazon" href="{esc(az_url)}" '
+            f'target="_blank" rel="nofollow noopener sponsored" data-out '
+            f'data-retailer="{retailer_from_url(az_url)}" '
+            f'data-category="{esc(page_category)}">{esc(az_label)} \u2192</a>'
+        )
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -704,6 +784,7 @@ def render_page(card, image_url=None):
           <div class="hero-actions">
             <a class="btn-affiliate btn-buy-new" href="{esc(new_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{new_retailer}" data-category="{esc(page_category)}">{esc(new_label)} \u2192</a>
             <a class="btn-affiliate btn-buy-used" href="{esc(used_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{used_retailer}" data-category="{esc(page_category)}">{esc(used_label)} \u2192</a>
+            {amazon_html}
           </div>
           {asof_html}
           <p class="hero-meta">

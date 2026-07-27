@@ -148,15 +148,57 @@ def test_empty_card_yields_no_axes():
 
 
 # ─── Affiliate tag enforcement (revenue regression: untagged /dp/ CTAs) ─────
-from build_site import ensure_affiliate_tag, new_cta, used_cta
+from build_site import ensure_affiliate_tag, new_cta, used_cta, amazon_cta
 
 
-def test_amazon_url_no_longer_tagged_after_associates_lapse():
-    # Associates lapsed 2026-07-24: we stop stamping askmaddi-20 (untracked +
-    # ToS risk on a non-active account). An amazon URL now passes through
-    # untouched, so the DEPLOYMENT.md untagged-link tripwire can flag it.
-    url = "https://www.amazon.com/dp/B09JZT6XXX"
-    assert ensure_affiliate_tag(url) == url
+def test_amazon_url_tagged_after_associates_reinstatement():
+    # Associates reinstated 2026-07-27 with a NEW tracking id. Tagging a link
+    # is always permitted; only DISPLAYING Amazon data is API-gated.
+    out = ensure_affiliate_tag("https://www.amazon.com/dp/B09JZT6XXX")
+    assert "tag=askmaddi20-20" in out
+
+
+def test_dead_amazon_tag_never_reappears():
+    # askmaddi-20 died with the suspension. It is NOT a substring of
+    # askmaddi20-20, so a naive grep will not catch a regression — assert it.
+    out = ensure_affiliate_tag("https://www.amazon.com/dp/B09JZT6XXX?tag=askmaddi-20")
+    assert "askmaddi-20" not in out and "tag=askmaddi20-20" in out
+
+
+def test_amazon_cta_carries_no_price_ever():
+    # THE compliance invariant: without Creators API credentials we may link to
+    # Amazon but may not display its price, rating, or review count. A card
+    # carrying a price must still yield a bare, price-free Amazon label.
+    card = {
+        "identity": {"display_name": "Sony A7 IV"},
+        "pricing": {"amazon_asin": "B09JZT6YK5", "current_new_usd": 2498, "msrp_usd": 2498},
+    }
+    label, url = amazon_cta(card)
+    assert label == "See price on Amazon"
+    assert "$" not in label and "2498" not in label
+    assert url.startswith("https://www.amazon.com/dp/B09JZT6YK5")
+    assert "tag=askmaddi20-20" in url
+
+
+def test_amazon_cta_deep_links_asin_over_search():
+    card = {"identity": {"display_name": "Sony A7 IV"},
+            "pricing": {"amazon_asin": "B09JZT6YK5"}}
+    _, url = amazon_cta(card)
+    assert "/dp/B09JZT6YK5" in url and "/s?k=" not in url
+
+
+def test_amazon_cta_falls_back_to_scoped_search_without_asin():
+    card = {"identity": {"display_name": "Sony A7 IV"}, "pricing": {}}
+    _, url = amazon_cta(card)
+    assert "amazon.com/s?k=Sony+A7+IV" in url and "tag=askmaddi20-20" in url
+
+
+def test_amazon_cta_suppressed_for_absent_card():
+    # The e930bea wrong-product trap: a card VERIFIED not sold on Amazon gets
+    # NO rung at all, rather than a close-match page for a different product.
+    card = {"identity": {"display_name": "Peak Design Pro Tripod"},
+            "pricing": {"amazon_absent": True}}
+    assert amazon_cta(card) is None
 
 
 def test_raw_ebay_item_url_gets_campaign_params():

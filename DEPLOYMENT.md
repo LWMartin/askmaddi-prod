@@ -69,10 +69,38 @@ the four live SKUs.
 ```bash
 curl -sI https://askmaddi.com/                                   # 200
 curl -s  https://askmaddi.com/health                             # gateway alive (via proxy)
-curl -s  https://askmaddi.com/cards-manifest.json | grep -c "tag=askmaddi-20"      # 4
 curl -s  https://askmaddi.com/cards/sigma-35-art-dg-dn-ii/ | grep -c synthesis-text # 1
-# Untagged-link tripwire (expect no output):
-curl -s https://askmaddi.com/cards-manifest.json | grep -Eo 'amazon\.com[^"]*' | grep -v askmaddi-20
+
+# --- Affiliate tripwires (rewritten 2026-07-27, Associates reinstated) ---
+# The Amazon rung lives on the DETAIL PAGE, not in cards-manifest.json (the
+# teaser carries only the Adorama new_url + eBay used_url), so these target
+# /cards/<id>/ — the old manifest-scoped greps were verifying nothing.
+
+# 1. Amazon rung present and tagged on a card with a known ASIN (expect 1):
+curl -s https://askmaddi.com/cards/sony-a7iv/ | grep -c 'amazon\.com/dp/B09JZT6YK5?tag=askmaddi20-20'
+
+# 2. DEAD-TAG tripwire (expect no output). askmaddi-20 is NOT a substring of
+#    askmaddi20-20, so this is a real check rather than a tautology:
+curl -s https://askmaddi.com/cards/sony-a7iv/ | grep -Eo 'tag=askmaddi-20([^0-9]|$)'
+
+# 3. UNTAGGED-amazon-link tripwire (expect no output).
+#    MUST match the whole href to the closing quote: query separators render as
+#    the HTML entity &amp;, so a [^"&]* character class truncates the match
+#    BEFORE the tag and reports every correctly-tagged search URL as untagged.
+curl -s https://askmaddi.com/cards/sony-a7iv/ \
+  | grep -Eo 'href="https://www\.amazon\.com[^"]*"' | grep -v 'tag=askmaddi20-20'
+
+# 4. NO-PRICE INVARIANT — the Amazon button must never carry a number. Without
+#    Creators API credentials, displaying Amazon price / star rating / review
+#    count violates the Operating Agreement (see build_site.py doctrine block).
+#    MUST scope to the anchor TEXT ([^>]*> then strip): a [^<]* class runs past
+#    the '>' into the href, whose ASIN and tag contain digits — false positive
+#    on every card. Expect NO output; a hit means a price leaked onto the rung.
+curl -s https://askmaddi.com/cards/sony-a7iv/ \
+  | grep -Eo 'btn-buy-amazon[^>]*>[^<]*' | sed 's/.*>//' | grep -E '\$|[0-9]'
+
+# 5. Absent-list card must have NO Amazon rung at all (expect 0):
+curl -s https://askmaddi.com/cards/peak-design-pro-tripod/ | grep -c btn-buy-amazon
 # On the box — working tree must be clean or auto-pull will wedge:
 sudo -u askmaddi git -C /opt/askmaddi-prod status
 ```

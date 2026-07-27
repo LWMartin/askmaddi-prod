@@ -432,6 +432,20 @@ body {
     color: var(--color-primary);
 }
 
+/* Amazon rung — secondary by construction. It carries no price (see the
+   display doctrine in build_site.py), so it must not out-shout the priced
+   Adorama CTA that does. Same outline treatment as the used rung. */
+.btn-buy-amazon {
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+}
+
+.btn-buy-amazon:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
 .card-link {
     display: block;
     text-align: center;
