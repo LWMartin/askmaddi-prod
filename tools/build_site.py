@@ -283,6 +283,45 @@ def most_discussed_axis(card):
     return best
 
 
+def asof_phrase(card):
+    """"As of June 2026" — OUR observation moment, never the sources'.
+
+    The distinction is load-bearing. A heading like "What do reviewers say
+    about the A7 IV in 2026?" implies the reviews are from 2026. They are not:
+    sources[].publication_date is present on every source and EMPTY on every
+    source (55/55 on the A7 IV card), so we hold no publication dates at all.
+    The only date we own is ingested_at — when we fetched — and the years
+    inferable from source-id slugs run 2021, 2022, 2025 and 2026. The corpus is
+    five years wide, so a bare year attached to "what reviewers say" asserts a
+    recency the data contradicts.
+
+    Attaching the date to the ANALYSIS instead claims only what we can defend:
+    this is the state of the evidence as we read it, on this date. Month grain,
+    not day: a synthesis drawn from a multi-week corpus does not earn
+    day-level precision, and the exact build date is already on the hero line
+    for anyone who wants it.
+
+    Returns "" when there is no synthesis date — no date claim at all beats a
+    manufactured one."""
+    date, _days = synthesis_asof(card)
+    if not date:
+        return ""
+    try:
+        parsed = datetime.strptime(date, "%b %d, %Y")
+    except ValueError:
+        return ""
+    return f"As of {parsed.strftime('%B %Y')}"
+
+
+def analysis_year(card):
+    """The year OUR analysis was built, or None. Not the sources' year."""
+    date, _days = synthesis_asof(card)
+    try:
+        return datetime.strptime(date, "%b %d, %Y").year if date else None
+    except ValueError:
+        return None
+
+
 def answer_stat_line(card, source_count):
     """The extractable stat sentence: countable, denominated, dated.
 
@@ -300,12 +339,13 @@ def answer_stat_line(card, source_count):
     if not triple:
         return ""
     name = axis.get("display_name") or axis.get("axis_id", "")
-    line = (f"{total} claims across {source_count} sources on "
+    body = (f"{total} claims across {source_count} sources on "
             f"{name.lower()}: {triple}.")
-    date, days = synthesis_asof(card)
-    if date:
-        line += f" Analysis as of {date}."
-    return line
+    # The date qualifier LEADS. An extractor lifting the first clause gets the
+    # scope of the claim with it, rather than a bare statistic that reads as
+    # timeless.
+    asof = asof_phrase(card)
+    return f"{asof}, {body[0].lower()}{body[1:]}" if asof else body
 
 
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
@@ -812,7 +852,12 @@ def render_page(card, image_url=None):
     # of the <h1>: that stays the bare product name, which is the branded-search
     # anchor and the schema.org `name` — a churning heading buys nothing the
     # title tag isn't already getting.
-    render_year = datetime.now(timezone.utc).year
+    # Year in the title carries the citation gain, but it must describe OUR
+    # analysis rather than the sources: publication_date is empty across every
+    # source we hold, and slug-inferable years span 2021-2026. "review in 2026"
+    # would claim a recency the corpus contradicts.
+    _analysis_year = analysis_year(card)
+    title_asof = f", analyzed {_analysis_year}" if _analysis_year else ""
     stat_line = answer_stat_line(card, source_count)
 
     # Empty axes (sentiment.total == 0) are suppressed entirely — no reviewer
@@ -901,7 +946,7 @@ def render_page(card, image_url=None):
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{esc(name)} review in {render_year} — synthesized from {source_count} sources | AskMaddi</title>
+  <title>{esc(name)} review — {source_count} sources{title_asof} | AskMaddi</title>
   <meta name="description" content="{esc(meta_desc)}">
   <link rel="canonical" href="{esc(canonical)}">
   <meta property="og:title" content="{esc(name)} — AskMaddi">
@@ -954,7 +999,7 @@ def render_page(card, image_url=None):
       </section>
 
       {f'''<section class="card-section answer-first">
-        <h2 class="card-section-head">What do reviewers say about the {esc(name)} in {render_year}?</h2>
+        <h2 class="card-section-head">What do reviewers say about the {esc(name)}?</h2>
         {f'<p class="answer-stats">{esc(stat_line)}</p>' if stat_line else ''}
         <p class="synthesis-text">{esc(synth)}</p>
       </section>''' if synth else ''}

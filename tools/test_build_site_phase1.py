@@ -32,6 +32,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from build_site import (  # noqa: E402
     answer_stat_line,
+    asof_phrase,
     most_discussed_axis,
     render_page,
     sentiment_triple,
@@ -174,18 +175,52 @@ class TestQuestionHeadings:
         assert "  " not in used_price_heading(bare)
 
 
-class TestYearInterpolation:
+class TestDateClaimsDescribeTheAnalysisNotTheSources:
+    """The reviews are not from the year we read them.
 
-    def test_current_year_in_answer_heading(self):
+    sources[].publication_date is present on every source and empty on every
+    source — 55/55 on the live A7 IV card — so we hold NO publication dates.
+    ingested_at records when we fetched. The years inferable from source-id
+    slugs run 2021, 2022, 2025, 2026: a five-year-wide corpus. So a heading
+    like "What do reviewers say ... in 2026?" asserts a source recency the
+    evidence contradicts, in the same way a lone "32% positive" asserted a
+    favourability the sentiment split contradicted.
+
+    Every date claim therefore attaches to OUR analysis."""
+
+    def test_answer_heading_carries_no_year(self):
         html = render_page(_card())
-        assert str(datetime.now(timezone.utc).year) in html
+        heading = re.search(
+            r"What do reviewers say about[^<]*", html).group(0)
+        assert not re.search(r"\b(19|20)\d\d\b", heading), (
+            "a year here reads as the reviews' year, not ours")
 
-    def test_year_is_not_stored_on_the_card(self):
-        """Computed at render so it rolls over at the year boundary with no
-        rebuild — a stored year silently goes stale on January 1."""
-        card = _card()
-        assert str(datetime.now(timezone.utc).year) not in str(
-            card["synthesis"]) + str(card["identity"])
+    def test_stat_line_leads_with_the_analysis_date(self):
+        line = answer_stat_line(_card(), 55)
+        assert line.startswith("As of June 2026"), line
+
+    def test_asof_uses_month_grain_not_day(self):
+        """A synthesis drawn from a multi-week corpus does not earn day-level
+        precision; the exact build date is already on the hero line."""
+        assert asof_phrase(_card()) == "As of June 2026"
+
+    def test_asof_uses_the_cards_date_not_todays(self):
+        """The card was built in June; rendering it in July must not relabel
+        the analysis as current."""
+        assert str(datetime.now(timezone.utc).year) in asof_phrase(_card())
+        assert "June" in asof_phrase(_card())
+
+    def test_no_date_claim_when_no_synthesis_date(self):
+        """No date beats a manufactured one."""
+        card = _card(freshness={"source_count": 55})
+        assert asof_phrase(card) == ""
+        assert "As of" not in answer_stat_line(card, 55)
+
+    def test_title_year_describes_the_analysis(self):
+        html = render_page(_card())
+        title = re.search(r"<title>(.*?)</title>", html, re.S).group(1)
+        assert "analyzed 2026" in title
+        assert "review in 2026" not in title
 
     def test_h1_stays_the_bare_product_name(self):
         """The <h1> is the branded-search anchor and the schema.org name; a
@@ -195,9 +230,9 @@ class TestYearInterpolation:
         assert "Sony A7 IV" in h1
         assert str(datetime.now(timezone.utc).year) not in h1
 
-    def test_year_in_title_tag(self):
-        """Year in the title is where the citation-rate gain actually sits
-        (~+30% per the spec), and it costs nothing visually."""
+    def test_year_still_present_in_the_title(self):
+        """The citation gain from a year in the title is real (~+30% per the
+        spec) — it is kept, just attached to a claim we can defend."""
         html = render_page(_card())
         title = re.search(r"<title>(.*?)</title>", html, re.S).group(1)
         assert str(datetime.now(timezone.utc).year) in title
