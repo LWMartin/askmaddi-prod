@@ -71,9 +71,25 @@ BODIES_2026_07_27 = (
 )
 
 
+# The factory's build root. The live crontab runs card_factory with
+# `--out /var/lib/askmaddi-cards`, so that is where factory builds keep their
+# spool — corpus, checkpoint and cached triples.
+#
+# NOT derived from build_card's location, which is what this tool did first
+# and got wrong for every card. That derivation (card_factory's own, when its
+# out_root is None) points at aggregator-build/out/, which holds only the four
+# HAND-built cards — and those four are precisely the four that came out
+# correct, because a hand build passes --category explicitly while the factory
+# never told extract anything. Deriving a runtime path from a source-tree
+# location found the wrong four and reported the right seven as missing.
+DEFAULT_BUILD_ROOT = Path('/var/lib/askmaddi-cards')
+
+_build_root = DEFAULT_BUILD_ROOT
+
+
 def triples_dir(slug):
-    """Where the cached triples for `slug` live, per card_factory's derivation."""
-    return card_factory.DEFAULT_BUILD_CARD.parent / 'out' / slug / 'triples'
+    """Where the cached triples for `slug` live in the factory spool."""
+    return _build_root / slug / 'triples'
 
 
 def inspect(slug, path):
@@ -108,7 +124,15 @@ def main(argv=None):
                    help='Actually requeue. Without it this only reports.')
     p.add_argument('--queue-path', default=None,
                    help='Override the work-queue path (testing).')
+    p.add_argument('--build-root', default=None,
+                   help=f'Factory build root holding the spool. Default '
+                        f'{DEFAULT_BUILD_ROOT}, matching the crontab\'s '
+                        f'--out. Override only if the factory is run with a '
+                        f'different --out.')
     args = p.parse_args(argv)
+
+    global _build_root
+    _build_root = Path(args.build_root) if args.build_root else DEFAULT_BUILD_ROOT
 
     slugs = list(args.slug)
     if args.bodies_2026_07_27:
@@ -119,6 +143,7 @@ def main(argv=None):
     path = Path(args.queue_path) if args.queue_path else work_queue.WORK_QUEUE_PATH
 
     print(f"queue: {path}")
+    print(f"spool: {_build_root}")
     print(f"mode : {'APPLY' if args.apply else 'dry-run (no writes)'}\n")
 
     ready, blocked = [], []

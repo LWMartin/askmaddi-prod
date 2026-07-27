@@ -116,3 +116,37 @@ def test_apply_requeues_from_cached_triples(tmp_path, monkeypatch):
 def test_nothing_to_do_is_an_error(tmp_path):
     with pytest.raises(SystemExit):
         rr.main(['--queue-path', str(tmp_path / 'wq.json')])
+
+
+# ── The spool path ───────────────────────────────────────────────────────
+
+def test_spool_default_matches_the_crontab():
+    """The live crontab runs card_factory with --out /var/lib/askmaddi-cards,
+    so that is where factory builds keep their triples."""
+    assert str(rr.DEFAULT_BUILD_ROOT) == '/var/lib/askmaddi-cards'
+
+
+def test_triples_are_looked_for_in_the_spool_not_the_source_tree():
+    """The bug this tool shipped with, pinned.
+
+    It first derived the build root from build_card's location — the same
+    derivation card_factory uses when its out_root is None. That points at
+    aggregator-build/out/, which holds only the four HAND-built cards. Those
+    four are exactly the four that came out correct, because a hand build
+    passes --category while the factory never told extract anything. So the
+    wrong path found the four cards that need nothing and declared the seven
+    that need rebuilding to be missing their spool.
+    """
+    got = str(rr.triples_dir('sony-a7r'))
+    assert got == '/var/lib/askmaddi-cards/sony-a7r/triples'
+    assert 'aggregator-build' not in got
+    assert 'phantom-ops' not in got
+
+
+def test_build_root_is_overridable(tmp_path, monkeypatch):
+    q = _promoted(tmp_path)
+    spool = tmp_path / 'spool'
+    (spool / 'sony-a7r' / 'triples').mkdir(parents=True)
+    rr.main(['--slug', 'sony-a7r', '--queue-path', str(q),
+             '--build-root', str(spool)])
+    assert rr.triples_dir('sony-a7r') == spool / 'sony-a7r' / 'triples'
