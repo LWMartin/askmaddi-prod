@@ -547,3 +547,57 @@ def test_apply_asin_registry_marks_absent(tmp_path, monkeypatch):
     bs.apply_asin_registry(cards)
     assert cards[0]["pricing"].get("amazon_absent") is True
     assert "amazon_absent" not in cards[1]["pricing"]
+
+
+# ── The role names are a cross-file contract (2026-07-28) ────────────────
+
+def test_the_low_role_is_named_for_what_it_computes():
+    """Pins the WIRE value, not the constant. The suite referenced
+    TEASER_ROLE_LOW everywhere, so renaming "biggest_gripe" -> "lowest_rated"
+    passed 758 tests without one of them noticing -- which is also how the
+    original mislabel survived. The string ships in cards-manifest.json and is
+    read by browser/js/cards.js, so it is a contract, not an internal name.
+
+    "biggest gripe" claimed criticism while the selector ranked positive
+    share. sony-a7s-iii tagged mount compatibility as the biggest gripe on
+    THREE negatives out of 67.
+    """
+    from build_site import TEASER_ROLE_MOST, TEASER_ROLE_HIGH, TEASER_ROLE_LOW
+    assert TEASER_ROLE_MOST == "most_discussed"
+    assert TEASER_ROLE_HIGH == "highest_rated"
+    assert TEASER_ROLE_LOW == "lowest_rated"
+    assert "gripe" not in TEASER_ROLE_LOW, (
+        "the teaser ranks positive share; a criticism word here would claim a "
+        "comparison nothing computed")
+
+
+def test_the_renderer_knows_every_role_the_builder_emits():
+    """The Python constants and the JavaScript label map must agree. Nothing
+    enforced this before: build_site could rename a role and cards.js would
+    silently render no micro-label, which degrades quietly enough that nobody
+    would file a bug."""
+    import re
+    from pathlib import Path
+    from build_site import TEASER_ROLE_MOST, TEASER_ROLE_HIGH, TEASER_ROLE_LOW
+
+    js = (Path(__file__).resolve().parent.parent
+          / 'browser' / 'js' / 'cards.js').read_text(encoding='utf-8')
+    block = re.search(r'AXIS_ROLE_LABELS\s*=\s*\{(.*?)\}', js, re.S)
+    assert block, "AXIS_ROLE_LABELS not found in cards.js"
+    keys = set(re.findall(r'^\s*(\w+)\s*:', block.group(1), re.M))
+    assert keys == {TEASER_ROLE_MOST, TEASER_ROLE_HIGH, TEASER_ROLE_LOW}
+
+
+def test_the_teaser_carries_the_whole_triple():
+    """A bar with only pos and neg invites reading the remainder as negative
+    space rather than neutral judgement. Every share travels with its
+    siblings -- the same rule the card body follows."""
+    from build_site import teaser_entry
+    card = _card([_axis("image_quality", pos=80, neg=20, neu=40),
+                  _axis("battery_life", pos=10, neg=30, neu=20),
+                  _axis("handling", pos=40, neg=15, neu=10)])
+    entry = teaser_entry(card)
+    assert entry["top_axes"], "no teaser axes to check"
+    for axis in entry["top_axes"]:
+        assert {"pos", "neu", "neg", "total"} <= set(axis), axis
+        assert axis["pos"] + axis["neu"] + axis["neg"] <= axis["total"]

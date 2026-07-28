@@ -24,21 +24,31 @@ export async function loadManifest() {
 
 /**
  * Render a single sentiment axis bar.
- * Axes may carry a `role` (most_discussed / highest_rated / biggest_gripe)
+ * Axes may carry a `role` (most_discussed / highest_rated / lowest_rated)
  * rendered as a micro-label above the bar. Entries without a role (older
  * manifest entries, sparse-card fallback fills) render exactly as before.
  */
 const AXIS_ROLE_LABELS = {
     most_discussed: ['most discussed', 'role-volume'],
     highest_rated: ['highest rated', 'role-high'],
-    biggest_gripe: ['biggest gripe', 'role-low'],
+    // Renamed from biggest_gripe 2026-07-28: the role is the low end of the
+    // same positive-share measure as highest_rated, not a criticism claim.
+    lowest_rated: ['lowest rated', 'role-low'],
 };
 
 function renderAxisBar(axis) {
     const { pos, neg, total } = axis;
     if (!total) return '';
+    // neu arrives on the manifest from 2026-07-28; older entries are derived
+    // rather than assumed away, so the triple is always complete.
+    const neu = axis.neu != null ? axis.neu : Math.max(0, total - pos - neg);
     const posPct = Math.round((pos / total) * 100);
     const negPct = Math.round((neg / total) * 100);
+    const neuPct = Math.max(0, 100 - posPct - negPct);
+    // The visible figure is a positive share in a 36px slot. It travels with
+    // its siblings in the accessible label so the number is never a bare,
+    // unqualified share -- same rule the card body follows.
+    const grounded = `${posPct}% positive, ${neuPct}% neutral, ${negPct}% negative of ${total} claims`;
 
     const roleMeta = AXIS_ROLE_LABELS[axis.role];
     const roleHtml = roleMeta
@@ -54,7 +64,7 @@ function renderAxisBar(axis) {
                     <div class="bar-pos" style="width: ${posPct}%"></div>
                     <div class="bar-neg" style="width: ${negPct}%"></div>
                 </div>
-                <span class="axis-pct">${posPct}%</span>
+                <span class="axis-pct" title="${grounded}" aria-label="${grounded}">${posPct}%</span>
             </div>
         </div>
     `;

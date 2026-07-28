@@ -1080,7 +1080,19 @@ TEASER_META_AXES = {"generation_context", "price"}
 
 TEASER_ROLE_MOST = "most_discussed"
 TEASER_ROLE_HIGH = "highest_rated"
-TEASER_ROLE_LOW = "biggest_gripe"
+# Renamed from "biggest_gripe" 2026-07-28. It is computed as the WORST
+# POSITIVE RATIO, which is not criticism: an axis can hold the lowest positive
+# share while carrying almost no negatives, because neutral claims describe
+# rather than judge. sony-a7s-iii shipped mount compatibility tagged
+# "biggest gripe" on THREE negative claims out of 67 -- its lowest negative
+# share -- because 55% of that axis was neutral.
+#
+# The metric is kept, because the teaser's job is a coherent comparison:
+# highest_rated and lowest_rated are the two ends of ONE measure, and mixing
+# a negative-share metric into a three-bar triple would compare incomparable
+# things. Only the name was lying. The paragraph's criticism sentence is a
+# separate, properly-gated selection (phantom-ops axis_roles.most_criticised).
+TEASER_ROLE_LOW = "lowest_rated"
 
 
 def select_teaser_axes(card):
@@ -1088,7 +1100,9 @@ def select_teaser_axes(card):
 
       1. most_discussed — highest claim volume (meta-axes eligible)
       2. highest_rated  — best pos-ratio among qualifying non-meta axes
-      3. biggest_gripe  — worst pos-ratio among qualifying non-meta axes
+      3. lowest_rated   — worst pos-ratio among qualifying non-meta axes
+         (the low end of the SAME measure as highest_rated — not a
+          criticism claim; see TEASER_ROLE_LOW)
 
     Qualifying = sentiment.total >= max(15, 0.1 * top axis volume). The
     relative floor scales across corpus sizes; the absolute floor stops a
@@ -1182,6 +1196,11 @@ def teaser_entry(card):
             {
                 "axis": a.get("display_name") or a.get("axis_id"),
                 "pos": (a.get("sentiment", {}) or {}).get("pos", 0),
+                # neu rides with its siblings: a teaser bar that carries only
+                # pos and neg lets a reader infer the remainder is negative
+                # space rather than neutral judgement. Same rule as the card
+                # body -- every share travels with the other two.
+                "neu": (a.get("sentiment", {}) or {}).get("neu", 0),
                 "neg": (a.get("sentiment", {}) or {}).get("neg", 0),
                 "total": (a.get("sentiment", {}) or {}).get("total", 0),
                 "role": role,
