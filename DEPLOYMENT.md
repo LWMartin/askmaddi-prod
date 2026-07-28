@@ -64,6 +64,26 @@ python3 tools/build_site.py --cards-dir <dir-of-card-jsons> --output-dir browser
 reads images from `identity.image_thumb` on the card — no `--image-url` needed for
 the four live SKUs.
 
+### Before approving a rebuilt card at /admin/publish
+
+Run `tools/verify_rebuilt_card.py` first. A card extracted against the wrong
+dictionary renders as a complete, convincing page — the 2026-07-27 driver bug put
+seven camera bodies live with lens axes and nobody caught it by looking. The check
+compares the card's axes and labels against the authored dictionary in phantom-ops,
+and confirms the mint date survived the rebuild.
+
+```bash
+sudo -u phantomops python3 tools/verify_rebuilt_card.py \
+    /var/lib/askmaddi-cards/<slug>/<card>.json \
+    --published /opt/askmaddi-prod/data/cards/<slug>.json \
+    --dict-root /home/phantomops/phantom-ops
+```
+
+Exit 0 = safe to approve, 1 = do not approve, 2 = could not check (it refuses to
+report a verdict it did not compute — exit 2 is a path problem, not a card problem).
+Note the build root is `/var/lib/askmaddi-cards` (the crontab passes `--out`), not
+`aggregator-build/out/`.
+
 ## Sanity checks after a deploy
 
 ```bash
