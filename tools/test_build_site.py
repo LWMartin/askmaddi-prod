@@ -601,3 +601,102 @@ def test_the_teaser_carries_the_whole_triple():
     for axis in entry["top_axes"]:
         assert {"pos", "neu", "neg", "total"} <= set(axis), axis
         assert axis["pos"] + axis["neu"] + axis["neg"] <= axis["total"]
+
+
+# ── The card decides; the fallback must agree until it is deleted ────────
+
+def _legacy_select(card):
+    """The pre-2026-07-28 computation, inlined so the equivalence test does
+    not depend on the production function keeping its fallback branch."""
+    axes = (card.get("lead_axes") or []) + (card.get("detail_axes") or [])
+    scored = []
+    for a in axes:
+        s = a.get("sentiment", {}) or {}
+        total = s.get("total", 0) or 0
+        if total <= 0:
+            continue
+        scored.append((a, total, (s.get("pos", 0) or 0) / total))
+    if not scored:
+        return []
+    scored.sort(key=lambda t: t[1], reverse=True)
+    floor = max(15, 0.1 * scored[0][1])
+    qualifying = [t for t in scored if t[1] >= floor]
+
+    def _aid(a):
+        return a.get("axis_id") or a.get("display_name")
+
+    from build_site import (TEASER_ROLE_MOST, TEASER_ROLE_HIGH,
+                            TEASER_ROLE_LOW, TEASER_META_AXES)
+    picks, used = [], set()
+    if qualifying:
+        picks.append((qualifying[0][0], TEASER_ROLE_MOST))
+        used.add(_aid(qualifying[0][0]))
+
+    def pool():
+        return [t for t in qualifying
+                if _aid(t[0]) not in used
+                and (t[0].get("axis_id") or "") not in TEASER_META_AXES]
+
+    c = pool()
+    if c:
+        best = max(c, key=lambda t: t[2])
+        picks.append((best[0], TEASER_ROLE_HIGH))
+        used.add(_aid(best[0]))
+    c = pool()
+    if c:
+        worst = min(c, key=lambda t: t[2])
+        picks.append((worst[0], TEASER_ROLE_LOW))
+    return picks
+
+
+def test_the_card_block_and_the_fallback_agree_on_every_live_card():
+    """The condition for deleting the fallback.
+
+    While both exist they are two computations of one selection, which is the
+    pattern that produced the mislabel in the first place. This asserts they
+    have not diverged, on real data rather than fixtures — and it is the thing
+    to check before removing the legacy branch once every card carries a
+    block.
+    """
+    import json
+    from pathlib import Path
+    from build_site import select_teaser_axes
+
+    cards_dir = Path(__file__).resolve().parent.parent / 'data' / 'cards'
+    checked = 0
+    for path in sorted(cards_dir.glob('*.json')):
+        card = json.loads(path.read_text(encoding='utf-8'))
+        if not (card.get('axis_roles') or {}).get('computed_by'):
+            continue          # predates the block; fallback is all there is
+        checked += 1
+        got = [(a.get('axis_id'), role) for a, role in select_teaser_axes(card)]
+        want = [(a.get('axis_id'), role) for a, role in _legacy_select(card)]
+        assert got == want, f'{path.stem}: card block {got} != fallback {want}'
+    if checked == 0:
+        import pytest
+        pytest.skip('no card carries axis_roles yet — nothing to compare')
+
+
+def test_a_card_without_the_block_still_renders_via_the_fallback():
+    """Additive means additive: six bodies are mid-drip and will arrive
+    without a block until they are rebuilt."""
+    from build_site import select_teaser_axes
+    card = _card([_axis("image_quality", pos=80, neg=20, neu=40),
+                  _axis("battery_life", pos=10, neg=30, neu=20),
+                  _axis("handling", pos=40, neg=15, neu=10)])
+    card.pop('axis_roles', None)
+    picks = select_teaser_axes(card)
+    assert picks and all(role for _a, role in picks)
+
+
+def test_a_stale_block_degrades_to_recomputation_rather_than_crashing():
+    """An axis_id naming an axis that is no longer on the card must not take
+    the page down — the seven mis-extracted bodies are proof that axis sets
+    change under a card."""
+    from build_site import select_teaser_axes
+    card = _card([_axis("image_quality", pos=80, neg=20, neu=40),
+                  _axis("battery_life", pos=10, neg=30, neu=20)])
+    card['axis_roles'] = {'computed_by': 'axis_roles@1',
+                          'most_discussed': 'an_axis_that_left',
+                          'highest_rated': None, 'lowest_rated': None}
+    assert select_teaser_axes(card) is not None

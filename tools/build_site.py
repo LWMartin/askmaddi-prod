@@ -1095,6 +1095,36 @@ TEASER_ROLE_HIGH = "highest_rated"
 TEASER_ROLE_LOW = "lowest_rated"
 
 
+def _teaser_axes_from_card(card, axes):
+    """Resolve the card's own axis_roles block into (axis, role) pairs.
+
+    Returns None when the card predates the block or carries it unpopulated,
+    which sends the caller to the legacy computation. An axis_id naming an
+    axis that is not on the card is treated as no answer rather than a crash:
+    a stale block should degrade to recomputation, not take the page down.
+    """
+    block = card.get("axis_roles") or {}
+    if not block.get("computed_by"):
+        return None
+    by_id = {}
+    for a in axes:
+        key = a.get("axis_id") or a.get("display_name")
+        if key is not None:
+            by_id.setdefault(key, a)
+
+    picks, used = [], set()
+    for role in (TEASER_ROLE_MOST, TEASER_ROLE_HIGH, TEASER_ROLE_LOW):
+        axis_id = block.get(role)
+        if axis_id is None:
+            continue
+        axis = by_id.get(axis_id)
+        if axis is None or id(axis) in used:
+            continue
+        used.add(id(axis))
+        picks.append((axis, role))
+    return picks or None
+
+
 def select_teaser_axes(card):
     """Pick three role-based teaser axes (2026-06-03 design):
 
@@ -1113,8 +1143,23 @@ def select_teaser_axes(card):
     volume order with role=None (renderer shows no label on those).
 
     Returns a list of (axis_dict, role_or_None), length <= 3.
+
+    THE CARD DECIDES (2026-07-28). A card carrying an `axis_roles` block was
+    told which axis fills each slot by the pipeline, using the shared
+    selectors in phantom-ops aggregator-build/axis_roles.py. We honour that
+    rather than re-deriving it here, because two computations of one selection
+    is how "biggest_gripe" came to mean "worst positive ratio" on this side
+    with nothing checking it against the other.
+
+    The block below is the FALLBACK, for cards built before the block existed.
+    test_build_site.py asserts the two paths agree on every live card, so this
+    can be deleted once the catalog has turned over rather than lingering as
+    an unexamined second opinion.
     """
     axes = (card.get("lead_axes") or []) + (card.get("detail_axes") or [])
+    from_card = _teaser_axes_from_card(card, axes)
+    if from_card is not None:
+        return from_card
     scored = []
     for a in axes:
         s = a.get("sentiment", {}) or {}
