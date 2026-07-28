@@ -178,8 +178,12 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
     card_path is derived from the SAME root the subprocess writes to (the
     record's card_path is what /admin previews and publishes — divergence here
     is an invisibly empty gate). When out_root is None the historical default
-    holds: build_card's own out/<sku> next to the script (sandbox, tests,
-    manual runs).
+    holds — build_card's own HERE.parent.parent/out/<sku> — but it is now
+    passed to the subprocess explicitly rather than predicted, so the two
+    cannot disagree. Before 2026-07-28 this branch computed a DIFFERENT root
+    (out/ beside the script, two levels off) and reported it without passing
+    it: the build landed in one place and /admin previewed another, which for
+    a slug with an old hand build there meant previewing a stale card.
 
     Returns (returncode, card_path, detail):
       returncode  build_card.py's exit code (0 clean, non-zero failure)
@@ -196,10 +200,16 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
         if out_root is not None:
             build_root = Path(out_root) / slug
         else:
-            # Derive the build root the same way build_card does (default
-            # out/<sku>), so we can report the card path back without parsing
-            # build_card output.
-            build_root = build_card_path.parent / 'out' / slug
+            # build_card's own default, which is HERE.parent.parent/"out"/<sku>
+            # with HERE = the directory holding build_card.py -- NOT
+            # <that directory>/out, which is what this line used to compute.
+            # Those differ by two levels, and the wrong one is worse than a
+            # missing path: aggregator-build/out/ EXISTS and holds hand builds,
+            # so a run without --out wrote to one place and reported a stale
+            # June card at another. /admin previews record['card_path'], which
+            # made that an invisibly WRONG gate, not merely an empty one.
+            build_root = Path(build_card_path).resolve().parent.parent.parent \
+                / 'out' / slug
         card_path = build_root / 'card.json'
 
         cmd = [
@@ -209,6 +219,13 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             '--category', record.get('category') or 'lens',
             '--stop-stage', 'assemble',
             '--enrich-client', enrich_client,
+            # ALWAYS passed, including on the default path. Predicting where
+            # the subprocess will write is a behavioral promise -- it holds
+            # only while two formulas in two repos agree, and it already
+            # failed once. Dictating the root is structural: build_card's own
+            # default is never consulted, so it cannot drift out from under
+            # us. The formula above is now a starting value, not a prediction.
+            '--out', str(build_root),
         ]
         if record.get('resume_stage'):
             # A prior tick exited ENRICH_PARTIAL: the corpus + fingerprinted
@@ -216,8 +233,6 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             # rebuild the corpus and orphan the checkpoint (the 1609/929
             # incident); resume where the work actually is.
             cmd += ['--start-stage', record['resume_stage']]
-        if out_root is not None:
-            cmd += ['--out', str(build_root)]
         if record.get('seed_urls'):
             cmd += ['--seed-urls', record['seed_urls']]
         for alias in (record.get('aliases') or []):

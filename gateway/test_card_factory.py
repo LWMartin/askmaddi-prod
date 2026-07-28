@@ -13,6 +13,8 @@ and a tmp work_queue.json. They prove:
     idle naps differ
 """
 import time
+from pathlib import Path
+
 import pytest
 
 import work_queue as wq
@@ -365,16 +367,71 @@ def test_runner_out_root_threads_spool_to_subprocess_and_card_path(tmp_path, mon
     assert card_path == '/var/lib/askmaddi-cards/sony-a7s-iii/card.json'
 
 
-def test_runner_default_keeps_historical_out(tmp_path, monkeypatch):
+def test_runner_default_root_matches_build_card_and_is_passed_not_predicted(
+        tmp_path, monkeypatch):
+    """Superseded test_runner_default_keeps_historical_out (2026-07-28).
+
+    That test asserted --out was ABSENT on the default path and that card_path
+    was <build_card dir>/out/<slug>. Both were wrong together, which is why it
+    passed: build_card's default is HERE.parent.parent/out/<sku>, two levels
+    up, so the subprocess wrote to one root while the record advertised
+    another. /admin previews record['card_path'], and aggregator-build/out/
+    exists holding four hand builds -- so for those slugs the gate would have
+    shown a stale June card rather than nothing, which is the harder failure
+    to notice.
+
+    The root is now dictated rather than predicted. Two formulas in two repos
+    agreeing is a behavioral promise; passing the flag is structural.
+    """
+    captured = {}
+
     def fake_run(cmd, **kw):
-        assert '--out' not in cmd                     # historical path: no flag
+        captured['cmd'] = cmd
         class R: returncode, stderr, stdout = 0, '', ''
         return R()
+
     monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    build_card_path = tmp_path / 'claude' / 'workspace' / 'aggregator-build' / 'build_card.py'
+    build_card_path.parent.mkdir(parents=True)
+    build_card_path.touch()
+
     runner = cf.build_card_runner(
-        build_card_path=tmp_path / 'build_card.py', enrich_client='mock')
+        build_card_path=build_card_path, enrich_client='mock')
     rc, card_path, _ = runner({'slug': 's1', 'label': 'L', 'category': 'lens'})
-    assert card_path == str(tmp_path / 'out' / 's1' / 'card.json')
+
+    expected_root = tmp_path / 'claude' / 'out' / 's1'
+    assert rc == 0
+    assert card_path == str(expected_root / 'card.json')
+
+    # --out is passed even with no out_root, and it is the SAME root.
+    i = captured['cmd'].index('--out')
+    assert captured['cmd'][i + 1] == str(expected_root)
+
+
+def test_reported_card_path_always_matches_the_out_flag(tmp_path, monkeypatch):
+    """The invariant, stated once for both branches. This is the property the
+    whole seam exists for: /admin must preview what the build wrote."""
+    captured = {}
+
+    def fake_run(cmd, **kw):
+        captured['cmd'] = cmd
+        class R: returncode, stderr, stdout = 0, '', ''
+        return R()
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    build_card_path = tmp_path / 'a' / 'b' / 'c' / 'build_card.py'
+    build_card_path.parent.mkdir(parents=True)
+    build_card_path.touch()
+
+    for out_root in (None, str(tmp_path / 'spool'), '/var/lib/askmaddi-cards'):
+        runner = cf.build_card_runner(
+            build_card_path=build_card_path, out_root=out_root,
+            enrich_client='mock')
+        _, card_path, _ = runner({'slug': 's1', 'label': 'L',
+                                  'category': 'lens'})
+        i = captured['cmd'].index('--out')
+        assert card_path == str(Path(captured['cmd'][i + 1]) / 'card.json'), \
+            f'card_path diverged from --out with out_root={out_root!r}'
 
 
 # ─── failure capture rework (2026-07-17) ─────────────────────────────────────
