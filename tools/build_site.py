@@ -210,7 +210,50 @@ def _reviewer_from_source_id(source_id):
 
 
 def pct(pos, total):
+    """Single share, rounded independently. Retained for callers that need ONE
+    number against an arbitrary denominator. NOT for rendering a pos/neu/neg
+    split — use pct_triple, which is the only thing that keeps three shares
+    consistent with each other."""
     return round(100 * pos / total) if total else 0
+
+
+def pct_triple(pos, neu, neg):
+    """Integer pos/neu/neg percentages summing to EXACTLY 100.
+
+    Rounding each share independently sums to 99 or 101 whenever two shares
+    carry fractional parts above .5 — live on 2 of 11 cards when this landed
+    (sigma-35 optical performance printed 71/14/16; sony-a7c mount
+    compatibility printed 50/48/3). The stat line is the sentence built to be
+    lifted whole by an extractor, so shares that do not total 100 discredit
+    exactly the surface that was supposed to be checkable.
+
+    Largest-remainder (Hamilton) apportionment: floor every share, hand the
+    leftover point(s) to the largest fractional parts. The index tie-break
+    keeps output byte-stable for a given input, which the determinism
+    invariant depends on.
+
+    PORTED, NOT INVENTED — this is `_dist_pcts` from the aggregator's
+    synthesize_classifier.py, which has rendered the paragraph's shares
+    correctly since 2026-07-24. The two live in separate repos and cannot
+    import each other, so equivalence is pinned by an exhaustive-grid test
+    (test_build_site_pct_triple.py) in the same way select_teaser_axes is
+    pinned against axis_roles. If you change one, the test fails until you
+    change the other.
+
+    Denominator is the polar total (pos+neu+neg), not sentiment.total, so a
+    card whose total field disagrees with its own counts cannot bend the
+    shares."""
+    denom = (pos or 0) + (neu or 0) + (neg or 0)
+    if denom <= 0:
+        return (0, 0, 0)
+    raw = [100 * (pos or 0) / denom, 100 * (neu or 0) / denom,
+           100 * (neg or 0) / denom]
+    floors = [int(x) for x in raw]
+    order = sorted(range(3), key=lambda i: (raw[i] - floors[i], -i),
+                   reverse=True)
+    for i in range(100 - sum(floors)):
+        floors[order[i]] += 1
+    return (floors[0], floors[1], floors[2])
 
 
 def card_name(card):
@@ -261,8 +304,8 @@ def sentiment_triple(sent):
     total = sent.get("total") or (pos + neu + neg)
     if not total:
         return ""
-    return (f"{pct(pos, total)}% positive, {pct(neu, total)}% neutral, "
-            f"{pct(neg, total)}% negative")
+    p, n, g = pct_triple(pos, neu, neg)
+    return f"{p}% positive, {n}% neutral, {g}% negative"
 
 
 def most_discussed_axis(card):
@@ -354,14 +397,87 @@ def answer_stat_line(card, source_count):
     # Both are scope, not hedging: every figure stays concrete and extractable.
     # Softening the numbers themselves would cost the citation value AND the
     # honesty, since the counts are not the uncertain part.
+    # On-axis coverage, inherited from the retired paragraph S1 (2026-07-28).
+    # The stat line now OWNS the anchor claim outright, so the one datum S1
+    # carried that this sentence lacked has to come with it or it is lost:
+    # how many of the compiled reviews actually touched this axis. Without it
+    # the compiled-review count silently doubles as the on-axis count, which
+    # was wrong on all 11 live cards — by 1 to 8 sources.
+    #
+    # Emitted only when it is BOTH known and smaller than the corpus. Equal
+    # counts would render "341 claims from 55 of them" beside "the 55 reviews
+    # we compiled", which is noise; a missing count is not written as a guess.
+    covered = (axis.get("convergence") or {}).get("source_count")
+    on_axis = (f" from {covered} of them"
+               if covered and source_count and covered < source_count else "")
     body = (f"among the {source_count} reviews we compiled, {name.lower()} "
-            f"drew the most discussion: {total} claims, which we read as "
-            f"{triple}.")
+            f"drew the most discussion: {total} claims{on_axis}, "
+            f"which we read as {triple}.")
     # The date qualifier LEADS. An extractor lifting the first clause gets the
     # scope of the claim with it, rather than a bare statistic that reads as
     # timeless.
     asof = asof_phrase(card)
     return f"{asof}, {body}" if asof else f"{body[0].upper()}{body[1:]}"
+
+
+META_DESC_LIMIT = 155
+
+
+def meta_description(card, source_count, name, synth, limit=META_DESC_LIMIT):
+    """The <meta description> / og / twitter / schema.org description.
+
+    COMPOSED, never sliced. This was `synth[:155] + "…"`, which cut mid-word on
+    all 11 live cards — every one ended "…Reviewers are most posi…". A blind
+    slice also inherited whatever the paragraph happened to open with, so the
+    single most-syndicated sentence on the site was decided by sentence order
+    in a different repo.
+
+    Three tiers, each a WHOLE claim:
+
+      1. A compact form of the anchor stat, built from the same numbers as the
+         stat line. Names the product (the stat line does not — it sits under
+         an <h1> that already does, but a description travels alone into a
+         SERP), and carries the on-axis denominator. The stat line itself
+         cannot be reused verbatim: it runs 172-183 chars against a 155 slot.
+      2. Whole sentences from the synthesis paragraph, packed greedily and cut
+         only at a sentence boundary. Never a partial claim.
+      3. The generic line, which asserts only what is always true.
+
+    A description that overruns is truncated by the search engine, so the
+    limit is enforced here where we can choose WHERE it ends."""
+    axis = most_discussed_axis(card)
+    if axis is not None and name:
+        sent = axis.get("sentiment") or {}
+        total = sent.get("total") or (
+            (sent.get("pos", 0) or 0) + (sent.get("neu", 0) or 0)
+            + (sent.get("neg", 0) or 0))
+        triple = sentiment_triple(sent)
+        label = (axis.get("display_name") or axis.get("axis_id", "")).lower()
+        covered = (axis.get("convergence") or {}).get("source_count")
+        scope = (f"{covered} of {source_count} reviews"
+                 if covered and source_count and covered < source_count
+                 else f"{source_count} reviews")
+        if triple and total and label:
+            candidate = (f"{name}: {total} claims on {label} across {scope} "
+                         f"we compiled \u2014 {triple}.")
+            if len(candidate) <= limit:
+                return candidate
+
+    # Tier 2 — whole sentences only. Split on the sentence boundary the
+    # templates actually emit ('. '), which leaves intra-token periods such as
+    # 'af performance.video' intact.
+    if synth:
+        packed = ""
+        for part in synth.split(". "):
+            piece = part if part.endswith(".") else part + "."
+            nxt = piece if not packed else f"{packed} {piece}"
+            if len(nxt) > limit:
+                break
+            packed = nxt
+        if packed:
+            return packed
+
+    return f"{name} \u2014 reviews synthesized from {source_count} sources."
 
 
 # ─── Pricing helpers (degrade gracefully on missing data) ───────────────────
@@ -540,8 +656,12 @@ def axis_block(axis):
     sent = axis.get("sentiment", {}) or {}
     pos, neu, neg = sent.get("pos", 0), sent.get("neu", 0), sent.get("neg", 0)
     total = sent.get("total", pos + neu + neg)
-    p = pct(pos, total)
-    n = pct(neg, total)
+    # Bar geometry comes from the SAME apportionment the sentence text uses.
+    # Independently rounded widths let the bar contradict the words beside it:
+    # sigma-35 rendered pos:71% + neg:16%, leaving a 13% neutral gap under a
+    # sentence that said 14% neutral. Neutral is the implicit remainder here,
+    # so the three widths total 100 by construction and the bar cannot overflow.
+    p, _n_neu, n = pct_triple(pos, neu, neg)
 
     # Card-face blurb: the pipeline stamps a gated `face_quote` per axis
     # (unambiguous-subset doctrine, 2026-06-10) with a display-ready
@@ -923,7 +1043,7 @@ def render_page(card, image_url=None):
         if img_url else '<div class="hero-product-img placeholder">No image yet</div>'
     )
 
-    meta_desc = (synth[:155] + "\u2026") if len(synth) > 155 else (synth or f"{name} — reviews synthesized from {source_count} sources.")
+    meta_desc = meta_description(card, source_count, name, synth)
 
     canonical = f"{BASE_URL}/cards/{card['card_id']}/"
     asof_human = fmt_date_human(used_price_asof(card))
@@ -1017,8 +1137,8 @@ def render_page(card, image_url=None):
       {f'''<section class="card-section answer-first">
         <h2 class="card-section-head">What do reviewers say about the {esc(name)}?</h2>
         {f'<p class="answer-stats">{esc(stat_line)}</p>' if stat_line else ''}
-        <p class="synthesis-text">{esc(synth)}</p>
-      </section>''' if synth else ''}
+        {f'<p class="synthesis-text">{esc(synth)}</p>' if synth else ''}
+      </section>''' if (stat_line or synth) else ''}
 
       {specs_html}
 
