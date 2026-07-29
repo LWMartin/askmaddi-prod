@@ -16,9 +16,26 @@ tools/, it runs inside the bot gate — so a 3.9-incompatible annotation now fai
 in the sandbox at test time, loudly, instead of on the box at deploy time,
 silently.
 
+WHY 3.9 IS STILL THE FLOOR (verified 2026-07-29, correcting the record). It is
+tempting to read 3.9 as the stale outlier now that a 3.11.13 venv exists. It is
+not. Cron runs with PATH=/sbin:/bin:/usr/sbin:/usr/bin, and /usr/bin/python3 is
+3.9.25, so the entire unattended pipeline — card_factory (the 15-min drip), both
+minting stages, image_catalog_sweep --commit — executes on 3.9. The venv 3.11.13
+serves the gateway process and nothing else. There is no single "interpreter
+production runs"; there are two, and 3.9 is the one running the pipeline.
+
+GRAMMAR IS PINNED, NOT AMBIENT. `ast.parse` previously used whatever interpreter
+ran pytest, which made the guard silently weaker as the gate interpreter rose: a
+file using 3.10+ syntax raises SyntaxError under a 3.9 parser (caught here as
+`unparseable`) but parses cleanly under 3.11, sailing straight through the check
+meant to stop it. `feature_version=(3, 9)` fixes the grammar to the deployment
+floor, so this test gives the same answer under 3.9, 3.11, or 3.12.
+
 Currently guarded:
   - PEP 604 unions (`X | Y`) in annotation position without
     `from __future__ import annotations` (which defers them to strings, 3.9-safe).
+  - Any 3.10+ SYNTAX (match statements, parenthesized context managers, except*,
+    PEP 695 generics) — these are hard SyntaxErrors under the pinned grammar.
 
 The fix when this test fails is almost always: add `from __future__ import
 annotations` to the offending file (one line, fixes the whole file), or use
@@ -86,7 +103,8 @@ def test_no_pep604_unions_without_future_import():
     offenders = []
     for path in _iter_py_files():
         try:
-            tree = ast.parse(path.read_text(encoding="utf-8"))
+            tree = ast.parse(path.read_text(encoding="utf-8"),
+                             feature_version=(3, 9))
         except SyntaxError as e:
             offenders.append(f"{path.relative_to(REPO_ROOT)}: unparseable ({e})")
             continue

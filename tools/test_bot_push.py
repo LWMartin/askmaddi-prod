@@ -16,6 +16,7 @@ Design rules under test:
 Run from repo root:  python -m pytest tools/test_bot_push.py -q
 """
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -282,3 +283,40 @@ def test_fence_only_bad_snapshot_two(repo_pair, tmp_path):
     bad = tmp_path / "bad.json"
     bad.write_text("{not json")
     assert classify_dirt(work, bad) == 2
+
+
+# ─── 8. Interpreter pinning (2026-07-29) ─────────────────────────────────────
+# The wrapper decides which interpreter validates every machine commit. A bare
+# `python3` made that decision depend on the caller's PATH, so these pin it
+# structurally rather than trusting the comment above it.
+_BOT_PUSH_SH = Path(__file__).parent / "bot_push.sh"
+
+
+def test_wrapper_pins_the_interpreter_rather_than_resolving_it():
+    """bot_push.sh must never exec a bare `python`/`python3`.
+
+    Cron runs with PATH=/sbin:/bin:/usr/sbin:/usr/bin (no /usr/local/bin), so a
+    bare `python3` is /usr/bin/python3 = 3.9.25 under cron but
+    /usr/local/bin/python3 = 3.11.13 in an interactive root shell. Identical
+    command, two interpreters — which made the gate's effective interpreter a
+    function of who invoked it, and impossible to reproduce by hand.
+    """
+    text = _BOT_PUSH_SH.read_text(encoding="utf-8")
+    exec_lines = [ln.strip() for ln in text.splitlines()
+                  if ln.strip().startswith("exec ")]
+    assert exec_lines, "bot_push.sh no longer execs anything — wrapper changed"
+    for ln in exec_lines:
+        assert not re.search(r"^exec\s+python3?\b", ln), (
+            f"bare interpreter resolved via PATH: {ln!r}. Pin an absolute path "
+            f"(see BOT_PUSH_PYTHON) — cron and interactive PATHs differ."
+        )
+
+
+def test_wrapper_default_interpreter_is_absolute():
+    """The pinned default must be a path, not a name to be looked up."""
+    text = _BOT_PUSH_SH.read_text(encoding="utf-8")
+    m = re.search(r'BOT_PUSH_PYTHON="\$\{BOT_PUSH_PYTHON:-([^}"]+)\}"', text)
+    assert m, "BOT_PUSH_PYTHON default not found in bot_push.sh"
+    assert m.group(1).startswith("/"), (
+        f"default interpreter {m.group(1)!r} is not an absolute path"
+    )
