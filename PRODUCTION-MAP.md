@@ -77,13 +77,50 @@ about the process that runs the gate.
 gateway process. Cron-invoked `bot_push` jobs (nightly used-price refresh,
 Stage 6 ingestion) run in cron's environment and still skip these three.
 
-**OPEN — interpreter split.** `build_site` and `bot_push` are invoked with
-`sys.executable` (the venv, **Python 3.11.13**), but `bot_push`'s gate is
-`shell=True` on bare `python`, which resolves off the service PATH
-(`/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin`) to `/usr/bin/python`,
-**3.9.25**. Every machine commit is validated on an interpreter production does
-not run. It passes today, which is why it has stayed invisible. Not yet fixed —
-changing it changes what gates every automated commit.
+**RESOLVED 2026-07-29 — interpreter split. The earlier entry here had the
+polarity backwards and is corrected below.**
+
+It previously read: the gate runs on `/usr/bin/python` **3.9.25** while
+`build_site` and `bot_push` are invoked with `sys.executable` (the venv,
+**3.11.13**), so "every machine commit is validated on an interpreter
+production does not run." The first half is accurate. The conclusion is not.
+
+**There is no single interpreter production runs — there are two, and the gate
+was already on the busier one.** Verified from the box:
+
+| Path | Version | pytest |
+|------|---------|--------|
+| `/usr/bin/python`, `/usr/bin/python3`, `/bin/python3` | 3.9.25 | 8.4.2 |
+| `/usr/local/bin/python3` | 3.11.13 | 9.1.1 |
+| `/opt/askmaddi-prod/venv/bin/python` | 3.11.13 | **none** |
+
+Cron runs with `PATH=/sbin:/bin:/usr/sbin:/usr/bin` (`/etc/crontab`; neither the
+`askmaddi` nor `phantomops` crontab overrides it) — **no `/usr/local/bin`**. So
+every bare `python3` under cron is 3.9.25, while the identical string in an
+interactive root shell resolves to 3.11.13. On 3.9.25: `card_factory.py` (the
+15-min drip), `comparator_typed_cached.py` (minting emit, 03:00),
+`resolve_pass.py` (minting wire, 04:00), `image_catalog_sweep.py --commit`
+(04:30). On the venv 3.11.13: the gateway process, and nothing else.
+
+Pointing the gate at the venv would therefore have (a) failed closed
+immediately, since the venv has no pytest — blocking every publish and
+writeback — and (b) had it been installed, stopped validating the interpreter
+that runs the whole nightly pipeline in order to validate the one serving
+Flask, reopening the 2026-06-25 PEP 604 collection crash.
+
+**Fixed instead:** the real defect was ambiguity, not version.
+`tools/bot_push.sh` now pins `BOT_PUSH_PYTHON` (default `/usr/bin/python3`,
+absolute, overridable) rather than resolving a bare name through PATH, and
+`tools/test_py39_compat.py` parses with `feature_version=(3, 9)` so the guard
+no longer weakens as the ambient interpreter rises. Two structural tests pin the
+wrapper. `tools/` verified at 318 passed under 3.12 + pytest 9.1.1 — a strictly
+harder target than 3.11.13 — so there are no hidden 3.11 incompatibilities.
+
+**STILL OPEN — interpreter unification (deferred, deliberately).** Moving the
+four cron jobs onto the venv so there genuinely is one production interpreter
+remains the real remediation. It has a large blast radius (the drip and both
+minting stages) and must not share a session with a gate change: if the drip
+stalls overnight you need to know which change caused it.
 
 ### Affiliate status (verified live)
 - **eBay Partner Network:** LIVE. Campaign `5339138080` attaches to every `/ebay/search` URL (`campid=` confirmed in responses). Earning-capable now.
