@@ -50,6 +50,14 @@ _CATEGORY_MAP = {
     '64352': 'lens',     # Lenses for interchangeable-lens cameras
     # ── support ──
     '30093': 'support',  # Tripods & Supports (Peak Design tripods — frozen entry)
+    '30097': 'support',  # Other Camera Tripods & Supports — sibling leaf of 30093
+                         # in eBay's own Tripods & Supports family (Tripods &
+                         # Monopods / Other Tripods & Supports / Stabilizers /
+                         # Tripod Heads). Added 2026-07-29 after ulanzi-f38-zero
+                         # was rebound onto it (2026-07-09) and abstained here
+                         # while its facet still read 'support' from mint-time
+                         # leaf 30093. Verified against the live browse tree, not
+                         # inferred from the entry that needed it.
     '177853': 'support', # Tripod Heads
     '163418': 'support', # Stabilizers & Gimbals
     '30090': 'support',  # Monopods

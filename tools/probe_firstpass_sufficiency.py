@@ -32,6 +32,7 @@ import env_bootstrap  # noqa: E402
 env_bootstrap.load_dotenv()
 
 import ebay_api  # noqa: E402
+import skus_registry  # noqa: E402
 
 sys.path.insert(0, "tools")
 import probe_gtin_in_payload as l1  # noqa: E402
@@ -42,7 +43,13 @@ def _reconstruct_item_id(legacy):
 
 
 def diagnose(slug, entry):
-    legacy = entry.get("identity", {}).get("legacy_item_id")
+    # READ THROUGH THE ACCESSOR, not entry['identity']['legacy_item_id'].
+    # The substrate migration moved it to marketplace_ids.ebay_legacy_item_id,
+    # after which the direct read returned None for every migrated entry and
+    # this probe short-circuited to "no legacy_item_id" on the whole spine —
+    # reporting nothing-to-see rather than failing. get_marketplace_id carries
+    # the old-shape fallback, so both shapes resolve.
+    legacy = skus_registry.get_marketplace_id(entry, "ebay_legacy_item_id")
     if not legacy:
         return {"slug": slug, "error": "no legacy_item_id"}
     try:

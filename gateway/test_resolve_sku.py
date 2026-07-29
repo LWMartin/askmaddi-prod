@@ -194,9 +194,19 @@ def test_route_low_confidence_enqueues_with_candidates(skus_path, queue_path, de
     assert rec['candidates']  # the ranked competitors are frozen for /admin
     assert any(c['chosen'] for c in rec['candidates'])
     # Spine was NOT written — low-confidence does not enter the spine.
+    # READ THROUGH THE ACCESSOR. This previously asserted
+    #   'identity' not in entry or not entry['identity']['legacy_item_id']
+    # whose second clause went vacuous when the substrate migration moved
+    # legacy_item_id -> marketplace_ids.ebay_legacy_item_id: a spine write in
+    # the NEW shape carries an identity block (clause 1 false) with no
+    # identity.legacy_item_id (clause 2 true), so the guard passed on exactly
+    # the write it exists to forbid. get_marketplace_id checks marketplace_ids
+    # first and falls back to the old identity path, so it catches a write in
+    # EITHER shape — strictly stronger than the pair it replaces.
     reg = skus_registry.load_registry(skus_path)
-    assert 'identity' not in reg['skus']['sony-a7s-iii'] or \
-        not reg['skus']['sony-a7s-iii'].get('identity', {}).get('legacy_item_id')
+    entry = reg['skus']['sony-a7s-iii']
+    assert not skus_registry.get_marketplace_id(entry, 'ebay_legacy_item_id'), (
+        "low-confidence resolve wrote a marketplace identity into the spine")
 
 
 def test_route_no_candidate_logs_demand(skus_path, queue_path, demand_path):
