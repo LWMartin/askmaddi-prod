@@ -51,7 +51,8 @@ Browser ──HTTPS──→ Apache (askmaddi.com-le-ssl.conf)
 - **5000** = Ramish API (`ramish-api.service`, user `ramish`) — unrelated to AskMaddi
 
 ### Cross-repo dependency — the publish gate reads phantom-ops
-`bot_push`'s validation gate (`python -m pytest tools/ -q`) includes
+`bot_push`'s validation gate (`pytest tools/ -q` under EVERY production
+interpreter — see `DEFAULT_GATE_PYTHONS`) includes
 `tools/test_contamination_bridge.py`, which imports `registry_join_check` from
 the **phantom-ops** checkout. Both repos live on this box but **not as
 siblings**, so the test's relative candidates cannot find it and the three

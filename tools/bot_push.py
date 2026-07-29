@@ -31,6 +31,7 @@ human act through the normal airlock.
 import argparse
 import json
 import re
+import shlex
 import subprocess
 import sys
 import time
@@ -39,7 +40,60 @@ from pathlib import Path
 
 BOT_NAME = "askmaddi-bot"
 BOT_EMAIL = "bot@askmaddi.com"
-DEFAULT_GATE = "python -m pytest tools/ -q"
+# ─── Gate interpreter selection ──────────────────────────────────────────────
+# `tools/` code runs on TWO production interpreters, so passing on one proves
+# nothing about the other:
+#
+#   /usr/bin/python3        3.9.25  — cron: card_factory (15-min drip), both
+#                                     minting stages, image_catalog_sweep,
+#                                     refresh_used_prices
+#   /usr/local/bin/python3  3.11.13 — version-match for the venv, which runs
+#                                     tools/build_site.py on every publish
+#                                     (admin_surface passes sys.executable)
+#
+# The venv itself is NOT a candidate: it has no pytest, so naming it would fail
+# the gate closed on every commit. /usr/local/bin/python3 is the same 3.11.13
+# and differs only in site-packages, which tools/ does not need.
+#
+# Paths are absolute deliberately. Cron's PATH (/sbin:/bin:/usr/sbin:/usr/bin,
+# no /usr/local/bin) and an interactive PATH resolve the same bare name to
+# different interpreters — the ambiguity this whole change exists to remove.
+#
+# A candidate that is absent or cannot import pytest is REPORTED, never
+# silently dropped: a gate that quietly halves itself is precisely the
+# failure class here (R5 — exhaustion is loud).
+GATE_PYTEST_ARGS = "-m pytest tools/ -q"
+DEFAULT_GATE_PYTHONS = ("/usr/bin/python3", "/usr/local/bin/python3")
+
+
+def usable_gate_pythons(candidates=DEFAULT_GATE_PYTHONS):
+    """Partition candidates into (usable, [(path, reason_unusable), ...])."""
+    usable, skipped = [], []
+    for c in candidates:
+        if not Path(c).exists():
+            skipped.append((c, "absent"))
+            continue
+        probe = subprocess.run([c, "-c", "import pytest"],
+                               capture_output=True, text=True)
+        if probe.returncode != 0:
+            skipped.append((c, "cannot import pytest"))
+            continue
+        usable.append(c)
+    return usable, skipped
+
+
+def build_gate(candidates=DEFAULT_GATE_PYTHONS):
+    """Compose the gate: EVERY usable production interpreter must pass.
+
+    Returns (command, skipped). Falls back to the running interpreter when no
+    candidate is usable — the sandbox/CI case, where these absolute VPS paths
+    do not exist. The fallback is a degraded gate, so it is reported too.
+    """
+    usable, skipped = usable_gate_pythons(candidates)
+    if not usable:
+        return f"{shlex.quote(sys.executable)} {GATE_PYTEST_ARGS}", skipped
+    return " && ".join(f"{shlex.quote(c)} {GATE_PYTEST_ARGS}"
+                       for c in usable), skipped
 POLICY_DIRECT = "direct-to-master"
 POLICY_BRANCH = "branch-and-propose"
 VALID_POLICIES = {POLICY_DIRECT, POLICY_BRANCH}
@@ -285,7 +339,10 @@ def main():
     ap.add_argument("--summary", default="automated data refresh",
                     help="One-line commit summary.")
     ap.add_argument("--repo", default=".", help="Repo path (default: cwd).")
-    ap.add_argument("--gate", default=DEFAULT_GATE, help="Validation command; non-zero blocks the push.")
+    ap.add_argument("--gate", default=None,
+                    help="Validation command; non-zero blocks the push. "
+                         "Default: pytest tools/ under EVERY production "
+                         "interpreter (see DEFAULT_GATE_PYTHONS).")
     ap.add_argument("--signal-dir", default="~/.askmaddi-bot/signals",
                     help="Where abort/proposal signals are written.")
     ap.add_argument("--dry-run", action="store_true", help="Fence + gate only; no commit, no push.")
@@ -296,8 +353,14 @@ def main():
     if args.fence_only:
         return classify_dirt(args.repo, args.snapshot,
                              signal_dir=args.signal_dir, job=args.job)
+    gate_cmd = args.gate
+    if gate_cmd is None:
+        gate_cmd, skipped = build_gate()
+        for path, why in skipped:
+            print(f"[bot:{args.job}] gate interpreter NOT used: "
+                  f"{path} ({why})", file=sys.stderr)
     return run(args.repo, args.job, args.snapshot, args.summary,
-               args.gate, args.signal_dir, dry_run=args.dry_run)
+               gate_cmd, args.signal_dir, dry_run=args.dry_run)
 
 
 if __name__ == "__main__":

@@ -26,6 +26,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).parent))
 from bot_push import (  # noqa: E402
     path_allowed, load_snapshot, job_policy, run, POLICY_DIRECT, POLICY_BRANCH,
+    build_gate, usable_gate_pythons, DEFAULT_GATE_PYTHONS, GATE_PYTEST_ARGS,
 )
 
 ALLOW = ["data/cards/*.json", "browser/**", "cards-manifest.json"]
@@ -320,3 +321,71 @@ def test_wrapper_default_interpreter_is_absolute():
     assert m.group(1).startswith("/"), (
         f"default interpreter {m.group(1)!r} is not an absolute path"
     )
+
+
+# ─── 9. Multi-interpreter gate (2026-07-29) ──────────────────────────────────
+# tools/ runs on 3.9.25 under cron and on the venv 3.11.13 via build_site, so
+# a single-interpreter gate proves half of what it appears to.
+def test_every_gate_candidate_is_an_absolute_path():
+    """A bare name would reintroduce the PATH ambiguity this change removed."""
+    for c in DEFAULT_GATE_PYTHONS:
+        assert c.startswith("/"), f"gate candidate {c!r} is not absolute"
+
+
+def test_the_venv_is_never_a_gate_candidate():
+    """The venv has no pytest — naming it fails the gate closed on EVERY commit.
+
+    This is the specific mistake the 2026-07-29 pre-flight caught before it
+    shipped. /usr/local/bin/python3 is the same 3.11.13 and is used instead.
+    """
+    assert not any("venv" in c for c in DEFAULT_GATE_PYTHONS), (
+        "a venv interpreter is a gate candidate; verify it has pytest first"
+    )
+
+
+def test_all_usable_interpreters_must_pass(tmp_path):
+    """Multiple usable candidates chain with && — every one must pass."""
+    fake_a, fake_b = tmp_path / "pa", tmp_path / "pb"
+    for f in (fake_a, fake_b):
+        f.write_text("#!/bin/sh\nexit 0\n")
+        f.chmod(0o755)
+    cmd, skipped = build_gate((str(fake_a), str(fake_b)))
+    assert skipped == []
+    assert " && " in cmd
+    assert cmd.count(GATE_PYTEST_ARGS) == 2
+
+
+def test_an_absent_candidate_is_reported_not_silently_dropped(tmp_path):
+    """A gate that quietly halves itself is the failure class under repair."""
+    real = tmp_path / "preal"
+    real.write_text("#!/bin/sh\nexit 0\n")
+    real.chmod(0o755)
+    missing = str(tmp_path / "nope")
+    cmd, skipped = build_gate((str(real), missing))
+    assert (missing, "absent") in skipped
+    assert missing not in cmd
+
+
+def test_a_candidate_without_pytest_is_reported(tmp_path):
+    """`import pytest` failing must skip loudly, not pass silently."""
+    nopytest = tmp_path / "pnp"
+    nopytest.write_text("#!/bin/sh\nexit 1\n")
+    nopytest.chmod(0o755)
+    _, skipped = build_gate((str(nopytest),))
+    assert skipped == [(str(nopytest), "cannot import pytest")]
+
+
+def test_no_usable_candidate_falls_back_to_the_running_interpreter(tmp_path):
+    """Sandbox/CI: the absolute VPS paths do not exist. Degrade, don't crash."""
+    cmd, skipped = build_gate((str(tmp_path / "a"), str(tmp_path / "b")))
+    assert sys.executable in cmd
+    assert len(skipped) == 2
+
+
+def test_usable_gate_pythons_agrees_with_build_gate(tmp_path):
+    good = tmp_path / "g"
+    good.write_text("#!/bin/sh\nexit 0\n")
+    good.chmod(0o755)
+    usable, skipped = usable_gate_pythons((str(good), str(tmp_path / "x")))
+    assert usable == [str(good)]
+    assert skipped == [(str(tmp_path / "x"), "absent")]
