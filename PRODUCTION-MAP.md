@@ -50,6 +50,41 @@ Browser ──HTTPS──→ Apache (askmaddi.com-le-ssl.conf)
 - **5001** = AskMaddi gateway (`askmaddi-gateway.service`, user `askmaddi`)
 - **5000** = Ramish API (`ramish-api.service`, user `ramish`) — unrelated to AskMaddi
 
+### Cross-repo dependency — the publish gate reads phantom-ops
+`bot_push`'s validation gate (`python -m pytest tools/ -q`) includes
+`tools/test_contamination_bridge.py`, which imports `registry_join_check` from
+the **phantom-ops** checkout. Both repos live on this box but **not as
+siblings**, so the test's relative candidates cannot find it and the three
+cross-repo contract tests skipped silently in production from inception until
+2026-07-29.
+
+| Requirement | Value |
+|-------------|-------|
+| Env var | `ASKMADDI_AGGREGATOR_DIR=/home/phantomops/phantom-ops/claude/workspace/aggregator-build` |
+| Set in | `/etc/systemd/system/askmaddi-gateway.service.d/20-aggregator-bridge.conf` |
+| Filesystem precondition | `chmod o+x /home/phantomops` (0700 → 0701: traversal only, listing still denied) |
+| Verified | 2026-07-29 in a `systemd-run` replica of the service sandbox: **316 passed, 0 skipped** |
+
+Without the traversal bit, `Path.exists()` re-raises EACCES — setting the env
+var alone turned 3 skips into 3 **hard failures inside the publish gate**. Since
+`a6dd834` the finders treat unreadable as absent and name the permission in the
+skip reason, so a reverted `chmod` degrades to a named skip, never a blocked
+publish. Verify with `tr '\0' '\n' < /proc/$(systemctl show -p MainPID --value
+askmaddi-gateway.service)/environ | grep ASKMADDI` — a shell test proves nothing
+about the process that runs the gate.
+
+**Scope limit:** this covers publishes, where `bot_push` is invoked from the
+gateway process. Cron-invoked `bot_push` jobs (nightly used-price refresh,
+Stage 6 ingestion) run in cron's environment and still skip these three.
+
+**OPEN — interpreter split.** `build_site` and `bot_push` are invoked with
+`sys.executable` (the venv, **Python 3.11.13**), but `bot_push`'s gate is
+`shell=True` on bare `python`, which resolves off the service PATH
+(`/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin`) to `/usr/bin/python`,
+**3.9.25**. Every machine commit is validated on an interpreter production does
+not run. It passes today, which is why it has stayed invisible. Not yet fixed —
+changing it changes what gates every automated commit.
+
 ### Affiliate status (verified live)
 - **eBay Partner Network:** LIVE. Campaign `5339138080` attaches to every `/ebay/search` URL (`campid=` confirmed in responses). Earning-capable now.
 - **Amazon Associates:** approved (`askmaddi-20`), PA-API not yet active (awaiting purchases to unblock).
