@@ -267,6 +267,15 @@ def _merge_enrichment(existing, entry):
     - unspsc                Gemma-mapper backfill (Axis B): build_entry always
                             emits null; a non-null existing classification
                             carries forward.
+    - spec_surface          AUTHORED curation (R10, maddi-naming-register):
+                            the per-SKU URL fragments that fill the brand
+                            table's template. resolve never writes it, so an
+                            incoming entry never carries one. Held as its OWN
+                            key rather than inside `overrides` because that
+                            dict is the top layer of the card-identity merge
+                            (maddi-images-on-spine D1/D3) — a fragment placed
+                            there reaches the reader-facing identity block.
+                            One key per concern, as the four rules above.
 
     needs_review is recomputed after the merge so a carried gtin/unspsc
     clears the flag exactly as build_entry would have set it.
@@ -280,6 +289,13 @@ def _merge_enrichment(existing, entry):
     prior_overrides = existing.get('overrides')
     if prior_overrides and not entry.get('overrides'):
         entry['overrides'] = prior_overrides
+
+    # AUTHORED curation layer (R10) — same doctrine as overrides: resolve is
+    # not its author, so a fresh build_entry never carries one and the
+    # existing layer survives the replace.
+    prior_spec_surface = existing.get('spec_surface')
+    if prior_spec_surface and not entry.get('spec_surface'):
+        entry['spec_surface'] = prior_spec_surface
 
     # GTIN anchor + receipt
     old_gtin = get_gtin(existing)
@@ -411,6 +427,30 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     return 'written'
 
 
+# The vocabulary `overrides` may carry. CO-DECLARED with
+# aggregator-build/assemble_card.py's CARD_IDENTITY_FIELDS, which is the read
+# side; tools/backfill_spec_fragments.py refuses to run if the two disagree.
+#
+# Duplicated deliberately rather than imported: phantom-ops is not a dependency
+# of this repo, and the set is safe to duplicate precisely BECAUSE it does not
+# grow with the catalogue. Axes, facts, labels and aliases vary by product type
+# and must never be copied; identity does not — a drone and a tripod carry
+# these same nine fields. Adding a vertical does not touch this.
+#
+# WHY A GATE EXISTS AT ALL (2026-07-29): `overrides` is the top layer of the
+# card-identity merge (spec maddi-images-on-spine, D1/D3), and that merge is
+# field-generic by design. So the layer's contract — "these keys are card
+# identity" — was held only by the /admin route being its sole writer. An
+# operator tool writing through this generic API put a spec-surface fragment
+# in, and it would have surfaced in the reader-facing identity block. The
+# route restricted; nothing structural did. This is the structural half.
+CARD_IDENTITY_FIELDS = frozenset({
+    'display_name', 'brand', 'model', 'sku_alt_names',
+    'category', 'subcategory', 'year_introduced',
+    'image_thumb', 'image_source',
+})
+
+
 def set_override(slug, field, value, path=SKUS_PATH):
     """Surgically write one card-identity override field for one SKU (D3).
 
@@ -435,6 +475,17 @@ def set_override(slug, field, value, path=SKUS_PATH):
     """
     if not field or not isinstance(field, str):
         raise ValueError('set_override requires a non-empty string field name')
+    if value is not None and field not in CARD_IDENTITY_FIELDS:
+        # Clearing (value=None) stays open for ANY field, so a foreign key
+        # written before this gate existed can still be removed. Only new
+        # writes are constrained — a gate that also blocked cleanup would
+        # strand exactly the entries it was added because of.
+        raise ValueError(
+            f'{field!r} is not a card-identity field, and `overrides` is the '
+            f'top layer of the card-identity merge — writing it here would '
+            f'put it in the rendered card. Authored non-identity curation '
+            f'gets its own carried key (see _merge_enrichment). Known fields: '
+            f'{sorted(CARD_IDENTITY_FIELDS)}')
     registry = load_registry(path)
     skus = registry.setdefault('skus', {})
     entry = skus.get(slug)
@@ -455,6 +506,46 @@ def set_override(slug, field, value, path=SKUS_PATH):
         if overrides.get(field) == value:
             return 'no-op'
         overrides[field] = value
+        status = 'written'
+
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return status
+
+
+def set_spec_surface(slug, fragments, path=SKUS_PATH):
+    """Write the authored spec-surface fragments for one SKU (R10).
+
+    A SEPARATE writer from set_override for the same reason set_override is
+    separate from upsert: this layer has a different author and a different
+    contract. The brand table (phantom-ops `spec_surfaces.py`) owns the host
+    and the URL template; a SKU owes only the fragments that fill it.
+
+    Its own top-level key, NOT a field inside `overrides`. That dict is the
+    top layer of the card-identity merge (maddi-images-on-spine D1/D3), which
+    merges field-generically, so a fragment placed there reaches the rendered
+    identity block. The carry list already keeps four concerns in four keys;
+    this is the fifth.
+
+    `fragments=None` DELETES the layer. Returns:
+    'written' | 'cleared' | 'no-op' | 'missing-slug'.
+    """
+    if fragments is not None and not isinstance(fragments, dict):
+        raise ValueError('spec_surface fragments must be a dict or None')
+    registry = load_registry(path)
+    entry = (registry.setdefault('skus', {})).get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    if fragments is None:
+        if 'spec_surface' not in entry:
+            return 'no-op'
+        entry.pop('spec_surface')
+        status = 'cleared'
+    else:
+        if entry.get('spec_surface') == fragments:
+            return 'no-op'
+        entry['spec_surface'] = fragments
         status = 'written'
 
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
