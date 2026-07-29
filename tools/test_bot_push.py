@@ -27,6 +27,8 @@ sys.path.insert(0, str(Path(__file__).parent))
 from bot_push import (  # noqa: E402
     path_allowed, load_snapshot, job_policy, run, POLICY_DIRECT, POLICY_BRANCH,
     build_gate, usable_gate_pythons, DEFAULT_GATE_PYTHONS, GATE_PYTEST_ARGS,
+    GATE_PYTEST_ARGS_GATEWAY, GATEWAY_DEPS, GateCoverageError, gate_coverage,
+    gateway_capable,
 )
 
 ALLOW = ["data/cards/*.json", "browser/**", "cards-manifest.json"]
@@ -352,7 +354,10 @@ def test_all_usable_interpreters_must_pass(tmp_path):
     cmd, skipped = build_gate((str(fake_a), str(fake_b)))
     assert skipped == []
     assert " && " in cmd
-    assert cmd.count(GATE_PYTEST_ARGS) == 2
+    # Suite-agnostic: as of 2026-07-29 each interpreter runs the widest suite
+    # it can, so the exact args depend on whether it imports the gateway deps.
+    # What this test is about is that BOTH are chained and both must pass.
+    assert cmd.count("-m pytest") == 2
 
 
 def test_an_absent_candidate_is_reported_not_silently_dropped(tmp_path):
@@ -389,3 +394,102 @@ def test_usable_gate_pythons_agrees_with_build_gate(tmp_path):
     usable, skipped = usable_gate_pythons((str(good), str(tmp_path / "x")))
     assert usable == [str(good)]
     assert skipped == [(str(tmp_path / "x"), "absent")]
+
+
+# ── gateway coverage in the gate (2026-07-29) ────────────────────────
+
+def _fake_python(path, *, pytest_ok=True, gateway_ok=True):
+    """A stub interpreter that answers the two `-c` import probes.
+
+    Distinguishes them by inspecting the code string, so one stub can be
+    pytest-capable and gateway-incapable — which is the exact box condition
+    this feature exists for and cannot be reproduced with exit-0 stubs.
+    """
+    path.write_text(
+        "#!/bin/sh\n"
+        'case "$2" in\n'
+        f'  *flask*) exit {0 if gateway_ok else 1} ;;\n'
+        f'  *pytest*) exit {0 if pytest_ok else 1} ;;\n'
+        "esac\n"
+        "exit 0\n")
+    path.chmod(0o755)
+    return str(path)
+
+
+def test_an_interpreter_without_the_gateway_deps_still_gates_tools(tmp_path):
+    """The box condition. Losing tools/ coverage because gateway/ cannot run
+    would trade a real gate for a missing one."""
+    narrow = _fake_python(tmp_path / "narrow", gateway_ok=False)
+    cmd, skipped = build_gate((narrow,))
+    assert skipped == []
+    assert GATE_PYTEST_ARGS in cmd
+    assert "gateway/" not in cmd
+
+
+def test_a_capable_interpreter_gates_gateway_too(tmp_path):
+    capable = _fake_python(tmp_path / "capable")
+    cmd, _ = build_gate((capable,))
+    assert "gateway/" in cmd
+
+
+def test_mixed_interpreters_each_run_the_widest_suite_they_can(tmp_path):
+    """Neither interpreter is held back to the other's capability, and neither
+    is asked to run something it cannot import."""
+    narrow = _fake_python(tmp_path / "n", gateway_ok=False)
+    capable = _fake_python(tmp_path / "c")
+    cmd, _ = build_gate((narrow, capable))
+    narrow_part, capable_part = cmd.split(" && ")
+    assert "gateway/" not in narrow_part
+    assert "gateway/" in capable_part
+
+
+def test_narrow_coverage_is_reported_not_silent(tmp_path):
+    """A gate that quietly halves itself is the failure class this whole file
+    was hardened against; a gate that quietly gates LESS than it claims is the
+    same defect one level down."""
+    narrow = _fake_python(tmp_path / "n", gateway_ok=False)
+    capable = _fake_python(tmp_path / "c")
+    usable, skipped, reported = gate_coverage((narrow, capable))
+    assert usable == [narrow, capable]
+    assert reported == [narrow], "narrow interpreter was not named"
+
+
+def test_require_gateway_fails_closed_rather_than_narrowing(tmp_path):
+    """The ratchet. Off by default because tightening it on an unverified box
+    would take /admin/publish down; explicit once the deps are confirmed."""
+    narrow = _fake_python(tmp_path / "n", gateway_ok=False)
+    with pytest.raises(GateCoverageError) as exc:
+        build_gate((narrow,), require_gateway=True)
+    assert "flask" in str(exc.value)
+
+
+def test_require_gateway_passes_when_every_interpreter_is_capable(tmp_path):
+    capable = _fake_python(tmp_path / "c")
+    cmd, _ = build_gate((capable,), require_gateway=True)
+    assert "gateway/" in cmd
+
+
+def test_a_pytest_less_interpreter_is_still_skipped_not_narrowed(tmp_path):
+    """Narrowing and skipping are different verdicts; no pytest means the
+    interpreter gates nothing at all, which must not read as 'gates tools/'."""
+    nopytest = _fake_python(tmp_path / "np", pytest_ok=False)
+    usable, skipped, narrow = gate_coverage((nopytest,))
+    assert usable == [] and narrow == []
+    assert skipped == [(nopytest, "cannot import pytest")]
+
+
+def test_the_gateway_dep_list_matches_what_gateway_actually_imports():
+    """Pinned against the source, so a new gateway dependency cannot silently
+    make the probe optimistic — it would report capable, then the suite would
+    fail on an import the probe never checked."""
+    import re
+    root = Path(__file__).resolve().parent.parent / "gateway"
+    imported = set()
+    for f in root.glob("*.py"):
+        for m in re.finditer(r"^\s*(?:import|from)\s+(flask[a-z_]*)",
+                             f.read_text(), re.M):
+            imported.add(m.group(1))
+    assert imported, "read no flask imports — this assertion would be vacuous"
+    assert imported <= set(GATEWAY_DEPS), (
+        f"gateway/ imports {sorted(imported - set(GATEWAY_DEPS))}, which the "
+        f"capability probe does not check")
