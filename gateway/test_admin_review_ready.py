@@ -298,6 +298,46 @@ def test_publish_render_failure_leaves_review_ready(client, stores, render):
     assert work_queue.get('sigma-35-art')['state'] == 'review_ready'
 
 
+def test_publish_success_banner_carries_the_runner_detail(client, stores, render):
+    # The soft legs (indexnow, bank) append to `detail` after rc is fixed at 0,
+    # so the SUCCESS path is the only one on which their outcome exists. The
+    # runner-level suite asserts that loudness; this pins that it survives the
+    # handler and reaches a human.
+    render.detail = 'ok (+indexnow) (+bank)'
+    _enroll_ready(stores, 'sigma-35-art')
+    resp = client.post('/admin/publish', headers=_auth(),
+                       data={'slug': 'sigma-35-art'})
+    body = resp.get_data(as_text=True)
+    assert 'is live' in body
+    assert 'ok (+indexnow) (+bank)' in body
+
+
+def test_publish_banner_shows_a_failed_bank_on_a_live_card(client, stores, render):
+    # rc 0 with a failed bank is the 2026-07-20 tree-dirt shape: the card is
+    # live and correct, nothing was committed, and the banner said only "live".
+    # The card MUST still promote — bank failure never gates the publish — but
+    # the human must be able to see it happened.
+    render.detail = 'ok (bank: [bot:admin_publish] BLOCKED — gate failed)'
+    _enroll_ready(stores, 'sigma-35-art')
+    resp = client.post('/admin/publish', headers=_auth(),
+                       data={'slug': 'sigma-35-art'})
+    body = resp.get_data(as_text=True)
+    assert 'BLOCKED' in body
+    assert 'is live' in body
+    assert work_queue.get('sigma-35-art')['state'] == 'promoted'
+
+
+def test_publish_banner_shows_a_skipped_bank(client, stores, render):
+    # A missing writeback snapshot is prod misconfiguration and must surface;
+    # the runner calls it a loud skip, which was inaudible before this.
+    render.detail = 'ok (bank: skipped — no snapshot at /nope/writeback.json)'
+    _enroll_ready(stores, 'sigma-35-art')
+    resp = client.post('/admin/publish', headers=_auth(),
+                       data={'slug': 'sigma-35-art'})
+    body = resp.get_data(as_text=True)
+    assert 'skipped' in body and '/nope/writeback.json' in body
+
+
 def test_publish_unknown_slug_banner(client, stores):
     resp = client.post('/admin/publish', headers=_auth(),
                        data={'slug': 'ghost'})

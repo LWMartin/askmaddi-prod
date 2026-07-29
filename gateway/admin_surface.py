@@ -1261,8 +1261,17 @@ def register_admin(app, render_runner=None):
         except (KeyError, ValueError) as e:
             return _render_page(_banner(
                 'err', f'Rendered live but state advance failed: {e}'))
+        # The indexnow and bank legs append their outcome to `detail` AFTER rc
+        # is already fixed at 0 (both are soft by construction — the card is
+        # live, so neither may gate the publish). That makes THIS the only path
+        # on which those strings can ever exist, and dropping detail here left
+        # a failed bank reading exactly like a clean one: "card is live", no
+        # commit, no push. That is the 2026-07-20 tree-dirt shape (the a7c
+        # publish rendered but never banked, hand-banked as e5dbf92) with the
+        # wire fixed and the reporting still missing. Four runner-level tests
+        # assert loudness into this variable; until now it terminated here.
         return _render_page(_banner(
-            'ok', f'Published {slug} — card is live.'))
+            'ok', f'Published {slug} — card is live. Publish detail: {detail}'))
 
     @app.route('/admin/reject-card', methods=['POST'])
     def admin_reject_card():
