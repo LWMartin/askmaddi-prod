@@ -70,14 +70,49 @@ def _norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]", "", s.lower())
 
 
+_UNREADABLE = []
+
+
+def _exists(p: Path) -> bool:
+    """Path.exists(), treating an UNREADABLE path as absent — and saying so.
+
+    Path.exists() swallows ENOENT and ENOTDIR but RE-RAISES EACCES, so a path
+    we merely lack traversal on explodes where a missing one returns False.
+    Found live on the box 2026-07-29: the two checkouts are not siblings, so
+    ASKMADDI_AGGREGATOR_DIR must point at /home/phantomops/..., and that home
+    is 0700 while the gateway runs as `askmaddi`. Setting the variable turned
+    these three skips into three hard FAILURES inside bot_push's publish gate,
+    which would have blocked every publish.
+
+    This module's docstring promises the unreachable case SKIPS with a clear
+    reason rather than false-failing. EACCES is unreachable. But the reason is
+    recorded rather than swallowed (silent failure is the enemy — incident
+    2026-05-06): the path lands in _UNREADABLE and the skip message names it,
+    so 'permission' never masquerades as 'not installed'.
+    """
+    try:
+        return p.exists()
+    except OSError as e:
+        _UNREADABLE.append(f'{p} ({e.strerror})')
+        return False
+
+
+def _unreadable_note() -> str:
+    """Suffix for a skip message when something was found but unreadable."""
+    if not _UNREADABLE:
+        return ''
+    return ' — NOTE: unreadable path(s), this is a permission problem, not a ' \
+           'missing checkout: ' + '; '.join(dict.fromkeys(_UNREADABLE))
+
+
 def _find_aggregator_dir() -> Path | None:
     env = os.environ.get("ASKMADDI_AGGREGATOR_DIR")
     if env:
         p = Path(env).expanduser()
-        return p if (p / "registry_join_check.py").exists() else None
+        return p if _exists(p / "registry_join_check.py") else None
     for rel in _AGG_CANDIDATES:
         p = (_HERE / rel).resolve()
-        if (p / "registry_join_check.py").exists():
+        if _exists(p / "registry_join_check.py"):
             return p
     return None
 
@@ -86,15 +121,15 @@ def _find_contamination() -> Path | None:
     env = os.environ.get("ASKMADDI_CONTAMINATION_JSON")
     if env:
         p = Path(env).expanduser()
-        return p if p.exists() else None
+        return p if _exists(p) else None
     agg = _find_aggregator_dir()
     if agg is not None:
         p = agg / "fixtures" / "manifests" / "contamination.json"
-        if p.exists():
+        if _exists(p):
             return p
     for rel in _CONTAM_CANDIDATES:
         p = (_HERE / rel).resolve()
-        if p.exists():
+        if _exists(p):
             return p
     return None
 
@@ -105,7 +140,8 @@ def _load_check():
     if agg is None:
         pytest.skip(
             "phantom-ops aggregator-build not found beside this repo; set "
-            "ASKMADDI_AGGREGATOR_DIR to run the bridge-resolve test")
+            "ASKMADDI_AGGREGATOR_DIR to run the bridge-resolve test"
+            + _unreadable_note())
     mod_path = agg / "registry_join_check.py"
     spec = importlib.util.spec_from_file_location("registry_join_check", mod_path)
     mod = importlib.util.module_from_spec(spec)
@@ -119,7 +155,8 @@ def _contam_path_or_skip() -> Path:
     if p is None:
         pytest.skip(
             "contamination.json not found beside this repo; set "
-            "ASKMADDI_CONTAMINATION_JSON to run the bridge-resolve test")
+            "ASKMADDI_CONTAMINATION_JSON to run the bridge-resolve test"
+            + _unreadable_note())
     return p
 
 
@@ -174,3 +211,58 @@ def test_no_token_reordered_keys():
                 if i.kind == "no_contamination_entry" and "REORDER" in i.detail]
     assert not reorders, "token-reordered (right tokens, wrong order) keys:\n" + "\n".join(
         i.line() for i in reorders)
+
+
+# ── the finders must fail SAFE on an unreadable path ────────────────────────
+#
+# Found live on the box 2026-07-29. The two checkouts are not siblings there,
+# so ASKMADDI_AGGREGATOR_DIR has to point into /home/phantomops — a 0700 home,
+# while the gateway runs as `askmaddi`. Path.exists() swallows ENOENT/ENOTDIR
+# but re-raises EACCES, so setting the variable converted these three SKIPS
+# into three hard FAILURES inside bot_push's publish gate. A permission
+# problem in another user's home must never block a publish.
+#
+# Root can't reproduce EACCES by chmod, so the unreadable path is faked at the
+# only call site that matters: the .exists() this module makes.
+
+class _Unreadable:
+    """Stands in for a path we lack traversal on."""
+    def __init__(self, shown): self._shown = shown
+    def __truediv__(self, other): return self
+    def __str__(self): return self._shown
+    def exists(self): raise PermissionError(13, 'Permission denied')
+
+
+def test_unreadable_path_reads_as_absent_rather_than_raising():
+    before = list(_UNREADABLE)
+    try:
+        assert _exists(_Unreadable('/home/other/agg')) is False
+        note = _unreadable_note()
+        assert '/home/other/agg' in note
+        assert 'permission problem' in note   # never 'missing checkout'
+    finally:
+        _UNREADABLE[:] = before
+
+
+def test_a_merely_missing_path_records_no_permission_note(tmp_path):
+    before = list(_UNREADABLE)
+    try:
+        assert _exists(tmp_path / 'definitely-absent') is False
+        assert list(_UNREADABLE) == before    # absence is not a permission fault
+    finally:
+        _UNREADABLE[:] = before
+
+
+def test_env_var_pointing_at_an_unreadable_dir_yields_none_not_a_raise(monkeypatch, tmp_path):
+    """The exact box shape: variable set, target unreadable. Must return None
+    so the caller SKIPS, rather than raising through bot_push's gate."""
+    def boom(self):
+        raise PermissionError(13, 'Permission denied')
+    monkeypatch.setattr(Path, 'exists', boom)
+    monkeypatch.setenv('ASKMADDI_AGGREGATOR_DIR', str(tmp_path))
+    before = list(_UNREADABLE)
+    try:
+        assert _find_aggregator_dir() is None
+        assert _find_contamination() is None
+    finally:
+        _UNREADABLE[:] = before
