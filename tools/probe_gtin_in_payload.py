@@ -54,7 +54,12 @@ def _re_resolve(legacy_id):
 
 def inspect(slug, entry):
     idn = entry.get("identity", {}) or {}
-    legacy = idn.get("legacy_item_id", "")
+    # CORRECTED 2026-07-29: the substrate migration moved the listing id to
+    # marketplace_ids.ebay_legacy_item_id (present 14/14). Reading only
+    # identity.legacy_item_id made this probe report NO-LEGACY-ID for every
+    # SKU — a silent death that looks like a finding about eBay.
+    legacy = ((entry.get("marketplace_ids") or {}).get("ebay_legacy_item_id")
+              or idn.get("legacy_item_id", ""))
     if not legacy:
         return slug, "NO-LEGACY-ID", {}
     try:

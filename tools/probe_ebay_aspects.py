@@ -89,11 +89,21 @@ except ImportError as exc:
 
 
 def load_scoring(aggregator_root):
-    """(fill_slots, SpecCandidate, load_facts) or None if unavailable."""
+    """The scoring callables, or None — printing WHY, distinguishing causes.
+
+    The first live run printed "no aggregator root reachable" when the root
+    was reachable and the real cause was a missing bs4. Diagnosing the wrong
+    thing sends the reader to fix the wrong thing.
+    """
     if not aggregator_root:
+        print('  [!] no --aggregator-root passed; scoring needs the authored '
+              'dictionaries.', file=sys.stderr)
         return None
     root = Path(aggregator_root)
     if not (root / 'fact_pipeline' / 'slotfill.py').exists():
+        print(f'  [!] {root} is not an aggregator-build directory (no '
+              f'fact_pipeline/slotfill.py) — path or permissions.',
+              file=sys.stderr)
         return None
     sys.path.insert(0, str(root))
     try:
@@ -102,7 +112,14 @@ def load_scoring(aggregator_root):
         from fact_pipeline.benchmark_deterministic import substring_fill
         from dictionaries import load_facts
     except ImportError as exc:
-        print(f'  [!] scoring unavailable: {exc}', file=sys.stderr)
+        missing = str(exc).split("'")[1] if "'" in str(exc) else str(exc)
+        print(f'  [!] the aggregator root IS reachable; a DEPENDENCY is '
+              f'missing: {missing}', file=sys.stderr)
+        print(f'  [!] fact_pipeline/__init__.py re-exports harvest, which '
+              f'imports bs4+lxml, so even slotfill pulls them in.',
+              file=sys.stderr)
+        print(f'  [!] remedy: pip install --user beautifulsoup4 lxml   '
+              f'(as the account running this probe)', file=sys.stderr)
         return None
     return fill_slots, SpecCandidate, load_facts, substring_fill
 
@@ -142,6 +159,26 @@ def candidates_from(raw, SpecCandidate, source_id):
     return catalog, item_level
 
 
+def ebay_item_id(entry):
+    """The eBay listing id, from wherever this registry generation keeps it.
+
+    CORRECTED 2026-07-29 after the first live run reported NO-LEGACY-ID for
+    all 14 SKUs. The current schema holds it at
+    `marketplace_ids.ebay_legacy_item_id` (present on 14/14); the
+    `identity.legacy_item_id` this probe originally read — copied from
+    probe_gtin_in_payload.py — exists on none of them. That sibling probe has
+    the same defect and is silently dead against the live registry.
+
+    Both are read, newest first, because a probe that reports "no id" when the
+    id is right there is worse than one that fails loudly: it looks like a
+    finding about eBay coverage.
+    """
+    mkt = entry.get('marketplace_ids') or {}
+    return (mkt.get('ebay_legacy_item_id')
+            or (entry.get('identity') or {}).get('legacy_item_id')
+            or '')
+
+
 def category_of(entry):
     facet = entry.get('facet')
     return str(entry.get('category')
@@ -160,7 +197,7 @@ def main(argv=None):
 
     scoring = load_scoring(args.aggregator_root)
     if scoring is None:
-        print('!! SLOT SCORING DID NOT RUN — no aggregator root reachable.')
+        print('!! SLOT SCORING DID NOT RUN — see the reason above.')
         print('!! Coverage below is real; YIELD is simply unmeasured.\n')
     fill_slots = SpecCandidate = load_facts = substring_fill = None
     if scoring:
@@ -179,7 +216,7 @@ def main(argv=None):
     print('-' * 78)
 
     for slug, entry in sorted(skus.items()):
-        legacy = (entry.get('identity') or {}).get('legacy_item_id') or ''
+        legacy = ebay_item_id(entry)
         if not legacy:
             verdicts['NO-LEGACY-ID'] += 1
             print(f'{slug:30s} {"-":>8s} {"-":>6s} {"-":>12s}  NO-LEGACY-ID')
