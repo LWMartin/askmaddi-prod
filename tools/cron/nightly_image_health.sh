@@ -3,8 +3,9 @@
 # ==============================================================================
 # Spec: phantom-ops claude/workspace/specs/maddi-images-on-spine.md (D5)
 #
-# READ-ONLY by design: two checks (rendered-vs-spine mismatch, dead URL) over
-# the published cards, ~14 HEAD requests, findings dropped as signal files.
+# READ-ONLY by design: three checks (rendered-vs-spine mismatch, dead image
+# URL, dead eBay LISTING) over the published cards and the spine, ~14 HEAD
+# requests + ~14 gateway resolves, findings dropped as signal files.
 # NO commit stage, NO rebuild stage, NO auto-republish — publish stays behind
 # the human gate; the air gap is structural. Because nothing writes to the
 # tree, there is no dirty-tree preflight here (contrast weekly_gtin_sweep.sh).
@@ -18,15 +19,20 @@ set -u
 
 REPO="/opt/askmaddi-prod"
 SIGNAL_DIR="/home/askmaddi/.askmaddi-bot/signals"
+GATEWAY="${GATEWAY:-http://127.0.0.1:5001}"
 
 cd "$REPO" || { echo "$(date -Iseconds) FATAL: cannot cd $REPO"; exit 2; }
 
 echo "$(date -Iseconds) === NIGHTLY IMAGE HEALTH CHECK START ==="
 
+# --gateway enables the third check (listing liveness). It goes through the
+# LOCAL gateway, same door refresh_used_prices.py uses, so eBay creds stay in
+# gateway/.env and this read-only job never handles them.
 python3 tools/image_health_check.py \
     --skus data/skus.json \
     --manifest browser/cards-manifest.json \
-    --signals "$SIGNAL_DIR"
+    --signals "$SIGNAL_DIR" \
+    --gateway "$GATEWAY"
 RC=$?
 
 case "$RC" in

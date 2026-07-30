@@ -1,7 +1,8 @@
 """
 image_health_check.py — nightly image rot detection (images-on-spine D5).
 =========================================================================
-One script, two checks over the PUBLISHED cards, ~14 HEAD requests/night:
+One script, three checks — two over the PUBLISHED cards (~14 HEAD requests)
+and one over the SPINE (~14 gateway resolves):
 
   1. MISMATCH  — the rendered image URL (browser/cards-manifest.json, the
      structured record build_site emits at publish) differs from the spine's
@@ -11,7 +12,15 @@ One script, two checks over the PUBLISHED cards, ~14 HEAD requests/night:
   2. DEAD URL  — the rendered URL itself HEAD-checks non-200 (eBay purges
      ended-listing images; rare same-listing death).
 
-Either finding drops a signal file into the existing alert path
+  3. DEAD LISTING — the SKU's eBay listing no longer resolves (getItem 404).
+     Walks the spine, not the manifest: an unpublished SKU with a dead
+     listing still matters, because a card built on a dead anchor inherits
+     the rot. THREE-STATE (alive/dead/unknown) — a throttle or an outage is
+     `unknown`, recorded but never alerted, because check 2's "any failure
+     is the finding" posture is right for an image and wrong for a listing.
+     Requires --gateway; omitted, the check is skipped and said so.
+
+Any finding drops a signal file into the existing alert path
 (~/.askmaddi-bot/signals — the weekly sweep's convention) and logs a line.
 DELIBERATELY NOT auto-republish: publish stays behind the human gate, the
 air gap is structural (spec D5). The flag is the whole job.
@@ -48,6 +57,7 @@ except ImportError:          # pragma: no cover - requests is a repo dependency
     requests = None
 
 HEAD_TIMEOUT = 10
+RESOLVE_TIMEOUT = 20     # gateway -> eBay getItem; slower than a HEAD
 
 
 def spine_pick(entry):
@@ -117,9 +127,97 @@ def check(skus_path, manifest_path, head=None):
     return findings
 
 
-def write_signal(findings, signals_dir):
+def listing_state(item_id, resolve):
+    """Return 'alive', 'dead', or 'unknown' for one eBay legacy item id.
+
+    THREE states, deliberately. `head_ok` above collapses any failure into a
+    finding because an image you cannot fetch is an image the reader cannot
+    see — the failure IS the symptom. Liveness is the opposite: a throttled
+    night or an expired token says nothing about whether the listing exists.
+
+    Collapsing to two fails in whichever direction you pick. Treat transient
+    as dead and one 429 flags all 14 SKUs, training the reader to ignore the
+    signal path. Treat transient as alive and a genuinely dead listing rots
+    silently, which is the manfrotto-befree case this check exists for.
+
+    Only a 404 from eBay's getItem means the listing is gone. Everything else
+    that is not a clean 200 is `unknown` and is recorded, never alerted.
+    """
+    if not item_id:
+        return 'unknown'
+    try:
+        status, body = resolve(f'v1|{item_id}|0')
+    except Exception:            # noqa: BLE001 — a failed call is not a death
+        return 'unknown'
+    if status == 200:
+        return 'alive'
+    # The route answers 502 for every upstream failure and carries the real
+    # cause in `upstream_status` (added 2026-07-30 for exactly this caller).
+    if (body or {}).get('upstream_status') == 404:
+        return 'dead'
+    return 'unknown'
+
+
+def _gateway_resolver(gateway):
+    """Default resolver: the local gateway's /ebay/resolve. Returns (status, body)."""
+    if requests is None:
+        raise RuntimeError('requests unavailable and no resolver injected')
+
+    def resolve(item_id):
+        r = requests.get(f'{gateway.rstrip("/")}/ebay/resolve',
+                         params={'item_id': item_id}, timeout=RESOLVE_TIMEOUT)
+        try:
+            return r.status_code, r.json()
+        except ValueError:
+            return r.status_code, {}
+    return resolve
+
+
+def check_listings(skus_path, resolve):
+    """Walk the SPINE checking each SKU's eBay listing still resolves.
+
+    Iterates skus.json rather than the manifest the image checks use: an
+    unpublished SKU with a dead listing still matters, because a card built on
+    a dead anchor inherits the rot. Returns (findings, inconclusive) — the
+    caller alerts on the first and records the second.
+    """
+    skus = json.loads(Path(skus_path).read_text(encoding='utf-8'))
+    findings, inconclusive = [], []
+
+    for slug, entry in (skus.get('skus') or {}).items():
+        item_id = ((entry.get('marketplace_ids') or {})
+                   .get('ebay_legacy_item_id') or '').strip()
+        if not item_id:
+            inconclusive.append({
+                'slug': slug, 'kind': 'listing-unknown',
+                'detail': 'no ebay_legacy_item_id on the spine entry'})
+            continue
+        state = listing_state(item_id, resolve)
+        if state == 'dead':
+            findings.append({
+                'slug': slug, 'kind': 'dead-listing',
+                'detail': 'eBay listing no longer resolves (getItem 404) — '
+                          'the spine anchor is gone; re-resolve before this '
+                          'card is rebuilt or republished',
+                'item_id': item_id})
+        elif state == 'unknown':
+            inconclusive.append({
+                'slug': slug, 'kind': 'listing-unknown',
+                'detail': 'liveness could not be established this run '
+                          '(throttle, outage, or credential problem) — '
+                          'NOT evidence the listing is gone',
+                'item_id': item_id})
+    return findings, inconclusive
+
+
+def write_signal(findings, signals_dir, inconclusive=None):
     """Drop ONE signal file carrying all of tonight's findings (the weekly
-    sweep's convention: JSON, timestamped name, append-only directory)."""
+    sweep's convention: JSON, timestamped name, append-only directory).
+
+    `inconclusive` is recorded alongside but is NOT a finding: it must not
+    raise the exit code, or a throttled night pages the reader. It is written
+    so a PERSISTENT unknown (creds broken for a week) is visible in the
+    signal history rather than vanishing into a clean-looking run."""
     d = Path(signals_dir)
     d.mkdir(parents=True, exist_ok=True)
     path = d / f'image-health-{int(time.time())}.json'
@@ -127,6 +225,7 @@ def write_signal(findings, signals_dir):
         'ts': datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
         'tool': 'image_health_check',
         'findings': findings,
+        'inconclusive': inconclusive or [],
     }, indent=2), encoding='utf-8')
     return path
 
@@ -138,6 +237,11 @@ def main(argv=None):
                     help='Path to browser/cards-manifest.json')
     ap.add_argument('--signals', required=True,
                     help='Signal directory (the alert path)')
+    ap.add_argument('--gateway', default=None,
+                    help='Local gateway base URL (e.g. http://127.0.0.1:5001). '
+                         'When given, also walks the spine checking each SKU\'s '
+                         'eBay listing still resolves. Omitted = image checks '
+                         'only, so the tool stays usable offline.')
     args = ap.parse_args(argv)
 
     for p in (args.skus, args.manifest):
@@ -146,10 +250,29 @@ def main(argv=None):
             return 2
 
     findings = check(args.skus, args.manifest)
+    inconclusive = []
+    if args.gateway:
+        live_findings, inconclusive = check_listings(
+            args.skus, _gateway_resolver(args.gateway))
+        findings += live_findings
+    else:
+        print('image_health_check: no --gateway, skipping listing liveness')
+
+    for i in inconclusive:
+        print(f"image_health_check: [{i['kind']}] {i['slug']} — {i['detail']}")
+
     if not findings:
-        print('image_health_check: all published images healthy')
+        # Inconclusive results still get written: a run where nothing could be
+        # checked must not leave the same trace as a run where everything was
+        # checked and was healthy.
+        if inconclusive:
+            path = write_signal([], args.signals, inconclusive)
+            print(f'image_health_check: no findings, '
+                  f'{len(inconclusive)} inconclusive -> {path}')
+        else:
+            print('image_health_check: all published images healthy')
         return 0
-    path = write_signal(findings, args.signals)
+    path = write_signal(findings, args.signals, inconclusive)
     for f in findings:
         print(f"image_health_check: [{f['kind']}] {f['slug']} — {f['detail']}")
     print(f'image_health_check: {len(findings)} finding(s) -> {path}')

@@ -41,7 +41,23 @@ SCOPE = 'https://api.ebay.com/oauth/api_scope'
 
 
 class EbayAPIError(Exception):
-    """Raised when the eBay API call fails or credentials are missing."""
+    """Raised when the eBay API call fails or credentials are missing.
+
+    Carries the upstream HTTP status when there was one (`status_code`), so a
+    caller can tell a DEAD LISTING (404) from a transient failure (429/5xx) or
+    a credential problem (401). Without it every failure looks alike, and a
+    nightly liveness check built on that would either flag every SKU as dead on
+    a throttled night, or silently pass a genuinely dead listing. `status_code`
+    is None when the failure happened before any HTTP round trip (missing
+    creds, empty item_id).
+
+    str(e) is deliberately unchanged — existing callers and the route's error
+    payload keep working exactly as before. This is additive.
+    """
+
+    def __init__(self, message, status_code=None):
+        super().__init__(message)
+        self.status_code = status_code
 
 
 # Module-level token cache: {'token': str, 'expires_at': float}
@@ -76,7 +92,8 @@ def _get_token():
     resp = requests.post(TOKEN_URL, headers=headers, data=data, timeout=15)
     if resp.status_code != 200:
         # Don't leak the secret; report status + short reason only
-        raise EbayAPIError(f'token request failed: HTTP {resp.status_code}')
+        raise EbayAPIError(f'token request failed: HTTP {resp.status_code}',
+                           status_code=resp.status_code)
     payload = resp.json()
     token = payload.get('access_token')
     expires_in = payload.get('expires_in', 7200)
@@ -132,7 +149,8 @@ def search(query, limit=10, customid=None):
     params = {'q': query, 'limit': str(min(int(limit), 50))}
     resp = requests.get(BROWSE_SEARCH_URL, headers=headers, params=params, timeout=15)
     if resp.status_code != 200:
-        raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}')
+        raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}',
+                           status_code=resp.status_code)
 
     items = resp.json().get('itemSummaries', []) or []
     results = []
@@ -181,7 +199,8 @@ def search_candidates(query, limit=10):
     params = {'q': query, 'limit': str(min(int(limit), 50))}
     resp = requests.get(BROWSE_SEARCH_URL, headers=headers, params=params, timeout=15)
     if resp.status_code != 200:
-        raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}')
+        raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}',
+                           status_code=resp.status_code)
 
     items = resp.json().get('itemSummaries', []) or []
     out = []
@@ -315,7 +334,8 @@ def resolve(item_id, customid=None):
     url = f"{BROWSE_ITEM_URL}/{item_id}"
     resp = requests.get(url, headers=headers, params=params, timeout=15)
     if resp.status_code != 200:
-        raise EbayAPIError(f'getItem failed: HTTP {resp.status_code}')
+        raise EbayAPIError(f'getItem failed: HTTP {resp.status_code}',
+                           status_code=resp.status_code)
 
     item = resp.json()
     affiliate_url = item.get('itemAffiliateWebUrl') or item.get('itemWebUrl', '')

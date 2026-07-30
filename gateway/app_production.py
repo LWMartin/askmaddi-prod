@@ -480,7 +480,13 @@ def ebay_resolve():
     except ebay_api.EbayAPIError as e:
         # Error type only, never the item_id (privacy) and never the secret
         print(f"[ebay] resolve error: {e}")
-        return jsonify({'error': str(e)}), 502
+        # `upstream_status` lets a caller separate a DEAD LISTING (404) from a
+        # transient failure (429/5xx) or a credential problem (401). The HTTP
+        # status stays 502 for all of them: this route's contract is "the
+        # upstream call failed", and changing it per-cause would break any
+        # consumer keying on 502. Additive field, no contract change.
+        return jsonify({'error': str(e),
+                        'upstream_status': e.status_code}), 502
 
 
 @app.route('/ping', methods=['POST'])
