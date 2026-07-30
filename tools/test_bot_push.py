@@ -478,18 +478,23 @@ def test_a_pytest_less_interpreter_is_still_skipped_not_narrowed(tmp_path):
     assert skipped == [(nopytest, "cannot import pytest")]
 
 
-def test_the_gateway_dep_list_matches_what_gateway_actually_imports():
-    """Pinned against the source, so a new gateway dependency cannot silently
-    make the probe optimistic — it would report capable, then the suite would
-    fail on an import the probe never checked."""
-    import re
-    root = Path(__file__).resolve().parent.parent / "gateway"
-    imported = set()
-    for f in root.glob("*.py"):
-        for m in re.finditer(r"^\s*(?:import|from)\s+(flask[a-z_]*)",
-                             f.read_text(), re.M):
-            imported.add(m.group(1))
-    assert imported, "read no flask imports — this assertion would be vacuous"
-    assert imported <= set(GATEWAY_DEPS), (
-        f"gateway/ imports {sorted(imported - set(GATEWAY_DEPS))}, which the "
-        f"capability probe does not check")
+# The former test_the_gateway_dep_list_matches_what_gateway_actually_imports
+# lived here. It regex-scanned gateway/*.py for /flask[a-z_]*/ and asserted
+# every hit appeared in GATEWAY_DEPS. Its INTENT was right — a new gateway
+# dependency must not silently make the probe optimistic — but it enforced
+# that intent wrongly in both directions, and enforced the two defects
+# measured on the box on 2026-07-30:
+#
+#   - GUARD-BLIND. It matched `from flask_limiter import Limiter` inside
+#     app_production's `try/except ImportError` and therefore REQUIRED
+#     flask_limiter in the tuple. That marked both production interpreters
+#     narrow over a module the gate never needs, and gateway/ went ungated.
+#   - FLASK-ONLY. The pattern could not see `requests`, a hard module-level
+#     import in three gateway/ files, so the probe could answer capable for
+#     an interpreter where the suite would then fail on import.
+#
+# Replaced by tools/test_gateway_deps.py, which walks the AST from the test
+# files' import graph: guard-aware, not limited to one package prefix, and
+# following imports at any nesting depth (the route tests import
+# app_production inside a fixture, and the gate RUNS the suite, so a
+# function-level import is as required as a top-level one).

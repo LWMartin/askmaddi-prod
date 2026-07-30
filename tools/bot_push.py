@@ -84,7 +84,20 @@ BOT_EMAIL = "bot@askmaddi.com"
 # default, tightened deliberately, never tightened by assumption.
 GATE_BASE_SUITES = "tools/"
 GATE_GATEWAY_SUITES = "tools/ gateway/"
-GATEWAY_DEPS = ("flask", "flask_cors", "flask_limiter")
+# What an interpreter must import to COLLECT AND RUN gateway/ — derived from
+# gateway/'s actual unguarded module-level imports, not from requirements.txt
+# and not from what the service happens to use. test_gateway_deps_match_imports
+# re-derives this from the tree and fails if the two drift.
+#
+# Corrected 2026-07-30, wrong in BOTH directions since it was written:
+#   - `flask_limiter` was listed but is a GUARDED optional import in
+#     app_production (try/except ImportError -> HAS_LIMITER), absent from
+#     requirements.txt, and referenced by no test. Listing it marked both
+#     production interpreters narrow when neither actually needed it.
+#   - `requests` was NOT listed despite being a hard module-level import in
+#     three gateway/ files, so gateway_capable() could answer True for an
+#     interpreter where collection would still fail.
+GATEWAY_DEPS = ("flask", "flask_cors", "requests")
 
 
 def _pytest_args(suites: str) -> str:
