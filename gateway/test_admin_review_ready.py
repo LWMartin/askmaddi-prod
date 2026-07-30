@@ -131,6 +131,11 @@ def _card_json(stores, slug, **over):
         'freshness': {'source_count': 42, 'build_model': 'claude-test'},
         'confidence': {'overall': 'medium'},
     }
+    # Optional `_build_provenance` block (build_card.py writes this on every
+    # real card). Additive: tests that don't pass one get a card without it,
+    # which is exactly what a pre-2026-07-30 card looks like.
+    if 'build_provenance' in over:
+        card['_build_provenance'] = over['build_provenance']
     p = stores['tmp'] / f'card-{slug}.json'
     p.write_text(json.dumps(card))
     return str(p)
@@ -488,3 +493,68 @@ def test_set_override_requires_auth(client, stores):
     resp = client.post('/admin/set-override', data={
         'slug': 'x', 'field': 'image_thumb', 'value': 'https://e.com/x.jpg'})
     assert resp.status_code == 401
+
+
+# ── build provenance reaches the gate (2026-07-30) ─────────────────────────
+#
+# build_card.py has always written `_build_provenance`, and until now NOTHING
+# read it: the only thing enforcing "a mock-enriched card is not shippable"
+# was a stdout print aimed at a human running build_card by hand, invisible in
+# the drip where the factory runs it as a subprocess. These pin the reader.
+
+def _ready_with_prov(stores, slug, prov):
+    _enroll_ready(stores, slug,
+                  card_path=_card_json(stores, slug, build_provenance=prov))
+
+
+def test_mock_enriched_card_is_publish_disabled(client, stores):
+    """The claim build_card has always made, now actually enforced."""
+    _ready_with_prov(stores, 'mockcard', {
+        'blockers': ['MOCK ENRICH — toolchain proof only, NOT a shippable card.'],
+        'warnings': [], 'shippable': False})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'mockcard' in body
+    assert 'MOCK ENRICH' in body
+    assert 'Publish disabled' in body
+
+
+def test_facts_skipped_for_no_spine_is_publish_disabled(client, stores):
+    """Lee 2026-07-30: no spine means the resolver never ran — useless card."""
+    _ready_with_prov(stores, 'nospine', {
+        'blockers': ['FACTS SKIPPED — no --spine, so no spec surface could be '
+                     'resolved.'],
+        'warnings': [], 'shippable': False})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'FACTS SKIPPED' in body
+    assert 'Publish disabled' in body
+
+
+def test_carried_facts_warn_but_stay_publishable(client, stores):
+    """A deliberate re-assemble legitimately carries its bundle. Visible,
+    never barred — the human decides with the fact in front of them."""
+    _ready_with_prov(stores, 'carried', {
+        'blockers': [],
+        'warnings': ['Facts CARRIED from an earlier build — not re-fetched '
+                     'this run.'],
+        'shippable': True})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'CARRIED' in body
+    assert 'Publish disabled' not in body
+
+
+def test_a_clean_build_shows_neither_banner(client, stores):
+    _ready_with_prov(stores, 'clean', {
+        'blockers': [], 'warnings': [], 'shippable': True})
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'clean' in body
+    assert 'Publish disabled' not in body
+    assert 'Heads up' not in body
+
+
+def test_a_card_with_no_provenance_block_still_renders(client, stores):
+    """Cards built before 2026-07-30 carry no block at all. The reader must
+    treat that as 'nothing to report', not as a fault."""
+    _enroll_ready(stores, 'legacy')
+    body = client.get('/admin', headers=_auth()).get_data(as_text=True)
+    assert 'legacy' in body
+    assert 'Publish disabled' not in body

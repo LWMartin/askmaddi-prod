@@ -592,6 +592,21 @@ def _ready_card_html(record):
         blockers.append('assembled card.json is missing or unreadable')
     if entry is None:
         blockers.append('no spine entry — identity/provenance unavailable')
+
+    # HOW the card was built (`_build_provenance`, written by build_card.py).
+    # Until 2026-07-30 nothing read this block: build_card wrote `shippable`
+    # and the only thing enforcing it was a stdout print aimed at whoever ran
+    # build_card by hand — invisible in the drip, where the factory runs it as
+    # a subprocess. A mock-enriched card reaching this gate rendered with a
+    # live Publish button.
+    #
+    # build_card emits its reasons in THIS function's vocabulary (blockers bar
+    # publish, warnings are shown and do not), so the policy lives in one place
+    # and the gate does not hold a second copy that can drift from it.
+    prov = (card or {}).get('_build_provenance') or {}
+    blockers.extend(str(b) for b in (prov.get('blockers') or []))
+    build_warnings = [str(w) for w in (prov.get('warnings') or [])]
+
     publishable = not blockers
 
     ident = (card or {}).get('identity', {}) or {}
@@ -654,6 +669,16 @@ def _ready_card_html(record):
             'Fix the integrity issue (rebuild the card / restore the spine '
             'entry) — or reject if the build is genuinely bad.</div>')
 
+    # Warnings are shown but never bar publish: a deliberate re-assemble
+    # legitimately carries its facts bundle, and a non-fatal facts failure
+    # still leaves an honestly-dated card. The human decides with the facts in
+    # front of them, which is the whole point of an in-the-loop gate.
+    warning_html = ''
+    if build_warnings:
+        items = ''.join(f'<li>{_esc(w)}</li>' for w in build_warnings)
+        warning_html = (
+            f'<div class="buildwarn">Heads up: <ul>{items}</ul></div>')
+
     if publishable:
         publish_form = (
             '<form class="promote" method="post" action="/admin/publish">'
@@ -689,6 +714,7 @@ def _ready_card_html(record):
         {prov_html}
         {pending_note}
         {override_form}
+        {warning_html}
         {blocker_html}
         {publish_form}
         <form class="reject" method="post" action="/admin/reject-card">
@@ -892,6 +918,9 @@ _PAGE = """<!doctype html>
   .blocked {{ flex-basis: 100%; font-size: 13px; color: #7f1d1d;
               background: #fde7e7; padding: 10px 12px; border-radius: 8px; }}
   .blocked ul {{ margin: 4px 0; }}
+  .buildwarn {{ flex-basis: 100%; font-size: 13px; color: #78350f;
+                background: #fef3c7; padding: 10px 12px; border-radius: 8px; }}
+  .buildwarn ul {{ margin: 4px 0; }}
   .failed-panel {{ margin-top: 24px; font-size: 13px; }}
   .failed-panel summary {{ cursor: pointer; opacity: .7; }}
   .ftable {{ width: 100%; border-collapse: collapse; margin-top: 10px;
