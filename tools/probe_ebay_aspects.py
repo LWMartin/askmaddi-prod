@@ -246,6 +246,14 @@ def main(argv=None):
         filled = '-'
         rec = {'catalog_aspects': n_cat, 'item_aspects': n_item,
                'verdict': verdict}
+        # The KEYS, not just their count. The first live run reported yields
+        # but no vocabulary, so judging whether a low score meant "no data" or
+        # "unknown wording" needed a second manual trip to the box. The names
+        # are the evidence; the counts are only a summary of them.
+        rec['catalog_keys'] = [{'key': c.key, 'section': c.section_label,
+                                'value': c.value[:120]} for c in cat_list]
+        rec['item_keys'] = [{'key': c.key, 'value': c.value[:120]}
+                            for c in item_list]
         if fill_slots and (cat_list or item_list):
             category = category_of(entry)
             try:
