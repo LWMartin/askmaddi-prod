@@ -46,6 +46,7 @@ def _registry(*slugs):
         'sony-a7c': ('Sony', 'body'), 'sony-a7r': ('Sony', 'body'),
         'sigma-35-art-dg-dn-ii': ('Sigma', 'lens'),
         'sigma-35mm-f1-2-dg-dn-art': ('Sigma', 'lens'),
+        'sony-unknown': ('Sony', 'body'),
     }
     return {'skus': {s: {'vendor': vendors[s][0],
                          'facet': {'category': vendors[s][1]}} for s in slugs}}
@@ -121,29 +122,47 @@ def test_dry_run_is_the_default_and_writes_nothing(tmp_path, monkeypatch):
 
 # ── the deliberate exclusion ─────────────────────────────────────────────
 
-def test_a7r_is_excluded_deliberately_and_reported_not_dropped(monkeypatch):
-    """Identity runs upstream of the merge. This SKU names no generation, so
-    a guessed fragment would launder wrong-product specs into an honest
-    spread. Absence must be visible, not silent."""
+def test_a7r_now_declares_a_measured_gap_not_an_exclusion(monkeypatch):
+    """Superseded 2026-07-29. It was held out for identity adjudication; the
+    identity resolved to the a7R II, and the ILCE-7RM2 help guide turned out
+    to have no Specifications page at all. So it is no longer absent from the
+    roster — it carries a recorded reason, which is the state R5 asks for."""
     monkeypatch.setattr(B, 'load_brand_table', lambda _root: StubTable())
-    monkeypatch.setattr(B, 'check_vocabulary_drift', lambda _root: None)
-    _, uncovered, _ = B.plan(_registry('sony-a7r'), StubTable())
+    writes, uncovered, _ = B.plan(_registry('sony-a7r'), StubTable())
 
-    assert [slug for slug, _ in uncovered] == ['sony-a7r']
-    assert 'sony-a7r' not in B.ROSTER
-    assert 'adjudication' in dict(uncovered)['sony-a7r']
+    assert uncovered == [], 'a measured absence is not an uncovered SKU'
+    assert [slug for slug, _ in writes] == ['sony-a7r']
+    assert 'Specifications page' in dict(writes)['sony-a7r']['gap']
 
 
-def test_uncovered_sku_makes_the_run_exit_nonzero(tmp_path, monkeypatch):
+def test_a_gap_and_fragments_on_one_slug_is_refused(monkeypatch):
+    """The gap says nothing is fetchable; fragments say where to fetch. The
+    reader picks the gap deterministically, so allowing both would make the
+    contradiction invisible rather than wrong."""
+    monkeypatch.setattr(B, 'SURFACE_GAPS', dict(B.SURFACE_GAPS,
+                                                **{'sony-a7iv': 'nope'}))
+    assert B._authoring_conflicts() == ['sony-a7iv']
+
+
+def test_no_slug_is_currently_declared_both_ways():
+    assert B._authoring_conflicts() == []
+
+
+def test_an_uncovered_sku_still_exits_nonzero(tmp_path, monkeypatch):
+    """The uncovered path is no longer exercised by a7r, but it is still the
+    tool's report for a SKU nobody has researched — so it keeps a test."""
     path = tmp_path / 'skus.json'
-    path.write_text(json.dumps(_registry('sony-a7iv', 'sony-a7r')))
+    reg = _registry('sony-a7iv')
+    reg['skus']['sony-unknown'] = {'vendor': 'Sony',
+                                   'facet': {'category': 'body'}}
+    path.write_text(json.dumps(reg))
     monkeypatch.setattr(B, 'load_brand_table', lambda _root: StubTable())
     monkeypatch.setattr(B, 'check_vocabulary_drift', lambda _root: None)
 
     assert B.main(['--apply', '--skus-path', str(path)]) == 1
     after = json.loads(path.read_text())
     assert 'spec_surface' in after['skus']['sony-a7iv']
-    assert 'spec_surface' not in after['skus']['sony-a7r']
+    assert 'spec_surface' not in after['skus']['sony-unknown']
 
 
 # ── provenance, per the 7/29 re-derivation ruling ────────────────────────

@@ -99,12 +99,24 @@ ROSTER = {
         'https://www.sigma-global.com/en/lenses/a026_35_14/'),
 }
 
-# Named so the absence is a recorded decision, not an oversight. Pinned by a
-# test so a future edit has to be deliberate about admitting it.
-HELD_FOR_ADJUDICATION = {
-    'sony-a7r': 'empty mpn and a model string naming no generation; held for '
-                'identity adjudication since 2026-07-26',
+# A SKU whose brand HAS a surface that does not cover it. R10's gap table is
+# keyed by (brand, category) and cannot say this: sony/body works fine, five
+# SKUs resolve through it. Recorded here so the SKU reports a measured absence
+# instead of sitting at `fragments_unset`, which reads as curation debt and
+# sends the next person looking for a page that does not exist.
+SURFACE_GAPS = {
+    'sony-a7r': (
+        'the ILCE-7RM2 help guide (tree 1520) has no Specifications page — '
+        'verified 2026-07-29 against its complete topic list, not inferred '
+        'from section names. Sony did not publish one in guides of that era: '
+        'every guide measured that HAS one (1950, 2020, 2110, 2410, 2420, '
+        '2540) is 2019 or later. Not curation debt; there is nothing to '
+        'curate on this surface.'),
 }
+
+# Named so an absence is a recorded decision, not an oversight. Pinned by a
+# test so a future edit has to be deliberate about admitting it.
+HELD_FOR_ADJUDICATION = {}
 
 
 class BrandTableUnavailable(Exception):
@@ -162,6 +174,16 @@ def brand_and_category(entry):
     return str(entry.get('vendor') or entry.get('brand') or ''), str(category)
 
 
+def _authoring_conflicts():
+    """Slugs declared BOTH a gap and a set of fragments.
+
+    The gap asserts there is nothing to fetch; the fragments say where to
+    fetch it. resolve() resolves this deterministically in the gap's favour,
+    but a writer that allowed both would make the contradiction invisible.
+    """
+    return sorted(set(ROSTER) & set(SURFACE_GAPS))
+
+
 def plan(registry, table):
     """Return (writes, uncovered, mismatches) without touching anything.
 
@@ -174,6 +196,10 @@ def plan(registry, table):
         brand, category = brand_and_category(entry)
         if table.surface_for(brand, category) is None:
             continue                      # declared gap or unknown pair: R12's
+        if slug in SURFACE_GAPS:
+            writes.append((slug, {'gap': SURFACE_GAPS[slug],
+                                  'curated_at': CURATED_AT}))
+            continue
         if slug not in ROSTER:
             uncovered.append(
                 (slug, HELD_FOR_ADJUDICATION.get(slug, 'not in roster')))
@@ -208,6 +234,13 @@ def main(argv=None):
         print('The brand table owns the URL template; without it these '
               'fragments cannot be verified, and writing them unverified is '
               'the failure this tool exists to prevent.', file=sys.stderr)
+        return 2
+
+    conflicts = _authoring_conflicts()
+    if conflicts:
+        print(f'REFUSED: {conflicts} are declared as BOTH a surface gap and a '
+              f'set of fragments — one says there is nothing to fetch, the '
+              f'other says where. Pick one.', file=sys.stderr)
         return 2
 
     drift = check_vocabulary_drift(args.aggregator_root)

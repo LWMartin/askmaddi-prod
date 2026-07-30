@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-07-29",
+  "as_of": "2026-07-30",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -1162,6 +1162,10 @@
       "overrides": {
         "model": "A7R II",
         "display_name": "Sony A7R II"
+      },
+      "spec_surface": {
+        "gap": "the ILCE-7RM2 help guide (tree 1520) has no Specifications page — verified 2026-07-29 against its complete topic list, not inferred from section names. Sony did not publish one in guides of that era: every guide measured that HAS one (1950, 2020, 2110, 2410, 2420, 2540) is 2019 or later. Not curation debt; there is nothing to curate on this surface.",
+        "curated_at": "2026-07-29"
       }
     },
     "ulanzi-f38-zero": {
