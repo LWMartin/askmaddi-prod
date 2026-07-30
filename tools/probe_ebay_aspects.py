@@ -225,8 +225,16 @@ def main(argv=None):
             res = ebay_api.resolve(f'v1|{legacy}|0')
         except Exception as exc:
             verdicts['RESOLVE-FAILED'] += 1
+            # The MESSAGE, not just the type. ebay_api raises one
+            # EbayAPIError for every non-200, so the status code is the whole
+            # diagnosis: 404 is an ended listing (that SKU alone), 401/403 is
+            # a credential problem (everything). Printing only the class name
+            # made those indistinguishable and cost a second trip to the box.
+            findings[slug] = {'verdict': 'RESOLVE-FAILED',
+                              'error': f'{type(exc).__name__}: {exc}',
+                              'item_id': f'v1|{legacy}|0'}
             print(f'{slug:30s} {"-":>8s} {"-":>6s} {"-":>12s}  '
-                  f'RESOLVE-FAILED ({type(exc).__name__})')
+                  f'RESOLVE-FAILED ({type(exc).__name__}: {exc})')
             continue
 
         raw = res.get('_raw') or {}
