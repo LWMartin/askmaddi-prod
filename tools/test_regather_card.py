@@ -153,3 +153,81 @@ def test_attempt_budget_is_reset_on_reopen(agg, queue):
     q = queue('promoted')
     _run(agg, q, '--apply')
     assert _record(q)['build_attempts'] == 0
+
+
+# ── the spine/registry id join (2026-07-31) ──────────────────────────────
+
+@pytest.fixture
+def spine(tmp_path):
+    """A spine whose slug and contamination_key differ, as three live SKUs do."""
+    p = tmp_path / 'skus.json'
+    p.write_text(json.dumps({'skus': {
+        # the divergent case: slug != registry id
+        'sigma-35mm-f1-2-dg-dn-art': {'vendor': 'Sigma',
+                                      'contamination_key': 'sigma-35-f12-dg-dn'},
+        # the common case: they coincide
+        'sony-a7r': {'vendor': 'Sony', 'contamination_key': 'sony-a7r'},
+        # no key declared at all
+        'keyless': {'vendor': 'Sony'},
+    }}))
+    return p
+
+
+@pytest.fixture
+def agg_with_canonical_id(tmp_path):
+    """A registry keyed by canonical product ID, not by spine slug."""
+    d = tmp_path / 'agg2' / 'fixtures' / 'manifests'
+    d.mkdir(parents=True)
+    (d / 'contamination.json').write_text(json.dumps({'products': {
+        'sigma-35-f12-dg-dn': {
+            'vendor': 'Sigma', 'model': '35mm F1.2 DG DN Art',
+            'self': {'aliases': ['35mm f1.2 dg dn', 'f12 dg dn']},
+            'category': 'lens',
+        },
+    }}))
+    return tmp_path / 'agg2'
+
+
+def test_registry_key_follows_the_spine_when_the_ids_diverge(spine):
+    """contamination.json is keyed by canonical product ID and the spine by
+    marketplace slug. They coincided for 11 of 14 live SKUs, which is exactly
+    why looking up by slug went unnoticed — it worked everywhere anyone had
+    tried it, and refused precisely the three that differ."""
+    assert R.registry_key('sigma-35mm-f1-2-dg-dn-art',
+                          spine_path=spine) == 'sigma-35-f12-dg-dn'
+
+
+def test_registry_key_is_the_slug_when_they_coincide(spine):
+    assert R.registry_key('sony-a7r', spine_path=spine) == 'sony-a7r'
+
+
+@pytest.mark.parametrize("slug", ['keyless', 'not-in-the-spine-at-all'])
+def test_registry_key_falls_back_to_the_slug(spine, slug):
+    """No declared key is not an error — most SKUs have none, and a wrong
+    key produces the same loud refusal as before, never a silent miss."""
+    assert R.registry_key(slug, spine_path=spine) == slug
+
+
+def test_a_missing_or_unreadable_spine_falls_back_rather_than_raising(tmp_path):
+    assert R.registry_key('x', spine_path=tmp_path / 'nope.json') == 'x'
+    bad = tmp_path / 'bad.json'
+    bad.write_text('{not json')
+    assert R.registry_key('x', spine_path=bad) == 'x'
+
+
+def test_the_divergent_sku_now_resolves(agg_with_canonical_id, spine):
+    """The regression: this refused with 'author one before re-gathering' for
+    an entry that already existed under another name."""
+    entry = R.load_entry(agg_with_canonical_id, 'sigma-35mm-f1-2-dg-dn-art',
+                         spine_path=spine)
+    assert entry['model'] == '35mm F1.2 DG DN Art'
+
+
+def test_a_genuinely_absent_entry_still_refuses_and_names_the_key_tried(
+        agg_with_canonical_id, spine):
+    """Resolving through the spine must not soften the refusal — and the
+    message has to say WHICH key was looked up, or an operator debugging a
+    divergent SKU is told to author an entry under the wrong name."""
+    with pytest.raises(R.RegistryUnavailable) as exc:
+        R.load_entry(agg_with_canonical_id, 'sony-a7r', spine_path=spine)
+    assert 'sony-a7r' in str(exc.value)

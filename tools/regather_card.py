@@ -83,16 +83,54 @@ class RegistryUnavailable(Exception):
     """
 
 
-def load_entry(aggregator_root, slug):
+SPINE_RELPATH = Path('data') / 'skus.json'
+
+
+def registry_key(slug, spine_path=None):
+    """The contamination-registry ID for a spine slug.
+
+    The two files use DIFFERENT identity vocabularies by design.
+    contamination.json is "keyed by canonical product ID (vendor-model,
+    aligned with bodies.json)"; the spine is keyed by marketplace-resolved
+    slug. They coincide for 11 of 14 live SKUs and diverge for three:
+
+        sigma-35mm-f1-2-dg-dn-art  ->  sigma-35-f12-dg-dn
+        ulanzi-f38-zero            ->  ulanzi-f38
+        sony-a7iv                  ->  sony-a7-iv
+
+    The spine already carries the join in `contamination_key`, and
+    classifier_extract has always honoured it (`args.contamination_key or
+    args.sku_id`). This tool did not — it looked the registry up by slug —
+    so it refused the exact three SKUs whose vocabularies differ, with a
+    message telling the operator to author an entry that already existed
+    under another name.
+
+    Coinciding for 11 of 14 is what let it go unnoticed: the lookup worked
+    everywhere anyone had tried it.
+    """
+    if spine_path is None:
+        spine_path = Path(__file__).resolve().parent.parent / SPINE_RELPATH
+    try:
+        skus = (json.loads(Path(spine_path).read_text()).get('skus') or {})
+    except Exception:
+        # No spine, or unreadable: fall back to the slug. A wrong key here
+        # produces the same loud refusal as before, never a silent miss.
+        return slug
+    return (skus.get(slug) or {}).get('contamination_key') or slug
+
+
+def load_entry(aggregator_root, slug, spine_path=None):
     """The contamination registry entry for a slug, or raise."""
     path = Path(aggregator_root) / CONTAMINATION_RELPATH
     if not path.exists():
         raise RegistryUnavailable(f'no contamination.json at {path}')
     products = (json.loads(path.read_text()).get('products') or {})
-    entry = products.get(slug)
+    key = registry_key(slug, spine_path=spine_path)
+    entry = products.get(key)
     if entry is None:
+        via = '' if key == slug else f" (via contamination_key '{key}')"
         raise RegistryUnavailable(
-            f'{slug} has no entry in {path.name} — author one before '
+            f'{slug} has no entry in {path.name}{via} — author one before '
             f're-gathering, or the fetch has nothing authored to aim at')
     return entry
 
