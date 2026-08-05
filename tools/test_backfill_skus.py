@@ -9,9 +9,16 @@ and resolve are monkeypatched, no creds/network.
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).parent))
-import backfill_skus as bf  # noqa: E402
-import ebay_api             # noqa: E402
+# backfill_skus imports ebay_api at module level, which imports `requests`.
+# The bot_push gate runs this file under /usr/local/bin/python3 too, where
+# (as the askmaddi user) requests is absent and the interpreter is narrowed
+# to tools/ — but this tools/ test transitively needs a gateway dep. Skip
+# cleanly there; 3.9 and the prod venv both have requests and run for real.
+bf = pytest.importorskip('backfill_skus')  # noqa: E402
+ebay_api = pytest.importorskip('ebay_api')  # noqa: E402
 
 
 SONY_CARD = {

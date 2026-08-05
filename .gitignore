@@ -35,3 +35,7 @@ data/subscribers.jsonl
 # written beside the work_queue store; untracked-but-unignored would trip the
 # nightly clean-tree preflight (the 06-25/06-30 failure class).
 data/.factory.lock
+
+# Stray process-capture output — never legitimate state, must never count as foreign dirt (nightly bot aborts on it). 2026-08-05.
+nohup.out
+**/nohup.out
