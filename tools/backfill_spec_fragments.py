@@ -97,6 +97,15 @@ ROSTER = {
     'sigma-35-art-dg-dn-ii': (
         {'product_code': 'a026_35_14'},
         'https://www.sigma-global.com/en/lenses/a026_35_14/'),
+    # Peak Design 'support' surface (Shopify-Hydrogen {handle}); handles derived
+    # from the card model via ingest.product_feed.derive_handle and validated
+    # live 2026-08-05 (HTTP 200 + remix specs harvested: travel=6, pro=14).
+    'peak-design-travel-tripod': (
+        {'handle': 'travel-tripod'},
+        'https://www.peakdesign.com/products/travel-tripod'),
+    'peak-design-pro-tripod': (
+        {'handle': 'pro-tripod'},
+        'https://www.peakdesign.com/products/pro-tripod'),
 }
 
 # A SKU whose brand HAS a surface that does not cover it. R10's gap table is

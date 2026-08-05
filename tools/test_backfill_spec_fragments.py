@@ -28,6 +28,8 @@ class StubTable:
                           'contents/{doc_id}.html',
         ('sigma', 'lens'): 'https://www.sigma-global.com/en/lenses/'
                            '{product_code}/',
+        ('peak design', 'support'): 'https://www.peakdesign.com/products/'
+                                    '{handle}',
     }
 
     def surface_for(self, brand, category):
@@ -46,6 +48,8 @@ def _registry(*slugs):
         'sony-a7c': ('Sony', 'body'), 'sony-a7r': ('Sony', 'body'),
         'sigma-35-art-dg-dn-ii': ('Sigma', 'lens'),
         'sigma-35mm-f1-2-dg-dn-art': ('Sigma', 'lens'),
+        'peak-design-travel-tripod': ('Peak Design', 'support'),
+        'peak-design-pro-tripod': ('Peak Design', 'support'),
         'sony-unknown': ('Sony', 'body'),
     }
     return {'skus': {s: {'vendor': vendors[s][0],
