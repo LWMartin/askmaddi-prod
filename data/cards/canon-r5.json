@@ -15,29 +15,29 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 2999.0,
-    "current_new_source": "adorama_partnerize_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fcanon-eos-r5-mirrorless-camera-body-only%2Fp%2Fcar5",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fcanon-eos-r5-mirrorless-camera-body-only%2Fp%2Fcar5",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
       "bands": {
-        "open_box": 2210.0,
         "pre_owned": 1536.79,
+        "open_box": 2210.0,
         "refurbished": 1701.91
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 29,
-      "price_updated_at": "2026-08-06T10:10:02.206428+00:00"
+      "sample_size": 35,
+      "price_updated_at": "2026-08-07T10:10:02.214205+00:00"
     },
-    "price_updated_at": "2026-07-29T00:38:38.027927+00:00"
+    "price_updated_at": "2026-08-07T00:39:38.559801+00:00"
   },
   "freshness": {
     "created_at": "2026-07-15T21:38:29.582735+00:00",
-    "last_built": "2026-07-29T00:38:38.016821+00:00",
-    "last_checked": "2026-07-29T00:38:38.016821+00:00",
+    "last_built": "2026-08-07T00:39:38.549906+00:00",
+    "last_checked": "2026-08-07T00:39:38.549906+00:00",
     "source_count": 16,
     "source_types": {
       "pro": 16
@@ -5270,8 +5270,26 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "mount": {
+        "value": "Canon RF lens mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q85750498",
+        "fetched_at": "2026-08-07T00:39:36.468952+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {
@@ -5429,7 +5447,7 @@
       "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
       "title": "The photos that made photographers fall in love with their new camera",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025965+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559087+00:00",
       "weight": 0.75
     },
     {
@@ -5440,7 +5458,7 @@
       "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
       "title": "The BEST CAMERA 📷 for Hybrid Shooters // Canon R5",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025976+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559096+00:00",
       "weight": 0.75
     },
     {
@@ -5451,7 +5469,7 @@
       "url": "https://www.youtube.com/watch?v=8J4eCCUcCaI",
       "title": "Canon R5 Review 2025.  Best Beginner Camera?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025979+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559099+00:00",
       "weight": 0.75
     },
     {
@@ -5462,7 +5480,7 @@
       "url": "https://www.youtube.com/watch?v=QfjThuThayE",
       "title": "Why the Canon R5 Is the Best Value Wildlife Camera in 2025",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025982+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559102+00:00",
       "weight": 0.75
     },
     {
@@ -5473,7 +5491,7 @@
       "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
       "title": "Canon EOS R5 Definitive Camera Review | 4K",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025984+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559104+00:00",
       "weight": 0.75
     },
     {
@@ -5484,7 +5502,7 @@
       "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
       "title": "Canon R5 & R6 Review: GOOD Cameras. TERRIBLE Marketing.",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025987+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559107+00:00",
       "weight": 0.75
     },
     {
@@ -5495,7 +5513,7 @@
       "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
       "title": "Canon EOS R5 PHOTOGRAPHY review (Res, Noise, DR, AF, IBIS, LE, GPS)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025989+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559109+00:00",
       "weight": 0.75
     },
     {
@@ -5506,7 +5524,7 @@
       "url": "https://www.youtube.com/watch?v=HE0eR5n-tEo",
       "title": "Canon R5 - 2 Year Long Term Review from a Pro Wildlife Photographer - Should You Still Buy in 2024?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025992+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559112+00:00",
       "weight": 0.75
     },
     {
@@ -5517,7 +5535,7 @@
       "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
       "title": "Canon EOS R5 \"One YEAR Later\" REVIEW...does it hold up?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025994+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559114+00:00",
       "weight": 0.75
     },
     {
@@ -5528,7 +5546,7 @@
       "url": "https://www.youtube.com/watch?v=Y1cdjhqMf9I",
       "title": "Canon EOS R5 Review & Sample Images by Ken Rockwell",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.025997+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559117+00:00",
       "weight": 0.75
     },
     {
@@ -5539,7 +5557,7 @@
       "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
       "title": "Canon EOS R5 - The Photographic Review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026000+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559119+00:00",
       "weight": 0.75
     },
     {
@@ -5550,7 +5568,7 @@
       "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
       "title": "Canon R5 in 2025: Still Worth Buying?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026002+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559121+00:00",
       "weight": 0.75
     },
     {
@@ -5561,7 +5579,7 @@
       "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
       "title": "Hands ON with the NEW CANON EOS R5! THE GRAIL CAMERA!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026004+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559124+00:00",
       "weight": 0.75
     },
     {
@@ -5572,7 +5590,7 @@
       "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
       "title": "Canon R5 Review After 90,000 Frames | Should You Buy In 2024?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026007+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559126+00:00",
       "weight": 0.75
     },
     {
@@ -5583,7 +5601,7 @@
       "url": "https://www.youtube.com/watch?v=k22o_556DJE",
       "title": "Canon EOS R5 Photography Review - How hot is the R5 Mirrorless Camera?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026009+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559128+00:00",
       "weight": 0.75
     },
     {
@@ -5594,13 +5612,30 @@
       "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
       "title": "Canon EOS R5 in 2025 Is It Worth Buying?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:38:38.026011+00:00",
+      "ingested_at": "2026-08-07T00:39:38.559131+00:00",
       "weight": 0.75
     }
   ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/canon-r5/",
+    "reddit": "Canon R5\n\nReviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\n\nI pulled together all 16 reviews in one place: https://askmaddi.com/cards/canon-r5/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon R5**\nReviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\nAll 16 reviews in one place: https://askmaddi.com/cards/canon-r5/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Canon R5 — Reviewed",
+      "description": "Reviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/canon-r5/"
+    }
+  },
   "_build_provenance": {
     "driver": "build_card.py",
     "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
   }

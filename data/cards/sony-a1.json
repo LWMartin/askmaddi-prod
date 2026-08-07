@@ -15,29 +15,29 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 6198.0,
-    "current_new_source": "adorama_partnerize_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-1-mirrorless-camera%2Fp%2Fisoa1",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-1-mirrorless-camera%2Fp%2Fisoa1",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
       "bands": {
-        "refurbished": 2887.62,
         "pre_owned": 2419.99,
-        "open_box": 3322.28
+        "refurbished": 2887.62,
+        "open_box": 3320.8
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 37,
-      "price_updated_at": "2026-08-06T10:10:05.757753+00:00"
+      "sample_size": 38,
+      "price_updated_at": "2026-08-07T10:10:05.978179+00:00"
     },
-    "price_updated_at": "2026-07-28T05:56:50.019881+00:00"
+    "price_updated_at": "2026-08-07T00:45:43.838149+00:00"
   },
   "freshness": {
     "created_at": "2026-07-09T18:22:31.886052+00:00",
-    "last_built": "2026-07-28T05:56:49.995883+00:00",
-    "last_checked": "2026-07-28T05:56:49.995883+00:00",
+    "last_built": "2026-08-07T00:45:43.811761+00:00",
+    "last_checked": "2026-08-07T00:45:43.811761+00:00",
     "source_count": 32,
     "source_types": {
       "community": 2,
@@ -11725,9 +11725,282 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
-    "conflicts": []
+    "specs": {
+      "weight_with_battery_g": {
+        "value": "737 g (1 lb 10.0 oz) (including battery pack, SD card)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "128.9 × 96.9 × 80.8 mm 128.9 × 96.9 × 69.7 mm (from grip to monitor) 5 1/8 × 3 7/8 × 3 1/4 in. 5 1/8 × 3 7/8 × 2 3/4 in. (from grip to monitor)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Sony E-mount lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_format": {
+        "value": "35 mm full frame (35.9 mm × 24.0 mm), CMOS image sensor",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Approx. 50 100 000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "raw_formats": {
+        "value": "JPEG (compliant with DCF Ver. 2.0, Exif Ver. 2.32, and MPF Baseline), HEIF (MPEG-A MIAF compliant), RAW (Sony ARW 5.0 format compliant)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "video_codecs": {
+        "value": "XAVC Ver2.1: MP4 format compliant | Video: MPEG-H HEVC/H.265 | Audio: LPCM 2ch (48 kHz 16 bit), LPCM 4ch (48 kHz 24 bit) *1 , LPCM 2ch (48 kHz 24 bit) *1 , MPEG-4 AAC-LC 2ch *2",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "usb": {
+        "value": "SuperSpeed USB 10Gbps (USB 3.2) | Compatible with USB Power Delivery",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI type A jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "audio_io": {
+        "value": "Ø 3.5 mm Stereo mini jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight": {
+        "value": null,
+        "low": 737,
+        "high": 737,
+        "anchor": 737,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight_with_battery_g": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Mass (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (W/H/D) (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens",
+          "section": [
+            "Specifications",
+            "System"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_format": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Image format",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixel number of camera",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.raw_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "File format",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.video_codecs": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Movie (XAVC HS format)",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.usb": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "USB Type-C terminal",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "slot_name"
+        }
+      },
+      "specs.audio_io": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2420/v1/en/contents/231h_specifications_ilc2420.html",
+        "fetched_at": "2026-08-07T00:45:39.194356+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "​ (Microphone) terminal",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "2026-08-07T00:45:41.424785+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q105086737",
+        "fetched_at": "2026-08-07T00:45:41.424785+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Sony E-mount lens",
+        "divergent": "Sony E-mount",
+        "canonical_source": "manufacturer",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about stabilization (61% positive, 29% neutral, 10% negative across 49 claims). The most criticism lands on EVF & LCD: 48% positive, 28% neutral, 24% negative across 91 claims. Coverage of mount compatibility is mostly neutral: 31% positive, 65% neutral, 4% negative across 133 claims.",
@@ -11884,7 +12157,7 @@
       "url": "https://www.adorama.com/alc/product-photography-process/",
       "title": "A Peek Into the Product Photography Process",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017463+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837240+00:00",
       "weight": 0.75
     },
     {
@@ -11895,7 +12168,7 @@
       "url": "https://www.adorama.com/alc/evan-yu-and-the-new-york-knicks/",
       "title": "How Evan Yu Captured the New York Knicks’ Championship Run",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017489+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837259+00:00",
       "weight": 0.75
     },
     {
@@ -11906,7 +12179,7 @@
       "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
       "title": "AP Picture of the Week 2026 – Your best photos shared!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017496+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837263+00:00",
       "weight": 0.75
     },
     {
@@ -11917,7 +12190,7 @@
       "url": "https://amateurphotographer.com/buying-advice/best-sony-e-mount-lenses/",
       "title": "The best Sony lenses in 2026 for photography and video",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017503+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837267+00:00",
       "weight": 0.75
     },
     {
@@ -11928,7 +12201,7 @@
       "url": "https://amateurphotographer.com/latest/photo-news/world-cup-fever-brings-surge-in-demand-for-second-hand-pro-sports-cameras/",
       "title": "World Cup fever brings surge in demand for second-hand pro sports cameras",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017509+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837271+00:00",
       "weight": 0.75
     },
     {
@@ -11939,7 +12212,7 @@
       "url": "https://www.digitalcameraworld.com/photography/nature-and-wildlife-photography/dreamy-image-of-seahorse-so-rare-its-classified-as-data-deficient-shortlisted-for-nature-photography-award",
       "title": "Dreamy image of seahorse so rare itâ€™s classified as â€œdata deficientâ€� shortlisted for nature photography award",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017515+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837274+00:00",
       "weight": 0.75
     },
     {
@@ -11950,7 +12223,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/these-are-the-best-c2pa-cameras-that-add-content-credentials-to-your-images-for-every-photographer-tired-of-the-question-is-this-ai",
       "title": "These are the best C2PA cameras that add Content Credentials to your images for every photographer tired of the question, \"Is this AI?\"",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017519+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837278+00:00",
       "weight": 0.75
     },
     {
@@ -11961,7 +12234,7 @@
       "url": "https://sheclicks.net/sony-world-photography-awards-2026-female-winners/?utm_source=rss&utm_medium=rss&utm_campaign=sony-world-photography-awards-2026-female-winners",
       "title": "Sony World Photography Awards 2026 celebrates strong showing from female photographers",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017522+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837282+00:00",
       "weight": 0.75
     },
     {
@@ -11972,7 +12245,7 @@
       "url": "https://www.youtube.com/watch?v=caik1-UahH4",
       "title": "Sony A1 Review | The Ultimate Camera For Ultimate Money | RAW Downloads",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017525+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837284+00:00",
       "weight": 0.75
     },
     {
@@ -11983,7 +12256,7 @@
       "url": "https://www.youtube.com/watch?v=DM2txqJf-To",
       "title": "Sony a1 Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017528+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837288+00:00",
       "weight": 0.75
     },
     {
@@ -11994,7 +12267,7 @@
       "url": "https://www.youtube.com/watch?v=HzN9f-LND4g",
       "title": "Sony Alpha 1 (ILCE-1) Definitive Review | 4K",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017530+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837290+00:00",
       "weight": 0.75
     },
     {
@@ -12005,7 +12278,7 @@
       "url": "https://www.youtube.com/watch?v=y69b6ozRFJo",
       "title": "Sony A1 review: The Alpha of mirrorless cameras",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017533+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837293+00:00",
       "weight": 0.75
     },
     {
@@ -12016,7 +12289,7 @@
       "url": "https://www.youtube.com/watch?v=eO1B9p_p7cE",
       "title": "Sony Alpha 1: A VERY IMPRESSIVE Camera! (Sony a1 Review)",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017535+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837296+00:00",
       "weight": 0.75
     },
     {
@@ -12027,7 +12300,7 @@
       "url": "https://www.youtube.com/watch?v=4qAi_iWnT3o",
       "title": "Sony A1 II review IN-DEPTH hype-free!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017538+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837298+00:00",
       "weight": 0.75
     },
     {
@@ -12038,7 +12311,7 @@
       "url": "https://www.youtube.com/watch?v=uazLXO3oLS4",
       "title": "Sony Alpha 1 PHOTOGRAPHY review (res, DR, ISO, RAW, AF, 30fps) 2 months",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017540+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837301+00:00",
       "weight": 0.75
     },
     {
@@ -12049,7 +12322,7 @@
       "url": "https://www.youtube.com/watch?v=Zr3sEQZGgYI",
       "title": "Sony a1 II vs Sony a1 Comparison",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017543+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837303+00:00",
       "weight": 0.75
     },
     {
@@ -12060,7 +12333,7 @@
       "url": "https://www.youtube.com/watch?v=4V5arSq5Gdc",
       "title": "Sony a1 II User Experience Review | Thoroughly Tested! 😎",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017545+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837306+00:00",
       "weight": 0.75
     },
     {
@@ -12071,7 +12344,7 @@
       "url": "https://www.youtube.com/watch?v=9Jr0xMfV4ro",
       "title": "Sony A1 Hands-on Photo + Video Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017548+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837309+00:00",
       "weight": 0.75
     },
     {
@@ -12082,7 +12355,7 @@
       "url": "https://www.youtube.com/watch?v=JFLAI0tbTuc",
       "title": "Sony Alpha 1 Hands-on First Look at the $6,500, 50MP, 8K Beast!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017550+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837312+00:00",
       "weight": 0.75
     },
     {
@@ -12093,7 +12366,7 @@
       "url": "https://www.youtube.com/watch?v=_SFdNZOq5JE",
       "title": "Is the Sony A1 still worth it in 2026?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017553+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837327+00:00",
       "weight": 0.75
     },
     {
@@ -12104,7 +12377,7 @@
       "url": "https://www.youtube.com/watch?v=BoxwtoXbNyY",
       "title": "The Sony A1---- a Photographer's perspective",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017555+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837330+00:00",
       "weight": 0.75
     },
     {
@@ -12115,7 +12388,7 @@
       "url": "https://www.youtube.com/watch?v=vguyofpy16Y",
       "title": "Sony A1 Camera Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017558+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837332+00:00",
       "weight": 0.75
     },
     {
@@ -12126,7 +12399,7 @@
       "url": "https://www.youtube.com/watch?v=v-4DkKPVsuE",
       "title": "Sony A1 Review // Smaller, better, faster 1DX3 & New Hybrid KING",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017560+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837335+00:00",
       "weight": 0.75
     },
     {
@@ -12137,7 +12410,7 @@
       "url": "https://www.youtube.com/watch?v=Esgo7_pSFX0",
       "title": "Sony A1 - Filmmakers Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017563+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837338+00:00",
       "weight": 0.75
     },
     {
@@ -12148,7 +12421,7 @@
       "url": "https://www.youtube.com/watch?v=Hp3Vaud_csQ",
       "title": "The Sony a1 II ISN'T What We Expected!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017565+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837340+00:00",
       "weight": 0.75
     },
     {
@@ -12159,7 +12432,7 @@
       "url": "https://www.youtube.com/watch?v=0tgoKEOFKL4",
       "title": "Is This Sony Camera Already Outdated?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017568+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837343+00:00",
       "weight": 0.75
     },
     {
@@ -12170,7 +12443,7 @@
       "url": "https://www.youtube.com/watch?v=Wno9MrUO0xc",
       "title": "Sony A1 Review in EXTREME Conditions - Worth it?!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017570+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837345+00:00",
       "weight": 0.75
     },
     {
@@ -12181,7 +12454,7 @@
       "url": "https://www.youtube.com/watch?v=D-SZpjBCBA8",
       "title": "Sony a1 – Secretly the Best Value Sony Camera in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017577+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837348+00:00",
       "weight": 0.75
     },
     {
@@ -12192,7 +12465,7 @@
       "url": "https://www.youtube.com/watch?v=fnN2IhsYK_M",
       "title": "Sony A1 Review For Wildlife Photographers",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017580+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837350+00:00",
       "weight": 0.75
     },
     {
@@ -12203,7 +12476,7 @@
       "url": "https://www.youtube.com/watch?v=1OuHE0lB2uc",
       "title": "Sony A1 - The best sensor Sony has made?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017582+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837352+00:00",
       "weight": 0.75
     },
     {
@@ -12214,7 +12487,7 @@
       "url": "https://www.youtube.com/watch?v=v1uSP8WWrY8",
       "title": "Sony A1 review: A fast camera in a fast city",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017585+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837355+00:00",
       "weight": 0.75
     },
     {
@@ -12225,13 +12498,30 @@
       "url": "https://www.youtube.com/watch?v=_jmq84-58dY",
       "title": "Sony a1 II is MIND-BLOWING... but should you upgrade?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T05:56:50.017588+00:00",
+      "ingested_at": "2026-08-07T00:45:43.837357+00:00",
       "weight": 0.75
     }
   ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-a1/",
+    "reddit": "Sony A1\n\nReviewers are most positive about stabilization (61% positive, 29% neutral, 10% negative across 49 claims). The most criticism lands on EVF & LCD: 48% positive, 28% neutral, 24% negative across 91 claims. Coverage of mount compatibility is mostly neutral: 31% positive, 65% neutral, 4% negative across 133 claims.\n\nI pulled together all 32 reviews in one place: https://askmaddi.com/cards/sony-a1/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony A1**\nReviewers are most positive about stabilization (61% positive, 29% neutral, 10% negative across 49 claims). The most criticism lands on EVF & LCD: 48% positive, 28% neutral, 24% negative across 91 claims. Coverage of mount compatibility is mostly neutral: 31% positive, 65% neutral, 4% negative across 133 claims.\nAll 32 reviews in one place: https://askmaddi.com/cards/sony-a1/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony A1 — Reviewed",
+      "description": "Reviewers are most positive about stabilization (61% positive, 29% neutral, 10% negative across 49 claims). The most criticism lands on EVF & LCD: 48% positive, 28% neutral, 24% negative across 91 claims. Coverage of mount compatibility is mostly neutral: 31% positive, 65% neutral, 4% negative across 133 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-a1/"
+    }
+  },
   "_build_provenance": {
     "driver": "build_card.py",
     "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
   }

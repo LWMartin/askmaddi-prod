@@ -20,29 +20,29 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 3998.0,
-    "current_new_source": "adorama_partnerize_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-a7s-iii-mirrorless-camera-body-only-4k-120fps%2Fp%2Fisoa7sm3",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-a7s-iii-mirrorless-camera-body-only-4k-120fps%2Fp%2Fisoa7sm3",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
       "bands": {
         "pre_owned": 2071.0,
         "refurbished": 2669.1,
-        "open_box": 2500.0
+        "open_box": 2679.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 21,
-      "price_updated_at": "2026-08-06T10:10:08.960281+00:00"
+      "sample_size": 19,
+      "price_updated_at": "2026-08-07T10:10:09.334859+00:00"
     },
-    "price_updated_at": "2026-07-28T00:58:20.746961+00:00"
+    "price_updated_at": "2026-08-07T01:17:12.853109+00:00"
   },
   "freshness": {
     "created_at": "2026-07-03T15:30:13.842102+00:00",
-    "last_built": "2026-07-28T00:58:20.729571+00:00",
-    "last_checked": "2026-07-28T00:58:20.729571+00:00",
+    "last_built": "2026-08-07T01:17:12.836388+00:00",
+    "last_checked": "2026-08-07T01:17:12.836388+00:00",
     "source_count": 24,
     "source_types": {
       "community": 1,
@@ -8125,9 +8125,282 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
-    "conflicts": []
+    "specs": {
+      "weight_with_battery_g": {
+        "value": "699 g (1 lb 8.7 oz) (including battery pack, SDXC memory card)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "128.9 × 96.9 × 80.8 mm 128.9 × 96.9 × 69.7 mm (from grip to monitor) 5 1/8 × 3 7/8 × 3 1/4 in. 5 1/8 × 3 7/8 × 2 3/4 in. (from grip to monitor)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Sony E-mount lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_format": {
+        "value": "35 mm full frame (35.6 mm × 23.8 mm), CMOS image sensor",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Approx. 12 100 000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "raw_formats": {
+        "value": "JPEG (compliant with DCF Ver. 2.0, Exif Ver. 2.32, and MPF Baseline), HEIF (MPEG-A MIAF compliant), RAW (Sony ARW 5.0 format compliant)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "video_codecs": {
+        "value": "XAVC Ver2.1: MP4 format compliant | Video: MPEG-H HEVC/H.265 | Audio: LPCM 2ch (48 kHz 16 bit), LPCM 4ch (48 kHz 24 bit) *1 , LPCM 2ch (48 kHz 24 bit) *1 , MPEG-4 AAC-LC 2ch *2",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "usb": {
+        "value": "SuperSpeed USB 5Gbps (USB 3.2) | Compatible with USB Power Delivery",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI type A jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "audio_io": {
+        "value": "Ø 3.5 mm Stereo mini jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight": {
+        "value": null,
+        "low": 699,
+        "high": 699,
+        "anchor": 699,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight_with_battery_g": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Mass (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (W/H/D) (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens",
+          "section": [
+            "Specifications",
+            "System"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_format": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Image format",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixel number of camera",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.raw_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "File format",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.video_codecs": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Movie (XAVC HS format)",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.usb": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "USB Type-C terminal",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "slot_name"
+        }
+      },
+      "specs.audio_io": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2410/v1/en/contents/231h_specifications_ilc2410.html",
+        "fetched_at": "2026-08-07T01:17:08.982657+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "​ (Microphone) terminal",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "2026-08-07T01:17:10.728731+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q100775896",
+        "fetched_at": "2026-08-07T01:17:10.728731+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Sony E-mount lens",
+        "divergent": "Sony E-mount",
+        "canonical_source": "manufacturer",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.",
@@ -8269,6 +8542,12 @@
     "siblings": [],
     "sentiment": {}
   },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "video_capability",
+    "highest_rated": "battery_life",
+    "lowest_rated": "mount_compat"
+  },
   "sources": [
     {
       "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
@@ -8278,7 +8557,7 @@
       "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
       "title": "Chasing the Light: A Guide to Desert Landscape Photography and Composition",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744334+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852071+00:00",
       "weight": 0.75
     },
     {
@@ -8289,7 +8568,7 @@
       "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
       "title": "Sony Alpha 7S III review - Sony's video star still shines",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744352+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852090+00:00",
       "weight": 0.75
     },
     {
@@ -8300,7 +8579,7 @@
       "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
       "title": "Sony A7S III review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744356+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852094+00:00",
       "weight": 0.75
     },
     {
@@ -8311,7 +8590,7 @@
       "url": "https://www.digitalcameraworld.com/photography/awards-and-competitions/photography-and-film-will-help-us-to-educate-people-fascinating-underwater-shot-captures-red-sea-coral-doctors-at-work-winning-a-science-photo-award",
       "title": "\"Photography and film will help us to educate peopleâ€� â€“Fascinating underwater shot captures Red Sea 'coral doctors' at work, winning a science photo award",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744360+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852099+00:00",
       "weight": 0.75
     },
     {
@@ -8322,7 +8601,7 @@
       "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
       "title": "Sony A7S III review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744364+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852102+00:00",
       "weight": 0.75
     },
     {
@@ -8333,7 +8612,7 @@
       "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
       "title": "A Review of the Sony a7S III In the Field",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744367+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852105+00:00",
       "weight": 0.75
     },
     {
@@ -8344,7 +8623,7 @@
       "url": "https://www.youtube.com/watch?v=pcsHlajnQ68",
       "title": "Sony a7S III | Hands-on Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744370+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852108+00:00",
       "weight": 0.75
     },
     {
@@ -8355,7 +8634,7 @@
       "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
       "title": "Sony A7sIII - My Extended Review",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744373+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852111+00:00",
       "weight": 0.75
     },
     {
@@ -8366,7 +8645,7 @@
       "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
       "title": "Should You Get The Sony A7Siii in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744375+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852114+00:00",
       "weight": 0.75
     },
     {
@@ -8377,7 +8656,7 @@
       "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
       "title": "Sony a7S III First Impressions Review (4K/120p video, 16-bit Raw video)",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744378+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852117+00:00",
       "weight": 0.75
     },
     {
@@ -8388,7 +8667,7 @@
       "url": "https://www.youtube.com/watch?v=Af9_fGEOAB8",
       "title": "Sony a7S III Review: Best 'run and gun' camera available today?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744381+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852119+00:00",
       "weight": 0.75
     },
     {
@@ -8399,7 +8678,7 @@
       "url": "https://www.youtube.com/watch?v=ew2qRS19sk0",
       "title": "Sony A7sIII Full Review | Does it live up to the hype?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744383+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852122+00:00",
       "weight": 0.75
     },
     {
@@ -8410,7 +8689,7 @@
       "url": "https://www.youtube.com/watch?v=KIGaQLvm1ec",
       "title": "Sony a7S III Review: My Favorite Video Camera Ever",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744386+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852125+00:00",
       "weight": 0.75
     },
     {
@@ -8421,7 +8700,7 @@
       "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
       "title": "The SONY a7S III: A Technical MASTERPIECE!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744389+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852128+00:00",
       "weight": 0.75
     },
     {
@@ -8432,7 +8711,7 @@
       "url": "https://www.youtube.com/watch?v=VmX1nIJL-m8",
       "title": "Sony A7s III Review!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744391+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852131+00:00",
       "weight": 0.75
     },
     {
@@ -8443,7 +8722,7 @@
       "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
       "title": "Sony a7S III Hands-on Review - What a HUGE Surprise This is...",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744394+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852133+00:00",
       "weight": 0.75
     },
     {
@@ -8454,7 +8733,7 @@
       "url": "https://www.youtube.com/watch?v=q2Lzn2aI11Y",
       "title": "A7S III Honest Review - ALL the GOOD & BAD in 11 min!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744397+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852136+00:00",
       "weight": 0.75
     },
     {
@@ -8465,7 +8744,7 @@
       "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
       "title": "Sony FX3 vs A7S III: What EXACTLY is a CINEMA CAMERA?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744399+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852139+00:00",
       "weight": 0.75
     },
     {
@@ -8476,7 +8755,7 @@
       "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
       "title": "Why I Still Choose the A7S III Over the FX3 in 2026",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744402+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852141+00:00",
       "weight": 0.75
     },
     {
@@ -8487,7 +8766,7 @@
       "url": "https://www.youtube.com/watch?v=-wWMV9GJLpM",
       "title": "Sony a7S III Full Review - BEFORE YOU BUY!",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744404+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852144+00:00",
       "weight": 0.75
     },
     {
@@ -8498,7 +8777,7 @@
       "url": "https://www.youtube.com/watch?v=vZ8-pmabdqs",
       "title": "The Sony FXIII and A7SIII in 2025 | Which One?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744407+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852147+00:00",
       "weight": 0.75
     },
     {
@@ -8509,7 +8788,7 @@
       "url": "https://www.youtube.com/watch?v=_JKrR1-4YO8",
       "title": "Sony A7s III (2024) | Watch Before You Buy",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744410+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852149+00:00",
       "weight": 0.75
     },
     {
@@ -8520,7 +8799,7 @@
       "url": "https://www.youtube.com/watch?v=tTziJBQy_iw",
       "title": "Sony A7S III - Review After the Hype [ Sony A7S3 ]",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744412+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852152+00:00",
       "weight": 0.75
     },
     {
@@ -8531,20 +8810,31 @@
       "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
       "title": "Is the Sony A7S III still a POWERHOUSE in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-07-28T00:58:20.744415+00:00",
+      "ingested_at": "2026-08-07T01:17:12.852154+00:00",
       "weight": 0.75
     }
   ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-a7s-iii/",
+    "reddit": "Sony A7S III\n\nReviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.\n\nI pulled together all 24 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony A7S III**\nReviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.\nAll 24 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony A7S III — Reviewed",
+      "description": "Reviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-a7s-iii/"
+    }
+  },
   "_build_provenance": {
     "driver": "build_card.py",
     "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
-  },
-  "axis_roles": {
-    "computed_by": "axis_roles@1",
-    "most_discussed": "video_capability",
-    "highest_rated": "battery_life",
-    "lowest_rated": "mount_compat"
   }
 }

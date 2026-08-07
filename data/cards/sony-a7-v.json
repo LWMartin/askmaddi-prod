@@ -15,29 +15,29 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 2898.0,
-    "current_new_source": "adorama_partnerize_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-a7-v-mirrorless-camera%2Fp%2Fisoa7m5",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-a7-v-mirrorless-camera%2Fp%2Fisoa7m5",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
       "bands": {
         "open_box": 980.0,
-        "pre_owned": 2149.99,
+        "pre_owned": 1983.96,
         "refurbished": 2483.32
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 19,
-      "price_updated_at": "2026-08-06T10:10:06.421771+00:00"
+      "sample_size": 21,
+      "price_updated_at": "2026-08-07T10:10:06.676065+00:00"
     },
-    "price_updated_at": "2026-07-29T00:10:48.463982+00:00"
+    "price_updated_at": "2026-08-07T01:32:25.705846+00:00"
   },
   "freshness": {
     "created_at": "2026-07-17T23:30:19.249339+00:00",
-    "last_built": "2026-07-29T00:10:48.417436+00:00",
-    "last_checked": "2026-07-29T00:10:48.417436+00:00",
+    "last_built": "2026-08-07T01:32:25.662199+00:00",
+    "last_checked": "2026-08-07T01:32:25.662199+00:00",
     "source_count": 55,
     "source_types": {
       "pro": 55
@@ -24985,9 +24985,266 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
-    "conflicts": []
+    "specs": {
+      "weight_with_battery_g": {
+        "value": "695 g (1 lb 8.6 oz) (including battery pack, SD card)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "130.3 × 96.4 × 82.4 mm 130.3 × 96.4 × 72.3 mm (from grip to monitor) 5 1/4 × 3 7/8 × 3 1/4 in. 5 1/4 × 3 7/8 × 2 7/8 in. (from grip to monitor)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Sony E-mount lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_format": {
+        "value": "35 mm full frame (35.9 mm × 23.9 mm), CMOS image sensor",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Still Images: Approx. 33 000 000 pixels | Movies: Approx. 27 600 000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "raw_formats": {
+        "value": "JPEG (compliant with DCF Ver. 2.0, Exif Ver. 2.32, and MPF Baseline), HEIF (MPEG-A MIAF compliant), RAW (Sony ARW 6.0 format compliant)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "video_codecs": {
+        "value": "XAVC Ver2.4: MP4 format compliant | Video: MPEG-H HEVC/H.265 | Audio: LPCM 2ch (48 kHz 16 bit), LPCM 2ch (48 kHz 24 bit) *1 , LPCM 2ch (96 kHz 24 bit) *2 , LPCM 4ch (48 kHz 24 bit) *1 , LPCM 4ch (96 kHz 24 bit) *2 , PCM 2ch (48 kHz 32 bit float) *2 *3 , PCM 2ch (96 kHz 32 bit float) *2 *3 , PCM 4ch (48 kHz 32 bit float) *2 *3 , PCM 4ch (96 kHz 32 bit float) *2 *3 , MPEG-4 AAC-LC 2ch *4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI type A jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "audio_io": {
+        "value": "Ø 3.5 mm Stereo mini jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "Slot for CFexpress Type A memory cards, SD cards (UHS-I and UHS-II compatible)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight": {
+        "value": null,
+        "low": 695,
+        "high": 695,
+        "anchor": 695,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.weight_with_battery_g": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Mass (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (W/H/D) (Approx.)",
+          "section": [
+            "Specifications",
+            "Power, general"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens",
+          "section": [
+            "Specifications",
+            "System"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_format": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Image format",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixel number of camera",
+          "section": [
+            "Specifications",
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.raw_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "File format",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.video_codecs": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Movie (XAVC HS format)",
+          "section": [
+            "Specifications",
+            "Recording format"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "slot_name"
+        }
+      },
+      "specs.audio_io": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "​ (Microphone) terminal",
+          "section": [
+            "Specifications",
+            "Input/output terminals"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.card_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
+        "fetched_at": "2026-08-07T01:32:22.059938+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "SLOT 1",
+          "section": [
+            "Specifications",
+            "Slot"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q137191233",
+        "fetched_at": "2026-08-07T01:32:23.676555+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Sony E-mount lens",
+        "divergent": "Sony E-mount",
+        "canonical_source": "manufacturer",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about battery life (67% positive, 16% neutral, 17% negative across 83 claims). Coverage of mount compatibility is mostly neutral: 31% positive, 61% neutral, 8% negative across 214 claims.",
@@ -25144,7 +25401,7 @@
       "url": "https://amateurphotographer.com/review/sony-rx10-v-review/",
       "title": "Sony RX10 V review – the return of the king of bridge cameras",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461886+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704863+00:00",
       "weight": 0.75
     },
     {
@@ -25155,7 +25412,7 @@
       "url": "https://www.cameralabs.com/sony-a7-v-review/",
       "title": "Sony A7 V review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461906+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704878+00:00",
       "weight": 0.75
     },
     {
@@ -25166,7 +25423,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/mirrorless-cameras/retro-nikon-zf-mirrorless-camera-tops-used-sales-charts-for-the-first-time-in-over-a-year-beating-out-trendy-fujifilm",
       "title": "Retro Nikon Zf mirrorless camera tops used sales charts for the first time in over a year, beating out trendy Fujifilm",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461911+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704883+00:00",
       "weight": 0.75
     },
     {
@@ -25177,7 +25434,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/worlds-smallest-and-lightest-full-frame-mirrorless-camera-with-viewfinder-is-japans-no-1-bestseller",
       "title": "\"World's smallest and lightest full-frame mirrorless camera\" with viewfinder is Japan's No.1 bestseller",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461915+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704886+00:00",
       "weight": 0.75
     },
     {
@@ -25188,7 +25445,7 @@
       "url": "https://www.dpreview.com/news/5201878914/panasonic-s1ii-price-cut-2026/",
       "title": "Panasonic’s selling one of its best cameras at a much better price (for now?)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461918+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704890+00:00",
       "weight": 0.75
     },
     {
@@ -25199,7 +25456,7 @@
       "url": "https://petapixel.com/2026/07/14/photographers-just-keep-buying-old-canon-powershot-point-and-shoot-cameras/",
       "title": "Photographers Just Keep Buying Old Canon PowerShot Point-and-Shoot Cameras",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461922+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704893+00:00",
       "weight": 0.75
     },
     {
@@ -25210,7 +25467,7 @@
       "url": "https://www.youtube.com/watch?v=cD15fCeEsFE",
       "title": "Why the Sony A7V is an upgrade in almost every way",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461924+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704896+00:00",
       "weight": 0.75
     },
     {
@@ -25221,7 +25478,7 @@
       "url": "https://www.youtube.com/watch?v=_EUM1UUvOg0",
       "title": "Sony A7V Review: Must-Get or MEH?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461927+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704898+00:00",
       "weight": 0.75
     },
     {
@@ -25232,7 +25489,7 @@
       "url": "https://www.youtube.com/watch?v=n1HW20yL_do",
       "title": "Sony a7V | Full camera review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461930+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704901+00:00",
       "weight": 0.75
     },
     {
@@ -25243,7 +25500,7 @@
       "url": "https://www.youtube.com/watch?v=tK05ktYBA24",
       "title": "Sony A7V | The BEST Hybrid Full-Frame Camera? Watch This Before You Buy",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461933+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704904+00:00",
       "weight": 0.75
     },
     {
@@ -25254,7 +25511,7 @@
       "url": "https://www.youtube.com/watch?v=wcff6o3v7zw",
       "title": "Sony A7 V ~ In-Depth First Look & Test Footage",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461936+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704906+00:00",
       "weight": 0.75
     },
     {
@@ -25265,7 +25522,7 @@
       "url": "https://www.youtube.com/watch?v=buCEfA8AYVk",
       "title": "Sony a7V: Did Sony Fix the Real Issues?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461938+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704909+00:00",
       "weight": 0.75
     },
     {
@@ -25276,7 +25533,7 @@
       "url": "https://www.youtube.com/watch?v=Q75L7i-NSDQ",
       "title": "Sony a7 V Review: the do-it-all powerhouse",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461941+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704911+00:00",
       "weight": 0.75
     },
     {
@@ -25287,7 +25544,7 @@
       "url": "https://www.youtube.com/watch?v=X6MVqZcfUfA",
       "title": "Sony a7V Review (ILCE-7M5) | The Best Midlevel Camera?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461944+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704914+00:00",
       "weight": 0.75
     },
     {
@@ -25298,7 +25555,7 @@
       "url": "https://www.youtube.com/watch?v=RaKpy2CN40A",
       "title": "Sony A7 V Real World Review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461947+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704916+00:00",
       "weight": 0.75
     },
     {
@@ -25309,7 +25566,7 @@
       "url": "https://www.youtube.com/watch?v=5IAdieYUf-g",
       "title": "Sony A7V vs. Lumix S5II - The Choice is Easy!?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461949+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704918+00:00",
       "weight": 0.75
     },
     {
@@ -25320,7 +25577,7 @@
       "url": "https://www.youtube.com/watch?v=0-AzXN9b1Ow",
       "title": "Sony a7 V Review: The End Game",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461952+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704921+00:00",
       "weight": 0.75
     },
     {
@@ -25331,7 +25588,7 @@
       "url": "https://www.youtube.com/watch?v=DQ4xlOoXoGY",
       "title": "The Brutal Truth: Sony a7V Review After 5 Months of Use",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461955+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704924+00:00",
       "weight": 0.75
     },
     {
@@ -25342,7 +25599,7 @@
       "url": "https://www.youtube.com/watch?v=W4JBKZP9wKw",
       "title": "Sony A7V - Massively Underrated! - Best Video Quality?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461958+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704926+00:00",
       "weight": 0.75
     },
     {
@@ -25353,7 +25610,7 @@
       "url": "https://www.youtube.com/watch?v=5pxeY9X7kfI",
       "title": "Sony A7V Review Real World Testing In Alaska (unsponsored)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461960+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704929+00:00",
       "weight": 0.75
     },
     {
@@ -25364,7 +25621,7 @@
       "url": "https://www.youtube.com/watch?v=qK_ULtKhB-k",
       "title": "Sony A7V: The SURPRISING & DISAPPOINTING Truth!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461963+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704931+00:00",
       "weight": 0.75
     },
     {
@@ -25375,7 +25632,7 @@
       "url": "https://www.youtube.com/watch?v=zZ4ZejBYoso",
       "title": "SONY a7 V in the REAL WORLD: A GRAND SLAM?!? (vs Canon R6 Mark III)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461966+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704934+00:00",
       "weight": 0.75
     },
     {
@@ -25386,7 +25643,7 @@
       "url": "https://www.youtube.com/watch?v=U85l4J5Mrog",
       "title": "Sony a7 V vs a7 IV vs a7C II: Which Camera Should You Buy? (2026)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461968+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704936+00:00",
       "weight": 0.75
     },
     {
@@ -25397,7 +25654,7 @@
       "url": "https://www.youtube.com/watch?v=v2iUURtAe-c",
       "title": "Sony A7V - Quick Start Guide for Beginners To Get Up And Running Fast!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461971+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704939+00:00",
       "weight": 0.75
     },
     {
@@ -25408,7 +25665,7 @@
       "url": "https://www.youtube.com/watch?v=H1bfnayCEAI",
       "title": "Sony A7V Review - A Baby A1 II Is Born?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461974+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704941+00:00",
       "weight": 0.75
     },
     {
@@ -25419,7 +25676,7 @@
       "url": "https://www.youtube.com/watch?v=1tTDny2MGxU",
       "title": "Bruh. Sony a7 V is actually TOO GOOD...",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461977+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704944+00:00",
       "weight": 0.75
     },
     {
@@ -25430,7 +25687,7 @@
       "url": "https://www.youtube.com/watch?v=SGvRvLvIww8",
       "title": "Sony a7 V Long-Term Review: Is It Worth It After 8 Months?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461980+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704947+00:00",
       "weight": 0.75
     },
     {
@@ -25441,7 +25698,7 @@
       "url": "https://www.youtube.com/watch?v=TEnySMbQ9hc",
       "title": "Sony A7V Hands-On Review: Photo and Video",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461983+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704949+00:00",
       "weight": 0.75
     },
     {
@@ -25452,7 +25709,7 @@
       "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
       "title": "Why I'm NOT Buying the Sony A7V (vs A7IV)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461986+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704951+00:00",
       "weight": 0.75
     },
     {
@@ -25463,7 +25720,7 @@
       "url": "https://www.youtube.com/watch?v=JaXQGoAMuOI",
       "title": "stop searching...this is THE camera | Sony a7V Long Term Review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461988+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704954+00:00",
       "weight": 0.75
     },
     {
@@ -25474,7 +25731,7 @@
       "url": "https://www.youtube.com/watch?v=sGNrsy_XFAM",
       "title": "Sony a7 V: Partially-Stacked Speed Demon with a Third-Party Lens Twist",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461991+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704956+00:00",
       "weight": 0.75
     },
     {
@@ -25485,7 +25742,7 @@
       "url": "https://www.youtube.com/watch?v=LTFJ6AjPKmo",
       "title": "Sony A7V MASTER COURSE - Beginner to Pro Camera Tutorial and Walkthrough",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461994+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704959+00:00",
       "weight": 0.75
     },
     {
@@ -25496,7 +25753,7 @@
       "url": "https://www.youtube.com/watch?v=rCcqoACfWds",
       "title": "Sony A7V: The Good, The bad, The Rant",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461997+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704961+00:00",
       "weight": 0.75
     },
     {
@@ -25507,7 +25764,7 @@
       "url": "https://www.youtube.com/watch?v=bgZubiJ0S0g",
       "title": "Sony A7V – The Best Camera for 2026? Field Test in the Alps ",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.461999+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704964+00:00",
       "weight": 0.75
     },
     {
@@ -25518,7 +25775,7 @@
       "url": "https://www.youtube.com/watch?v=srmpGN7z8VM",
       "title": "Sony A7V First Impressions– I'm buying it. Here’s Why",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462002+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704966+00:00",
       "weight": 0.75
     },
     {
@@ -25529,7 +25786,7 @@
       "url": "https://www.youtube.com/watch?v=tkluJI36tcE",
       "title": "Sony A7V Camera Review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462005+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704969+00:00",
       "weight": 0.75
     },
     {
@@ -25540,7 +25797,7 @@
       "url": "https://www.youtube.com/watch?v=TZDoZsZZ4SA",
       "title": "Bird Photography with the Sony A7V: Is the 'Flagship' Now Overkill?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462008+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704971+00:00",
       "weight": 0.75
     },
     {
@@ -25551,7 +25808,7 @@
       "url": "https://www.youtube.com/watch?v=H6pPEigl8Mg",
       "title": "I Tested the A7 V vs A1 II for 3 Months in Yellowstone… Here’s the Truth",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462010+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704974+00:00",
       "weight": 0.75
     },
     {
@@ -25562,7 +25819,7 @@
       "url": "https://www.youtube.com/watch?v=3kEwgGrPUNM",
       "title": "Sony A7V hands-on review! Worth it?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462013+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704977+00:00",
       "weight": 0.75
     },
     {
@@ -25573,7 +25830,7 @@
       "url": "https://www.youtube.com/watch?v=2kUGO__V1-E",
       "title": "Sony A7V for Pro Photography in 2026",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462016+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704979+00:00",
       "weight": 0.75
     },
     {
@@ -25584,7 +25841,7 @@
       "url": "https://www.youtube.com/watch?v=1_-05etEl6I",
       "title": "Sony a7 V Review: Don't Call It a Comeback!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462018+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704981+00:00",
       "weight": 0.75
     },
     {
@@ -25595,7 +25852,7 @@
       "url": "https://www.youtube.com/watch?v=HQp6mKt0TzY",
       "title": "Sony A7 V review: Way better than I expected!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462021+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704984+00:00",
       "weight": 0.75
     },
     {
@@ -25606,7 +25863,7 @@
       "url": "https://www.youtube.com/watch?v=wTxtntcDDfY",
       "title": "Sony A7V: The Reality After 6 Months",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462024+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704986+00:00",
       "weight": 0.75
     },
     {
@@ -25617,7 +25874,7 @@
       "url": "https://www.youtube.com/watch?v=0UiLVOAvdoM",
       "title": "The REALITY of the Sony A7V..",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462026+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704989+00:00",
       "weight": 0.75
     },
     {
@@ -25628,7 +25885,7 @@
       "url": "https://www.youtube.com/watch?v=mguH3xSzHLE",
       "title": "Sony A7V Long Term Review: It's Boring And It's Perfect",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462029+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704991+00:00",
       "weight": 0.75
     },
     {
@@ -25639,7 +25896,7 @@
       "url": "https://www.youtube.com/watch?v=cdLuBbwEi-k",
       "title": "The Sony A7V is Better Than You Think",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462032+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704994+00:00",
       "weight": 0.75
     },
     {
@@ -25650,7 +25907,7 @@
       "url": "https://www.youtube.com/watch?v=GAgxEfViEck",
       "title": "Sony A7V Review – The Hybrid King in 2026?",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462034+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704996+00:00",
       "weight": 0.75
     },
     {
@@ -25661,7 +25918,7 @@
       "url": "https://www.youtube.com/watch?v=Gaz4um10x80",
       "title": "📸Sony A7v Camera bought🤩 Worth it for ₹2,80,000❓",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462037+00:00",
+      "ingested_at": "2026-08-07T01:32:25.704999+00:00",
       "weight": 0.75
     },
     {
@@ -25672,7 +25929,7 @@
       "url": "https://www.youtube.com/watch?v=Ro9Bed2FZeA",
       "title": "Sony A7V in 2026 | Watch Before You Buy",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462040+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705001+00:00",
       "weight": 0.75
     },
     {
@@ -25683,7 +25940,7 @@
       "url": "https://www.youtube.com/watch?v=Mlu6mKaHScw",
       "title": "Sony A7V - What They're NOT TELLING YOU",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462042+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705003+00:00",
       "weight": 0.75
     },
     {
@@ -25694,7 +25951,7 @@
       "url": "https://www.youtube.com/watch?v=r9ct9lImrck",
       "title": "Why the Internet is MAD at the Sony a7 V",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462045+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705006+00:00",
       "weight": 0.75
     },
     {
@@ -25705,7 +25962,7 @@
       "url": "https://www.youtube.com/watch?v=26hi83YSXhU",
       "title": "Sony A7V: The Best Value Sony Ever Made!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462048+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705009+00:00",
       "weight": 0.75
     },
     {
@@ -25716,7 +25973,7 @@
       "url": "https://www.youtube.com/watch?v=50Cjw5IBCj8",
       "title": "Sony A7 Mark V vs. A7 Mark  IV: How it REALLY Performs! (It's not even close)",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462051+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705012+00:00",
       "weight": 0.75
     },
     {
@@ -25727,7 +25984,7 @@
       "url": "https://www.youtube.com/watch?v=QQnknsKQ4Jw",
       "title": "Sony A7 V vs A7 IV Video Features: They FINALLY fixed it!",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462054+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705015+00:00",
       "weight": 0.75
     },
     {
@@ -25738,13 +25995,30 @@
       "url": "https://www.youtube.com/watch?v=VUw8VL0QFkk",
       "title": "Is the Sony A7V worth it? | Long-Term Review",
       "publication_date": "",
-      "ingested_at": "2026-07-29T00:10:48.462056+00:00",
+      "ingested_at": "2026-08-07T01:32:25.705017+00:00",
       "weight": 0.75
     }
   ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-a7-v/",
+    "reddit": "Sony A7 V\n\nReviewers are most positive about battery life (67% positive, 16% neutral, 17% negative across 83 claims). Coverage of mount compatibility is mostly neutral: 31% positive, 61% neutral, 8% negative across 214 claims.\n\nI pulled together all 55 reviews in one place: https://askmaddi.com/cards/sony-a7-v/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony A7 V**\nReviewers are most positive about battery life (67% positive, 16% neutral, 17% negative across 83 claims). Coverage of mount compatibility is mostly neutral: 31% positive, 61% neutral, 8% negative across 214 claims.\nAll 55 reviews in one place: https://askmaddi.com/cards/sony-a7-v/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony A7 V — Reviewed",
+      "description": "Reviewers are most positive about battery life (67% positive, 16% neutral, 17% negative across 83 claims). Coverage of mount compatibility is mostly neutral: 31% positive, 61% neutral, 8% negative across 214 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-a7-v/"
+    }
+  },
   "_build_provenance": {
     "driver": "build_card.py",
     "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
   }
