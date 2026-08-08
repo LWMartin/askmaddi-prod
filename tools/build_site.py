@@ -1327,6 +1327,32 @@ def select_teaser_axes(card):
     return picks
 
 
+_GRID_CATEGORY_RANK = {"body": 0, "lens": 1, "support": 2}
+
+
+def order_cards_for_grid(cards):
+    """Order cards for the homepage grid: newest card first (hero), then the
+    rest grouped body -> lens -> support -> other, newest-first within each
+    group. Never mutates the input; returns a new list of the same length.
+    """
+    def created_at(card):
+        return (card.get("freshness") or {}).get("created_at") or ""
+
+    def category_rank(card):
+        cat = ((card.get("identity") or {}).get("category") or "").lower()
+        return _GRID_CATEGORY_RANK.get(cat, 3)
+
+    by_id = sorted(cards, key=lambda c: c["card_id"])
+    newest_first = sorted(by_id, key=created_at, reverse=True)
+
+    if not newest_first:
+        return []
+
+    hero, rest = newest_first[0], newest_first[1:]
+    grouped = sorted(rest, key=category_rank)
+    return [hero] + grouped
+
+
 def teaser_entry(card):
     ident = card["identity"]
     # cards.js reads pricing.new_price / used_price (numbers) and runs its own
@@ -1634,7 +1660,7 @@ def main():
     if args.manifest:
         manifest = {
             "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
-            "cards": [teaser_entry(c) for c in cards],
+            "cards": [teaser_entry(c) for c in order_cards_for_grid(cards)],
         }
         mpath = out / "cards-manifest.json"
         mpath.write_text(json.dumps(manifest, indent=2), encoding="utf-8")

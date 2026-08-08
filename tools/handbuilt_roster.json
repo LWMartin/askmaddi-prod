@@ -1,0 +1,9 @@
+{
+  "_description": "Hand-built cards to reconcile into the work_queue. These SKUs were authored directly (bypassing resolve_pass), so they carry no queue record and are invisible to the drip/rebuild machinery. Consumed by tools/enroll_handbuilt.py. Labels/categories are hand-curated: the spine SKU entries are empty, and the sigma card's on-disk category was null.",
+  "roster": [
+    {"slug": "sony-a7iv", "label": "Sony A7 IV", "category": "body"},
+    {"slug": "sigma-35-art-dg-dn-ii", "label": "Sigma 35mm f/1.4 DG DN Art II", "category": "lens"},
+    {"slug": "peak-design-pro-tripod", "label": "Peak Design Pro Tripod", "category": "support"},
+    {"slug": "peak-design-travel-tripod", "label": "Peak Design Travel Tripod", "category": "support"}
+  ]
+}
