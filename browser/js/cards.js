@@ -6,6 +6,15 @@
 const MANIFEST_URL = 'cards-manifest.json';
 let _manifestCache = null;
 
+// Category display metadata for the anchor nav + section headings. Keyed by the
+// card's own lowercase category. Order here is only a fallback — the buckets
+// follow the manifest, which build_site already groups body -> lens -> support.
+const CATEGORY_META = {
+    body: { id: 'cat-bodies', label: 'Bodies' },
+    lens: { id: 'cat-lenses', label: 'Lenses' },
+    support: { id: 'cat-support', label: 'Support' },
+};
+
 /**
  * Load the card manifest (cached after first fetch).
  */
@@ -81,8 +90,10 @@ function formatPrice(price) {
 /**
  * Render a single teaser card.
  */
-function renderTeaserCard(card) {
+function renderTeaserCard(card, opts = {}) {
     const axes = (card.top_axes || []).slice(0, 3).map(renderAxisBar).join('');
+    const heroClass = opts.hero ? ' teaser-card--hero' : '';
+    const heroBadge = opts.hero ? '<span class="hero-badge">★ Latest</span>' : '';
 
     const imageContent = card.image_thumb
         ? `<img src="${card.image_thumb}" alt="${card.display_name}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='block'"><div class="image-placeholder" style="display:none">📷</div>`
@@ -107,7 +118,8 @@ function renderTeaserCard(card) {
         : '';
 
     return `
-        <article class="teaser-card">
+        <article class="teaser-card${heroClass}">
+            ${heroBadge}
             <div class="card-image">
                 ${imageContent}
                 <a href="${card.card_url || '#'}#sources" class="source-badge" title="See all ${card.source_count} source reviews">${card.source_count} reviews</a>
@@ -145,11 +157,92 @@ export async function renderCardGrid(containerSelector) {
     const container = document.querySelector(containerSelector);
     if (!container) return;
 
-    // Show the section (hidden by default if no cards)
+    // Own the whole review-cards region: the first (newest) card is pulled out
+    // as a full-width hero, the rest are grouped into category sections with an
+    // anchor nav. Hidden by default until we have cards.
     const section = container.closest('.review-cards');
-    if (section) section.style.display = 'block';
+    if (!section) return;
+    section.style.display = 'block';
 
-    container.innerHTML = manifest.cards.map(renderTeaserCard).join('');
+    const cards = manifest.cards;
+    const hero = cards[0];
+    const rest = cards.slice(1);
+
+    // Bucket the rest by category, preserving the manifest order (build_site
+    // already grouped body -> lens -> support, newest-first within each).
+    const buckets = [];
+    const byKey = {};
+    for (const card of rest) {
+        const key = (card.category || 'other').toLowerCase();
+        const meta = CATEGORY_META[key]
+            || { id: 'cat-' + key.replace(/\s+/g, '-'), label: (card.category || 'Other') };
+        if (!byKey[key]) {
+            byKey[key] = { key, id: meta.id, label: meta.label, cards: [] };
+            buckets.push(byKey[key]);
+        }
+        byKey[key].cards.push(card);
+    }
+
+    // Nav only earns its space when there's more than one section to jump to.
+    const navHtml = buckets.length > 1
+        ? `<nav class="cat-nav" aria-label="Jump to category">
+               ${buckets.map(b =>
+                   `<a href="#${b.id}" data-cat="${b.id}">${b.label}<span class="cat-count">${b.cards.length}</span></a>`
+               ).join('')}
+           </nav>`
+        : '';
+
+    const heroHtml = `
+        <div class="hero-feature">${renderTeaserCard(hero, { hero: true })}</div>
+        <hr class="hero-rule">`;
+
+    const sectionsHtml = buckets.map(b => `
+        <section class="cat-section" id="${b.id}">
+            <h3 class="cat-heading">${b.label}</h3>
+            <div class="card-grid">${b.cards.map(c => renderTeaserCard(c)).join('')}</div>
+        </section>`).join('');
+
+    section.innerHTML =
+        '<h2 class="section-heading">Recent review comparisons</h2>'
+        + navHtml + heroHtml + sectionsHtml;
+
+    _initScrollSpy(section);
+    _initToTop();
+}
+
+// Highlight the nav link for the category section currently in view.
+function _initScrollSpy(section) {
+    const nav = section.querySelector('.cat-nav');
+    if (!nav || !('IntersectionObserver' in window)) return;
+    const links = new Map();
+    nav.querySelectorAll('a[data-cat]').forEach(a => links.set(a.dataset.cat, a));
+    const obs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (!e.isIntersecting) return;
+            links.forEach(a => a.classList.remove('active'));
+            const a = links.get(e.target.id);
+            if (a) a.classList.add('active');
+        });
+    }, { rootMargin: '-40% 0px -55% 0px', threshold: 0 });
+    section.querySelectorAll('.cat-section').forEach(s => obs.observe(s));
+}
+
+// A floating back-to-top button, injected once and shown past a scroll threshold.
+function _initToTop() {
+    let btn = document.getElementById('to-top');
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.id = 'to-top';
+        btn.className = 'to-top';
+        btn.type = 'button';
+        btn.setAttribute('aria-label', 'Back to top');
+        btn.innerHTML = '↑';
+        btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        document.body.appendChild(btn);
+    }
+    const onScroll = () => btn.classList.toggle('visible', window.scrollY > 400);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
 }
 
 /**

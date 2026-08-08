@@ -664,3 +664,107 @@ body {
 
     .card-actions { flex-direction: column; }
 }
+
+/* ─── Area A: category nav + hero feature + back-to-top ────────────
+   The homepage grid pulls the newest card out as a full-width hero, then
+   groups the rest into body/lens/support sections reachable from a sticky
+   anchor nav. Rendered by js/cards.js from cards-manifest.json.            */
+
+.cat-nav {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    margin-bottom: var(--space-lg);
+    background: var(--color-background);
+    border-bottom: 1px solid var(--color-border-light);
+}
+.cat-nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px var(--space-md);
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border-light);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast), border-color var(--transition-fast),
+                background var(--transition-fast);
+}
+.cat-nav a:hover { color: var(--color-text); border-color: var(--color-border); }
+.cat-nav a.active {
+    color: var(--color-primary-dark);
+    background: var(--color-primary-light);
+    border-color: var(--color-primary);
+}
+.cat-nav .cat-count {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    background: var(--color-border-light);
+    border-radius: var(--radius-full);
+    padding: 0 6px;
+}
+.cat-nav a.active .cat-count { color: var(--color-primary-dark); background: var(--color-surface); }
+
+.hero-feature { margin-bottom: var(--space-lg); }
+.teaser-card--hero { position: relative; border-color: var(--color-primary); }
+@media (min-width: 720px) {
+    .hero-feature .teaser-card--hero { flex-direction: row; }
+    .hero-feature .teaser-card--hero .card-image { flex: 0 0 42%; aspect-ratio: auto; }
+    .hero-feature .teaser-card--hero .card-body { flex: 1; }
+}
+.hero-badge {
+    position: absolute;
+    top: var(--space-sm);
+    left: var(--space-sm);
+    z-index: 2;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 2px var(--space-sm);
+    border-radius: var(--radius-full);
+}
+.hero-rule {
+    border: 0;
+    border-top: 1px solid var(--color-border);
+    margin: 0 0 var(--space-lg);
+}
+
+.cat-section { scroll-margin-top: 64px; margin-bottom: var(--space-2xl); }
+.cat-heading {
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--space-md);
+}
+
+.to-top {
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    z-index: 40;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    border: 1px solid var(--color-border);
+    background: var(--color-surface);
+    color: var(--color-text);
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: var(--shadow-card-hover);
+    opacity: 0;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity var(--transition-normal), transform var(--transition-normal);
+}
+.to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
