@@ -34,6 +34,15 @@
     <div class="container">
         <!-- LANDING STATE -->
         <div id="state-landing" class="state active">
+            <!-- Compact search, hidden at the top and revealed on scroll once the
+                 hero scrolls away (fixed; reuses the .header-compact look). -->
+            <header id="landing-compact" class="header-compact landing-compact" aria-hidden="true">
+                <a href="/" aria-label="AskMaddi home"><img src="images/logo.png" alt="AskMaddi" class="site-logo"></a>
+                <div class="search-box">
+                    <input type="text" id="landing-compact-input" placeholder="What are you looking for?" aria-label="Search">
+                    <button id="landing-compact-button">Ask Maddi</button>
+                </div>
+            </header>
             <header class="hero">
                 <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</h1>
                 <p class="tagline">Private search · Product research</p>
@@ -204,6 +213,19 @@
 
         wireSecondarySearch('results-search-input', 'results-search-button');
         wireSecondarySearch('error-search-input', 'error-search-button');
+        wireSecondarySearch('landing-compact-input', 'landing-compact-button');
+
+        // Reveal the landing compact search once the hero has scrolled away.
+        const landingBar = document.getElementById('landing-compact');
+        if (landingBar) {
+            const onLandingScroll = () => {
+                const show = window.scrollY > 280;
+                landingBar.classList.toggle('visible', show);
+                landingBar.setAttribute('aria-hidden', show ? 'false' : 'true');
+            };
+            window.addEventListener('scroll', onLandingScroll, { passive: true });
+            onLandingScroll();
+        }
 
         // Keep results search bar in sync with current query
         const observer = new MutationObserver(() => {

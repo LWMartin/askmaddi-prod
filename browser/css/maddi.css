@@ -672,7 +672,7 @@ body {
 
 .cat-nav {
     position: sticky;
-    top: 0;
+    top: 61px;              /* stack beneath the fixed landing search header */
     z-index: 20;
     display: flex;
     flex-wrap: wrap;
@@ -768,3 +768,24 @@ body {
     transition: opacity var(--transition-normal), transform var(--transition-normal);
 }
 .to-top.visible { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+/* Landing: compact search bar, hidden at the top and revealed on scroll.
+   Fixed + slide-in, reusing the .header-compact look; the category nav sticks
+   just beneath it (see .cat-nav top offset above). */
+.landing-compact {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 1200px;          /* match .container */
+    margin: 0 auto;
+    z-index: 60;
+    transform: translateY(-100%);
+    transition: transform var(--transition-normal);
+}
+.landing-compact.visible { transform: translateY(0); }
+
+/* On mobile the compact header wraps to two rows, so the nav needs more offset. */
+@media (max-width: 600px) {
+    .cat-nav { top: 104px; }
+}
