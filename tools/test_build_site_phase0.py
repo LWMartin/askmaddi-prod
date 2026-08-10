@@ -235,3 +235,66 @@ def test_page_category_lowercased_and_defaulted():
     card["identity"]["category"] = ""
     html2 = render_page(card)
     assert '<body data-category="unknown">' in html2
+
+
+# ─── JSON-LD freshness dates (maddi-distribution flag, 2026-08-10) ───────────
+# datePublished = first build; dateModified = a page-level "content changed"
+# signal anchored to real timestamps (max of last_built + used-price refresh),
+# NOT build-time now(). Rides the change-gated nightly rebuild honestly.
+import json as _json  # noqa: E402
+from build_site import (  # noqa: E402
+    schema_org_jsonld, schema_published_date, schema_modified_date,
+)
+
+
+def _jsonld(card):
+    return _json.loads(schema_org_jsonld(
+        card, "https://askmaddi.com/cards/test-cam/", "", ""))
+
+
+def test_datepublished_is_created_at_day():
+    c = _card()
+    c["freshness"] = {"created_at": "2026-06-04T21:38:29.582735+00:00"}
+    assert schema_published_date(c) == "2026-06-04"
+    assert _jsonld(c)["datePublished"] == "2026-06-04"
+
+
+def test_datemodified_rides_the_newer_price_clock():
+    # last_built older than the nightly used-price refresh -> price wins.
+    c = _card()
+    c["freshness"] = {"created_at": "2026-06-04T00:00:00+00:00",
+                      "last_built": "2026-08-07T00:00:00+00:00"}
+    c["pricing"] = {"used_market": {"price_updated_at": "2026-08-10T10:10:00+00:00"}}
+    assert schema_modified_date(c) == "2026-08-10"
+    assert _jsonld(c)["dateModified"] == "2026-08-10"
+
+
+def test_datemodified_uses_last_built_when_no_used_price():
+    # Unpriced card (tripods, some lenses): honest true last-change, no price tick.
+    c = _card()
+    c["freshness"] = {"created_at": "2026-06-04T00:00:00+00:00",
+                      "last_built": "2026-08-09T00:00:00+00:00"}
+    assert schema_modified_date(c) == "2026-08-09"
+
+
+def test_datemodified_never_precedes_datepublished():
+    c = _card()
+    c["freshness"] = {"created_at": "2026-07-15T00:00:00+00:00"}  # no build/price ts
+    assert schema_modified_date(c) == schema_published_date(c) == "2026-07-15"
+
+
+def test_freshness_dates_absent_when_no_timestamps():
+    c = _card()
+    c["freshness"] = {"source_count": 7}  # no created_at/last_built
+    obj = _jsonld(c)
+    assert "datePublished" not in obj
+    assert "dateModified" not in obj
+
+
+def test_freshness_dates_are_day_grain_not_datetime():
+    c = _card()
+    c["freshness"] = {"created_at": "2026-06-04T21:38:29.582735+00:00",
+                      "last_built": "2026-08-09T04:30:11.100000+00:00"}
+    obj = _jsonld(c)
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", obj["datePublished"])
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", obj["dateModified"])

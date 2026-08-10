@@ -135,6 +135,46 @@ def used_price_asof(card):
     return used.get("price_updated_at") or ""
 
 
+def _iso_date(raw):
+    """Date-grain (YYYY-MM-DD) from an ISO timestamp, or '' if unparseable."""
+    if not raw:
+        return ""
+    try:
+        return datetime.fromisoformat(str(raw).replace("Z", "+00:00")).date().isoformat()
+    except (ValueError, TypeError):
+        return ""
+
+
+def schema_published_date(card):
+    """schema.org datePublished — the card's first-build date (freshness.
+    created_at). Stable across rebuilds: when the page first entered the web."""
+    return _iso_date((card.get("freshness", {}) or {}).get("created_at"))
+
+
+def schema_modified_date(card):
+    """schema.org dateModified — a PAGE-LEVEL 'content last changed' signal for
+    recency-weighting answer engines (Lee's ruling 2026-08-10: nightly build).
+
+    Anchored to real data timestamps — max(last_built, used-price refresh) —
+    never build-time now(): the nightly rebuild is change-gated ('an unchanged
+    price is not an event'), so these advance only on an actual change. That
+    keeps this stamp honest AND rides the nightly price tick for priced cards,
+    while unpriced cards truthfully show their real last-change date.
+
+    Distinct from the two VISIBLE clocks (synthesis_asof / used_price_asof),
+    which stay deliberately separate on the page — this is machine-readable
+    page freshness, not a synthesis claim, so collapsing them here is correct."""
+    fresh = card.get("freshness", {}) or {}
+    used = (card.get("pricing", {}) or {}).get("used_market", {}) or {}
+    dates = [d for d in (_iso_date(fresh.get("last_built")),
+                         _iso_date(used.get("price_updated_at"))) if d]
+    if not dates:
+        # No build/price timestamp at all — fall back to first-build so the
+        # field is still present and never post-dates publication.
+        return schema_published_date(card)
+    return max(dates)
+
+
 def ensure_affiliate_tag(url):
     """Guarantee the affiliate tag on any amazon/ebay URL, idempotently.
 
@@ -917,6 +957,19 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
         obj["image"] = abs_url(img_url)
     if description:
         obj["description"] = description
+
+    # Freshness for recency-weighting answer engines (maddi-distribution §4.8:
+    # "the freshness machinery is a GEO weapon iff surfaced"). datePublished is
+    # the first-build date; dateModified rides the change-gated nightly rebuild.
+    # Both are date-grain and honest — see schema_modified_date. Widely read on
+    # Product by consumers even though the property's schema.org home is
+    # CreativeWork; schema.org domains are advisory, not enforced.
+    published = schema_published_date(card)
+    modified = schema_modified_date(card)
+    if published:
+        obj["datePublished"] = published
+    if modified:
+        obj["dateModified"] = modified
 
     used = (card.get("pricing", {}) or {}).get("used_market", {}) or {}
     bands = used.get("bands", {}) or {}
