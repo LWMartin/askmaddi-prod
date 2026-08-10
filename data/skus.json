@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-09",
+  "as_of": "2026-08-10",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -477,7 +477,7 @@
       "gtin": "00027242920569",
       "marketplace_ids": {
         "ebay_epid": "10043287076",
-        "ebay_legacy_item_id": "175891659544",
+        "ebay_legacy_item_id": "384994000028",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -516,29 +516,29 @@
             {
               "source": "aspect",
               "identifier_type": "UPC",
-              "raw": "0027242920569",
+              "raw": "027242920569",
               "gtin14": "00027242920569",
               "valid": true
             }
           ]
         },
-        "market_title": "Sony a7S III 12MP 4K Full Frame Mirrorless Digital Camera Body ILCE-7SM3/B - NEW",
-        "image": "https://i.ebayimg.com/images/g/OpkAAOSwT4JlJYN9/s-l1600.jpg",
+        "market_title": "Sony a7S III Mirrorless Camera (Body) ILCE7SM3/B",
+        "image": "https://i.ebayimg.com/images/g/X90AAOSw6P5m2NJq/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/yIgAAOSwKd9hwYSt/s-l640.jpg",
         "price_seen": {
-          "value": "2649.00",
+          "value": "2657.00",
           "currency": "USD",
-          "as_of": "2026-08-09T04:11:29Z"
+          "as_of": "2026-08-10T04:06:02Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/175891659544?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xAbsaugAjmgKGPzOcxXv3BxqDeY6qgU8pmBTkGD4iorG0aWg940WxUl3CQB%2BkNF2%2FO4vtY79TwvlmbSBJKTmO5LjB3hJC3UpHIFS8oUrbGg8Pm53ktSGXnYiJYFf%2BZSYeXLC%2FihnNsXQdmGkZl7rLRFNOgSR7T2qN%2BAnPNhERVKn7%2B6%2B3KaddTY9UzKYQJs600%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/384994000028?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-09T04:11:29Z",
+      "resolved_at": "2026-08-10T04:06:02Z",
       "spec_surface": {
         "tree": "2410",
         "doc_id": "231h_specifications_ilc2410",
@@ -846,7 +846,7 @@
       "gtin": "00719821437895",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "336546891439",
+        "ebay_legacy_item_id": "227460936827",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -856,7 +856,7 @@
       },
       "identity": {
         "brand": "Manfrotto",
-        "mpn": "",
+        "mpn": "MKBFRA4GTXP-BUS",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -897,30 +897,30 @@
               {
                 "source": "aspect",
                 "identifier_type": "UPC",
-                "raw": "719821487227",
-                "gtin14": "00719821487227",
+                "raw": "0719821443209",
+                "gtin14": "00719821443209",
                 "valid": true
               }
             ]
           }
         },
-        "market_title": "Manfrotto Befree Advanced Aluminum Tripod MKBFRTA4FB-BH w. 494 Center Ball Head",
-        "image": "https://i.ebayimg.com/images/g/inQAAeSwZK1p6RQB/s-l1600.jpg",
+        "market_title": "Manfrotto Befree GT XPRO 4-Section Aluminum Travel Tripod with MH496 Ball Head",
+        "image": "https://i.ebayimg.com/images/g/mQEAAeSwv99qcSuw/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/WHoAAOxyAs9SSusX/s-l640.jpg",
         "price_seen": {
-          "value": "149.00",
+          "value": "90.00",
           "currency": "USD",
-          "as_of": "2026-08-09T04:15:59Z"
+          "as_of": "2026-08-10T04:10:35Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/336546891439?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/227460936827?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-09T04:15:59Z"
+      "resolved_at": "2026-08-10T04:10:35Z"
     },
     "sigma-35mm-f1-2-dg-dn-art": {
       "contamination_key": "sigma-35-f12-dg-dn",
@@ -983,7 +983,7 @@
       "gtin": "04549292157345",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "326288997894",
+        "ebay_legacy_item_id": "407128878000",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -993,7 +993,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "6536C002",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -1062,23 +1062,23 @@
             ]
           }
         },
-        "market_title": "Canon EOS R5 Mark II Mirrorless Digital Camera Body 45 MP Full-Frame",
-        "image": "https://i.ebayimg.com/images/g/z7YAAOSwHYFm-yXl/s-l1600.jpg",
+        "market_title": "Canon EOS R5 Mark II 45MP Mirrorless Camera Body Only Black HDMI USB",
+        "image": "https://i.ebayimg.com/images/g/hZsAAeSwPoZqduIY/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/IjwAAOSwzMFi2RND/s-l640.jpg",
         "price_seen": {
-          "value": "3499.95",
+          "value": "2150.00",
           "currency": "USD",
-          "as_of": "2026-08-09T04:17:25Z"
+          "as_of": "2026-08-10T04:12:03Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/326288997894?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xAWmRZ%2FeaVfH7qNgotndNIRPZMzt7OS0elH%2FDR%2ByosPThiJ%2BUrn92bkAyo2fduX2q9zOznNX%2BrYz6i4vTjqLhXOhXIkIAB6XQN87d2J90O4ys8mDZ8y1kYFzXtbNQvVyHVWjdgOfeF5OJD5SwHEDVkWgBDYbZ0uiKbbW%2BEpU1xCFDTnI%2BuBfudv--spt1O2kTc%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/407128878000?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-09T04:17:25Z",
+      "resolved_at": "2026-08-10T04:12:03Z",
       "spec_surface": {
         "manual_code": "C003"
       }
@@ -1090,7 +1090,7 @@
       "gtin": "00027242893832",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "137596600237",
+        "ebay_legacy_item_id": "366442568914",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1100,7 +1100,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7RM2/B",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -1114,23 +1114,23 @@
             }
           ]
         },
-        "market_title": "Sony Alpha a7R II Mirrorless Digital Camera (Body Only) *USED*",
-        "image": "https://i.ebayimg.com/images/g/iecAAeSwK~Zqdd4R/s-l1600.jpg",
+        "market_title": "Sony Alpha A7R ILCE-7R 36.4MP Digital Camera Body only - Black English Language",
+        "image": "https://i.ebayimg.com/images/g/FBMAAeSwOgJqGcGV/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
         "price_seen": {
-          "value": "589.00",
+          "value": "374.99",
           "currency": "USD",
-          "as_of": "2026-08-08T04:17:05Z"
+          "as_of": "2026-08-10T04:12:54Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/137596600237?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/366442568914?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xCOVnJlh0rQ1wHtwADGRq7F%2FnXTRmHr4WjUrS0pMIakOQVaWuManQFTaty%2BXkUceSX6Bwn1NywVph6U5UFWGOCVbVQcO07TIZaKFe8rUtcI0ofDpiG%2FJ8Ei4jB6qfoiHUzJWaz15bHkmpL48POouAEKhrEzscL1wMoUg8Fr8bhy2zfkBrCCik%2BxbQ%2BFkglPhDE%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-08T04:17:05Z",
+      "resolved_at": "2026-08-10T04:12:54Z",
       "overrides": {
         "model": "A7R II",
         "display_name": "Sony A7R II"
