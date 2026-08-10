@@ -328,3 +328,47 @@
 .subscribe-note { font-size: 13px; margin-top: 8px; min-height: 1em; }
 .subscribe-note.ok { color: var(--color-positive, #2e7d32); }
 .subscribe-note.err { color: var(--color-negative, #c62828); }
+
+/* ── Share block (maddi-distribution: humans post, machines draft) ──────────
+   Deliberately secondary — outline treatment like the used/Amazon rungs — so
+   it never out-shouts the priced affiliate CTA. This is a utility, not a sale. */
+.card-share .share-intro {
+    color: var(--color-text-secondary);
+    margin: 0 0 var(--space-md);
+}
+.share-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+    align-items: center;
+}
+.btn-share {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-xs);
+    padding: var(--space-sm) var(--space-md);
+    font-size: 13px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--color-text-secondary);
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.btn-share:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+.btn-share-link {
+    border-style: dashed;
+    font-weight: 500;
+}
+.share-note {
+    min-height: 1.2em;
+    margin: var(--space-sm) 0 0;
+    font-size: 12px;
+    color: var(--color-success);
+}

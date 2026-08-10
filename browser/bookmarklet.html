@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The AskMaddi Bookmarklet - AskMaddi.com</title>
+    <meta name="description" content="One click from any page — a Reddit thread, a gear review, a retailer listing — to the AskMaddi card that answers it.">
+    <link rel="canonical" href="https://askmaddi.com/bookmarklet.html">
+    <link rel="icon" type="image/png" href="images/logo.png">
+    <link rel="stylesheet" href="css/maddi.css">
+    <style>
+        .mission-page {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: var(--space-xl) var(--space-lg);
+        }
+        .mission-header {
+            text-align: center;
+            margin-bottom: var(--space-2xl);
+        }
+        .mission-header h1 {
+            font-size: 36px;
+            margin-bottom: var(--space-md);
+            color: var(--color-text);
+        }
+        .mission-header .subtitle {
+            font-size: 20px;
+            color: var(--color-text-secondary);
+        }
+        .install-box {
+            background: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-card);
+            padding: var(--space-xl);
+            text-align: center;
+            margin: var(--space-xl) 0 var(--space-2xl);
+        }
+        .bookmarklet-btn {
+            display: inline-block;
+            padding: var(--space-md) var(--space-xl);
+            background: var(--color-primary);
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: var(--radius-md);
+            text-decoration: none;
+            box-shadow: var(--shadow-card);
+            cursor: grab;
+        }
+        .bookmarklet-btn:hover { background: var(--color-primary-dark); }
+        .install-hint {
+            font-size: 14px;
+            color: var(--color-text-muted);
+            margin-top: var(--space-md);
+        }
+        .mission-section { margin-bottom: var(--space-2xl); }
+        .mission-section h2 {
+            font-size: 24px;
+            color: var(--color-primary);
+            margin-bottom: var(--space-md);
+            padding-bottom: var(--space-sm);
+            border-bottom: 2px solid var(--color-border-light);
+        }
+        .mission-section p, .mission-section li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: var(--color-text-secondary);
+        }
+        .mission-section ol { padding-left: var(--space-lg); }
+        .mission-section li { margin-bottom: var(--space-sm); }
+        .back-link {
+            display: inline-block;
+            color: var(--color-primary);
+            text-decoration: none;
+            margin-bottom: var(--space-lg);
+        }
+    </style>
+</head>
+<body>
+    <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+    <div class="mission-page">
+        <a href="/" class="back-link">&larr; Back to Search</a>
+
+        <div class="mission-header">
+            <h1>The AskMaddi Bookmarklet</h1>
+            <p class="subtitle">From any page to the card that answers it — one click.</p>
+        </div>
+
+        <div class="install-box">
+            <!-- The bookmarklet: grab the current selection (or the page title),
+                 open the AskMaddi search for it in a new tab. -->
+            <a class="bookmarklet-btn"
+               href="javascript:(function(){var s=(window.getSelection?String(window.getSelection()):'').replace(/\s+/g,' ').trim();var q=s||document.title||'';if(!q){alert('Select a product name first, then click the bookmarklet.');return;}window.open('https://askmaddi.com/?q='+encodeURIComponent(q),'_blank');})();">Ask&nbsp;Maddi</a>
+            <p class="install-hint">Drag this button up to your bookmarks bar. (Clicking it here does nothing — it only works once it lives in your bookmarks.)</p>
+        </div>
+
+        <div class="mission-section">
+            <h2>What it does</h2>
+            <p>You're reading a thread where someone asks whether the Sony 100-400
+            is worth it, or a review that name-drops five lenses. Highlight the
+            product name, click <strong>Ask&nbsp;Maddi</strong>, and a new tab
+            opens on the AskMaddi card — the whole consensus across every review
+            we've read, in one place. No selection? It uses the page title.</p>
+        </div>
+
+        <div class="mission-section">
+            <h2>How to install</h2>
+            <ol>
+                <li>Make your bookmarks bar visible (<em>Ctrl/&#8984;+Shift+B</em> in most browsers).</li>
+                <li>Drag the orange <strong>Ask&nbsp;Maddi</strong> button above onto it.</li>
+                <li>On any page, select a product name and click your new bookmark.</li>
+            </ol>
+        </div>
+
+        <div class="mission-section">
+            <h2>Why bother</h2>
+            <p>A Maddi card is built to be shared — it carries a ready-to-paste
+            summary with an honest &ldquo;I built this&rdquo; disclosure. The
+            bookmarklet gets you to the card; the card's <em>Share</em> buttons
+            get you the paste. Answer the question where it was asked.</p>
+        </div>
+
+        <a href="/" class="back-link">&larr; Back to Search</a>
+    </div>
+</body>
+</html>

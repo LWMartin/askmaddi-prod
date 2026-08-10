@@ -1056,6 +1056,41 @@ def render_page(card, image_url=None):
     jsonld = schema_org_jsonld(card, canonical, img_url, meta_desc)
     twitter_card = "summary_large_image" if img_url else "summary"
 
+    # Share block (maddi-distribution: humans post, machines only draft). The
+    # card already carries ready-to-paste export.reddit / export.discord (built
+    # upstream in phantom-ops card_export.build_export_artifacts). Render them
+    # into a JSON payload the /js/share.js clipboard handler reads — never an
+    # auto-post, just a copy the person pastes where the question came up. Only
+    # rendered when the card actually carries share text.
+    _export = card.get("export", {}) or {}
+    _share_reddit = _export.get("reddit", "")
+    _share_discord = _export.get("discord", "")
+    _share_permalink = _export.get("permalink") or canonical
+    share_html = ""
+    if _share_reddit or _share_discord:
+        _share_payload = json.dumps(
+            {"reddit": _share_reddit, "discord": _share_discord,
+             "permalink": _share_permalink},
+            ensure_ascii=False,
+        ).replace("<", "\\u003c")  # never let content close the <script> early
+        _share_buttons = ""
+        if _share_reddit:
+            _share_buttons += ('<button class="btn-share" type="button" '
+                               'data-share="reddit">Copy for Reddit</button>')
+        if _share_discord:
+            _share_buttons += ('<button class="btn-share" type="button" '
+                               'data-share="discord">Copy for Discord</button>')
+        _share_buttons += ('<button class="btn-share btn-share-link" type="button" '
+                           'data-share="permalink">Copy link</button>')
+        share_html = f"""
+      <section class="card-section card-share">
+        <h2 class="card-section-head">Share this card</h2>
+        <p class="share-intro">Copy a ready-to-paste summary — the consensus, the source count, the link, and an honest “I built this” disclosure — then post it where the question came up.</p>
+        <div class="share-actions">{_share_buttons}</div>
+        <p class="share-note" data-share-note aria-live="polite"></p>
+        <script type="application/json" data-share-payload>{_share_payload}</script>
+      </section>"""
+
     # Phase 0 measurement seam (maddi-distribution v2.0): the BUILD writes the
     # category and per-CTA retailer as data-attributes; the beacon only ever
     # reads them. Category is the card's own lowercase category — never user
@@ -1160,6 +1195,7 @@ def render_page(card, image_url=None):
         <p class="src-intro">Every claim above traces to these original reviews. We don't write opinions \u2014 we synthesize theirs.</p>
         {sources_html}
       </section>
+      {share_html}
 
     </article>
 
@@ -1180,10 +1216,13 @@ def render_page(card, image_url=None):
       <a href="/mission.html">Our method</a>
       <span>·</span>
       <a href="/why.html">Why AskMaddi</a>
+      <span>·</span>
+      <a href="/bookmarklet.html">Bookmarklet</a>
     </footer>
 
   </div>
   <script src="/js/beacon.js" defer></script>
+  <script src="/js/share.js" defer></script>
 </body>
 </html>
 """
