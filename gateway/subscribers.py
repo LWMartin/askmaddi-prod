@@ -25,6 +25,8 @@ Dedupe: exact-match scan on append. O(n) per insert is correct at every list
 size this store will see before a real mailing system replaces it; an index
 would be premature and a second file to corrupt.
 """
+import hashlib
+import hmac
 import json
 import os
 import re
@@ -32,6 +34,12 @@ import time
 from pathlib import Path
 
 SUBSCRIBERS_PATH = Path(__file__).parent.parent / 'data' / 'subscribers.jsonl'
+# Suppression list (unsubscribes). Same PII doctrine as subscribers.jsonl:
+# NEVER committed/banked/pushed, written 0600, box-local. Kept SEPARATE from
+# subscribers.jsonl (append-only capture stays intact) — the active list is
+# subscribers MINUS suppressions, computed at send time. Honoring an
+# unsubscribe is a legal obligation (CAN-SPAM), so this file is load-bearing.
+SUPPRESSIONS_PATH = Path(__file__).parent.parent / 'data' / 'suppressions.jsonl'
 
 _EMAIL_RE = re.compile(r'^[^@\s]{1,64}@[^@\s]+\.[^@\s]{2,}$')
 MAX_EMAIL_LEN = 254  # RFC 5321 path limit
@@ -101,3 +109,83 @@ def add(email, source='site', path=None, now=None):
 def count(path=None):
     target = Path(path) if path else SUBSCRIBERS_PATH
     return len(_existing(target))
+
+
+# ---------------------------------------------------------------------------
+# Unsubscribe + suppression (CAN-SPAM: every send MUST offer opt-out and honor
+# it). The token is a keyed HMAC over the normalized address, so an unsubscribe
+# link is unguessable without the server secret but needs no per-user state and
+# no expiry (unsubscribing is idempotent and low-risk). The secret lives in
+# gateway/.env (MAILER_UNSUB_SECRET), never git — same store as every other
+# gateway secret.
+# ---------------------------------------------------------------------------
+
+def _unsub_secret(secret=None):
+    """Resolve the HMAC secret: explicit arg (tests) > env > None."""
+    return secret if secret is not None else os.environ.get('MAILER_UNSUB_SECRET')
+
+
+def unsubscribe_token(email, secret=None):
+    """Stable, unguessable opt-out token for an address. Returns None if the
+    address is invalid or no secret is configured (so callers fail closed
+    rather than mint a forgeable/empty token)."""
+    e = normalize(email)
+    key = _unsub_secret(secret)
+    if e is None or not key:
+        return None
+    return hmac.new(key.encode('utf-8'), e.encode('utf-8'),
+                    hashlib.sha256).hexdigest()[:32]
+
+
+def verify_unsubscribe_token(email, token, secret=None):
+    """Constant-time check that `token` matches `email`. False on any missing
+    piece — never let a blank token validate."""
+    expected = unsubscribe_token(email, secret=secret)
+    if not expected or not token:
+        return False
+    return hmac.compare_digest(expected, str(token))
+
+
+def suppress(email, path=None, now=None):
+    """Record an opt-out. Idempotent: returns 'suppressed' on first record,
+    'exists' if already suppressed, 'invalid' if the address is malformed.
+    Written 0600 like the vault — it is a list of real addresses."""
+    target = Path(path) if path else SUPPRESSIONS_PATH
+    e = normalize(email)
+    if e is None:
+        return 'invalid'
+    if e in _existing(target):
+        return 'exists'
+    record = {
+        'ts': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime(now)),
+        'email': e,
+    }
+    target.parent.mkdir(parents=True, exist_ok=True)
+    fd = os.open(target, os.O_WRONLY | os.O_CREAT | os.O_APPEND, 0o600)
+    try:
+        with os.fdopen(fd, 'a', encoding='utf-8') as fh:
+            fh.write(json.dumps(record, ensure_ascii=False) + '\n')
+    except Exception:
+        try:
+            os.close(fd)
+        except OSError:
+            pass
+        raise
+    return 'suppressed'
+
+
+def is_suppressed(email, path=None):
+    e = normalize(email)
+    if e is None:
+        return False
+    target = Path(path) if path else SUPPRESSIONS_PATH
+    return e in _existing(target)
+
+
+def active(subs_path=None, supp_path=None):
+    """The mailable list: captured subscribers MINUS suppressions, as a sorted
+    list of normalized addresses. This is the ONLY function a sender should use
+    to choose recipients — never read subscribers.jsonl directly for a send."""
+    subs = _existing(Path(subs_path) if subs_path else SUBSCRIBERS_PATH)
+    supp = _existing(Path(supp_path) if supp_path else SUPPRESSIONS_PATH)
+    return sorted(subs - supp)

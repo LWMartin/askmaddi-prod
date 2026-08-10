@@ -51,3 +51,43 @@ def test_count_skips_torn_lines(tmp_path):
         fh.write('garbage\n')
     subscribers.add('c@d.co', path=p)
     assert subscribers.count(p) == 2
+
+
+# --- unsubscribe tokens + suppression ---------------------------------------
+
+def test_unsub_token_roundtrip():
+    t = subscribers.unsubscribe_token('Lee@Example.com', secret='k')
+    assert t and len(t) == 32
+    assert subscribers.verify_unsubscribe_token('lee@example.com', t, secret='k')
+    # normalized input yields the same token (case/space-insensitive)
+    assert subscribers.unsubscribe_token(' LEE@example.com ', secret='k') == t
+
+
+def test_unsub_token_rejects_forgery_and_blanks():
+    t = subscribers.unsubscribe_token('a@b.co', secret='k')
+    assert not subscribers.verify_unsubscribe_token('a@b.co', t, secret='other')
+    assert not subscribers.verify_unsubscribe_token('a@b.co', '', secret='k')
+    assert not subscribers.verify_unsubscribe_token('a@b.co', t + 'x', secret='k')
+    # no secret configured -> no token, and nothing validates (fail closed)
+    assert subscribers.unsubscribe_token('a@b.co', secret='') is None
+    assert not subscribers.verify_unsubscribe_token('a@b.co', 'x', secret='')
+
+
+def test_suppress_idempotent_and_0600(tmp_path):
+    import os
+    import stat
+    p = tmp_path / 'supp.jsonl'
+    assert subscribers.suppress('A@B.co', path=p) == 'suppressed'
+    assert subscribers.suppress('a@b.co', path=p) == 'exists'   # normalized dupe
+    assert subscribers.suppress('nope', path=p) == 'invalid'
+    assert subscribers.is_suppressed('a@b.co', path=p)
+    assert stat.S_IMODE(os.stat(p).st_mode) == 0o600
+
+
+def test_active_is_subscribers_minus_suppressed(tmp_path):
+    subs = tmp_path / 's.jsonl'
+    supp = tmp_path / 'x.jsonl'
+    for e in ('a@b.co', 'c@d.co', 'e@f.co'):
+        subscribers.add(e, path=subs)
+    subscribers.suppress('c@d.co', path=supp)
+    assert subscribers.active(subs_path=subs, supp_path=supp) == ['a@b.co', 'e@f.co']

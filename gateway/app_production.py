@@ -537,6 +537,46 @@ def subscribe():
     return jsonify({'ok': True})
 
 
+def _unsub_page(message, ok=True):
+    """Tiny self-contained confirmation page — matches the digest's calm voice,
+    no JS, no external assets."""
+    color = '#14532d' if ok else '#8a1c1c'
+    return Response(
+        '<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">'
+        '<meta name="viewport" content="width=device-width, initial-scale=1">'
+        '<title>AskMaddi — Unsubscribe</title></head>'
+        '<body style="margin:0 auto;max-width:520px;padding:48px 20px;'
+        'font:16px/1.55 -apple-system,\'Segoe UI\',Georgia,serif;color:#1e2430;'
+        'background:#faf9f6">'
+        f'<h1 style="font-size:20px;color:{color}">{message}</h1>'
+        '<p style="color:#6b7280"><a href="https://askmaddi.com/" '
+        'style="color:#14532d">Return to AskMaddi</a></p></body></html>',
+        mimetype='text/html')
+
+
+@app.route('/unsubscribe', methods=['GET', 'POST'])
+def unsubscribe():
+    """One-click + link opt-out (maddi-digest §Email; CAN-SPAM).
+
+    The digest email carries the address + a keyed token in both a clickable
+    link (GET) and a List-Unsubscribe header (POST, RFC 8058 one-click). Both
+    verify the HMAC token before suppressing, so nobody can unsubscribe anyone
+    else by guessing an address. POST (mail-client one-click) returns 200 with
+    no body; GET (human clicked) returns a small confirmation page.
+    """
+    email = request.args.get('e') or request.form.get('e')
+    token = request.args.get('t') or request.form.get('t')
+    norm = subscribers.normalize(email)
+    if not norm or not subscribers.verify_unsubscribe_token(norm, token):
+        if request.method == 'POST':
+            return ('', 400)
+        return _unsub_page('This unsubscribe link is invalid.', ok=False), 400
+    subscribers.suppress(norm)
+    if request.method == 'POST':
+        return ('', 200)
+    return _unsub_page("You're unsubscribed. You won't get the weekly digest.")
+
+
 @app.teardown_appcontext
 def cleanup(exception=None):
     """Cleanup on shutdown."""

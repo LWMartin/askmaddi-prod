@@ -31,6 +31,15 @@ data/work_queue.json
 data/analytics_log.jsonl
 data/subscribers.jsonl
 
+# Digest send leg (maddi-digest v1.0, mailer.py). All box-local, all PII or
+# recipient-linked runtime — NEVER git, same doctrine as subscribers.jsonl:
+#   suppressions.jsonl  — unsubscribed addresses (PII; honored before sends)
+#   digest_sent.jsonl   — per-(week,email) delivery ledger (PII; dedup)
+#   digest_outbox.jsonl — queued issues (internal; runtime-written)
+data/suppressions.jsonl
+data/digest_sent.jsonl
+data/digest_outbox.jsonl
+
 # Factory single-flight flock (2026-07-19, card_factory.single_flight). Runtime-
 # written beside the work_queue store; untracked-but-unignored would trip the
 # nightly clean-tree preflight (the 06-25/06-30 failure class).
