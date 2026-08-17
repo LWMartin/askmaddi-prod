@@ -1876,7 +1876,7 @@ _GUIDE_CSS = """
 .g-why{color:#444;margin:.35rem 0 .5rem;line-height:1.5}
 .g-rationale{list-style:none;padding:0;margin:.5rem 0;display:grid;gap:.3rem}
 .g-rationale li{display:flex;align-items:center;gap:.6rem;font-size:.9rem;flex-wrap:wrap}
-.g-axis{min-width:11rem;font-weight:600}
+.g-axis{min-width:11rem;font-weight:600;color:#c4623f}
 .g-net{font-variant-numeric:tabular-nums;font-weight:700;min-width:3rem}
 .net-pos{color:#0a7d3f}.net-neg{color:#b3261e}.net-flat{color:#6b7280}
 .g-counts{color:#6b7280}.g-flag{color:#92400e;font-style:italic}
@@ -1895,8 +1895,6 @@ _GUIDE_CSS = """
 .g-caveat-intro{color:#555;font-size:.9rem;margin:.2rem 0 .4rem}
 .g-caveat-list{margin:.2rem 0;padding-left:1.2rem;color:#3f3f46;font-size:.92rem}
 .g-caveat-list li{margin:.2rem 0}
-@media(prefers-color-scheme:dark){.g-card{background:#18181b;border-color:#333}
-.g-name,.g-why,.g-quote{color:#e4e4e7}.g-criteria-intro,.g-counts,.g-cite,.g-table-note{color:#a1a1aa}}
 """
 
 
