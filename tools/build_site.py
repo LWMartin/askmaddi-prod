@@ -1661,12 +1661,16 @@ def retailer_from_url(url):
     return "other"
 
 
-def write_llms_txt(out_dir, cards):
+def write_llms_txt(out_dir, cards, guides=None):
     """browser/llms.txt — the two-minute lottery ticket (maddi-distribution
     v2.0 §10 correction 1: crawlers overwhelmingly skip this file; shipped
     because it costs one function and might matter to future agents, carried
     with ZERO priority weight and no maintenance promise beyond this
-    regeneration). Derived artifact like the sitemap: regenerates from cards."""
+    regeneration). Derived artifact like the sitemap: regenerates from cards
+    and use-case guides. The guides section is the direct answer to the
+    citability gap (maddi-use-case-guides §1): it hands an LLM a clean map of
+    which use-cases we cover and the ranked, sourced products per use-case —
+    the exact comparative shape demand concentrates on."""
     lines = [
         "# AskMaddi",
         "",
@@ -1687,6 +1691,32 @@ def write_llms_txt(out_dir, cards):
                                            len(c.get("sources", []) or []))
         lines.append(f"- [{name}]({BASE_URL}/cards/{cid}/): review synthesis"
                      f" from {n_src} sources")
+    if guides:
+        lines += [
+            "",
+            "## Buying guides",
+            "",
+            "> Ranked, sourced comparisons for specific use-cases. Each guide",
+            "> ranks eligible cameras on the criteria that use-case demands,",
+            "> with the reviewer evidence behind every position. We present fit,",
+            "> not a verdict.",
+            "",
+        ]
+        for g in sorted(guides, key=lambda g: g.get("id", "")):
+            gid = g.get("id", "")
+            if not gid:
+                continue
+            disp = g.get("display_name") or gid
+            crit = ", ".join(c.get("display", "") for c in g.get("criteria", []))
+            ranked = " · ".join(
+                f"{r.get('rank')}. {r.get('display_name')}"
+                for r in g.get("ranked", []))
+            line = f"- [Cameras for {disp}]({BASE_URL}/gear-for/{gid}/)"
+            if crit:
+                line += f": ranked on {crit}"
+            if ranked:
+                line += f". {ranked}"
+            lines.append(line)
     lines += [
         "",
         "## Method",
@@ -2098,8 +2128,8 @@ def main():
         # semantics (regenerated from the cards loaded THIS run), so it gets
         # the same --card clobber guard for free and no caller can rebuild
         # one without the other drifting.
-        lpath = write_llms_txt(out, cards)
-        print(f"  \u2713 llms.txt \u2192 {lpath} ({len(cards)} cards)")
+        lpath = write_llms_txt(out, cards, guides=guides)
+        print(f"  \u2713 llms.txt \u2192 {lpath} ({len(cards)} cards + {len(guides)} guides)")
 
     print(f"\nDone. {len(written)} card page(s) written.")
     return 0

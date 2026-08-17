@@ -96,3 +96,24 @@ def test_guide_in_sitemap():
         p = bs.write_sitemap(d, [], guides=[_guide()])
         xml = pathlib.Path(p).read_text()
         assert "https://askmaddi.com/gear-for/real-estate-architecture/" in xml
+
+
+def test_guide_in_llms_txt_with_ranked_products():
+    import tempfile, pathlib
+    with tempfile.TemporaryDirectory() as d:
+        p = bs.write_llms_txt(d, [], guides=[_guide()])
+        txt = pathlib.Path(p).read_text()
+        assert "## Buying guides" in txt
+        # the map an LLM reads: use-case URL, criteria, and the ranked products
+        assert "https://askmaddi.com/gear-for/real-estate-architecture/" in txt
+        assert "ranked on Sensor Performance" in txt
+        assert "1. Sony A7 IV" in txt
+        # witness-stance holds in the ingestion surface too
+        assert "best" not in txt.lower()
+
+
+def test_llms_txt_omits_guides_section_when_none():
+    import tempfile, pathlib
+    with tempfile.TemporaryDirectory() as d:
+        p = bs.write_llms_txt(d, [], guides=None)
+        assert "## Buying guides" not in pathlib.Path(p).read_text()
