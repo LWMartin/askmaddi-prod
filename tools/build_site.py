@@ -235,15 +235,8 @@ def _reviewer_from_source_id(source_id):
     if not source_id:
         return "source"
     parts = source_id.split("-")
-    # drop leading platform/ingest token (youtube/blog/reddit/rss/feed/etc.).
-    # 'rss' + 'feed' + 'podcast' were missing, so RSS-ingested source_ids like
-    # 'rss-dpreview-gps-media-the-photos-that-made-...' kept the whole publisher
-    # + article-title tail and title-cased into a garble line. This is only the
-    # last-ditch fallback now (axis_block resolves the curated sources[] name
-    # first); hardened so the fallback degrades to something tidy, not word soup.
-    if parts and parts[0] in {"youtube", "blog", "reddit", "lab", "forum",
-                              "editorial", "pro", "manufacturer", "yt",
-                              "rss", "feed", "podcast"}:
+    # drop leading platform token (youtube/blog/reddit/lab/etc.)
+    if parts and parts[0] in {"youtube", "blog", "reddit", "lab", "forum", "editorial", "pro", "manufacturer", "yt"}:
         parts = parts[1:]
     # keep tokens until we hit something that looks like product/spec noise
     name_tokens = []
@@ -253,25 +246,7 @@ def _reviewer_from_source_id(source_id):
         name_tokens.append(tok)
     if not name_tokens:
         name_tokens = parts[:3]
-    # Cap at a name-length worth of tokens: a person/outlet name is ~1-4 words.
-    # Without this an ID with no product-noise break token (e.g. an RSS article
-    # slug) spills the whole headline into the byline.
-    name_tokens = name_tokens[:4]
     return " ".join(t.capitalize() for t in name_tokens) or "source"
-
-
-def _source_reviewer_map(sources):
-    """{source_id: reviewer} for the card's sources that carry a curated
-    reviewer name. The featured-quote render prefers this over deriving a name
-    from the source_id slug — the curated name ('DPReview (GPS Media)') is what
-    the ingest already resolved, and the slug derivation is lossy by nature."""
-    out = {}
-    for s in sources or []:
-        sid = s.get("source_id")
-        rev = (s.get("reviewer") or "").strip()
-        if sid and rev:
-            out[sid] = rev
-    return out
 
 
 def pct(pos, total):
@@ -715,7 +690,7 @@ def confidence_badge(level):
     return f'<span class="conf-badge {cls}">{esc(level)} confidence</span>'
 
 
-def axis_block(axis, source_map=None):
+def axis_block(axis):
     """One axis: label + confidence + sentiment bar + counts + top quote."""
     name = axis.get("display_name") or axis.get("axis_id", "")
     sent = axis.get("sentiment", {}) or {}
@@ -739,15 +714,7 @@ def axis_block(axis, source_map=None):
     fq = axis.get("face_quote") or {}
     q = str(fq.get("quote_excerpt") or "").strip()
     if q:
-        sid = fq.get("source_id", "")
-        # Prefer the inline reviewer, then the card's curated sources[] name,
-        # then the lossy slug derivation as a last resort. Before this, a
-        # face_quote without an inline reviewer skipped straight to the slug
-        # and rendered publisher+headline soup ('Rss Dpreview Gps Media The
-        # Photos That Made ...') on 10/12 live cards.
-        reviewer = (fq.get("reviewer")
-                    or (source_map or {}).get(sid)
-                    or _reviewer_from_source_id(sid))
+        reviewer = fq.get("reviewer") or _reviewer_from_source_id(fq.get("source_id", ""))
         url = fq.get("url", "")
         cite = f'<span class="quote-cite">\u2014 {esc(reviewer)}</span>'
         if url:
@@ -969,138 +936,13 @@ def _card_visible(axis):
             and (axis.get("axis_id") or "") not in CARD_HIDDEN_META_AXES)
 
 
-# ─── C6: review-authority JSON-LD (use-case-guides Phase-0) ───────────────────
-# Doctrine (Lee's ruling 2026-08-17, resolving the old "Offers only" guardrail):
-# we make the review coverage MACHINE-VISIBLE without ever emitting a rating
-# number. A number is a verdict; the witness-stance forbids AskMaddi crowning a
-# product. So we emit two honest, rating-free signals:
-#   1. attributed schema.org Review items  — "these named sources reviewed this"
-#   2. positiveNotes / negativeNotes lists — pros/cons stated as sourced COUNTS
-#      ("62 positive vs 39 critical mentions (12 sources)"), never a score.
-# Counts are facts (same discipline as the on-page "N claims across N sources");
-# a star value would be an invented judgment. No ratingValue / AggregateRating
-# is emitted anywhere by design.
-
-# A pro/con is only asserted with enough evidence to be a fact, not noise.
-_PROSCON_MIN_TOTAL = 4      # min claim mentions on the axis to speak at all
-_PROSCON_MAX_ITEMS = 6      # cap each list so the JSON-LD stays tidy
-
-
-def _axis_source_count(axis):
-    """Distinct sources that touched an axis (coverage, not claim volume)."""
-    srcs = (axis.get("sentiment", {}) or {}).get("sources", []) or []
-    return len({s.get("source_id") for s in srcs if s.get("source_id")})
-
-
-# High-precision sponsor-read markers. The upstream face_quote gate occasionally
-# lets a YouTube sponsor read ("Storyblocks has you covered…") pass as a product
-# claim; on-page it is a soft blurb, but as a schema.org Review it asserts "this
-# creator reviewed this product on this aspect" to answer engines — a stronger,
-# embarrassing claim. This is a Phase-0 BACKSTOP for the structured-data path
-# only; the real fix is the face_quote gate in phantom-ops card build (flagged
-# 2026-08-17). Kept deliberately narrow (named sponsors + explicit sponsorship
-# phrasing) so it never drops a genuine review quote.
-_SPONSOR_READ_MARKERS = (
-    "storyblocks", "squarespace", "skillshare", "nordvpn", "expressvpn",
-    "surfshark", "use code", "promo code", "discount code",
-    "link in the description", "this video is sponsored", "today's sponsor",
-    "sponsor of this", "thanks to our sponsor",
-)
-
-
-def _is_sponsor_read(text):
-    t = (text or "").lower()
-    return any(m in t for m in _SPONSOR_READ_MARKERS)
-
-
-def schema_reviews(card, source_map):
-    """Attributed schema.org Review items from the gated per-axis face_quotes.
-
-    author = the real source (never AskMaddi — we witness, we don't review),
-    reviewBody = the display-gated excerpt, reviewAspect = the axis. NO
-    reviewRating: the source said it, we quote it; we do not score it.
-    Sponsor reads are dropped from this structured surface (see markers)."""
-    out = []
-    for axis in (card.get("lead_axes", []) or []) + (card.get("detail_axes", []) or []):
-        if not _card_visible(axis):
-            continue
-        fq = axis.get("face_quote") or {}
-        quote = str(fq.get("quote_excerpt") or "").strip()
-        if not quote or _is_sponsor_read(quote):
-            continue
-        sid = fq.get("source_id", "")
-        reviewer = (fq.get("reviewer")
-                    or source_map.get(sid)
-                    or _reviewer_from_source_id(sid))
-        review = {
-            "@type": "Review",
-            "author": {"@type": "Organization", "name": reviewer},
-            "reviewBody": quote,
-            "reviewAspect": axis.get("display_name") or axis.get("axis_id") or "",
-        }
-        if fq.get("url"):
-            review["url"] = fq["url"]
-        out.append(review)
-    return out
-
-
-def _proscon_note(axis):
-    """One pros/cons line for an axis, stated as sourced counts, or None.
-
-    Returns (net, text): net>0 -> a strength, net<0 -> a weakness. The text is
-    the literal sentiment split + source coverage — a fact, not a rating."""
-    sent = axis.get("sentiment", {}) or {}
-    pos, neg = sent.get("pos", 0) or 0, sent.get("neg", 0) or 0
-    total = sent.get("total", 0) or 0
-    net = pos - neg
-    if total < _PROSCON_MIN_TOTAL or net == 0:
-        return None
-    name = axis.get("display_name") or axis.get("axis_id") or "aspect"
-    n_src = _axis_source_count(axis)
-    src_clause = f" ({n_src} source{'s' if n_src != 1 else ''})" if n_src else ""
-    text = f"{name} — {pos} positive vs {neg} critical mentions{src_clause}"
-    return net, text
-
-
-def _notes_itemlist(pairs):
-    """schema.org ItemList of pros/cons note strings (highest-signal first)."""
-    return {
-        "@type": "ItemList",
-        "itemListElement": [
-            {"@type": "ListItem", "position": i + 1, "name": text}
-            for i, (_, text) in enumerate(pairs)
-        ],
-    }
-
-
-def schema_pros_cons(card):
-    """(positiveNotes, negativeNotes) ItemLists from the sentiment split, or
-    (None, None) when there is nothing evidenced to say. Pros = net-positive
-    axes, cons = net-negative, each capped and ordered by evidence strength."""
-    pros, cons = [], []
-    for axis in (card.get("lead_axes", []) or []) + (card.get("detail_axes", []) or []):
-        if not _card_visible(axis):
-            continue
-        note = _proscon_note(axis)
-        if not note:
-            continue
-        (pros if note[0] > 0 else cons).append(note)
-    pros.sort(key=lambda p: p[0], reverse=True)          # strongest strengths
-    cons.sort(key=lambda p: p[0])                         # strongest weaknesses
-    pros, cons = pros[:_PROSCON_MAX_ITEMS], cons[:_PROSCON_MAX_ITEMS]
-    return (_notes_itemlist(pros) if pros else None,
-            _notes_itemlist(cons) if cons else None)
-
-
 # ─── Page assembly ──────────────────────────────────────────────────────────
 # ─── schema.org Product/Offer JSON-LD ────────────────────────────────────────
 # Honesty discipline carries through markup: we only assert prices we display.
 # Used bands (eBay active asks, precision-gated upstream) -> AggregateOffer
 # with UsedCondition. No bands -> Product without offers (Sigma-style gating).
-# Ratings: still NO ratingValue/AggregateRating — a star value is a verdict and
-# our pos/neg split is not a star scale. But per C6 (Lee 2026-08-17) we DO make
-# the review coverage machine-visible without a number: attributed Review items
-# + pros/cons as sourced counts (see schema_reviews / schema_pros_cons).
+# No ratings markup: our pos/neg ratios are not a star scale; inventing a
+# mapping to win rich results would be result-picking. Offers only.
 def schema_org_jsonld(card, canonical_url, img_url, description):
     ident = card["identity"]
     obj = {
@@ -1128,16 +970,6 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
         obj["datePublished"] = published
     if modified:
         obj["dateModified"] = modified
-
-    # C6 review-authority signal (rating-free — see the doctrine note above).
-    reviews = schema_reviews(card, _source_reviewer_map(card.get("sources", []) or []))
-    if reviews:
-        obj["review"] = reviews
-    pos_notes, neg_notes = schema_pros_cons(card)
-    if pos_notes:
-        obj["positiveNotes"] = pos_notes
-    if neg_notes:
-        obj["negativeNotes"] = neg_notes
 
     used = (card.get("pricing", {}) or {}).get("used_market", {}) or {}
     bands = used.get("bands", {}) or {}
@@ -1223,9 +1055,8 @@ def render_page(card, image_url=None):
     lead = [a for a in (card.get("lead_axes", []) or []) if _card_visible(a)]
     detail = [a for a in (card.get("detail_axes", []) or []) if _card_visible(a)]
 
-    source_map = _source_reviewer_map(card.get("sources", []) or [])
-    lead_html = "\n".join(axis_block(a, source_map) for a in lead)
-    detail_html = "\n".join(axis_block(a, source_map) for a in detail)
+    lead_html = "\n".join(axis_block(a) for a in lead)
+    detail_html = "\n".join(axis_block(a) for a in detail)
 
     # Issue clusters — omit entirely if empty (don't render an empty box).
     clusters = (card.get("synthesis", {}) or {}).get("issue_clusters", []) or []
@@ -1777,10 +1608,10 @@ def card_lastmod(card):
 SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html"]
 
 
-def write_sitemap(out_dir, cards):
-    """browser/sitemap.xml — static pages + every card page, lastmod from card
-    data. Derived artifact: regenerates from cards, so Stage 6 additions are
-    indexed for free."""
+def write_sitemap(out_dir, cards, guides=None):
+    """browser/sitemap.xml — static pages + every card page + every use-case
+    guide, lastmod from card data. Derived artifact: regenerates from cards +
+    guides, so Stage 6 additions and new guides are indexed for free."""
     card_mods = {c["card_id"]: card_lastmod(c) for c in cards}
     home_mod = max([m for m in card_mods.values() if m], default="")
 
@@ -1791,6 +1622,8 @@ def write_sitemap(out_dir, cards):
     entries = [url_el(BASE_URL + "/", home_mod)]
     entries += [url_el(BASE_URL + p) for p in SITEMAP_STATIC_PAGES[1:]]
     entries += [url_el(f"{BASE_URL}/cards/{cid}/", mod) for cid, mod in sorted(card_mods.items())]
+    entries += [url_el(f"{BASE_URL}/gear-for/{g['id']}/")
+                for g in sorted(guides or [], key=lambda g: g.get("id", "")) if g.get("id")]
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -1867,6 +1700,315 @@ def write_llms_txt(out_dir, cards):
     return path
 
 
+# ─── Use-case guides (spec: maddi-use-case-guides — C5 render half) ──────────
+#
+# A guide RANKS, it does not CROWN (maddi-witness-stance). Three rules hold the
+# render honest and are load-bearing, not cosmetic:
+#   1. No "best" in prose or title — present FIT ("suited to", "how they
+#      compare on the criteria"), never a verdict. The URL is /gear-for/, not
+#      /best/ (askmaddi-present-dont-rate-voice).
+#   2. No ratingValue / AggregateRating anywhere. A number is a verdict; the
+#      ItemList JSON-LD lists ranked Products by position only (same reversal as
+#      C6 on the card).
+#   3. Every rank position shows its work — the axis evidence (pos/neg of total,
+#      confidence) and a sourced quote behind it. No axis, no rank (enforced
+#      upstream in the engine; the render just surfaces it).
+# The ranked/excluded/pending buckets come pre-computed in the guide artifact;
+# this function renders, it does not decide.
+
+def _guide_net_pct(s):
+    """Net sentiment as a signed percentage — (pos-neg)/total already in [-1,1]."""
+    return int(round((s or 0) * 100))
+
+
+def _guide_rationale_html(rationale):
+    rows = []
+    for r in rationale:
+        net = _guide_net_pct(r.get("s"))
+        cls = "net-pos" if net > 0 else ("net-neg" if net < 0 else "net-flat")
+        flags = []
+        if r.get("thin"):
+            flags.append("thin evidence")
+        if r.get("contested"):
+            flags.append("contested")
+        flag_html = f' <span class="g-flag">({esc(", ".join(flags))})</span>' if flags else ""
+        rows.append(
+            f'<li><span class="g-axis">{esc(r.get("axis_display") or r.get("axis"))}</span>'
+            f'<span class="g-net {cls}">{net:+d}%</span>'
+            f'<span class="g-counts">{r.get("pos",0)}▲ / {r.get("neg",0)}▼ of {r.get("total",0)} '
+            f'· {esc(r.get("confidence") or "?")}</span>{flag_html}</li>'
+        )
+    return '<ul class="g-rationale">' + "".join(rows) + "</ul>"
+
+
+def _guide_lead_quote_html(rationale):
+    for r in rationale:
+        for src in (r.get("top_sources") or []):
+            q = (src.get("quote") or "").strip()
+            if q:
+                who = src.get("source_id") or ""
+                who = _reviewer_from_source_id(who) if who else ""
+                attr = f' <cite class="g-cite">— {esc(who)}</cite>' if who else ""
+                return f'<blockquote class="g-quote">"{esc(q)}"{attr}</blockquote>'
+    return ""
+
+
+def _guide_comparison_table(guide):
+    crit = guide.get("criteria", [])
+    ranked = guide.get("ranked", [])
+    if not crit or not ranked:
+        return ""
+    head = "".join(f"<th>{esc(c['display'])}</th>" for c in crit)
+    body = []
+    for row in ranked:
+        by_axis = {r["axis"]: r for r in row.get("rationale", [])}
+        cells = []
+        for c in crit:
+            r = by_axis.get(c["axis"])
+            if not r:
+                cells.append('<td class="g-na">—</td>')
+                continue
+            net = _guide_net_pct(r.get("s"))
+            cls = "net-pos" if net > 0 else ("net-neg" if net < 0 else "net-flat")
+            cells.append(f'<td class="{cls}">{net:+d}%</td>')
+        name = esc(row.get("display_name"))
+        body.append(f'<tr><th scope="row">{row.get("rank")}. {name}</th>{"".join(cells)}</tr>')
+    return (
+        '<div class="g-table-wrap"><table class="g-compare">'
+        f'<thead><tr><th scope="col">Camera</th>{head}</tr></thead>'
+        f'<tbody>{"".join(body)}</tbody></table>'
+        '<p class="g-table-note">Net reviewer sentiment per criterion '
+        '(share positive minus share negative). A blank means no reviewer '
+        'evidence on that axis for that camera — a gap, not a zero.</p></div>'
+    )
+
+
+def _guide_caveats_html(guide):
+    parts = []
+    excluded = guide.get("excluded", [])
+    pending = guide.get("pending_backfill", [])
+    if excluded:
+        items = "".join(
+            f'<li><strong>{esc(e["display_name"])}</strong> — '
+            f'{esc("; ".join(e.get("reasons", [])))}</li>' for e in excluded)
+        parts.append(
+            '<h3 class="g-caveat-head">Not ranked — outside the criteria</h3>'
+            f'<ul class="g-caveat-list">{items}</ul>')
+    if pending:
+        items = "".join(
+            f'<li><strong>{esc(p["display_name"])}</strong> — '
+            f'{esc("; ".join(p.get("unknowns", [])))}</li>' for p in pending)
+        parts.append(
+            '<h3 class="g-caveat-head">Pending — a spec we\'re still sourcing</h3>'
+            '<p class="g-caveat-intro">These earned a review card but are held out '
+            'until we confirm a spec the criteria gate on. That is a data gap on '
+            'our side, not a mark against the camera.</p>'
+            f'<ul class="g-caveat-list">{items}</ul>')
+    if not parts:
+        return ""
+    return '<section class="card-section g-caveats">' + "".join(parts) + "</section>"
+
+
+def guide_jsonld(guide, canonical):
+    """ItemList of the ranked products — positions only, NO ratings (witness-
+    stance: a rating is a verdict). This is the C6 guide variant."""
+    elements = []
+    for row in guide.get("ranked", []):
+        cid = row.get("card_id")
+        elements.append({
+            "@type": "ListItem",
+            "position": row.get("rank"),
+            "url": f"{BASE_URL}/cards/{cid}/",
+            "name": row.get("display_name"),
+        })
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": f"Cameras for {guide.get('display_name')}",
+        "url": canonical,
+        "numberOfItems": len(elements),
+        "itemListOrder": "https://schema.org/ItemListOrderDescending",
+        "itemListElement": elements,
+    }
+    return json.dumps(obj, indent=2)
+
+
+_GUIDE_CSS = """
+.g-hero{padding:1.5rem 0 .5rem}
+.g-hero h1{margin:0 0 .4rem}
+.g-criteria-intro{color:var(--muted,#555);max-width:60ch;line-height:1.5}
+.g-rank{list-style:none;padding:0;margin:1.25rem 0;display:flex;flex-direction:column;gap:1rem}
+.g-card{border:1px solid #e4e4e7;border-radius:12px;padding:1rem 1.15rem;background:#fff}
+.g-card-head{display:flex;align-items:baseline;gap:.6rem;flex-wrap:wrap}
+.g-pos{font-weight:700;font-size:1.15rem;color:#0a7d3f;min-width:1.4rem}
+.g-name{font-size:1.15rem;font-weight:650;text-decoration:none;color:inherit}
+.g-name:hover{text-decoration:underline}
+.g-why{color:#444;margin:.35rem 0 .5rem;line-height:1.5}
+.g-rationale{list-style:none;padding:0;margin:.5rem 0;display:grid;gap:.3rem}
+.g-rationale li{display:flex;align-items:center;gap:.6rem;font-size:.9rem;flex-wrap:wrap}
+.g-axis{min-width:11rem;font-weight:600}
+.g-net{font-variant-numeric:tabular-nums;font-weight:700;min-width:3rem}
+.net-pos{color:#0a7d3f}.net-neg{color:#b3261e}.net-flat{color:#6b7280}
+.g-counts{color:#6b7280}.g-flag{color:#92400e;font-style:italic}
+.g-quote{border-left:3px solid #d4d4d8;margin:.5rem 0 .25rem;padding:.15rem 0 .15rem .8rem;color:#3f3f46;font-size:.92rem}
+.g-cite{color:#71717a;font-style:normal;font-size:.85rem}
+.g-ctas{display:flex;gap:.6rem;flex-wrap:wrap;margin-top:.6rem}
+.g-table-wrap{overflow-x:auto;margin:1rem 0}
+.g-compare{border-collapse:collapse;width:100%;font-size:.9rem}
+.g-compare th,.g-compare td{border:1px solid #e4e4e7;padding:.45rem .6rem;text-align:center}
+.g-compare tbody th{text-align:left;font-weight:600;white-space:nowrap}
+.g-compare td{font-variant-numeric:tabular-nums;font-weight:600}
+.g-na{color:#a1a1aa}
+.g-table-note{font-size:.82rem;color:#6b7280;margin:.4rem 0}
+.g-caveats{margin-top:1.5rem}
+.g-caveat-head{font-size:1rem;margin:.8rem 0 .3rem}
+.g-caveat-intro{color:#555;font-size:.9rem;margin:.2rem 0 .4rem}
+.g-caveat-list{margin:.2rem 0;padding-left:1.2rem;color:#3f3f46;font-size:.92rem}
+.g-caveat-list li{margin:.2rem 0}
+@media(prefers-color-scheme:dark){.g-card{background:#18181b;border-color:#333}
+.g-name,.g-why,.g-quote{color:#e4e4e7}.g-criteria-intro,.g-counts,.g-cite,.g-table-note{color:#a1a1aa}}
+"""
+
+
+def render_guide(guide, cards_by_id):
+    disp = guide.get("display_name", "")
+    gid = guide.get("id", "")
+    canonical = f"{BASE_URL}/gear-for/{gid}/"
+    crit_names = [c["display"] for c in guide.get("criteria", [])]
+    if len(crit_names) > 1:
+        crit_phrase = ", ".join(crit_names[:-1]) + f" and {crit_names[-1]}"
+    else:
+        crit_phrase = crit_names[0] if crit_names else ""
+    n = len(guide.get("ranked", []))
+    title = f"Cameras for {disp} — {n} ranked by reviewer evidence | AskMaddi"
+    meta_desc = (
+        f"How {n} cameras compare for {disp.lower()}, ranked on the criteria the "
+        f"work leans on — {crit_phrase.lower()} — with the sourced reviewer "
+        f"evidence behind every position. AskMaddi synthesizes reviews; it does "
+        f"not rate.")
+    intro = (
+        f"On the criteria {disp.lower()} leans on — {esc(crit_phrase)} — here is "
+        f"how the reviewed cameras compare, with the sourced evidence behind each "
+        f"position. We don't crown a winner; we show the fit and let you decide.")
+
+    rank_items = []
+    for row in guide.get("ranked", []):
+        cid = row.get("card_id")
+        card = cards_by_id.get(cid)
+        # "Why it fits" = the two axes contributing most positive support.
+        pos_axes = sorted(
+            [r for r in row.get("rationale", []) if (r.get("s") or 0) > 0],
+            key=lambda r: r.get("contribution", 0), reverse=True)[:2]
+        if pos_axes:
+            names = " and ".join(esc(a.get("axis_display") or a.get("axis")) for a in pos_axes)
+            why = f'Strongest reviewer support on {names}.'
+        else:
+            why = "Mixed reviewer sentiment across the criteria — see the evidence below."
+        ctas = ""
+        if card:
+            nl, nu = new_cta(card)
+            ul, uu = used_cta(card)
+            ctas = (
+                f'<div class="g-ctas">'
+                f'<a class="btn-affiliate btn-buy-new" href="{esc(nu)}" target="_blank" '
+                f'rel="nofollow noopener sponsored" data-out>{esc(nl)} →</a>'
+                f'<a class="btn-affiliate btn-buy-used" href="{esc(uu)}" target="_blank" '
+                f'rel="nofollow noopener sponsored" data-out>{esc(ul)} →</a></div>')
+        name_html = (
+            f'<a class="g-name" href="/cards/{esc(cid)}/">{esc(row.get("display_name"))}</a>'
+            if card else f'<span class="g-name">{esc(row.get("display_name"))}</span>')
+        rank_items.append(
+            f'<li class="g-card"><div class="g-card-head">'
+            f'<span class="g-pos">{row.get("rank")}</span>{name_html}</div>'
+            f'<p class="g-why">{why}</p>'
+            f'{_guide_rationale_html(row.get("rationale", []))}'
+            f'{_guide_lead_quote_html(row.get("rationale", []))}'
+            f'{ctas}</li>')
+    rank_html = '<ol class="g-rank">' + "".join(rank_items) + "</ol>"
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{esc(canonical)}">
+  <meta property="og:title" content="Cameras for {esc(disp)} — AskMaddi">
+  <meta property="og:description" content="{esc(meta_desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(canonical)}">
+  <meta property="og:site_name" content="{SITE_NAME}">
+  <script type="application/ld+json">
+{guide_jsonld(guide, canonical)}
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+  <style>{_GUIDE_CSS}</style>
+</head>
+<body data-page="guide">
+  <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <section class="g-hero">
+        <h1>Cameras for {esc(disp)}</h1>
+        <p class="g-criteria-intro">{intro}</p>
+      </section>
+
+      <section class="card-section">
+        <h2 class="card-section-head">Ranked on the evidence</h2>
+        {rank_html}
+      </section>
+
+      <section class="card-section">
+        <h2 class="card-section-head">Side by side</h2>
+        {_guide_comparison_table(guide)}
+      </section>
+
+      {_guide_caveats_html(guide)}
+
+      <section class="card-section">
+        <p class="src-intro">Every position above traces to the reviewer claims on each camera's card. We don't write opinions — we synthesize theirs, and we present fit rather than a verdict.</p>
+      </section>
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+      <span>·</span>
+      <a href="/why.html">Why AskMaddi</a>
+    </footer>
+  </div>
+  <script src="/js/beacon.js" defer></script>
+</body>
+</html>
+"""
+
+
+def load_guides(guides_dir):
+    """Load use-case guide artifacts (*.guide.json or *.json) from a directory."""
+    out = []
+    d = Path(guides_dir)
+    if not d.is_dir():
+        return out
+    for p in sorted(d.glob("*.json")):
+        try:
+            out.append(json.loads(p.read_text(encoding="utf-8")))
+        except (json.JSONDecodeError, OSError) as e:
+            print(f"  ! skip guide {p.name}: {e}", file=sys.stderr)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser(description="Generate AskMaddi card detail pages.")
     ap.add_argument("--card", help="Path to a single card JSON.")
@@ -1876,6 +2018,8 @@ def main():
     ap.add_argument("--sitemap", action="store_true", help="Also regenerate sitemap.xml.")
     ap.add_argument("--image-url", help="Fallback product image URL when the card carries none "
                                         "(single-card builds only; card fields take precedence).")
+    ap.add_argument("--guides-dir", help="Directory of use-case guide artifacts (*.json) to "
+                                         "render at /gear-for/<id>/ (spec: maddi-use-case-guides).")
     args = ap.parse_args()
 
     if not args.card and not args.cards_dir:
@@ -1918,6 +2062,25 @@ def main():
         written.append(str(page))
         print(f"  \u2713 {cid} \u2192 {page}")
 
+    guides = []
+    if args.guides_dir:
+        guides = load_guides(args.guides_dir)
+        cards_by_id = {c["card_id"]: c for c in cards}
+        for guide in guides:
+            gid = guide.get("id")
+            if not gid:
+                print("  ! guide missing 'id', skipped", file=sys.stderr)
+                continue
+            gdir = out / "gear-for" / gid
+            gdir.mkdir(parents=True, exist_ok=True)
+            gpage = gdir / "index.html"
+            gpage.write_text(render_guide(guide, cards_by_id), encoding="utf-8")
+            written.append(str(gpage))
+            c = guide.get("counts", {})
+            print(f"  ✓ guide {gid} → {gpage} "
+                  f"({c.get('ranked', 0)} ranked, {c.get('excluded', 0)} excluded, "
+                  f"{c.get('pending_backfill', 0)} pending)")
+
     if args.manifest:
         manifest = {
             "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -1928,8 +2091,9 @@ def main():
         print(f"  \u2713 manifest \u2192 {mpath} ({len(cards)} cards)")
 
     if args.sitemap:
-        spath = write_sitemap(out, cards)
-        print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(SITEMAP_STATIC_PAGES)} static)")
+        spath = write_sitemap(out, cards, guides=guides)
+        print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(guides)} guide urls "
+              f"+ {len(SITEMAP_STATIC_PAGES)} static)")
         # llms.txt rides the sitemap flag deliberately: identical whole-file
         # semantics (regenerated from the cards loaded THIS run), so it gets
         # the same --card clobber guard for free and no caller can rebuild

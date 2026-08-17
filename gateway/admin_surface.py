@@ -93,16 +93,6 @@ except ImportError:
     ebay_api = None
     _HAS_EBAY = False
 
-# dedup_suspects is the advisory near-dup detector (soft flag, never a gate).
-# Guarded like the rest: a gateway without it still serves /admin, just without
-# the "possible dup" heads-up.
-try:
-    import dedup_suspects
-    _HAS_DEDUP = True
-except ImportError:
-    dedup_suspects = None
-    _HAS_DEDUP = False
-
 
 # --- Publish render runner ----------------------------------------------
 #
@@ -123,6 +113,14 @@ _INDEXNOW = _REPO_ROOT / 'tools' / 'indexnow_ping.py'
 _BOT_PUSH = _REPO_ROOT / 'tools' / 'bot_push.py'
 _BROWSER_OUT = _REPO_ROOT / 'browser'
 _CARDS_DIR = _REPO_ROOT / 'data' / 'cards'
+# Use-case guide artifacts (spec: maddi-use-case-guides). Rendered to
+# /gear-for/<id>/ on every publish so a card joining the corpus re-renders the
+# guides too and the guide URLs stay in the sitemap. load_guides tolerates a
+# missing/empty dir (no-op), so this is safe even before any guide exists.
+# NOTE: the artifacts themselves are regenerated OFFLINE by the phantom-ops
+# use_cases engine and committed; a publish re-renders from the committed
+# artifact but does not itself recompute the ranking (auto-regen is a follow-up).
+_GUIDES_DIR = _REPO_ROOT / 'data' / 'guides'
 # The frozen Crucible writeback snapshot (mode 444, installed by root — see
 # hotspot Production Box table). Env override for non-standard boxes.
 _WRITEBACK_SNAPSHOT = os.environ.get(
@@ -131,7 +129,7 @@ _WRITEBACK_SNAPSHOT = os.environ.get(
 
 
 def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
-                      cards_dir=_CARDS_DIR, python=None,
+                      cards_dir=_CARDS_DIR, guides_dir=_GUIDES_DIR, python=None,
                       indexnow_path=_INDEXNOW,
                       bank_bot_push_path=_BOT_PUSH,
                       bank_snapshot=_WRITEBACK_SNAPSHOT,
@@ -199,6 +197,7 @@ def build_site_runner(build_site_path=_BUILD_SITE, output_dir=_BROWSER_OUT,
             python, str(build_site_path),
             '--cards-dir', str(cards_dir),
             '--output-dir', str(output_dir),
+            '--guides-dir', str(guides_dir),
             '--manifest',
             '--sitemap',
         ]
@@ -582,50 +581,6 @@ def _provenance_trace(entry):
     )
 
 
-def _dedup_suspects_html(slug, ident):
-    """Advisory 'possible duplicate' heads-up for a review_ready card.
-
-    Compares this card's brand+model against every OTHER published card in
-    data/cards/ and, for same-brand near-matches, renders a soft badge. NEVER
-    bars publish (like build warnings) — cross-repo dedup is the human's call;
-    this only makes a mint-drift collision (a fresh slug that is really an
-    existing product, which the exact-slug collision gate misses) VISIBLE
-    instead of silent. Renders nothing when the detector is unavailable or
-    nothing clears the bar.
-    """
-    if not _HAS_DEDUP:
-        return ''
-    others = []
-    try:
-        card_files = list(_CARDS_DIR.glob('*.json'))
-    except OSError:
-        return ''
-    for f in card_files:
-        if f.name.startswith('.'):
-            continue
-        try:
-            c = json.loads(f.read_text(encoding='utf-8'))
-        except (OSError, ValueError):
-            continue
-        oi = c.get('identity', {}) or {}
-        others.append((c.get('card_id') or f.stem,
-                       oi.get('brand', ''), oi.get('model', '')))
-    hits = dedup_suspects.suspects(
-        slug, ident.get('brand', ''), ident.get('model', ''), others)
-    if not hits:
-        return ''
-    items = ''.join(
-        f'<li><b>{_esc(other_slug)}</b> '
-        f'<span class="dupscore">{int(round(score * 100))}% model overlap</span>'
-        '</li>'
-        for other_slug, score in hits)
-    return (
-        '<div class="dupwarn"><span class="dupbadge">possible duplicate</span> '
-        'identity is close to already-published card(s) — verify this is not a '
-        'mint-drift re-mint of an existing product before publishing:'
-        f'<ul>{items}</ul></div>')
-
-
 def _ready_card_html(record):
     """One review_ready work_queue record rendered as a publish-gate card.
 
@@ -664,7 +619,6 @@ def _ready_card_html(record):
     publishable = not blockers
 
     ident = (card or {}).get('identity', {}) or {}
-    dup_html = _dedup_suspects_html(slug, ident)
     title = (ident.get('display_name')
              or record.get('label') or slug or '<untitled>')
     brand_model = ' · '.join(
@@ -767,7 +721,6 @@ def _ready_card_html(record):
       </div>
       <div class="adjudication">
         {prov_html}
-        {dup_html}
         {pending_note}
         {override_form}
         {warning_html}
@@ -977,14 +930,6 @@ _PAGE = """<!doctype html>
   .buildwarn {{ flex-basis: 100%; font-size: 13px; color: #78350f;
                 background: #fef3c7; padding: 10px 12px; border-radius: 8px; }}
   .buildwarn ul {{ margin: 4px 0; }}
-  .dupwarn {{ flex-basis: 100%; font-size: 13px; color: #78350f;
-              background: #fff7ed; border: 1px solid #fdba74;
-              padding: 10px 12px; border-radius: 8px; }}
-  .dupwarn ul {{ margin: 4px 0; }}
-  .dupbadge {{ font-size: 11px; font-weight: 700; text-transform: uppercase;
-               letter-spacing: .03em; padding: 2px 6px; border-radius: 4px;
-               background: #ffedd5; color: #9a3412; }}
-  .dupscore {{ opacity: .7; font-size: 12px; }}
   .failed-panel {{ margin-top: 24px; font-size: 13px; }}
   .failed-panel summary {{ cursor: pointer; opacity: .7; }}
   .ftable {{ width: 100%; border-collapse: collapse; margin-top: 10px;
