@@ -69,14 +69,16 @@ EXIT_ENRICH_PARTIAL = 6
 # authoring the facet, not better sourcing.
 EXIT_CATEGORY_UNRESOLVED = 7
 
-DEFAULT_DAILY_CAP = 4           # cards/day. History: 12 until 2026-07-07, then
+DEFAULT_DAILY_CAP = 6           # cards/day. History: 12 until 2026-07-07, then
                                 # 2 (quality-first reframe), then 4 on
-                                # 2026-07-27. The cap IS the politeness budget,
-                                # not a throughput target — the drip profile
-                                # spends ~20 YT fetch attempts per card (see
-                                # build_card's PROFILES), so this is ~80
-                                # jittered fetches SPREAD ACROSS A DAY against
-                                # the bulk era's 50 in one sitting.
+                                # 2026-07-27, then 6 on 2026-08-17 (Lee: cards
+                                # are the moat — push toward critical mass now
+                                # that enrich is fixed and builds complete). The
+                                # cap IS the politeness budget, not a throughput
+                                # target — the drip profile spends ~20 YT fetch
+                                # attempts per card (see build_card's PROFILES),
+                                # so this is ~120 jittered fetches SPREAD ACROSS
+                                # A DAY against the bulk era's 50 in one sitting.
                                 #
                                 # Why 4 and not 6+: compute is NOT the binding
                                 # constraint (the 2026-07-19 flock makes
