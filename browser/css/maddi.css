@@ -164,6 +164,46 @@ body {
     color: var(--color-primary);
 }
 
+/* ─── Buying-guide callout (homepage entry to /gear-for/) ──────── */
+.guide-callout {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    max-width: 620px;
+    margin: var(--space-md) auto 0;
+    padding: var(--space-sm) var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+.guide-callout:hover {
+    border-color: var(--color-primary);
+    box-shadow: 0 1px 6px var(--color-primary-light);
+}
+.guide-callout-badge {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+.guide-callout-text {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.35;
+    text-align: left;
+}
+.guide-callout-arrow {
+    flex-shrink: 0;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
 /* ─── Compact Header (results + card detail pages) ─────────────── */
 
 .header-compact {
