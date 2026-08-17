@@ -164,44 +164,42 @@ body {
     color: var(--color-primary);
 }
 
-/* ─── Buying-guide callout (homepage entry to /gear-for/) ──────── */
-.guide-callout {
+/* ─── Buying-guide promo (homepage entry to /gear-for/) ────────── */
+.guide-promo {
     display: flex;
     align-items: center;
-    gap: var(--space-sm);
-    max-width: 620px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--space-sm) var(--space-md);
+    max-width: 600px;
     margin: var(--space-md) auto 0;
-    padding: var(--space-sm) var(--space-md);
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius-md);
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, box-shadow 0.15s;
+    padding: var(--space-sm) 0;
+    text-align: center;
 }
-.guide-callout:hover {
-    border-color: var(--color-primary);
-    box-shadow: 0 1px 6px var(--color-primary-light);
-}
-.guide-callout-badge {
-    flex-shrink: 0;
-    font-size: 11px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    color: var(--color-primary);
-    white-space: nowrap;
-}
-.guide-callout-text {
-    flex: 1;
+.guide-promo-text {
     font-size: 14px;
-    line-height: 1.35;
-    text-align: left;
+    line-height: 1.45;
+    color: var(--color-neutral);
 }
-.guide-callout-arrow {
+.guide-promo-text strong {
+    color: var(--color-text);
+    font-weight: 600;
+}
+.guide-promo-btn {
     flex-shrink: 0;
-    color: var(--color-primary);
-    font-weight: 700;
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
+    transition: background 0.15s;
+}
+.guide-promo-btn:hover {
+    background: var(--color-primary-dark);
 }
 
 /* ─── Compact Header (results + card detail pages) ─────────────── */
