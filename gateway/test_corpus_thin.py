@@ -115,9 +115,10 @@ def test_default_cap_is_pinned():
     """The cap is a politeness budget against upstream fetch volume, not a
     throughput dial, so its value is pinned — changing it must be a deliberate
     edit here rather than a drive-by tweak. 2 -> 4 on 2026-07-27 to move toward
-    the breadth gate; the ~20 YT attempts/card in build_card's drip profile
-    make this ~80 jittered fetches/day."""
-    assert card_factory.DEFAULT_DAILY_CAP == 4
+    the breadth gate; 4 -> 6 on 2026-08-17 (eca61dd, Lee: cards are the moat —
+    push toward critical mass). The ~20 YT attempts/card in build_card's drip
+    profile make this ~120 jittered fetches/day."""
+    assert card_factory.DEFAULT_DAILY_CAP == 6
 
 
 def test_runner_appends_yt_flag(tmp_path, monkeypatch):

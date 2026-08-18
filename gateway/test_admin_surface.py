@@ -530,7 +530,8 @@ def test_publish_runner_admits_card_and_rebuilds_from_corpus(tmp_path):
         runner = a.build_site_runner(build_site_path=fake_site,
                                      output_dir=tmp_path / 'browser',
                                      cards_dir=cards_dir,
-                                     indexnow_path=None)
+                                     indexnow_path=None,
+                                     bank_bot_push_path=None)
         rc, detail = runner(str(new_card))
     finally:
         a.subprocess.run = real_run

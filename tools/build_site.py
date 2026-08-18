@@ -235,8 +235,15 @@ def _reviewer_from_source_id(source_id):
     if not source_id:
         return "source"
     parts = source_id.split("-")
-    # drop leading platform token (youtube/blog/reddit/lab/etc.)
-    if parts and parts[0] in {"youtube", "blog", "reddit", "lab", "forum", "editorial", "pro", "manufacturer", "yt"}:
+    # drop leading platform/ingest token (youtube/blog/reddit/rss/feed/etc.).
+    # 'rss' + 'feed' + 'podcast' were missing, so RSS-ingested source_ids like
+    # 'rss-dpreview-gps-media-the-photos-that-made-...' kept the whole publisher
+    # + article-title tail and title-cased into a garble line. This is only the
+    # last-ditch fallback now (axis_block resolves the curated sources[] name
+    # first); hardened so the fallback degrades to something tidy, not word soup.
+    if parts and parts[0] in {"youtube", "blog", "reddit", "lab", "forum",
+                              "editorial", "pro", "manufacturer", "yt",
+                              "rss", "feed", "podcast"}:
         parts = parts[1:]
     # keep tokens until we hit something that looks like product/spec noise
     name_tokens = []
@@ -246,7 +253,25 @@ def _reviewer_from_source_id(source_id):
         name_tokens.append(tok)
     if not name_tokens:
         name_tokens = parts[:3]
+    # Cap at a name-length worth of tokens: a person/outlet name is ~1-4 words.
+    # Without this an ID with no product-noise break token (e.g. an RSS article
+    # slug) spills the whole headline into the byline.
+    name_tokens = name_tokens[:4]
     return " ".join(t.capitalize() for t in name_tokens) or "source"
+
+
+def _source_reviewer_map(sources):
+    """{source_id: reviewer} for the card's sources that carry a curated
+    reviewer name. The featured-quote render prefers this over deriving a name
+    from the source_id slug — the curated name ('DPReview (GPS Media)') is what
+    the ingest already resolved, and the slug derivation is lossy by nature."""
+    out = {}
+    for s in sources or []:
+        sid = s.get("source_id")
+        rev = (s.get("reviewer") or "").strip()
+        if sid and rev:
+            out[sid] = rev
+    return out
 
 
 def pct(pos, total):
@@ -690,7 +715,7 @@ def confidence_badge(level):
     return f'<span class="conf-badge {cls}">{esc(level)} confidence</span>'
 
 
-def axis_block(axis):
+def axis_block(axis, source_map=None):
     """One axis: label + confidence + sentiment bar + counts + top quote."""
     name = axis.get("display_name") or axis.get("axis_id", "")
     sent = axis.get("sentiment", {}) or {}
@@ -714,7 +739,15 @@ def axis_block(axis):
     fq = axis.get("face_quote") or {}
     q = str(fq.get("quote_excerpt") or "").strip()
     if q:
-        reviewer = fq.get("reviewer") or _reviewer_from_source_id(fq.get("source_id", ""))
+        sid = fq.get("source_id", "")
+        # Prefer the inline reviewer, then the card's curated sources[] name,
+        # then the lossy slug derivation as a last resort. Before this, a
+        # face_quote without an inline reviewer skipped straight to the slug
+        # and rendered publisher+headline soup ('Rss Dpreview Gps Media The
+        # Photos That Made ...') on 10/12 live cards.
+        reviewer = (fq.get("reviewer")
+                    or (source_map or {}).get(sid)
+                    or _reviewer_from_source_id(sid))
         url = fq.get("url", "")
         cite = f'<span class="quote-cite">\u2014 {esc(reviewer)}</span>'
         if url:
@@ -936,13 +969,138 @@ def _card_visible(axis):
             and (axis.get("axis_id") or "") not in CARD_HIDDEN_META_AXES)
 
 
+# ─── C6: review-authority JSON-LD (use-case-guides Phase-0) ───────────────────
+# Doctrine (Lee's ruling 2026-08-17, resolving the old "Offers only" guardrail):
+# we make the review coverage MACHINE-VISIBLE without ever emitting a rating
+# number. A number is a verdict; the witness-stance forbids AskMaddi crowning a
+# product. So we emit two honest, rating-free signals:
+#   1. attributed schema.org Review items  — "these named sources reviewed this"
+#   2. positiveNotes / negativeNotes lists — pros/cons stated as sourced COUNTS
+#      ("62 positive vs 39 critical mentions (12 sources)"), never a score.
+# Counts are facts (same discipline as the on-page "N claims across N sources");
+# a star value would be an invented judgment. No ratingValue / AggregateRating
+# is emitted anywhere by design.
+
+# A pro/con is only asserted with enough evidence to be a fact, not noise.
+_PROSCON_MIN_TOTAL = 4      # min claim mentions on the axis to speak at all
+_PROSCON_MAX_ITEMS = 6      # cap each list so the JSON-LD stays tidy
+
+
+def _axis_source_count(axis):
+    """Distinct sources that touched an axis (coverage, not claim volume)."""
+    srcs = (axis.get("sentiment", {}) or {}).get("sources", []) or []
+    return len({s.get("source_id") for s in srcs if s.get("source_id")})
+
+
+# High-precision sponsor-read markers. The upstream face_quote gate occasionally
+# lets a YouTube sponsor read ("Storyblocks has you covered…") pass as a product
+# claim; on-page it is a soft blurb, but as a schema.org Review it asserts "this
+# creator reviewed this product on this aspect" to answer engines — a stronger,
+# embarrassing claim. This is a Phase-0 BACKSTOP for the structured-data path
+# only; the real fix is the face_quote gate in phantom-ops card build (flagged
+# 2026-08-17). Kept deliberately narrow (named sponsors + explicit sponsorship
+# phrasing) so it never drops a genuine review quote.
+_SPONSOR_READ_MARKERS = (
+    "storyblocks", "squarespace", "skillshare", "nordvpn", "expressvpn",
+    "surfshark", "use code", "promo code", "discount code",
+    "link in the description", "this video is sponsored", "today's sponsor",
+    "sponsor of this", "thanks to our sponsor",
+)
+
+
+def _is_sponsor_read(text):
+    t = (text or "").lower()
+    return any(m in t for m in _SPONSOR_READ_MARKERS)
+
+
+def schema_reviews(card, source_map):
+    """Attributed schema.org Review items from the gated per-axis face_quotes.
+
+    author = the real source (never AskMaddi — we witness, we don't review),
+    reviewBody = the display-gated excerpt, reviewAspect = the axis. NO
+    reviewRating: the source said it, we quote it; we do not score it.
+    Sponsor reads are dropped from this structured surface (see markers)."""
+    out = []
+    for axis in (card.get("lead_axes", []) or []) + (card.get("detail_axes", []) or []):
+        if not _card_visible(axis):
+            continue
+        fq = axis.get("face_quote") or {}
+        quote = str(fq.get("quote_excerpt") or "").strip()
+        if not quote or _is_sponsor_read(quote):
+            continue
+        sid = fq.get("source_id", "")
+        reviewer = (fq.get("reviewer")
+                    or source_map.get(sid)
+                    or _reviewer_from_source_id(sid))
+        review = {
+            "@type": "Review",
+            "author": {"@type": "Organization", "name": reviewer},
+            "reviewBody": quote,
+            "reviewAspect": axis.get("display_name") or axis.get("axis_id") or "",
+        }
+        if fq.get("url"):
+            review["url"] = fq["url"]
+        out.append(review)
+    return out
+
+
+def _proscon_note(axis):
+    """One pros/cons line for an axis, stated as sourced counts, or None.
+
+    Returns (net, text): net>0 -> a strength, net<0 -> a weakness. The text is
+    the literal sentiment split + source coverage — a fact, not a rating."""
+    sent = axis.get("sentiment", {}) or {}
+    pos, neg = sent.get("pos", 0) or 0, sent.get("neg", 0) or 0
+    total = sent.get("total", 0) or 0
+    net = pos - neg
+    if total < _PROSCON_MIN_TOTAL or net == 0:
+        return None
+    name = axis.get("display_name") or axis.get("axis_id") or "aspect"
+    n_src = _axis_source_count(axis)
+    src_clause = f" ({n_src} source{'s' if n_src != 1 else ''})" if n_src else ""
+    text = f"{name} — {pos} positive vs {neg} critical mentions{src_clause}"
+    return net, text
+
+
+def _notes_itemlist(pairs):
+    """schema.org ItemList of pros/cons note strings (highest-signal first)."""
+    return {
+        "@type": "ItemList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": text}
+            for i, (_, text) in enumerate(pairs)
+        ],
+    }
+
+
+def schema_pros_cons(card):
+    """(positiveNotes, negativeNotes) ItemLists from the sentiment split, or
+    (None, None) when there is nothing evidenced to say. Pros = net-positive
+    axes, cons = net-negative, each capped and ordered by evidence strength."""
+    pros, cons = [], []
+    for axis in (card.get("lead_axes", []) or []) + (card.get("detail_axes", []) or []):
+        if not _card_visible(axis):
+            continue
+        note = _proscon_note(axis)
+        if not note:
+            continue
+        (pros if note[0] > 0 else cons).append(note)
+    pros.sort(key=lambda p: p[0], reverse=True)          # strongest strengths
+    cons.sort(key=lambda p: p[0])                         # strongest weaknesses
+    pros, cons = pros[:_PROSCON_MAX_ITEMS], cons[:_PROSCON_MAX_ITEMS]
+    return (_notes_itemlist(pros) if pros else None,
+            _notes_itemlist(cons) if cons else None)
+
+
 # ─── Page assembly ──────────────────────────────────────────────────────────
 # ─── schema.org Product/Offer JSON-LD ────────────────────────────────────────
 # Honesty discipline carries through markup: we only assert prices we display.
 # Used bands (eBay active asks, precision-gated upstream) -> AggregateOffer
 # with UsedCondition. No bands -> Product without offers (Sigma-style gating).
-# No ratings markup: our pos/neg ratios are not a star scale; inventing a
-# mapping to win rich results would be result-picking. Offers only.
+# Ratings: still NO ratingValue/AggregateRating — a star value is a verdict and
+# our pos/neg split is not a star scale. But per C6 (Lee 2026-08-17) we DO make
+# the review coverage machine-visible without a number: attributed Review items
+# + pros/cons as sourced counts (see schema_reviews / schema_pros_cons).
 def schema_org_jsonld(card, canonical_url, img_url, description):
     ident = card["identity"]
     obj = {
@@ -970,6 +1128,16 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
         obj["datePublished"] = published
     if modified:
         obj["dateModified"] = modified
+
+    # C6 review-authority signal (rating-free — see the doctrine note above).
+    reviews = schema_reviews(card, _source_reviewer_map(card.get("sources", []) or []))
+    if reviews:
+        obj["review"] = reviews
+    pos_notes, neg_notes = schema_pros_cons(card)
+    if pos_notes:
+        obj["positiveNotes"] = pos_notes
+    if neg_notes:
+        obj["negativeNotes"] = neg_notes
 
     used = (card.get("pricing", {}) or {}).get("used_market", {}) or {}
     bands = used.get("bands", {}) or {}
@@ -1055,8 +1223,9 @@ def render_page(card, image_url=None):
     lead = [a for a in (card.get("lead_axes", []) or []) if _card_visible(a)]
     detail = [a for a in (card.get("detail_axes", []) or []) if _card_visible(a)]
 
-    lead_html = "\n".join(axis_block(a) for a in lead)
-    detail_html = "\n".join(axis_block(a) for a in detail)
+    source_map = _source_reviewer_map(card.get("sources", []) or [])
+    lead_html = "\n".join(axis_block(a, source_map) for a in lead)
+    detail_html = "\n".join(axis_block(a, source_map) for a in detail)
 
     # Issue clusters — omit entirely if empty (don't render an empty box).
     clusters = (card.get("synthesis", {}) or {}).get("issue_clusters", []) or []
