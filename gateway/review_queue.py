@@ -65,7 +65,11 @@ SCHEMA_VERSION = '0.1.0'
 #   collision              slug normalizes the same as an existing spine slug
 #   needs_review           slug is a generated proposal (ambiguous normalization)
 #   low_resolve_confidence factory's Gemma pick was uncertain — see `candidates`
-ENQUEUE_REASONS = ('collision', 'needs_review', 'low_resolve_confidence')
+ENQUEUE_REASONS = ('collision', 'needs_review', 'low_resolve_confidence',
+                   # GTIN/MPN-first identity (resolve_multisource, step 2):
+                   'identity_contradiction',  # carried id disproves the eBay pick
+                   'ambiguous_identity',       # >1 real product across eras (L10 class)
+                   'sourced_offmarket')        # confident id from mfr/Icecat, not on eBay
 
 # Structured reject reasons — a reject is a pipeline-bug signal, so the reason is
 # a controlled vocab the upstream-fix workflow can key on, not freetext.
@@ -152,7 +156,7 @@ def _now():
 
 def enqueue(resolution, resolved, vendor, model, category,
             contamination_key=None, path=REVIEW_QUEUE_PATH,
-            *, reason_override=None, candidates=None):
+            *, reason_override=None, candidates=None, contamination=None):
     """Capture one slug-ambiguous resolved product for async review.
 
     Called by the live route exactly where backfill's _gate_slug would raise
@@ -235,6 +239,11 @@ def enqueue(resolution, resolved, vendor, model, category,
         # Frozen ranked candidates — the "was a valid product overlooked?" surface.
         # Only present for low_resolve_confidence; absent for slug-gate enqueues.
         record['candidates'] = candidates
+    if contamination:
+        # Off-market identity (resolve_multisource rung C/D): the contamination
+        # material — match aliases + predecessor/competitor relations — the human
+        # needs to promote a contamination.json entry alongside the spine upsert.
+        record['contamination'] = contamination
     q[qid] = record
     queue['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(queue, path)

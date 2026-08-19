@@ -161,6 +161,12 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
       {'total': n, 'enrolled': n, 'already_queued': n, 'no_candidate': n,
        'errors': n, 'enrolled_slugs': [...], 'error_slugs': [...]}
     """
+    # Rung A/B with the GTIN/MPN-first id gate (the contradiction firewall +
+    # deterministic straight-through are INSIDE resolve_proposal, so they are live
+    # here today). The full ladder — escalating an eBay miss to the mfr surface
+    # (C) + Icecat/Wikidata cross-confirm (D) — is resolve_sku.resolve_multisource;
+    # DEFERRED activation (flip this default) pending one nightly's review of the
+    # id-gate volume, so the live mfr/Wikidata fetches are added deliberately.
     resolve_fn = resolve_fn or resolve_sku.resolve_proposal
     skus_path = skus_path or resolve_sku.skus_registry.SKUS_PATH
 

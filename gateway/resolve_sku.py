@@ -57,6 +57,8 @@ import skus_registry
 import slug_normalizer
 import ebay_category_map
 import rebind_firewall
+import resolver_mfr_surface   # rung C (airlocked cell)
+import resolver_xconfirm      # rung D (airlocked cell)
 
 # Default eBay-candidate disambiguation model — the locked, validated checkpoint
 # (gemma4:e2b-it-qat), same tag the comparator typer uses. Single-sourced default.
@@ -367,9 +369,47 @@ class GemmaDisambiguator:
 # ──────────────────────────────────────────────────────────────────────────────
 # Step 3 — orchestration: lookup -> search -> pick -> route into the EXISTING chain
 # ──────────────────────────────────────────────────────────────────────────────
+def _norm_gtin(x):
+    """Digits only, zero-padded to GTIN-14 so a feed GTIN-12/13 compares equal to
+    the same product's canonical GTIN-14. Empty/no-digits -> '' (not comparable)."""
+    d = re.sub(r'\D', '', str(x or ''))
+    return d.zfill(14) if d else ''
+
+
+def _norm_mpn(x):
+    """Alphanumeric, upper — so 'ILCE-7SM3' == 'ilce7sm3'. Empty -> '' (skip)."""
+    return re.sub(r'[^A-Z0-9]', '', str(x or '').upper())
+
+
+def _id_agreement(target, identity):
+    """Compare the proposal's carried GTIN/MPN against the resolved eBay item's
+    identity (GTIN/MPN-first, spec step 2). GTIN is the stronger key and wins when
+    both sides carry one; MPN is the fallback.
+
+    Returns:
+      'agree'      — an exact GTIN (or, absent GTINs, MPN) match: the pick IS the
+                     proposed product. Strength beats Gemma's floor (rule 1).
+      'contradict' — both sides carry the SAME id type but different values: the
+                     carried id disproves the keyword+Gemma pick (rule 2, the
+                     Kodak->nikon-z2 firewall). Never mint.
+      'none'       — no shared id type to compare -> fall back to the existing
+                     confidence routing (behaviour unchanged when the feed omits
+                     an id or eBay didn't surface one).
+    """
+    identity = identity or {}
+    t_gtin, i_gtin = _norm_gtin(target.get('gtin')), _norm_gtin(identity.get('gtin'))
+    if t_gtin and i_gtin:
+        return 'agree' if t_gtin == i_gtin else 'contradict'
+    t_mpn, i_mpn = _norm_mpn(target.get('mpn')), _norm_mpn(identity.get('mpn'))
+    if t_mpn and i_mpn:
+        return 'agree' if t_mpn == i_mpn else 'contradict'
+    return 'none'
+
+
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
                      vendor=None, model=None,
                      gtin=None, mpn=None, product_url=None,
+                     log_unmet_on_miss=True,
                      floor=DEFAULT_CONFIDENCE_FLOOR,
                      candidate_limit=DEFAULT_CANDIDATE_LIMIT,
                      skus_path=skus_registry.SKUS_PATH,
@@ -454,18 +494,55 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
     verdict = gemma.pick(target, candidates)
 
     # ── Route 1: nothing usable -> unmet demand (demand_log's exact purpose) ──
+    # When an escalation ladder wraps this call (resolve_multisource), it defers
+    # the unmet log to the TRUE floor — after the mfr/Icecat rungs also miss — so
+    # log_unmet stays a truthful "no identity anywhere", not "not on eBay".
     if verdict['item_id'] is None:
-        kwargs = {} if demand_log_path is None else {'path': demand_log_path}
-        demand_log.log_unmet(target['category'], identity=None, **kwargs)
+        if log_unmet_on_miss:
+            kwargs = {} if demand_log_path is None else {'path': demand_log_path}
+            demand_log.log_unmet(target['category'], identity=None, **kwargs)
         return {
             'slug': slug, 'outcome': 'no_candidate',
             'detail': verdict['why'], 'confidence': verdict['confidence'],
             'candidates_seen': len(candidates), 'source': target['source'],
+            'category': target['category'],
         }
 
-    # ── Route 2: low-confidence pick -> review with candidates visible ──
-    if verdict['confidence'] < floor:
-        resolved = ebay.resolve(verdict['item_id'])
+    # Resolve the chosen item ONCE — its identity is needed BOTH to verify the
+    # carried id AND to write the spine (no extra eBay round-trip vs before).
+    resolved = ebay.resolve(verdict['item_id'])
+
+    # ── Identity gate (GTIN/MPN-first, spec step 2) ──────────────────────────
+    # The carried feed id is stronger than a keyword+Gemma title pick. CONTRADICT
+    # -> the pick is wrong-product; route to review, never mint (the
+    # Kodak->nikon-z2 firewall). AGREE -> the pick is certain; straight-through
+    # even below Gemma's floor (strength beats the floor). No shared id -> the
+    # historical confidence routing is unchanged.
+    agreement = _id_agreement(target, resolved.get('identity'))
+    if agreement == 'contradict':
+        resolution = _FactoryResolution(slug=slug, input_text=target['label'])
+        eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+        category = target['category'] or ebay_category_map.category_for(
+            resolved.get('identity', {}).get('ebay_category_id', ''))
+        record = review_queue.enqueue(
+            resolution, resolved,
+            target['vendor'], target['model'], category,
+            contamination_key=target['contamination_key'],
+            reason_override='identity_contradiction',
+            candidates=verdict['ranked'],
+            **eq_kwargs,
+        )
+        return {
+            'slug': slug, 'outcome': 'queued',
+            'detail': record['queue_id'], 'reason': 'identity_contradiction',
+            'confidence': verdict['confidence'], 'why': verdict['why'],
+            'candidates_seen': len(candidates), 'source': target['source'],
+        }
+    deterministic_id = (agreement == 'agree')
+
+    # ── Route 2: low-confidence pick -> review (UNLESS a deterministic id match
+    # vouches for it — rule 1) ──
+    if verdict['confidence'] < floor and not deterministic_id:
         # A synthetic resolution carrying the (resolved) slug — the enqueue is
         # about the eBay PICK, not the slug, so the reason is forced to
         # low_resolve_confidence regardless of whether the slug was minted.
@@ -490,8 +567,7 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
             'source': target['source'],
         }
 
-    # ── Route 3: confident pick -> resolve + write spine (the existing chain) ──
-    resolved = ebay.resolve(verdict['item_id'])
+    # ── Route 3: confident (or deterministic-id) pick -> write spine ──
 
     # Category: an existing entry already has its controlled-vocab category; a
     # MINTED entry has none yet, so derive it from the eBay item (part e, the
@@ -555,6 +631,7 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
         'source': target.get('source', 'resolved'),
         'minted': minted, 'category': category,
         'minted_needs_review': minted_needs_review,
+        'deterministic': deterministic_id,
     }
 
 
@@ -577,3 +654,130 @@ class _FactoryResolution:
         self.input_text = input_text
         self.needs_review = False
         self.source = 'override'
+
+
+def _best_sourced(c_res, d_res, floor):
+    """The strongest CONFIDENT off-market resolution carrying a real identity, or
+    None. Rung D (cross-confirmed, holds relations) is preferred over C at equal
+    strength; deterministic or confidence>=floor qualifies. Ambiguous is excluded
+    (handled separately, before this)."""
+    for r in (d_res, c_res):
+        if (r and r.get('identity') and not r.get('ambiguous')
+                and (r.get('deterministic') or r.get('confidence', 0.0) >= floor)):
+            return r
+    return None
+
+
+def _enqueue_sourced(slug, review_queue, review_queue_path, vendor, model,
+                     c_res, d_res, *, reason, why):
+    """Propose an OFF-MARKET identity (rung C/D, no eBay listing) onto the /admin
+    review surface. The matcher proposes; the human promotes (enrich-don't-mint +
+    the publish air gap hold). Carries the pooled aliases + relations as the
+    contamination material the promote step needs."""
+    best = d_res if (d_res and d_res.get('identity')) else c_res
+    ident = (best or {}).get('identity') or {}
+    relations = ((d_res or {}).get('relations') or (c_res or {}).get('relations')
+                 or {'predecessor': [], 'competitor': []})
+    aliases = []
+    for r in (c_res, d_res):
+        for a in ((r or {}).get('aliases') or []):
+            if a not in aliases:
+                aliases.append(a)
+    # Shape a resolved-like block review_queue can freeze (it reads .identity and
+    # .affiliate_url defensively — no eBay-specific keys required).
+    resolved = {
+        'identity': {
+            'gtin': ident.get('gtin'), 'mpn': ident.get('mpn'),
+            'brand': ident.get('brand') or vendor,
+            'market_title': ident.get('canonical_model') or model,
+            'image': ident.get('image'),
+        },
+        'affiliate_url': '',
+    }
+    resolution = _FactoryResolution(slug=slug,
+                                    input_text=f"{vendor or ''} {model or ''}".strip())
+    eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+    record = review_queue.enqueue(
+        resolution, resolved, vendor, model, '',  # category unknown off-market
+        contamination_key=slug,
+        reason_override=reason,
+        contamination={'source': (best or {}).get('source'),
+                       'aliases': aliases, 'relations': relations, 'why': why},
+        **eq_kwargs,
+    )
+    return {
+        'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+        'reason': reason, 'why': why, 'source': (best or {}).get('source'),
+        'sourced': True,
+    }
+
+
+def resolve_multisource(slug, *, ebay, gemma, demand_log, review_queue,
+                        mfr_surface=resolver_mfr_surface,
+                        xconfirm=resolver_xconfirm,
+                        vendor=None, model=None,
+                        gtin=None, mpn=None, product_url=None,
+                        floor=DEFAULT_CONFIDENCE_FLOOR,
+                        candidate_limit=DEFAULT_CANDIDATE_LIMIT,
+                        skus_path=skus_registry.SKUS_PATH,
+                        review_queue_path=None, demand_log_path=None):
+    """The GTIN/MPN-first identity ladder (spec maddi-multisource-identity-matcher).
+
+    Wraps resolve_proposal (rung A registry + rung B eBay+Gemma, now id-gated) and
+    adds the escalation the single-source path lacked: when eBay has no usable
+    candidate, fall to the manufacturer/Shopify surface (rung C) then the
+    Icecat/Wikidata cross-confirm (rung D) instead of dead-ending at log_unmet.
+
+    Gate rules (the cerebral core):
+      1. Deterministic short-circuit  — an exact GTIN/MPN match straight-throughs
+         (inside resolve_proposal's id gate).
+      2. Contradiction -> human       — a carried id disproving the pick routes to
+         review (inside resolve_proposal; the Kodak->nikon-z2 firewall).
+      3. Ambiguity -> cross-confirm   — >1 real product across eras (rung D
+         ambiguous, the panasonic-lumix-l10 class) routes to review, never guesses.
+
+    A confident OFF-MARKET identity (rung C/D, no eBay listing) is PROPOSED to
+    /admin (reason 'sourced_offmarket'), never written to the spine directly.
+    log_unmet fires only after EVERY rung misses — the true "no identity anywhere"
+    floor. mfr_surface / xconfirm are the injected airlocked cells; pass a stub
+    whose .resolve returns None to disable a rung in a test.
+    """
+    outcome = resolve_proposal(
+        slug, ebay=ebay, gemma=gemma, demand_log=demand_log,
+        review_queue=review_queue, vendor=vendor, model=model,
+        gtin=gtin, mpn=mpn, product_url=product_url,
+        log_unmet_on_miss=False,   # defer to the true floor below
+        floor=floor, candidate_limit=candidate_limit, skus_path=skus_path,
+        review_queue_path=review_queue_path, demand_log_path=demand_log_path)
+
+    # eBay reached a decision (resolved / queued / rebind_rejected) — nothing to
+    # escalate. Only a genuine eBay MISS falls through to the source rungs.
+    if outcome.get('outcome') != 'no_candidate':
+        return outcome
+
+    src_target = {'vendor': vendor, 'model': model, 'gtin': gtin, 'mpn': mpn,
+                  'source_url': product_url,
+                  'brand': vendor, 'canonical_model': model}
+    c_res = mfr_surface.resolve(src_target) if mfr_surface else None
+    hint = (c_res or {}).get('identity') or {}
+    d_res = xconfirm.resolve(src_target, hint) if xconfirm else None
+
+    # Rule 3 — ambiguity across eras -> human, never guess a spine.
+    if d_res and d_res.get('ambiguous'):
+        return _enqueue_sourced(slug, review_queue, review_queue_path,
+                                vendor, model, c_res, d_res,
+                                reason='ambiguous_identity',
+                                why=d_res.get('why', 'ambiguous across eras'))
+
+    sourced = _best_sourced(c_res, d_res, floor)
+    if sourced is not None:
+        return _enqueue_sourced(slug, review_queue, review_queue_path,
+                                vendor, model, c_res, d_res,
+                                reason='sourced_offmarket',
+                                why=sourced.get('why', 'off-market identity'))
+
+    # Floor — every rung missed: the truthful unmet-demand signal.
+    kwargs = {} if demand_log_path is None else {'path': demand_log_path}
+    demand_log.log_unmet(outcome.get('category') or '', identity=None, **kwargs)
+    outcome['escalated'] = True
+    return outcome
