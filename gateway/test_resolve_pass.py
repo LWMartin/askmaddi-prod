@@ -164,9 +164,11 @@ def test_load_proposals_tuple_shape(tmp_path):
     ]))
     out = resolve_pass.load_proposals(p)
     assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
-                      'vendor': None, 'model': None}
+                      'vendor': None, 'model': None,
+                      'gtin': None, 'mpn': None, 'product_url': None}
     assert out[1] == {'slug': 'canon-r5-ii', 'fork_n': 9,
-                      'vendor': None, 'model': None}
+                      'vendor': None, 'model': None,
+                      'gtin': None, 'mpn': None, 'product_url': None}
 
 
 def test_load_proposals_identity_shape_carries_vendor_model(tmp_path):
@@ -180,9 +182,26 @@ def test_load_proposals_identity_shape_carries_vendor_model(tmp_path):
     ]))
     out = resolve_pass.load_proposals(p)
     assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
-                      'vendor': 'Sony', 'model': 'A7S III'}
+                      'vendor': 'Sony', 'model': 'A7S III',
+                      'gtin': None, 'mpn': None, 'product_url': None}
     assert out[1] == {'slug': 'canon-r5-ii', 'fork_n': 9,
-                      'vendor': 'Canon', 'model': 'R5 II'}
+                      'vendor': 'Canon', 'model': 'R5 II',
+                      'gtin': None, 'mpn': None, 'product_url': None}
+
+
+def test_load_proposals_carries_feed_identity(tmp_path):
+    # GTIN/MPN-first (step 2): a proposal's gtin/mpn/product_url survive
+    # normalization so resolve_multisource can join on them downstream.
+    p = tmp_path / 'proposals.json'
+    p.write_text(json.dumps([
+        {'slug': 'nikon-z5-ii', 'fork_n': 5, 'vendor': 'Nikon', 'model': 'Z5 II',
+         'gtin': '0018208027958', 'mpn': '1719',
+         'product_url': 'https://www.adorama.com/nkz5ii.html'},
+    ]))
+    out = resolve_pass.load_proposals(p)
+    assert out[0]['gtin'] == '0018208027958'
+    assert out[0]['mpn'] == '1719'
+    assert out[0]['product_url'] == 'https://www.adorama.com/nkz5ii.html'
 
 
 def test_load_proposals_dict_shape_without_identity_is_none(tmp_path):
@@ -192,7 +211,8 @@ def test_load_proposals_dict_shape_without_identity_is_none(tmp_path):
     p.write_text(json.dumps([{'slug': 'sony-a7s-iii', 'fork_n': 13}]))
     out = resolve_pass.load_proposals(p)
     assert out[0] == {'slug': 'sony-a7s-iii', 'fork_n': 13,
-                      'vendor': None, 'model': None}
+                      'vendor': None, 'model': None,
+                      'gtin': None, 'mpn': None, 'product_url': None}
 
 
 def test_load_proposals_rejects_non_list(tmp_path):

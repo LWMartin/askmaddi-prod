@@ -369,6 +369,7 @@ class GemmaDisambiguator:
 # ──────────────────────────────────────────────────────────────────────────────
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
                      vendor=None, model=None,
+                     gtin=None, mpn=None, product_url=None,
                      floor=DEFAULT_CONFIDENCE_FLOOR,
                      candidate_limit=DEFAULT_CANDIDATE_LIMIT,
                      skus_path=skus_registry.SKUS_PATH,
@@ -406,6 +407,13 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
     transient problem the caller retries), NOT swallowed into a routing outcome.
     """
     target = lookup_or_mint(slug, vendor=vendor, model=model, skus_path=skus_path)
+    # Carry the proposal's feed identity onto the target (GTIN/MPN-first, step 2).
+    # resolve_multisource reads these to gate the eBay pick on id agreement; the
+    # single-source path below ignores them, so behaviour is unchanged until the
+    # ladder is wired.
+    for _k, _v in (('gtin', gtin), ('mpn', mpn), ('product_url', product_url)):
+        if _v and not target.get(_k):
+            target[_k] = _v
     # The resolved slug may differ from the proposed one (resolve_slug can freeze
     # a hand-authored form). Use it consistently from here on.
     slug = target['slug']

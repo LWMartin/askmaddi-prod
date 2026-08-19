@@ -96,6 +96,7 @@ def load_proposals(path):
     out = []
     for item in raw:
         vendor = model = None
+        gtin = mpn = product_url = None
         if isinstance(item, dict):
             slug = item.get('slug')
             fork_n = int(item.get('fork_n', 0))
@@ -104,6 +105,13 @@ def load_proposals(path):
             # rows -> stays None -> resolve_proposal can enrich but not mint.
             vendor = item.get('vendor') or None
             model = item.get('model') or None
+            # GTIN/MPN-first identity (spec step 2): the feed's identifiers ride
+            # the proposal so resolve_multisource can do a deterministic id join
+            # ahead of the keyword+Gemma pick. Absent on legacy rows -> None ->
+            # the ladder escalates past the deterministic rung, unchanged.
+            gtin = item.get('gtin') or None
+            mpn = item.get('mpn') or None
+            product_url = item.get('product_url') or None
         elif isinstance(item, (list, tuple)) and len(item) >= 2:
             # proposals() native tuple: (fork_n, comp_id, pos_n, abs_n)
             fork_n = int(item[0])
@@ -113,7 +121,8 @@ def load_proposals(path):
         if not slug:
             raise ValueError(f"proposal entry missing slug: {item!r}")
         out.append({'slug': slug, 'fork_n': fork_n,
-                    'vendor': vendor, 'model': model})
+                    'vendor': vendor, 'model': model,
+                    'gtin': gtin, 'mpn': mpn, 'product_url': product_url})
 
     out.sort(key=lambda d: d['fork_n'], reverse=True)
     return out
@@ -181,6 +190,13 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             call_kwargs['vendor'] = prop['vendor']
         if prop.get('model'):
             call_kwargs['model'] = prop['model']
+        # Forward the feed identity so resolve_multisource can join on it.
+        if prop.get('gtin'):
+            call_kwargs['gtin'] = prop['gtin']
+        if prop.get('mpn'):
+            call_kwargs['mpn'] = prop['mpn']
+        if prop.get('product_url'):
+            call_kwargs['product_url'] = prop['product_url']
 
         try:
             outcome = resolve_fn(slug, **call_kwargs)
