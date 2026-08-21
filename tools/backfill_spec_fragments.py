@@ -106,6 +106,16 @@ ROSTER = {
     'peak-design-pro-tripod': (
         {'handle': 'pro-tripod'},
         'https://www.peakdesign.com/products/pro-tripod'),
+    # GoPro 'action_cam' surface (Next.js {page_path}); the first video-vertical
+    # SKU. page_path is slug + GoPro's non-derivable catalogue SKU (measured
+    # 2026-08-21: HERO11=CHDHX-111, HERO12=CHDHX-121 resolve, a guessed
+    # HERO13=CHDHX-131 500s). Carries its own curated_at because the surface was
+    # authored 2026-08-21, after this roster's original 2026-07-29 batch.
+    'gopro-hero10': (
+        {'page_path': 'hero10-black/CHDHX-101-master'},
+        'https://gopro.com/en/us/shop/cameras/hero10-black/'
+        'CHDHX-101-master.html',
+        '2026-08-21'),
 }
 
 # A SKU whose brand HAS a surface that does not cover it. R10's gap table is
@@ -114,6 +124,12 @@ ROSTER = {
 # instead of sitting at `fragments_unset`, which reads as curation debt and
 # sends the next person looking for a page that does not exist.
 SURFACE_GAPS = {
+    'gopro-hero6': (
+        'GoPro delists discontinued models from its storefront: the HERO6 '
+        'page (CHDHX-601) 500s (measured 2026-08-21), so the gopro/action_cam '
+        'Next.js surface — which serves current models fine (HERO10 banked) — '
+        'cannot reach it. Not curation debt on the surface; the model is gone '
+        'from it. Legacy-body specs would need a different source.'),
     'sony-a7r': (
         'the ILCE-7RM2 help guide (tree 1520) has no Specifications page — '
         'verified 2026-07-29 against its complete topic list, not inferred '
@@ -213,14 +229,19 @@ def plan(registry, table):
             uncovered.append(
                 (slug, HELD_FOR_ADJUDICATION.get(slug, 'not in roster')))
             continue
-        fragments, observed = ROSTER[slug]
+        roster_entry = ROSTER[slug]
+        fragments, observed = roster_entry[0], roster_entry[1]
+        # A roster entry may carry its own curated_at (3rd element) when it was
+        # authored outside this roster's original batch date; otherwise it takes
+        # the batch constant.
+        curated_at = roster_entry[2] if len(roster_entry) > 2 else CURATED_AT
         built = table.resolve_url(brand, category, fragments)
         if built != observed:
             mismatches.append((slug, observed, built))
             continue
         writes.append((slug, dict(fragments,
                                   observed=observed,
-                                  curated_at=CURATED_AT)))
+                                  curated_at=curated_at)))
     return writes, uncovered, mismatches
 
 

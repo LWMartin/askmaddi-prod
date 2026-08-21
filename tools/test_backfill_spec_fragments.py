@@ -30,6 +30,8 @@ class StubTable:
                            '{product_code}/',
         ('peak design', 'support'): 'https://www.peakdesign.com/products/'
                                     '{handle}',
+        ('gopro', 'action_cam'): 'https://gopro.com/en/us/shop/cameras/'
+                                 '{page_path}.html',
     }
 
     def surface_for(self, brand, category):
@@ -50,6 +52,7 @@ def _registry(*slugs):
         'sigma-35mm-f1-2-dg-dn-art': ('Sigma', 'lens'),
         'peak-design-travel-tripod': ('Peak Design', 'support'),
         'peak-design-pro-tripod': ('Peak Design', 'support'),
+        'gopro-hero10': ('GoPro', 'action_cam'),
         'sony-unknown': ('Sony', 'body'),
     }
     return {'skus': {s: {'vendor': vendors[s][0],
@@ -176,8 +179,12 @@ def test_written_override_records_which_page_and_when():
     see what this pass picked."""
     writes, _, _ = B.plan(_registry(*B.ROSTER), StubTable())
     for slug, value in writes:
-        assert value['observed'] == B.ROSTER[slug][1]
-        assert value['curated_at'] == B.CURATED_AT
+        entry = B.ROSTER[slug]
+        assert value['observed'] == entry[1]
+        # An entry may carry its own curated_at (3rd element); otherwise the
+        # batch constant.
+        expected = entry[2] if len(entry) > 2 else B.CURATED_AT
+        assert value['curated_at'] == expected
 
 
 def test_provenance_keys_are_inert_for_url_building():
