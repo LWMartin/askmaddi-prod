@@ -810,3 +810,55 @@ def test_publish_runner_no_bank_when_render_fails(tmp_path):
     finally:
         a.subprocess.run = real
     assert rc == 2 and len(calls) == 1   # a dead render banks nothing
+
+
+# ── Review Worklist route (read-only demand surface) ───────────────────────
+
+def _worklist_fixture():
+    return {
+        "snapshot": "2026-08-21",
+        "generated_at": "2026-08-21T02:00:00+00:00",
+        "totals": {"to_card": 2, "swept": 1, "unresolved": 1},
+        "categories": [{
+            "category": "action_cam", "to_card": 2, "swept": 1, "unresolved": 1,
+            "products": [
+                {"name": "DJI Osmo Action 6", "price": "278", "mentioned": True},
+                {"name": "GoPro HERO13 Black", "price": "127", "mentioned": False},
+            ],
+            "unresolved_rows": [{"name": "XTRA Muse Combo"}],
+        }],
+    }
+
+
+def test_worklist_requires_auth(client):
+    assert client.get('/admin/worklist').status_code == 401
+
+
+def test_worklist_empty_when_no_file(client, monkeypatch, tmp_path):
+    monkeypatch.setattr(admin_surface, '_WORKLIST_PATH', tmp_path / 'absent.json')
+    r = client.get('/admin/worklist', headers=_auth())
+    assert r.status_code == 200
+    assert b'No worklist yet' in r.data
+
+
+def test_worklist_renders_products_hot_and_counts(client, monkeypatch, tmp_path):
+    p = tmp_path / 'review-worklist.json'
+    p.write_text(json.dumps(_worklist_fixture()), encoding='utf-8')
+    monkeypatch.setattr(admin_surface, '_WORKLIST_PATH', p)
+    r = client.get('/admin/worklist', headers=_auth())
+    assert r.status_code == 200
+    body = r.data.decode()
+    assert 'DJI Osmo Action 6' in body and 'GoPro HERO13 Black' in body
+    assert '2 to card' in body and '1 swept' in body
+    assert 'badge hot' in body                 # mentioned row carries the badge
+    assert 'XTRA Muse Combo' in body           # unresolved shown in details
+    assert '1 unresolved' in body
+
+
+def test_worklist_malformed_file_renders_empty_not_500(client, monkeypatch, tmp_path):
+    p = tmp_path / 'bad.json'
+    p.write_text('{not json', encoding='utf-8')
+    monkeypatch.setattr(admin_surface, '_WORKLIST_PATH', p)
+    r = client.get('/admin/worklist', headers=_auth())
+    assert r.status_code == 200
+    assert b'No worklist yet' in r.data

@@ -113,6 +113,13 @@ _INDEXNOW = _REPO_ROOT / 'tools' / 'indexnow_ping.py'
 _BOT_PUSH = _REPO_ROOT / 'tools' / 'bot_push.py'
 _BROWSER_OUT = _REPO_ROOT / 'browser'
 _CARDS_DIR = _REPO_ROOT / 'data' / 'cards'
+# The precision-screened demand worklist (what to card next), produced nightly
+# by the phantom-ops covered_precision→covered_worklist pass and dropped into
+# the shared pipeline-group data dir. Read-only here: this surface shows the
+# review worklist; carding stays a downstream human/pipeline action. Absent
+# file (before the first nightly run) renders an empty worklist, never a 500.
+_WORKLIST_PATH = Path(os.environ.get(
+    'ASKMADDI_WORKLIST_PATH', str(_REPO_ROOT / 'data' / 'review-worklist.json')))
 # Use-case guide artifacts (spec: maddi-use-case-guides). Rendered to
 # /gear-for/<id>/ on every publish so a card joining the corpus re-renders the
 # guides too and the guide URLs stay in the sitemap. load_guides tolerates a
@@ -877,6 +884,15 @@ _PAGE = """<!doctype html>
            letter-spacing: .05em; padding: 3px 8px; border-radius: 999px; }}
   .badge.collision {{ background: #fde7e7; color: #7f1d1d; }}
   .badge.needs-review {{ background: #fef3c7; color: #78350f; }}
+  .badge.hot {{ background: #fee2e2; color: #991b1b; }}
+  .wlist {{ list-style: none; padding: 0; margin: 0 0 8px; }}
+  .wlist li {{ padding: 5px 0; border-bottom: 1px solid
+              color-mix(in srgb, currentColor 10%, transparent);
+              display: flex; gap: 8px; align-items: baseline; }}
+  .wname {{ flex: 1; }}
+  .wl {{ margin-bottom: 8px; }}
+  .unres {{ font-size: 13px; opacity: .75; margin: 4px 0 12px; }}
+  .unres li {{ padding: 2px 0; border: 0; }}
   .collision {{ flex-basis: 100%; font-size: 13px; color: #7f1d1d; }}
   .collision code, .ids code {{ font-family: ui-monospace, monospace; }}
   form {{ display: flex; gap: 8px; align-items: flex-end; }}
@@ -1134,6 +1150,63 @@ def _gtin_conflict_section_html():
     return header + cards
 
 
+def _load_worklist():
+    """Read the precision-screened demand worklist, or None if it is absent or
+    unreadable. A missing file (before the first nightly pass) is not an error —
+    the route renders an empty worklist. Never raises."""
+    try:
+        return json.loads(_WORKLIST_PATH.read_text(encoding='utf-8'))
+    except (OSError, ValueError):
+        return None
+
+
+def _worklist_row_html(p):
+    hot = '<span class="badge hot">demand</span> ' if p.get('mentioned') else ''
+    price = (f'<span class="price">${_esc(p.get("price"))}</span>'
+             if p.get('price') else '')
+    return (f'<li>{hot}<span class="wname">{_esc(p.get("name"))}</span> '
+            f'{price}</li>')
+
+
+def _render_worklist_page():
+    """Render the /admin/worklist page from the compact worklist contract —
+    products to card per category, hot floated, accessories shown only as a
+    swept count (the precision screen already ruled them non-cards)."""
+    data = _load_worklist()
+    if not data or not data.get('categories'):
+        body = ('<h1>Review Worklist</h1>'
+                '<p class="lead"><a href="/admin">← admin</a></p>'
+                '<div class="empty">No worklist yet — the nightly precision '
+                'screen has not produced one.</div>')
+        return Response(_PAGE.format(body=body), mimetype='text/html')
+
+    t = data.get('totals', {})
+    sections = []
+    for c in data['categories']:
+        rows = ''.join(_worklist_row_html(p) for p in c.get('products', []))
+        swept = (f' · {c["swept"]} swept' if c.get('swept') else '')
+        unres = ''
+        if c.get('unresolved'):
+            u = ''.join(f'<li>? {_esc(p.get("name"))}</li>'
+                        for p in c.get('unresolved_rows', []))
+            unres = (f'<details class="unres"><summary>{c["unresolved"]} '
+                     f'unresolved (human-decide)</summary><ul>{u}</ul></details>')
+        sections.append(
+            f'<section class="wl"><h2 class="section-h">{_esc(c["category"])} '
+            f'<span class="section-sub">{c.get("to_card", 0)} to card{swept}'
+            f'</span></h2><ul class="wlist">{rows}</ul>{unres}</section>')
+
+    header = (
+        '<h1>Review Worklist</h1>'
+        '<p class="lead"><a href="/admin">← admin</a> · '
+        f'snapshot {_esc(data.get("snapshot"))} · '
+        f'<strong>{t.get("to_card", 0)} to card</strong> · '
+        f'{t.get("swept", 0)} accessories swept · '
+        f'{t.get("unresolved", 0)} unresolved</p>')
+    body = header + ''.join(sections)
+    return Response(_PAGE.format(body=body), mimetype='text/html')
+
+
 def _render_page(banner_html=''):
     """Render the full /admin page: Review Ready (publish gate) leads, the slug
     Review Queue (identity adjudication) follows, the failed panel sits inside
@@ -1152,7 +1225,10 @@ def _render_page(banner_html=''):
 
     gtin_section = _gtin_conflict_section_html()
 
-    body = ('<h1>AskMaddi Admin</h1>' + banner_html + ready_section
+    nav = ('<p class="lead"><a href="/admin/worklist">Review Worklist →</a> '
+           '<span class="section-sub">what to card next (demand, '
+           'precision-screened)</span></p>')
+    body = ('<h1>AskMaddi Admin</h1>' + banner_html + nav + ready_section
             + slug_section + gtin_section)
     page = _PAGE.format(body=body)
     return Response(page, mimetype='text/html')
@@ -1193,6 +1269,13 @@ def register_admin(app, render_runner=None):
         if blocked is not None:
             return blocked
         return _render_page()
+
+    @app.route('/admin/worklist', methods=['GET'])
+    def admin_worklist():
+        blocked = _gate()
+        if blocked is not None:
+            return blocked
+        return _render_worklist_page()
 
     @app.route('/admin/promote', methods=['POST'])
     def admin_promote():
