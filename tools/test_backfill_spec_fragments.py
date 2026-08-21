@@ -32,6 +32,7 @@ class StubTable:
                                     '{handle}',
         ('gopro', 'action_cam'): 'https://gopro.com/en/us/shop/cameras/'
                                  '{page_path}.html',
+        ('dji', 'action_cam'): 'https://www.dji.com/{page_path}/specs',
     }
 
     def surface_for(self, brand, category):
@@ -53,6 +54,9 @@ def _registry(*slugs):
         'peak-design-travel-tripod': ('Peak Design', 'support'),
         'peak-design-pro-tripod': ('Peak Design', 'support'),
         'gopro-hero10': ('GoPro', 'action_cam'),
+        'dji-osmo-action-4': ('DJI', 'action_cam'),
+        'dji-osmo-action-5-pro': ('DJI', 'action_cam'),
+        'dji-osmo-action-6': ('DJI', 'action_cam'),
         'sony-unknown': ('Sony', 'body'),
     }
     return {'skus': {s: {'vendor': vendors[s][0],

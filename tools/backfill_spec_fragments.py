@@ -116,6 +116,24 @@ ROSTER = {
         'https://gopro.com/en/us/shop/cameras/hero10-black/'
         'CHDHX-101-master.html',
         '2026-08-21'),
+    # DJI 'action_cam' surface (www.dji.com/{page_path}/specs, keyed_list — the
+    # action_cam clone of the ('dji','gimbal') surface). page_path is DJI's
+    # product slug (SKU slug minus the 'dji-' prefix), measured 200 with the
+    # detailed-parameter keyed list 2026-08-21. Unlike GoPro's storefront, DJI
+    # publishes Sensor (sensor_size), so these card richer. Pre-rostered for the
+    # staged osmo-action-4/6 proposals so they build rich the run after they mint.
+    'dji-osmo-action-4': (
+        {'page_path': 'osmo-action-4'},
+        'https://www.dji.com/osmo-action-4/specs',
+        '2026-08-21'),
+    'dji-osmo-action-5-pro': (
+        {'page_path': 'osmo-action-5-pro'},
+        'https://www.dji.com/osmo-action-5-pro/specs',
+        '2026-08-21'),
+    'dji-osmo-action-6': (
+        {'page_path': 'osmo-action-6'},
+        'https://www.dji.com/osmo-action-6/specs',
+        '2026-08-21'),
 }
 
 # A SKU whose brand HAS a surface that does not cover it. R10's gap table is
