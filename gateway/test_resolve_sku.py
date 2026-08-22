@@ -546,3 +546,54 @@ def test_route_mint_low_confidence_goes_to_review(tmp_path, queue_path, demand_p
     # No spine entry for the minted slug — low-conf never writes the spine.
     reg = skus_registry.load_registry(skus)
     assert 'canon-r5-ii' not in reg['skus']
+
+
+# --- live _generate payload + resilience (the 2026-08-22 Qwen3/schema swap) ----
+class _FakeResp:
+    def __init__(self, body):
+        self._body = body.encode("utf-8")
+    def read(self):
+        return self._body
+    def __enter__(self):
+        return self
+    def __exit__(self, *a):
+        return False
+
+
+def test_generate_sends_schema_constrained_qwen_payload(monkeypatch):
+    """The live disambiguation POST rides the verdict schema in `format` (forced
+    choice) and the Qwen3 model — the change that stops the ramble that aborted
+    the resolve batch. Guards against a regression to unconstrained output."""
+    seen = {}
+    def fake_urlopen(req, timeout=None):
+        seen["payload"] = json.loads(req.data.decode("utf-8"))
+        seen["timeout"] = timeout
+        return _FakeResp(json.dumps({"response": '{"index": 1, "confidence": 0.9, "why": "ok"}'}))
+    monkeypatch.setattr(resolve_sku.urllib.request, "urlopen", fake_urlopen)
+
+    gemma = resolve_sku.GemmaDisambiguator(client=None, timeout=99)
+    raw = gemma._generate("PROMPT")
+
+    assert seen["payload"]["format"] == resolve_sku._VERDICT_SCHEMA
+    assert "Qwen3" in seen["payload"]["model"]
+    assert seen["payload"]["options"]["temperature"] == 0.0
+    assert seen["timeout"] == 99
+    assert json.loads(raw)["index"] == 1
+
+
+def test_generate_retries_once_on_transient_timeout(monkeypatch):
+    """A single cold-load/timeout blip is retried once (the first call warms the
+    model); it must not surface as a batch-aborting error."""
+    import socket as _socket
+    calls = {"n": 0}
+    def flaky_urlopen(req, timeout=None):
+        calls["n"] += 1
+        if calls["n"] == 1:
+            raise _socket.timeout("cold load")
+        return _FakeResp(json.dumps({"response": '{"index": 0, "confidence": 1.0, "why": "warm"}'}))
+    monkeypatch.setattr(resolve_sku.urllib.request, "urlopen", flaky_urlopen)
+
+    gemma = resolve_sku.GemmaDisambiguator(client=None)
+    raw = gemma._generate("PROMPT")
+    assert calls["n"] == 2
+    assert json.loads(raw)["why"] == "warm"

@@ -116,9 +116,11 @@ def test_default_cap_is_pinned():
     throughput dial, so its value is pinned — changing it must be a deliberate
     edit here rather than a drive-by tweak. 2 -> 4 on 2026-07-27 to move toward
     the breadth gate; 4 -> 6 on 2026-08-17 (eca61dd, Lee: cards are the moat —
-    push toward critical mass). The ~20 YT attempts/card in build_card's drip
-    profile make this ~120 jittered fetches/day."""
-    assert card_factory.DEFAULT_DAILY_CAP == 6
+    push toward critical mass); 6 -> 12 on 2026-08-22 (Lee: reservoir tap — the
+    worklist backfill now feeds the drip so the queue no longer starves, double
+    throughput to drain it). The ~20 YT attempts/card in build_card's drip
+    profile make this ~240 jittered fetches/day."""
+    assert card_factory.DEFAULT_DAILY_CAP == 12
 
 
 def test_runner_appends_yt_flag(tmp_path, monkeypatch):

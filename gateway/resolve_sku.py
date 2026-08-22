@@ -50,6 +50,8 @@ one sanctioned writer).
 """
 import json
 import re
+import socket
+import urllib.error
 import urllib.request
 from pathlib import Path
 
@@ -60,10 +62,36 @@ import rebind_firewall
 import resolver_mfr_surface   # rung C (airlocked cell)
 import resolver_xconfirm      # rung D (airlocked cell)
 
-# Default eBay-candidate disambiguation model — the locked, validated checkpoint
-# (gemma4:e2b-it-qat), same tag the comparator typer uses. Single-sourced default.
-DEFAULT_MODEL = "gemma4:e2b-it-qat"
+# eBay-candidate disambiguation model. Now the on-box Qwen3-4B-Instruct-2507 —
+# the same free/local tier the demand-gate arbiter, the rung-2 slot reader, and
+# the factory judge share (phantom-ops claude/tools/forced_choice), validated on
+# the box 2026-08-21. Replaces gemma4:e2b-it-qat, which — even asked for JSON —
+# emitted a ~440-token prose ramble (~33s on this CPU box) that blew the request
+# timeout under 04:00/05:30 contention and, because a disambiguator error
+# propagates, ABORTED the whole resolve batch (the card factory's silent-dry
+# root cause, found 2026-08-22). The comparator typer still runs gemma4; migrating
+# it to Qwen3 (one resident model, zero eviction thrash) is a separate follow-up.
+DEFAULT_MODEL = "hf.co/unsloth/Qwen3-4B-Instruct-2507-GGUF:Q4_K_M"
 DEFAULT_OLLAMA_URL = "http://127.0.0.1:11434"
+# Per-call disambiguation timeout (seconds). Schema-constrained, the verdict lands
+# in ~7s warm; this is headroom for a cold-model load (~40s on first switch) plus
+# contention, not a normal-case budget. Was an inline 60s the pre-schema ramble blew.
+DEFAULT_GEMMA_TIMEOUT = 120
+
+# Forced-choice verdict schema. Rides in Ollama's `format` field: llama.cpp
+# compiles it to a decoding grammar so the model emits ONLY this object and stops
+# — exactly the shape _parse_verdict reads. This is what collapses the ramble
+# (33s -> ~7s) and makes the reply reliably parseable. Mirrors the schema-forced
+# posture of the shared forced_choice engine the rest of the box's LLM tier uses.
+_VERDICT_SCHEMA = {
+    "type": "object",
+    "properties": {
+        "index": {"type": "integer"},
+        "confidence": {"type": "number"},
+        "why": {"type": "string"},
+    },
+    "required": ["index", "confidence", "why"],
+}
 
 # Confidence at/above which a Gemma pick resolves straight through; below it the
 # product lands in review with its candidates. 0.0..1.0. Tunable; the comparator
@@ -316,10 +344,11 @@ class GemmaDisambiguator:
     """
 
     def __init__(self, model=DEFAULT_MODEL, ollama_url=DEFAULT_OLLAMA_URL,
-                 client=None):
+                 client=None, timeout=DEFAULT_GEMMA_TIMEOUT):
         self.model = model
         self.ollama_url = ollama_url
         self.client = client  # inject a mock in tests; None -> live ollama
+        self.timeout = timeout
 
     def _generate(self, prompt):
         if self.client is not None:
@@ -328,16 +357,35 @@ class GemmaDisambiguator:
             "model": self.model,
             "prompt": prompt,
             "stream": False,
-            "options": {"temperature": 0.0},
+            # Grammar-constrain the reply to the verdict schema (forced choice):
+            # Ollama compiles _VERDICT_SCHEMA to a llama.cpp decoding grammar, so
+            # the model emits ONLY {index, confidence, why} and stops. Without it
+            # the model emits a ~440-token prose ramble first (~33s on this CPU
+            # box) that blows the timeout under contention and ABORTS the whole
+            # resolve batch. Constrained: ~7s warm. num_predict bounds a runaway
+            # `why`. _parse_verdict reads this shape unchanged (verified 2026-08-22).
+            "format": _VERDICT_SCHEMA,
+            "options": {"temperature": 0.0, "num_predict": 256},
         }).encode("utf-8")
         req = urllib.request.Request(
             f"{self.ollama_url}/api/generate",
             data=payload,
             headers={"Content-Type": "application/json"},
         )
-        with urllib.request.urlopen(req, timeout=60) as resp:
-            body = json.loads(resp.read().decode("utf-8"))
-        return body.get("response", "")
+        # Retry once on a transient network/timeout blip (a cold-load spike, a
+        # momentary Ollama hiccup): the first call warms the model, the retry
+        # lands. A second failure propagates — a real outage is not a per-call
+        # routing decision, and re-raising keeps the resolve pass's existing
+        # "abort the batch on a live-service outage" contract intact.
+        last_err = None
+        for attempt in (1, 2):
+            try:
+                with urllib.request.urlopen(req, timeout=self.timeout) as resp:
+                    body = json.loads(resp.read().decode("utf-8"))
+                return body.get("response", "")
+            except (urllib.error.URLError, socket.timeout, TimeoutError) as e:
+                last_err = e
+        raise last_err
 
     def pick(self, target, candidates):
         if not candidates:
