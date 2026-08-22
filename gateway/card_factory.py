@@ -69,11 +69,15 @@ EXIT_ENRICH_PARTIAL = 6
 # authoring the facet, not better sourcing.
 EXIT_CATEGORY_UNRESOLVED = 7
 
-DEFAULT_DAILY_CAP = 6           # cards/day. History: 12 until 2026-07-07, then
+DEFAULT_DAILY_CAP = 12          # cards/day. History: 12 until 2026-07-07, then
                                 # 2 (quality-first reframe), then 4 on
                                 # 2026-07-27, then 6 on 2026-08-17 (Lee: cards
                                 # are the moat — push toward critical mass now
-                                # that enrich is fixed and builds complete). The
+                                # that enrich is fixed and builds complete), then
+                                # 12 on 2026-08-22 (Lee: reservoir tap — the
+                                # 1194-deep worklist backfill now feeds the drip,
+                                # so the queue no longer starves; double throughput
+                                # to drain it, weed post-build at /admin). The
                                 # cap IS the politeness budget, not a throughput
                                 # target — the drip profile spends ~20 YT fetch
                                 # attempts per card (see build_card's PROFILES),
