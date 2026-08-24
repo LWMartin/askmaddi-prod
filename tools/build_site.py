@@ -1162,6 +1162,28 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
     return json.dumps(obj, indent=2).replace("</", "<\\/")
 
 
+# ─── schema.org BreadcrumbList JSON-LD ────────────────────────────────────────
+# A second, orthogonal structured-data item: the Home -> product trail. Both
+# nodes are REAL served pages (no invented category page — that would be the
+# same result-picking dishonesty the ratings markup refuses), so the trail is
+# honest. Answer engines and SERP breadcrumbs read it for page context; it costs
+# nothing and asserts nothing we don't display. Emitted in its own <script>, so
+# the Product item and its tests are untouched.
+def breadcrumb_jsonld(card, canonical_url):
+    ident = card["identity"]
+    obj = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home",
+             "item": abs_url("/")},
+            {"@type": "ListItem", "position": 2, "name": ident["display_name"],
+             "item": canonical_url},
+        ],
+    }
+    return json.dumps(obj, indent=2).replace("</", "<\\/")
+
+
 def render_page(card, image_url=None):
     ident = card["identity"]
     name = ident["display_name"]
@@ -1276,6 +1298,7 @@ def render_page(card, image_url=None):
         if (asof_human and has_used_band) else ""
     )
     jsonld = schema_org_jsonld(card, canonical, img_url, meta_desc)
+    breadcrumb_ld = breadcrumb_jsonld(card, canonical)
     twitter_card = "summary_large_image" if img_url else "summary"
 
     # Share block (maddi-distribution: humans post, machines only draft). The
@@ -1354,6 +1377,9 @@ def render_page(card, image_url=None):
   {f'<meta name="twitter:image" content="{esc(abs_url(img_url))}">' if img_url else ''}
   <script type="application/ld+json">
 {jsonld}
+  </script>
+  <script type="application/ld+json">
+{breadcrumb_ld}
   </script>
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/css/maddi.css">

@@ -401,6 +401,28 @@ def test_jsonld_no_offer_when_bands_empty():
     assert "offers" not in obj  # Sigma-style gating carries into markup
 
 
+def test_breadcrumb_jsonld_is_home_then_product():
+    from build_site import breadcrumb_jsonld
+    obj = _json.loads(breadcrumb_jsonld(_seo_card(), "https://askmaddi.com/cards/x/")
+                      .replace("<\\/", "</"))
+    assert obj["@type"] == "BreadcrumbList"
+    items = obj["itemListElement"]
+    assert [i["position"] for i in items] == [1, 2]
+    assert items[0]["name"] == "Home"
+    assert items[1]["item"] == "https://askmaddi.com/cards/x/"
+    # honesty: only real served pages in the trail — no invented category node
+    assert len(items) == 2
+
+
+def test_card_page_emits_two_jsonld_blocks():
+    # Product + BreadcrumbList, each in its own script (both valid JSON-LD)
+    page = render_page(_seo_card())
+    blocks = _re.findall(r'<script type="application/ld\+json">\n(.*?)\n  </script>',
+                         page, _re.S)
+    types = {_json.loads(b.replace("<\\/", "</"))["@type"] for b in blocks}
+    assert {"Product", "BreadcrumbList"} <= types
+
+
 def test_asof_renders_only_with_band_and_date():
     with_both = render_page(_seo_card(bands={"pre_owned": 400.0},
                                   price_updated_at="2026-06-10T15:50:21+00:00"))
