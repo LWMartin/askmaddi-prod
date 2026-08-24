@@ -1706,6 +1706,7 @@ def load_cards(args):
 
 ASIN_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "asin_registry.json"
 EBAY_EPID_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "ebay_epid_registry.json"
+HERO_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "hero_images.json"
 
 
 def apply_asin_registry(cards):
@@ -1788,6 +1789,35 @@ def apply_ebay_epid_registry(cards):
         pricing = card.setdefault("pricing", {})
         if not pricing.get("ebay_epid"):
             pricing["ebay_epid"] = epid
+    return cards
+
+
+def apply_hero_registry(cards):
+    """Overlay a clean product photo (Wikipedia/Commons) onto each card's hero.
+
+    The de-eBay pass. 24 of 25 cards front an i.ebayimg.com listing thumbnail;
+    nearly every body has a CC-BY-SA lead photo on Wikipedia. The durable hero
+    lives in data/hero_images.json (keyed by card_id, stamped by phantom-ops
+    stamp_wikipedia_hero) and is re-applied here at build, same rebuild-survival
+    rationale as apply_ebay_epid_registry. Written to identity.image_hero, which
+    render_page already prefers over identity.image_thumb — so a stamped card
+    shows the clean shot and an unstamped one keeps its eBay thumb (correct
+    degrade, not a gap). A card already carrying its own image_hero wins.
+    """
+    try:
+        reg = json.loads(HERO_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cards  # registry optional; absence keeps prior (eBay-thumb) behavior
+    heroes = reg.get("heroes", {})
+    for card in cards:
+        entry = heroes.get(card.get("card_id"))
+        url = entry.get("url") if isinstance(entry, dict) else None
+        if not url:
+            continue
+        identity = card.setdefault("identity", {})
+        if not identity.get("image_hero"):
+            identity["image_hero"] = url
+            identity["image_hero_source"] = entry.get("source") or "wikimedia_commons"
     return cards
 
 
@@ -2274,6 +2304,7 @@ def main():
     apply_asin_registry(cards)
     apply_ebay_epid_registry(cards)
     apply_spine_gtins(cards)
+    apply_hero_registry(cards)
 
     written = []
     for card in cards:

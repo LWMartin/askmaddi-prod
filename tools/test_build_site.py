@@ -319,6 +319,36 @@ def test_apply_spine_gtins_merges_from_spine(tmp_path, monkeypatch):
     assert "gtin" not in cards[1]["pricing"]
 
 
+def test_apply_hero_registry_overlays_clean_photo_over_ebay(tmp_path, monkeypatch):
+    import build_site as bs
+    reg = tmp_path / "hero_images.json"
+    reg.write_text('{"heroes": {'
+                   '"sony-a1": {"url": "https://upload.wikimedia.org/x/SONY_ILCE-1.jpg", '
+                   '"source": "wikimedia_commons"}}}')
+    monkeypatch.setattr(bs, "HERO_REGISTRY_PATH", reg)
+    cards = [
+        {"card_id": "sony-a1",
+         "identity": {"image_thumb": "https://i.ebayimg.com/x.jpg"}},   # eBay -> overlaid
+        {"card_id": "canon-r5",
+         "identity": {"image_hero": "https://own.example/keep.jpg"}},    # already has hero -> kept
+        {"card_id": "unknown-card", "identity": {}},                     # not in registry -> untouched
+    ]
+    bs.apply_hero_registry(cards)
+    assert cards[0]["identity"]["image_hero"] == "https://upload.wikimedia.org/x/SONY_ILCE-1.jpg"
+    assert cards[0]["identity"]["image_hero_source"] == "wikimedia_commons"
+    assert cards[0]["identity"]["image_thumb"] == "https://i.ebayimg.com/x.jpg"  # thumb preserved
+    assert cards[1]["identity"]["image_hero"] == "https://own.example/keep.jpg"  # card wins
+    assert "image_hero" not in cards[2]["identity"]
+
+
+def test_apply_hero_registry_absent_file_is_noop(tmp_path, monkeypatch):
+    import build_site as bs
+    monkeypatch.setattr(bs, "HERO_REGISTRY_PATH", tmp_path / "does_not_exist.json")
+    cards = [{"card_id": "sony-a1", "identity": {}}]
+    bs.apply_hero_registry(cards)          # must not raise
+    assert "image_hero" not in cards[0]["identity"]
+
+
 def test_new_cta_search_is_product_scoped_not_generic_homepage():
     # The default Adorama CTA must be scoped to THIS product (search), never the
     # bare homepage short link — a generic landing kills conversion.
