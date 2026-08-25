@@ -22,20 +22,22 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 143.72
+        "pre_owned": 143.72,
+        "open_box": 779.0,
+        "refurbished": 689.99
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 23,
-      "price_updated_at": "2026-08-20T10:10:07.815035+00:00"
+      "sample_size": 31,
+      "price_updated_at": "2026-08-25T10:10:16.784815+00:00"
     },
-    "price_updated_at": "2026-08-18T01:06:15.305510+00:00"
+    "price_updated_at": "2026-08-24T02:17:37.828707+00:00"
   },
   "freshness": {
     "created_at": "2026-08-18T01:06:15.293820+00:00",
-    "last_built": "2026-08-18T01:06:15.293820+00:00",
-    "last_checked": "2026-08-18T01:06:15.293820+00:00",
+    "last_built": "2026-08-24T02:17:37.810431+00:00",
+    "last_checked": "2026-08-24T02:17:37.810431+00:00",
     "source_count": 25,
     "source_types": {
       "pro": 25
@@ -72,1290 +74,6 @@
     "similarity_available": false
   },
   "lead_axes": [
-    {
-      "axis_id": "burst_buffer",
-      "display_name": "Burst & Buffer",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 68,
-        "neu": 73,
-        "neg": 16,
-        "total": 157,
-        "sources": [
-          {
-            "source_id": "youtube-alex-luyckx-electric-avenue-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
-            "weight": 0.75,
-            "quote_excerpt": "om1 an all mechanical but compact full-featured slr nikon hit back with a good old one-two punch and banked on the power of the electro-mechanical co-pulse shutter with the release of the nikermat el this also introduced the idea of a compact slr to the nikon lineup and semi-automatic aperture…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-alex-luyckx-electric-avenue-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
-            "weight": 0.75,
-            "quote_excerpt": "your half pull out that will turn on the camera you have your double exposure allow lock and you have a nice short throw on your film release you have your shutter release button nice and big with a standard mechanical release you have your shutter speed dial with mechanical with speeds from eight…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-alex-luyckx-electric-avenue-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
-            "weight": 0.75,
-            "quote_excerpt": "one interesting thing is that nikon continued to use an analog needle style shutter speed scale for after priority metering and match needle for manual metered a continuation from the original el and it's even continued into the fm-3a the follow-up to the fm2n and fe2 once you're in the field the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "[Music] thank you [Music] foreign welcome to analog insights in today's episode my friend Jules and I do a comparative review of the Nikon fm2 and the Nikon fe2 the fm2 is a fully mechanical 35 millimeter single lens reflex camera with an unusual maximum shutter speed of 1 4 000 of a second and a…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "of its features but it comes with an electronically controlled quartz oscillator timed shutter with the same maximum shutter speed of 1 4 000 of a second but of course it makes a big difference because in this case this camera is dependent on two LR44 batteries in order to operate well in the case…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "fully mechanical camera that only takes the batteries to run the build-in light meter in this case it came with a couple of improvements so the shutter was improved and comes with eight honeycomb patterns instead of nine um shutter blades which reduces the shutter curtain travel time from a 3.6…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "one-fourth thousandth of a second maximum shutter speed and for the fe2 it was the flash synchronization speed of one 250th of a second which of course is also incredibly fast and useful as a result of that and that feature was quickly adapted to the fm2 in 1983 basically immediately after the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "shutter speed of one for a thousandth of a second but of course it also supported all the other shutter speeds down to 1 seconds plus featured above mode in general when handling the camera today you can feel the incredible manufacturing quality that went into it it's a fairly compact camera it's…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "the film Advance um with your thumb and then depressing the shutter slightly and the meter uses two silicon photodiodes which require the LR44 batteries two of them in order to operate but in the same fashion like on the Olympus om1 this is an add-on feature so you may use the camera with the light…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "with a lot of accessories and fantastic lenses available in my opinion this setup is particularly well suited for faster shooting situations like weddings fashion editorials portrait sessions faster reporters as well especially in that combination Winder and or Flash this is just amazing in both…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "this kind of feature set like an aperture priority mode a fast Winder um a fast automatic Winder and so on and still don't mind having a camera that basically needs batteries but appreciate the fast maximum shutter speed of one four thousands of a second then the fe2 is certainly worth a look as…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "so on and it has the electronically controlled shutter and so on but looking at it at Fat Face Value this is there's no rational reasoning for that these cameras are really equals and they're beautiful and in both cases they work fantastic they were also marketed a little bit different at the time…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "the case of the fe2 it is more directed at technology nerds who would appreciate all the um yeah the electronics the quartz oscillator time shutter the aperture priority mode and also the electronic accessories the TTL metering The Flash and even the data back and so on so a slightly different…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "for watching we hope you enjoyed this episode of analog insights and our comparative review of the Nikon fm2 and the Nikon fe2 two beautiful cameras that basically live up to the very same standards but one of them is comes with a mechanical shutter um and an add-on light meter and no TTL metering…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "with an aperture priority mode an electronically controlled one four thousandth of a second shutter speed and the TDL metering both have access to Fantastic lenses and accessories so really fantastic cameras that we can highly recommend taking a look at if you enjoyed this video please remember to…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cameras-cats-nikon-fe2-review-with-sample-photos-adventure-in-the-columbia-river-gorge",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5NBJ7iKrkZg",
-            "weight": 0.75,
-            "quote_excerpt": "can take another one it could take like as many as you want so then when you're done you just don't do that and you just wind it regularly also what's really nice about it is that it has aperture priority so i can choose what the aperture is and then it will automatically set the shutter speed and…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "Of course, it would not be nonsense, including a silicone diode for the exposure meter, an increased speed of Flash synchronization to 250, an LED that also informs Dedicated for the plus and minus when the exposure correction is on and also the speed up to a cu mav of a second, this seems brutal…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "Thank you very much and Thank you also for this 5014 that you It's great [Music] I look at a [Music] selfie Well the truth is that this speed of 250 seconds of Flash synchronization that I mentioned was the first camera to obtain it and this thanks to that fantastic titanium shutter that I told you…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "shooting at 4 mav of a second and I will now tell you more details about the camera in this case externally And we start as always at the top we have the iso dial the Asa the sensitivity we have for of course the rewind dial on this and at the same time it works for us to open",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "the rear door for which we have to slide this slider here is the safety so that we do not accidentally open the door And then I can lift and expose the fantastic metal shutter of this camera we close and continue and as you see we find here the exposure compensation button the button that releases…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "we have a manual function at 250 And we have the aperture priority if I put it on the dial I can work by adjusting my aperture and the camera will choose the speed automatically if I want to leave the I have to necessarily press the little central button that allows me to release it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "let's say smoother Although It also has the thread to screw a remote shutter release but it is smoother than in the previous version",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "That means that we have loaded the shutter without advancing the frame and it allows us to make multiple exposures and we can do it as many times as we want on the same photo on different photos [Music] on the back we have the cover with of course the reminder for the film And we have this cool…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "You have a shutter dial and all the speeds are uh electronic except your mechanical which is on this is 250.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Anyways, here is your shutter button that is threaded.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "So, you can use a uh shutter release cable.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "So you just advancing the shutter and not film for double exposures.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Can show you the shutter in action right here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "So now when I have batteries in the camera, you see here I can take u a one second picture 4 second pictures picture and I can also take uh 4,000 one 4,000 of a second and it's really fast.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "It's sets the shutter speed based on what aperture you have.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Actually, one I swing thing I for to say about these cameras is they actually have a shutter lock.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Uh but if you're shooting film, you're not going to do this step.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "It just the shutter sounds so good.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "needle meal needle meter I really like these as opposed to the LED readout like the LCD readouts where it says like this is your Shutter Speed 500 man that's what you got to shoot this it allows you to actually look through and go okay I can actually see the exposure change on the needle as I go…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "then what you can do is you can point your camera at the shadows and then you just literally this dial right here you just push that switch in and that will hold the beater setting for the shadows and then just point it up and then you take your photo super easy don't need to fuss around with…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "functionally it does relatively the same thing now sure we can compare tiny little details like this camera's maximum shutter speed is 1 1000th of a second and the f3s is one two thousandth of a second okay so you get an extra stop so just for fun let's compare the two both are fully metal neither…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "list one reason that I don't like this camera and that is because I have experienced one issue with it and that is that when you're shooting an app is your priority if you pointed at something that's too bright one thousandth of a second is not fast enough to capture this right then the shutter…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "go all the way down to bold or if you want to use your actual dial it goes down to 8 seconds there's also a manual mode the manual mode will be 250 of a second so if the batteries die inside you can shoot this a full manual but you only get 250 per second the cool thing about",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "long time but like I said if the batteries die you can shoot this in full manual but you'll only have 250 of a second I'm just going to go through some of the stuff on the camera now on the top of the camera you have a rewind lever which we'll talk about that in a minute you also",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "way up to 4,000 a second and now it's marked for 250 of a second in red now that is actually your flash sync speed which is incredibly high for this type of camera and also has in white M 250 which is your manual 250 of a second so you put it in that when the batteries run out",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "and you can still shoot the camera it also has an a mode now the a mode is full auto mode so depending on what aperture you're in the camera will pick your shutter speed and you can actually see the shutter speed on the left hand side inside the prism when you look for the camera search we're really",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-david-ferebee-nikon-fe2-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
-            "weight": 0.75,
-            "quote_excerpt": "In this world racing towards the mirrorless perfection, the AI enhanced images, there's something deeply, deeply grounding about the mechanical click of a film camera shutter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-ferebee-nikon-fe2-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
-            "weight": 0.75,
-            "quote_excerpt": "It was built with the uh titanium shutter that travels vertically and it got up to 14,000th of a second.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-ferebee-nikon-fe2-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
-            "weight": 0.75,
-            "quote_excerpt": "Let's talk about that fast shutter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-ferebee-nikon-fe2-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
-            "weight": 0.75,
-            "quote_excerpt": "At 1/4,000th of a second, you can shoot this thing wide open on a sunny day with no ND filter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-hancock-nikon-fe2-review-and-sample-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PF4Vhgz5ONk",
-            "weight": 0.75,
-            "quote_excerpt": "exists trade-offs a given shutter speed may require an aperture that's too narrow or too deep a film may have suitable speed but lack sufficiently fine grain photography is a hobby or a profession of compromises and the FE 2 makes very few and the compromises it makes are largely unimportant what…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-hancock-nikon-fe2-review-and-sample-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PF4Vhgz5ONk",
-            "weight": 0.75,
-            "quote_excerpt": "electronic issues and has very few of its own issues in fact bar one and it's big fe 2 bodies tend to destroy shutter leaves with a greater rate or frequency than most other cameras that's not to say that every Fe 2 is going to have a destroyed shutter but what I mean is that no Fe 2 that",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-david-hancock-nikon-fe2-review-and-sample-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PF4Vhgz5ONk",
-            "weight": 0.75,
-            "quote_excerpt": "until that last time now what I say next will sound that impressive but it is the travel speed of the shutter leaves moving from the top to the bottom of the bottom to the top of the image opening in three point three milliseconds means that to cover that full inch the leaves have to travel at…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-double-negative-nikon-fe-the-perfect-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JQVDol-FGjA",
-            "weight": 0.75,
-            "quote_excerpt": "it has a great Auto feature and yeah I know I'm a professional I should be shooting manual right auto mode is nice sometimes although the Nikon fe's Auto auto mode is basically like aperture priority because the aperture is picked on the ring so you pick the aperture and then the auto takes care of…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-double-negative-nikon-fe-the-perfect-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JQVDol-FGjA",
-            "weight": 0.75,
-            "quote_excerpt": "yet just kind of running it through its Paces one thing I did is and I made a video about this that you can go watch if you haven't seen it I did double exposures where I shot one exposure during the day and one exposure at night in two different cities and basically I shot over a roll of",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filmphotographyproject-nikon-fe2-film-photography-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
-            "weight": 0.75,
-            "quote_excerpt": "you could take it off of a and go from anywhere from bulb of course M 250 which is your default mechanical shutter speed of 1 250th of a second and then your electronic shutter speeds range all the way from 8 seconds down to 1/4 thousandth of a second one of the cool features of this camera is right",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filmphotographyproject-nikon-fe2-film-photography-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
-            "weight": 0.75,
-            "quote_excerpt": "by the film advance lever is a little tab and if you hold that down and advance the film it will wreak och the shutter but it won't advance the film so you get a double exposure well though one warning though rather than just pulling up on your film rewind lever to pop the back open there's a little",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "one of my favorite things about this camera is the tonal range that you could that the camera offers so and what i mean by that is on the exposure ring you can see all the different um shutter speeds that this camera offers when you first start buying 35 millimeter cameras especially slrs you might…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "go up to um one thousandth of a second rather than one four thousandth which really helps especially if you're shooting in bright settings so that's super helpful on that end of the spectrum but also if you look at the other side it goes actually to eight second exposures as well so if you want to…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "time and take eight second long exposures that's also super helpful and you can you know really use this camera for whatever you want not just one or the other and a lot of the beginner film cameras that you'll get into kind of won't offer that much tonal range another one of my favorite things…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "something you know with you and always be metering the light you can just look through see your shot actually there and meter the light and then you know take your shot right away and that's super beneficial especially when you're shooting street photos or you know documentary photos where you need…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "everything you know right there if you want you can one thing i like to do with the nikon fe the fe2 especially is just to set my aperture when i'm shooting street and then only worry about the shutter speed while i'm you know moving around shooting that way i'm not always worried about changing…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "the shutter speed and then focusing that way i'm only focused on shutter speed focus and then shoot right away it kind of just makes your process a bit quicker and it really helps me so this camera is really great for street photography and let's just go ahead and take a look at some of my photos…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "and do it a few times so that you make sure your film is wound up a few times i haven't done that and you open your film up again at the end of the roll and it still hasn't you know shot anything and that can just be a pain so once you've done it a few times go",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "you need to just go outside and get ready to shoot you'll set your aperture set your shutter speed according to what your light meter says on the inside of your rangefinder or your viewfinder and then after that you're ready to go alright so that's it for the nikon fe2 review this is my favorite…",
-            "witness": "reported"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "all of the shutter speeds and features that this camera has to offer okay now we're ready to install the lens so we're just going to remove the caps from here today we have the 45 millimeter f 2.8 p lens sort of a rare lens but it's a great choice for the fe2 because it's so thin so it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "there's a little bit of a red indicator there now it's at 100 and if that's the speed film you're using that's where it should be so moving in we have the rewind knob here for when the roll is complete and then we have the exposure compensation here so this silver button you press that and you're…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "seconds all the way to one four thousandth of a second which is quite fast and allows you to handle pretty much any situation um it also has if we go back here this m250th this is the mechanical shutter speed so if there are no batteries installed the camera can fire at 1 250th of a second and it'll",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "be able to do that yeah again no matter if there are batteries or not this is also the flash sync speed for this camera so if you have a flash installed that's the speed that you should use you can see that 1 250th is also in red here on the normal shutter speed dial and then we have",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "the shutter button press that once the camera's been wound the shutter fires moving on we have the shutter advance lever once the shutter has been fired pull that ready to fire again so here we have a double exposure lever so if you press that down and then wind the camera will the shutter without…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "you to do double exposures put two frames on the same frame of film so lots of creative potential there moving on to the front of the camera we have a self timer here this is a depth of field preview so you can see as i press that the aperture in the lens stops down this is the lens",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "in the middle press that and then the shutter speed dial will click back normally but yeah once you click it into a the camera will pick a shutter speed based on the aperture that you have selected so to activate the light meter in this camera we actually have to take the advanced lever and pull it…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "selected and then on the left side there is a needle that moves up and down to pick a shutter speed so because we have the camera in a mode the shutter speed that it has selected with that needle that moves up and down will be the shutter speed that the camera picks so when the camera is not",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "in a mode and we click it into the regular shutter speed range you'll see a green bar move down that is what shutter speed is currently selected so you have the black needle which tells you what shutter speed the camera would select and then you have the green bar which is what is currently…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "little knob right here so this guy in 1982 has a 1/4 thousandth of a second shutter speed guys one four thousand my kind of 3-1 mm my nikon FG 1 1000 the fp1 the predecessor to this one 1000 that's problem guys big problem for this guy right here sorry I'm in the flight path of the Phoenix Airport",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "the b-roll of it but they carved honeycomb patterns in it I assume to lighten it now the shutter titanium travels it like three milliseconds or something like that so think of the technology they had to employ to get that piece of titanium moving so fast without just flying apart right it's…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "this to the point where shutter lock up is not required there's no shutter slap that shutter is properly dampened we don't need to worry about it even at 1/4 thousandth of a second that's awesome so let me also talk to you why 1/4 thousandth of a second was probably the main selling point for this…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "let's talk about why one for thousands of a second it's so important to me and definitely one of the attributes that made it in my opinion the best Nikon film SLR ever so I shoot four hundred speed film right so I can't change my eye so it's not digital I'm at four hundred which is kind of fast",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "right especially in bright light too whatever your shutter speed is on your camera that's as fast as that thing's gonna go you can't make it go faster so if I'm already running at 400 for an ISO 400 speed film and let's say I was using the Nikon f3 my shutter speed max out at 2000 - a second",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "not only was I having to carry more equipment I was making it even more challenging to manually focus by shooting a camera they had a Mac shutter speed of 1 mm of a second you know it's the exposure triangle right ISO shutter speed and aperture and all if the two of those are fixed really all you…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "focus only on that subject the model and everything else is to be creamy blurry bokeh right or bouquet if you're in another country some other thing that bothers me I'm an American I say things like an American Nikon not Nick on bokeh not bouquet right anyway moving on so for thousandth of a second…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "just set it in that your shutters that stuck at 250 and it'll figure out the rest for you and tell you tell them your shutter speeds at 250 or ices at 400 it will tell you what aperture hopefully have been fast enough links going back across the top it has TTL flash metering and not only that it",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "can sync flash up to 250th of a second that's pretty amazing for back in the day back in 82 the four thousand shutter speed the 250 sync I mean the Nikon f3 the most famous Nikon SLR only has an 80th of a second teeth shutter speed with flash it only has a max shutter speed of 1 mm",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "a buffer I'll take a buffer everybody likes a buffer alright so we've come to covered the top deck right on off you have your threaded shutter release if you want to use a button or a shutter release for thousandth of a second shutter speed mechanically 250 TTL flash metering 1 250th of a second…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "if you do you can get a whopping three point one or two frames per second shooting but it's a minute focus camera so and can you focus atom battery's going here tripod mount you'll push this guy right here and that will release the film to enable you to rewind it and then you know your info window…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "so for all you one percenters that live in the Arctic and you're still shooting film and you're like it's too cold my battery's gonna go dead my camera won't work well for you guys FM 3a might work but for the other 99% of the population I think - is the peak - shutter speed fast flash sync speed",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "a minimum of/ 14,000 shutter speed I shoot the full range of photographic subjects and I need to be able to shoot F14 with 400 ISO film in daylight and I want to be able to do that without carrying a bunch of extra kit like ND filters just to get the shot three ideally I can get a good",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "those are the nikon fm2 1/ 14000 of a second mechanical shutter minimal electronics and the Nikon fe2 1/ 14,000 of a second shutter some Electronics but it has a nice to have with the aperture priority [Music] while the sun is just breaking the Horizon it's going to hit this mirrored octopus at the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "will really lead me one way or the other first of all on the fe2 it has aperture priority and exposure lock that's really important for quick easy photographs I know some photographers would be like aperture priority or not a real photographer whatever shooting a film camera all the time…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "that the fm2 if I wanted to do the same thing first of all it's very rudimentary it's a plus 0 minus meter readout no numbers in there and then I would have to point at the Shadows set the shutter speed okay 160th point to the mids set the shutter speed okay 125 and you get it so it's",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "a lot of turning the dial and then doing the math it's not quick and it's not informative and that was really surprising to me that I cared so much about that but I really enjoyed having that information third point this is probably the biggest thing for me both of these has/ 14,000 of a shutter…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "a second mechanical shutter speed aperture priority match stick needle metering Nikon body and I think you guys know what that camera is it is a little more expensive but I just so happen to have one back from repair and we'll make another video on that soon but I would say to close this out it's…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "way up to four thousandths of a second that was incredibly advanced in 1982 this was right at the bleeding edge of technology and it was only possible because of a very advanced very sophisticated titanium vertical shutter plane that was in there that was incredibly thin and could move from one end…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "three point three milliseconds as biblically quick and really unrivaled at the time that also allowed it to have a flash sync speed of 250 thoracic and now bear in mind that when my Fuji XT one came out in 2014 that had a flash sync speed of 180 ahthe and when I upgraded it to the X t2 which",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "it out to this first position and then you can fire the shutter and then you advance the advance that the film on with the lever in the standard way the mechanical shutter in here is also extremely advanced not just because it uses these titanium blades and has this incredibly fast movement but it…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "frames per second and that might not seem like much but bear in mind this thing is manual focus and also with film that means that you know you'll very quickly burn through a roll of 36 film for 36 pictures I wouldn't recommend shooting any of these days in burst mode why would you when modern…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "that the shutter speed should be set to in order to get that exposure correct so it not only just tells you if you're under or over but it suggests that you should put it to a sixtieth of a second or a 500th of a second in order to make that exposure correct it also on the right-hand side",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "when you're taking when you're shooting with film because you can shoot the first two in any shutter speed before you wanted on zero so with a 36 exposure film you can sometimes get maybe 38 or 39 shots so if that's important to you can do that and the mechanical only setting because this one does…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "in order to make the shutter speeds work but in this mode M 250 on this one you turn that around that will allow you to shoot mechanically with no battery at 250th of a second which is a little on the high side for everyday use especially if the lighting isn't good on the Effie you get a 90th",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "we're going to find the film advance lever which also functions as an on off switch like it does with most nikon slrs beside that we're going to find the multiple exposure lever the frame counter window the shutter release button and finally the shutter speed dial on the dial you will see the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "yellow numbers are in second increments while the white are in reciprocals meaning the white two is one half a second while the yellow two is two seconds after that you'll see the red 250 that means the highest shutter speed you can fire at flash at is 1 to 50th of a second the m250 indicates the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "you have to depress the auto lock button at the center of the shutter speed dial on top of the pentaprism is a hot shoe that supports through the lens flash metering on the left side you will find a dial where you set the film iso setting the exposure compensation and exposure compensation lock…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "rewind lever moving to the front of the camera you're going to find a lever that acts as a self timer when rotated in the counterclockwise direction and an exposure lock when pressed in the clockwise direction beside that there's a depth of field preview lever continuing on the front but moving to…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "focusing screen straight ahead the aperture window above that and the shutter speed index on the left the shutter speed needle points to what the shutter speed dial is pointing to get the proper exposure you line up the shutter speed needle and the meter needle by either adjusting the aperture or…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "in auto mode you adjust the aperture and the shutter speed will be what the meter needle is pointing to the metering was weighted 60 inside the biggest circle and 40 everything outside the biggest circle this was pretty common metering on nikon cameras until the fa came out with matrix metering…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "some different functionality but it's a very familiar form factor the next thing i really love about this camera is the quartz controlled shutter when you're in manual mode you have to pick one of the shutter speeds let's say like one thousandths of a second or one two thousandths of a second you…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "if you put it in auto mode or aperture priority mode and let the camera choose the shutter speed if it determines it needs a shutter speed of 1500 it'll pick it and it'll use that and so the exposure is going to be highly accurate with this camera the next thing i really love about the camera is…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "iphone to figure out what your aperture and shutter speed should be so those are the three things that pop into my mind about this camera and that and they're all like i said a little bit nitpicky another thing i love about this camera is that i've owned it for 30 years when i bought it i was living",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "for watching the video of my review of my nikon fe2 and if you liked it think about subscribing and let me know leave a comment let me know what cameras you'd like me to review in the future thanks yeah shoot is the manual this is what is this the shutter uh timer yeah see and i used it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mr-analog-dan-the-worst-nikon-camera-you-should-never-buy-nikon-fm3a-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=w8MW44AyRgw",
-            "weight": 0.75,
-            "quote_excerpt": "all the informations you need shutter speed aperture selected a warning if you engage the exposure compensation and the manual mode is the matching needle type the best one in my book and last but not least is self-timer depth of field preview and then multi-exposure switch this game Ram has all…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "This came out I believe a year after the FM which is a mechanical thing and it does have electronic shutter.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "There is an auto setting as well which is an aperture priority meaning whatever aperture you set the computing processing in here will say okay well this is the shutter speed to shoot at in order to maintain exposure for that aperture.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "Pretty simple copal shutter in here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "Uh, the only thing is you can't fire the shutter with this pressed in.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "A flash sync speed of 250, again, faster than 125.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "You also have not only a 1/2,000th of a second shutter speed, but also a 1/4,000th of a second shutter speed and a green A as opposed to auto, but it's still an aperture priority.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "Bit of a different shutter button as well.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "As noted, the top shutter speeds are significantly faster here than they are here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "And that is achieved simply with lighter weight titanium shutter blades here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "But different shutter construction is another difference.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "There are some optimizations happening and just overall improvements including but not limited to the shutter speed and of course the shutter itself.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "Minor differences of course to the shutter, minor differences of course to other things.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-the-nikon-fe2-experience",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dnoVroiejcg",
-            "weight": 0.75,
-            "quote_excerpt": "when I try to sell it I've now shot with it I got the photos developed and I wanted to make a threep part Series where I did talk about it did a video while I was shooting with it and then did this review video um however as per us I didn't record much while I was shooting it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "same frame got the shter speed dial and the Fe here is an aperture priority camera so you can use it in a semi-automatic way where you set the aperture on the lens and the camera will automatically set the shooter speed you can also unlock that option pressing the little button you can move the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "settings so you can use it manually so you can set the shooter speed on the aperture and in that mode you can set between 8 and 1/ 14,000 of a second now when it's in aperture priority mode and the camera setting the should speed uh the should speed are stepless between that range you've also got…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "settings that don't use the battery for firing the shoter and one is m250 which is 1 1250s per second and you've also got B so when you hold the shter down in B it keeps the shutter open until you release the button in the center you've got the flash hot shoe and on the fe2 it features TTL",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "and it moves Little Red Dot you set it to the film speed in use in this case generally uses ASA 200 looking at the back of the camera you got the serial number you've got a memo holder holding a piece of the cart of the film so you know you got film fitted and what speed and how",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "many exposures the front you've got the strap lugs you've got the name plate you've got a depth of field preview button so when you hold that down operates the lever inside and it closes down the lens of the working aperture so you can check the depth of field you've got a self timer exposure lock…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "way that functions is it should just cocked set the self timer press the button it automatically puts the mirror in lock up mode while it counts down and when it reaches the end of 10 seconds it will farther shutter electronically so you can also use that as a exposure lock lever and the way that…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "mode all the way down to 8 seconds uh and on a say You' got two needles the green needle which shows the setting on the shutter dial so in a the green needle is in a and you've got a black needle which is the actual reading the exposure and that will show the shutter speed that the camera",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "is for the rewind release button so you press that up it pushes the pin up so it pushes the button on the bottom of the camera so you can rewind the film manually it doesn't do it automatically the deot drive you've got the actual Advanced crank itself and that is the actual little button that…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "on the top you have a um snc mode pressing the little button rotate this dial set it to single or continuous firing and in continuous firing it can produce a maximum of 3 and a half frames per second uh that's if you got a shoter speed of one 1 125s of second or more got another tripod socket",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "press the shutter and you let go and press again find another shot continuous mode it fires continuously it's able to 3 and a half frames per second it's quite fast so it's a very nice motor drive for the F2 works very well and although it makes a bit bulkier get a nice feel puts the button in a",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "push that lever in and then the head can be set in different click stops you can actually use bounce Flash on the back you've got different settings automatic setting A1 A2 where you set the aperture according to the film speed you've got and then obviously you get the distes uh of The Flash rang…",
-            "witness": "reported"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "the shot to let you know that the shot is probably underexposed now if you switch the flash on and you set it to a mode you can test if the flash output is sufficient because you can do a test shot by pressing that button so let's say for example you want to try a bounce shot and you",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "wanted to set f5.6 which is A2 so it A2 on the botton and the light sensor is at the front here so I've got that bouncing off the seal in and I can fire The Flash and it didn't flicker after the shot so it's sufficient so there's sufficient power to parot at that so then you could flick",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "the shutter button halfway down on the camera the LED light comes on in the viewfinder as well to tell you that flash is ready and then you can just uh obviously take your shot and that's recharged very quickly cuz I've got the flash paint uh moving forward so there you go that's the fe2 with the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "The shutter speed dial sits right on top, easy to reach.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "It had a vertical travel metal shutter with speeds from 8 seconds to 1/ 1,000th of a second plus bulb, flash sync at 125th.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "That meant you could set your aperture and the camera would choose the shutter speed for you.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "Because the FE uses an electronic shutter, in auto mode, it can actually go beyond the mark speeds.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "And unlike mechanical cameras where shutter speeds are locked to fixed steps, the FE's auto mode delivers exact values.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "If the meter reads 1354, the shutter fires at 1354.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "the shutter speed the camera recommends, the speed you've set, and whether you're under or over by a stop or two.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Um so, if you prefer to use uh your fully manual mode, you can choose your shutter speed right over here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Um So, that's This is your shutter speed dial.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "And uh it also features a 250th of a second mechanical shutter and a bulb shutter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Um the shutter speed sync is 250, which is decent for a camera in that age.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "You just push the outer ring a bit, and then you can rotate uh this little indicator to the desired shutter speed.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "As you can see, it have a titanium shutter, which raised the shutter speed from 1/1000 on a original FE to 1/4000 of a second, um which is quite an achievement.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "That's all you have to do with this camera because otherwise the meter might not work and the shutter might not even Excuse me, the shutter might not even fire.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "So, make sure you clean the terminals really nice otherwise the meter might not meter and the shutter might not even fire.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Um The FE2 compared to one as I just mentioned earlier is the shutter speed has increased with a new titanium shutter.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "If you are looking for the FM and FM2 models the same thing FM had the originally 1/1000 of a second maximum shutter speed and the FM2 had 1/4000 of a second second.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "And I believe the FM2 actually started using the aluminum shutter.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "So, to a point that the shutter might get damaged.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "So, you might want to avoid those models because the shutter might not last as long.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Um and I determined that little damage in the front of the shutter is not going to affect the performance because on the back there's no kinks and there's no light leak on the shutter.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "And the shutter itself still fires accurately.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "I have the camera either in manual with flash or automatic mode with aperture priority uh when I'm shooting outdoors.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-three-minute-pro-nikon-fe-in-3-minutes",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=G_jlzi0dIlw",
-            "weight": 0.75,
-            "quote_excerpt": "right then the neck or Neffe in three minutes this is it it's the Nick on FA it was released in 1978 it has auto and automatic exposure control shutter speeds eight seconds to a thousandth it's based on the Nikon FM body and it is built like a tank it's really solid and this was made back in the",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-three-minute-pro-nikon-fe-in-3-minutes",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=G_jlzi0dIlw",
-            "weight": 0.75,
-            "quote_excerpt": "and that would advance the film three and a half frames per second this one here is for rewinding the film load in the film is simple if you look at my other video for the neck on am it shows you how to load films with the these old 35 millimeter Nikon SLRs the neck on Fe is a",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 24,
-        "polarity_agreement": 0.583,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.102,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "This came out I believe a year after the FM which is a mechanical thing and it does have electronic shutter.",
-        "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-        "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI"
-      }
-    },
     {
       "axis_id": "mount_compat",
       "display_name": "Mount Compatibility",
@@ -2393,282 +1111,6 @@
       }
     },
     {
-      "axis_id": "evf_lcd",
-      "display_name": "EVF & LCD",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 15,
-        "neu": 13,
-        "neg": 3,
-        "total": 31,
-        "sources": [
-          {
-            "source_id": "youtube-alex-luyckx-electric-avenue-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
-            "weight": 0.75,
-            "quote_excerpt": "so you can make your ev adjustments from plus two to minus two stops with third stop increments you have your shutter you have your film rewind knob here and your lock that is pull up to release the film back on the back you have your big bright viewfinder your film memo holder and your serial…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-alex-luyckx-electric-avenue-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
-            "weight": 0.75,
-            "quote_excerpt": "that everyone mentions about the fe2 is the viewfinder and the right i would actually say that the fe2 viewfinder is as bright as my modern minolta maxim 9.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "have to um it runs perfectly fine without it and the measured exposure is displayed on the right side of the viewfinder here by a three vertically arranged LEDs with a plus zero and minus indicator and the light meter is a 60 to 40 counterweight counter weighted meter um the differences between the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "needle exposure control system with two needles pointing at a vertical shutter speed scale on the left side of the viewfinder to indicate the readings of the built-in again 60 to 40 percent standard weighted light meter versus the actual camera settings so it basically suggests to change it using…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "happening here and then you remember ah there was something about it um furthermore when wearing glasses on my case um I had no problem at all seeing the light meter reading on the right side with the fm2 in the viewfinder being a left eye shooter there was not no problem at all but in the case of…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "viewfinder that helps us have the most correct visualization of what we are focusing on",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cams-more-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
-            "weight": 0.75,
-            "quote_excerpt": "the truth is that it is a joy look through this viewfinder serial number I'm going to the front and I'll continue telling you here we have the fe2 model we have the brand logo as always Nikon we have the timer in this case we have a button to check the depth of field yes We close it there",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Um, the viewfinder, which uh I'm going to take a picture and show you.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Uh, but the viewfinder is so bright and the light meter is also really simple to use.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "I think this has like a 93% coverage of the frame, the viewfinder.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Basically, what that means is uh what you see in the viewfinder is 93% of what the picture is going to be.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "reviews is the viewfinder is literally the window through which you make all of your photos it's extremely important if it's dim if it's bright if it's easy to see if it's sharp if the meter in there is nice to use and I'm happy to say that this is excellent It's only one who shot on a Nikon SLR",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "this is probably old news to you but when you turn the aperture ring you can physically see through the viewfinder what aperture you're on I can actually see I'm looking at Lens so the viewfinder is a breeze to look through but then also the meter is really nice it's got a wonderful little needle…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "and the viewfinder will block out the shutter will be open and the only way to fix that is to move the shutter speed dial over to the manual shutter speed M90 and then the shutter will close but essentially you've missed that moment You've Lost That frame so uh it's a pretty minor issue because as…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "now whenever you buy a camera always check inside for mold dust and check the backplate if that's really bad and scratched up it means it had a really hard life now the viewfinder on this is obviously an optical viewfinders a prism in there now on the left-hand side you will actually get the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filmphotographyproject-nikon-fe2-film-photography-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
-            "weight": 0.75,
-            "quote_excerpt": "through the Pentax k1000 or the Canon a1 program they were just a little bit paler than what you saw through the Nikon Fe - you've got your viewfinder there you got your hot shoe up top you've got a shutter speed wheel which you can either leave on automatic exposure which is aperture priority…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-filmphotographyproject-nikon-fe2-film-photography-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
-            "weight": 0.75,
-            "quote_excerpt": "tab here you have to shift to the side which will unlock it and then you can pull similar to the k1000 the nikon fe 2 features a light meter inside the viewfinder using not one but two meters or needles I should say what is that well there's one needle that moves with the different apertures and…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filmphotographyproject-nikon-fe2-film-photography-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
-            "weight": 0.75,
-            "quote_excerpt": "needle that moves with the different shutter speeds that you select so along the left side of the viewfinder you see the two needles and your goal is to make them match up so pick a shutter speed that you like and then adjust the aperture until they meet the needles match up super sharp images very…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-filtergrade-nikon-fe2-review-the-best-nikon-film-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
-            "weight": 0.75,
-            "quote_excerpt": "the fact that there's actually a built-in light meter when i first started out i knew that there was a light meter in there because when you look through the viewfinder you can see along the left side of the screen the different you know lighting patterns that are associated with the shutter speeds…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "be a canister of film here let me grab that bring it to your lab for processing one thing about the back of the camera aside from the viewfinder you have a memo holder here so you can put the side of a box for film in there just to remind you what film you have so this has been",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "over the first so you can get some really interesting effects from that there are different focusing screens available in this is the standard one which has one of the little things that kind of slide into position to help you find focus there's one in there with a grid if you've got one leg longer…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "haven't got the contact lenses in you will struggle to you have to sort of move around quite a lot and you do that thing then of the glass is mashing up against your face it's a big and highly magnified viewfinder with a 8.8 six times magnification but it's only a 93% field-of-view coverage and…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "side of the screen it has two needles that go up and down and they float up and down to tell you whether or not you are correctly exposed but it does two things instead of just saying go up or go down a little bit what it does is it actually gives you an indicator of what it thinks",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "instead of having an LCD screen if you could have a little tiny window that you could look through it's just delightful there is as well as a hot shoe on there there's a little sink connector there for plugging in studio lights and things this hot shoe is pretty sophisticated at the time this was…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-mdavis472000-nikon-fe2-camera-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
-            "weight": 0.75,
-            "quote_excerpt": "lens release button and flash synchronization terminal taking a look at the bottom of the camera you'll find the film rewind button pressing this button releases the spool so that you can rewind the film into the canister after that we find the moto drive coupler the battery cover and the tripod…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mr-analog-dan-the-worst-nikon-camera-you-should-never-buy-nikon-fm3a-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=w8MW44AyRgw",
-            "weight": 0.75,
-            "quote_excerpt": "another cool feature about the shutter is the flashing speed of 1 over 250 so you can give it a try to fill Flash in drop daylight plus the flash has a TTL capability so if you use a dedicated flash unit you'll get TTL just like a modern day DSLR the viewfinder is bright and clear and gives you",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-nicos-photography-show-nikon-fe2-alternatives-10th-most-popular-film-camera-of-2019",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=tldYiEWsi4U",
-            "weight": 0.75,
-            "quote_excerpt": "of the OM line is the viewfinder is really bright yeah really big and they are actually smaller even though they very much look the same but you see them from the top and they're quite small this one's carrying a lens but remember the Olympus om line has the shutter speeds on the bayonet so it's a…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "flash through the lens flash so you've got extra Contex there contacts there to the left of the top plate you've got an exposure compensation dial you pressing this little button and then you can move that dial to plus to minus two stops and a nice feature is when you look through the vi viewfinder…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "The viewfinder gave about 93% coverage, bright and clear, and the big feature, aperture priority mode.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "And it have a light meter um in the viewfinder that meters.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-gizmo-garage-nikon-fe2-35mm-analog-film-camera-review-used-buying-tips",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
-            "weight": 0.75,
-            "quote_excerpt": "Uh over here is your standard viewfinder.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 16,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.129,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "The viewfinder gave about 93% coverage, bright and clear, and the big feature, aperture priority mode.",
-        "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-        "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo"
-      }
-    },
-    {
       "axis_id": "build",
       "display_name": "Build Quality",
       "axis_type": "lead",
@@ -3501,101 +1943,6 @@
       "notes": []
     },
     {
-      "axis_id": "stabilization",
-      "display_name": "Stabilization",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 4,
-        "neu": 5,
-        "neg": 0,
-        "total": 9,
-        "sources": [
-          {
-            "source_id": "youtube-analog-insights-nikon-fm2-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
-            "weight": 0.75,
-            "quote_excerpt": "was unheard of at the time and the fe2 also introduced the feature to minimize the mirror shock vibration effects using a rotating flywheel plus inertial Mass stamping system and this made a mirror lockup feature obsolete we took the fm2 out on a photo walk and it was a book I'm in on a pretty…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "You see how the aperture stops down?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "the shot i beliefs again pull forward and ready to go and then so i know i've actually got a shot ready in the camera and my thumb just resting like that and I find that quite comfortable that actually helps support the camera quite a bit that's a nice part about this and again there's no film…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "move this around and then you can get exposure compensation to either over expose or under expose your shot depending on the scene and what you want to do creatively so moving past the prism here and the hot shoe we get to the shutter speed dial so the fe2 has quite a wide range of shutter speeds…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kamerastore-how-to-use-nikon-fe2-kamerastore",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
-            "weight": 0.75,
-            "quote_excerpt": "doesn't stop down at all but if i turn it all the way to 22 and fire the shutter you should be able to see yep the aperture closes down almost all the way so that controls how much light is let in when the shutter is fired it also controls depth of field so a wider aperture and smaller",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "in your ISO here Evie here this is also your film rewind flipping it down to the front is pretty straightforward we can remove our lens here we have a timer pull it to the right run to your spot 10 seconds later it's gonna snap a shot it's a dual purpose timer as well I can just push my",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matt-widgery-photography-the-iconic-nikon-fe2-was-this-nikons-best-manual-focus-slr",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
-            "weight": 0.75,
-            "quote_excerpt": "system which eliminates the need for mirror lock-up this again at the time was revolutionary and meant that you could shoot handheld at very low speeds it was a very nice design at the time and was really over engineered in many respects to this camera it lost out in market sales to the rivals from…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "few functions first of all when you pull it to the standoff position it unlocks the shooter button and then you can use it to advance the film at that point as well it the shutter ready for firing at that same time it also advances the frame counter now to the right of that advanced Leever you've…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-samsung9alaxy-nikon-fe2-35mm-film-camera-md-12-sb-15-overviewreview",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
-            "weight": 0.75,
-            "quote_excerpt": "would point the camera at the subject that you want expose in correctly off press the shutter button down and then you need to hold in the lever at that same point and then it will hold that exposure so you can recompose and take the shot with those settings also inside the mirror box is the…",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 7,
-        "polarity_agreement": 0.571,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.222,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
       "axis_id": "weight",
       "display_name": "Weight & Portability",
       "axis_type": "detail",
@@ -3675,116 +2022,6 @@
       "notes": []
     },
     {
-      "axis_id": "autofocus_body",
-      "display_name": "Autofocus",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 3,
-        "neu": 1,
-        "neg": 0,
-        "total": 4,
-        "sources": [
-          {
-            "source_id": "youtube-darryl-carey-a-quick-look-at-a-nikon-legend-nikon-fe2-35yrs-old-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
-            "weight": 0.75,
-            "quote_excerpt": "what I do with my likers you can set up your focus point in there and you can set up your hyper focal length which is basically setting up your aperture to roundabout f11 and put the actual lens on about two meters and anything from around about one meter to four meters will be in focus and then you",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-is-this-the-best-film-camera-ever-made",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
-            "weight": 0.75,
-            "quote_excerpt": "finger right there and that's how I lock exposure when I'm in aperture priority set this guy to a focus a lot my exposure recompose and bam it's going to maintain those so if it's the subjects in like a darker area locking that exposure for that recompose will expose some of the brighter area if I…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mr-analog-dan-the-worst-nikon-camera-you-should-never-buy-nikon-fm3a-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=w8MW44AyRgw",
-            "weight": 0.75,
-            "quote_excerpt": "now it would be a hit but it's not only about looks it's also about performance the first feature that's worth noticing is the shutter speed I mean it goes up to one over four thousand use a wide aperture lens you'll be able to use it in broad daylight to get bokeh that's definitely a plus in my…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-filmmakers-the-nikon-fe-a-timeless-classic-that-for-me-is-still-the-best-buy-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
-            "weight": 0.75,
-            "quote_excerpt": "In many ways, the FE represents the point where manual focus cameras reach a kind of perfection.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.75,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.25,
-        "contested": false
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "connectivity",
-      "display_name": "Connectivity",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 2,
-        "neu": 2,
-        "neg": 0,
-        "total": 4,
-        "sources": [
-          {
-            "source_id": "youtube-casual-camera-reviews-nikon-fe2-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
-            "weight": 0.75,
-            "quote_excerpt": "Here you have your uh see this is a flash sync port.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-david-ferebee-nikon-fe2-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
-            "weight": 0.75,
-            "quote_excerpt": "And combined with the 1 250th flash sync, even now that's it beats most digital cameras till this day.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-is-the-difference-worth-hundreds-of-dollars-nikon-fe-vs-nikon-fe2",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
-            "weight": 0.75,
-            "quote_excerpt": "A selftimer, lens release, flash sync port, aperture preview window.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-romping-bronco-the-nikon-fe2-experience",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dnoVroiejcg",
-            "weight": 0.75,
-            "quote_excerpt": "know the obvious oh you have a camera with you so kind of a moot point because I do think it you know offers a lot in terms of uh functionality that those other systems don't have higher flash sync speed and overall like a really uh solid construction but my minor points would be the onoff switch…",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.25,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
       "axis_id": "image_quality",
       "display_name": "Image Quality",
       "axis_type": "detail",
@@ -3838,100 +2075,6 @@
         "contested": false
       },
       "notes": []
-    },
-    {
-      "axis_id": "sensor_performance",
-      "display_name": "Sensor Performance",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 2,
-        "neu": 1,
-        "neg": 1,
-        "total": 4,
-        "sources": [
-          {
-            "source_id": "youtube-cody-mitchell-the-film-camera-you-should-actually-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
-            "weight": 0.75,
-            "quote_excerpt": "camera is how well the aperture priority and the exposure lock work on it what that means if you're not familiar with those terms is that I can choose the aperture right and then the camera will do the rest but for those instances where you want to make sure that you're metering for the Shadows…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-double-negative-nikon-fe-the-perfect-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JQVDol-FGjA",
-            "weight": 0.75,
-            "quote_excerpt": "realized over time just wasn't accomplishing the goals for my work that I wanted and I used to carry around a Nikon D800 and a d850 so I was pretty dedicated to just carrying around the highest resolution camera possible at the time but over time I realized that sharpness and that high resolution…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-double-negative-nikon-fe-the-perfect-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=JQVDol-FGjA",
-            "weight": 0.75,
-            "quote_excerpt": "is one of my favorites it's not a double exposure but I like how clean it looks I feel like the lamography color 92 really handled the Shadow super well and it just it's clean and nice light despite it being at like noon or something it was like midday when I shot this film just because I wanted to",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-mac-shoots-film-nikon-fe2-vs-nikon-fm2-the-ultimate-film-camera-showdown",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
-            "weight": 0.75,
-            "quote_excerpt": "a match stick needle readout and as you point at subjects the needle is constantly moving to let you know what the exposure is for that scene and if you want to you know evaluate the Shadows the mids and the highs and then do a average to determine what you should set your exposure to that's so…",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.333,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.5,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "video_capability",
-      "display_name": "Video Capability",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 1,
-        "neu": 1,
-        "neg": 0,
-        "total": 2,
-        "sources": [
-          {
-            "source_id": "youtube-nicos-photography-show-nikon-fe2-alternatives-10th-most-popular-film-camera-of-2019",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=tldYiEWsi4U",
-            "weight": 0.75,
-            "quote_excerpt": "of like functions in it has and then there's the Nikon F a which should be very much the same in terms of yeah quality if you want to hear more information about this camera store data top 10 cameras or 2019 there's a whole article link below we made a video going through them but this would be…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-romping-bronco-the-nikon-fe2-experience",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dnoVroiejcg",
-            "weight": 0.75,
-            "quote_excerpt": "this was all autom metered too and I think it did a pretty good job I'm shooting on a pretty expired roll of film but I think that there's some good detail there there's some good information that can be pulled uh here's another wide shot of the uh the 76 station on my way into work cuz that's…",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.5,
-        "contested": true
-      },
-      "notes": []
     }
   ],
   "facts": {
@@ -3949,7 +2092,7 @@
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q3341827",
-        "fetched_at": "2026-08-18T01:06:13.017363+00:00",
+        "fetched_at": "2026-08-24T02:17:35.628390+00:00",
         "license": "",
         "reason": "",
         "extraction": null
@@ -3958,15 +2101,8 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Reviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims. Coverage of mount compatibility is mostly neutral: 39% positive, 57% neutral, 4% negative across 49 claims.",
+    "consensus_paragraph": "Reviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims.",
     "aspect_breakdown": [
-      {
-        "aspect": "burst_buffer",
-        "pos": 68,
-        "neu": 73,
-        "neg": 16,
-        "total": 157
-      },
       {
         "aspect": "mount_compat",
         "pos": 19,
@@ -3987,13 +2123,6 @@
         "neu": 12,
         "neg": 2,
         "total": 34
-      },
-      {
-        "aspect": "evf_lcd",
-        "pos": 15,
-        "neu": 13,
-        "neg": 3,
-        "total": 31
       },
       {
         "aspect": "build",
@@ -4024,13 +2153,6 @@
         "total": 14
       },
       {
-        "aspect": "stabilization",
-        "pos": 4,
-        "neu": 5,
-        "neg": 0,
-        "total": 9
-      },
-      {
         "aspect": "weight",
         "pos": 4,
         "neu": 3,
@@ -4038,39 +2160,11 @@
         "total": 7
       },
       {
-        "aspect": "autofocus_body",
-        "pos": 3,
-        "neu": 1,
-        "neg": 0,
-        "total": 4
-      },
-      {
-        "aspect": "connectivity",
-        "pos": 2,
-        "neu": 2,
-        "neg": 0,
-        "total": 4
-      },
-      {
         "aspect": "image_quality",
         "pos": 3,
         "neu": 1,
         "neg": 0,
         "total": 4
-      },
-      {
-        "aspect": "sensor_performance",
-        "pos": 2,
-        "neu": 1,
-        "neg": 1,
-        "total": 4
-      },
-      {
-        "aspect": "video_capability",
-        "pos": 1,
-        "neu": 1,
-        "neg": 0,
-        "total": 2
       }
     ],
     "issue_clusters": [],
@@ -4099,7 +2193,7 @@
   },
   "axis_roles": {
     "computed_by": "axis_roles@1",
-    "most_discussed": "burst_buffer",
+    "most_discussed": "mount_compat",
     "highest_rated": "build",
     "lowest_rated": "battery_life"
   },
@@ -4112,7 +2206,7 @@
       "url": "https://www.youtube.com/watch?v=mW3p0RUytco",
       "title": "Electric Avenue | Nikon FE2 Review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302783+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827538+00:00",
       "weight": 0.75
     },
     {
@@ -4123,7 +2217,7 @@
       "url": "https://www.youtube.com/watch?v=qlHp0MMT4Hs",
       "title": "Nikon FM2 & Nikon FE2 Review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302796+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827557+00:00",
       "weight": 0.75
     },
     {
@@ -4134,7 +2228,7 @@
       "url": "https://www.youtube.com/watch?v=5NBJ7iKrkZg",
       "title": "Nikon FE2 Review with Sample Photos | Adventure in the Columbia River Gorge",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302800+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827561+00:00",
       "weight": 0.75
     },
     {
@@ -4145,7 +2239,7 @@
       "url": "https://www.youtube.com/watch?v=drKrEyS_4jI",
       "title": "Nikon FE2 - review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302803+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827564+00:00",
       "weight": 0.75
     },
     {
@@ -4156,7 +2250,7 @@
       "url": "https://www.youtube.com/watch?v=O2-GyPeL2ZQ",
       "title": "Nikon fe2 review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302805+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827567+00:00",
       "weight": 0.75
     },
     {
@@ -4167,7 +2261,7 @@
       "url": "https://www.youtube.com/watch?v=DUDKwVtj0RI",
       "title": "The Film Camera You Should Actually Buy",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302808+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827570+00:00",
       "weight": 0.75
     },
     {
@@ -4178,7 +2272,7 @@
       "url": "https://www.youtube.com/watch?v=sH8DU-rGtuE",
       "title": "A quick look at a Nikon Legend | Nikon FE2 | 35yrs old | 4K",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302810+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827573+00:00",
       "weight": 0.75
     },
     {
@@ -4189,7 +2283,7 @@
       "url": "https://www.youtube.com/watch?v=L1Ul8qb6eEQ",
       "title": "NIKON FE2 IN 2025",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302813+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827576+00:00",
       "weight": 0.75
     },
     {
@@ -4200,7 +2294,7 @@
       "url": "https://www.youtube.com/watch?v=PF4Vhgz5ONk",
       "title": "Nikon FE2 Review and Sample Photos",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302815+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827579+00:00",
       "weight": 0.75
     },
     {
@@ -4211,7 +2305,7 @@
       "url": "https://www.youtube.com/watch?v=JQVDol-FGjA",
       "title": "Nikon FE: The Perfect Camera",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302818+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827582+00:00",
       "weight": 0.75
     },
     {
@@ -4222,7 +2316,7 @@
       "url": "https://www.youtube.com/watch?v=3ovnLeDVXco",
       "title": "Nikon FE2 - Film Photography Review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302820+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827584+00:00",
       "weight": 0.75
     },
     {
@@ -4233,7 +2327,7 @@
       "url": "https://www.youtube.com/watch?v=Gvw8vhPKu1s",
       "title": "NIKON FE2 REVIEW - The Best Nikon Film Camera",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302824+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827588+00:00",
       "weight": 0.75
     },
     {
@@ -4244,7 +2338,7 @@
       "url": "https://www.youtube.com/watch?v=v4yAAn6nsSQ",
       "title": "How To Use: Nikon FE2 - Kamerastore",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302829+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827590+00:00",
       "weight": 0.75
     },
     {
@@ -4255,7 +2349,7 @@
       "url": "https://www.youtube.com/watch?v=3PhmRpKEZyQ",
       "title": "Nikon FE2 - Is This the Best Film Camera Ever Made?!?!",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302833+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827593+00:00",
       "weight": 0.75
     },
     {
@@ -4266,7 +2360,7 @@
       "url": "https://www.youtube.com/watch?v=h5vUH6rl94w",
       "title": "Nikon FE2 vs. Nikon FM2: The Ultimate Film Camera Showdown!",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302838+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827596+00:00",
       "weight": 0.75
     },
     {
@@ -4277,7 +2371,7 @@
       "url": "https://www.youtube.com/watch?v=0Xd2wFRy7Z4",
       "title": "The Iconic Nikon FE2: Was this Nikon's Best Manual Focus SLR?",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302843+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827598+00:00",
       "weight": 0.75
     },
     {
@@ -4288,7 +2382,7 @@
       "url": "https://www.youtube.com/watch?v=PhvyL72aTbo",
       "title": "Nikon FE2 camera review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302848+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827601+00:00",
       "weight": 0.75
     },
     {
@@ -4299,7 +2393,7 @@
       "url": "https://www.youtube.com/watch?v=w8MW44AyRgw",
       "title": "The WORST Nikon camera you should NEVER buy (Nikon FM3a vs Nikon FE2)",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302853+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827604+00:00",
       "weight": 0.75
     },
     {
@@ -4310,7 +2404,7 @@
       "url": "https://www.youtube.com/watch?v=tldYiEWsi4U",
       "title": "Nikon FE2 Alternatives - 10th Most Popular Film Camera of 2019",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302857+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827606+00:00",
       "weight": 0.75
     },
     {
@@ -4321,7 +2415,7 @@
       "url": "https://www.youtube.com/watch?v=ilmo3b5dMwI",
       "title": "Is The Difference Worth HUNDREDS OF DOLLARS?? (Nikon FE vs Nikon FE2)",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302870+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827609+00:00",
       "weight": 0.75
     },
     {
@@ -4332,7 +2426,7 @@
       "url": "https://www.youtube.com/watch?v=dnoVroiejcg",
       "title": "The Nikon FE2 Experience",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302873+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827612+00:00",
       "weight": 0.75
     },
     {
@@ -4343,7 +2437,7 @@
       "url": "https://www.youtube.com/watch?v=IURERZMFZT8",
       "title": "Nikon FE2 35mm Film Camera, MD-12 & SB-15 Overview/Review",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302875+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827614+00:00",
       "weight": 0.75
     },
     {
@@ -4354,7 +2448,7 @@
       "url": "https://www.youtube.com/watch?v=JgJmZ-pBfxo",
       "title": "The Nikon FE: A Timeless Classic That, For Me, Is Still the Best Buy in 2026",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302878+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827617+00:00",
       "weight": 0.75
     },
     {
@@ -4365,7 +2459,7 @@
       "url": "https://www.youtube.com/watch?v=WBSpsbhSuZw",
       "title": "Nikon FE2 35mm Analog Film Camera Review & Used Buying Tips",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302880+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827620+00:00",
       "weight": 0.75
     },
     {
@@ -4376,17 +2470,17 @@
       "url": "https://www.youtube.com/watch?v=G_jlzi0dIlw",
       "title": "Nikon FE in 3 minutes",
       "publication_date": "",
-      "ingested_at": "2026-08-18T01:06:15.302882+00:00",
+      "ingested_at": "2026-08-24T02:17:37.827622+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/nikon-fe2/",
-    "reddit": "Nikon fe2\n\nReviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims. Coverage of mount compatibility is mostly neutral: 39% positive, 57% neutral, 4% negative across 49 claims.\n\nI pulled together all 25 reviews in one place: https://askmaddi.com/cards/nikon-fe2/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Nikon fe2**\nReviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims. Coverage of mount compatibility is mostly neutral: 39% positive, 57% neutral, 4% negative across 49 claims.\nAll 25 reviews in one place: https://askmaddi.com/cards/nikon-fe2/\n_(disclosure: I built this)_",
+    "reddit": "Nikon fe2\n\nReviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims.\n\nI pulled together all 25 reviews in one place: https://askmaddi.com/cards/nikon-fe2/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon fe2**\nReviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims.\nAll 25 reviews in one place: https://askmaddi.com/cards/nikon-fe2/\n_(disclosure: I built this)_",
     "og": {
       "title": "Nikon fe2 — Reviewed",
-      "description": "Reviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims. Coverage of mount compatibility is mostly neutral: 39% positive, 57% neutral, 4% negative across 49 claims.",
+      "description": "Reviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims.",
       "image": null,
       "url": "https://askmaddi.com/cards/nikon-fe2/"
     }
