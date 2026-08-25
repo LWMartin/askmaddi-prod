@@ -61,10 +61,28 @@ _CATEGORY_MAP = {
     '177853': 'support', # Tripod Heads
     '163418': 'support', # Stabilizers & Gimbals
     '30090': 'support',  # Monopods
+    # ── action cameras (video vertical) ──
+    '11724': 'action_cam', # Camcorders — where GoPro/action cams live on eBay.
+                         # The video vertical (added 2026-08) sets facet from
+                         # vertical context; mapping the precise camcorder leaf
+                         # lets the mint-path derivation agree. Generic Digital
+                         # Cameras (31388) stays 'body': an action cam listed
+                         # there is an id imprecision, which the guard reports as
+                         # a NON-BREAKING notice (facet outside the settled
+                         # body/lens/support regime), not a hard drift.
 }
 
 # The controlled buckets this module is allowed to emit (besides '' = unknown).
-CONTROLLED_CATEGORIES = ('body', 'lens', 'support')
+# body/lens/support are the SETTLED regime the eBay id authoritatively derives;
+# action_cam (and future vertical buckets) are derived by the vertical pipeline,
+# so the map is advisory there — the guard (test) hard-enforces only the settled
+# regime and reports vertical/unmapped cases as loud, non-breaking notices.
+CONTROLLED_CATEGORIES = ('body', 'lens', 'support', 'action_cam')
+
+# The regime whose facets the eBay id AUTHORITATIVELY derives. A genuine
+# disagreement WITHIN this set is a hard drift (the guard fails). A facet outside
+# it (a vertical bucket) or an unmapped id is a review notice, never a hard fail.
+SETTLED_FACETS = ('body', 'lens', 'support')
 
 
 def category_for(ebay_category_id):
@@ -97,3 +115,28 @@ def is_known(ebay_category_id):
     without re-deriving the empty-string sentinel.
     """
     return category_for(ebay_category_id) != ''
+
+
+def reconcile(facet, ebay_category_id):
+    """Classify a registry (facet, ebay_category_id) pair for the drift guard.
+
+    The one definition of 'does the map agree with the registry', shared by the
+    guard test so its behaviour is unit-testable in isolation (not only via the
+    live spine). Returns one of:
+
+      'ok'     — map and facet agree (or the facet IS what the id maps to).
+      'drift'  — BOTH are settled body/lens/support facets and they disagree.
+                 This is the genuine seed-table drift the guard hard-fails on
+                 (the 30093->30097 leaf-rebind class).
+      'notice' — the id is unmapped ('' ), OR the facet is a vertical bucket the
+                 map does not own (action_cam and future gimbal/drone/...). The
+                 map has no jurisdiction here, so this is a NON-BREAKING review
+                 nudge, never a hard failure — the generalisation that stops a
+                 new product category from jamming the bank.
+    """
+    mapped = category_for(ebay_category_id)
+    if mapped == (facet or ''):
+        return 'ok'
+    if mapped in SETTLED_FACETS and facet in SETTLED_FACETS:
+        return 'drift'
+    return 'notice'
