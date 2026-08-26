@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-25",
+  "as_of": "2026-08-26",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -555,8 +555,8 @@
       "model": "A7 V",
       "gtin": "00027242934061",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "178255336385",
+        "ebay_epid": "11057690094",
+        "ebay_legacy_item_id": "176410454717",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -566,10 +566,10 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE-7M5/B",
+        "mpn": "ILCE7RM5B",
         "gtin_provenance": {
           "chosen_source": "aspect",
-          "conflict": false,
+          "conflict": true,
           "observations": [
             {
               "source": "aspect",
@@ -578,25 +578,59 @@
               "gtin14": "00027242934061",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "product.gtins",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "product.gtins",
+                "identifier_type": "GTIN",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "UPC",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "EAN",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "Sony Alpha a7 V Full Frame Mirrorless Camera Body 33MP 4K ILCE-7M5 E-Mount New",
-        "image": "https://i.ebayimg.com/images/g/jO4AAeSw4rJqPeKk/s-l1600.jpg",
-        "image_catalog": "",
+        "market_title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW",
+        "image": "https://i.ebayimg.com/images/g/MRAAAOSw1TxmYMB2/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
         "price_seen": {
-          "value": "2589.00",
+          "value": "2599.00",
           "currency": "USD",
-          "as_of": "2026-08-09T04:12:13Z"
+          "as_of": "2026-08-26T04:15:04Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/178255336385?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xC28QfzgFGqw4uOa7yQHUZ%2BESW9Fq2Z9NVGpiQ0gH5%2Bt2EHKitH%2FTMSfQC6W7%2BgR7pcDhpJmS8EEBH22BWQFdBLZjwE%2B7714Wx96NYm9vi%2BYwnHgm7RfRE9kFm%2FeuJkx8ZfT8P3fMf%2FAfWlC6Dc%2BRrA5UixMtpV77DJLrmZ7qcQWPia%2BsaC49AYDrYocchE9SI%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/176410454717?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FrpWur%2BBoyYurAt1iYn4g7OZ5VyT7ODfGrHT6WDz7FaV%2Fhi0jGuGVk%2FpCEDtaH3lZA%2B2mPvi3zwBsB%2BcOBhRyf6nn48CCL9jgkaMKOrhZa%2FjyvH1M60PlhUxu6ujCX2IG2Td3fhVY6Mf2VOerFRBYBJUrQ%2FgpJ%2BEGOPweIRLAH4WNZZhke7stYmZ7x1R9wA%2Fo%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-09T04:12:13Z",
+      "resolved_at": "2026-08-26T04:15:04Z",
       "spec_surface": {
         "tree": "2540",
         "doc_id": "251h_specifications_ilc2540",
@@ -797,7 +831,7 @@
       "gtin": "00013803325775",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "168636719327",
+        "ebay_legacy_item_id": "366621774097",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -807,7 +841,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "5666C002",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -821,23 +855,23 @@
             }
           ]
         },
-        "market_title": "Canon EOS R6 24.2 MP Digital Camera- Black (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/qwMAAeSwMcdqjLLU/s-l1600.jpg",
+        "market_title": "Canon EOS R6 Mirrorless Camera Shutter Count:172,000 [Near Mint] #2989473",
+        "image": "https://i.ebayimg.com/images/g/9EMAAeSwOfRqdfkJ/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/IIoAAOSwnvxntNWr/s-l1600.jpg",
         "price_seen": {
-          "value": "900.00",
+          "value": "979.00",
           "currency": "USD",
-          "as_of": "2026-08-25T04:06:47Z"
+          "as_of": "2026-08-26T04:16:36Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/168636719327?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BgpASx6BjU181o5d907SFfnr8zSHV%2B%2B8g8jg8zDkRDARIDK3x--Y25X7VNBEwEgMBF5YIacdsvvoB9b28dnD0IeKGQf74KJdPeVv%2BQP%2FbdhErAXcYgCUDYcEs1eOMaQg4J3YUwfGya6KOMuuXJuQnPKXGJ6rl6ZbZKphmvd%2B59FtJEVo3tvyjaqbOoLFv8qmw%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/366621774097?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-25T04:06:47Z",
+      "resolved_at": "2026-08-26T04:16:36Z",
       "spec_surface": {
         "manual_code": "C004"
       }
@@ -848,8 +882,8 @@
       "model": "Befree",
       "gtin": "00719821437895",
       "marketplace_ids": {
-        "ebay_epid": "22023371643",
-        "ebay_legacy_item_id": "800552485076",
+        "ebay_epid": "9043697517",
+        "ebay_legacy_item_id": "278128621023",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -859,10 +893,10 @@
       },
       "identity": {
         "brand": "Manfrotto",
-        "mpn": "",
+        "mpn": "MKBFRLA4BK3WUS",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
-          "conflict": true,
+          "conflict": false,
           "observations": [
             {
               "source": "product.gtins",
@@ -892,66 +926,25 @@
               "gtin14": "00719821437895",
               "valid": true
             }
-          ],
-          "superseded": {
-            "chosen_source": "product.gtins",
-            "conflict": false,
-            "observations": [
-              {
-                "source": "product.gtins",
-                "identifier_type": "GTIN",
-                "raw": "0719821419280",
-                "gtin14": "00719821419280",
-                "valid": true
-              },
-              {
-                "source": "product.additionalProductIdentities",
-                "identifier_type": "UPC",
-                "raw": "0719821419280",
-                "gtin14": "00719821419280",
-                "valid": true
-              },
-              {
-                "source": "product.additionalProductIdentities",
-                "identifier_type": "EAN",
-                "raw": "0719821419280",
-                "gtin14": "00719821419280",
-                "valid": true
-              },
-              {
-                "source": "aspect",
-                "identifier_type": "GTIN",
-                "raw": "0719821419280",
-                "gtin14": "00719821419280",
-                "valid": true
-              },
-              {
-                "source": "aspect",
-                "identifier_type": "UPC",
-                "raw": "0719821419280",
-                "gtin14": "00719821419280",
-                "valid": true
-              }
-            ]
-          }
+          ]
         },
-        "market_title": "Manfrotto Befree Advanced Aluminum Travel Tripod - Level Lock Model",
-        "image": "https://i.ebayimg.com/images/g/tnkAAeSwxKZqi2Ih/s-l1600.jpg",
+        "market_title": "Manfrotto Befree 3-Way Live Advanced Tripod - Black (MKBFRLA4BK-3WUS)",
+        "image": "https://i.ebayimg.com/images/g/KYMAAeSwLdVpC6O2/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/W28AAOSwBC1ghoQh/s-l640.jpg",
         "price_seen": {
-          "value": "69.00",
+          "value": "160.00",
           "currency": "USD",
-          "as_of": "2026-08-24T04:03:13Z"
+          "as_of": "2026-08-26T04:17:00Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800552485076?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/278128621023?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BDOTphYVUNqDkY3yu2t3S9xQ7JCBG%2FdbQbkKQ0hejfcu7LsljXC2EWytQXbQQkrZw5CDuFjj2NVBKLxWAyLwPi1xsMo2CYD7NNjWT2IyFXZlTiizSUkrzxfeBEdhzpwCM28FHtM5ytWVBkkBhGeF1kXaXr4oGHE2bWNhZ05kAjVcdyhN%2Bf%2FXzp1dy1uh50nnE%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-24T04:03:13Z"
+      "resolved_at": "2026-08-26T04:17:00Z"
     },
     "sigma-35mm-f1-2-dg-dn-art": {
       "contamination_key": "sigma-35-f12-dg-dn",
@@ -960,7 +953,7 @@
       "gtin": "00085126341657",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "358860783439",
+        "ebay_legacy_item_id": "820033793547",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -984,23 +977,23 @@
             }
           ]
         },
-        "market_title": "Sigma 35mm F1.2 DG DN Art Lens for Sony E #0003",
-        "image": "https://i.ebayimg.com/images/g/oXcAAeSwNOFqG6PB/s-l1600.jpg",
+        "market_title": "Sigma 35mm F/1.2 DG DN Art (for Sony E mount) #271",
+        "image": "https://i.ebayimg.com/images/g/WLoAAeSw0HxqiU4y/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/00/s/NjAyWDkwMA==/z/l5kAAOSwxnllzJ~i/$_57.JPG?set_id=880000500F",
         "price_seen": {
-          "value": "776.00",
+          "value": "667.00",
           "currency": "USD",
-          "as_of": "2026-08-23T04:17:01Z"
+          "as_of": "2026-08-26T04:17:24Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/358860783439?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FBCmyjIMLewgSIchc2Zly4EhKk8GXvqwrOvZAqbL8d8gJm2pk8P99Vv9X6PHWOj8aIWbSLRRIBnpkx5P6VzcE1YGLwZhHP89c3q4jOAzb35P5FeEGrAxGtkFbHpd2twodV4lVhTvcDKk2HNr9%2FxhednCnLTc6FeH2ndIyFU4i41e%2BuVNyj4SZO6aSz900OazQ%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/820033793547?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-23T04:17:01Z",
+      "resolved_at": "2026-08-26T04:17:24Z",
       "spec_surface": {
         "product_code": "a019_35_12",
         "observed": "https://www.sigma-global.com/en/lenses/a019_35_12/",
@@ -1013,8 +1006,8 @@
       "model": "R5",
       "gtin": "04549292157345",
       "marketplace_ids": {
-        "ebay_epid": "22039720829",
-        "ebay_legacy_item_id": "206230041998",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "800525097376",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1024,7 +1017,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "4147C002",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -1080,23 +1073,23 @@
             }
           ]
         },
-        "market_title": "Canon EOS R5 Mirrorless 45MP 8K Full-Frame Camera Body Only – Dual Slots",
-        "image": "https://i.ebayimg.com/images/g/l90AAeSwEQFqjJ7-/s-l1600.jpg",
+        "market_title": "Canon R5 Mirrorless Camera - Near Mint Condition - USA Seller - Same Day Ship",
+        "image": "https://i.ebayimg.com/images/g/4csAAeSwv9Nqg2DL/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
         "price_seen": {
-          "value": "2374.95",
+          "value": "1975.00",
           "currency": "USD",
-          "as_of": "2026-08-25T04:07:54Z"
+          "as_of": "2026-08-26T04:17:46Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/206230041998?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde94IszNXw7QL7L2GvksRc3Syom8xjzbNTBiaWNuuppUzzMh8k0SYosLUqwScHLWr8uspp7NqpxzAy0cXUPAVo%2BKPaPRvyEp7%2FCHhlf2R6gZDk3X1o99hvi7%2BTLAvLLChYLL1%2BlosjSFduCoifhsh2K2rQlQ%2FO6YQNX%2FETeV6Nuk1LMAwxLhoGyTfsVkdv0ipl8%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/800525097376?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-25T04:07:54Z",
+      "resolved_at": "2026-08-26T04:17:46Z",
       "spec_surface": {
         "manual_code": "C003"
       }
@@ -1107,8 +1100,8 @@
       "model": "A7R",
       "gtin": "00027242893832",
       "marketplace_ids": {
-        "ebay_epid": "219681873",
-        "ebay_legacy_item_id": "158219159228",
+        "ebay_epid": "11057690094",
+        "ebay_legacy_item_id": "176410454717",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1118,10 +1111,10 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7RM2B",
+        "mpn": "ILCE7RM5B",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
-          "conflict": false,
+          "conflict": true,
           "observations": [
             {
               "source": "product.gtins",
@@ -1151,25 +1144,59 @@
               "gtin14": "00027242893832",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "product.gtins",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "product.gtins",
+                "identifier_type": "GTIN",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "UPC",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "product.additionalProductIdentities",
+                "identifier_type": "EAN",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              },
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "0027242925977",
+                "gtin14": "00027242925977",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "Sony Alpha a7R II 42.4MP Digital Camera - Black (Body Only)",
-        "image": "https://i.ebayimg.com/images/g/dp4AAeSw1PxqjHdj/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/TUwAAOSwCT5jWSzb/s-l640.jpg",
+        "market_title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW",
+        "image": "https://i.ebayimg.com/images/g/MRAAAOSw1TxmYMB2/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
         "price_seen": {
-          "value": "650.00",
+          "value": "2599.00",
           "currency": "USD",
-          "as_of": "2026-08-25T04:08:16Z"
+          "as_of": "2026-08-26T04:18:10Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/158219159228?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/176410454717?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FrpWur%2BBoyYurAt1iYn4g7OZ5VyT7ODfGrHT6WDz7FaRQKbx1fQY698yEH2LFcOknO7isgdWLemB0ErfoLA3Ef8rEBH%2FpsCJgzXqOTC0K1YR4Z0re0xh9q5fEpNnVnw90e1iQAQ57MJCOgSHWtjlIaDqFkbciVVwdsgMH9UN%2BT3VxGxlLDabfYXvZEPTMioeU%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-25T04:08:16Z",
+      "resolved_at": "2026-08-26T04:18:10Z",
       "overrides": {
         "model": "A7R II",
         "display_name": "Sony A7R II"
@@ -2311,7 +2338,21 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-25T04:08:38Z"
+      "resolved_at": "2026-08-25T04:08:38Z",
+      "rebind_rejected": {
+        "ts": "2026-08-26T04:19:01Z",
+        "item_id": "800533197278",
+        "title": "Canon EF 35mm f/1.4 L USM Lens for Canon EF Mount",
+        "price_seen": {
+          "value": "419.00",
+          "currency": "USD",
+          "as_of": "2026-08-26T04:19:01Z"
+        },
+        "signals": [
+          "relational_for"
+        ],
+        "hard": true
+      }
     },
     "panasonic-s5-mirrorless": {
       "contamination_key": "panasonic-s5-mirrorless",
@@ -2458,7 +2499,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "800495934620",
+        "ebay_legacy_item_id": "158191557758",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2474,23 +2515,23 @@
           "conflict": false,
           "observations": []
         },
-        "market_title": "Fuji Fujifilm X-T10 XT10 16.3MP Mirrorless Digital Camera Body Tested Black",
-        "image": "https://i.ebayimg.com/images/g/xhUAAeSw3ulpzlw1/s-l1600.jpg",
+        "market_title": "Fujifilm X-T10 16.3MP Mirrorless Digital Camera Body Black Excellent 57W00309",
+        "image": "https://i.ebayimg.com/images/g/KdEAAeSwgYVqgIPU/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "312.00",
+          "value": "400.00",
           "currency": "USD",
-          "as_of": "2026-08-24T04:06:17Z"
+          "as_of": "2026-08-26T04:20:38Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800495934620?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fmdsa0V6VOHRlqydHDBYbFUxaqCeBo1j0zXidkRABlfszY2WKdBtzoyTQckUTgLGg764hWdc6DVXa4p0cAnmMXHZ6vq3VZt47Lnra5o%2BkWi0WzazAAG9lTC8ioQ%2FhrVT%2F%2BQi6%2BOzJeI2Eo%2F508pa0BdgY1NrHC7YrnKB%2B6RhFobgLIuZdn3IyfneTri4ZdcuU%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/158191557758?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-24T04:06:17Z",
+      "resolved_at": "2026-08-26T04:20:38Z",
       "spec_surface": {
         "wikipedia_title": "Fujifilm_X-T10",
         "wikipedia_title_resolved": "Fujifilm X-T10",
@@ -2780,7 +2821,7 @@
       "gtin": "04549980234686",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "377417839848",
+        "ebay_legacy_item_id": "407165456561",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2790,7 +2831,7 @@
       },
       "identity": {
         "brand": "Panasonic",
-        "mpn": "S-R70200",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -2804,13 +2845,13 @@
             }
           ]
         },
-        "market_title": "[Near Mint] Panasonic Lumix S PRO 70-200mm F/4 O.I.S. S-R70200 L mount ＃052",
-        "image": "https://i.ebayimg.com/images/g/P0QAAeSwBVhqfwGa/s-l1600.jpg",
+        "market_title": "Panasonic Lumix S PRO 70-200mm F/4 O.I.S. S-R70200 Lens for L mount -Near Mint-",
+        "image": "https://i.ebayimg.com/images/g/jfMAAeSw7BNqhqxR/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/XX8AAOSwIFFlMNRW/s-l1600.jpg",
         "price_seen": {
-          "value": "700.00",
+          "value": "719.45",
           "currency": "USD",
-          "as_of": "2026-08-24T04:09:40Z"
+          "as_of": "2026-08-26T04:24:12Z"
         },
         "image_provenance": {
           "recovered_by": "image-second-pass",
@@ -2855,13 +2896,13 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377417839848?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Br%2FgONS6MB988P3U2yzoTP3Q6B9tmU5uyFUaygb%2FFbq4Q7ykbKqD4GjjR3oySem3g%2Fc3QQDSavGt2TUTpjtBNgsQwOFnXI5EjfB8zhTCmtDImGll8KnjHo7Ib81g3yx3xUGtjhBriK8piB1JK1IcBqyhzcd8rjJ4H4dwr8DxB0eyTQSXl0nzxkdGOVGObou84%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/407165456561?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-24T04:09:40Z"
+      "resolved_at": "2026-08-26T04:24:12Z"
     },
     "sigma-23mm-f1-4": {
       "contamination_key": "sigma-23mm-f1-4",
@@ -3573,7 +3614,7 @@
       "gtin": "00074101201147",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "377441761307",
+        "ebay_legacy_item_id": "287346633351",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -3582,7 +3623,7 @@
         "ebay_category_id": "31388"
       },
       "identity": {
-        "brand": "Fujifilm",
+        "brand": "FUJIFILM",
         "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
@@ -3610,23 +3651,23 @@
             ]
           }
         },
-        "market_title": "Fujifilm Fuji X-Pro3 Black Mirrorless Camera Body #230",
-        "image": "https://i.ebayimg.com/images/g/tl0AAeSwgW9qisAF/s-l1600.jpg",
+        "market_title": "FUJIFILM X-Pro3 26.1MP 4K Mirrorless Digital Camera Body only Black 95%New",
+        "image": "https://i.ebayimg.com/images/g/xf4AAeSwe69qECcq/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "1648.00",
+          "value": "1299.00",
           "currency": "USD",
-          "as_of": "2026-08-25T04:09:08Z"
+          "as_of": "2026-08-26T04:19:26Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377441761307?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/287346633351?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FJKTDSnZXDfaJG2%2BP84XvGMe3xKcJR21CWyOcoboBkb96FRce5v2S1YaIrLzU1zMFfn%2F21P6BihvAL5Jh8v4Ajac2N8n1f51efzTW%2FDqiOerTuJgwUOPCFUDK1Pn4B8oMX93yfe1%2BTyOyRj4E47dmuIVw3zfIyykKzqvLMY%2Boxv6G3%2B6TS%2FDcNO8mDLOrlZB4%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-25T04:09:08Z",
+      "resolved_at": "2026-08-26T04:19:26Z",
       "spec_surface": {
         "wikipedia_title": "Fujifilm_X-Pro3",
         "wikipedia_title_resolved": "Fujifilm X-Pro3",
