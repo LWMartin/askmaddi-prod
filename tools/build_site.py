@@ -1996,16 +1996,30 @@ def _guide_rationale_html(rationale):
     return '<ul class="g-rationale">' + "".join(rows) + "</ul>"
 
 
-def _guide_lead_quote_html(rationale):
-    for r in rationale:
-        for src in (r.get("top_sources") or []):
-            q = (src.get("quote") or "").strip()
+def _guide_lead_quote_html(row):
+    """Headline blockquote for a ranked card.
+
+    Prefer the pre-selected `lead_quote` (use_cases.lead_quote — an evaluative pick,
+    not the highest mention-weight quote which is often a spec-dump or video filler).
+    Fall back to the first available source quote so guide artifacts built before
+    lead selection existed still render."""
+    lead = row.get("lead_quote") or {}
+    q = (lead.get("quote") or "").strip()
+    src_id = lead.get("source_id") or ""
+    if not q:
+        for r in row.get("rationale", []):
+            for src in (r.get("top_sources") or []):
+                cand = (src.get("quote") or "").strip()
+                if cand:
+                    q, src_id = cand, (src.get("source_id") or "")
+                    break
             if q:
-                who = src.get("source_id") or ""
-                who = _reviewer_from_source_id(who) if who else ""
-                attr = f' <cite class="g-cite">— {esc(who)}</cite>' if who else ""
-                return f'<blockquote class="g-quote">"{esc(q)}"{attr}</blockquote>'
-    return ""
+                break
+    if not q:
+        return ""
+    who = _reviewer_from_source_id(src_id) if src_id else ""
+    attr = f' <cite class="g-cite">— {esc(who)}</cite>' if who else ""
+    return f'<blockquote class="g-quote">"{esc(q)}"{attr}</blockquote>'
 
 
 def _guide_comparison_table(guide):
@@ -2175,7 +2189,7 @@ def render_guide(guide, cards_by_id):
             f'<span class="g-pos">{row.get("rank")}</span>{name_html}</div>'
             f'<p class="g-why">{why}</p>'
             f'{_guide_rationale_html(row.get("rationale", []))}'
-            f'{_guide_lead_quote_html(row.get("rationale", []))}'
+            f'{_guide_lead_quote_html(row)}'
             f'{ctas}</li>')
     rank_html = '<ol class="g-rank">' + "".join(rank_items) + "</ol>"
 

@@ -92,8 +92,14 @@ if git diff --quiet -- data/cards/; then
     exit 0
 fi
 
-echo "$(date -Iseconds) cards changed — rebuilding pages/manifest/sitemap"
-if ! python3 tools/build_site.py --cards-dir data/cards/ --output-dir browser/ --manifest --sitemap; then
+echo "$(date -Iseconds) cards changed — rebuilding pages/manifest/sitemap/guides"
+# --guides-dir re-renders the use-case guide pages too, so their baked "from $X
+# used" CTAs refresh WITH the card prices and get banked in the SAME commit.
+# Without it the guide HTML drifts uncommitted every time a price moves, and the
+# next guide push jams the auto-pull ("local changes would be overwritten") — the
+# 2026-08-26 real-estate-guide deploy jam. See maddi-writeback-architecture.
+if ! python3 tools/build_site.py --cards-dir data/cards/ --output-dir browser/ \
+        --guides-dir data/guides/ --manifest --sitemap; then
     echo "$(date -Iseconds) ABORT: build_site failed — restoring clean tree"
     git checkout -- data/cards/ browser/ 2>/dev/null
     python3 - "$SIGNAL_DIR" <<'PYEOF'
