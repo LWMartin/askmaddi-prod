@@ -498,8 +498,12 @@ def _build_arg_parser():
                    help='Quality-first: pass --yt to build_card so every drip '
                         'build runs Stage 1b (paced YouTube transcript leg). '
                         'Egress follows PROXY_URL from the environment.')
-    p.add_argument('--enrich-client', choices=['flask', 'mock'], default='flask',
-                   help="enrich backend: flask (VPS gemma) or mock (offline).")
+    p.add_argument('--enrich-client', choices=['flask', 'mock', 'forced_choice'],
+                   default='flask',
+                   help="enrich backend: flask (VPS gemma shim), forced_choice "
+                        "(Qwen3 decomposed head on on-box Ollama, direct/no-502; "
+                        "validated 2026-08-25), or mock (offline). Forwarded "
+                        "verbatim to build_card.py --enrich-client.")
     p.add_argument('--status', action='store_true',
                    help="Print work_queue state histogram and exit.")
     p.add_argument('--lock', default=str(DEFAULT_LOCK_PATH), dest='lock_path',
