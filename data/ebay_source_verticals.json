@@ -1,0 +1,26 @@
+{
+  "_comment": "eBay category sourcing verticals — the reusable, config-driven demand intake (spec maddi-ebay-category-sourcing). Each row opens ONE vertical's eBay supply tap; adding a row opens a vertical with NO code change (the real-estate 360/virtual-tour row is the reuse acceptance test). ebay_category_id: eBay leaf (Camera Drones ~179697, still to be confirmed live — null = no category scoping, rely on seed queries + the demand_gate facet screen). condition_ids: null = new + used (Lee 2026-08-27), [1000] = new only. gate_category: the demand_gate.classify category a kept row must match (the de-DJI'd drone screen).",
+  "verticals": [
+    {
+      "vertical": "aerial",
+      "facet": "drone",
+      "gate_category": "drone",
+      "ebay_category_id": "179697",
+      "condition_ids": null,
+      "seed_queries": [
+        "dji mavic drone",
+        "dji air drone",
+        "dji mini drone",
+        "dji neo drone",
+        "dji avata",
+        "dji inspire drone",
+        "autel evo drone",
+        "skydio drone",
+        "hoverair drone",
+        "parrot anafi drone",
+        "fpv drone"
+      ],
+      "enabled": true
+    }
+  ]
+}

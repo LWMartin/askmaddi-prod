@@ -172,7 +172,7 @@ def search(query, limit=10, customid=None):
     return results
 
 
-def search_candidates(query, limit=10):
+def search_candidates(query, limit=10, category_ids=None, condition_ids=None):
     """Identity-resolution search: like search() but rows carry item_id.
 
     The public search() shape is frozen (the frontend depends on it — spec
@@ -188,6 +188,14 @@ def search_candidates(query, limit=10):
     existing call sites (resolve_sku, backfill_skus) and duck-typed test
     doubles are untouched; new code should use this name.
 
+    CATEGORY / CONDITION SCOPING (2026-08-27, eBay-category sourcing tap): the
+    Browse API takes `category_ids` (comma-joined leaf ids) and a `filter` with
+    `conditionIds:{...}` natively. Both are OPTIONAL and default off, so every
+    existing caller is byte-identical; only the new vertical-sourcing tap passes
+    them (e.g. Camera-Drones + new/used). `condition_ids=None` means "all
+    conditions" (new + used) — the tap's default per spec maddi-ebay-category-
+    sourcing (Lee: new + used). eBay condition ids: 1000=New, 3000=Used.
+
     Returns list of dicts: {item_id, title, price, currency, condition, epid, brand}.
     Raises EbayAPIError on failure.
     """
@@ -197,6 +205,14 @@ def search_candidates(query, limit=10):
     token = _get_token()
     headers = _affiliate_headers(token)
     params = {'q': query, 'limit': str(min(int(limit), 50))}
+    if category_ids:
+        # accept a str ("179697"), or an iterable of ids -> comma-joined
+        params['category_ids'] = (category_ids if isinstance(category_ids, str)
+                                  else ','.join(str(c) for c in category_ids))
+    if condition_ids:
+        ids = ([condition_ids] if isinstance(condition_ids, (str, int))
+               else list(condition_ids))
+        params['filter'] = 'conditionIds:{%s}' % '|'.join(str(c) for c in ids)
     resp = requests.get(BROWSE_SEARCH_URL, headers=headers, params=params, timeout=15)
     if resp.status_code != 200:
         raise EbayAPIError(f'browse search failed: HTTP {resp.status_code}',

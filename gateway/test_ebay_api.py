@@ -240,3 +240,59 @@ def test_extract_identity_mpn_from_product_mpns_plural():
     p['product']['mpns'] = ['ILCE-7M4']
     idn = ebay_api._extract_identity(p)
     assert idn['mpn'] == 'ILCE-7M4'
+
+
+# ─── search_candidates(): category/condition scoping (2026-08-27 tap) ────────
+
+def _capture_search(monkeypatch, items=None):
+    """Wire a fake token + requests.get that records params and returns items."""
+    class _Resp:
+        status_code = 200
+        def json(self):
+            return {'itemSummaries': items or []}
+    monkeypatch.setattr(ebay_api, '_get_token', lambda: 'tok')
+    monkeypatch.setattr(ebay_api, 'EBAY_CAMPAIGN_ID', '5339138080')
+    captured = {}
+    def _fake_get(url, headers=None, params=None, timeout=None):
+        captured['params'] = params
+        return _Resp()
+    monkeypatch.setattr(ebay_api.requests, 'get', _fake_get)
+    return captured
+
+
+def test_search_candidates_default_params_unchanged(monkeypatch):
+    # No category/condition -> byte-identical to the pre-2026-08-27 behaviour.
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', limit=5)
+    assert cap['params'] == {'q': 'dji mavic', 'limit': '5'}
+
+
+def test_search_candidates_category_ids_string(monkeypatch):
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', category_ids='179697')
+    assert cap['params']['category_ids'] == '179697'
+
+
+def test_search_candidates_category_ids_iterable_joined(monkeypatch):
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', category_ids=['179697', 15052])
+    assert cap['params']['category_ids'] == '179697,15052'
+
+
+def test_search_candidates_condition_filter_new_only(monkeypatch):
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', condition_ids=1000)
+    assert cap['params']['filter'] == 'conditionIds:{1000}'
+
+
+def test_search_candidates_condition_filter_new_and_used(monkeypatch):
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', condition_ids=[1000, 3000])
+    assert cap['params']['filter'] == 'conditionIds:{1000|3000}'
+
+
+def test_search_candidates_no_condition_means_all_conditions(monkeypatch):
+    # condition_ids=None (the tap default) -> NO filter key -> eBay returns new+used.
+    cap = _capture_search(monkeypatch)
+    ebay_api.search_candidates('dji mavic', category_ids='179697')
+    assert 'filter' not in cap['params']
