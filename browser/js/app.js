@@ -4,13 +4,14 @@ import { Deduper } from './deduper.js';
 import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
 import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
+import { arrangeResults } from './precise.js';
 
 // === Lane A precise-search switch (2026-08-27) ===
 // false → legacy client-side fan-out (streamSearch). true → route ALL search
 // through the server-side /search Sieve (eBay Used + Adorama New, classified /
 // ranked / deduped / bucketed). Until flipped, opt-in PER QUERY via ?precise=1
 // for testing. Reversible: the legacy path is untouched.
-const PRECISE_SEARCH = false;
+const PRECISE_SEARCH = true;
 
 class AskMaddi {
     constructor() {
@@ -290,30 +291,47 @@ class AskMaddi {
     }
 
     async preciseSearch(query) {
-        // Lane A parallel route: ONE server-side call; the /search Sieve already
-        // classified, ranked, deduped and bucketed (products first, capped
-        // compatible tail). We render its order verbatim — no client re-rank.
-        this.ui.updateStreamingSource('AskMaddi', 'fetching');
-        const resp = await fetch(`${this.gateway}/search?q=${encodeURIComponent(query)}`);
-        if (!resp.ok) throw new Error(`search ${resp.status}`);
-        const data = await resp.json();
-        const results = (data.results || []).map(r => ({
-            name: r.name,
-            price: (r.best_price != null) ? ('$' + r.best_price) : (r.price || ''),
-            image: r.image || '',
-            url: r.url,
-            source: r.seller,
-            sourceDomain: r.seller === 'Adorama' ? 'adorama.com' : 'ebay.com',
-            condition: r.condition,
-        }));
-        this.ui.updateStreamingSource('AskMaddi', 'done');
-        if (results.length > 0) {
-            this.ui.replaceProductGrid(results, query);
-            this.ui.finalizeResults(results.length, results.length, results.length);
+        // Lane A STREAMING: fan out both sanctioned sources in parallel, render
+        // as each arrives, and BYPASS a slow link via a per-source timeout —
+        // "print as found", never block on the slowest. Precision (whole-token
+        // relevance + accessory demotion + source x condition interleave) is
+        // cheap and runs client-side on every arrival, so it never blocks the
+        // stream. Heavy Sieve rungs (spine identity, Qwen3) are out of the hot
+        // path by design.
+        const products = [];
+        const render = () => {
+            const arranged = arrangeResults(query, products);
+            if (arranged.length > 0) this.ui.replaceProductGrid(arranged, query);
+        };
+        const withTimeout = (p, ms) => Promise.race([
+            p,
+            new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), ms)),
+        ]);
+        const pull = async (name, domain, fn) => {
+            this.ui.updateStreamingSource(name, 'fetching');
+            try {
+                const items = await withTimeout(fn(), 7000);   // slow link → bypass
+                items.forEach(it => { it.source = name; it.sourceDomain = domain; });
+                products.push(...items);
+                render();                                      // print as found
+                this.ui.updateStreamingSource(name, 'done');
+            } catch (e) {
+                console.error(`${name} source failed:`, e);
+                this.ui.updateStreamingSource(name, 'error');
+            }
+        };
+        await Promise.all([
+            pull('Adorama', 'adorama.com', () => this.fetcher.searchAdorama(query)),
+            pull('eBay', 'ebay.com', () => this.fetcher.searchEbay(query)),
+        ]);
+        const arranged = arrangeResults(query, products);
+        if (arranged.length > 0) {
+            this.ui.replaceProductGrid(arranged, query);
+            this.ui.finalizeResults(arranged.length, products.length, arranged.length);
         } else {
-            this.ui.showEmptyResults({ AskMaddi: { products: 0 } });
+            this.ui.showEmptyResults({ query, sources: products.length });
         }
-        this.sendAnalytics(query, 1);
+        this.sendAnalytics(query, 2);
     }
 
     cancelSearch() {

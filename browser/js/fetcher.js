@@ -27,6 +27,22 @@ class Fetcher {
         return Array.isArray(data.items) ? data.items : [];
     }
 
+    async searchAdorama(query) {
+        // Adorama feed index (server-side). Fast lookup, no Sieve. Same
+        // { count, items:[{name, price, currency, image, url, condition,
+        // seller, gtin, mpn, brand, model}] } shape as searchEbay — the New
+        // lane, streamed in parallel with eBay.
+        const response = await fetch(
+            `${this.gateway}/adorama/search?q=${encodeURIComponent(query)}&limit=25`
+        );
+        if (!response.ok) {
+            const error = await response.json().catch(() => ({}));
+            throw new Error(error.error || `Adorama search failed: ${response.status}`);
+        }
+        const data = await response.json();
+        return Array.isArray(data.items) ? data.items : [];
+    }
+
     async fetchViaProxy(url) {
         const response = await fetch(`${this.gateway}/proxy`, {
             method: 'POST',

@@ -404,6 +404,32 @@ def precise_search():
         return jsonify({'error': 'search failed', 'results': [], 'sections': []}), 502
 
 
+@app.route('/adorama/search', methods=['GET'])
+def adorama_search():
+    """Fast Adorama feed-index search — the New lane for the STREAMING client.
+
+    Index lookup only, no Sieve (the precision runs cheap client-side as results
+    stream in). Mirrors /ebay/search's {items,count} shape so the frontend renders
+    both sources through one path. Privacy: query never logged.
+    """
+    query = request.args.get('q', '').strip()
+    if not query:
+        return jsonify({'error': 'missing q', 'items': []}), 400
+    try:
+        limit = int(request.args.get('limit', 25))
+    except ValueError:
+        limit = 25
+    try:
+        import adorama_index
+        if not adorama_index.is_configured():
+            return jsonify({'items': [], 'count': 0}), 200
+        items = adorama_index.search(query, limit=limit)
+        return jsonify({'items': items, 'count': len(items)}), 200
+    except Exception as e:
+        print(f"[adorama] search error: {type(e).__name__}: {e}")
+        return jsonify({'error': 'search failed', 'items': []}), 502
+
+
 @app.route('/ebay/resolve', methods=['GET'])
 def ebay_resolve():
     """Lossless identity capture for ONE tapped eBay item (demand-factory Stage 1).
