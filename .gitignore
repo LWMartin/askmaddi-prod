@@ -55,3 +55,6 @@ data/.factory.lock
 # Stray process-capture output — never legitimate state, must never count as foreign dirt (nightly bot aborts on it). 2026-08-05.
 nohup.out
 **/nohup.out
+
+# Lane A: generated Adorama search index (44MB; produced nightly into /opt, never committed)
+data/adorama-search-index.json

@@ -378,6 +378,32 @@ def ebay_search():
         return jsonify({'error': str(e), 'items': []}), 502
 
 
+@app.route('/search', methods=['GET'])
+def precise_search():
+    """Lane A — precise product research over eBay (Used) + Adorama (New).
+
+    The parallel route: fans out both sanctioned sources server-side and runs the
+    spine-anchored Sieve (classify -> rerank -> dedup-by-identity -> compose;
+    canonical products first, a capped compatible/third-party tail). Additive —
+    /ebay/search is untouched, so the frontend switch is reversible. Privacy: the
+    query is never logged (only error types + counts).
+    """
+    query = request.args.get('q', '').strip()
+    if not query:
+        return jsonify({'error': 'missing q', 'results': [], 'sections': []}), 400
+    try:
+        limit = int(request.args.get('limit', 25))
+    except ValueError:
+        limit = 25
+    try:
+        import search_lane_a
+        payload = search_lane_a.precise_search(query, limit=limit)
+        return jsonify(payload), 200
+    except Exception as e:
+        print(f"[search] lane-a error: {type(e).__name__}: {e}")
+        return jsonify({'error': 'search failed', 'results': [], 'sections': []}), 502
+
+
 @app.route('/ebay/resolve', methods=['GET'])
 def ebay_resolve():
     """Lossless identity capture for ONE tapped eBay item (demand-factory Stage 1).

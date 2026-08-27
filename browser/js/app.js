@@ -5,6 +5,13 @@ import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
 import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
 
+// === Lane A precise-search switch (2026-08-27) ===
+// false → legacy client-side fan-out (streamSearch). true → route ALL search
+// through the server-side /search Sieve (eBay Used + Adorama New, classified /
+// ranked / deduped / bucketed). Until flipped, opt-in PER QUERY via ?precise=1
+// for testing. Reversible: the legacy path is untouched.
+const PRECISE_SEARCH = false;
+
 class AskMaddi {
     constructor() {
         this.gateway = '';
@@ -157,7 +164,13 @@ class AskMaddi {
         
         // === WIN 2: Stream scraper results as they arrive ===
         try {
-            await this.streamSearch(query, sites);
+            const usePrecise = PRECISE_SEARCH ||
+                new URLSearchParams(window.location.search).has('precise');
+            if (usePrecise) {
+                await this.preciseSearch(query);
+            } else {
+                await this.streamSearch(query, sites);
+            }
         } catch (error) {
             console.error('Search failed:', error);
             // Don't switch to error state if we already have card matches showing
@@ -275,7 +288,34 @@ class AskMaddi {
         
         this.sendAnalytics(query, sites.length);
     }
-    
+
+    async preciseSearch(query) {
+        // Lane A parallel route: ONE server-side call; the /search Sieve already
+        // classified, ranked, deduped and bucketed (products first, capped
+        // compatible tail). We render its order verbatim — no client re-rank.
+        this.ui.updateStreamingSource('AskMaddi', 'fetching');
+        const resp = await fetch(`${this.gateway}/search?q=${encodeURIComponent(query)}`);
+        if (!resp.ok) throw new Error(`search ${resp.status}`);
+        const data = await resp.json();
+        const results = (data.results || []).map(r => ({
+            name: r.name,
+            price: (r.best_price != null) ? ('$' + r.best_price) : (r.price || ''),
+            image: r.image || '',
+            url: r.url,
+            source: r.seller,
+            sourceDomain: r.seller === 'Adorama' ? 'adorama.com' : 'ebay.com',
+            condition: r.condition,
+        }));
+        this.ui.updateStreamingSource('AskMaddi', 'done');
+        if (results.length > 0) {
+            this.ui.replaceProductGrid(results, query);
+            this.ui.finalizeResults(results.length, results.length, results.length);
+        } else {
+            this.ui.showEmptyResults({ AskMaddi: { products: 0 } });
+        }
+        this.sendAnalytics(query, 1);
+    }
+
     cancelSearch() {
         this.isSearching = false;
         this.ui.showState('landing');
