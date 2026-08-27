@@ -103,15 +103,17 @@ SEMANTIC_WEIGHT = 0.5
 
 
 def _lexical_score(query_tokens, name):
+    # WHOLE-TOKEN match, not substring: every query token must equal a name token
+    # (so "a7" matches "a7"/"A7 IV" but NOT "a7r" — no cross-variant contamination).
     name_tokens = _tokenize(name)
     if not name_tokens:
         return 0.0
-    if not all(any(qt in nt for nt in name_tokens) for qt in query_tokens):
+    nset = set(name_tokens)
+    if not all(qt in nset for qt in query_tokens):
         return 0.0
     qset = set(query_tokens)
-    hits = sum(1 for nt in name_tokens if any(qt in nt for qt in query_tokens))
-    exact = sum(1 for nt in name_tokens if nt in qset)
-    return hits / len(name_tokens) + EXACT_MATCH_BOOST * (exact / len(name_tokens))
+    hits = sum(1 for nt in name_tokens if nt in qset)
+    return hits / len(name_tokens)
 
 
 def _cosine(a, b):
@@ -131,7 +133,9 @@ def rerank(query, rows, *, embed=None):
     scored = []
     for row in rows:
         score = _lexical_score(qtokens, row.get("name") or "")
-        if embed is not None and score > 0.0 and qvec is not None:
+        if score <= 0.0:
+            continue  # no whole-token match to the query → not a result (drops a7R for "a7 iv")
+        if embed is not None and qvec is not None:
             score += SEMANTIC_WEIGHT * _cosine(qvec, embed(row.get("name") or ""))
         scored.append((score, _price_float_or(row.get("price"), float("inf")),
                        row.get("url") or "", row))

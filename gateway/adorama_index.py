@@ -61,13 +61,15 @@ def search(query, limit=25):
     if not qtokens:
         return []
     rows, names = _load()
+    qset = set(qtokens)
     out = []
     for row, ntokens in zip(rows, names):
         if not ntokens:
             continue
-        if not all(any(qt in nt for nt in ntokens) for qt in qtokens):
+        # WHOLE-TOKEN match (not substring): "a7" matches "a7", never "a7r".
+        if not all(qt in ntokens for qt in qtokens):
             continue
-        coverage = sum(1 for nt in ntokens if any(qt in nt for qt in qtokens)) / len(ntokens)
+        coverage = len(ntokens & qset) / len(ntokens)
         out.append((coverage, row))
     out.sort(key=lambda c: -c[0])
     results = []
@@ -80,6 +82,9 @@ def search(query, limit=25):
             name = model
         else:
             name = f"{brand} {model}".strip()
+        # The feed sometimes doubles a leading word ("Sony Sony UTX-P1"); collapse
+        # any run of identical consecutive words to one.
+        name = re.sub(r"\b(\w+)(\s+\1\b)+", r"\1", name, flags=re.IGNORECASE)
         results.append({
             "name": name,
             "price": row.get("price"),
