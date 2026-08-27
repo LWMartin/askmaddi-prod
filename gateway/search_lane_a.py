@@ -18,8 +18,25 @@ from __future__ import annotations
 
 import search_cells
 
+# Max Used (eBay) products in the canonical section, so eBay's many unique-titled
+# listings of one body can't bury the few clean New/Adorama rows.
+EBAY_CANONICAL_CAP = 10
+
 # lazy singletons
 _identity_lookup = None
+
+
+def _interleave_new_first(new_lane, used_lane):
+    """Round-robin New, Used, New, Used… (New leads). When one lane is exhausted
+    the other's remainder follows. Each lane keeps its own relevance order."""
+    out = []
+    i = j = 0
+    while i < len(new_lane) or j < len(used_lane):
+        if i < len(new_lane):
+            out.append(new_lane[i]); i += 1
+        if j < len(used_lane):
+            out.append(used_lane[j]); j += 1
+    return out
 
 
 def _lookup():
@@ -83,6 +100,17 @@ def precise_search(query, limit=25):
     canonical = search_cells.dedup_by_identity(canonical)
     canonical = search_cells.rerank(query, canonical)
     accessory = search_cells.rerank(query, accessory)
+
+    # Feature the NEW lane. eBay lists MANY unique-titled listings of the same
+    # body (each seller's title differs, so they never dedup), while Adorama has
+    # a FEW clean product rows — so raw relevance order buries the New/Adorama
+    # buy-path under eBay's Used volume. Interleave New-first (Adorama gets every
+    # other top slot) and cap the Used listings so they can't dominate the page.
+    # Both stay relevance-ranked within their lane; this is presentation, not a
+    # relevance hack.
+    new_lane = [r for r in canonical if r.get("seller") == "Adorama"]
+    used_lane = [r for r in canonical if r.get("seller") != "Adorama"][:EBAY_CANONICAL_CAP]
+    canonical = _interleave_new_first(new_lane, used_lane)
 
     payload = search_cells.compose(canonical, accessory, tail_cap=8)
     payload["diagnostics"] = {
