@@ -22,12 +22,45 @@ _INDEX_PATH = os.environ.get(
     os.path.join(os.path.dirname(__file__), "..", "data", "adorama-search-index.json"))
 _TOKEN_RE = re.compile(r"[a-z0-9]+")
 
+# Filler/qualifier words that appear in natural-language queries but never in a
+# product title ("travel tripod UNDER $400", "sony full-frame camera"). Dropped
+# from the query so they don't starve the match. Pure digits are dropped too
+# (price/qualifier numbers like "400"); real model numbers keep their letters.
+_STOPWORDS = frozenset({
+    "under", "over", "below", "above", "less", "than", "with", "and", "the",
+    "for", "best", "top", "cheap", "cheapest", "budget", "in", "on", "of", "a",
+    "to", "or", "my", "me", "buy", "new", "used", "vs",
+})
+
 _lock = threading.Lock()
 _cache = {"mtime": None, "rows": [], "names": []}
 
 
 def _tokenize(text):
     return _TOKEN_RE.findall((text or "").lower())
+
+
+def _query_tokens(query):
+    """Content tokens of a query: drop stopwords and pure-number qualifiers."""
+    return [t for t in _tokenize(query) if t not in _STOPWORDS and not t.isdigit()]
+
+
+def _tmatch(qt, nt):
+    """Token equality with simple singular/plural tolerance ("tripods"~"tripod",
+    "lenses"~"lens") — but NEVER a substring merge, so "a7" never matches "a7r"."""
+    if qt == nt:
+        return True
+    return (qt == nt + "s" or nt == qt + "s"
+            or qt == nt + "es" or nt == qt + "es")
+
+
+def _score(qtokens, ntokens):
+    """How many query tokens match some name token (exact fast-path, then plural)."""
+    s = 0
+    for qt in qtokens:
+        if qt in ntokens or any(_tmatch(qt, nt) for nt in ntokens):
+            s += 1
+    return s
 
 
 def is_configured():
@@ -57,21 +90,20 @@ def search(query, limit=25):
     mirrors the Lane A rerank gate). Returns up to `limit` rows; final ranking is
     Lane A's rerank cell, so here we just filter and cap by a cheap coverage sort.
     """
-    qtokens = _tokenize(query)
+    qtokens = _query_tokens(query)
     if not qtokens:
         return []
     rows, names = _load()
-    qset = set(qtokens)
     out = []
     for row, ntokens in zip(rows, names):
         if not ntokens:
             continue
-        # WHOLE-TOKEN match (not substring): "a7" matches "a7", never "a7r".
-        if not all(qt in ntokens for qt in qtokens):
+        s = _score(qtokens, ntokens)
+        if s == 0:                       # no query token matched → not a result
             continue
-        coverage = len(ntokens & qset) / len(ntokens)
-        out.append((coverage, row))
-    out.sort(key=lambda c: -c[0])
+        # rank: most query tokens matched first, then tighter name (less noise)
+        out.append(((s, -len(ntokens)), row))
+    out.sort(key=lambda c: (-c[0][0], -c[0][1]))
     results = []
     for _, row in out[:limit]:
         brand = row.get("brand", "")

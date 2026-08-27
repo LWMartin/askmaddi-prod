@@ -20,14 +20,34 @@ const ACCESSORY_MARKERS = [
 const USED_LANE_CAP = 10;   // cap Used listings so eBay volume can't flood
 const ACCESSORY_TAIL_CAP = 8;
 
+// Filler/qualifier words that appear in NL queries but never in product titles
+// ("travel tripod UNDER $400"). Dropped so they don't starve the match.
+const STOPWORDS = new Set([
+    'under', 'over', 'below', 'above', 'less', 'than', 'with', 'and', 'the',
+    'for', 'best', 'top', 'cheap', 'cheapest', 'budget', 'in', 'on', 'of', 'a',
+    'to', 'or', 'my', 'me', 'buy', 'new', 'used', 'vs',
+]);
+
 function tokens(s) {
     return ((s || '').toLowerCase().match(/[a-z0-9]+/g)) || [];
 }
 
-function matchesQuery(queryTokens, name) {
-    // whole-token: every query token must equal some name token
-    const nt = new Set(tokens(name));
-    return queryTokens.every(qt => nt.has(qt));
+function queryTokens(query) {
+    return tokens(query).filter(t => !STOPWORDS.has(t) && !/^\d+$/.test(t));
+}
+
+function tmatch(qt, nt) {
+    // equality with simple singular/plural tolerance; never a substring merge,
+    // so "a7" never matches "a7r".
+    if (qt === nt) return true;
+    return qt === nt + 's' || nt === qt + 's' || qt === nt + 'es' || nt === qt + 'es';
+}
+
+function relevanceScore(qTokens, name) {
+    const nt = tokens(name);
+    let s = 0;
+    for (const qt of qTokens) if (nt.some(n => tmatch(qt, n))) s++;
+    return s;
 }
 
 function isAccessory(name) {
@@ -64,16 +84,23 @@ function roundRobin(lanes) {
  * then a capped compatible/third-party tail).
  */
 export function arrangeResults(query, products) {
-    const q = tokens(query);
+    const q = queryTokens(query);
     if (q.length === 0) return products.slice();
 
-    // relevance gate (whole-token) — drops a7R for "a7 iv" and unrelated junk
-    const relevant = products.filter(p => matchesQuery(q, p.name));
-    const canonical = relevant.filter(p => !isAccessory(p.name));
-    const accessory = relevant.filter(p => isAccessory(p.name));
+    // Coverage relevance: keep anything matching >=1 query token, rank by how
+    // many matched. Handles NL/category queries ("travel tripod under $400")
+    // without going empty, while whole-token matching keeps "a7 iv" off "a7r".
+    const scored = products
+        .map(p => ({ p, s: relevanceScore(q, p.name) }))
+        .filter(x => x.s > 0);
 
-    const lane = (adorama, cond) =>
-        canonical.filter(p => isAdorama(p) === adorama && conditionClass(p) === cond);
+    const canonical = scored.filter(x => !isAccessory(x.p.name));
+    const accessory = scored.filter(x => isAccessory(x.p.name));
+
+    const lane = (adorama, cond) => canonical
+        .filter(x => isAdorama(x.p) === adorama && conditionClass(x.p) === cond)
+        .sort((a, b) => b.s - a.s)          // best matches lead within the lane
+        .map(x => x.p);
     const lanes = [
         lane(true, 'new'),                       // Adorama New
         lane(false, 'new'),                      // eBay New
@@ -81,5 +108,7 @@ export function arrangeResults(query, products) {
         lane(false, 'used').slice(0, USED_LANE_CAP), // eBay Used (capped)
     ];
 
-    return roundRobin(lanes).concat(accessory.slice(0, ACCESSORY_TAIL_CAP));
+    const tail = accessory.sort((a, b) => b.s - a.s)
+        .slice(0, ACCESSORY_TAIL_CAP).map(x => x.p);
+    return roundRobin(lanes).concat(tail);
 }
