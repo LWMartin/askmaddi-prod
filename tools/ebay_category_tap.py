@@ -283,11 +283,21 @@ def main(argv=None):
                     help="skip the demand_gate facet screen (debug)")
     args = ap.parse_args(argv)
 
+    # Load gateway/.env into os.environ BEFORE importing ebay_api — ebay_api reads
+    # EBAY_APP_ID/CERT_ID at module level, and a crontab job inherits a minimal
+    # environment with none of the gateway exports. Same shared loader resolve_pass
+    # uses (env_bootstrap), so there is one parsing/precedence rule. Must precede
+    # the ebay_api import.
+    gateway_dir = str(_PROD / "gateway")
+    if gateway_dir not in sys.path:
+        sys.path.insert(0, gateway_dir)
     try:
-        import ebay_api  # noqa: E402  (box: gateway on sys.path)
-    except Exception:
-        sys.path.insert(0, str(_PROD / "gateway"))
-        import ebay_api  # type: ignore
+        import env_bootstrap
+        env_bootstrap.load_dotenv()
+    except Exception as e:
+        print(f"  [warn] env_bootstrap unavailable ({e}); relying on ambient env",
+              file=sys.stderr)
+    import ebay_api  # noqa: E402  (creds now populated)
 
     classify_fn = None if args.no_screen else _import_classify()
     if not args.no_screen and classify_fn is None:
