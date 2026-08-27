@@ -130,7 +130,7 @@ def load_proposals(path):
 
 def run(proposals, *, ebay, gemma, demand_log, review_queue,
         resolve_fn=None, skus_path=None, work_queue_path=None,
-        floor=None, on_event=None):
+        floor=None, on_event=None, max_new=None):
     """Run the resolve pass over a batch of proposals. Returns a summary dict.
 
     Parameters
@@ -172,9 +172,26 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
 
     summary = {
         'total': 0, 'enrolled': 0, 'already_queued': 0,
-        'no_candidate': 0, 'errors': 0,
+        'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0, 'deferred': 0,
         'enrolled_slugs': [], 'error_slugs': [],
     }
+
+    # PACING: skip proposals already in the work_queue at ANY lifecycle state,
+    # BEFORE the (non-free) eBay + LLM calls inside resolve_proposal. enroll() is
+    # already idempotent, but re-resolving the whole backlog every tick is exactly
+    # the sustained LLM load that OOM-killed the disambiguator. With max_new set,
+    # each invocation resolves at most that many NEW slugs, so a paced 2-hourly
+    # cron spreads the load instead of hammering ~200 in one batch. The membership
+    # set is read ONCE (not per-proposal). max_new=None preserves legacy behaviour
+    # (resolve everything, unbounded) for the one-shot / test callers.
+    already_enrolled = set()
+    try:
+        wq = (work_queue.load_queue(work_queue_path) if work_queue_path
+              else work_queue.load_queue())
+        already_enrolled = set(wq.get('queue', {}).keys())
+    except (OSError, ValueError):
+        pass  # no queue yet (first run) -> nothing to skip
+    new_resolved = 0
 
     # resolve_proposal kwargs that are only passed when overridden (tests).
     rp_kwargs = {'ebay': ebay, 'gemma': gemma,
@@ -185,6 +202,19 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
 
     for prop in proposals:
         slug = prop['slug']
+
+        # Already in the build queue -> skip the expensive resolve (idempotent
+        # anyway; this just avoids re-hammering eBay/LLM on the standing backlog).
+        if slug in already_enrolled:
+            summary['skipped_enrolled'] += 1
+            continue
+        # Per-invocation cap on NEW resolves: once hit, count the rest as deferred
+        # (a later tick picks them up) instead of resolving the whole file at once.
+        if max_new is not None and new_resolved >= max_new:
+            summary['deferred'] += 1
+            continue
+        new_resolved += 1
+
         summary['total'] += 1
         event = {'slug': slug, 'fork_n': prop.get('fork_n')}
 
@@ -241,6 +271,10 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             )
             summary['enrolled'] += 1
             summary['enrolled_slugs'].append(resolved_slug)
+            # Guard the cap against duplicate/fork proposals of the same product:
+            # a later fork_n of a just-enrolled slug now skips instead of spending
+            # another slot on a product already queued.
+            already_enrolled.add(resolved_slug)
         elif kind == 'queued':
             # Low-confidence -> already in review_queue as a straggler. Not built.
             summary['already_queued'] += 1
@@ -271,6 +305,10 @@ def _build_arg_parser():
                    help="Gemma model tag for disambiguation.")
     p.add_argument('--dry-run', action='store_true',
                    help="Load + report proposals without resolving (no eBay/Gemma).")
+    p.add_argument('--max', type=int, default=None, dest='max_new',
+                   help="Resolve at most N NEW proposals this run (skip slugs "
+                        "already in the work_queue first). Paces the LLM load for "
+                        "a frequent cron; omit for the legacy resolve-everything run.")
     return p
 
 
@@ -319,12 +357,14 @@ def main(argv=None):
     summary = run(
         proposals, ebay=ebay_api, gemma=gemma,
         demand_log=demand_log, review_queue=review_queue,
-        floor=args.floor, on_event=_log,
+        floor=args.floor, on_event=_log, max_new=args.max_new,
     )
 
     print(f"\n[resolve_pass] done: {summary['enrolled']} enrolled, "
           f"{summary['already_queued']} queued (straggler), "
-          f"{summary['no_candidate']} no-candidate, {summary['errors']} error(s).")
+          f"{summary['no_candidate']} no-candidate, {summary['errors']} error(s), "
+          f"{summary['skipped_enrolled']} already-queued (skipped), "
+          f"{summary['deferred']} deferred (over --max).")
     if summary['enrolled']:
         print(f"[resolve_pass] enrolled -> work_queue (factory will build): "
               f"{', '.join(summary['enrolled_slugs'])}")

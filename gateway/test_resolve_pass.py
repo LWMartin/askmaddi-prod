@@ -253,3 +253,86 @@ def test_unknown_outcome_counted_as_error(skus_path, wq_path):
         resolve_fn=weird_resolver, skus_path=skus_path, work_queue_path=wq_path)
     assert summary['errors'] == 1
     assert summary['enrolled'] == 0
+
+
+# ── pacing: --max cap + skip-already-enrolled ──────────────────────────────────
+def _counting_resolver(outcomes):
+    """A _fake_resolver that records which slugs it was actually CALLED for, so a
+    test can prove the expensive resolve was skipped, not merely uncounted."""
+    calls = []
+
+    def resolve_fn(slug, **kwargs):
+        calls.append(slug)
+        kind = outcomes.get(slug, 'resolved')
+        if kind == 'error':
+            raise resolve_sku.ResolveError(f"{slug} has no registry entry")
+        return {'slug': slug, 'outcome': kind, 'detail': 'x', 'confidence': 0.9}
+    return resolve_fn, calls
+
+
+def test_max_new_caps_new_resolves(skus_path, wq_path):
+    """--max N resolves at most N NEW proposals and defers the rest — the
+    resolver (the eBay+LLM cost) is called exactly N times, not once per file."""
+    proposals = _props(('sony-a7s-iii', 13), ('canon-r5-ii', 9),
+                       ('pd-travel-tripod', 7))
+    resolve_fn, calls = _counting_resolver({})   # all 'resolved'
+    summary = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=resolve_fn, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=2)
+
+    assert len(calls) == 2, f"resolver called {len(calls)}x despite --max 2"
+    assert summary['enrolled'] == 2
+    assert summary['deferred'] == 1
+    # fork_n-desc order: a7s-iii(13), canon(9) resolve; tripod(7) defers.
+    assert set(calls) == {'sony-a7s-iii', 'canon-r5-ii'}
+    assert wq.get('pd-travel-tripod', path=wq_path) is None
+
+
+def test_none_max_is_unlimited_legacy(skus_path, wq_path):
+    """max_new=None (the default / one-shot caller) resolves everything —
+    the behaviour the daily full run and every existing caller relies on."""
+    proposals = _props(('sony-a7s-iii', 13), ('canon-r5-ii', 9),
+                       ('pd-travel-tripod', 7))
+    resolve_fn, calls = _counting_resolver({})
+    summary = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=resolve_fn, skus_path=skus_path, work_queue_path=wq_path)
+    assert len(calls) == 3
+    assert summary['enrolled'] == 3
+    assert summary['deferred'] == 0
+
+
+def test_already_enrolled_is_skipped_before_resolve(skus_path, wq_path):
+    """A slug already in the work_queue is skipped BEFORE the resolver runs —
+    no re-hammering the standing backlog with eBay/LLM calls every tick."""
+    wq.enroll('sony-a7s-iii', 'Sony A7S III', 'body', path=wq_path)
+    proposals = _props(('sony-a7s-iii', 13), ('canon-r5-ii', 9))
+    resolve_fn, calls = _counting_resolver({})
+    summary = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=resolve_fn, skus_path=skus_path, work_queue_path=wq_path)
+
+    assert calls == ['canon-r5-ii'], "the already-enrolled slug was re-resolved"
+    assert summary['skipped_enrolled'] == 1
+    assert summary['enrolled'] == 1
+
+
+def test_skipped_slugs_do_not_consume_the_max_budget(skus_path, wq_path):
+    """The cap counts NEW work, not skips: an already-enrolled slug ahead of a
+    fresh one must not eat the single --max slot and starve the fresh one."""
+    wq.enroll('sony-a7s-iii', 'Sony A7S III', 'body', path=wq_path)
+    # a7s-iii(13) is already enrolled -> skipped; canon(9) is the first NEW one.
+    proposals = _props(('sony-a7s-iii', 13), ('canon-r5-ii', 9),
+                       ('pd-travel-tripod', 7))
+    resolve_fn, calls = _counting_resolver({})
+    summary = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=resolve_fn, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1)
+
+    assert calls == ['canon-r5-ii'], (
+        "the skip consumed the --max budget, starving the fresh proposal")
+    assert summary['skipped_enrolled'] == 1
+    assert summary['enrolled'] == 1
+    assert summary['deferred'] == 1     # tripod
