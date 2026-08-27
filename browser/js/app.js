@@ -10,7 +10,7 @@ import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
 // through the server-side /search Sieve (eBay Used + Adorama New, classified /
 // ranked / deduped / bucketed). Until flipped, opt-in PER QUERY via ?precise=1
 // for testing. Reversible: the legacy path is untouched.
-const PRECISE_SEARCH = true;
+const PRECISE_SEARCH = false;
 
 class AskMaddi {
     constructor() {
