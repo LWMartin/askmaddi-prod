@@ -125,7 +125,7 @@ stalls overnight you need to know which change caused it.
 
 ### Affiliate status (verified live)
 - **eBay Partner Network:** LIVE. Campaign `5339138080` attaches to every `/ebay/search` URL (`campid=` confirmed in responses). Earning-capable now.
-- **Amazon Associates:** approved (`askmaddi-20`), PA-API not yet active (awaiting purchases to unblock).
+- **Amazon Associates:** approved (`askmaddi20-20` — the reapplied tag after the 2026-07 suspension of the dead `askmaddi-20`), PA-API not yet active (awaiting purchases to unblock).
 
 ---
 
@@ -309,7 +309,7 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Affiliate Status
 
-- **Amazon Associates:** Approved. Tag: `askmaddi-20`. **Wired in repo, needs deploy to VPS.**
+- **Amazon Associates:** Approved. Tag: `askmaddi20-20` (reapplied after the 2026-07 suspension of `askmaddi-20`, now a dead-tag tripwire). **Live in repo + VPS.**
 - **eBay Partner Network:** Approved. Campaign ID: `5339138080`. **Wired in repo, needs deploy to VPS.**
 - **Impact:** Two verification meta tags in index.html — likely for affiliate network onboarding.
 - **Best Buy, Newegg, Walmart:** Denied (insufficient traffic).
@@ -356,7 +356,7 @@ ProxyPassReverse /ping http://127.0.0.1:5000/ping
 
 ## Next Actions
 
-1. **Deploy affiliate codes to VPS** — Amazon (askmaddi-20) + eBay (5339138080) wired in repo, need to update VPS `affiliate.js`. Fastest path to revenue.
+1. **Deploy affiliate codes to VPS** — Amazon (askmaddi20-20) + eBay (5339138080) wired in repo, need to update VPS `affiliate.js`. Fastest path to revenue.
 2. **Sync repo with VPS** — pull mission.html, privacy.html, terms.html, api.php, logo.png, live index.html, live app.py into repo
 3. **AlmaLinux 8 migration** — use this map as the preservation checklist
 4. **Install Chrome on new box** — unblocks headless scraping (Amazon)
