@@ -121,7 +121,7 @@ def search(query, limit=25):
             "name": name,
             "price": row.get("price"),
             "currency": "USD",
-            "image": "",  # snapshot dropped image_url; re-include is a fast-follow
+            "image": row.get("image") or "",
             "url": row.get("url"),
             "condition": "New",
             "seller": "Adorama",
