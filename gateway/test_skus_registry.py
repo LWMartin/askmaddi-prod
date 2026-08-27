@@ -342,3 +342,61 @@ def test_rotation_fresh_evidence_replaces_null_anchor_receipt(tmp_path):
     reg.upsert('sony-a7iv', fresh, path=p)
     e = json.loads(p.read_text())['skus']['sony-a7iv']
     assert e['identity']['gtin_provenance']['observations'] == [{'new': True}]
+
+
+# ── contamination-join resolver (structural mint gate, 2026-08-27) ────────────
+
+def _contam(tmp_path, keys):
+    p = tmp_path / 'contamination.json'
+    p.write_text(json.dumps({'products': {k: {} for k in keys}}))
+    return p
+
+
+def test_resolve_ck_specific_wins(tmp_path):
+    cp = _contam(tmp_path, ['sony-fx6', 'sony-generic'])
+    assert reg.resolve_contamination_key(
+        'sony-fx6', 'Sony', 'body', contam_path=cp) == ('sony-fx6', 'specific')
+
+
+def test_resolve_ck_falls_to_brand_generic(tmp_path):
+    cp = _contam(tmp_path, ['sony-generic'])
+    assert reg.resolve_contamination_key(
+        'sony-fx99', 'Sony', 'body', contam_path=cp) == ('sony-generic', 'brand_generic')
+
+
+def test_resolve_ck_falls_to_facet_generic(tmp_path):
+    # no vendor generic, but the facet has one
+    cp = _contam(tmp_path, ['flash-generic'])
+    assert reg.resolve_contamination_key(
+        'godox-zz', 'Godox', 'flash', contam_path=cp) == ('flash-generic', 'facet_generic')
+
+
+def test_resolve_ck_facet_uses_first_segment(tmp_path):
+    cp = _contam(tmp_path, ['support-generic'])
+    assert reg.resolve_contamination_key(
+        'benro-x', 'Benro', 'support/tripod', contam_path=cp) == ('support-generic', 'facet_generic')
+
+
+def test_resolve_ck_unresolved_echoes_slug(tmp_path):
+    # no specific, no olympus-generic, no lens-generic -> caller must route to review
+    cp = _contam(tmp_path, ['sony-generic'])
+    assert reg.resolve_contamination_key(
+        'olympus-60mm-f2-8', 'Olympus', 'lens', contam_path=cp) == ('olympus-60mm-f2-8', 'unresolved')
+
+
+def test_resolve_ck_fails_open_when_unreadable(tmp_path):
+    # infra error (no contamination.json) must never block a mint -> 'unknown'
+    assert reg.resolve_contamination_key(
+        'sony-fx6', 'Sony', 'body', contam_path=tmp_path / 'nope.json') == ('sony-fx6', 'unknown')
+
+
+def test_build_entry_records_generic_tier():
+    e = reg.build_entry('sony-fx99', 'Sony', 'FX99', 'body', 'sony-generic',
+                        _resolved(), contamination_tier='brand_generic')
+    assert e['contamination_tier'] == 'brand_generic'
+
+
+def test_build_entry_omits_tier_for_specific():
+    e = reg.build_entry('sony-fx6', 'Sony', 'FX6', 'body', 'sony-fx6',
+                        _resolved(), contamination_tier=None)
+    assert 'contamination_tier' not in e

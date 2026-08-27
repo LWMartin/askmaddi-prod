@@ -69,7 +69,9 @@ ENQUEUE_REASONS = ('collision', 'needs_review', 'low_resolve_confidence',
                    # GTIN/MPN-first identity (resolve_multisource, step 2):
                    'identity_contradiction',  # carried id disproves the eBay pick
                    'ambiguous_identity',       # >1 real product across eras (L10 class)
-                   'sourced_offmarket')        # confident id from mfr/Icecat, not on eBay
+                   'sourced_offmarket',        # confident id from mfr/Icecat, not on eBay
+                   # Contamination-join gate (mint structural guard, 2026-08-27):
+                   'no_contamination_entry')   # new slug has no resolvable contamination_key
 
 # Structured reject reasons — a reject is a pipeline-bug signal, so the reason is
 # a controlled vocab the upstream-fix workflow can key on, not freetext.

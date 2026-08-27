@@ -412,6 +412,11 @@ def _reason_badge(record):
         conf = chosen.get('score') if chosen else None
         detail = f"machine pick {conf:.0%} confident" if isinstance(conf, (int, float)) else ''
         return ('low resolve confidence', detail)
+    if reason == 'no_contamination_entry':
+        # A new mint whose contamination_key resolves to nothing — author a
+        # contamination.json entry (or a brand/facet generic) before promoting,
+        # else the relevance gate degrades to weak derived-alias fallback.
+        return ('no contamination entry', 'author a contamination.json entry first')
     return ('needs review', '')
 
 

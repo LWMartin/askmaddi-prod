@@ -151,9 +151,77 @@ def _same_identity(a, b):
             and _mpn(a) == _mpn(b))
 
 
+# ── Contamination-join resolution (structural guard, 2026-08-27) ──────────────
+#
+# contamination.json lives in the phantom-ops workspace (the gateway box checks
+# out both repos; the factory reaches build_card.py by the same route). Overridable
+# via env so tests/sandbox never depend on the box layout — mirrors card_factory's
+# DEFAULT_BUILD_CARD.
+DEFAULT_CONTAMINATION_JSON = (
+    Path.home() / 'phantom-ops' / 'claude' / 'workspace'
+    / 'aggregator-build' / 'fixtures' / 'manifests' / 'contamination.json'
+)
+
+
+def _generic_key(name):
+    """'<name>-generic' in the registry's slug form, or None for empty input.
+    Mirrors build_card._generic_key so registration and build agree by construction."""
+    if not name or not name.strip():
+        return None
+    slug = name.strip().lower().replace(' ', '-').replace('_', '-')
+    return f'{slug}-generic'
+
+
+def _load_contamination_products(contam_path=None):
+    """The contamination.json `products` map, or None if unreadable — the resolver
+    then FAILS OPEN (an infra hiccup must never block a live mint; the nightly
+    registry_join_check bridge stays the backstop)."""
+    p = Path(contam_path or os.environ.get('ASKMADDI_CONTAMINATION_JSON')
+             or DEFAULT_CONTAMINATION_JSON)
+    try:
+        return json.loads(p.read_text(encoding='utf-8')).get('products', {})
+    except (OSError, ValueError):
+        return None
+
+
+def resolve_contamination_key(slug, vendor, facet, *, contam_path=None):
+    """Resolve the contamination_key a NEW spine entry should STORE, via the same
+    ladder build_card._require_contamination_join uses at build time:
+
+        specific(slug)  ->  {vendor}-generic  ->  {facet}-generic
+
+    so the stored key resolves BY CONSTRUCTION — the dangling self-name class (the
+    15-key bridge break of 2026-08-27, `assert_joinable` built but never mounted)
+    cannot recur. Returns (key, tier):
+
+      'specific' | 'brand_generic' | 'facet_generic'
+          `key` is a resolvable key to store. brand/facet tiers are coverage-debt
+          (coarser relevance; a specific entry is worth authoring later).
+      'unresolved'
+          nothing in the ladder resolved; `key` echoes the slug. The caller must
+          NOT store it silently — route to review so a human authors an entry.
+      'unknown'
+          contamination.json unreadable (infra); FAIL OPEN — `key` is the slug and
+          the caller proceeds exactly as before (the nightly bridge still guards).
+    """
+    products = _load_contamination_products(contam_path)
+    if products is None:
+        return slug, 'unknown'
+    if slug in products:
+        return slug, 'specific'
+    bg = _generic_key(vendor)
+    if bg and bg in products:
+        return bg, 'brand_generic'
+    fg = _generic_key((facet or '').split('/')[0])
+    if fg and fg in products:
+        return fg, 'facet_generic'
+    return slug, 'unresolved'
+
+
 def build_entry(slug, vendor, model, facet, contamination_key,
                 resolved, amazon_asin=None,
-                source='resolved', minted_needs_review=False):
+                source='resolved', minted_needs_review=False,
+                contamination_tier=None):
     """Assemble one skus.json entry from a resolve() result — SUBSTRATE SHAPE.
 
     `resolved` is the dict returned by ebay_api.resolve():
@@ -207,7 +275,7 @@ def build_entry(slug, vendor, model, facet, contamination_key,
         'ebay_category_id': identity.pop('ebay_category_id', ''),
     }
     unspsc = None
-    return {
+    entry = {
         'contamination_key': contamination_key,
         'vendor': vendor,
         'model': model,
@@ -226,6 +294,13 @@ def build_entry(slug, vendor, model, facet, contamination_key,
         'minted_needs_review': minted_needs_review,
         'resolved_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
     }
+    # Coverage-debt breadcrumb: a brand/facet-generic contamination_key means the
+    # relevance gate runs at coarse (brand/category) precision — worth a specific
+    # entry later. Recorded only when it's debt (a generic tier), so /admin can
+    # surface the queue; a 'specific' resolve (the good case) adds no field.
+    if contamination_tier in ('brand_generic', 'facet_generic'):
+        entry['contamination_tier'] = contamination_tier
+    return entry
 
 
 def _merge_enrichment(existing, entry):

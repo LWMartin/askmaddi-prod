@@ -631,15 +631,43 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
     minted_needs_review = bool(minted) and (
         target.get('source') == 'generated' or not category)
 
+    # ── Contamination-join gate (structural, 2026-08-27) ──────────────────────
+    # A NEW spine entry must never carry a dangling self-name contamination_key
+    # (the 15-key bridge break: assert_joinable built, never mounted). Resolve it
+    # through the same ladder the build uses (specific -> vendor-generic ->
+    # facet-generic) so the stored key resolves BY CONSTRUCTION. 'unresolved'
+    # parks the product for human authoring instead of spining a silently-broken
+    # relevance gate; 'unknown' (contamination.json unreadable) fails open. Only
+    # mints are gated — an enrich keeps its existing, possibly hand-authored key
+    # (e.g. slug 'sony-a7iv' bridging to 'sony-a7-iv'), which we must not re-derive.
+    contamination_key = target['contamination_key']
+    contamination_tier = None
+    if minted:
+        ck, ck_tier = skus_registry.resolve_contamination_key(
+            slug, target['vendor'], facet=category)
+        if ck_tier == 'unresolved':
+            eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+            record = review_queue.enqueue(
+                target.get('resolution'), resolved, target['vendor'],
+                target['model'], category, contamination_key=slug,
+                reason_override='no_contamination_entry', **eq_kwargs)
+            return {
+                'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+                'reason': 'no_contamination_entry', 'source': target['source'],
+            }
+        contamination_key = ck
+        contamination_tier = ck_tier if ck_tier in ('brand_generic', 'facet_generic') else None
+
     entry = skus_registry.build_entry(
         slug=slug,
         vendor=target['vendor'],
         model=target['model'],
         facet=category,
-        contamination_key=target['contamination_key'],
+        contamination_key=contamination_key,
         resolved=resolved,
         source=target.get('source', 'resolved'),
         minted_needs_review=minted_needs_review,
+        contamination_tier=contamination_tier,
     )
     # ── Rebind firewall (found live 2026-07-16: empty-box rebind) ──
     # A REBIND — fresh identity differing from a standing spine entry — gets

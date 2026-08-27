@@ -597,3 +597,68 @@ def test_generate_retries_once_on_transient_timeout(monkeypatch):
     raw = gemma._generate("PROMPT")
     assert calls["n"] == 2
     assert json.loads(raw)["why"] == "warm"
+
+
+# ── mint-time contamination-join gate (structural, 2026-08-27) ───────────────
+
+def _contam_file(tmp_path, keys):
+    p = tmp_path / 'contamination.json'
+    p.write_text(json.dumps({'products': {k: {} for k in keys}}))
+    return p
+
+
+def test_mint_unresolved_contamination_routes_to_review(
+        skus_path, queue_path, demand_path, tmp_path, monkeypatch):
+    # A NEW slug whose contamination_key resolves to NOTHING (no specific, no
+    # canon-generic) must NOT enter the spine silently-broken — it routes to review.
+    monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
+                       str(_contam_file(tmp_path, ['sony-generic'])))
+    ebay = MockEbay(candidates=CANDS)
+    out = resolve_sku.resolve_proposal(
+        'canon-eos-r100', vendor='Canon', model='EOS R100',
+        ebay=ebay, gemma=_gemma(0, 0.95),
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued'
+    assert out['reason'] == 'no_contamination_entry'
+    # spine was NOT written for the dangling mint
+    assert 'canon-eos-r100' not in skus_registry.load_registry(skus_path)['skus']
+
+
+def test_mint_resolves_to_brand_generic_and_records_tier(
+        skus_path, queue_path, demand_path, tmp_path, monkeypatch):
+    # canon-generic present -> the mint resolves (coarse) and stores the resolved
+    # key + a coverage-debt tier, instead of the dangling self-name.
+    monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
+                       str(_contam_file(tmp_path, ['canon-generic'])))
+    ebay = MockEbay(candidates=CANDS)
+    out = resolve_sku.resolve_proposal(
+        'canon-eos-r100', vendor='Canon', model='EOS R100',
+        ebay=ebay, gemma=_gemma(0, 0.95),
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'
+    entry = skus_registry.load_registry(skus_path)['skus']['canon-eos-r100']
+    assert entry['contamination_key'] == 'canon-generic'
+    assert entry['contamination_tier'] == 'brand_generic'
+
+
+def test_mint_specific_entry_stores_slug_no_tier(
+        skus_path, queue_path, demand_path, tmp_path, monkeypatch):
+    # If a specific entry was pre-authored (the ideal flow), the slug is stored
+    # verbatim and no coverage-debt tier is recorded.
+    monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
+                       str(_contam_file(tmp_path, ['canon-eos-r100'])))
+    ebay = MockEbay(candidates=CANDS)
+    out = resolve_sku.resolve_proposal(
+        'canon-eos-r100', vendor='Canon', model='EOS R100',
+        ebay=ebay, gemma=_gemma(0, 0.95),
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'
+    entry = skus_registry.load_registry(skus_path)['skus']['canon-eos-r100']
+    assert entry['contamination_key'] == 'canon-eos-r100'
+    assert 'contamination_tier' not in entry
