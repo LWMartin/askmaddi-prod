@@ -56,6 +56,23 @@
     font-size: 14px;
     margin: 0 0 var(--space-md);
 }
+/* On-sale price-drop badge (W3: maddi-feed-price-drop-signals). Human-approved
+   overlay; renders only a genuine drop. Reuses the confidence-pill visual language. */
+.on-sale-badge {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 4px 10px;
+    margin: 0 0 var(--space-md);
+    border-radius: 999px;
+    background: rgba(90,154,110,0.14);
+    font-size: 13px;
+    line-height: 1.4;
+}
+.on-sale-flag { font-weight: 700; color: var(--color-success); text-transform: uppercase; letter-spacing: .02em; }
+.on-sale-was { color: var(--color-text-muted); text-decoration: line-through; }
+.on-sale-now { font-weight: 700; color: var(--color-text); }
+.on-sale-drop { font-weight: 600; color: var(--color-success); }
 .hero-actions {
     display: flex;
     gap: var(--space-sm);

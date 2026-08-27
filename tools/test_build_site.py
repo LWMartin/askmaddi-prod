@@ -349,6 +349,69 @@ def test_apply_hero_registry_absent_file_is_noop(tmp_path, monkeypatch):
     assert "image_hero" not in cards[0]["identity"]
 
 
+# ─── W3: on-sale price-drop badges (spec: maddi-feed-price-drop-signals) ─────
+
+def test_on_sale_badge_renders_a_genuine_drop():
+    from build_site import on_sale_badge
+    html = on_sale_badge({"on_sale": {"was": 2299, "now": 1998, "drop_pct": 0.1309}})
+    assert "On sale" in html
+    assert "$2299" in html and "$1998" in html
+    assert "13%" in html  # 0.1309 -> 13%
+
+
+def test_on_sale_badge_absent_is_empty():
+    from build_site import on_sale_badge
+    assert on_sale_badge({}) == ""
+    assert on_sale_badge({"on_sale": None}) == ""
+
+
+def test_on_sale_badge_rejects_non_drop():
+    from build_site import on_sale_badge
+    # a price INCREASE, flat, or non-positive was is never a badge (defensive vs a
+    # bad overlay entry: degrade to no badge, never render "was $1000, now $1200").
+    assert on_sale_badge({"on_sale": {"was": 1000, "now": 1200}}) == ""
+    assert on_sale_badge({"on_sale": {"was": 1000, "now": 1000}}) == ""
+    assert on_sale_badge({"on_sale": {"was": 0, "now": -5}}) == ""
+
+
+def test_on_sale_badge_derives_pct_when_absent():
+    from build_site import on_sale_badge
+    # drop_pct omitted -> derived from was/now (2000->1500 = 25%).
+    assert "25%" in on_sale_badge({"on_sale": {"was": 2000, "now": 1500}})
+
+
+def test_apply_on_sale_registry_overlays_approved_drop(tmp_path, monkeypatch):
+    import build_site as bs
+    reg = tmp_path / "on_sale_badges.json"
+    reg.write_text('{"badges": {"sony-a7iv": {"was": 2299, "now": 1998, '
+                   '"drop_pct": 0.1309, "affiliate_url": "https://a/x"}}}')
+    monkeypatch.setattr(bs, "ON_SALE_REGISTRY_PATH", reg)
+    cards = [{"card_id": "sony-a7iv"}, {"card_id": "unknown-card"}]
+    bs.apply_on_sale_registry(cards)
+    assert cards[0]["on_sale"]["now"] == 1998
+    assert cards[0]["on_sale"]["affiliate_url"] == "https://a/x"
+    assert "on_sale" not in cards[1]  # unmatched card gets nothing
+
+
+def test_apply_on_sale_registry_skips_bad_entry(tmp_path, monkeypatch):
+    import build_site as bs
+    reg = tmp_path / "on_sale_badges.json"
+    # now > was -> not a genuine drop -> no overlay (never render nonsense).
+    reg.write_text('{"badges": {"sony-a7iv": {"was": 1000, "now": 1200}}}')
+    monkeypatch.setattr(bs, "ON_SALE_REGISTRY_PATH", reg)
+    cards = [{"card_id": "sony-a7iv"}]
+    bs.apply_on_sale_registry(cards)
+    assert "on_sale" not in cards[0]
+
+
+def test_apply_on_sale_registry_absent_file_is_noop(tmp_path, monkeypatch):
+    import build_site as bs
+    monkeypatch.setattr(bs, "ON_SALE_REGISTRY_PATH", tmp_path / "nope.json")
+    cards = [{"card_id": "sony-a7iv"}]
+    bs.apply_on_sale_registry(cards)       # must not raise
+    assert "on_sale" not in cards[0]
+
+
 def test_new_cta_search_is_product_scoped_not_generic_homepage():
     # The default Adorama CTA must be scoped to THIS product (search), never the
     # bare homepage short link — a generic landing kills conversion.

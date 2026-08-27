@@ -830,6 +830,38 @@ def price_history_section(card):
       </section>"""
 
 
+def on_sale_badge(card):
+    """Render the on-sale price-drop badge when a card carries an approved one.
+
+    The DISPLAY half of the feed price-drop program (spec:
+    maddi-feed-price-drop-signals W3). `on_sale` is an OVERLAY field set by
+    apply_on_sale_registry (keyed by card_id) — a human PROMOTES a nightly
+    feed_card_refresh proposal into data/on_sale_badges.json, never auto-applied.
+    Absent -> '' (a card that is not on sale shows nothing, never "$0 off").
+    Renders only a genuine drop (now < was, both positive) so a stale/bad overlay
+    entry degrades to no badge rather than a nonsense "was $900, now $1200"."""
+    deal = card.get("on_sale")
+    if not isinstance(deal, dict):
+        return ""
+    was, now = deal.get("was"), deal.get("now")
+    if not (isinstance(was, (int, float)) and isinstance(now, (int, float))):
+        return ""
+    if was <= 0 or not (now < was):
+        return ""
+    pct = deal.get("drop_pct")
+    if not isinstance(pct, (int, float)):
+        pct = (was - now) / was
+    pct_label = f"{round(pct * 100)}%"
+    return (
+        f'<p class="on-sale-badge" role="status">'
+        f'<span class="on-sale-flag">On sale</span> '
+        f'<span class="on-sale-was">${int(was)}</span> '
+        f'→ <span class="on-sale-now">${int(now)}</span> '
+        f'<span class="on-sale-drop">↓{esc(pct_label)}</span>'
+        f'</p>'
+    )
+
+
 # ─── Specs (product-forward; honest about absence) ──────────────────────────
 # Specs are a facts-pipeline output (fact-pipeline §3). On an external card they
 # live under `facts.specs` as a {slug: FactValue} map — FactValue is the dict
@@ -1266,6 +1298,7 @@ def render_page(card, image_url=None):
 
     sources_html = sources_section(card.get("sources", []) or [])
     price_html = price_history_section(card)
+    on_sale_html = on_sale_badge(card)
     specs_html = specs_section(card)
 
     # Key Axes header only renders if at least one non-empty lead axis survives.
@@ -1404,6 +1437,7 @@ def render_page(card, image_url=None):
         <div class="hero-body">
           <h1 class="hero-title">{esc(name)}</h1>
           <p class="hero-descriptor">{esc(descriptor)}</p>
+          {on_sale_html}
           <div class="hero-actions">
             <a class="btn-affiliate btn-buy-new" href="{esc(new_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{new_retailer}" data-category="{esc(page_category)}">{esc(new_label)} \u2192</a>
             <a class="btn-affiliate btn-buy-used" href="{esc(used_url)}" target="_blank" rel="nofollow noopener sponsored" data-out data-retailer="{used_retailer}" data-category="{esc(page_category)}">{esc(used_label)} \u2192</a>
@@ -1818,6 +1852,47 @@ def apply_hero_registry(cards):
         if not identity.get("image_hero"):
             identity["image_hero"] = url
             identity["image_hero_source"] = entry.get("source") or "wikimedia_commons"
+    return cards
+
+
+ON_SALE_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "on_sale_badges.json"
+
+
+def apply_on_sale_registry(cards):
+    """Overlay a human-approved on-sale badge onto each card (spec:
+    maddi-feed-price-drop-signals W3).
+
+    The nightly feed_card_refresh emits per-card price-DROP proposals
+    (on-sale-badges.json in the feed store, from ingest.on_sale_badges.build_badges).
+    A human PROMOTES approved drops into data/on_sale_badges.json — keyed by card_id
+    (== the proposal's slug): {was, now, drop_pct, affiliate_url} under a top-level
+    "badges" map — and this re-applies them at build, same rebuild-survival + human-
+    gate rationale as apply_hero_registry. NEVER auto-applied: build renders only what
+    the approved overlay carries. Written to card['on_sale'], which on_sale_badge()
+    renders in the hero. Absent registry -> no-op (no card shows a badge). Only a
+    genuine drop (now < was, both positive) is applied — a bad entry degrades to no
+    badge. A card already carrying on_sale wins."""
+    try:
+        reg = json.loads(ON_SALE_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cards  # registry optional; absence keeps the no-badge default
+    badges = reg.get("badges", {})
+    for card in cards:
+        if card.get("on_sale"):
+            continue
+        entry = badges.get(card.get("card_id"))
+        if not isinstance(entry, dict):
+            continue
+        was, now = entry.get("was"), entry.get("now")
+        if not (isinstance(was, (int, float)) and isinstance(now, (int, float))):
+            continue
+        if was <= 0 or not (now < was):
+            continue  # only a genuine drop; a bad entry degrades to no badge
+        drop_pct = entry.get("drop_pct")
+        if not isinstance(drop_pct, (int, float)):
+            drop_pct = round((was - now) / was, 4)
+        card["on_sale"] = {"was": was, "now": now, "drop_pct": drop_pct,
+                           "affiliate_url": entry.get("affiliate_url")}
     return cards
 
 
@@ -2319,6 +2394,7 @@ def main():
     apply_ebay_epid_registry(cards)
     apply_spine_gtins(cards)
     apply_hero_registry(cards)
+    apply_on_sale_registry(cards)
 
     written = []
     for card in cards:
