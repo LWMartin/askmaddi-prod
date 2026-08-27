@@ -18,24 +18,31 @@ from __future__ import annotations
 
 import search_cells
 
-# Max Used (eBay) products in the canonical section, so eBay's many unique-titled
-# listings of one body can't bury the few clean New/Adorama rows.
-EBAY_CANONICAL_CAP = 10
+# Cap on Used listings in the canonical section, so eBay's many unique-titled
+# listings of one body can't flood the page after the New lanes exhaust.
+USED_CANONICAL_CAP = 12
 
 # lazy singletons
 _identity_lookup = None
 
 
-def _interleave_new_first(new_lane, used_lane):
-    """Round-robin New, Used, New, Used… (New leads). When one lane is exhausted
-    the other's remainder follows. Each lane keeps its own relevance order."""
+def _condition_class(row):
+    return "new" if (row.get("condition") or "").strip().lower() == "new" else "used"
+
+
+def _round_robin(lanes):
+    """Take one row from each lane in order, cycling until all lanes are empty.
+    Empty/exhausted lanes are skipped. Each lane keeps its own relevance order.
+    Order of `lanes` defines the surfacing priority within each cycle."""
     out = []
-    i = j = 0
-    while i < len(new_lane) or j < len(used_lane):
-        if i < len(new_lane):
-            out.append(new_lane[i]); i += 1
-        if j < len(used_lane):
-            out.append(used_lane[j]); j += 1
+    idx = [0] * len(lanes)
+    remaining = sum(len(l) for l in lanes)
+    while remaining:
+        for k, lane in enumerate(lanes):
+            if idx[k] < len(lane):
+                out.append(lane[idx[k]])
+                idx[k] += 1
+                remaining -= 1
     return out
 
 
@@ -101,16 +108,21 @@ def precise_search(query, limit=25):
     canonical = search_cells.rerank(query, canonical)
     accessory = search_cells.rerank(query, accessory)
 
-    # Feature the NEW lane. eBay lists MANY unique-titled listings of the same
-    # body (each seller's title differs, so they never dedup), while Adorama has
-    # a FEW clean product rows — so raw relevance order buries the New/Adorama
-    # buy-path under eBay's Used volume. Interleave New-first (Adorama gets every
-    # other top slot) and cap the Used listings so they can't dominate the page.
-    # Both stay relevance-ranked within their lane; this is presentation, not a
-    # relevance hack.
-    new_lane = [r for r in canonical if r.get("seller") == "Adorama"]
-    used_lane = [r for r in canonical if r.get("seller") != "Adorama"][:EBAY_CANONICAL_CAP]
-    canonical = _interleave_new_first(new_lane, used_lane)
+    # Surface a source x condition MIX. eBay lists MANY unique-titled listings of
+    # one body (never dedup) while Adorama has a few clean rows, so raw relevance
+    # buries the New/Adorama buy-path under eBay's Used volume. Round-robin four
+    # lanes so the top of the page mixes both sources AND both conditions — New
+    # from each retailer plus a Used comparison right up top. Each lane stays
+    # relevance-ranked; Used is capped so it can't flood after New exhausts.
+    # (Adorama-Used is empty in practice — the feed is retail New — so the live
+    # cycle is Adorama-New -> eBay-New -> eBay-Used, repeating.)
+    def _lane(seller_is_adorama, cond):
+        return [r for r in canonical
+                if (r.get("seller") == "Adorama") == seller_is_adorama
+                and _condition_class(r) == cond]
+    adorama_new, ebay_new = _lane(True, "new"), _lane(False, "new")
+    adorama_used, ebay_used = _lane(True, "used"), _lane(False, "used")[:USED_CANONICAL_CAP]
+    canonical = _round_robin([adorama_new, ebay_new, adorama_used, ebay_used])
 
     payload = search_cells.compose(canonical, accessory, tail_cap=8)
     payload["diagnostics"] = {
