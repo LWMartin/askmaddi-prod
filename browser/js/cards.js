@@ -3,7 +3,7 @@
  * Also exports matching utilities for search results integration (Phase 5).
  */
 
-import { relevance } from './precise.js?v=5';
+import { relevance } from './precise.js?v=6';
 
 const MANIFEST_URL = 'cards-manifest.json';
 let _manifestCache = null;
@@ -254,18 +254,33 @@ function _initToTop() {
  * "r6ii" and "r6 ii" both surface the Canon R6 II card — and only the R6 II,
  * not the R6 III. Returns matching cards, best-first.
  */
+// Category intent: a query word that names a product class restricts the cards
+// to that class, keyed to the card `category` value (Body/Lens/Support/
+// Action_Cam). So "sony full frame camera" shows Bodies (not the Sony lenses that
+// merely share "Sony"), "sigma 35mm lens" shows Lenses. A query with no such word
+// is unrestricted.
+const CATEGORY_INTENT = {
+    camera: ['body', 'action_cam'], cameras: ['body', 'action_cam'],
+    body: ['body'], bodies: ['body'], mirrorless: ['body'], dslr: ['body'], slr: ['body'],
+    lens: ['lens'], lenses: ['lens'],
+    tripod: ['support'], tripods: ['support'], support: ['support'], monopod: ['support'],
+    gimbal: ['action_cam'], drone: ['action_cam'], action: ['action_cam'],
+};
+
 export function matchCards(query, manifest) {
     if (!manifest || !manifest.cards || !query) return [];
 
+    const qTokens = (query.toLowerCase().match(/[a-z0-9]+/g) || []);
+
     // Brand agreement: if the query names a brand we card, ONLY that brand's
-    // cards qualify — so "sony full frame camera" never surfaces a GoPro card
-    // (which otherwise matches on the generic word "camera" via its
-    // "Action-Camera" subcategory). Model-less category queries with no brand
-    // token are unaffected.
+    // cards qualify — so "sony full frame camera" never surfaces a GoPro card.
     const brandSet = new Set(
         manifest.cards.map(c => (c.brand || '').toLowerCase()).filter(Boolean));
-    const qTokens = (query.toLowerCase().match(/[a-z0-9]+/g) || []);
     const queryBrands = qTokens.filter(t => brandSet.has(t));
+
+    // Category intent: union of the classes named in the query (empty = any).
+    const wantedCats = new Set();
+    for (const t of qTokens) for (const c of (CATEGORY_INTENT[t] || [])) wantedCats.add(c);
 
     const scored = manifest.cards.map(card => {
         const haystack = [
@@ -281,6 +296,8 @@ export function matchCards(query, manifest) {
         .filter(x => x.s > 0)          // relevance() rejects with -1
         .filter(x => queryBrands.length === 0
             || queryBrands.includes((x.card.brand || '').toLowerCase()))
+        .filter(x => wantedCats.size === 0
+            || wantedCats.has((x.card.category || '').toLowerCase()))
         .sort((a, b) => b.s - a.s)
         .map(x => x.card);
 }
