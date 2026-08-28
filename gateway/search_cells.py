@@ -96,24 +96,136 @@ def classify_result(row, identity_lookup, *, markers=DEFAULT_ACCESSORY_MARKERS):
     return {"klass": "ambiguous", "identity_key": None}
 
 
-# --- Rung 1: rerank ---------------------------------------------------------
+# --- Rung 1: MODEL-ANCHORED rerank ------------------------------------------
+# Mirrors browser/js/precise.js score()/splitQuery()/modelMatch()/descriptorMatch()
+# and the phantom-ops canonical ingest/search_rerank.py EXACTLY — one logic, three
+# homes. Every model token in the query (a7, iv, r6, 90d, 50mm …) must EXACT
+# whole-token match the title (the variant firewall: a7 != a7r, iv != iii);
+# descriptors are soft with 1-edit typo tolerance; glued suffixes split ("a7iv" ->
+# "a7 iv"); no-model queries fall back to descriptor coverage. See note
+# 2026-08-28-askmaddi-positioning-precise-gear-research.
 
-EXACT_MATCH_BOOST = 0.5
 SEMANTIC_WEIGHT = 0.5
 
+_STOPWORDS = frozenset({
+    "under", "over", "below", "above", "less", "than", "with", "and", "the",
+    "for", "best", "top", "cheap", "cheapest", "budget", "in", "on", "of", "a",
+    "to", "or", "my", "me", "buy", "new", "used", "vs",
+})
 
+# Model root + glued generation marker ("a7iv" -> a7 + iv). Bare single-letter
+# suffixes are NOT split, so "a7r" is never decomposed into "a7".
+_GLUED_SUFFIX = re.compile(r"^([a-z]?[a-z]*\d+)(ii|iii|iv|vi|v|m\d+|mark\d+)$")
+_ROMAN = frozenset({"ii", "iii", "iv", "v", "vi"})
+
+
+def _tokens(s):
+    """Tokenize AND split glued model suffixes (applied to queries and titles)."""
+    out = []
+    for t in _tokenize(s):
+        m = _GLUED_SUFFIX.match(t)
+        if m:
+            out.append(m.group(1))
+            out.append(m.group(2))
+        else:
+            out.append(t)
+    return out
+
+
+def _is_model_token(t):
+    return (any(c.isalpha() for c in t) and any(c.isdigit() for c in t)) or t in _ROMAN
+
+
+def _split_query(query):
+    model, descriptor = [], []
+    for t in _tokens(query):
+        if t in _STOPWORDS or t.isdigit():
+            continue  # stopword or pure-integer price/year noise: never a gate
+        if _is_model_token(t):
+            model.append(t)
+        else:
+            descriptor.append(t)
+    return model, descriptor
+
+
+def _within1(a, b):
+    """Levenshtein <= 1: equal, or one insert/delete/substitute."""
+    if a == b:
+        return True
+    la, lb = len(a), len(b)
+    if abs(la - lb) > 1:
+        return False
+    if la == lb:
+        diff = 0
+        for i in range(la):
+            if a[i] != b[i]:
+                diff += 1
+                if diff > 1:
+                    return False
+        return diff == 1
+    s, l = (a, b) if la < lb else (b, a)
+    i = j = edits = 0
+    while i < len(s) and j < len(l):
+        if s[i] == l[j]:
+            i += 1
+            j += 1
+        else:
+            edits += 1
+            if edits > 1:
+                return False
+            j += 1
+    return True
+
+
+def _model_match(qt, name_tokens):
+    # EXACT whole-token — the variant firewall. No plural, no fuzz.
+    return qt in name_tokens
+
+
+def _descriptor_match(qt, name_tokens):
+    for nt in name_tokens:
+        if nt == qt or nt == qt + "s" or qt == nt + "s":
+            return True
+        if len(qt) >= 4 and len(nt) >= 4 and _within1(qt, nt):
+            return True
+    return False
+
+
+def _score(model, descriptor, name):
+    """precise.js score() — -1.0 to REJECT (missing a model token), else >= 0."""
+    nt = _tokens(name)
+    if not nt:
+        return -1.0
+    if model:
+        for mt in model:
+            if not _model_match(mt, nt):
+                return -1.0
+        s = float(len(model) * 10)
+        for dt in descriptor:
+            if _descriptor_match(dt, nt):
+                s += 1.0
+        return s
+    hits = sum(1 for dt in descriptor if _descriptor_match(dt, nt))
+    return float(hits) if hits > 0 else -1.0
+
+
+def relevance(query, text):
+    """Model-anchored relevance; -1.0 to reject, else >= 0. Shared with card
+    matching so ranking and card surfacing use one logic (precise.js relevance())."""
+    model, descriptor = _split_query(query)
+    if not model and not descriptor:
+        return -1.0
+    return _score(model, descriptor, text)
+
+
+# Kept for callers that pre-tokenize; now model-anchored via _score.
 def _lexical_score(query_tokens, name):
-    # WHOLE-TOKEN match, not substring: every query token must equal a name token
-    # (so "a7" matches "a7"/"A7 IV" but NOT "a7r" — no cross-variant contamination).
-    name_tokens = _tokenize(name)
-    if not name_tokens:
-        return 0.0
-    nset = set(name_tokens)
-    if not all(qt in nset for qt in query_tokens):
-        return 0.0
-    qset = set(query_tokens)
-    hits = sum(1 for nt in name_tokens if nt in qset)
-    return hits / len(name_tokens)
+    model, descriptor = [], []
+    for t in query_tokens:
+        if t in _STOPWORDS or t.isdigit():
+            continue
+        (model if _is_model_token(t) else descriptor).append(t)
+    return _score(model, descriptor, name)
 
 
 def _cosine(a, b):
@@ -126,15 +238,15 @@ def _cosine(a, b):
 
 
 def rerank(query, rows, *, embed=None):
-    qtokens = _tokenize(query)
-    if not qtokens or not rows:
+    model, descriptor = _split_query(query)
+    if (not model and not descriptor) or not rows:
         return []
     qvec = embed(query) if embed is not None else None
     scored = []
     for row in rows:
-        score = _lexical_score(qtokens, row.get("name") or "")
-        if score <= 0.0:
-            continue  # no whole-token match to the query → not a result (drops a7R for "a7 iv")
+        score = _score(model, descriptor, row.get("name") or "")
+        if score < 0.0:
+            continue  # rejected: missing a required model token (variant firewall)
         if embed is not None and qvec is not None:
             score += SEMANTIC_WEIGHT * _cosine(qvec, embed(row.get("name") or ""))
         scored.append((score, _price_float_or(row.get("price"), float("inf")),
