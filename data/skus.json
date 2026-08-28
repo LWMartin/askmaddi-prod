@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-27",
+  "as_of": "2026-08-28",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -1686,11 +1686,38 @@
         },
         "market_title": "Kodak Ektar H35 Half Frame 35mm Reusable Film Camera Built-In Flash Black Silver",
         "image": "https://i.ebayimg.com/images/g/maMAAeSwiiFqgkMk/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/iX4AAOSwVy5jox7f/s-l640.jpg",
         "price_seen": {
           "value": "35.00",
           "currency": "USD",
           "as_of": "2026-08-17T04:22:40Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-08-28T04:30:25Z",
+          "query": "Kodak EKTAR H35",
+          "winner": {
+            "item_id": "v1|377400240548|0",
+            "epid": "27056225108",
+            "title": "Kodak EKTAR H35 Half Frame Camera Green with Strap Vintage Works Great "
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|297888884888|0",
+              "epid": "16064764739",
+              "title": "KODAK EKTAR H35N Half Frame Film Camera (Silver)",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|377400240548|0",
+              "epid": "27056225108",
+              "title": "Kodak EKTAR H35 Half Frame Camera Green with Strap Vintage Works Great ",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -7712,11 +7739,31 @@
         },
         "market_title": "✅ DJI Osmo Pocket 3 4K Vlog Camera 3-Axis Gimbal Rotating Screen ✅",
         "image": "https://i.ebayimg.com/images/g/0PMAAeSwpLBqholW/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/8YQAAOSwT3plbggY/s-l1600.jpg",
         "price_seen": {
           "value": "324.00",
           "currency": "USD",
           "as_of": "2026-08-27T23:20:21Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-08-28T04:33:17Z",
+          "query": "DJI CP.OS.00000301.01",
+          "winner": {
+            "item_id": "v1|336397150826|0",
+            "epid": "24063470594",
+            "title": "DJI Osmo Pocket 3 Handheld Camera 3-Axis Gimbal CP.OS.00000301.01"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|336397150826|0",
+              "epid": "24063470594",
+              "title": "DJI Osmo Pocket 3 Handheld Camera 3-Axis Gimbal CP.OS.00000301.01",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -8293,6 +8340,1762 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-08-27T23:25:21Z"
+    },
+    "dji-dji-mavic-pro-platinum-read": {
+      "contamination_key": "dji-dji-mavic-pro-platinum-read",
+      "vendor": "DJI",
+      "model": "DJI Mavic Pro Platinum - READ",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227494158501",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "M1X",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mavic Pro Platinum 4K Camera Drone - READ",
+        "image": "https://i.ebayimg.com/images/g/J1UAAeSw0FZqkHhE/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "122.75",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:45:20Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227494158501?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:45:20Z"
+    },
+    "dji-dji-mini-uhd": {
+      "contamination_key": "dji-dji-mini-uhd",
+      "vendor": "DJI",
+      "model": "DJI Mini UHD * *",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "187686609828",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "DJI MINI 4K",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mini 4K Camera Drone (31-min) Drone with 4K UHD Camera *BRAND NEW SEALED*",
+        "image": "https://i.ebayimg.com/images/g/dy4AAeSwDh5pw0cZ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "270.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:45:46Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/187686609828?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BpumAu1ErLuM%2BCTx6EXBlV8TnSVwGLqWwJB3sQcQPsTzJ9R0oedqLkQnfN%2BlLCx3uQsyiol3P0b%2BD05wtS7WaFSrUAH377IWR9UOHNXP7y4ioRotWz7h4eBsa%2FCckovBN7xj8l5d0gSpfgMFdo%2Bb09TWll4SIUe%2BquQRYVgXYXRVdjWb5pC5xMFel3VRXhN%2Bc%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:45:46Z"
+    },
+    "dji-dji-mini-2": {
+      "contamination_key": "dji-dji-mini-2",
+      "vendor": "DJI",
+      "model": "DJI Mini 2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336727967859",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mini 2 Ready-to-Fly Camera Drone Fly More Combo w/ Remote, Carry Bag Unbound",
+        "image": "https://i.ebayimg.com/images/g/gAsAAeSwzOhqc2ed/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "275.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:46:02Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336727967859?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BzjNE1j%2FU5uxK5ZTNe4xBDSVGHfwPYzEXpkQRJ7Z3gAMCGHYvW6ThhNRdBwbWY9UH9HMn5SV31PxgOJtdCrJakEq3KX2k7i%2Fx7XkCpXmEBGKXv6vW8iUzIzQSn0ZoEgXJZJ6rZSRFci7x%2FkvoF7kzPPfsRW%2FrsEoXjlhnQKQIPElbb62xINqnDCE1UTGxjsn8%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:46:02Z"
+    },
+    "dji-dji-neo-mini-uhd": {
+      "contamination_key": "dji-dji-neo-mini-uhd",
+      "vendor": "DJI",
+      "model": "DJI Neo Mini UHD",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "358902602547",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Neo, Mini Drone with 4K UHD Camera, 135g-BRAND NEW, SEALED BOX",
+        "image": "https://i.ebayimg.com/images/g/oQcAAeSwli9qd9KR/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "159.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:46:20Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/358902602547?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FbjjOGKyEWtBTTNih2us9%2FJkuAKLAwGoISo0eCbCp1Ks5CBGR0Lmf0LwyyBY2UKP%2BDRdceeQvNUvJBWm6hWUuh6F5vM5nz6ogJE4MoqQdnlOpcPeSFuRAe03XcrhrDWUan51is%2BUF8LjkcbvH%2FOvWxHzgzxJ6VNL%2FF2Vn6wE9WWbjhNDBfwCwLPtZ9%2BXgo7xQ%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:46:20Z"
+    },
+    "dji-dji-neo-2-usa-in-stock-2-4-shipping": {
+      "contamination_key": "dji-dji-neo-2-usa-in-stock-2-4-shipping",
+      "vendor": "DJI",
+      "model": "DJI Neo 2 * USA In Stock * 2-4 SHIPPING",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377185478689",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "[NEW] [IN STOCK] DJI Neo 2 Drone Only ( 1 Battery ) / Express / Genuine",
+        "image": "https://i.ebayimg.com/images/g/p54AAeSwMIJpICFD/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "275.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:46:36Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377185478689?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8BVrraJDic9AzY3pbN1mWrsErBXkdymVd17qyDi12bwCjVJq9Y7lgXYVxz4pw9nJam%2F8iRsyAMfdBmh7Ho4Af429NhZmL8QvPDDCUiGpReLy%2FG1Ph8bTsv1TgkPybp4%2BcUK1lGX2gIoCghfB3k2b67Qot%2Bx35TklbkPBl1JYvc0sFt9y8AhtDWx3Xyg8m0Zws%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:46:36Z"
+    },
+    "dji-dji-avata-2-fly-smart-usa-in-stock-2-4-shipping": {
+      "contamination_key": "dji-dji-avata-2-fly-smart-usa-in-stock-2-4-shipping",
+      "vendor": "DJI",
+      "model": "DJI Avata 2 Fly Smart * USA In Stock * 2-4 SHIPPING",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "318325179277",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CP.FP.00000150.02",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Genuine DJI Avata 2 Drone - No Controller/No Battery - No Tariffs",
+        "image": "https://i.ebayimg.com/images/g/35gAAeSwKOdqC-IA/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "279.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:46:53Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318325179277?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Bor4Qx1O0gVAcUuDru7up1qZsIz3F1g2rsPsim7JukMgmViOrVWkX%2BmJxMNr02cROAPQ7GZ5pBGdfVeFf56Knr446jW9x0HF1I0Ipc7EHLgC7f8HmxJJWWZiWco8YzQVAjJZJAqjKKoeN4r2S6DN2ACldMa9Mv5K%2FspYFEE3yn%2FO3XhkqMpjF7IqJMu4AkT2U%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:46:53Z"
+    },
+    "dji-dji-inspire-1-w-zenmuse-x3-long-range-antennae": {
+      "contamination_key": "dji-dji-inspire-1-w-zenmuse-x3-long-range-antennae",
+      "vendor": "DJI",
+      "model": "DJI Inspire 1 w/ Zenmuse X3 ,Long Range Antennae",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "278315510117",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "GL658B",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Inspire 1 Bundle Ready to Fly Drone w/ Zenmuse X3 Camera,Long Range Antennae",
+        "image": "https://i.ebayimg.com/images/g/9woAAeSw9OVqj7Qf/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "458.76",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:47:11Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/278315510117?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BNbJW7iDQPkSQhpnoypuz1x1kCDsjoSfT%2F%2BS9k4iPkQ7FH%2BdYjcg5G9mUumrjAXgZdWUpp1NBpgCNIliDhTk6j2kJA8zo5kYMgAE4KoVYS9PGetbdXw4qBGJf1wv7wlBfiJEGLXUJVNcNBfddafS8%2FuRASRzZSIZTzblBS7GbApnSkQ7NDyCX7tNEn2bX86Yo%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:47:11Z"
+    },
+    "autel-autel-evo-ii-pro-102000410": {
+      "contamination_key": "autel-autel-evo-ii-pro-102000410",
+      "vendor": "Autel",
+      "model": "Autel Evo II Pro 102000410",
+      "gtin": "00889520011624",
+      "marketplace_ids": {
+        "ebay_epid": "5052510946",
+        "ebay_legacy_item_id": "198595860884",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "102000410",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Autel Evo II Pro 6k 102000410 4K Quadcopter Camera Drone",
+        "image": "https://i.ebayimg.com/images/g/7aIAAeSwXyxqjvjh/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/LCsAAOSwUMdjWSk9/s-l640.jpg",
+        "price_seen": {
+          "value": "999.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:47:30Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198595860884?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:47:30Z"
+    },
+    "autel-autel-evo-ii-evo-pro-2-only": {
+      "contamination_key": "autel-autel-evo-ii-evo-pro-2-only",
+      "vendor": "Autel",
+      "model": "Autel EVO II EVO Pro 2 – Only",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "157784188696",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "MDCA",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Autel EVO II EVO Pro 2  – Drone Only - Used",
+        "image": "https://i.ebayimg.com/images/g/WwUAAeSw5rNpw-yT/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "500.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:47:46Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/157784188696?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BcABzE%2FfLXv%2F2LxrIh3GqkWM6ZJafTfYDKMYZm7Px4tAmW66lD0MyEGjFvHc3OiS7Bka85Joo1mqAHTNfvijS6nL%2BkUEb4DqiX6gcQQ33cAMOZKeL%2F%2BzhhmL5WR2kcmMHmNWVqV50D4P3V80qCWwyMY%2BL3UquQynC1JJ%2F4LCiaCyoils9yjhvSdH1Q4b37eic%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:47:46Z"
+    },
+    "autel-autel-robotics-evo-lite-640t-enterprise-640-512-infrar": {
+      "contamination_key": "autel-autel-robotics-evo-lite-640t-enterprise-640-512-infrar",
+      "vendor": "Autel",
+      "model": "Autel Robotics EVO Lite 640T Enterprise | 640*512 Infrared Thermal",
+      "gtin": "00724725271049",
+      "marketplace_ids": {
+        "ebay_epid": "19053473783",
+        "ebay_legacy_item_id": "318404820815",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "EVOLITE",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Autel Robotics EVO Lite 640T Enterprise | 640*512 Infrared Thermal Drone",
+        "image": "https://i.ebayimg.com/images/g/QpoAAeSwIL9qIGMI/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/Lh4AAOSw2qdi2QCE/s-l640.jpg",
+        "price_seen": {
+          "value": "3299.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:48:03Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318404820815?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAsCHNgUiiE%2FjQhlDTaMiAde%2Fvjr%2BhhR5POlAggGqCyzCiRixzOSaIbRQIz%2FWtjEFXkNFWjDRcGjRbxmkwrpuMH7XVC9lY%2BeKfG5jT40LSvgikskPNic6ZIdcPElHU%2B9E1SsM4AaMM38kZpKvitwQhMmH2Cj5tSZ8jwKLnjw1hCKvpn%2BznpPsbE1PSzAFa51PlGoxUpuawZqQN6CPIhc0a3M68XOghQ%2B8djl4bMqMBcDR7",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:48:03Z"
+    },
+    "autel-autel-evo-nano-premium-pristine-condition-evo-nano-plu": {
+      "contamination_key": "autel-autel-evo-nano-premium-pristine-condition-evo-nano-plu",
+      "vendor": "Autel",
+      "model": "Autel EVO Nano+ Premium PRISTINE Condition | EVO Nano Plus 50MP",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "158212515294",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Autel EVO Nano+ Drone Premium Bundle PRISTINE Condition | EVO Nano Plus 4k 50MP",
+        "image": "https://i.ebayimg.com/images/g/QBYAAeSwKX9qiEvs/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "579.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:48:16Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/158212515294?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:48:16Z"
+    },
+    "autel-autel-robotics-evo-lite-series-premium-w-rc": {
+      "contamination_key": "autel-autel-robotics-evo-lite-series-premium-w-rc",
+      "vendor": "Autel",
+      "model": "Autel Robotics EVO Lite Series Premium w/ RC",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198596518298",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "MDXM_6175_1113",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Autel Robotics EVO Lite Series 4K Ready-to-Fly Drone Premium Bundle w/ RC",
+        "image": "https://i.ebayimg.com/images/g/fBIAAeSwT-hqjvNU/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "799.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:48:33Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198596518298?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:48:33Z"
+    },
+    "autel-autel-robotics-rtk-module-evo-2-enterprise-advanced-rt": {
+      "contamination_key": "autel-autel-robotics-rtk-module-evo-2-enterprise-advanced-rt",
+      "vendor": "Autel",
+      "model": "Autel Robotics RTK Module EVO 2 Enterprise , Advanced RTK Accessory Pro",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "317395771459",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Autel Robotics RTK Module EVO 2 Enterprise Drone, Advanced RTK Accessory Pro",
+        "image": "https://i.ebayimg.com/images/g/V~EAAeSwgilo6N85/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "499.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:48:48Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/317395771459?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9aU%2BPcviCbma7ayAAtIII8Pu8l9basFlgT3XUogH7keCIikTJAqbgRemvjNtQIowS0BMg2pW%2FzGAJPvWhcspL1IXZNlzJ2EwPCQO9xpyEq33ABGDlYIWFEZx7vHc%2BldUVk34%2FQR4vlp9rXIAsV5WXXfvtKo59n%2BMF%2FWCF90IrvZ2gKm6zfDGIMwgHkLO%2BnYZ0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:48:48Z"
+    },
+    "skydio-skydio-2-only-model-sdr35v1-black": {
+      "contamination_key": "skydio-skydio-2-only-model-sdr35v1-black",
+      "vendor": "Skydio",
+      "model": "Skydio 2+ ONLY - Model SDR35V1 - Black",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "116965562991",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "SKY300NA",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
+        "image": "https://i.ebayimg.com/images/g/VV8AAeSwzz5pWt4a/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1499.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:00Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/116965562991?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DdA9EhUtAK7hNh5HlK4tUo7awqHxpLGaRn3iKNg4pL2xK4c%2BsAxL0YbhbXQpt3TgAUIE3eraU6gNhCb5XkxqeiQBRiFWGo8Dga%2BTkarGIg92zlz%2B7asaOu%2FshLhZP8MamU18DHkwdcEqMHcwFRgSkpzDAwwsY00tKVdhyc70dSt6%2FJo5Pq9%2BSgxFFaFV9fp0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:00Z"
+    },
+    "skydio-skydio-2-sdrc2v1": {
+      "contamination_key": "skydio-skydio-2-sdrc2v1",
+      "vendor": "Skydio",
+      "model": "Skydio 2 SDRC2V1",
+      "gtin": "00860001945300",
+      "marketplace_ids": {
+        "ebay_epid": "19034602427",
+        "ebay_legacy_item_id": "116658509357",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "SKY300NA",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0860001945300",
+              "gtin14": "00860001945300",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0860001945300",
+              "gtin14": "00860001945300",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0860001945300",
+              "gtin14": "00860001945300",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0860001945300",
+              "gtin14": "00860001945300",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Skydio 2 Camera Drone ONLY SDRC2V1- Black",
+        "image": "https://i.ebayimg.com/images/g/bHsAAOSwe5loUyhA/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/Jo8AAOSwKfZePBHe/s-l640.jpg",
+        "price_seen": {
+          "value": "799.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:15Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/116658509357?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:15Z"
+    },
+    "skydio-skydio-x2d-multi-band-color-thermal": {
+      "contamination_key": "skydio-skydio-x2d-multi-band-color-thermal",
+      "vendor": "Skydio",
+      "model": "Skydio X2D Multi Band Color/ Thermal",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "236996228253",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "Skydio X2D",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Skydio X2D Multi Band Color/ Thermal Drone - Ready To Fly",
+        "image": "https://i.ebayimg.com/images/g/bk4AAeSwQQxqeNWX/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "9499.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:23Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/236996228253?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAsCHNgUiiE%2FjQhlDTaMiAde%2B%2BmtW5%2FSrjRSqxtZqrILSU7czjQLcFnP2EQH89fiQoI%2FtnBkQusmOLI266S8KEZa52vtSTnIFFV5S0b3XmjU5dz9mtHt345nrnSbFEmHlGu7FQ2kq%2BnNR%2BU9OjQcpldlv3miCLzlkaxHtV1ZSIJUf3LjV%2F%2B8R2%2BF1qzDgu6CqreTq1dk5uMXe0p7wZ%2FrV8NffhzQXmFgA4%2F90oCPHEUHXo",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:23Z"
+    },
+    "hoverair-hoverair-aqua-waterproof-water-takeoff-landing": {
+      "contamination_key": "hoverair-hoverair-aqua-waterproof-water-takeoff-landing",
+      "vendor": "HoverAir",
+      "model": "HOVERAir AQUA , Waterproof , Water Takeoff Landing",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206325071855",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir AQUA Drone with Camera, Waterproof Drone, Water Takeoff and Landing",
+        "image": "https://i.ebayimg.com/images/g/1PAAAeSwPpdqYTRL/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2130.37",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:32Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206325071855?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:32Z"
+    },
+    "x1-x1-pro-action-flying-foldable-42-km-h-follow-omniterra": {
+      "contamination_key": "x1-x1-pro-action-flying-foldable-42-km-h-follow-omniterra",
+      "vendor": "X1",
+      "model": "X1 PRO Action Flying Foldable 42 KM/H Follow OmniTerra",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "366584888284",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Hover",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "X1 PRO 4K Action Flying Camera Foldable Drone 42 KM/H Follow with OmniTerra",
+        "image": "https://i.ebayimg.com/images/g/AQIAAeSwPGtqUJJo/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "409.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:43Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/366584888284?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8eZoeQVeoXY2fhP1z%2Br3gJfZQX%2FmEQoI6Od5AVf01AydJyFnZdADaTzfh5mNNkc4G0%2FFK4I6P2Ty%2B%2Fwjo7gyKn026NzRz0mTL3wtHERsaY6vFlcSCOnFAfQNEJp3EZc%2B%2FlaBdPdLGb72OVoqP4RDznpOD0%2BmpaUYTRTK1sTKLKB4N%2FcWaGkNkP7GgWh229Zwc%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:43Z"
+    },
+    "hoverair-hoverair-x1-promax-flying-ai-follow-foldable": {
+      "contamination_key": "hoverair-hoverair-x1-promax-flying-ai-follow-foldable",
+      "vendor": "HoverAir",
+      "model": "HOVERAir X1 PROMAX Flying AI Follow Foldable * *",
+      "gtin": "00199284845138",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "137475335592",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "199284845138",
+              "gtin14": "00199284845138",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "HOVERAir X1 PROMAX Combo 8K Flying Camera Drone AI Follow Foldable New *Sealed*",
+        "image": "https://i.ebayimg.com/images/g/caAAAeSw1yJqRpR2/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "499.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:49:53Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/137475335592?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9cFkXru8DM8NgbFzS8RPEWUC%2B6h2RajKjD6roeIdIvLVHvjDNZOFrZ3IXUmT47Twt907ZaiSQIZmT%2B4GXgH%2FAUNgSkCMXRtQoY8BlIbCgWDooUdNqIp%2BuQnsOLKQIG8DrvfYlg0%2BhBtbQOVi%2Fcv2D16WOojV75Sjhi8JTxTd%2BW3m85YeP2LIK0rUv0g5BlClc%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:49:53Z"
+    },
+    "x1-x1-self-flying-follow-me-mode-foldable-min": {
+      "contamination_key": "x1-x1-self-flying-follow-me-mode-foldable-min",
+      "vendor": "X1",
+      "model": "X1 , Self-Flying Follow Me Mode, Foldable Min",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "388300717110",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "X1 Drone with Camera, Self-Flying Camera Drone with Follow Me Mode, Foldable Min",
+        "image": "https://i.ebayimg.com/images/g/hv0AAOSw4cdoBnIj/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "289.98",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:50:16Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/388300717110?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F1oNQHlUj2mFjQtQDAZBOXeyKxczjsitAZaXFoPXqYWYTX1gbT3NLMtlA%2FK9BKx%2FjvOqCvzElsTK4LVtnrmnBky09OuEJ3m4tCkL%2FpdOf781B%2F%2BRtzb1kdNp7C2fNV%2Bk2v%2F5f84M%2F41S%2FxZg37B%2FQRkQ63uqK%2BVk0YHoSeHltVddM6TL6lMyV6SC40sj0zJpU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:50:16Z"
+    },
+    "parrot-parrot-anafi-flir-lepton-3-5-condition-only-36-flight": {
+      "contamination_key": "parrot-parrot-anafi-flir-lepton-3-5-condition-only-36-flight",
+      "vendor": "Parrot",
+      "model": "Parrot ANAFI & FLIR Lepton 3.5 CONDITION ONLY 36 FLIGHTS",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "326970218598",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Parrot",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Used Parrot Anafi Body Main Frame Body",
+        "image": "https://i.ebayimg.com/images/g/x5MAAOSwvJ9frxgi/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "21.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:50:27Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/326970218598?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:50:27Z"
+    },
+    "parrot-parrot-anafi-pro-tactical-flir-lepton-3-5-sensor": {
+      "contamination_key": "parrot-parrot-anafi-pro-tactical-flir-lepton-3-5-sensor",
+      "vendor": "Parrot",
+      "model": "Parrot ANAFI Pro Tactical & FLIR Lepton 3.5 Sensor",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "287170897791",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Flir",
+        "mpn": "ANAFI-Thermal",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Parrot ANAFI  Pro Tactical Drone 4K Camera & FLIR Lepton 3.5 Sensor",
+        "image": "https://i.ebayimg.com/images/g/aewAAeSwE6hpo2b1/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2000.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:50:37Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/287170897791?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FjVLm%2FOMZaHPUUazI5wFaWzCdRUHQq7qy6c7qca9r3EBChxLCTA4wp2AodajFoNDxOBHA%2BwUxn%2BVQdTmxrlrU3RA4cyM8fzwfo1h4pqrgnQdKf4e6orVYhOSNuoJAp44j79nnvL8kJAmXh28%2FoQ3DLJVY58UYHlNgjE70%2BpoKPsDf0Nduotdx8J8lnV2VXz28%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:50:37Z"
+    },
+    "5-5-inch-droneer-o4-pro-15km-digial-transmission-range": {
+      "contamination_key": "5-5-inch-droneer-o4-pro-15km-digial-transmission-range",
+      "vendor": "5",
+      "model": "5 Inch Droneer O4 Pro 15km Digial Transmission Range",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227462099256",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Droneer",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "5 Inch Droneer GPS FPV Drone O4 Pro 4K HD Camera 15km Digial Transmission Range",
+        "image": "https://i.ebayimg.com/images/g/RYIAAeSwl85qcixV/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "559.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:50:47Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227462099256?var=526645383590&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2B8%2BeVg7g5%2FikVJcjgWAJI4VBINUNEu3fxdio8uQW1CBK%2Bwn2PFPldRAB2tyAngbsGZ6wkdGhEDXO6dCpqeFnUMLuq%2BLTc8hLrGef2oJPHFlCg38ergfsSODmjHKxKtaMkdZHRDi4uRwnJ%2BmzvkyhYil6EKFXAc3EvikaV4GcZ8Xra2Ju3pPKyZfyHU5QRCYmY%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:50:47Z"
+    },
+    "5g-5g-professional-dual-wifi-obstacle-avoidance": {
+      "contamination_key": "5g-5g-professional-dual-wifi-obstacle-avoidance",
+      "vendor": "5G",
+      "model": "5G Professional Dual WIFI Obstacle Avoidance",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "317794716483",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Unbranded",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "5G Professional 8K HD Dual Camera Drone With FPV WIFI Obstacle Avoidance",
+        "image": "https://i.ebayimg.com/images/g/uhYAAeSw1iVpc8Dd/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "99.98",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:51:02Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/317794716483?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fw2A3ta4zJGQiqlShK%2BZkXZWrPWLyrpjtnuGq89Ic3EDpUPKEP80%2B3qrm1uvVoqjyfxEfnU0DmJz%2BXtSJFyjR9yv6MGQ%2FQ15kui20k5gNckKjzML6UNRPNZjKTQlQh5S2ME32%2BMlxoX0YEXcm8cDOTS%2Fq7fH0oyIIycLbVcN4zU%2BmBwBhOItn0APTK%2FUGvNko%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:51:02Z"
+    },
+    "dji-dji-air-2s-da2sue1": {
+      "contamination_key": "dji-dji-air-2s-da2sue1",
+      "vendor": "DJI",
+      "model": "DJI Air 2S DA2SUE1",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407172011583",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "DA2SUE1",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Air 2S Camera Drone DA2SUE1",
+        "image": "https://i.ebayimg.com/images/g/rvkAAeSwBD9qj0F9/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "649.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:51:19Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407172011583?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:51:19Z"
+    },
+    "dji-dji-air-3-only": {
+      "contamination_key": "dji-dji-air-3-only",
+      "vendor": "DJI",
+      "model": "DJI Air 3 , ONLY",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "376979025653",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Air 3 4K Camera Drone – Brand New Sealed – Drone Body Only",
+        "image": "https://i.ebayimg.com/images/g/ebkAAeSwUxNpmLbq/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "890.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:51:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/376979025653?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FMBRsnKcEChS741jmEDdE7TFEC7IZ%2FfO0Ws4KK9dAj41qVTQORxmgy0YR4IBw9Bp3%2BC2sTejwtXsNLRC3bIbfh2vBBCmjxbS%2Fa01X6Yk6pAHFxIkQm8RSxDSptItonSj46QcjMqmNG4GEMrx89dEvmnrS3QEMvHWQ%2BAOksyiV5P%2FPIs1wHAtRn%2Bfs7HRHA2rc%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:51:35Z"
+    },
+    "dji-dji-mini-3": {
+      "contamination_key": "dji-dji-mini-3",
+      "vendor": "DJI",
+      "model": "DJI Mini 3",
+      "gtin": "00190021074682",
+      "marketplace_ids": {
+        "ebay_epid": "25058097844",
+        "ebay_legacy_item_id": "188586103609",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CPMA0000058401",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0190021074682",
+              "gtin14": "00190021074682",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0190021074682",
+              "gtin14": "00190021074682",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0190021074682",
+              "gtin14": "00190021074682",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021074682",
+              "gtin14": "00190021074682",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI Mini 3 Drone Body Only ! ( Replacement for crash or lost ) Combo Pulled",
+        "image": "https://i.ebayimg.com/images/g/zEsAAeSwaYVqRVAU/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/YJMAAOSwMLNkjIA0/s-l1200.jpg",
+        "price_seen": {
+          "value": "369.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:51:51Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/188586103609?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fuob6vLKIT1tpHF9UsSgEenPBc47o7%2FB4hHJQG%2Fh2c6MIYIG5GozkFdZdL0GtA6SWy%2FVpfeoETsQ%2Fka%2B7PSY5mKgPj6Lc52Zi27XP6XOO42d7kaLMM1So74Zo5ck7WVQaRHhzcR340QwvPRYGT1j9y6DBNrMU2nrgOxOk7WaMxMCaxPeoSrkUi2hjBYCAVkIE%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:51:51Z"
+    },
+    "dji-dji-inspire-2-professional-t650a": {
+      "contamination_key": "dji-dji-inspire-2-professional-t650a",
+      "vendor": "DJI",
+      "model": "DJI Inspire 2 Professional T650A",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198594802030",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "T650A",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Inspire 2 Professional Drone T650A",
+        "image": "https://i.ebayimg.com/images/g/NR0AAeSw1qNqjgTR/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1699.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:52:08Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198594802030?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:52:08Z"
+    },
+    "dji-dji-inspire-3-professional": {
+      "contamination_key": "dji-dji-inspire-3-professional",
+      "vendor": "DJI",
+      "model": "DJI Inspire 3 Professional",
+      "gtin": "00190021073890",
+      "marketplace_ids": {
+        "ebay_epid": "11059917194",
+        "ebay_legacy_item_id": "304992563193",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CPIN0000002402",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0190021073890",
+              "gtin14": "00190021073890",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0190021073890",
+              "gtin14": "00190021073890",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0190021073890",
+              "gtin14": "00190021073890",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021073890",
+              "gtin14": "00190021073890",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI Inspire 3 Drone Professional Ready To Fly",
+        "image": "https://i.ebayimg.com/images/g/0JUAAOSwO9Rkk2T3/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/sjUAAOSwxbFk3zbc/s-l1600.png",
+        "price_seen": {
+          "value": "16999.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:52:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/304992563193?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAsCHNgUiiE%2FjQhlDTaMiAde9ZBkGDr0%2B5TcS8Tt49ky2DcRoEv2hPmrXyctabYehT%2F9X1t3m6MaUd4vISLg%2BX%2FhQF4dzN2nTFYoCOSjl9prH%2BMbpXrg0L8dX%2FlCOay9nIesvx6VI1T32y0SPZQRGHHHKT%2Fo2qNc13ArwmU1tm0%2B0aJU%2F%2B1Ec53XuXfvjWyAz1LfIdbX%2BkqAQU3t68NeljHB%2BYOgGDL9CkCD2CsOkRp3FN",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:52:24Z"
+    },
+    "autel-autel-evo-2-pro-v3-hdr-rugged": {
+      "contamination_key": "autel-autel-evo-2-pro-v3-hdr-rugged",
+      "vendor": "Autel",
+      "model": "Autel EVO 2 Pro V3 HDR Rugged",
+      "gtin": "00889520011624",
+      "marketplace_ids": {
+        "ebay_epid": "5052510946",
+        "ebay_legacy_item_id": "377225174272",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "102000410",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0889520011624",
+              "gtin14": "00889520011624",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Autel EVO 2 Pro V3 6K HDR Camera Drone Rugged Bundle",
+        "image": "https://i.ebayimg.com/images/g/0cwAAeSwN6lqHPsT/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/LCsAAOSwUMdjWSk9/s-l640.jpg",
+        "price_seen": {
+          "value": "1999.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:52:40Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377225174272?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BG9nV9bZYmYjW%2FT%2FVN2GVQDo%2FR2Z0R0cVPHTLVVBv5vwH9kdKcqTHNQaMy1J1nQdn5%2BF5sNmnJ196iUNlEiOm0j91ZlC18EzeYqAXURFhd0EDw2gxKgoqSm2%2FbVIgIiDsXcNTIu10HwLSpgGtKjLHhPyTShkAF9RJ8Yt29FtxE4Nr8KmRVorrSlo0EfW%2BFLNo%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:52:40Z"
+    },
+    "autel-autel-robotics-evo-max-4t-speaker-spotlight": {
+      "contamination_key": "autel-autel-robotics-evo-max-4t-speaker-spotlight",
+      "vendor": "Autel",
+      "model": "Autel Robotics EVO Max 4T & Speaker & Spotlight",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "318275660324",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "[Ready Stock] Autel Robotics EVO Max 4T & Speaker & Spotlight Combo",
+        "image": "https://i.ebayimg.com/images/g/1LsAAeSwlGlqCSuP/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "5999.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:52:55Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318275660324?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:52:55Z"
+    },
+    "skydio-skydio-2-black": {
+      "contamination_key": "skydio-skydio-2-black",
+      "vendor": "Skydio",
+      "model": "Skydio 2 - Black",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "116965562991",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "SKY300NA",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
+        "image": "https://i.ebayimg.com/images/g/VV8AAeSwzz5pWt4a/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1499.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:53:12Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/116965562991?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DdA9EhUtAK7hNh5HlK4tUo7awqHxpLGaRn3iKNg4pLyYvRSI8TAQBsk1zzc%2FK11GXZ7GpT0I6eStwGiZiCEOsuBseR9OrWRFuAIx%2F4sokfac5q0CrtsSUlN%2FIqydL2iOoXHybNcbAjIDaM%2Bn8AJQxKcfCk%2FaL4VopxgLXHuAMsY5e0BL6DfNJYrP4oP053iM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:53:12Z"
+    },
+    "skydio-skydio-2": {
+      "contamination_key": "skydio-skydio-2",
+      "vendor": "Skydio",
+      "model": "Skydio 2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "116965562991",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "SKY300NA",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
+        "image": "https://i.ebayimg.com/images/g/VV8AAeSwzz5pWt4a/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1499.95",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:53:29Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/116965562991?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DdA9EhUtAK7hNh5HlK4tUo7awqHxpLGaRn3iKNg4pLzrZnxHr9P41%2FxBaUmrm5l7%2FFewKmF7cbMXu2waKWvu39E9x1MfWpXtU89PWo6XZ14UkWcPjpSqL5cfCn1eUjxtLsmfCX3pFO6a7BednDjyegUHdrI%2BPPPeT8iahWDiD987qc7zR3SMv8w7YZ%2BlNFOA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:53:29Z"
+    },
+    "skydio-skydio-r1": {
+      "contamination_key": "skydio-skydio-r1",
+      "vendor": "Skydio",
+      "model": "Skydio R1",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307149960310",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Skydio",
+        "mpn": "Skydio-7RQ3",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Skydio R1",
+        "image": "https://i.ebayimg.com/images/g/77AAAeSwskFqkKAl/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2200.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:53:43Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307149960310?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:53:43Z"
+    },
+    "hoverair-zerozero-roboics-hoverair-x1": {
+      "contamination_key": "hoverair-zerozero-roboics-hoverair-x1",
+      "vendor": "HoverAir",
+      "model": "ZeroZero Roboics HoverAir X1",
+      "gtin": "00198168847985",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820049024535",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "ZeroZero Roboics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "198168847985",
+              "gtin14": "00198168847985",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "New ZeroZero Roboics HoverAir X1 HD Drone",
+        "image": "https://i.ebayimg.com/images/g/aN8AAeSwqX5qjpcq/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "244.99",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:53:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820049024535?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:53:52Z"
+    },
+    "hoverair-hoverair-x1-promax-foldable-flying-skiing": {
+      "contamination_key": "hoverair-hoverair-x1-promax-foldable-flying-skiing",
+      "vendor": "HoverAir",
+      "model": "HOVERAir X1 PROMAX Foldable Flying , Skiing",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "397459619087",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir X1 PROMAX 8K Drone with Camera Foldable Flying Camera, Skiing Combo",
+        "image": "https://i.ebayimg.com/images/g/K0QAAeSwK2JpWXIh/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "899.00",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:54:05Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/397459619087?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:54:05Z"
+    },
+    "hoverair-hoverair-x1-pro-never-opened": {
+      "contamination_key": "hoverair-hoverair-x1-pro-never-opened",
+      "vendor": "HoverAir",
+      "model": "HOVERAir X1 Pro - Never Opened",
+      "gtin": "00198715889932",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198549959631",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "SP06H002",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "198715889932",
+              "gtin14": "00198715889932",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "HOVERAir X1 Pro",
+        "image": "https://i.ebayimg.com/images/g/9VQAAeSwOzFqc3k5/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "464.07",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:54:18Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198549959631?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:54:18Z"
+    },
+    "hoverair-zerozero-robotics-hoverair-x1-self-flying-pocket-si": {
+      "contamination_key": "hoverair-zerozero-robotics-hoverair-x1-self-flying-pocket-si",
+      "vendor": "HoverAir",
+      "model": "ZeroZero Robotics HoverAir X1 Self-Flying Pocket-Sized",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "398309736045",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "ZeroZero Roboics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "New ZeroZero Robotics HoverAir X1 Combo Self-Flying Camera Pocket-Sized Drone",
+        "image": "https://i.ebayimg.com/images/g/wLkAAeSwEU1qh6~v/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "268.88",
+          "currency": "USD",
+          "as_of": "2026-08-28T04:54:27Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/398309736045?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-08-28T04:54:27Z"
     }
   },
   "substrate": [
