@@ -126,6 +126,23 @@ class UI {
     }
     
     /**
+     * Show or hide the active-budget chip. When a query carries a price
+     * constraint ("under $400"), the filter silently hides pricier gear — the
+     * chip makes that visible and undoable. `label` is the human budget (e.g.
+     * "Under $400"); `onClear` re-arranges without the filter. Passing a falsy
+     * label hides the chip.
+     */
+    renderBudgetChip(label, onClear) {
+        const chip = document.getElementById('budget-chip');
+        if (!chip) return;
+        if (!label) { chip.style.display = 'none'; chip.onclick = null; return; }
+        chip.textContent = label + '  ✕';
+        chip.title = 'Clear budget filter';
+        chip.style.display = 'inline-block';
+        chip.onclick = () => { if (typeof onClear === 'function') onClear(); };
+    }
+
+    /**
      * Show/hide the "Show more results" button (deeper fetch on demand).
      */
     toggleShowMore(visible) {

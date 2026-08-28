@@ -3,7 +3,7 @@
  * Also exports matching utilities for search results integration (Phase 5).
  */
 
-import { relevance } from './precise.js?v=6';
+import { relevance } from './precise.js?v=7';
 
 const MANIFEST_URL = 'cards-manifest.json';
 let _manifestCache = null;

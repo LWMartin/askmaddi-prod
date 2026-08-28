@@ -363,3 +363,88 @@ def compose(canonical, accessory, *, tail_cap=8):
                 if results else [])
     return {"results": results, "sections": sections,
             "dropped_tail": max(0, len(accessory) - tail_cap)}
+
+
+# --- price constraint (parse + filter) --------------------------------------
+# The rerank core drops '$' and comparators as RANKING noise, so a user's budget
+# ("mirrorless under $400") must be read off the RAW query here and applied as a
+# real FILTER. Non-destructive: an unpriced row is kept (a missing price is not a
+# budget violation), and removed rows are surfaced, never silently truncated.
+# The bare "A to B" / "A-B" forms require an explicit $ so lens focal notation
+# ("24-70mm", "24 to 70mm") is never misread as a price range. Mirrors
+# browser/js/precise.js parsePriceConstraint/applyPriceFilter and the phantom-ops
+# canonical ingest/search_price.py — one logic, three homes.
+
+_PRICE_NUM = r"(\d[\d,]*(?:\.\d+)?)\s*([kK])?"
+_PRICE_AMOUNT = r"\$?\s*" + _PRICE_NUM
+_PRICE_DOLLAR = r"\$\s*" + _PRICE_NUM
+_PRICE_LTE_WORDS = r"(?:under|below|beneath|less than|up to|no more than|at most|max(?:imum)?|cheaper than|<=?)"
+_PRICE_GTE_WORDS = r"(?:over|above|more than|at least|starting at|min(?:imum)?|>=?)"
+_PRICE_BETWEEN = re.compile(r"\bbetween\s+" + _PRICE_AMOUNT + r"\s+and\s+" + _PRICE_AMOUNT, re.I)
+_PRICE_TO = re.compile(_PRICE_DOLLAR + r"\s+to\s+" + _PRICE_AMOUNT, re.I)
+_PRICE_DASH = re.compile(_PRICE_DOLLAR + r"\s*[-–]\s*" + _PRICE_AMOUNT, re.I)
+_PRICE_LTE = re.compile(_PRICE_LTE_WORDS + r"\s*" + _PRICE_AMOUNT, re.I)
+_PRICE_GTE = re.compile(_PRICE_GTE_WORDS + r"\s*" + _PRICE_AMOUNT, re.I)
+
+
+def _price_amount(digits, suffix):
+    val = float(digits.replace(",", ""))
+    return val * 1000.0 if suffix else val
+
+
+def parse_price_constraint(query):
+    """Extract a budget from an NL query, or None. {op:lte|gte,value} or
+    {op:range,lo,hi} (lo/hi ascending). Never raises."""
+    if not query or not isinstance(query, str):
+        return None
+    m = _PRICE_BETWEEN.search(query) or _PRICE_TO.search(query) or _PRICE_DASH.search(query)
+    if m:
+        a = _price_amount(m.group(1), m.group(2))
+        b = _price_amount(m.group(3), m.group(4))
+        lo, hi = (a, b) if a <= b else (b, a)
+        return {"op": "range", "lo": lo, "hi": hi}
+    m = _PRICE_LTE.search(query)
+    if m:
+        return {"op": "lte", "value": _price_amount(m.group(1), m.group(2))}
+    m = _PRICE_GTE.search(query)
+    if m:
+        return {"op": "gte", "value": _price_amount(m.group(1), m.group(2))}
+    return None
+
+
+def _price_or_none(price):
+    if price is None:
+        return None
+    digits = re.sub(r"[^0-9.]", "", str(price))
+    if not digits or digits == ".":
+        return None
+    try:
+        return float(digits)
+    except ValueError:
+        return None
+
+
+def _price_satisfies(price, c):
+    if price is None:
+        return True  # unknown price is never a budget violation
+    op = c.get("op")
+    if op == "lte":
+        return price <= c["value"]
+    if op == "gte":
+        return price >= c["value"]
+    if op == "range":
+        return c["lo"] <= price <= c["hi"]
+    return True
+
+
+def apply_price_filter(rows, constraint):
+    """Split rows by the budget: {kept, filtered, constraint}. No/invalid
+    constraint is pass-through. Unpriced rows are kept. Never raises."""
+    rows = rows or []
+    if not constraint or not isinstance(constraint, dict) or "op" not in constraint:
+        return {"kept": list(rows), "filtered": [], "constraint": None}
+    kept, filtered = [], []
+    for row in rows:
+        price = _price_or_none((row or {}).get("price"))
+        (kept if _price_satisfies(price, constraint) else filtered).append(row)
+    return {"kept": kept, "filtered": filtered, "constraint": constraint}

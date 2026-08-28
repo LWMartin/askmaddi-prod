@@ -181,6 +181,85 @@ function formatPrice(v) {
     return '$' + Math.round(v).toLocaleString('en-US');
 }
 
+// --- price constraint (parse + filter) --------------------------------------
+// The relevance rung drops '$' and comparators as RANKING noise, so a user's
+// budget ("mirrorless under $400") must be read off the RAW query and applied as
+// a real FILTER. Non-destructive: an unpriced row is kept. The bare "A to B" /
+// "A-B" forms require an explicit $, so lens focal notation ("24-70mm") is never
+// misread as a price. Mirrors gateway/search_cells.py parse_price_constraint/
+// apply_price_filter and phantom-ops ingest/search_price.py — one logic, three homes.
+const _PRICE_NUM = '(\\d[\\d,]*(?:\\.\\d+)?)\\s*([kK])?';
+const _PRICE_AMOUNT = '\\$?\\s*' + _PRICE_NUM;
+const _PRICE_DOLLAR = '\\$\\s*' + _PRICE_NUM;
+const RE_PRICE_BETWEEN = new RegExp('\\bbetween\\s+' + _PRICE_AMOUNT + '\\s+and\\s+' + _PRICE_AMOUNT, 'i');
+const RE_PRICE_TO = new RegExp(_PRICE_DOLLAR + '\\s+to\\s+' + _PRICE_AMOUNT, 'i');
+const RE_PRICE_DASH = new RegExp(_PRICE_DOLLAR + '\\s*[-–]\\s*' + _PRICE_AMOUNT, 'i');
+const RE_PRICE_LTE = new RegExp('(?:under|below|beneath|less than|up to|no more than|at most|max(?:imum)?|cheaper than|<=?)\\s*' + _PRICE_AMOUNT, 'i');
+const RE_PRICE_GTE = new RegExp('(?:over|above|more than|at least|starting at|min(?:imum)?|>=?)\\s*' + _PRICE_AMOUNT, 'i');
+
+function priceAmount(digits, suffix) {
+    const v = parseFloat(digits.replace(/,/g, ''));
+    return suffix ? v * 1000 : v;
+}
+
+/**
+ * Parse a budget out of an NL query, or null. Returns {op:'lte'|'gte',value} or
+ * {op:'range',lo,hi} (lo/hi ascending). Exported so the UI can render/clear the
+ * active budget chip. Never throws.
+ */
+export function parsePriceConstraint(query) {
+    if (!query || typeof query !== 'string') return null;
+    let m = RE_PRICE_BETWEEN.exec(query) || RE_PRICE_TO.exec(query) || RE_PRICE_DASH.exec(query);
+    if (m) {
+        const a = priceAmount(m[1], m[2]), b = priceAmount(m[3], m[4]);
+        const [lo, hi] = a <= b ? [a, b] : [b, a];
+        return { op: 'range', lo, hi };
+    }
+    m = RE_PRICE_LTE.exec(query);
+    if (m) return { op: 'lte', value: priceAmount(m[1], m[2]) };
+    m = RE_PRICE_GTE.exec(query);
+    if (m) return { op: 'gte', value: priceAmount(m[1], m[2]) };
+    return null;
+}
+
+// A row's effective price for budget testing: its numeric best price if dedup
+// already computed one (_price), else parse the display price. null = unknown.
+function rowPriceValue(row) {
+    if (row && typeof row._price === 'number' && isFinite(row._price)) return row._price;
+    const digits = (row && row.price != null ? String(row.price) : '').replace(/[^0-9.]/g, '');
+    if (!digits || digits === '.') return null;
+    const v = parseFloat(digits);
+    return isNaN(v) ? null : v;
+}
+
+function priceSatisfies(price, c) {
+    if (price == null) return true;   // unknown price is never a budget violation
+    if (c.op === 'lte') return price <= c.value;
+    if (c.op === 'gte') return price >= c.value;
+    if (c.op === 'range') return price >= c.lo && price <= c.hi;
+    return true;
+}
+
+/** Split rows by the budget: {kept, filtered}. No/invalid constraint keeps all. */
+export function applyPriceFilter(rows, constraint) {
+    if (!constraint || !constraint.op) return { kept: (rows || []).slice(), filtered: [] };
+    const kept = [], filtered = [];
+    for (const row of rows || []) {
+        (priceSatisfies(rowPriceValue(row), constraint) ? kept : filtered).push(row);
+    }
+    return { kept, filtered };
+}
+
+/** Human label for a budget chip, e.g. "Under $400", "$800–$1,200". */
+export function priceConstraintLabel(c) {
+    if (!c || !c.op) return '';
+    const f = v => '$' + Math.round(v).toLocaleString('en-US');
+    if (c.op === 'lte') return 'Under ' + f(c.value);
+    if (c.op === 'gte') return 'Over ' + f(c.value);
+    if (c.op === 'range') return f(c.lo) + '–' + f(c.hi);
+    return '';
+}
+
 // Jaccard over title token sets.
 function jaccard(aTok, bTok) {
     if (!aTok.size && !bTok.size) return 1;
@@ -261,9 +340,20 @@ export function arrangeResults(query, products, opts = {}) {
         merged = merged.filter(p => p._new === 0 || keepUsed.has(p));
     }
 
-    const tail = acc.sort((a, b) => b.s - a.s)
+    let tail = acc.sort((a, b) => b.s - a.s)
         .slice(0, tailCap)
         .map(x => ({ ...x.p, bestPrice: formatPrice(priceFloat(x.p.price)) || x.p.price }));
+
+    // Budget filter — "under $X" / "$X to $Y" read off the RAW query (relevance
+    // dropped the price as ranking noise). opts.ignorePrice lets the UI clear the
+    // active budget without re-fetching. Applied to both the shelf and the tail.
+    if (!opts.ignorePrice) {
+        const constraint = parsePriceConstraint(query);
+        if (constraint) {
+            merged = applyPriceFilter(merged, constraint).kept;
+            tail = applyPriceFilter(tail, constraint).kept;
+        }
+    }
 
     return merged.concat(tail);
 }

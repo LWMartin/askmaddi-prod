@@ -3,8 +3,8 @@ import { Extractor } from './extractor.js';
 import { Deduper } from './deduper.js';
 import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
-import { loadManifest, matchCards, renderMatchedCards } from './cards.js?v=6';
-import { arrangeResults } from './precise.js?v=6';
+import { loadManifest, matchCards, renderMatchedCards } from './cards.js?v=7';
+import { arrangeResults, parsePriceConstraint, priceConstraintLabel } from './precise.js?v=7';
 
 // === Lane A precise-search switch (2026-08-27) ===
 // false → legacy client-side fan-out (streamSearch). true → route ALL search
@@ -165,7 +165,10 @@ class AskMaddi {
         // Populate the results search bar with current query
         const resultsInput = document.getElementById('results-search-input');
         if (resultsInput) resultsInput.value = query;
-        
+
+        // Clear any budget chip from a prior search; the precise path re-adds it.
+        this.ui.renderBudgetChip(null);
+
         // === WIN 2: Stream scraper results as they arrive ===
         try {
             const usePrecise = PRECISE_SEARCH ||
@@ -305,11 +308,14 @@ class AskMaddi {
         // "Show more results" button re-runs at a higher limit with lifted caps.
         const expanded = !!opts.expanded;
         const caps = expanded ? { usedCap: limit, tailCap: 40 } : {};
-        if (!expanded) this.ui.toggleShowMore(false);   // hide stale button on a fresh search
+        if (!expanded) {
+            this.ui.toggleShowMore(false);   // hide stale button on a fresh search
+            this._budgetIgnored = false;     // a fresh query re-applies its budget
+        }
         const products = [];
         const raw = {};
         const render = () => {
-            const arranged = arrangeResults(query, products, caps);
+            const arranged = arrangeResults(query, products, { ...caps, ignorePrice: this._budgetIgnored });
             if (arranged.length > 0) this.ui.replaceProductGrid(arranged, query);
         };
         const withTimeout = (p, ms) => Promise.race([
@@ -334,13 +340,21 @@ class AskMaddi {
             pull('Adorama', 'adorama.com', () => this.fetcher.searchAdorama(query, limit)),
             pull('eBay', 'ebay.com', () => this.fetcher.searchEbay(query, limit)),
         ]);
-        const arranged = arrangeResults(query, products, caps);
+        // Remember the fetched set so clearing the budget re-arranges WITHOUT a refetch.
+        this._searchProducts = products;
+        this._searchQuery = query;
+        this._searchCaps = caps;
+        const arranged = arrangeResults(query, products, { ...caps, ignorePrice: this._budgetIgnored });
         if (arranged.length > 0) {
             this.ui.replaceProductGrid(arranged, query);
             this.ui.finalizeResults(arranged.length, products.length, arranged.length);
         } else {
             this.ui.showEmptyResults({ query, sources: products.length });
         }
+        // Surface the active budget as a removable chip (only when one is applied).
+        const constraint = this._budgetIgnored ? null : parsePriceConstraint(query);
+        this.ui.renderBudgetChip(constraint ? priceConstraintLabel(constraint) : null,
+            () => this.clearBudget());
         // Offer "Show more" only on the first pass, and only when a source filled
         // its page (== limit) — a strong signal there is more to fetch.
         const moreLikely = !expanded &&
@@ -354,6 +368,21 @@ class AskMaddi {
         this.ui.toggleShowMore(false);
         // Deeper fetch (100/source) with lifted caps; slower, but only on demand.
         await this.preciseSearch(this.currentQuery, 100, { expanded: true });
+    }
+
+    /**
+     * Clear the active budget filter and re-show every fetched result. Re-arranges
+     * the already-fetched set (no refetch) with the price rung disabled, and hides
+     * the chip. The budget re-applies automatically on the next fresh query.
+     */
+    clearBudget() {
+        this._budgetIgnored = true;
+        this.ui.renderBudgetChip(null);
+        const products = this._searchProducts || [];
+        const arranged = arrangeResults(this._searchQuery || '', products,
+            { ...(this._searchCaps || {}), ignorePrice: true });
+        this.ui.replaceProductGrid(arranged, this._searchQuery || '');
+        this.ui.finalizeResults(arranged.length, products.length, arranged.length);
     }
 
     cancelSearch() {

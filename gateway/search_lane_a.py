@@ -108,6 +108,17 @@ def precise_search(query, limit=25):
     canonical = search_cells.rerank(query, canonical)
     accessory = search_cells.rerank(query, accessory)
 
+    # Budget filter — "under $X" / "over $X" / "$X to $Y" read off the RAW query
+    # (rerank drops price tokens as ranking noise). Applied to both sections;
+    # unpriced rows survive. Removed count is reported, never a silent drop.
+    price_constraint = search_cells.parse_price_constraint(query)
+    price_filtered = 0
+    if price_constraint:
+        cf = search_cells.apply_price_filter(canonical, price_constraint)
+        af = search_cells.apply_price_filter(accessory, price_constraint)
+        canonical, accessory = cf["kept"], af["kept"]
+        price_filtered = len(cf["filtered"]) + len(af["filtered"])
+
     # Surface a source x condition MIX. eBay lists MANY unique-titled listings of
     # one body (never dedup) while Adorama has a few clean rows, so raw relevance
     # buries the New/Adorama buy-path under eBay's Used volume. Round-robin four
@@ -133,5 +144,7 @@ def precise_search(query, limit=25):
         },
         "resolved_to_spine": n_resolved,
         "accessory_tail": len(accessory),
+        "price_constraint": price_constraint,
+        "price_filtered": price_filtered,
     }
     return payload

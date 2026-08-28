@@ -71,3 +71,39 @@ def test_relevance_export():
     assert sc.relevance("sony a7 iv", "Sony A7 IV Camera") >= 0.0
     assert sc.relevance("sony a7 iv", "Sony A7R IV Camera") < 0.0
     assert sc.relevance("sony a7 iv", "Sony A7 III Camera") < 0.0
+
+
+# --- price constraint (parse + filter) --------------------------------------
+
+def test_price_parse_under():
+    assert sc.parse_price_constraint("mirrorless under $400") == {"op": "lte", "value": 400.0}
+
+
+def test_price_parse_k_and_comma():
+    assert sc.parse_price_constraint("under 2k") == {"op": "lte", "value": 2000.0}
+    assert sc.parse_price_constraint("below $1,500") == {"op": "lte", "value": 1500.0}
+
+
+def test_price_parse_over_and_range():
+    assert sc.parse_price_constraint("over 3000") == {"op": "gte", "value": 3000.0}
+    assert sc.parse_price_constraint("between 200 and 500") == {"op": "range", "lo": 200.0, "hi": 500.0}
+    assert sc.parse_price_constraint("$800 to $1,200") == {"op": "range", "lo": 800.0, "hi": 1200.0}
+
+
+def test_price_parse_none_and_focal_guard():
+    assert sc.parse_price_constraint("sony a7 iv") is None
+    assert sc.parse_price_constraint("24-70mm lens") is None
+    assert sc.parse_price_constraint("24 to 70mm f/2.8") is None
+
+
+def test_price_filter_lte_keeps_unpriced():
+    rows = [{"name": "A", "price": "$300"}, {"name": "B", "price": "1200"}, {"name": "C"}]
+    out = sc.apply_price_filter(rows, {"op": "lte", "value": 500})
+    assert [r["name"] for r in out["kept"]] == ["A", "C"]
+    assert [r["name"] for r in out["filtered"]] == ["B"]
+
+
+def test_price_filter_none_passthrough():
+    rows = [{"name": "A", "price": "$300"}]
+    out = sc.apply_price_filter(rows, None)
+    assert out["kept"] == rows and out["filtered"] == []
