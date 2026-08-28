@@ -4,7 +4,7 @@ import { Deduper } from './deduper.js';
 import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
 import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
-import { arrangeResults } from './precise.js';
+import { arrangeResults } from './precise.js?v=3';
 
 // === Lane A precise-search switch (2026-08-27) ===
 // false → legacy client-side fan-out (streamSearch). true → route ALL search
