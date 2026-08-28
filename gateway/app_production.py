@@ -110,6 +110,7 @@ except ImportError:
 # "measure before pushing" gate while looking healthy. Fail loud at import.
 import analytics_log
 import subscribers
+import search_query  # Lane A Tier-1 query normalization (glued model tokens)
 
 # --- Demand factory (capture path) ---
 # demand_log (upstream want-signal) + review_queue (slug-ambiguous subset) +
@@ -362,7 +363,7 @@ def ebay_search():
     """
     if not HAS_EBAY_API or not ebay_api.is_configured():
         return jsonify({'error': 'eBay API not configured', 'items': []}), 503
-    query = request.args.get('q', '').strip()
+    query = search_query.normalize_query(request.args.get('q', '').strip())
     if not query:
         return jsonify({'error': 'missing q', 'items': []}), 400
     try:
@@ -388,7 +389,7 @@ def precise_search():
     /ebay/search is untouched, so the frontend switch is reversible. Privacy: the
     query is never logged (only error types + counts).
     """
-    query = request.args.get('q', '').strip()
+    query = search_query.normalize_query(request.args.get('q', '').strip())
     if not query:
         return jsonify({'error': 'missing q', 'results': [], 'sections': []}), 400
     try:
@@ -412,7 +413,7 @@ def adorama_search():
     stream in). Mirrors /ebay/search's {items,count} shape so the frontend renders
     both sources through one path. Privacy: query never logged.
     """
-    query = request.args.get('q', '').strip()
+    query = search_query.normalize_query(request.args.get('q', '').strip())
     if not query:
         return jsonify({'error': 'missing q', 'items': []}), 400
     try:
