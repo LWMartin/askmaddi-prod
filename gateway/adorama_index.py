@@ -45,22 +45,28 @@ def _query_tokens(query):
     return [t for t in _tokenize(query) if t not in _STOPWORDS and not t.isdigit()]
 
 
-def _tmatch(qt, nt):
-    """Token equality with simple singular/plural tolerance ("tripods"~"tripod",
-    "lenses"~"lens") — but NEVER a substring merge, so "a7" never matches "a7r"."""
-    if qt == nt:
+def _matches(qt, ntokens):
+    """True if `qt` matches some name token with singular/plural tolerance
+    ("tripods"~"tripod", "lenses"~"lens") — but NEVER a substring merge, so "a7"
+    never matches "a7r". All O(1) SET lookups against the pre-tokenized name set
+    (no per-name-token iteration) — this is the hot path over ~130k rows.
+
+    Semantically identical to the old `qt in nt or any(_tmatch(qt,n))`: the five
+    _tmatch cases become direct membership tests (nt==qt+s/es, qt==nt+s/es)."""
+    if qt in ntokens:
         return True
-    return (qt == nt + "s" or nt == qt + "s"
-            or qt == nt + "es" or nt == qt + "es")
+    if qt + "s" in ntokens or qt + "es" in ntokens:      # a name token is qt + s/es
+        return True
+    if qt.endswith("es") and qt[:-2] in ntokens:         # qt is name token + es
+        return True
+    if qt.endswith("s") and qt[:-1] in ntokens:          # qt is name token + s
+        return True
+    return False
 
 
 def _score(qtokens, ntokens):
     """How many query tokens match some name token (exact fast-path, then plural)."""
-    s = 0
-    for qt in qtokens:
-        if qt in ntokens or any(_tmatch(qt, nt) for nt in ntokens):
-            s += 1
-    return s
+    return sum(1 for qt in qtokens if _matches(qt, ntokens))
 
 
 def is_configured():

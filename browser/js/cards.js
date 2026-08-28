@@ -3,7 +3,7 @@
  * Also exports matching utilities for search results integration (Phase 5).
  */
 
-import { relevance } from './precise.js?v=4';
+import { relevance } from './precise.js?v=5';
 
 const MANIFEST_URL = 'cards-manifest.json';
 let _manifestCache = null;
@@ -257,6 +257,16 @@ function _initToTop() {
 export function matchCards(query, manifest) {
     if (!manifest || !manifest.cards || !query) return [];
 
+    // Brand agreement: if the query names a brand we card, ONLY that brand's
+    // cards qualify — so "sony full frame camera" never surfaces a GoPro card
+    // (which otherwise matches on the generic word "camera" via its
+    // "Action-Camera" subcategory). Model-less category queries with no brand
+    // token are unaffected.
+    const brandSet = new Set(
+        manifest.cards.map(c => (c.brand || '').toLowerCase()).filter(Boolean));
+    const qTokens = (query.toLowerCase().match(/[a-z0-9]+/g) || []);
+    const queryBrands = qTokens.filter(t => brandSet.has(t));
+
     const scored = manifest.cards.map(card => {
         const haystack = [
             card.display_name,
@@ -269,6 +279,8 @@ export function matchCards(query, manifest) {
 
     return scored
         .filter(x => x.s > 0)          // relevance() rejects with -1
+        .filter(x => queryBrands.length === 0
+            || queryBrands.includes((x.card.brand || '').toLowerCase()))
         .sort((a, b) => b.s - a.s)
         .map(x => x.card);
 }

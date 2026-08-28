@@ -166,3 +166,12 @@ def normalize_query(query):
     if not query:
         return query
     return " ".join(_correct(_split_glued(query)))
+
+
+# Pre-warm the vocabulary at import so the first request never pays the ~0.9s
+# build (gunicorn builds it per worker at startup, off the request path). Guarded:
+# a missing/unreadable index just leaves the cache empty and correction is skipped.
+try:
+    _load_vocab()
+except Exception:
+    pass
