@@ -9,15 +9,13 @@ class Fetcher {
         return await response.json();
     }
     
-    async searchEbay(query) {
+    async searchEbay(query, limit = 25) {
         // Official eBay Browse API (server-side). Returns structured listings
         // with EPN affiliate attribution baked into each URL — no scrape, no
         // proxy, no Akamai. Response: { count, items: [{name, price, currency,
-        // image, url, condition, seller}] }.
+        // image, url, condition, seller}] }. `limit` is raised by "Show more".
         const response = await fetch(
-            // limit=25: the 10-result cap was scrape-era caution; the
-            // Browse API path is fast enough for a fuller shelf (2026-07-17).
-            `${this.gateway}/ebay/search?q=${encodeURIComponent(query)}&limit=25`
+            `${this.gateway}/ebay/search?q=${encodeURIComponent(query)}&limit=${limit}`
         );
         if (!response.ok) {
             const error = await response.json().catch(() => ({}));
@@ -27,13 +25,13 @@ class Fetcher {
         return Array.isArray(data.items) ? data.items : [];
     }
 
-    async searchAdorama(query) {
+    async searchAdorama(query, limit = 25) {
         // Adorama feed index (server-side). Fast lookup, no Sieve. Same
         // { count, items:[{name, price, currency, image, url, condition,
         // seller, gtin, mpn, brand, model}] } shape as searchEbay — the New
-        // lane, streamed in parallel with eBay.
+        // lane, streamed in parallel with eBay. `limit` is raised by "Show more".
         const response = await fetch(
-            `${this.gateway}/adorama/search?q=${encodeURIComponent(query)}&limit=25`
+            `${this.gateway}/adorama/search?q=${encodeURIComponent(query)}&limit=${limit}`
         );
         if (!response.ok) {
             const error = await response.json().catch(() => ({}));

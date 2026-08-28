@@ -3,8 +3,8 @@ import { Extractor } from './extractor.js';
 import { Deduper } from './deduper.js';
 import { Ranker } from './ranker.js';
 import { UI } from './ui.js';
-import { loadManifest, matchCards, renderMatchedCards } from './cards.js';
-import { arrangeResults } from './precise.js?v=3';
+import { loadManifest, matchCards, renderMatchedCards } from './cards.js?v=4';
+import { arrangeResults } from './precise.js?v=4';
 
 // === Lane A precise-search switch (2026-08-27) ===
 // false → legacy client-side fan-out (streamSearch). true → route ALL search
@@ -97,6 +97,9 @@ class AskMaddi {
         
         document.getElementById('cancel-search').addEventListener('click', () => this.cancelSearch());
         document.getElementById('retry-search').addEventListener('click', () => this.handleSearch());
+
+        const showMore = document.getElementById('show-more');
+        if (showMore) showMore.addEventListener('click', () => this.showMoreResults());
     }
     
     async handleSearch() {
@@ -290,17 +293,23 @@ class AskMaddi {
         this.sendAnalytics(query, sites.length);
     }
 
-    async preciseSearch(query) {
+    async preciseSearch(query, limit = 25, opts = {}) {
         // Lane A STREAMING: fan out both sanctioned sources in parallel, render
         // as each arrives, and BYPASS a slow link via a per-source timeout —
-        // "print as found", never block on the slowest. Precision (whole-token
-        // relevance + accessory demotion + source x condition interleave) is
-        // cheap and runs client-side on every arrival, so it never blocks the
-        // stream. Heavy Sieve rungs (spine identity, Qwen3) are out of the hot
-        // path by design.
+        // "print as found", never block on the slowest. Precision (model-anchored
+        // relevance + incremental dedup + accessory demotion) is cheap and runs
+        // client-side on every arrival, so it never blocks the stream. Heavy Sieve
+        // rungs (spine identity, Qwen3) are out of the hot path by design.
+        //
+        // `limit`/opts.expanded: the first pass fetches limit=25 per source; the
+        // "Show more results" button re-runs at a higher limit with lifted caps.
+        const expanded = !!opts.expanded;
+        const caps = expanded ? { usedCap: limit, tailCap: 40 } : {};
+        if (!expanded) this.ui.toggleShowMore(false);   // hide stale button on a fresh search
         const products = [];
+        const raw = {};
         const render = () => {
-            const arranged = arrangeResults(query, products);
+            const arranged = arrangeResults(query, products, caps);
             if (arranged.length > 0) this.ui.replaceProductGrid(arranged, query);
         };
         const withTimeout = (p, ms) => Promise.race([
@@ -310,7 +319,8 @@ class AskMaddi {
         const pull = async (name, domain, fn) => {
             this.ui.updateStreamingSource(name, 'fetching');
             try {
-                const items = await withTimeout(fn(), 7000);   // slow link → bypass
+                const items = await withTimeout(fn(), expanded ? 12000 : 7000);
+                raw[name] = items.length;
                 items.forEach(it => { it.source = name; it.sourceDomain = domain; });
                 products.push(...items);
                 render();                                      // print as found
@@ -321,17 +331,29 @@ class AskMaddi {
             }
         };
         await Promise.all([
-            pull('Adorama', 'adorama.com', () => this.fetcher.searchAdorama(query)),
-            pull('eBay', 'ebay.com', () => this.fetcher.searchEbay(query)),
+            pull('Adorama', 'adorama.com', () => this.fetcher.searchAdorama(query, limit)),
+            pull('eBay', 'ebay.com', () => this.fetcher.searchEbay(query, limit)),
         ]);
-        const arranged = arrangeResults(query, products);
+        const arranged = arrangeResults(query, products, caps);
         if (arranged.length > 0) {
             this.ui.replaceProductGrid(arranged, query);
             this.ui.finalizeResults(arranged.length, products.length, arranged.length);
         } else {
             this.ui.showEmptyResults({ query, sources: products.length });
         }
+        // Offer "Show more" only on the first pass, and only when a source filled
+        // its page (== limit) — a strong signal there is more to fetch.
+        const moreLikely = !expanded &&
+            ((raw['Adorama'] || 0) >= limit || (raw['eBay'] || 0) >= limit);
+        this.ui.toggleShowMore(moreLikely);
         this.sendAnalytics(query, 2);
+    }
+
+    async showMoreResults() {
+        if (!this.currentQuery) return;
+        this.ui.toggleShowMore(false);
+        // Deeper fetch (100/source) with lifted caps; slower, but only on demand.
+        await this.preciseSearch(this.currentQuery, 100, { expanded: true });
     }
 
     cancelSearch() {

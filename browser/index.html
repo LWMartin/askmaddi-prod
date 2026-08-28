@@ -138,6 +138,9 @@
             </div>
 
             <div id="results-grid" class="results-grid"></div>
+            <div id="show-more-container" style="display: none; text-align: center; margin: 1.5rem 0;">
+                <button id="show-more" class="back-button" style="display: inline; font-size: 14px; padding: 0.6rem 1.4rem;">Show more results</button>
+            </div>
         </div>
 
         <!-- ERROR STATE -->
@@ -192,7 +195,7 @@
     </footer>
 
     <script src="js/beacon.js" defer></script>
-    <script type="module" src="js/app.js?v=3"></script>
+    <script type="module" src="js/app.js?v=4"></script>
     <script type="module">
         import { renderCardGrid } from './js/cards.js';
         renderCardGrid('#card-grid');

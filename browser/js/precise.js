@@ -145,6 +145,18 @@ function score(model, descriptor, name) {
     return hits > 0 ? hits : -1;
 }
 
+/**
+ * Model-anchored relevance of `text` to `query`, exported so card matching
+ * (cards.js) uses the SAME logic as product ranking — every model token must
+ * match exactly (r6ii/a7iv normalized first), so a query surfaces only the right
+ * generation. Returns -1 to reject, else a non-negative score (higher = better).
+ */
+export function relevance(query, text) {
+    const { model, descriptor } = splitQuery(query);
+    if (model.length === 0 && descriptor.length === 0) return -1;
+    return score(model, descriptor, text);
+}
+
 function isAccessory(name) {
     const l = (name || '').toLowerCase();
     return ACCESSORY_MARKERS.some(re => re.test(l));
@@ -225,7 +237,9 @@ function dedup(scored) {
  * arrival. Returns the ordered product list (deduped canonical, best-first, then
  * a capped compatible/third-party tail).
  */
-export function arrangeResults(query, products) {
+export function arrangeResults(query, products, opts = {}) {
+    const usedCap = opts.usedCap != null ? opts.usedCap : USED_CANONICAL_CAP;
+    const tailCap = opts.tailCap != null ? opts.tailCap : ACCESSORY_TAIL_CAP;
     const { model, descriptor } = splitQuery(query);
     if (model.length === 0 && descriptor.length === 0) return products.slice();
 
@@ -242,13 +256,13 @@ export function arrangeResults(query, products) {
 
     // Cap Used so eBay's volume can't bury the shelf after New leads.
     const used = merged.filter(p => p._new === 1);
-    if (used.length > USED_CANONICAL_CAP) {
-        const keepUsed = new Set(used.slice(0, USED_CANONICAL_CAP));
+    if (used.length > usedCap) {
+        const keepUsed = new Set(used.slice(0, usedCap));
         merged = merged.filter(p => p._new === 0 || keepUsed.has(p));
     }
 
     const tail = acc.sort((a, b) => b.s - a.s)
-        .slice(0, ACCESSORY_TAIL_CAP)
+        .slice(0, tailCap)
         .map(x => ({ ...x.p, bestPrice: formatPrice(priceFloat(x.p.price)) || x.p.price }));
 
     return merged.concat(tail);

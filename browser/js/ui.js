@@ -126,6 +126,14 @@ class UI {
     }
     
     /**
+     * Show/hide the "Show more results" button (deeper fetch on demand).
+     */
+    toggleShowMore(visible) {
+        const c = document.getElementById('show-more-container');
+        if (c) c.style.display = visible ? 'block' : 'none';
+    }
+
+    /**
      * Final cleanup after all sources complete.
      */
     finalizeResults(finalCount, totalFound, afterDedup) {

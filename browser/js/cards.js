@@ -3,6 +3,8 @@
  * Also exports matching utilities for search results integration (Phase 5).
  */
 
+import { relevance } from './precise.js?v=4';
+
 const MANIFEST_URL = 'cards-manifest.json';
 let _manifestCache = null;
 
@@ -246,14 +248,14 @@ function _initToTop() {
 }
 
 /**
- * Match a search query against card identity fields.
- * Returns matching cards, sorted by relevance (token match count).
+ * Match a search query against card identity fields, using the SAME
+ * model-anchored relevance as the marketplace results (precise.js `relevance`):
+ * every model token must match exactly and glued forms are normalized, so
+ * "r6ii" and "r6 ii" both surface the Canon R6 II card — and only the R6 II,
+ * not the R6 III. Returns matching cards, best-first.
  */
 export function matchCards(query, manifest) {
     if (!manifest || !manifest.cards || !query) return [];
-
-    const tokens = query.toLowerCase().split(/\s+/).filter(t => t.length > 1);
-    if (tokens.length === 0) return [];
 
     const scored = manifest.cards.map(card => {
         const haystack = [
@@ -261,16 +263,14 @@ export function matchCards(query, manifest) {
             card.brand,
             card.category,
             card.subcategory
-        ].join(' ').toLowerCase();
-
-        const matches = tokens.filter(t => haystack.includes(t));
-        return { card, score: matches.length };
+        ].filter(Boolean).join(' ');
+        return { card, s: relevance(query, haystack) };
     });
 
     return scored
-        .filter(s => s.score >= Math.min(2, tokens.length))
-        .sort((a, b) => b.score - a.score)
-        .map(s => s.card);
+        .filter(x => x.s > 0)          // relevance() rejects with -1
+        .sort((a, b) => b.s - a.s)
+        .map(x => x.card);
 }
 
 /**
