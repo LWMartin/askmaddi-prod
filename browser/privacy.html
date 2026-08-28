@@ -163,80 +163,71 @@
         </div>
 
         <h1 class="page-title">Privacy Policy</h1>
-        <p class="page-subtitle">The shortest privacy policy you'll ever read.</p>
+        <p class="page-subtitle">Short, and honest about what leaves your browser.</p>
 
         <div class="highlight-box">
-            <p><strong>The short version:</strong> Your searches stay in your browser. We never see them. We don't track you. We don't build profiles. We don't sell data because we don't collect it. Our review comparison cards are pre-built pages — reading one tells us nothing about you.</p>
+            <p><strong>The short version:</strong> To find live listings, your search is sent to our server and on to the retailers' product feeds — that's how any product search works. We don't attach it to you: no accounts, no cookies, no cross-site tracking, no profiles, and we never sell data. Our review cards are pre-built pages, so viewing one is just an ordinary page request.</p>
         </div>
 
         <h2>How AskMaddi Is Different</h2>
-        
+
         <div class="comparison">
             <div class="comparison-box others">
                 <h4>Typical Search Sites</h4>
                 <ul>
-                    <li>Your query goes to their servers</li>
-                    <li>They log what you search</li>
-                    <li>They build a profile on you</li>
-                    <li>They sell your data to advertisers</li>
-                    <li>They show "personalized" results</li>
+                    <li>Track you with cookies across the web</li>
+                    <li>Build a profile on you</li>
+                    <li>Sell your data to advertisers</li>
+                    <li>Show "personalized" results</li>
+                    <li>Rank by who paid the most</li>
                 </ul>
             </div>
             <div class="comparison-box us">
                 <h4>AskMaddi</h4>
                 <ul>
-                    <li>Your query never leaves your device</li>
-                    <li>Nothing to log</li>
-                    <li>Nothing to profile</li>
-                    <li>Nothing to sell</li>
+                    <li>No cookies, no accounts, no fingerprinting</li>
+                    <li>No profile — your query isn't tied to you</li>
+                    <li>Nothing sold, ever</li>
                     <li>Same results for everyone</li>
+                    <li>No pay-to-rank; commissions never shape a card</li>
                 </ul>
             </div>
         </div>
 
         <h2>How It Works</h2>
-        
+
         <div class="tech-detail">
-            <p><strong>Browser-Side AI:</strong> When you search, our AI model (DistilBERT) runs entirely in your web browser. Your search terms are processed on your device, not our servers. We literally cannot see what you're searching for.</p>
+            <p><strong>Search:</strong> When you search, your query is sent to our server, which queries the official product APIs of eBay and Adorama to pull live listings, then ranks them for precision (collapsing duplicates, holding the exact variant). Fetching live prices and stock is impossible without contacting the retailers, so — like any search tool — your query does leave your browser. We don't attach it to an account, a cookie, or a profile.</p>
         </div>
 
         <div class="tech-detail">
-            <p><strong>Product Fetching:</strong> When you click search, your browser fetches product pages from retailers through our proxy server. The proxy retrieves the pages but does not log your queries or associate requests with any identifier.</p>
+            <p><strong>Anonymous analytics:</strong> We keep a first-party count of a few product events — an outbound click to a retailer, or an arrival from an AI assistant — recording only a broad category and retailer/engine name. This is enforced in code to <em>exclude</em> your query text, IP, email, or any user identifier. No Google Analytics, no Facebook Pixel, no third-party trackers, no advertising cookies.</p>
         </div>
 
         <div class="tech-detail">
-            <p><strong>Review Comparison Cards:</strong> Our comparison cards are pre-built pages that we generate ahead of time from publicly available reviews and link back to their sources. They're served like any ordinary web page — viewing one is just a normal page request, and it doesn't tell us anything about you or what you were looking for.</p>
+            <p><strong>Review comparison cards:</strong> Our cards are pre-built pages generated ahead of time from publicly available reviews, linking back to their sources. They're served like any ordinary web page — viewing one is a normal page request and isn't tied to you.</p>
         </div>
 
-        <div class="tech-detail">
-            <p><strong>No Cookies, No Tracking:</strong> We don't use tracking cookies, analytics scripts, or fingerprinting. No Google Analytics. No Facebook Pixel. No third-party trackers.</p>
-        </div>
-
-        <h2>What We Do Collect</h2>
-        <p>Our web server maintains standard access logs that include:</p>
-        <ul>
-            <li>IP addresses (for rate limiting and abuse prevention)</li>
-            <li>Timestamps</li>
-            <li>Pages requested</li>
-        </ul>
-        <p>These logs are used solely for security and maintaining service availability. They do not contain your search queries and are not shared with third parties.</p>
+        <h2>What We Collect</h2>
+        <p>Our web server keeps standard access logs, which — like every web server — include the IP address, timestamp, and the request line. Because a search is an ordinary web request, the request line for a search <strong>does</strong> contain the query text. These logs are used only for security, rate-limiting, and keeping the service running; they are not used to profile you, are not tied to an identity, and are not shared with third parties or advertisers.</p>
+        <p>If you subscribe to our new-cards email, we store your email address for that one purpose. You can unsubscribe at any time from any email, and we keep a suppression record so we honor it.</p>
 
         <h2>Affiliate Links</h2>
-        <p>When you click through to a retailer and make a purchase, we may earn a commission. This is how we sustain the service without selling your data. The retailers know you came from AskMaddi, but they don't know what you searched for here—because we don't either.</p>
+        <p>We're affiliate-supported: when you click through to a retailer (eBay, Adorama, Amazon) and buy, we may earn a small commission at no extra cost to you, and we disclose it on every page. The retailer knows you arrived from AskMaddi and may set its own cookies or tracking under its own privacy policy — that part is out of our hands. The commission is the same whichever product you buy, so it never shapes what a card says or how results rank.</p>
 
         <h2>Third-Party Sites</h2>
-        <p>When you click through to a retailer (such as Amazon or eBay), you're subject to their privacy policies. We have no control over their data practices.</p>
+        <p>When you click through to a retailer (such as eBay, Adorama, or Amazon), you're subject to their privacy policies. We have no control over their data practices.</p>
 
         <h2>Children's Privacy</h2>
-        <p>AskMaddi is a general-purpose product search tool. We do not knowingly collect any personal information from anyone, including children under 13.</p>
+        <p>AskMaddi is a general-purpose product research tool. We do not knowingly collect personal information from anyone, including children under 13.</p>
 
         <h2>Changes to This Policy</h2>
-        <p>If we change this policy, we'll update this page. But our approach is simple: don't collect data, don't have data problems. That's unlikely to change.</p>
+        <p>If we change this policy, we'll update this page. Our approach is to collect as little as the service allows and to be plain about what that is.</p>
 
         <h2>Contact</h2>
         <p>Questions about our privacy practices? Reach us at: <strong>info@aisciencecenter.com</strong></p>
 
-        <p class="last-updated">Last updated: June 2026</p>
+        <p class="last-updated">Last updated: August 2026</p>
 
         <div class="footer-links">
             <a href="index.html">Search</a>
