@@ -82,7 +82,13 @@ body {
     font-weight: 600;
     color: var(--color-text);
     line-height: 1.35;
-    margin: var(--space-sm) auto var(--space-md);
+    margin: var(--space-sm) auto 4px;
+    max-width: 560px;
+}
+.hero-sub {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    margin: 0 auto var(--space-md);
     max-width: 560px;
 }
 
@@ -718,6 +724,7 @@ body {
     .hero h1 { font-size: 24px; }
     .tagline { font-size: 16px; }
     .hero-headline { font-size: 17px; }
+    .hero-sub { font-size: 13px; }
     .search-box { flex-direction: column; }
     .search-box button { width: 100%; }
     .results-grid { grid-template-columns: 1fr; }
