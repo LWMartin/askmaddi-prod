@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-28",
+  "as_of": "2026-08-29",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -2639,10 +2639,10 @@
       "contamination_key": "canon-powershot-sx70",
       "vendor": "Canon",
       "model": "powershot sx70",
-      "gtin": null,
+      "gtin": "04549292119183",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "188824616105",
+        "ebay_epid": "11029555410",
+        "ebay_legacy_item_id": "307146325756",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2652,29 +2652,44 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "PSSX70HS",
         "gtin_provenance": {
-          "chosen_source": null,
+          "chosen_source": "product.gtins",
           "conflict": false,
-          "observations": []
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "4549292119183",
+              "gtin14": "04549292119183",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "4549292119183",
+              "gtin14": "04549292119183",
+              "valid": true
+            }
+          ]
         },
-        "market_title": "【MINT- BOXED】Canon PowerShot SX70 HS 20.3MP 65x Zoom Compact Camera Black",
-        "image": "https://i.ebayimg.com/images/g/OroAAeSwXDpqarC4/s-l1600.jpg",
-        "image_catalog": "",
+        "market_title": "Canon PowerShot SX70 HS Digital Camera [Top Mint] US Stock",
+        "image": "https://i.ebayimg.com/images/g/~VoAAeSwA-tqjPqK/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/N~YAAOSwafFlL4YQ/s-l1600.jpg",
         "price_seen": {
-          "value": "773.99",
+          "value": "849.09",
           "currency": "USD",
-          "as_of": "2026-08-23T04:19:33Z"
+          "as_of": "2026-08-26T04:21:25Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/188824616105?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FTiVrGsZcMjFx59j1nWz1lWAb%2BkNojBf8HK1gD7VBhHHAMxpEpQDtqkmz8HgiKBz7ciNissXA19HEY8lk99IVK%2BKcMvvLgkN%2Fhl2OV9%2FyimpNeokT%2B0aiEZBwnKJcD7zzsu%2FmrxpIIFQrFD9ZT5rGhCr68TayBFSh8mu8YfUpEZgRt6czRTmjcOnkeRhvwU%2FA%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/307146325756?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9N1HBTDkFtGKOMjTfVj45bNTy%2FzHyUhsjCSYDjgQeE9IXBMC2LjFs7B8GDjm8d2PIGoxT4NIb6bXiJ3W%2FgLHE--xayVdTMItAveKZuFZ2xdpWYyMCn0bZ8bHmc7zyXTJMmz8sFyB4%2F2BpAIbs4T9YPkTtGCAOSSjH2AITnfD3P1jyLxK3IdUa8%2BMswel%2Fq49c%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-23T04:19:33Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-28T14:17:05Z"
     },
     "minolta-maxxum-7000": {
       "contamination_key": "minolta-maxxum-7000",
@@ -2967,7 +2982,7 @@
       "gtin": "00085126348656",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "377431300831",
+        "ebay_legacy_item_id": "276109341956",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2977,7 +2992,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "",
+        "mpn": "348975",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": true,
@@ -2997,30 +3012,30 @@
               {
                 "source": "aspect",
                 "identifier_type": "UPC",
-                "raw": "0085126348694",
-                "gtin14": "00085126348694",
+                "raw": "085126348755",
+                "gtin14": "00085126348755",
                 "valid": true
               }
             ]
           }
         },
-        "market_title": "Sigma 23mm F/1.4 DC DN Contemporary (for L mount / APS-C) -Near Mint- #146",
-        "image": "https://i.ebayimg.com/images/g/n1EAAeSwe9ZqhVOw/s-l1600.jpg",
+        "market_title": "Sigma 23mm f/1.4 DC DN Contemporary Lens (FUJIFILM X)",
+        "image": "https://i.ebayimg.com/images/g/bBMAAOSw1X5lMUu6/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "323.00",
+          "value": "429.00",
           "currency": "USD",
-          "as_of": "2026-08-26T15:26:18Z"
+          "as_of": "2026-08-24T04:10:10Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377431300831?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/276109341956?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-26T15:26:18Z"
+      "resolved_at": "2026-08-28T14:16:06Z"
     },
     "canon-18-200mm-f3-5": {
       "contamination_key": "canon-18-200mm-f3-5",
@@ -4936,7 +4951,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "198410140221",
+        "ebay_legacy_item_id": "406825018034",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -4946,29 +4961,29 @@
       },
       "identity": {
         "brand": "Godox",
-        "mpn": "",
+        "mpn": "Does not apply, V1-C",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "US Godox V1-C V1C 2.4G TTL HSS Round Head Li-ion Camera Flash Speedlite Fr Canon",
-        "image": "https://i.ebayimg.com/images/g/y~UAAeSwDDdqcaa~/s-l1600.jpg",
+        "market_title": "US Godox V1 V1Pro C TTL HSS Li-ion Round Head Camera Flash Speedlite for Canon",
+        "image": "https://i.ebayimg.com/images/g/T88AAeSwArlpz11j/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "185.00",
+          "value": "263.99",
           "currency": "USD",
-          "as_of": "2026-08-27T04:27:33Z"
+          "as_of": "2026-08-27T22:40:34Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/198410140221?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8mXGWFi9QoD0rbuwoi4eT59SdsGy%2BagmVIp7nJvOToSdxTucIT6F44UpifK4wwcJnsCgAMbxVbq4sVBI2pwSTx3rNYfyPFawI5OlPCKMLjuN0QChP%2BTDgJRbYCmMhNrWUVUVifL6LW76n%2BNUot4prXL%2B7wH8%2BRaK0udhvRvF2aZYjalIUa%2BIKtXcDbyIpsI%2BQ%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/406825018034?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BQ35jcw0qtCcLIjYeJS%2BexsTwtAIbVZ8p--8rW6ZrDEkw30yNKhFUt7TmLTqr1r2C4PmDcB2K4TiwsE1hzd6cSOlfs5Wv7M49OmKPL5IPDHoUQjSAXSsa0pIUD%2BX%2BQPuiy71ASPtda0shBAx6jt6LINVwzjIv1sWLVMJnXct68WM0M8i7iifidFKML60vYZRs%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-27T04:27:33Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-29T02:28:46Z"
     },
     "dji-rs-pro-gimbal-stabilizer": {
       "contamination_key": "dji-generic",
@@ -10096,6 +10111,201 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-08-28T04:54:27Z"
+    },
+    "leica-50mm-f1-4": {
+      "contamination_key": "leica-50mm-f1-4",
+      "vendor": "Leica",
+      "model": "50mm f1.4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "117358112515",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Leica",
+        "mpn": "11891",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Leica Summilux-M 50mm f1.4 ASPH. Lens (Leica M, 11891, Black, 6 Bit) #51361",
+        "image": "https://i.ebayimg.com/images/g/tlcAAeSwlMZqIFMS/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2349.00",
+          "currency": "USD",
+          "as_of": "2026-08-26T04:18:38Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/117358112515?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FVqeAU2PsCXLPLUXIo6PBjHND03buTqRzbRWzAk6ScjNL1dH15zvREAsfIjsZdQ%2FnuBEE8k7QTFdimrkRkxWW%2BCFD6LyI5LwSGpdiIlOTNUVOfJdG2P8L51A12bpBcRFCq9YjBKFzRyF5cKSFlFNkpexo%2Bhka39hY0qP%2FVkwsSo97ylVN8gjIElrbxH3PhXQE%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-28T14:16:32Z"
+    },
+    "canon-powershot-sx740": {
+      "contamination_key": "canon-powershot-sx740",
+      "vendor": "Canon",
+      "model": "powershot sx740",
+      "gtin": "00013803306309",
+      "marketplace_ids": {
+        "ebay_epid": "17032510487",
+        "ebay_legacy_item_id": "332836163358",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "2955C001AA",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0013803306309",
+              "gtin14": "00013803306309",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0013803306309",
+              "gtin14": "00013803306309",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0013803306309",
+              "gtin14": "00013803306309",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803306309",
+              "gtin14": "00013803306309",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon PowerShot SX740 HS 20.3MP 4K Digital Camera 40x Optical Zoom Wi-Fi Black",
+        "image": "https://i.ebayimg.com/images/g/XEcAAOSw831bvk3s/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/GMkAAOSwO5hj7jOj/s-l1600.jpg",
+        "price_seen": {
+          "value": "769.95",
+          "currency": "USD",
+          "as_of": "2026-08-27T04:25:13Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/332836163358?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-28T14:18:22Z"
+    },
+    "sony-28-70mm-f3-5": {
+      "contamination_key": "sony-28-70mm-f3-5",
+      "vendor": "Sony",
+      "model": "28 70mm f3.5",
+      "gtin": "00083922912156",
+      "marketplace_ids": {
+        "ebay_epid": "175246102",
+        "ebay_legacy_item_id": "318096091554",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "SEL2870",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": true,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0083922912156",
+              "gtin14": "00083922912156",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0027242873766",
+              "gtin14": "00027242873766",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0083922912156",
+              "gtin14": "00083922912156",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0027242873766",
+              "gtin14": "00027242873766",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0083922912156",
+              "gtin14": "00083922912156",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0027242873766",
+              "gtin14": "00027242873766",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sony 28-70mm F3.5-5.6 FE OSS Interchangeable Standard Zoom Lens, Black NEW",
+        "image": "https://i.ebayimg.com/images/g/2FsAAeSwXXlpzqiM/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/0ucAAOSw~QZjWiRi/s-l640.jpg",
+        "price_seen": {
+          "value": "249.96",
+          "currency": "USD",
+          "as_of": "2026-08-27T22:44:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318096091554?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8VZk4uh1zFZLEulRKvZcym9bMngF0cUyL1fXPzKX4EtrRtR2xjgp1dWtwr3CSqLB1GzK07J5jWBcbmLy%2BWKSwlO1r9xcRcYjQe6ULbQ34wECeTCrSN5oK3sOEZ3UnMVF8G6k8mulaCiUFit4uCSrUPc%2FPdpxkfmWh3AJ2RHqvfyZ01zzY%2FCRq4Rrr3mgfsxKU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-29T02:29:06Z"
     }
   },
   "substrate": [
