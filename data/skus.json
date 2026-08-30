@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-29",
+  "as_of": "2026-08-30",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -11011,6 +11011,55 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-08-29T04:55:39Z"
+    },
+    "sigma-16-300mm-f3-5": {
+      "contamination_key": "sigma-16-300mm-f3-5",
+      "vendor": "Sigma",
+      "model": "16 300mm f3.5",
+      "gtin": "00198983887654",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "286598777191",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "887965",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "198983887654",
+              "gtin14": "00198983887654",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sigma 16-300mm F3.5-6.7 DC OS Contemporary Lens Sony E Mount Vlogger",
+        "image": "https://i.ebayimg.com/images/g/z5MAAeSwtVppj-GJ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "694.00",
+          "currency": "USD",
+          "as_of": "2026-08-27T04:26:33Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/286598777191?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2B743eHQ2Wqprd2TGVga9fWtd3M%2F50qhP23mciJe96Pjzr3ziNUgfp975ZT9SX%2FGLy7wtvLQRiuhF6AbGQJjFd2y78tPGKMJycjyDSRYfvIPPyGpW9rNtcMZb9SvcRcsIvf%2FteMdv2RfiwktsnP08v5nC1N4eMSXhCjbmPPK6z5vClUtnpxW33kC7Euh1b5w9o%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-08-30T01:18:16Z"
     }
   },
   "substrate": [
