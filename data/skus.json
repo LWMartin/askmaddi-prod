@@ -8456,7 +8456,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:45:19Z"
+      "resolved_at": "2026-08-31T04:45:19Z",
+      "overrides": {
+        "display_name": "DJI Mavic Pro Platinum",
+        "brand": "DJI",
+        "model": "Mavic Pro Platinum"
+      }
     },
     "dji-dji-mini-uhd": {
       "contamination_key": "dji-dji-mini-uhd",
@@ -8497,7 +8502,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-30T04:45:45Z"
+      "resolved_at": "2026-08-30T04:45:45Z",
+      "overrides": {
+        "display_name": "DJI Mini 4K",
+        "brand": "DJI",
+        "model": "Mini 4K"
+      }
     },
     "dji-dji-mini-2": {
       "contamination_key": "dji-dji-mini-2",
@@ -8538,7 +8548,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:46:02Z"
+      "resolved_at": "2026-08-31T04:46:02Z",
+      "overrides": {
+        "display_name": "DJI Mini 2",
+        "brand": "DJI",
+        "model": "Mini 2"
+      }
     },
     "dji-dji-neo-mini-uhd": {
       "contamination_key": "dji-dji-neo-mini-uhd",
@@ -8579,7 +8594,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:46:20Z"
+      "resolved_at": "2026-08-28T04:46:20Z",
+      "overrides": {
+        "display_name": "DJI Neo",
+        "brand": "DJI",
+        "model": "Neo"
+      }
     },
     "dji-dji-neo-2-usa-in-stock-2-4-shipping": {
       "contamination_key": "dji-dji-neo-2-usa-in-stock-2-4-shipping",
@@ -8685,7 +8705,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-30T04:46:56Z"
+      "resolved_at": "2026-08-30T04:46:56Z",
+      "overrides": {
+        "display_name": "DJI Avata 2",
+        "brand": "DJI",
+        "model": "Avata 2"
+      }
     },
     "dji-dji-inspire-1-w-zenmuse-x3-long-range-antennae": {
       "contamination_key": "dji-dji-inspire-1-w-zenmuse-x3-long-range-antennae",
@@ -8726,7 +8751,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:47:11Z"
+      "resolved_at": "2026-08-28T04:47:11Z",
+      "overrides": {
+        "display_name": "DJI Inspire 1",
+        "brand": "DJI",
+        "model": "Inspire 1"
+      }
     },
     "autel-autel-evo-ii-pro-102000410": {
       "contamination_key": "autel-autel-evo-ii-pro-102000410",
@@ -8796,48 +8826,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:47:30Z"
-    },
-    "autel-autel-evo-ii-evo-pro-2-only": {
-      "contamination_key": "autel-autel-evo-ii-evo-pro-2-only",
-      "vendor": "Autel",
-      "model": "Autel EVO II EVO Pro 2 – Only",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "157784188696",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
+      "resolved_at": "2026-08-28T04:47:30Z",
+      "overrides": {
+        "display_name": "Autel EVO II Pro",
         "brand": "Autel Robotics",
-        "mpn": "MDCA",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Autel EVO II EVO Pro 2  – Drone Only - Used",
-        "image": "https://i.ebayimg.com/images/g/WwUAAeSw5rNpw-yT/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "500.00",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:47:46Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/157784188696?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BcABzE%2FfLXv%2F2LxrIh3GqkWM6ZJafTfYDKMYZm7Px4tAmW66lD0MyEGjFvHc3OiS7Bka85Joo1mqAHTNfvijS6nL%2BkUEb4DqiX6gcQQ33cAMOZKeL%2F%2BzhhmL5WR2kcmMHmNWVqV50D4P3V80qCWwyMY%2BL3UquQynC1JJ%2F4LCiaCyoils9yjhvSdH1Q4b37eic%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:47:46Z"
+        "model": "EVO II Pro"
+      }
     },
     "autel-autel-robotics-evo-lite-640t-enterprise-640-512-infrar": {
       "contamination_key": "autel-autel-robotics-evo-lite-640t-enterprise-640-512-infrar",
@@ -8907,7 +8901,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:48:03Z"
+      "resolved_at": "2026-08-28T04:48:03Z",
+      "overrides": {
+        "display_name": "Autel EVO Lite 640T Enterprise",
+        "brand": "Autel Robotics",
+        "model": "EVO Lite 640T Enterprise"
+      }
     },
     "autel-autel-evo-nano-premium-pristine-condition-evo-nano-plu": {
       "contamination_key": "autel-autel-evo-nano-premium-pristine-condition-evo-nano-plu",
@@ -8977,7 +8976,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-29T04:48:13Z"
+      "resolved_at": "2026-08-29T04:48:13Z",
+      "overrides": {
+        "display_name": "Autel EVO Nano+",
+        "brand": "Autel Robotics",
+        "model": "EVO Nano+"
+      }
     },
     "autel-autel-robotics-evo-lite-series-premium-w-rc": {
       "contamination_key": "autel-autel-robotics-evo-lite-series-premium-w-rc",
@@ -9018,123 +9022,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-30T04:48:35Z"
-    },
-    "autel-autel-robotics-rtk-module-evo-2-enterprise-advanced-rt": {
-      "contamination_key": "autel-autel-robotics-rtk-module-evo-2-enterprise-advanced-rt",
-      "vendor": "Autel",
-      "model": "Autel Robotics RTK Module EVO 2 Enterprise , Advanced RTK Accessory Pro",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "317395771459",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
+      "resolved_at": "2026-08-30T04:48:35Z",
+      "overrides": {
+        "display_name": "Autel EVO Lite",
         "brand": "Autel Robotics",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Autel Robotics RTK Module EVO 2 Enterprise Drone, Advanced RTK Accessory Pro",
-        "image": "https://i.ebayimg.com/images/g/V~EAAeSwgilo6N85/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "499.00",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:48:48Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/317395771459?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9aU%2BPcviCbma7ayAAtIII8Pu8l9basFlgT3XUogH7keCIikTJAqbgRemvjNtQIowS0BMg2pW%2FzGAJPvWhcspL1IXZNlzJ2EwPCQO9xpyEq33ABGDlYIWFEZx7vHc%2BldUVk34%2FQR4vlp9rXIAsV5WXXfvtKo59n%2BMF%2FWCF90IrvZ2gKm6zfDGIMwgHkLO%2BnYZ0%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:48:48Z"
-    },
-    "skydio-skydio-2-only-model-sdr35v1-black": {
-      "contamination_key": "skydio-skydio-2-only-model-sdr35v1-black",
-      "vendor": "Skydio",
-      "model": "Skydio 2+ ONLY - Model SDR35V1 - Black",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "116965562991",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Skydio",
-        "mpn": "SKY300NA",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
-        "image": "https://i.ebayimg.com/images/g/VV8AAeSwzz5pWt4a/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/Jo8AAOSwKfZePBHe/s-l640.jpg",
-        "price_seen": {
-          "value": "1499.95",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:49:00Z"
-        },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-08-29T04:33:49Z",
-          "query": "Skydio SKY300NA",
-          "winner": {
-            "item_id": "v1|116997618004|0",
-            "epid": "19034602427",
-            "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff"
-          },
-          "epid_match": false,
-          "inspected": [
-            {
-              "item_id": "v1|168641982935|0",
-              "epid": "19034602427",
-              "title": "Skydio 2+ Drone Bundle Blue Soft Case Controller Battery Untested READ DESC",
-              "had_catalog": false,
-              "accepted": false
-            },
-            {
-              "item_id": "v1|116965562991|0",
-              "epid": "19034602427",
-              "title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
-              "had_catalog": false,
-              "accepted": false
-            },
-            {
-              "item_id": "v1|116997618004|0",
-              "epid": "19034602427",
-              "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/116965562991?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DdA9EhUtAK7hNh5HlK4tUo7awqHxpLGaRn3iKNg4pL2xK4c%2BsAxL0YbhbXQpt3TgAUIE3eraU6gNhCb5XkxqeiQBRiFWGo8Dga%2BTkarGIg92zlz%2B7asaOu%2FshLhZP8MamU18DHkwdcEqMHcwFRgSkpzDAwwsY00tKVdhyc70dSt6%2FJo5Pq9%2BSgxFFaFV9fp0%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:00Z"
+        "model": "EVO Lite"
+      }
     },
     "skydio-skydio-2-sdrc2v1": {
       "contamination_key": "skydio-skydio-2-sdrc2v1",
@@ -9204,7 +9097,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:15Z"
+      "resolved_at": "2026-08-28T04:49:15Z",
+      "overrides": {
+        "display_name": "Skydio 2",
+        "brand": "Skydio",
+        "model": "2"
+      }
     },
     "skydio-skydio-x2d-multi-band-color-thermal": {
       "contamination_key": "skydio-skydio-x2d-multi-band-color-thermal",
@@ -9245,7 +9143,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:23Z"
+      "resolved_at": "2026-08-28T04:49:23Z",
+      "overrides": {
+        "display_name": "Skydio X2D",
+        "brand": "Skydio",
+        "model": "X2D"
+      }
     },
     "hoverair-hoverair-aqua-waterproof-water-takeoff-landing": {
       "contamination_key": "hoverair-hoverair-aqua-waterproof-water-takeoff-landing",
@@ -9286,48 +9189,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:32Z"
-    },
-    "x1-x1-pro-action-flying-foldable-42-km-h-follow-omniterra": {
-      "contamination_key": "x1-x1-pro-action-flying-foldable-42-km-h-follow-omniterra",
-      "vendor": "X1",
-      "model": "X1 PRO Action Flying Foldable 42 KM/H Follow OmniTerra",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "366584888284",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Hover",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "X1 PRO 4K Action Flying Camera Foldable Drone 42 KM/H Follow with OmniTerra",
-        "image": "https://i.ebayimg.com/images/g/AQIAAeSwPGtqUJJo/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "409.00",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:49:43Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/366584888284?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8eZoeQVeoXY2fhP1z%2Br3gJfZQX%2FmEQoI6Od5AVf01AydJyFnZdADaTzfh5mNNkc4G0%2FFK4I6P2Ty%2B%2Fwjo7gyKn026NzRz0mTL3wtHERsaY6vFlcSCOnFAfQNEJp3EZc%2B%2FlaBdPdLGb72OVoqP4RDznpOD0%2BmpaUYTRTK1sTKLKB4N%2FcWaGkNkP7GgWh229Zwc%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:43Z"
+      "resolved_at": "2026-08-28T04:49:32Z",
+      "overrides": {
+        "display_name": "HoverAir Aqua",
+        "brand": "HoverAir",
+        "model": "Aqua"
+      }
     },
     "hoverair-hoverair-x1-promax-flying-ai-follow-foldable": {
       "contamination_key": "hoverair-hoverair-x1-promax-flying-ai-follow-foldable",
@@ -9376,48 +9243,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:49:53Z"
-    },
-    "x1-x1-self-flying-follow-me-mode-foldable-min": {
-      "contamination_key": "x1-x1-self-flying-follow-me-mode-foldable-min",
-      "vendor": "X1",
-      "model": "X1 , Self-Flying Follow Me Mode, Foldable Min",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "388300717110",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "HOVERAir",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "X1 Drone with Camera, Self-Flying Camera Drone with Follow Me Mode, Foldable Min",
-        "image": "https://i.ebayimg.com/images/g/hv0AAOSw4cdoBnIj/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "289.98",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:50:16Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/388300717110?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F1oNQHlUj2mFjQtQDAZBOXeyKxczjsitAZaXFoPXqYWYTX1gbT3NLMtlA%2FK9BKx%2FjvOqCvzElsTK4LVtnrmnBky09OuEJ3m4tCkL%2FpdOf781B%2F%2BRtzb1kdNp7C2fNV%2Bk2v%2F5f84M%2F41S%2FxZg37B%2FQRkQ63uqK%2BVk0YHoSeHltVddM6TL6lMyV6SC40sj0zJpU%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:50:16Z"
+      "resolved_at": "2026-08-28T04:49:53Z",
+      "overrides": {
+        "display_name": "HoverAir X1 ProMax",
+        "brand": "HoverAir",
+        "model": "X1 ProMax"
+      }
     },
     "parrot-parrot-anafi-flir-lepton-3-5-condition-only-36-flight": {
       "contamination_key": "parrot-parrot-anafi-flir-lepton-3-5-condition-only-36-flight",
@@ -9458,7 +9289,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:50:27Z"
+      "resolved_at": "2026-08-28T04:50:27Z",
+      "overrides": {
+        "display_name": "Parrot Anafi",
+        "brand": "Parrot",
+        "model": "Anafi"
+      }
     },
     "parrot-parrot-anafi-pro-tactical-flir-lepton-3-5-sensor": {
       "contamination_key": "parrot-parrot-anafi-pro-tactical-flir-lepton-3-5-sensor",
@@ -9499,7 +9335,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:50:37Z"
+      "resolved_at": "2026-08-28T04:50:37Z",
+      "overrides": {
+        "display_name": "Parrot Anafi USA",
+        "brand": "Parrot",
+        "model": "Anafi USA"
+      }
     },
     "5-5-inch-droneer-o4-pro-15km-digial-transmission-range": {
       "contamination_key": "5-5-inch-droneer-o4-pro-15km-digial-transmission-range",
@@ -9540,48 +9381,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:50:47Z"
-    },
-    "5g-5g-professional-dual-wifi-obstacle-avoidance": {
-      "contamination_key": "5g-5g-professional-dual-wifi-obstacle-avoidance",
-      "vendor": "5G",
-      "model": "5G Professional Dual WIFI Obstacle Avoidance",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "317794716483",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Unbranded",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "5G Professional 8K HD Dual Camera Drone With FPV WIFI Obstacle Avoidance",
-        "image": "https://i.ebayimg.com/images/g/uhYAAeSw1iVpc8Dd/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "99.98",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:51:02Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/317794716483?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fw2A3ta4zJGQiqlShK%2BZkXZWrPWLyrpjtnuGq89Ic3EDpUPKEP80%2B3qrm1uvVoqjyfxEfnU0DmJz%2BXtSJFyjR9yv6MGQ%2FQ15kui20k5gNckKjzML6UNRPNZjKTQlQh5S2ME32%2BMlxoX0YEXcm8cDOTS%2Fq7fH0oyIIycLbVcN4zU%2BmBwBhOItn0APTK%2FUGvNko%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:51:02Z"
+      "resolved_at": "2026-08-28T04:50:47Z",
+      "overrides": {
+        "display_name": "Droneer 5\" O4 Pro",
+        "brand": "Droneer",
+        "model": "5\" O4 Pro"
+      }
     },
     "dji-dji-air-2s-da2sue1": {
       "contamination_key": "dji-dji-air-2s-da2sue1",
@@ -9642,7 +9447,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:51:19Z"
+      "resolved_at": "2026-08-28T04:51:19Z",
+      "overrides": {
+        "display_name": "DJI Air 2S",
+        "brand": "DJI",
+        "model": "Air 2S"
+      }
     },
     "dji-dji-air-3-only": {
       "contamination_key": "dji-dji-air-3-only",
@@ -9697,6 +9507,11 @@
           "junk_title"
         ],
         "hard": true
+      },
+      "overrides": {
+        "display_name": "DJI Air 3",
+        "brand": "DJI",
+        "model": "Air 3"
       }
     },
     "dji-dji-mini-3": {
@@ -9781,6 +9596,11 @@
           "junk_title"
         ],
         "hard": true
+      },
+      "overrides": {
+        "display_name": "DJI Mini 3",
+        "brand": "DJI",
+        "model": "Mini 3"
       }
     },
     "dji-dji-inspire-2-professional-t650a": {
@@ -9822,7 +9642,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:52:08Z"
+      "resolved_at": "2026-08-28T04:52:08Z",
+      "overrides": {
+        "display_name": "DJI Inspire 2",
+        "brand": "DJI",
+        "model": "Inspire 2"
+      }
     },
     "dji-dji-inspire-3-professional": {
       "contamination_key": "dji-dji-inspire-3-professional",
@@ -9892,7 +9717,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:52:24Z"
+      "resolved_at": "2026-08-28T04:52:24Z",
+      "overrides": {
+        "display_name": "DJI Inspire 3",
+        "brand": "DJI",
+        "model": "Inspire 3"
+      }
     },
     "autel-autel-evo-2-pro-v3-hdr-rugged": {
       "contamination_key": "autel-autel-evo-2-pro-v3-hdr-rugged",
@@ -9962,7 +9792,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:52:11Z"
+      "resolved_at": "2026-08-31T04:52:11Z",
+      "overrides": {
+        "display_name": "Autel EVO II Pro V3",
+        "brand": "Autel Robotics",
+        "model": "EVO II Pro V3"
+      }
     },
     "autel-autel-robotics-evo-max-4t-speaker-spotlight": {
       "contamination_key": "autel-autel-robotics-evo-max-4t-speaker-spotlight",
@@ -10003,82 +9838,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:52:55Z"
-    },
-    "skydio-skydio-2-black": {
-      "contamination_key": "skydio-skydio-2-black",
-      "vendor": "Skydio",
-      "model": "Skydio 2 - Black",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "116965562991",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Skydio",
-        "mpn": "SKY300NA",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
-        "image": "https://i.ebayimg.com/images/g/VV8AAeSwzz5pWt4a/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/Jo8AAOSwKfZePBHe/s-l640.jpg",
-        "price_seen": {
-          "value": "1499.95",
-          "currency": "USD",
-          "as_of": "2026-08-31T04:52:41Z"
-        },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-08-29T04:34:16Z",
-          "query": "Skydio SKY300NA",
-          "winner": {
-            "item_id": "v1|116997618004|0",
-            "epid": "19034602427",
-            "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff"
-          },
-          "epid_match": false,
-          "inspected": [
-            {
-              "item_id": "v1|168641982935|0",
-              "epid": "19034602427",
-              "title": "Skydio 2+ Drone Bundle Blue Soft Case Controller Battery Untested READ DESC",
-              "had_catalog": false,
-              "accepted": false
-            },
-            {
-              "item_id": "v1|116965562991|0",
-              "epid": "19034602427",
-              "title": "Skydio 2+ Camera Drone ONLY - Model SDR35V1 - Black – Used",
-              "had_catalog": false,
-              "accepted": false
-            },
-            {
-              "item_id": "v1|116997618004|0",
-              "epid": "19034602427",
-              "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/116965562991?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DdA9EhUtAK7hNh5HlK4tUo7awqHxpLGaRn3iKNg4pLw16YORcHOd8Y3ae98WFtAhQpsw9HZjZFBdal1nkCtbEX3uTwaOtkfJ7i1sKJmSZyH1NNFgQNt3m2mFSy2VhnG78X%2BShwM8kUUjCNDiSzhkjYlGGj5TvEEPK6OYty7%2BKWOEjZ7ytggplJ%2F7fR%2BtRWB4%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:52:41Z"
+      "resolved_at": "2026-08-28T04:52:55Z",
+      "overrides": {
+        "display_name": "Autel EVO Max 4T",
+        "brand": "Autel Robotics",
+        "model": "EVO Max 4T"
+      }
     },
     "skydio-skydio-2": {
       "contamination_key": "skydio-skydio-2",
@@ -10153,7 +9918,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:53:29Z"
+      "resolved_at": "2026-08-28T04:53:29Z",
+      "overrides": {
+        "display_name": "Skydio 2+",
+        "brand": "Skydio",
+        "model": "2+"
+      }
     },
     "skydio-skydio-r1": {
       "contamination_key": "skydio-skydio-r1",
@@ -10194,7 +9964,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:53:43Z"
+      "resolved_at": "2026-08-28T04:53:43Z",
+      "overrides": {
+        "display_name": "Skydio R1",
+        "brand": "Skydio",
+        "model": "R1"
+      }
     },
     "hoverair-zerozero-roboics-hoverair-x1": {
       "contamination_key": "hoverair-zerozero-roboics-hoverair-x1",
@@ -10243,48 +10018,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:53:52Z"
-    },
-    "hoverair-hoverair-x1-promax-foldable-flying-skiing": {
-      "contamination_key": "hoverair-hoverair-x1-promax-foldable-flying-skiing",
-      "vendor": "HoverAir",
-      "model": "HOVERAir X1 PROMAX Foldable Flying , Skiing",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "158185495648",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "HOVERAir",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "HOVERAir X1 PROMAX 8K Drone with Camera Foldable Flying Camera, Skiing Combo",
-        "image": "https://i.ebayimg.com/images/g/EwMAAeSwa4Fqfj4s/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "1049.95",
-          "currency": "USD",
-          "as_of": "2026-08-31T04:53:22Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/158185495648?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:53:22Z"
+      "resolved_at": "2026-08-28T04:53:52Z",
+      "overrides": {
+        "display_name": "HoverAir X1",
+        "brand": "HoverAir",
+        "model": "X1"
+      }
     },
     "hoverair-hoverair-x1-pro-never-opened": {
       "contamination_key": "hoverair-hoverair-x1-pro-never-opened",
@@ -10333,48 +10072,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:53:35Z"
-    },
-    "hoverair-zerozero-robotics-hoverair-x1-self-flying-pocket-si": {
-      "contamination_key": "hoverair-zerozero-robotics-hoverair-x1-self-flying-pocket-si",
-      "vendor": "HoverAir",
-      "model": "ZeroZero Robotics HoverAir X1 Self-Flying Pocket-Sized",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "398309736045",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "ZeroZero Roboics",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "New ZeroZero Robotics HoverAir X1 Combo Self-Flying Camera Pocket-Sized Drone",
-        "image": "https://i.ebayimg.com/images/g/wLkAAeSwEU1qh6~v/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "268.88",
-          "currency": "USD",
-          "as_of": "2026-08-28T04:54:27Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/398309736045?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-28T04:54:27Z"
+      "resolved_at": "2026-08-31T04:53:35Z",
+      "overrides": {
+        "display_name": "HoverAir X1 Pro",
+        "brand": "HoverAir",
+        "model": "X1 Pro"
+      }
     },
     "leica-50mm-f1-4": {
       "contamination_key": "leica-50mm-f1-4",
@@ -10810,7 +10513,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:53:52Z"
+      "resolved_at": "2026-08-31T04:53:52Z",
+      "overrides": {
+        "display_name": "DJI Mini 2 SE",
+        "brand": "DJI",
+        "model": "Mini 2 SE"
+      }
     },
     "autel-autel-robotics-evo-2-ii-pro-v2-rugged": {
       "contamination_key": "autel-autel-robotics-evo-2-ii-pro-v2-rugged",
@@ -10880,97 +10588,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:54:29Z"
-    },
-    "hoverair-zerozero-robotics-hoverair-x1-travel": {
-      "contamination_key": "hoverair-zerozero-robotics-hoverair-x1-travel",
-      "vendor": "HoverAir",
-      "model": "ZeroZero Robotics HoverAir X1 Travel",
-      "gtin": "00199284564282",
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "820049024512",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "ZeroZero Robotics",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": "aspect",
-          "conflict": false,
-          "observations": [
-            {
-              "source": "aspect",
-              "identifier_type": "UPC",
-              "raw": "199284564282",
-              "gtin14": "00199284564282",
-              "valid": true
-            }
-          ]
-        },
-        "market_title": "ZeroZero Robotics HoverAir X1 Travel Combo HD Drone",
-        "image": "https://i.ebayimg.com/images/g/5ioAAeSwdK5qjpdl/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "209.99",
-          "currency": "USD",
-          "as_of": "2026-08-29T04:54:38Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/820049024512?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:54:38Z"
-    },
-    "6k-5g-professional-2battery-obstacle-avoidance-wifi": {
-      "contamination_key": "6k-5g-professional-2battery-obstacle-avoidance-wifi",
-      "vendor": "6K",
-      "model": "5G Professional 2Battery Obstacle Avoidance WIFI",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "137327028086",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Unbranded",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "6K HD Camera Drone 5G Professional With 2Battery Obstacle Avoidance FPV WIFI",
-        "image": "https://i.ebayimg.com/images/g/zmoAAeSwSBlonYgN/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "59.99",
-          "currency": "USD",
-          "as_of": "2026-08-29T04:54:48Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/137327028086?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9Xh0f3eQr%2BMlkJTyXVrpOXySTKhNzs4lS9g2TozHIn2EWNcL1NG1AeHuhYSBsq6d7u8BW%2BSuyhPIDrhlu1Qzi76bS0%2FhonDZU8d2GDdVtkp1JJG9oM845LRIqRefWVD0ZXJSZof8FBiff4cyaAWvUC%2F6GVQbZgWy8oYjzhNHH2Af1cg%2BYSTDkogYkZt4qOf%2Fc%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:54:48Z"
+      "resolved_at": "2026-08-29T04:54:29Z",
+      "overrides": {
+        "display_name": "Autel EVO II Pro V2",
+        "brand": "Autel Robotics",
+        "model": "EVO II Pro V2"
+      }
     },
     "wefone-wefone-wf33-drones-adults-foldable-4-5": {
       "contamination_key": "wefone-wefone-wf33-drones-adults-foldable-4-5",
@@ -11019,7 +10642,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:55:09Z"
+      "resolved_at": "2026-08-29T04:55:09Z",
+      "overrides": {
+        "display_name": "Wefone WF33",
+        "brand": "Wefone",
+        "model": "WF33"
+      }
     },
     "dji-dji-cp-fp-00000001-01": {
       "contamination_key": "dji-dji-cp-fp-00000001-01",
@@ -11068,7 +10696,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:55:26Z"
+      "resolved_at": "2026-08-29T04:55:26Z",
+      "overrides": {
+        "display_name": "DJI FPV",
+        "brand": "DJI",
+        "model": "FPV"
+      }
     },
     "2-5-2-5-droneer-o4-pro-digital-15km-transmission-under-249g": {
       "contamination_key": "2-5-2-5-droneer-o4-pro-digital-15km-transmission-under-249g",
@@ -11109,7 +10742,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-29T04:55:39Z"
+      "resolved_at": "2026-08-29T04:55:39Z",
+      "overrides": {
+        "display_name": "Droneer 2.5\" O4 Pro",
+        "brand": "Droneer",
+        "model": "2.5\" O4 Pro"
+      }
     },
     "sigma-16-300mm-f3-5": {
       "contamination_key": "sigma-16-300mm-f3-5",
@@ -11220,56 +10858,12 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:54:57Z"
-    },
-    "dji-dji-avata-fly-smart-goggles": {
-      "contamination_key": "dji-dji-avata-fly-smart-goggles",
-      "vendor": "DJI",
-      "model": "DJI Avata Fly Smart Goggles",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "287058122217",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
+      "resolved_at": "2026-08-31T04:54:57Z",
+      "overrides": {
+        "display_name": "DJI Mini 5 Pro",
         "brand": "DJI",
-        "mpn": "Dose not apply",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": [
-            {
-              "source": "aspect",
-              "identifier_type": "UPC",
-              "raw": "Dose not apply",
-              "gtin14": null,
-              "valid": false
-            }
-          ]
-        },
-        "market_title": "DJI Avata 2 Fly Smart Combo (3 Batts + Goggles N3) * USA In Stock * 2-4 SHIPPING",
-        "image": "https://i.ebayimg.com/images/g/ot8AAeSwvXxpXfyh/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "790.40",
-          "currency": "USD",
-          "as_of": "2026-08-31T04:55:17Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/287058122217?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9ulD1EoM9FiX9UAqS7rQ5pQbxwdlfXO%2BM5fVrzLqnBqVNZXa%2FjKgeFuOcx4aRHSwJhTii9aypHphYHdvjY9Qoz1hj3n0aweap7us1cp5o0zBgP6i%2FBk%2FznK3uNTMSeYLfVm7Lw4jSzIrNGkb3k8CJU%2FZ7VwYAh5dy9qG1rZs6m41DZ0E3dZsbpsOjXXo%2BTEiY%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-08-31T04:55:17Z"
+        "model": "Mini 5 Pro"
+      }
     },
     "skydio-skydio-2-cinema": {
       "contamination_key": "skydio-skydio-2-cinema",
@@ -11310,48 +10904,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-30T04:55:52Z"
-    },
-    "hoverair-hoverair-x1-self-flying-follow-me-mode": {
-      "contamination_key": "hoverair-hoverair-x1-self-flying-follow-me-mode",
-      "vendor": "HoverAir",
-      "model": "HOVERAir X1 , Self-Flying Follow Me Mode",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "377455979550",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Zero Zero Robotics",
-        "mpn": "SP03H012",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "HOVERAir X1 Drone with Camera, Self-Flying Camera Drone with Follow Me Mode,",
-        "image": "https://i.ebayimg.com/images/g/tloAAeSwVf1qkt1Q/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "215.00",
-          "currency": "USD",
-          "as_of": "2026-08-30T04:56:07Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377455979550?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DuuoZe6bG0sWka123WDGcZXwxKQ0BmjS%2BLm%2Frpe%2BlSUuhfQwfPqwwB0CGP%2FXctTKERwrfVKOXqgKUm01O5Vqhy14VUyMgve9luofNHdoTYpWnHvCrhsBUZfbDOvMOPMy0XcxBuPzRB9duFu7TXlnrjMq%2BENPsu41Qa9QBDCxX3pcaXEmtRDVZQCSRAPFzjCk%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-30T04:56:07Z"
+      "resolved_at": "2026-08-30T04:55:52Z",
+      "overrides": {
+        "display_name": "Skydio 2 (Cinema Kit)",
+        "brand": "Skydio",
+        "model": "2"
+      }
     },
     "dji-dji-mavic-4-pro-usa-in-stock-2-4-shipping": {
       "contamination_key": "dji-dji-mavic-4-pro-usa-in-stock-2-4-shipping",
@@ -11400,7 +10958,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-31T04:56:10Z"
+      "resolved_at": "2026-08-31T04:56:10Z",
+      "overrides": {
+        "display_name": "DJI Mavic 4 Pro",
+        "brand": "DJI",
+        "model": "Mavic 4 Pro"
+      }
     },
     "dji-dji-air-3s-dual-1-cmos-45min-flight": {
       "contamination_key": "dji-dji-air-3s-dual-1-cmos-45min-flight",
@@ -11539,7 +11102,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-31T04:56:52Z"
+      "resolved_at": "2026-08-31T04:56:52Z",
+      "overrides": {
+        "display_name": "Vivitar DRCLS16",
+        "brand": "Vivitar",
+        "model": "DRCLS16"
+      }
     }
   },
   "substrate": [
