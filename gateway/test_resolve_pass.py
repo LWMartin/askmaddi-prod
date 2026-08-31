@@ -11,12 +11,15 @@ real lookup_proposal (used by the pass to get build identity) works. Proves:
   - load_proposals normalizes both dict and tuple artifact shapes, sorts by fork_n
   - the enrolled work_queue record carries the right build identity
 """
+import datetime
 import json
 import pytest
 
 import resolve_sku
 import work_queue as wq
 import resolve_pass
+
+UTC = datetime.timezone.utc
 
 
 # ── fixtures ──────────────────────────────────────────────────────────────────
@@ -336,3 +339,105 @@ def test_skipped_slugs_do_not_consume_the_max_budget(skus_path, wq_path):
     assert summary['skipped_enrolled'] == 1
     assert summary['enrolled'] == 1
     assert summary['deferred'] == 1     # tripod
+
+
+# ── attempt ledger: head-of-line-block cure ───────────────────────────────────
+def test_no_candidate_head_is_ledgered_then_skipped_freeing_the_budget(
+        skus_path, wq_path, tmp_path):
+    """The starvation bug's exact shape: a perennial no_candidate slug sits at the
+    head, ahead of a resolvable tail, under a small --max. Run 1 spends the slot on
+    the dead head and defers the tail. WITHOUT the ledger this repeats forever (the
+    live `ulanzi-f38` stall). WITH it, run 2 skips the cooling head for free and the
+    tail finally resolves."""
+    ledger = tmp_path / 'attempts.json'
+    proposals = _props(('ulanzi-f38', 8), ('canon-r5-ii', 9))
+    outcomes = {'ulanzi-f38': 'no_candidate', 'canon-r5-ii': 'resolved'}
+
+    # Run 1: --max 1 -> ulanzi eats the slot (no_candidate, ledgered); canon deferred.
+    rf1, calls1 = _counting_resolver(outcomes)
+    s1 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf1, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1, attempts_ledger_path=str(ledger))
+    assert calls1 == ['ulanzi-f38']
+    assert s1['no_candidate'] == 1 and s1['deferred'] == 1 and s1['enrolled'] == 0
+    assert json.loads(ledger.read_text()).get('ulanzi-f38')  # recorded
+
+    # Run 2: same --max 1 -> ulanzi cools off (skipped, no slot); canon resolves.
+    rf2, calls2 = _counting_resolver(outcomes)
+    s2 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf2, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1, attempts_ledger_path=str(ledger))
+    assert calls2 == ['canon-r5-ii'], "the dead head re-blocked the budget; tail starved"
+    assert s2['skipped_cooldown'] == 1
+    assert s2['enrolled'] == 1
+    assert wq.get('canon-r5-ii', path=wq_path) is not None
+
+
+def test_ledger_entry_expires_after_ttl_allowing_retry(skus_path, wq_path, tmp_path):
+    """A cooled slug is skipped within the TTL but retried once it lapses — a
+    no_candidate can become resolvable when eBay inventory later appears."""
+    ledger = tmp_path / 'attempts.json'
+    proposals = _props(('ulanzi-f38', 8))
+    t0 = datetime.datetime(2026, 8, 1, tzinfo=UTC)
+
+    rf1, calls1 = _counting_resolver({'ulanzi-f38': 'no_candidate'})
+    resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf1, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger), retry_ttl_days=7, now=t0)
+    assert calls1 == ['ulanzi-f38']
+
+    # +3 days: still within TTL -> skipped, resolver not called.
+    rf2, calls2 = _counting_resolver({'ulanzi-f38': 'no_candidate'})
+    s2 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf2, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger), retry_ttl_days=7,
+        now=t0 + datetime.timedelta(days=3))
+    assert calls2 == [] and s2['skipped_cooldown'] == 1
+
+    # +8 days: past TTL -> retried.
+    rf3, calls3 = _counting_resolver({'ulanzi-f38': 'no_candidate'})
+    s3 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf3, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger), retry_ttl_days=7,
+        now=t0 + datetime.timedelta(days=8))
+    assert calls3 == ['ulanzi-f38'] and s3['no_candidate'] == 1
+
+
+def test_resolved_outcome_graduates_slug_out_of_ledger(skus_path, wq_path, tmp_path):
+    """A slug that was ledgered (past-TTL, so retried) and now resolves must be
+    dropped from the ledger — never spuriously cooled after a success."""
+    ledger = tmp_path / 'attempts.json'
+    ledger.write_text(json.dumps({'canon-r5-ii': '2026-08-01T00:00:00Z'}))
+    proposals = _props(('canon-r5-ii', 9))
+
+    rf, calls = _counting_resolver({'canon-r5-ii': 'resolved'})
+    resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger), retry_ttl_days=7,
+        now=datetime.datetime(2026, 8, 20, tzinfo=UTC))
+    assert calls == ['canon-r5-ii']
+    assert 'canon-r5-ii' not in json.loads(ledger.read_text())
+
+
+def test_no_ledger_path_preserves_legacy_retry_every_run(skus_path, wq_path):
+    """attempts_ledger_path=None (default / one-shot / test callers) keeps the exact
+    legacy behaviour: no cooldown skip, retry every run, nothing persisted."""
+    proposals = _props(('ulanzi-f38', 8))
+    rf1, calls1 = _counting_resolver({'ulanzi-f38': 'no_candidate'})
+    s1 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf1, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=None)
+    rf2, calls2 = _counting_resolver({'ulanzi-f38': 'no_candidate'})
+    s2 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf2, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=None)
+    assert calls1 == ['ulanzi-f38'] and calls2 == ['ulanzi-f38']  # re-attempted both runs
+    assert s1['skipped_cooldown'] == 0 and s2['skipped_cooldown'] == 0

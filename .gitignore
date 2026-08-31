@@ -52,6 +52,12 @@ data/digest_outbox.jsonl
 # nightly clean-tree preflight (the 06-25/06-30 failure class).
 data/.factory.lock
 
+# resolve_pass attempt ledger (2026-08-31). Runtime-written beside the work_queue
+# store; retires recently-attempted non-productive slugs from the paced --max
+# budget so the resolve tail never head-of-line-starves the factory. Same
+# untracked-but-unignored preflight hazard as .factory.lock above.
+data/resolve-attempts.json
+
 # Stray process-capture output — never legitimate state, must never count as foreign dirt (nightly bot aborts on it). 2026-08-05.
 nohup.out
 **/nohup.out

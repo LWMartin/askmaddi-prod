@@ -49,7 +49,9 @@ never publishes. Idempotent: enroll de-dups, so re-running the pass over the sam
 proposals does not double-queue.
 """
 import argparse
+import datetime
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -70,6 +72,61 @@ if _HERE not in sys.path:
 
 import resolve_sku       # noqa: E402  (after the path bootstrap above)
 import work_queue        # noqa: E402
+
+
+# --- attempt ledger (head-of-line-block cure) --------------------------------
+# The pass paces NEW resolve attempts with --max, and skips slugs already in the
+# work_queue (`already_enrolled`). But the outcomes that DON'T land in the queue —
+# no_candidate (-> demand_log), queued (-> review_queue), error — leave no trace
+# the next run can skip. So under a small --max the SAME unproductive head slugs
+# (a perennial eBay-miss like `ulanzi-f38`, or a proposal whose resolved identity
+# is already built) burn the whole budget every run and the 200-long tail NEVER
+# gets attempted — the factory starves with a full proposals.json. This ledger
+# records each non-productive attempt with a timestamp; a slug attempted within
+# RETRY_TTL_DAYS is skipped WITHOUT spending a paced slot, so the budget always
+# advances to fresh candidates. A stale entry (past the TTL) lets a no_candidate
+# retry later — eBay inventory changes. A `resolved` outcome graduates the slug
+# out of the ledger. Opt-in: run() only touches the ledger when a path is given,
+# so tests and one-shot callers keep the exact legacy behaviour (like max_new).
+ATTEMPTS_LEDGER_PATH = str(Path(__file__).resolve().parent.parent / 'data' / 'resolve-attempts.json')
+RETRY_TTL_DAYS = 7
+
+
+def _load_ledger(path):
+    """Read the attempt ledger {slug: last_attempt_iso}. Tolerant: a missing or
+    corrupt ledger returns {} — it paces retries, never correctness, so a bad
+    file degrades to 'attempt everything' rather than crashing the cron."""
+    try:
+        with open(path) as fh:
+            d = json.load(fh)
+        return d if isinstance(d, dict) else {}
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_ledger(ledger, path):
+    """Atomically persist the ledger (temp + rename in the same dir). Tolerant: a
+    write failure is swallowed — losing the ledger costs one round of redundant
+    attempts, never a wrong build."""
+    try:
+        tmp = f"{path}.tmp"
+        with open(tmp, 'w') as fh:
+            json.dump(ledger, fh, indent=2, sort_keys=True)
+        os.replace(tmp, path)
+    except OSError:
+        pass
+
+
+def _cooling(ledger, slug, now, ttl_days):
+    """True if `slug` was attempted within ttl_days of `now` (so skip it)."""
+    ts = ledger.get(slug)
+    if not ts:
+        return False
+    try:
+        last = datetime.datetime.fromisoformat(str(ts).replace('Z', '+00:00'))
+    except ValueError:
+        return False  # unparseable stamp -> treat as stale, allow a retry
+    return (now - last) < datetime.timedelta(days=ttl_days)
 
 
 def load_proposals(path):
@@ -130,7 +187,8 @@ def load_proposals(path):
 
 def run(proposals, *, ebay, gemma, demand_log, review_queue,
         resolve_fn=None, skus_path=None, work_queue_path=None,
-        floor=None, on_event=None, max_new=None):
+        floor=None, on_event=None, max_new=None,
+        attempts_ledger_path=None, retry_ttl_days=RETRY_TTL_DAYS, now=None):
     """Run the resolve pass over a batch of proposals. Returns a summary dict.
 
     Parameters
@@ -157,9 +215,17 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         proposal must not abort the batch); eBay API errors propagate (a transient
         network problem is not a per-proposal routing decision).
 
+    attempts_ledger_path, retry_ttl_days, now :
+        Head-of-line-block cure. When attempts_ledger_path is set, a slug whose
+        last non-productive attempt is younger than retry_ttl_days is skipped
+        without spending a paced slot (so --max always advances to fresh
+        candidates). `now` is injectable for tests (default: utcnow, tz-aware).
+        attempts_ledger_path=None disables the ledger (legacy: retry every slug).
+
     Returns:
       {'total': n, 'enrolled': n, 'already_queued': n, 'no_candidate': n,
-       'errors': n, 'enrolled_slugs': [...], 'error_slugs': [...]}
+       'errors': n, 'skipped_enrolled': n, 'skipped_cooldown': n, 'deferred': n,
+       'enrolled_slugs': [...], 'error_slugs': [...]}
     """
     # Rung A/B with the GTIN/MPN-first id gate (the contradiction firewall +
     # deterministic straight-through are INSIDE resolve_proposal, so they are live
@@ -172,9 +238,17 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
 
     summary = {
         'total': 0, 'enrolled': 0, 'already_queued': 0,
-        'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0, 'deferred': 0,
+        'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0,
+        'skipped_cooldown': 0, 'deferred': 0,
         'enrolled_slugs': [], 'error_slugs': [],
     }
+
+    # Attempt ledger (opt-in): retires recently-attempted, non-productive slugs
+    # from the paced budget so the tail resolves instead of the head re-blocking.
+    ledger = _load_ledger(attempts_ledger_path) if attempts_ledger_path else {}
+    if now is None:
+        now = datetime.datetime.now(datetime.timezone.utc)
+    now_iso = now.strftime('%Y-%m-%dT%H:%M:%SZ')
 
     # PACING: skip proposals already in the work_queue at ANY lifecycle state,
     # BEFORE the (non-free) eBay + LLM calls inside resolve_proposal. enroll() is
@@ -207,6 +281,13 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         # anyway; this just avoids re-hammering eBay/LLM on the standing backlog).
         if slug in already_enrolled:
             summary['skipped_enrolled'] += 1
+            continue
+        # Recently attempted but non-productive (no_candidate/queued/error) ->
+        # skip WITHOUT spending a paced slot, so the budget advances to fresh
+        # candidates. Checked BEFORE the max_new gate so a cooling head slug is
+        # neither resolved nor counted as deferred. The TTL lets it retry later.
+        if attempts_ledger_path and _cooling(ledger, slug, now, retry_ttl_days):
+            summary['skipped_cooldown'] += 1
             continue
         # Per-invocation cap on NEW resolves: once hit, count the rest as deferred
         # (a later tick picks them up) instead of resolving the whole file at once.
@@ -242,6 +323,8 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             summary['errors'] += 1
             summary['error_slugs'].append(slug)
             event.update(outcome='error', detail=str(e))
+            if attempts_ledger_path:
+                ledger[slug] = now_iso  # unregistered -> TTL-skip until fixed
             if on_event:
                 on_event(event)
             continue
@@ -275,21 +358,34 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             # a later fork_n of a just-enrolled slug now skips instead of spending
             # another slot on a product already queued.
             already_enrolled.add(resolved_slug)
+            # Graduated: drop any stale non-productive marks for this identity so
+            # it is never spuriously cooled off after a successful resolve.
+            if attempts_ledger_path:
+                ledger.pop(slug, None)
+                ledger.pop(resolved_slug, None)
         elif kind == 'queued':
             # Low-confidence -> already in review_queue as a straggler. Not built.
             summary['already_queued'] += 1
+            if attempts_ledger_path:
+                ledger[slug] = now_iso  # non-productive -> cool off for the TTL
         elif kind == 'no_candidate':
             # Unmet want -> already in demand_log. Not built.
             summary['no_candidate'] += 1
+            if attempts_ledger_path:
+                ledger[slug] = now_iso  # perennial eBay-miss -> cool off, retry later
         else:
             # Unknown outcome — defensive; count as error, don't crash the batch.
             summary['errors'] += 1
             summary['error_slugs'].append(slug)
             event['outcome'] = f'unknown:{kind}'
+            if attempts_ledger_path:
+                ledger[slug] = now_iso
 
         if on_event:
             on_event(event)
 
+    if attempts_ledger_path:
+        _save_ledger(ledger, attempts_ledger_path)
     return summary
 
 
@@ -309,6 +405,16 @@ def _build_arg_parser():
                    help="Resolve at most N NEW proposals this run (skip slugs "
                         "already in the work_queue first). Paces the LLM load for "
                         "a frequent cron; omit for the legacy resolve-everything run.")
+    p.add_argument('--attempts-ledger', default=ATTEMPTS_LEDGER_PATH, dest='attempts_ledger',
+                   help="Ledger that retires recently-attempted, non-productive "
+                        "slugs (no_candidate/queued/error) from the paced --max "
+                        "budget so the tail resolves instead of the head "
+                        "re-blocking. Default: data/resolve-attempts.json.")
+    p.add_argument('--no-ledger', action='store_true',
+                   help="Disable the attempt ledger (legacy: retry every slug each run).")
+    p.add_argument('--retry-ttl-days', type=int, default=RETRY_TTL_DAYS, dest='retry_ttl_days',
+                   help=f"Days before a ledgered non-productive slug is retried "
+                        f"(default {RETRY_TTL_DAYS}).")
     return p
 
 
@@ -358,12 +464,15 @@ def main(argv=None):
         proposals, ebay=ebay_api, gemma=gemma,
         demand_log=demand_log, review_queue=review_queue,
         floor=args.floor, on_event=_log, max_new=args.max_new,
+        attempts_ledger_path=(None if args.no_ledger else args.attempts_ledger),
+        retry_ttl_days=args.retry_ttl_days,
     )
 
     print(f"\n[resolve_pass] done: {summary['enrolled']} enrolled, "
           f"{summary['already_queued']} queued (straggler), "
           f"{summary['no_candidate']} no-candidate, {summary['errors']} error(s), "
           f"{summary['skipped_enrolled']} already-queued (skipped), "
+          f"{summary['skipped_cooldown']} cooling (skipped), "
           f"{summary['deferred']} deferred (over --max).")
     if summary['enrolled']:
         print(f"[resolve_pass] enrolled -> work_queue (factory will build): "
