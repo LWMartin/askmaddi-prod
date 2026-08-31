@@ -10,8 +10,9 @@ Contract:
     - HERO first: the single newest-minted card (max freshness.created_at);
       ties broken by ascending card_id.
     - Then the REMAINING cards grouped by identity.category in the fixed order
-      body -> lens -> support -> other (anything not body/lens/support), and
-      within each group newest-minted first (tie -> ascending card_id).
+      body -> lens -> support -> drone -> other (anything not
+      body/lens/support/drone), and within each group newest-minted first
+      (tie -> ascending card_id).
     - The hero appears exactly ONCE (pulled out; not duplicated in its group).
     - Total, deterministic: len(out) == len(cards); missing created_at sinks to
       the end of its group; missing/unknown category -> the 'other' group.
@@ -42,6 +43,7 @@ def _fixture():
         _card("x1", "2026-07-19T00:00:00+00:00", "flash"),    # unknown category
         _card("b2", "2026-07-10T00:00:00+00:00", "body"),     # tie -> card_id b2 < b3
         _card("l1", "2026-07-15T00:00:00+00:00", "lens"),
+        _card("d1", "2026-07-12T00:00:00+00:00", "drone"),    # drone group: after support
         _card("b4", None, "body"),                            # no created_at -> sinks in body
     ]
 
@@ -52,7 +54,7 @@ def _ids(cards):
 
 def test_full_order_is_exact():
     out = build_site.order_cards_for_grid(_fixture())
-    assert _ids(out) == ["b1", "b2", "b3", "b4", "l1", "l2", "s1", "x1"]
+    assert _ids(out) == ["b1", "b2", "b3", "b4", "l1", "l2", "s1", "d1", "x1"]
 
 
 def test_hero_is_newest_minted():
@@ -62,9 +64,9 @@ def test_hero_is_newest_minted():
 
 def test_groups_follow_body_lens_support_other():
     out = build_site.order_cards_for_grid(_fixture())
-    rank = {"body": 0, "lens": 1, "support": 2}
+    rank = {"body": 0, "lens": 1, "support": 2, "drone": 3}
     # after the hero, category rank is non-decreasing (unknown -> last)
-    seen = [rank.get((c["identity"].get("category") or "").lower(), 3) for c in out[1:]]
+    seen = [rank.get((c["identity"].get("category") or "").lower(), 4) for c in out[1:]]
     assert seen == sorted(seen)
 
 

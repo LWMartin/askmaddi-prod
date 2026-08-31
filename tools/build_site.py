@@ -1648,20 +1648,20 @@ def select_teaser_axes(card):
     return picks
 
 
-_GRID_CATEGORY_RANK = {"body": 0, "lens": 1, "support": 2}
+_GRID_CATEGORY_RANK = {"body": 0, "lens": 1, "support": 2, "drone": 3}
 
 
 def order_cards_for_grid(cards):
     """Order cards for the homepage grid: newest card first (hero), then the
-    rest grouped body -> lens -> support -> other, newest-first within each
-    group. Never mutates the input; returns a new list of the same length.
+    rest grouped body -> lens -> support -> drone -> other, newest-first within
+    each group. Never mutates the input; returns a new list of the same length.
     """
     def created_at(card):
         return (card.get("freshness") or {}).get("created_at") or ""
 
     def category_rank(card):
         cat = ((card.get("identity") or {}).get("category") or "").lower()
-        return _GRID_CATEGORY_RANK.get(cat, 3)
+        return _GRID_CATEGORY_RANK.get(cat, 4)
 
     by_id = sorted(cards, key=lambda c: c["card_id"])
     newest_first = sorted(by_id, key=created_at, reverse=True)
