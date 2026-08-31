@@ -22,6 +22,31 @@ git push origin master        # that's the deploy
 Apache picks up files on the next request after the box's auto-pull lands. No
 service restart for anything under `browser/`. Verify with the sanity checks below.
 
+### The auto-pull is hardened (`deployment/opt-pull.sh`)
+
+The box's `*/5` cron runs `deployment/opt-pull.sh`, **not** a raw `git pull`. This
+matters because the build/drip crons continuously write live output into this same
+working tree (`browser/**`, `data/skus.json`, `data/cards/*.json`, manifest, sitemap,
+`llms.txt`), so the tree is *always* dirty. A plain `git pull --ff-only` wedges
+**silently** whenever an incoming commit touches a path the box also wrote — exactly
+what card deploys do (it stranded the DJI Air 2S card ~1h on 2026-08-31).
+
+The wrapper's policy is **surgical, non-regressing**:
+
+- discards local writes **only** on the exact paths the incoming commit delivers
+  (if it's in the push, it's meant to be authoritative for this deploy),
+- **preserves** all other live output (tracked and untracked) — no site regression,
+- **refuses loudly** (exit 1, `logger` tag `askmaddi-pull`) on true divergence — a
+  local commit on the box needs the manual reconcile procedure, not a cron, and
+- **logs every outcome** so the failure mode is never silent again.
+
+```
+crontab (user askmaddi):
+  */5 * * * * bash /opt/askmaddi-prod/deployment/opt-pull.sh
+watch it:
+  journalctl -t askmaddi-pull --since '1 hour ago'
+```
+
 > Historical note: pre-2026-05-28 posture was pinned-tag checkout
 > (`sudo -u askmaddi git -C /opt/askmaddi-prod checkout <tag>`). Tags are still
 > useful as release/rollback anchors, but checkout is no longer the deploy step —
@@ -121,8 +146,10 @@ curl -s https://askmaddi.com/cards/sony-a7iv/ \
 
 # 5. Absent-list card must have NO Amazon rung at all (expect 0):
 curl -s https://askmaddi.com/cards/peak-design-pro-tripod/ | grep -c btn-buy-amazon
-# On the box — working tree must be clean or auto-pull will wedge:
-sudo -u askmaddi git -C /opt/askmaddi-prod status
+# On the box — the tree is expected to be dirty (crons write live output). The
+# hardened auto-pull (deployment/opt-pull.sh) tolerates that surgically; if a deploy
+# hasn't landed, check its log rather than the tree:
+journalctl -t askmaddi-pull --since '30 min ago'
 ```
 
 ## Rollback
