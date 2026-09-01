@@ -417,6 +417,12 @@ def _reason_badge(record):
         # contamination.json entry (or a brand/facet generic) before promoting,
         # else the relevance gate degrades to weak derived-alias fallback.
         return ('no contamination entry', 'author a contamination.json entry first')
+    if reason == 'duplicate_identity_contradiction':
+        # Two spine slugs share a product id (MPN/GTIN/epid) but look like
+        # DIFFERENT products — a mis-stamp or a successor collision. Adjudicate:
+        # if a true dup, reject the junior as `duplicate`; if a mis-stamp, fix
+        # the wrong slug's identity. collision_with names the sibling slug.
+        return ('duplicate identity', record.get('collision_with') or '?')
     return ('needs review', '')
 
 
