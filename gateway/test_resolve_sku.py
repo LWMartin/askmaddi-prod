@@ -662,3 +662,132 @@ def test_mint_specific_entry_stores_slug_no_tier(
     entry = skus_registry.load_registry(skus_path)['skus']['canon-eos-r100']
     assert entry['contamination_key'] == 'canon-eos-r100'
     assert 'contamination_tier' not in entry
+
+
+# ── Cross-slug product-identity dedup gate (spec: maddi-multisource-identity-
+#    matcher; live proof: Autel EVO II Pro / Skydio 2 drone dups resurrecting) ──
+
+def _dedup_seed(tmp_path, *, built_mpn='102000410', built_vendor='Autel',
+                built_model='EVO II Pro', facet='drone'):
+    """A spine holding ONE already-built entry with a real product MPN, under a
+    slug the incoming proposal will NOT share (so the same-slug rebind firewall
+    can't see it — only the cross-slug identity gate can)."""
+    p = tmp_path / 'skus.json'
+    p.write_text(json.dumps({
+        '_description': 'test', 'version': '0.1.0', 'as_of': '2026-09-01',
+        'skus': {
+            'built-canonical': {
+                'contamination_key': 'built-canonical',
+                'vendor': built_vendor, 'model': built_model, 'facet': facet,
+                'gtin': None,
+                'marketplace_ids': {'ebay_epid': '', 'ebay_legacy_item_id': 'OLD-1',
+                                    'amazon_asin': None},
+                'identity': {'mpn': built_mpn, 'brand': built_vendor,
+                             'market_title': f'{built_vendor} {built_model}'},
+            },
+        },
+    }))
+    return p
+
+
+def _ebay_resolving_to(item_id, *, mpn, brand, title, cat='99999999'):
+    """A MockEbay whose single candidate resolves to the given product identity."""
+    return MockEbay(
+        candidates=[{'item_id': item_id, 'title': title, 'price': '999',
+                     'currency': 'USD', 'condition': 'New', 'epid': '', 'brand': brand}],
+        resolve_map={item_id: {
+            'identity': {'epid': '', 'legacy_item_id': item_id,
+                         'ebay_category_id': cat, 'brand': brand, 'mpn': mpn,
+                         'market_title': title, 'image': '',
+                         'price_seen': {'value': '999', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': f'https://ebay/itm/{item_id}?campid=5339138080'}})
+
+
+def test_dedup_clean_dup_drops_no_mint(tmp_path, queue_path, demand_path):
+    """A second listing of an already-built product (distinct item_id, SAME MPN,
+    same product family) mints a novel title-slug but the identity gate drops it:
+    outcome 'duplicate_identity', no spine write, no review record."""
+    skus = _dedup_seed(tmp_path)
+    # A second LISTING of the same product: curated 'EVO II Pro' fully present,
+    # extras are only listing noise + the SKU code -> clean dup, auto-drop.
+    ebay = _ebay_resolving_to('NEW-2', mpn='102000410', brand='Autel',
+                              title='Autel EVO II Pro 102000410 New Sealed USA In Stock 2-4 Shipping')
+    out = resolve_sku.resolve_proposal(
+        'autel-evo-ii-pro-listing2', ebay=ebay, gemma=_gemma(0, 0.95),
+        vendor='Autel', model='EVO II Pro 102000410 New Sealed USA In Stock 2-4 Shipping',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'duplicate_identity'
+    assert out['dup_of'] == 'built-canonical'
+    reg = skus_registry.load_registry(skus)['skus']
+    assert 'autel-evo-ii-pro-listing2' not in reg          # never minted
+    assert not queue_path.exists() or review_queue.load_pending(queue_path) == []
+
+
+def test_dedup_misstamp_shared_id_routes_to_review(tmp_path, queue_path, demand_path):
+    """Same MPN but a DIFFERENT product family (the live ILCE7RM5B on both a7r and
+    a7-v) is a contradiction, not a dup: never auto-merge, route to /admin so the
+    mis-stamp is adjudicated by a human. No silent drop of a possibly-real product."""
+    skus = _dedup_seed(tmp_path, built_mpn='ILCE7RM5B', built_vendor='Sony',
+                       built_model='a7R', facet='body')
+    ebay = _ebay_resolving_to('NEW-9', mpn='ILCE7RM5B', brand='Sony',
+                              title='Sony a7 V Body')
+    out = resolve_sku.resolve_proposal(
+        'sony-a7-v', ebay=ebay, gemma=_gemma(0, 0.95),
+        vendor='Sony', model='a7 V',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued'
+    assert out['reason'] == 'duplicate_identity_contradiction'
+    assert out['dup_of'] == 'built-canonical'
+    assert 'sony-a7-v' not in skus_registry.load_registry(skus)['skus']  # not minted
+    assert len(review_queue.load_pending(queue_path)) == 1               # human sees it
+
+
+def test_dedup_placeholder_mpn_is_not_a_join_key(tmp_path, queue_path, demand_path):
+    """Two DIFFERENT drones both carrying the seller placeholder 'Dose not apply'
+    (the live Avata 2 / Mavic 4 Pro pair) must NOT dedup — a placeholder is never
+    identity. The second product mints normally instead of being swallowed."""
+    skus = _dedup_seed(tmp_path, built_mpn='Dose not apply', built_vendor='DJI',
+                       built_model='Avata 2', facet='drone')
+    ebay = _ebay_resolving_to('NEW-7', mpn='Dose not apply', brand='DJI',
+                              title='DJI Mavic 4 Pro USA In Stock', cat='99999999')
+    out = resolve_sku.resolve_proposal(
+        'dji-mavic-4-pro', ebay=ebay, gemma=_gemma(0, 0.95),
+        vendor='DJI', model='Mavic 4 Pro',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'                    # minted, NOT deduped
+    assert 'dji-mavic-4-pro' in skus_registry.load_registry(skus)['skus']
+
+
+def test_dedup_gate_is_mint_only(skus_path, queue_path, demand_path):
+    """An ENRICH (existing canonical slug) is never dedup-dropped even though its
+    id may match spine entries — the gate guards the mint path only, because only
+    a mint can create a NEW duplicate slug."""
+    ebay = MockEbay(candidates=CANDS)  # resolves default identity mpn ILCE-7SM3
+    out = resolve_sku.resolve_proposal(
+        'sony-a7s-iii', ebay=ebay, gemma=_gemma(0, 0.95),
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'resolved'
+    assert out.get('minted') is not True
+
+
+def test_model_family_agrees_distinguishes_dups_from_variants():
+    """The dedup 'same product?' arbiter: clean dups agree (drop), while
+    successors / variants / mis-stamps disagree (route to human)."""
+    f = resolve_sku._model_family_agrees
+    # clean dups -> agree (SKU code / listing noise are not product differences)
+    assert f('Skydio', 'Skydio 2', 'Skydio', 'Skydio 2 SDRC2V1 New USA')
+    assert f('DJI', 'Avata 2', 'DJI', 'DJI Avata 2 Fly Smart USA In Stock 2-4 Shipping')
+    # successors / variants / mis-stamps / cross-brand -> disagree
+    assert not f('Canon', 'R6', 'Canon', 'EOS R6 II')          # generation marker 'ii'
+    assert not f('DJI', 'RS 3', 'DJI', 'RS 3 Pro')             # variant marker 'pro'
+    assert not f('DJI', 'Avata 2', 'DJI', 'Avata 3')           # different model number
+    assert not f('Sony', 'a7R', 'Sony', 'a7 V')               # not contained
+    assert not f('DJI', 'Avata 2', 'Autel', 'Avata 2')        # cross-brand

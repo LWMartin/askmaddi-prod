@@ -254,6 +254,7 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         'total': 0, 'enrolled': 0, 'already_queued': 0,
         'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0,
         'skipped_cooldown': 0, 'decontaminated': 0, 'deferred': 0,
+        'duplicate_identity': 0,
         'enrolled_slugs': [], 'error_slugs': [],
     }
 
@@ -406,6 +407,16 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             summary['no_candidate'] += 1
             if attempts_ledger_path:
                 ledger[slug] = now_iso  # perennial eBay-miss -> cool off, retry later
+        elif kind == 'duplicate_identity':
+            # Cross-slug product-identity dup: this proposal's resolved id matches
+            # an already-built card under a different slug. It re-mints a fresh
+            # title-slug each tick, so a TTL cool would let it resurrect; escort
+            # it PERMANENTLY out of the paced budget (same as DECONTAM_MARK — the
+            # card exists, so this proposal slug is a structural dead-end).
+            summary['duplicate_identity'] += 1
+            event['dup_of'] = outcome.get('dup_of')
+            if attempts_ledger_path:
+                ledger[slug] = DECONTAM_MARK
         else:
             # Unknown outcome — defensive; count as error, don't crash the batch.
             summary['errors'] += 1
@@ -507,6 +518,7 @@ def main(argv=None):
           f"{summary['skipped_enrolled']} already-queued (skipped), "
           f"{summary['skipped_cooldown']} cooling (skipped), "
           f"{summary['decontaminated']} decontaminated (built dup), "
+          f"{summary['duplicate_identity']} duplicate-identity (dropped/flagged), "
           f"{summary['deferred']} deferred (over --max).")
     if summary['enrolled']:
         print(f"[resolve_pass] enrolled -> work_queue (factory will build): "

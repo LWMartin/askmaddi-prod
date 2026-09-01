@@ -135,6 +135,36 @@ def get_marketplace_category(entry, key='ebay_category_id'):
     return (entry.get('identity') or {}).get(key)
 
 
+# Seller MPN placeholders — text sellers type into the MPN slot to mean "none".
+# Treating these as identity FALSE-MERGES unrelated products (the live proof:
+# DJI Avata 2 and DJI Mavic 4 Pro both carried 'Dose not apply', so an
+# MPN-keyed dedup would collapse two different drones into one card). Normalised
+# to alphanumeric-lower before the membership test, so punctuation/case/typo
+# variants ('N/A', 'n.a.', 'Does Not Apply', the recurring 'Dose not apply'
+# misspelling) all resolve to a placeholder and are dropped from identity.
+_MPN_PLACEHOLDERS = frozenset({
+    '', 'na', 'nan', 'none', 'null', 'nil', 'no', 'notapplicable',
+    'doesnotapply', 'dosenotapply', 'donotapply', 'unknown', 'unbranded',
+    'generic', 'tbd', 'notavailable', 'noapplicable',
+})
+
+
+def _is_placeholder_mpn(mpn):
+    """True if an MPN is a seller placeholder, not a real part number.
+
+    The single arbiter of "is this MPN identity-bearing?" — used by
+    `_same_identity`, `find_by_product_identity`, and (via import) resolve_sku's
+    `_norm_mpn`, so the placeholder judgement is made in exactly one place."""
+    norm = re.sub(r'[^a-z0-9]', '', str(mpn or '').lower())
+    return norm in _MPN_PLACEHOLDERS
+
+
+def _identity_mpn(entry):
+    """The entry's MPN, or '' if absent OR a placeholder (never a join key)."""
+    mpn = (entry.get('identity') or {}).get('mpn', '')
+    return '' if _is_placeholder_mpn(mpn) else mpn
+
+
 def _same_identity(a, b):
     """True if two entries carry the same canonical identity (idempotency check).
 
@@ -143,13 +173,58 @@ def _same_identity(a, b):
     are NOT part of identity; comparing them would defeat idempotency. Reads
     through the substrate accessors so old-shape and new-shape entries of the
     same product compare equal (upsert stays idempotent across the migration).
+
+    Placeholder MPNs are normalised to '' first (via _identity_mpn), so two
+    entries that both carry 'Does Not Apply' do NOT get an accidental MPN match
+    — they must still agree on epid + item_id, which distinct listings never do.
     """
-    def _mpn(e):
-        return (e.get('identity') or {}).get('mpn', '')
     return (get_marketplace_id(a, 'ebay_epid') == get_marketplace_id(b, 'ebay_epid')
             and get_marketplace_id(a, 'ebay_legacy_item_id')
                 == get_marketplace_id(b, 'ebay_legacy_item_id')
-            and _mpn(a) == _mpn(b))
+            and _identity_mpn(a) == _identity_mpn(b))
+
+
+def find_by_product_identity(mpn=None, gtin=None, epid=None, *,
+                             exclude_slug=None, registry=None, path=None):
+    """Slugs of existing spine entries sharing a NON-placeholder PRODUCT identity.
+
+    The cross-slug dedup key the same-slug rebind firewall cannot see: two
+    different eBay LISTINGS (distinct legacy_item_ids) of the SAME product carry
+    the same MPN / GTIN / epid. resolve_proposal mints one slug per novel title,
+    so a resurrected dup ('DJI Avata 2 USA In Stock...' vs 'DJI Avata 2 Fly
+    More...') slips slug-dedup and re-mints. This joins on product identity
+    instead: any existing entry (other than exclude_slug) whose GTIN, MPN, or
+    eBay epid matches a given non-placeholder id.
+
+    Placeholder MPNs are never a join key (both sides normalised via
+    _is_placeholder_mpn); empty GTIN/epid never match. Returns [] when the caller
+    has no identity-bearing id to join on."""
+    want_mpn = None if _is_placeholder_mpn(mpn) else _norm_join_mpn(mpn)
+    want_gtin = re.sub(r'\D', '', str(gtin or '')) or None
+    want_epid = (str(epid or '').strip() or None)
+    if not (want_mpn or want_gtin or want_epid):
+        return []
+    reg = registry if registry is not None else load_registry(path or SKUS_PATH)
+    hits = []
+    for slug, e in (reg.get('skus') or {}).items():
+        if slug == exclude_slug:
+            continue
+        e_mpn = _identity_mpn(e)
+        e_mpn = _norm_join_mpn(e_mpn) if e_mpn else None
+        e_gtin = re.sub(r'\D', '', str(get_gtin(e) or '')) or None
+        e_epid = (str(get_marketplace_id(e, 'ebay_epid') or '').strip() or None)
+        if ((want_mpn and e_mpn and want_mpn == e_mpn)
+                or (want_gtin and e_gtin and want_gtin == e_gtin)
+                or (want_epid and e_epid and want_epid == e_epid)):
+            hits.append(slug)
+    return hits
+
+
+def _norm_join_mpn(x):
+    """Alphanumeric-upper MPN for join comparison ('ILCE-7SM3' == 'ilce7sm3').
+    Mirrors resolve_sku._norm_mpn's shape so both sides of a dedup compare equal;
+    placeholder-stripping is the caller's job (via _is_placeholder_mpn)."""
+    return re.sub(r'[^A-Z0-9]', '', str(x or '').upper())
 
 
 # ── Contamination-join resolution (structural guard, 2026-08-27) ──────────────

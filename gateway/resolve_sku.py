@@ -425,7 +425,16 @@ def _norm_gtin(x):
 
 
 def _norm_mpn(x):
-    """Alphanumeric, upper — so 'ILCE-7SM3' == 'ilce7sm3'. Empty -> '' (skip)."""
+    """Alphanumeric, upper — so 'ILCE-7SM3' == 'ilce7sm3'. Empty -> '' (skip).
+
+    A seller PLACEHOLDER ('Does Not Apply', 'N/A', the recurring 'Dose not
+    apply' typo) normalises to '' — it is not identity-bearing. Without this,
+    _id_agreement would read two placeholder MPNs as 'agree' and the dedup join
+    would collapse unrelated products (Avata 2 vs Mavic 4 Pro both carried the
+    same placeholder). Single source of truth: skus_registry._is_placeholder_mpn.
+    """
+    if skus_registry._is_placeholder_mpn(x):
+        return ''
     return re.sub(r'[^A-Z0-9]', '', str(x or '').upper())
 
 
@@ -452,6 +461,76 @@ def _id_agreement(target, identity):
     if t_mpn and i_mpn:
         return 'agree' if t_mpn == i_mpn else 'contradict'
     return 'none'
+
+
+# Logistics/condition phrases eBay sellers pad drone titles with — stripped
+# BEFORE tokenizing so their DIGITS ('2-4 Shipping', '3 Day') never masquerade as
+# a model number. Phrase-level (regex) because the digits only mean "shipping"
+# next to these words; a bare '2' elsewhere is Avata's model number.
+_LISTING_NOISE_RE = re.compile(
+    r'\b(?:in\s*stock|out\s*of\s*stock|brand\s*new|open\s*box|like\s*new|'
+    r'free\s*ship\w*|fast\s*ship\w*|same\s*day|next\s*day|ready\s*to\s*(?:ship|fly)|'
+    r'\d+\s*-?\s*\d*\s*(?:day|days|business|week|weeks)?\s*(?:ship\w*|deliver\w*)|'
+    r'usa?|uk|eu|ca|au)\b', re.I)
+
+# Word noise that carries no product identity (condition, packaging, filler).
+_MODEL_WORD_NOISE = frozenset({
+    'new', 'used', 'open', 'box', 'sealed', 'oem', 'genuine', 'authentic',
+    'original', 'w', 'with', 'only', 'read', 'condition', 'pristine', 'mint',
+    'excellent', 'good', 'the', 'and', 'for', 'combo', 'bundle', 'kit', 'set',
+    'pack', 'fly', 'more', 'smart', 'rc', 'remote', 'controller', 'fpv',
+    'goggles', 'warranty', 'shipping', 'ship', 'free', 'fast', 'stock', 'in',
+})
+
+# Tokens that DISTINGUISH a variant/generation — a curated model whose only
+# difference from another is one of these is a DIFFERENT product (R6 vs R6 II,
+# base vs Pro/Cine/Rugged), so it must NOT auto-drop. Standalone digits 2-9 are
+# included: a model number the other side lacks is a real difference.
+_VARIANT_MARKERS = frozenset({
+    'ii', 'iii', 'iv', 'v', 'vi', 'vii', 'viii', 'ix',
+    '2', '3', '4', '5', '6', '7', '8', '9',
+    'mark', 'mk', 'plus', 'pro', 'max', 'mini', 'se', 'lite', 'cine',
+    'rugged', 'thermal', 'enterprise', 'ultra', 'premium',
+})
+
+
+def _model_tokens(brand, model):
+    """Product-word token set of a brand+model label: logistics phrases stripped
+    (so '2-4 Shipping' contributes no digits), then split on non-alphanumerics,
+    then word-noise removed. So a curated 'Avata 2' and a raw eBay title 'DJI
+    Avata 2 Fly Smart USA In Stock 2-4 Shipping' both reduce to {dji, avata, 2}."""
+    raw = _LISTING_NOISE_RE.sub(' ', f'{brand or ""} {model or ""}')
+    return frozenset(
+        t for t in re.sub(r'[^a-z0-9]', ' ', raw.lower()).split()
+        if t and t not in _MODEL_WORD_NOISE)
+
+
+def _is_model_code(tok):
+    """A manufacturer SKU/model code (mixed letters+digits, length >= 5) — e.g.
+    'sdrc2v1', 'da2sue1'. One listing carrying the code and the other not is not
+    a product difference, so codes are ignored when comparing families."""
+    return len(tok) >= 5 and any(c.isalpha() for c in tok) and any(c.isdigit() for c in tok)
+
+
+def _model_family_agrees(brand_a, model_a, brand_b, model_b):
+    """True when two entries sharing a product id are plausibly the SAME product
+    (auto-droppable dup), False when they look like DIFFERENT products carrying a
+    shared id (a mis-stamp / successor -> route to human, never silently swallow).
+
+    Rule: reduce both to product words (drop listing noise + SKU codes); the
+    smaller set must be contained in the larger (order-free), and the leftover
+    tokens must contain NO variant marker. 'Skydio 2' vs 'Skydio 2 SDRC2V1' ->
+    agree (code ignored). 'R6' vs 'EOS R6 II' -> leftover {eos, ii}, 'ii' is a
+    marker -> disagree. 'a7r' vs 'a7 v' -> not contained -> disagree. Cross-brand
+    id collision -> brand token missing -> not contained -> disagree."""
+    ca = frozenset(t for t in _model_tokens(brand_a, model_a) if not _is_model_code(t))
+    cb = frozenset(t for t in _model_tokens(brand_b, model_b) if not _is_model_code(t))
+    if not ca or not cb:
+        return False
+    small, large = (ca, cb) if len(ca) <= len(cb) else (cb, ca)
+    if not small <= large:
+        return False
+    return not ((large - small) & _VARIANT_MARKERS)
 
 
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
@@ -630,6 +709,52 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
     # back unknown (blank) — either is a "look harder" signal for the air gap.
     minted_needs_review = bool(minted) and (
         target.get('source') == 'generated' or not category)
+
+    # ── Cross-slug product-identity dedup gate (spec: maddi-multisource-
+    #    identity-matcher, deterministic short-circuit; live proof: drone taps) ──
+    # The rebind firewall below only compares against the SAME slug's standing
+    # entry. But resolve_proposal mints one slug per novel eBay title, so a
+    # second LISTING of an already-built product (distinct legacy_item_id, same
+    # MPN/GTIN/epid) mints a fresh slug and RESURRECTS as a duplicate card —
+    # the Autel EVO II Pro / Skydio 2 dups found live. Only a MINT can create a
+    # NEW dup slug (an enrich reuses the canonical slug), so the gate is
+    # mint-only; a placeholder MPN is never a join key (skus_registry strips it).
+    if minted:
+        _rid = resolved.get('identity', {})
+        dup_slugs = skus_registry.find_by_product_identity(
+            mpn=_rid.get('mpn'), gtin=_rid.get('gtin'), epid=_rid.get('epid'),
+            exclude_slug=slug, path=skus_path)
+        if dup_slugs:
+            reg = skus_registry.load_registry(skus_path).get('skus', {})
+            dup_slug = dup_slugs[0]
+            existing = reg.get(dup_slug, {})
+            agrees = _model_family_agrees(
+                existing.get('vendor'), existing.get('model'),
+                target['vendor'], target['model'])
+            if agrees:
+                # Deterministic drop: the card exists under dup_slug. No mint, no
+                # review — resolve_pass permanently escorts the proposal slug out
+                # of the paced budget (like DECONTAM) so it stops resurrecting.
+                return {
+                    'slug': slug, 'outcome': 'duplicate_identity',
+                    'dup_of': dup_slug, 'source': target['source'],
+                    'why': f'shared product id with built card {dup_slug!r}',
+                }
+            # Same id, DIFFERENT product -> a mis-stamp (the ILCE7RM5B a7r/a7-v
+            # class). Contradiction is the loudest "look harder" signal; never
+            # auto-merge, never silently swallow a real product -> /admin.
+            resolution = _FactoryResolution(slug=slug, input_text=target['label'])
+            eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+            record = review_queue.enqueue(
+                resolution, resolved, target['vendor'], target['model'], category,
+                contamination_key=target['contamination_key'],
+                reason_override='duplicate_identity_contradiction',
+                candidates=verdict['ranked'], **eq_kwargs)
+            return {
+                'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+                'reason': 'duplicate_identity_contradiction', 'dup_of': dup_slug,
+                'source': target['source'],
+            }
 
     # ── Contamination-join gate (structural, 2026-08-27) ──────────────────────
     # A NEW spine entry must never carry a dangling self-name contamination_key

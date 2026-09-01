@@ -450,3 +450,66 @@ def test_is_real_mpn_helper():
     for junk in ('Does Not Apply', 'dose not apply', 'N/A', 'n / a', 'none',
                  'Unbranded', '', None, 'TBD'):
         assert not reg._is_real_mpn(junk), junk
+
+
+# ── placeholder-MPN guard + cross-slug product-identity lookup ────────────────
+def test_is_placeholder_mpn():
+    for m in ['', 'N/A', 'n.a.', 'Does Not Apply', 'Dose not apply', 'DOSENOTAPPLY',
+              'Unbranded', 'Generic', 'TBD', 'none', 'Not Applicable']:
+        assert reg._is_placeholder_mpn(m), f'{m!r} should be placeholder'
+    for m in ['ILCE7RM5B', '102000410', 'SKY300NA', 'CP.FP.00000149.02']:
+        assert not reg._is_placeholder_mpn(m), f'{m!r} is a real MPN'
+
+
+def test_same_identity_placeholder_mpn_does_not_false_match():
+    """Two DISTINCT listings that both carry a placeholder MPN must not be judged
+    the same identity on the MPN leg (they still differ by epid/item_id)."""
+    a = reg.build_entry(slug='dji-avata-2', vendor='DJI', model='Avata 2',
+                        facet='drone', contamination_key='dji-avata-2',
+                        resolved=_resolved(epid='E1', legacy='L1', mpn='Dose not apply'))
+    b = reg.build_entry(slug='dji-mavic-4-pro', vendor='DJI', model='Mavic 4 Pro',
+                        facet='drone', contamination_key='dji-mavic-4-pro',
+                        resolved=_resolved(epid='E2', legacy='L2', mpn='Does not apply'))
+    assert reg._same_identity(a, b) is False
+
+
+def _reg_with(entries):
+    return {'version': reg.SCHEMA_VERSION, 'skus': entries}
+
+
+def test_find_by_product_identity_matches_shared_mpn():
+    entries = {
+        'autel-evo-ii-pro': {'vendor': 'Autel', 'model': 'EVO II Pro', 'gtin': None,
+                             'identity': {'mpn': '102000410'},
+                             'marketplace_ids': {'ebay_epid': ''}},
+        'sony-a7iv': {'vendor': 'Sony', 'model': 'A7 IV', 'gtin': None,
+                      'identity': {'mpn': 'ILCE-7M4'},
+                      'marketplace_ids': {'ebay_epid': ''}},
+    }
+    hits = reg.find_by_product_identity(mpn='102000410', registry=_reg_with(entries))
+    assert hits == ['autel-evo-ii-pro']
+
+
+def test_find_by_product_identity_ignores_placeholder_and_self():
+    entries = {
+        'dji-avata-2': {'vendor': 'DJI', 'model': 'Avata 2', 'gtin': None,
+                        'identity': {'mpn': 'Dose not apply'},
+                        'marketplace_ids': {'ebay_epid': ''}},
+    }
+    # placeholder is never a join key -> no false hit against Avata 2
+    assert reg.find_by_product_identity(mpn='Does not apply',
+                                        registry=_reg_with(entries)) == []
+    # excludes the incoming slug itself
+    assert reg.find_by_product_identity(mpn='102000410', exclude_slug='x',
+                                        registry=_reg_with({
+        'x': {'vendor': 'A', 'model': 'B', 'identity': {'mpn': '102000410'},
+              'marketplace_ids': {'ebay_epid': ''}}})) == []
+
+
+def test_find_by_product_identity_matches_epid_when_mpn_absent():
+    entries = {'skydio-2': {'vendor': 'Skydio', 'model': 'Skydio 2', 'gtin': None,
+                            'identity': {'mpn': ''},
+                            'marketplace_ids': {'ebay_epid': 'EP-555'}}}
+    assert reg.find_by_product_identity(epid='EP-555',
+                                        registry=_reg_with(entries)) == ['skydio-2']
+    assert reg.find_by_product_identity(epid='', registry=_reg_with(entries)) == []

@@ -508,3 +508,28 @@ def test_no_ledger_path_preserves_legacy_retry_every_run(skus_path, wq_path):
         attempts_ledger_path=None)
     assert calls1 == ['ulanzi-f38'] and calls2 == ['ulanzi-f38']  # re-attempted both runs
     assert s1['skipped_cooldown'] == 0 and s2['skipped_cooldown'] == 0
+
+
+# ── duplicate_identity outcome -> permanent DECONTAM escort ───────────────────
+def test_duplicate_identity_counts_and_permanently_escorts(skus_path, wq_path, tmp_path):
+    """A cross-slug product-identity dup (resolve_proposal drops it, no mint) is
+    counted, NOT enrolled, and its proposal slug is written to the ledger with the
+    permanent DECONTAM mark — it re-mints a fresh title-slug each tick, so a TTL
+    cool would let it resurrect; the permanent escort keeps it off the paced budget."""
+    ledger = tmp_path / 'attempts.json'
+
+    def resolve_fn(slug, **kwargs):
+        return {'slug': slug, 'outcome': 'duplicate_identity',
+                'dup_of': 'built-canonical'}
+
+    summary = resolve_pass.run(
+        _props(('autel-evo-2-pro-rugged', 3)), ebay=None, gemma=None,
+        demand_log=None, review_queue=None, resolve_fn=resolve_fn,
+        skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger))
+
+    assert summary['duplicate_identity'] == 1
+    assert summary['enrolled'] == 0
+    assert wq.get('autel-evo-2-pro-rugged', path=wq_path) is None
+    saved = json.loads(ledger.read_text())
+    assert saved['autel-evo-2-pro-rugged'] == resolve_pass.DECONTAM_MARK
