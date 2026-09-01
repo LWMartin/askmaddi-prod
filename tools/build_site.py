@@ -1190,6 +1190,16 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
             offer["offerCount"] = sample
         obj["offers"] = offer
 
+    # Rich-result eligibility tripwire (GSC: "Either offers, review, or
+    # aggregateRating should be specified"). We never emit aggregateRating —
+    # a star is a verdict (doctrine above) — so a Product is eligible only via
+    # `review` or `offers`. Zero live cards are bare today; warn loud if one
+    # ever ships, so it surfaces in the build log rather than silently accruing
+    # Search Console warnings on a page that can't rich-render anyway.
+    if "review" not in obj and "offers" not in obj:
+        print(f"  ! {obj.get('name', '?')}: Product JSON-LD has neither review "
+              "nor offers — not rich-result eligible.", file=sys.stderr)
+
     # `</` escaped so card text can never close the script element.
     return json.dumps(obj, indent=2).replace("</", "<\\/")
 

@@ -21,9 +21,32 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "AskMaddi",
-  "url": "https://askmaddi.com/"
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "name": "AskMaddi",
+      "url": "https://askmaddi.com/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://askmaddi.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "name": "AskMaddi",
+      "url": "https://askmaddi.com/",
+      "logo": "https://askmaddi.com/images/logo.png",
+      "description": "AskMaddi synthesizes product reviews from dozens of independent sources into neutral, per-product cards — every claim attributed and linked to its original review. A human reviews every card before publish.",
+      "parentOrganization": {
+        "@type": "Organization",
+        "name": "A.I. Sciences LLC"
+      }
+    }
+  ]
 }
     </script>
     <link rel="stylesheet" href="css/maddi.css?v=2">
@@ -166,7 +189,11 @@
         <!-- SETUP STATE -->
         <div id="state-setup" class="state">
             <header class="hero">
-                <h1 class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</h1>
+                <!-- Intentionally a div, not a heading: this state is JS-only
+                     and off-screen at load. The landing hero holds the single,
+                     canonical page heading; keeping one heading avoids the
+                     duplicate-heading SEO issue. -->
+                <div class="logo-title"><img src="images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</div>
                 <p class="tagline">Precision search · Product research</p>
             </header>
 

@@ -169,3 +169,40 @@ def test_full_jsonld_carries_review_and_notes():
     assert isinstance(obj["review"], list) and obj["review"]
     assert obj["positiveNotes"]["@type"] == "ItemList"
     assert obj["negativeNotes"]["@type"] == "ItemList"
+
+
+# ─── rich-result eligibility tripwire ────────────────────────────────────────
+# GSC: "Either offers, review, or aggregateRating should be specified." We never
+# emit aggregateRating (verdict-free), so a Product is eligible only via review
+# or offers. A card with no visible quotes and no price band would ship a bare
+# Product; that must warn loud, not slip out silently.
+
+def _bare_card():
+    # No face_quotes anywhere -> no schema Review; no pricing -> no offers.
+    card = _card()
+    for ax in card["lead_axes"]:
+        ax.pop("face_quote", None)
+    card["detail_axes"] = []
+    card["pricing"] = {}
+    return card
+
+
+def test_bare_product_has_neither_review_nor_offers():
+    obj = json.loads(schema_org_jsonld(
+        _bare_card(), "https://askmaddi.com/cards/canon-r6/", "", ""))
+    assert "review" not in obj and "offers" not in obj
+
+
+def test_bare_product_warns_loud(capsys):
+    schema_org_jsonld(_bare_card(), "https://askmaddi.com/cards/canon-r6/", "", "")
+    err = capsys.readouterr().err
+    assert "neither review\nnor offers" in err or "neither review nor offers" in err
+
+
+def test_card_with_offers_but_no_review_is_eligible_and_silent(capsys):
+    card = _bare_card()
+    card["pricing"] = {"used_market": {"bands": {"good": 1299.0}, "sample_size": 4}}
+    obj = json.loads(schema_org_jsonld(
+        card, "https://askmaddi.com/cards/canon-r6/", "", ""))
+    assert obj["offers"]["@type"] == "AggregateOffer"
+    assert "not rich-result eligible" not in capsys.readouterr().err
