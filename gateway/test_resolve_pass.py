@@ -425,6 +425,73 @@ def test_resolved_outcome_graduates_slug_out_of_ledger(skus_path, wq_path, tmp_p
     assert 'canon-r5-ii' not in json.loads(ledger.read_text())
 
 
+def _renaming_resolver(rename_map, outcomes=None):
+    """A resolver that returns a canonical slug DIFFERENT from the proposal slug
+    (simulating a mint/rename, e.g. `sony-a7s-iii-original` -> `sony-a7s-iii`).
+    Records the slugs it was actually CALLED for so a cheap cooldown skip is
+    provable."""
+    calls = []
+
+    def resolve_fn(slug, **kwargs):
+        calls.append(slug)
+        return {'slug': rename_map.get(slug, slug),
+                'outcome': (outcomes or {}).get(slug, 'resolved'),
+                'detail': 'x', 'confidence': 0.9}
+    return resolve_fn, calls
+
+
+def test_resolved_slug_already_queued_is_decontaminated_permanently(
+        skus_path, wq_path, tmp_path):
+    """Canonical-slug re-block: a proposal whose RESOLVED slug is already in the
+    queue (a rename of an already-built card) slips past the pre-resolve skip (which
+    tests the PROPOSAL slug). WITHOUT the guard it counts as a fresh `enrolled`, is
+    popped from the ledger, and re-blocks the paced head every tick — the exact
+    `sony-a7r-original`/`sigma-35-f12-dg-dn` stall that left `resolved` empty. WITH
+    it: NOT enrolled, escorted to the decontamination zone (permanent sentinel, not
+    a TTL cool), so the next tick frees the budget for the tail AND it never
+    re-blocks — even years later, unlike a transient no_candidate."""
+    ledger = tmp_path / 'attempts.json'
+    t0 = datetime.datetime(2026, 8, 1, tzinfo=UTC)
+    # Canonical already built + promoted (Lee's published card).
+    wq.enroll('sony-a7s-iii', 'Sony A7S III', 'body', path=wq_path)
+    proposals = _props(('sony-a7s-iii-original', 8), ('canon-r5-ii', 9))
+    rename = {'sony-a7s-iii-original': 'sony-a7s-iii'}   # resolves to the built card
+
+    # Run 1: --max 1 -> the rename eats the slot, resolves to an already-queued
+    # canonical: NOT enrolled, escorted to decontam by the PROPOSAL slug; canon deferred.
+    rf1, calls1 = _renaming_resolver(rename)
+    s1 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf1, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1, attempts_ledger_path=str(ledger), now=t0)
+    assert calls1 == ['sony-a7s-iii-original']
+    assert s1['enrolled'] == 0 and s1['decontaminated'] == 1 and s1['deferred'] == 1
+    led = json.loads(ledger.read_text())
+    assert led.get('sony-a7s-iii-original') == resolve_pass.DECONTAM_MARK  # permanent
+    assert 'sony-a7s-iii' not in led                                       # canonical untouched
+
+    # Run 2 (same day): the rename is skipped for free; the tail finally resolves.
+    rf2, calls2 = _renaming_resolver(rename)
+    s2 = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf2, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1, attempts_ledger_path=str(ledger), now=t0)
+    assert calls2 == ['canon-r5-ii'], "the renamed dup re-blocked the budget; tail starved"
+    assert s2['skipped_cooldown'] == 1 and s2['enrolled'] == 1
+    assert wq.get('canon-r5-ii', path=wq_path) is not None
+
+    # Run 3 (+400 days): decontam is PERMANENT — far past any TTL, still skipped,
+    # resolver never called for the escorted slug (contrast the no_candidate TTL test).
+    rf3, calls3 = _renaming_resolver(rename)
+    resolve_pass.run(
+        _props(('sony-a7s-iii-original', 8)),
+        ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf3, skus_path=skus_path, work_queue_path=wq_path,
+        max_new=1, attempts_ledger_path=str(ledger), retry_ttl_days=7,
+        now=t0 + datetime.timedelta(days=400))
+    assert calls3 == [], "decontaminated slug came back after TTL — escort was not permanent"
+
+
 def test_no_ledger_path_preserves_legacy_retry_every_run(skus_path, wq_path):
     """attempts_ledger_path=None (default / one-shot / test callers) keeps the exact
     legacy behaviour: no cooldown skip, retry every run, nothing persisted."""

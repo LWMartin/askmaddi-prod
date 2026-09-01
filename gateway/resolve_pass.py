@@ -91,6 +91,16 @@ import work_queue        # noqa: E402
 ATTEMPTS_LEDGER_PATH = str(Path(__file__).resolve().parent.parent / 'data' / 'resolve-attempts.json')
 RETRY_TTL_DAYS = 7
 
+# Decontamination zone. A no_candidate/queued/error is TRANSIENT (eBay inventory
+# may appear later), so it cools for RETRY_TTL_DAYS then retries. But a proposal
+# that RESOLVES to a canonical already in the queue is a STRUCTURAL dead-end — the
+# card exists; a rename/mint made its proposal slug differ from the built slug, so
+# it slips the pre-resolve skip and re-blocks the paced head forever. That never
+# becomes productive, so it is escorted here PERMANENTLY: the ledger stores this
+# sentinel instead of a timestamp and _cooling skips it with no TTL. Visible on
+# `cat data/resolve-attempts.json` as `"<slug>": "decontaminated"`.
+DECONTAM_MARK = 'decontaminated'
+
 
 def _load_ledger(path):
     """Read the attempt ledger {slug: last_attempt_iso}. Tolerant: a missing or
@@ -118,10 +128,13 @@ def _save_ledger(ledger, path):
 
 
 def _cooling(ledger, slug, now, ttl_days):
-    """True if `slug` was attempted within ttl_days of `now` (so skip it)."""
+    """True if `slug` should be skipped: either escorted to the decontamination
+    zone (permanent) or attempted within ttl_days of `now` (transient cool)."""
     ts = ledger.get(slug)
     if not ts:
         return False
+    if ts == DECONTAM_MARK:
+        return True  # structural dead-end (already-built canonical) -> skip forever
     try:
         last = datetime.datetime.fromisoformat(str(ts).replace('Z', '+00:00'))
     except ValueError:
@@ -224,7 +237,8 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
 
     Returns:
       {'total': n, 'enrolled': n, 'already_queued': n, 'no_candidate': n,
-       'errors': n, 'skipped_enrolled': n, 'skipped_cooldown': n, 'deferred': n,
+       'errors': n, 'skipped_enrolled': n, 'skipped_cooldown': n,
+       'decontaminated': n, 'deferred': n,
        'enrolled_slugs': [...], 'error_slugs': [...]}
     """
     # Rung A/B with the GTIN/MPN-first id gate (the contradiction firewall +
@@ -239,7 +253,7 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
     summary = {
         'total': 0, 'enrolled': 0, 'already_queued': 0,
         'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0,
-        'skipped_cooldown': 0, 'deferred': 0,
+        'skipped_cooldown': 0, 'decontaminated': 0, 'deferred': 0,
         'enrolled_slugs': [], 'error_slugs': [],
     }
 
@@ -343,26 +357,45 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
             # so the registry entry now lives under outcome['slug']. After a mint,
             # upsert() ran, so lookup_proposal succeeds on that slug.
             resolved_slug = outcome.get('slug', slug)
-            ident = resolve_sku.lookup_proposal(resolved_slug, skus_path=skus_path)
-            enroll_kwargs = {}
-            if work_queue_path is not None:
-                enroll_kwargs['path'] = work_queue_path
-            work_queue.enroll(
-                resolved_slug, ident['label'], ident['category'],
-                aliases=ident.get('aliases'),
-                **enroll_kwargs,
-            )
-            summary['enrolled'] += 1
-            summary['enrolled_slugs'].append(resolved_slug)
-            # Guard the cap against duplicate/fork proposals of the same product:
-            # a later fork_n of a just-enrolled slug now skips instead of spending
-            # another slot on a product already queued.
-            already_enrolled.add(resolved_slug)
-            # Graduated: drop any stale non-productive marks for this identity so
-            # it is never spuriously cooled off after a successful resolve.
-            if attempts_ledger_path:
-                ledger.pop(slug, None)
-                ledger.pop(resolved_slug, None)
+            # Canonical-slug re-block guard. The pre-resolve skip tests the PROPOSAL
+            # slug against `already_enrolled` (canonical queue keys), so a proposal
+            # whose canonical differs (rename/mint: `sony-a7r-original` -> `sony-a7r`,
+            # `sigma-35-f12-dg-dn` -> `sigma-35mm-f1-2-dg-dn-art`) slips past it,
+            # re-resolves every tick, and — counted as a fresh `enrolled` AND popped
+            # from the ledger below — can NEVER be cooled. Two such zombies at the
+            # head ate the whole paced --max budget, leaving `resolved` empty and the
+            # factory starved. If the RESOLVED slug is already queued, this resolve
+            # built nothing new: treat it like `already_queued` and cool the PROPOSAL
+            # slug so the next tick skips it cheaply and the budget reaches the tail.
+            if resolved_slug in already_enrolled:
+                summary['decontaminated'] += 1
+                event['outcome'] = 'decontaminated'
+                event['resolved_slug'] = resolved_slug
+                if attempts_ledger_path:
+                    # Permanent escort (not a TTL cool): the card exists, so this
+                    # proposal slug never becomes productive. See DECONTAM_MARK.
+                    ledger[slug] = DECONTAM_MARK
+            else:
+                ident = resolve_sku.lookup_proposal(resolved_slug, skus_path=skus_path)
+                enroll_kwargs = {}
+                if work_queue_path is not None:
+                    enroll_kwargs['path'] = work_queue_path
+                work_queue.enroll(
+                    resolved_slug, ident['label'], ident['category'],
+                    aliases=ident.get('aliases'),
+                    **enroll_kwargs,
+                )
+                summary['enrolled'] += 1
+                summary['enrolled_slugs'].append(resolved_slug)
+                # Guard the cap against duplicate/fork proposals of the same product:
+                # a later fork_n of a just-enrolled slug now skips instead of spending
+                # another slot on a product already queued.
+                already_enrolled.add(resolved_slug)
+                # Graduated: drop any stale non-productive marks for this identity so
+                # it is never spuriously cooled off after a successful resolve.
+                if attempts_ledger_path:
+                    ledger.pop(slug, None)
+                    ledger.pop(resolved_slug, None)
         elif kind == 'queued':
             # Low-confidence -> already in review_queue as a straggler. Not built.
             summary['already_queued'] += 1
@@ -473,6 +506,7 @@ def main(argv=None):
           f"{summary['no_candidate']} no-candidate, {summary['errors']} error(s), "
           f"{summary['skipped_enrolled']} already-queued (skipped), "
           f"{summary['skipped_cooldown']} cooling (skipped), "
+          f"{summary['decontaminated']} decontaminated (built dup), "
           f"{summary['deferred']} deferred (over --max).")
     if summary['enrolled']:
         print(f"[resolve_pass] enrolled -> work_queue (factory will build): "
