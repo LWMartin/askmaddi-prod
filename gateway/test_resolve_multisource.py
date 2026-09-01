@@ -180,7 +180,8 @@ def test_ebay_miss_confident_source_proposes_offmarket(skus_path, queue_path, de
     out = resolve_sku.resolve_multisource(
         'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
         demand_log=demand_log, review_queue=review_queue,
-        mfr_surface=c, xconfirm=MockRung(None), floor=0.70, skus_path=skus_path,
+        mfr_surface=c, xconfirm=MockRung(None), adorama_gtin=_NULL,
+        floor=0.70, skus_path=skus_path,
         review_queue_path=queue_path, demand_log_path=demand_path)
     assert out['outcome'] == 'queued' and out['reason'] == 'sourced_offmarket'
     rec = review_queue.load_pending(queue_path)[0]
@@ -189,6 +190,32 @@ def test_ebay_miss_confident_source_proposes_offmarket(skus_path, queue_path, de
     assert rec['contamination']['relations']['predecessor'] == ['Z5']
     # unmet demand NOT logged — the identity was recovered off-market
     assert not demand_path.exists()
+
+
+def test_ebay_miss_falls_to_rung_e_adorama_with_buyable_cta(skus_path, queue_path, demand_path):
+    # C and D miss, but Adorama (rung E) has the exact GTIN -> off-market propose
+    # carrying the Partnerize buyable url through to affiliate_url (E's value).
+    ebay = MockEbay(candidates=[])
+    e = MockRung({'source': 'adorama',
+                  'identity': {'gtin': '0818373021234', 'mpn': 'TT-CB-5',
+                               'brand': 'Peak Design', 'canonical_model': 'Travel Tripod',
+                               'image': None},
+                  'confidence': 1.0, 'deterministic': True, 'aliases': [],
+                  'relations': {'predecessor': [], 'competitor': []},
+                  'buyable_url': 'https://adorama.prf.hn/click/camref:1101l5Pw9q/x',
+                  'why': 'Adorama GTIN exact'})
+    out = resolve_sku.resolve_multisource(
+        'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
+        demand_log=demand_log, review_queue=review_queue,
+        mfr_surface=MockRung(None), xconfirm=MockRung(None), adorama_gtin=e,
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued' and out['reason'] == 'sourced_offmarket'
+    assert out['source'] == 'adorama'
+    rec = review_queue.load_pending(queue_path)[0]
+    assert rec['affiliate_url'] == 'https://adorama.prf.hn/click/camref:1101l5Pw9q/x'
+    assert rec['identity']['gtin'] == '0818373021234'
+    assert not demand_path.exists()   # identity recovered -> no unmet log
 
 
 def test_ebay_miss_ambiguous_routes_to_review(skus_path, queue_path, demand_path):
@@ -201,7 +228,8 @@ def test_ebay_miss_ambiguous_routes_to_review(skus_path, queue_path, demand_path
     out = resolve_sku.resolve_multisource(
         'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
         demand_log=demand_log, review_queue=review_queue,
-        mfr_surface=MockRung(None), xconfirm=d, floor=0.70, skus_path=skus_path,
+        mfr_surface=MockRung(None), xconfirm=d, adorama_gtin=_NULL,
+        floor=0.70, skus_path=skus_path,
         review_queue_path=queue_path, demand_log_path=demand_path)
     assert out['outcome'] == 'queued' and out['reason'] == 'ambiguous_identity'
     assert review_queue.load_pending(queue_path)[0]['reason'] == 'ambiguous_identity'
@@ -212,8 +240,8 @@ def test_all_rungs_miss_logs_unmet_at_floor(skus_path, queue_path, demand_path):
     out = resolve_sku.resolve_multisource(
         'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
         demand_log=demand_log, review_queue=review_queue,
-        mfr_surface=MockRung(None), xconfirm=MockRung(None), floor=0.70,
-        skus_path=skus_path, review_queue_path=queue_path,
+        mfr_surface=MockRung(None), xconfirm=MockRung(None), adorama_gtin=_NULL,
+        floor=0.70, skus_path=skus_path, review_queue_path=queue_path,
         demand_log_path=demand_path)
     assert out['outcome'] == 'no_candidate'
     assert out.get('escalated') is True

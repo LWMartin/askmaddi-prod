@@ -241,13 +241,18 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
        'decontaminated': n, 'deferred': n,
        'enrolled_slugs': [...], 'error_slugs': [...]}
     """
-    # Rung A/B with the GTIN/MPN-first id gate (the contradiction firewall +
-    # deterministic straight-through are INSIDE resolve_proposal, so they are live
-    # here today). The full ladder — escalating an eBay miss to the mfr surface
-    # (C) + Icecat/Wikidata cross-confirm (D) — is resolve_sku.resolve_multisource;
-    # DEFERRED activation (flip this default) pending one nightly's review of the
-    # id-gate volume, so the live mfr/Wikidata fetches are added deliberately.
-    resolve_fn = resolve_fn or resolve_sku.resolve_proposal
+    # The full GTIN/MPN-first ladder A->E (spec maddi-multisource-identity-matcher).
+    # resolve_multisource WRAPS resolve_proposal (rung A registry + rung B eBay+Gemma,
+    # id gate live inside it) and escalates a genuine eBay MISS to the source rungs:
+    # C mfr/Shopify surface, D Icecat/Wikidata cross-confirm, E Adorama in-stock
+    # catalogue (offline index lookup, carries the buyable CTA). ACTIVATED 2026-09-01
+    # after reviewing the id-gate's review-queue volume (19 promoted / 3 rejected /
+    # 43 pending — a healthy ~14% reject rate, not a false-positive flood) and adding
+    # rung E. The source rungs self-gate on identity presence (C needs a source_url,
+    # D a join key, E a gtin/mpn/brand+model), so the cron's support/unknown misses
+    # no-op cheaply; only real-product misses fire live fetches. env_bootstrap loads
+    # ICECAT_* / EBAY_* in __main__, so C/D/E run live under the plain crontab.
+    resolve_fn = resolve_fn or resolve_sku.resolve_multisource
     skus_path = skus_path or resolve_sku.skus_registry.SKUS_PATH
 
     summary = {

@@ -61,6 +61,7 @@ import ebay_category_map
 import rebind_firewall
 import resolver_mfr_surface   # rung C (airlocked cell)
 import resolver_xconfirm      # rung D (airlocked cell)
+import resolver_adorama_gtin  # rung E (airlocked cell)
 
 # eBay-candidate disambiguation model. Now the on-box Qwen3-4B-Instruct-2507 —
 # the same free/local tier the demand-gate arbiter, the rung-2 slot reader, and
@@ -857,12 +858,13 @@ class _FactoryResolution:
         self.source = 'override'
 
 
-def _best_sourced(c_res, d_res, floor):
+def _best_sourced(c_res, d_res, e_res, floor):
     """The strongest CONFIDENT off-market resolution carrying a real identity, or
-    None. Rung D (cross-confirmed, holds relations) is preferred over C at equal
-    strength; deterministic or confidence>=floor qualifies. Ambiguous is excluded
-    (handled separately, before this)."""
-    for r in (d_res, c_res):
+    None. Preference D (cross-confirmed, holds relations) > C (mfr page) > E
+    (Adorama catalogue, narrowest but carries the buyable CTA) — the spec ladder
+    order A->E; deterministic or confidence>=floor qualifies. Ambiguous is
+    excluded (handled separately, before this)."""
+    for r in (d_res, c_res, e_res):
         if (r and r.get('identity') and not r.get('ambiguous')
                 and (r.get('deterministic') or r.get('confidence', 0.0) >= floor)):
             return r
@@ -870,17 +872,19 @@ def _best_sourced(c_res, d_res, floor):
 
 
 def _enqueue_sourced(slug, review_queue, review_queue_path, vendor, model,
-                     c_res, d_res, *, reason, why):
-    """Propose an OFF-MARKET identity (rung C/D, no eBay listing) onto the /admin
+                     c_res, d_res, *, e_res=None, reason, why):
+    """Propose an OFF-MARKET identity (rung C/D/E, no eBay listing) onto the /admin
     review surface. The matcher proposes; the human promotes (enrich-don't-mint +
     the publish air gap hold). Carries the pooled aliases + relations as the
-    contamination material the promote step needs."""
-    best = d_res if (d_res and d_res.get('identity')) else c_res
+    contamination material the promote step needs. A rung-E hit also carries its
+    Partnerize-wrapped buyable url through to affiliate_url — the CTA the promote
+    step surfaces even though no eBay listing backs this identity."""
+    best = next((r for r in (d_res, c_res, e_res) if r and r.get('identity')), None)
     ident = (best or {}).get('identity') or {}
     relations = ((d_res or {}).get('relations') or (c_res or {}).get('relations')
-                 or {'predecessor': [], 'competitor': []})
+                 or (e_res or {}).get('relations') or {'predecessor': [], 'competitor': []})
     aliases = []
-    for r in (c_res, d_res):
+    for r in (c_res, d_res, e_res):
         for a in ((r or {}).get('aliases') or []):
             if a not in aliases:
                 aliases.append(a)
@@ -893,7 +897,7 @@ def _enqueue_sourced(slug, review_queue, review_queue_path, vendor, model,
             'market_title': ident.get('canonical_model') or model,
             'image': ident.get('image'),
         },
-        'affiliate_url': '',
+        'affiliate_url': (e_res or {}).get('buyable_url') or '',
     }
     resolution = _FactoryResolution(slug=slug,
                                     input_text=f"{vendor or ''} {model or ''}".strip())
@@ -916,6 +920,7 @@ def _enqueue_sourced(slug, review_queue, review_queue_path, vendor, model,
 def resolve_multisource(slug, *, ebay, gemma, demand_log, review_queue,
                         mfr_surface=resolver_mfr_surface,
                         xconfirm=resolver_xconfirm,
+                        adorama_gtin=resolver_adorama_gtin,
                         vendor=None, model=None,
                         gtin=None, mpn=None, product_url=None,
                         floor=DEFAULT_CONFIDENCE_FLOOR,
@@ -970,10 +975,14 @@ def resolve_multisource(slug, *, ebay, gemma, demand_log, review_queue,
                                 reason='ambiguous_identity',
                                 why=d_res.get('why', 'ambiguous across eras'))
 
-    sourced = _best_sourced(c_res, d_res, floor)
+    # Rung E — Adorama in-stock catalogue (narrowest source, last; carries the
+    # buyable CTA). Offline index lookup, no live fetch.
+    e_res = adorama_gtin.resolve(src_target) if adorama_gtin else None
+
+    sourced = _best_sourced(c_res, d_res, e_res, floor)
     if sourced is not None:
         return _enqueue_sourced(slug, review_queue, review_queue_path,
-                                vendor, model, c_res, d_res,
+                                vendor, model, c_res, d_res, e_res=e_res,
                                 reason='sourced_offmarket',
                                 why=sourced.get('why', 'off-market identity'))
 
