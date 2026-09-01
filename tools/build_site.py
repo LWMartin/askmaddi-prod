@@ -2040,6 +2040,48 @@ def write_llms_txt(out_dir, cards, guides=None):
     return path
 
 
+# ─── server-rendered recent-cards nav ────────────────────────────────────────
+# A crawlable, JS-independent path into the catalog on the homepage: real <a>
+# links for internal-link equity and an LLM/no-JS fallback for the JS card grid.
+# Injected into a marked region of browser/index.html on a whole-corpus
+# --manifest build (never --card: same clobber discipline as manifest/sitemap).
+RECENT_CARDS_START = "<!-- RECENT-CARDS:START -->"
+RECENT_CARDS_END = "<!-- RECENT-CARDS:END -->"
+RECENT_CARDS_LIMIT = 12
+
+
+def render_recent_cards_list(cards, limit=RECENT_CARDS_LIMIT):
+    """<li><a> items for the most-recent cards, ordered like the homepage grid."""
+    items = []
+    for c in order_cards_for_grid(cards)[:limit]:
+        cid = c["card_id"]
+        name = esc((c.get("identity") or {}).get("display_name") or cid)
+        items.append(f'            <li><a href="/cards/{cid}/">{name}</a></li>')
+    return "\n".join(items)
+
+
+def inject_recent_cards(out_dir, cards, limit=RECENT_CARDS_LIMIT):
+    """Refresh the RECENT-CARDS marked region in browser/index.html. Idempotent;
+    warns and no-ops if the file or markers are absent (never corrupts the page).
+    Returns the index.html Path on success, else None."""
+    idx = Path(out_dir) / "index.html"
+    if not idx.exists():
+        print(f"  ! {idx}: absent — skipped recent-cards inject", file=sys.stderr)
+        return None
+    html_text = idx.read_text(encoding="utf-8")
+    if RECENT_CARDS_START not in html_text or RECENT_CARDS_END not in html_text:
+        print(f"  ! {idx}: RECENT-CARDS markers absent — skipped inject",
+              file=sys.stderr)
+        return None
+    pre, _, rest = html_text.partition(RECENT_CARDS_START)
+    _, _, post = rest.partition(RECENT_CARDS_END)
+    body = render_recent_cards_list(cards, limit)
+    idx.write_text(
+        f"{pre}{RECENT_CARDS_START}\n{body}\n            {RECENT_CARDS_END}{post}",
+        encoding="utf-8")
+    return idx
+
+
 # ─── Use-case guides (spec: maddi-use-case-guides — C5 render half) ──────────
 #
 # A guide RANKS, it does not CROWN (maddi-witness-stance). Three rules hold the
@@ -2443,6 +2485,13 @@ def main():
         mpath = out / "cards-manifest.json"
         mpath.write_text(json.dumps(manifest, indent=2), encoding="utf-8")
         print(f"  \u2713 manifest \u2192 {mpath} ({len(cards)} cards)")
+
+        # Homepage recent-cards SSR list rides the manifest flag: same whole-
+        # corpus semantics and the same --card clobber guard above.
+        ipath = inject_recent_cards(out, cards)
+        if ipath:
+            print(f"  \u2713 recent-cards \u2192 {ipath} "
+                  f"({min(RECENT_CARDS_LIMIT, len(cards))} links)")
 
     if args.sitemap:
         spath = write_sitemap(out, cards, guides=guides)

@@ -41,6 +41,10 @@
       "url": "https://askmaddi.com/",
       "logo": "https://askmaddi.com/images/logo.png",
       "description": "AskMaddi synthesizes product reviews from dozens of independent sources into neutral, per-product cards — every claim attributed and linked to its original review. A human reviews every card before publish.",
+      "founder": {
+        "@type": "Person",
+        "name": "L.W. Martin"
+      },
       "parentOrganization": {
         "@type": "Organization",
         "name": "A.I. Sciences LLC"
@@ -218,6 +222,30 @@
         </form>
         <p class="subscribe-note" aria-live="polite" style="font-size:13px; margin-top:8px; min-height:1em;"></p>
     </section>
+
+    <!-- Server-rendered recent cards: a crawlable, JS-independent path into the
+         catalog (internal-link equity + LLM/no-JS fallback). The list between the
+         markers is regenerated from the card corpus by build_site.py on a
+         --manifest build; do not hand-edit inside the markers. -->
+    <nav class="recent-cards-nav" aria-label="Recently added cards">
+        <h2 class="section-heading">Recently added</h2>
+        <ul class="recent-cards-list">
+            <!-- RECENT-CARDS:START -->
+            <li><a href="/cards/dji-dji-air-2s-da2sue1/">DJI Air 2S</a></li>
+            <li><a href="/cards/fujifilm-x-t200/">Fujifilm x t200</a></li>
+            <li><a href="/cards/sony-fx3/">Sony fx3</a></li>
+            <li><a href="/cards/nikon-35mm-f5/">Nikon 35mm f5</a></li>
+            <li><a href="/cards/nikon-z-30/">Nikon z 30</a></li>
+            <li><a href="/cards/sony-a7r-vi/">Sony a7r vi</a></li>
+            <li><a href="/cards/nikon-z6-iii/">Nikon z6 iii</a></li>
+            <li><a href="/cards/sony-rx10-v/">Sony RX10 V</a></li>
+            <li><a href="/cards/canon-eos-r6-mark-iii/">Canon EOS R6 Mark III</a></li>
+            <li><a href="/cards/canon-eos-r6-ii/">Canon eos r6 ii</a></li>
+            <li><a href="/cards/fujifilm-x-pro3/">Fujifilm x pro3</a></li>
+            <li><a href="/cards/canon-eos-r50/">Canon eos r50</a></li>
+            <!-- RECENT-CARDS:END -->
+        </ul>
+    </nav>
 
     <footer class="site-footer">
         <p><strong>Precision search:</strong> the exact product, not the clutter.</p>

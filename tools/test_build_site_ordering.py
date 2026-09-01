@@ -93,3 +93,56 @@ def test_input_not_mutated():
 
 def test_empty_is_empty():
     assert build_site.order_cards_for_grid([]) == []
+
+
+# ─── homepage recent-cards SSR injection ─────────────────────────────────────
+
+_INDEX_TEMPLATE = (
+    "<html><body>\n"
+    "<nav><ul>\n"
+    "            <!-- RECENT-CARDS:START -->\n"
+    "            <!-- RECENT-CARDS:END -->\n"
+    "</ul></nav>\n"
+    "<footer>keep me</footer>\n</body></html>\n"
+)
+
+
+def _named(cid, minted, category, name):
+    c = _card(cid, minted, category)
+    c["identity"]["display_name"] = name
+    return c
+
+
+def test_inject_fills_region_with_real_links_in_grid_order(tmp_path):
+    (tmp_path / "index.html").write_text(_INDEX_TEMPLATE, encoding="utf-8")
+    cards = [
+        _named("b1", "2026-07-20T00:00:00+00:00", "body", "Sony A7 V"),
+        _named("l1", "2026-07-15T00:00:00+00:00", "lens", "Canon 35mm"),
+    ]
+    build_site.inject_recent_cards(str(tmp_path), cards)
+    html = (tmp_path / "index.html").read_text()
+    assert '<li><a href="/cards/b1/">Sony A7 V</a></li>' in html
+    assert '<li><a href="/cards/l1/">Canon 35mm</a></li>' in html
+    # hero (newest) first, and the surrounding page is untouched.
+    assert html.index("/cards/b1/") < html.index("/cards/l1/")
+    assert "<footer>keep me</footer>" in html
+
+
+def test_inject_is_idempotent_and_escapes(tmp_path):
+    (tmp_path / "index.html").write_text(_INDEX_TEMPLATE, encoding="utf-8")
+    cards = [_named("x1", "2026-07-20T00:00:00+00:00", "body", "A & B <cam>")]
+    build_site.inject_recent_cards(str(tmp_path), cards)
+    once = (tmp_path / "index.html").read_text()
+    build_site.inject_recent_cards(str(tmp_path), cards)
+    twice = (tmp_path / "index.html").read_text()
+    assert once == twice                      # re-running does not drift
+    assert "A &amp; B &lt;cam&gt;" in twice   # name is HTML-escaped
+    assert once.count("RECENT-CARDS:START") == 1
+
+
+def test_inject_noops_without_markers(tmp_path, capsys):
+    (tmp_path / "index.html").write_text("<html>no markers</html>", encoding="utf-8")
+    result = build_site.inject_recent_cards(str(tmp_path), [])
+    assert result is None
+    assert "markers absent" in capsys.readouterr().err
+    assert (tmp_path / "index.html").read_text() == "<html>no markers</html>"
