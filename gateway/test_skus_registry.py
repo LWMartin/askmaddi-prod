@@ -427,3 +427,26 @@ def test_set_mpn_missing_slug(tmp_path):
     p = tmp_path / 'skus.json'
     reg.upsert('sony-a7iv', _entry(), path=p)
     assert reg.set_mpn('ghost-slug', 'X', _PROV, path=p) == 'missing-slug'
+
+
+def test_set_mpn_overwrites_placeholder(tmp_path):
+    """A seller placeholder ('Dose not apply' typo, 'N/A', 'Does Not Apply') is
+    treated as absent — the recovered real MPN must replace it, not be blocked."""
+    p = tmp_path / 'skus.json'
+    for junk in ('Dose not apply', 'Does Not Apply', 'N/A', 'unbranded', ''):
+        reg.upsert('dji-avata-2', _entry(mpn=junk), path=p)
+        # upsert keys on identity; force the junk value onto the persisted entry
+        data = json.loads(p.read_text())
+        data['skus']['dji-avata-2']['identity']['mpn'] = junk
+        p.write_text(json.dumps(data))
+        assert reg.set_mpn('dji-avata-2', 'CP.FP.00000149.02', _PROV, path=p) == 'written', junk
+        got = json.loads(p.read_text())['skus']['dji-avata-2']['identity']['mpn']
+        assert got == 'CP.FP.00000149.02', f'{junk!r} not overwritten'
+
+
+def test_is_real_mpn_helper():
+    assert reg._is_real_mpn('CP.FP.00000149.02')
+    assert reg._is_real_mpn('ILCE-7M4')
+    for junk in ('Does Not Apply', 'dose not apply', 'N/A', 'n / a', 'none',
+                 'Unbranded', '', None, 'TBD'):
+        assert not reg._is_real_mpn(junk), junk

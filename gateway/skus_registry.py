@@ -20,6 +20,7 @@ skus.json lives at askmaddi-prod data/skus.json, beside data/cards/.
 """
 import json
 import os
+import re
 import tempfile
 import time
 from pathlib import Path
@@ -502,6 +503,24 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     return 'written'
 
 
+# eBay item specifics are littered with junk MPN placeholders — a real anchor is
+# none of these (compared on alphanumerics only, so 'N/A', 'n / a', 'Dose Not
+# Apply' typo all collapse). Used to treat a placeholder as ABSENT: it must never
+# block a recovered real MPN, nor stand in as a dedup anchor.
+_MPN_PLACEHOLDERS = frozenset({
+    "", "na", "none", "null", "nil", "doesnotapply", "dosenotapply",
+    "notapplicable", "unbranded", "generic", "unknown", "nompn", "tbd",
+})
+
+
+def _is_real_mpn(v):
+    """A usable MPN anchor: non-empty and not a seller placeholder like
+    'Does Not Apply' / 'N/A' / the common typo 'Dose not apply'."""
+    if not v:
+        return False
+    return re.sub(r"[^a-z0-9]", "", str(v).lower()) not in _MPN_PLACEHOLDERS
+
+
 def set_mpn(slug, mpn, provenance, path=SKUS_PATH):
     """Surgically write the MPN anchor + its receipt for one SKU. UPGRADE-ONLY.
 
@@ -514,9 +533,12 @@ def set_mpn(slug, mpn, provenance, path=SKUS_PATH):
     the field the dormant resolve_multisource matcher will read. Spine writes stay
     in this module (resolve_sku doctrine).
 
-    UPGRADE-ONLY: refuses to overwrite a non-empty existing mpn (a first-pass id is
-    never clobbered by a recovered one). Provenance receipt goes to
-    identity.mpn_provenance (evidence layer), mirroring gtin_provenance.
+    UPGRADE-ONLY: refuses to overwrite a REAL existing mpn (a first-pass id is
+    never clobbered by a recovered one). A seller PLACEHOLDER ('Does Not Apply' /
+    'N/A' / the typo 'Dose not apply') counts as absent — the eBay identity-gap
+    survivors carry these, and a placeholder must be replaced by a recovered real
+    id, never left to block it. Provenance receipt goes to identity.mpn_provenance
+    (evidence layer), mirroring gtin_provenance.
 
     Returns: 'written' | 'skipped-has-mpn' | 'missing-slug'. Atomic.
     """
@@ -527,7 +549,7 @@ def set_mpn(slug, mpn, provenance, path=SKUS_PATH):
         return 'missing-slug'
 
     identity = entry.setdefault('identity', {})
-    if identity.get('mpn'):
+    if _is_real_mpn(identity.get('mpn')):
         return 'skipped-has-mpn'
 
     identity['mpn'] = mpn
