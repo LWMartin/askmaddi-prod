@@ -77,3 +77,22 @@ def test_dry_run_writes_nothing(tmp_path):
     rq = tmp_path / 'review_queue.json'
     q.main(['--skus-path', skus, '--queue-path', str(rq)])   # no --commit
     assert not rq.exists()
+
+
+def test_cluster_of_four_enqueues_three_juniors(tmp_path):
+    """A 4-member dup cluster (live Skydio 2 x4 on SKY300NA) yields 3 review items
+    — every non-senior member — so nothing dangles."""
+    skus = _seed(tmp_path, {
+        'skydio-2': _e('Skydio', 'Skydio 2', mpn='SKY300NA'),
+        'skydio-2-black': _e('Skydio', 'Skydio 2 Black', mpn='SKY300NA'),
+        'skydio-2-sdr35v1-black': _e('Skydio', 'Skydio 2 SDR35V1 Black', mpn='SKY300NA'),
+        'skydio-2-sdrc2v1': _e('Skydio', 'Skydio 2 SDRC2V1', mpn='SKY300NA'),
+    })
+    rq = tmp_path / 'review_queue.json'
+    q.main(['--commit', '--skus-path', skus, '--queue-path', str(rq)])
+    pend = review_queue.load_pending(rq)
+    assert len(pend) == 3
+    # every record points at the same senior (the alphabetically-first keeper)
+    assert {r['collision_with'] for r in pend} == {'skydio-2'}
+    assert {r['proposed_slug'] for r in pend} == {
+        'skydio-2-black', 'skydio-2-sdr35v1-black', 'skydio-2-sdrc2v1'}

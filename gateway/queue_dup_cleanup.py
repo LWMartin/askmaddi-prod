@@ -76,49 +76,55 @@ def find_clusters(registry):
     return sorted(clusters, key=lambda c: c[2])
 
 
-def _classify(registry, slugs):
-    """'clean_dup' if the first two members look like the same product (per the
-    gate's own _model_family_agrees arbiter), else 'contradiction' (mis-stamp /
-    successor). Reported only — the human always makes the final call at /admin."""
-    a = registry['skus'][slugs[0]]
-    b = registry['skus'][slugs[1]]
+def _classify_pair(registry, senior_slug, junior_slug):
+    """'clean_dup' if senior and junior look like the same product (per the gate's
+    own _model_family_agrees arbiter), else 'contradiction' (mis-stamp / successor).
+    Reported only — the human always makes the final call at /admin."""
+    a = registry['skus'][senior_slug]
+    b = registry['skus'][junior_slug]
     agrees = resolve_sku._model_family_agrees(
         a.get('vendor'), a.get('model'), b.get('vendor'), b.get('model'))
     return 'clean_dup' if agrees else 'contradiction'
 
 
 def queue_clusters(registry, clusters, *, skus_path, queue_path, commit):
-    """Enqueue one review item per cluster. The JUNIOR slug (2nd, alphabetically)
-    is the enqueue subject; the SENIOR (1st) rides in collision_with so /admin's
-    duplicate-identity badge names the sibling. Frozen identity comes from the
-    junior's spine entry (no eBay round-trip)."""
+    """Enqueue one review item PER NON-SENIOR member of each cluster.
+
+    A cluster can hold >2 dups (live: Skydio 2 has FOUR listings on SKY300NA). The
+    alphabetically-first slug is the SENIOR (the reviewer's compare-against / likely
+    keeper); EVERY other member is enqueued as its own review item pointing at the
+    senior via collision_with — so a 4-member cluster yields 3 items and NOTHING
+    dangles. Frozen identity comes from each junior's spine entry (no eBay round-trip).
+    Each junior has a distinct queue_id (vendor|model|epid), so re-runs stay idempotent."""
     queued = []
     for kind, value, slugs in clusters:
-        senior, junior = slugs[0], slugs[1]
-        j = registry['skus'][junior]
-        verdict = _classify(registry, slugs)
-        identity = dict(j.get('identity') or {})
-        # Freeze the junior's demoted marketplace shadows into the identity block
-        # so the record is self-contained (enqueue reads identity, not the entry).
-        identity.setdefault('epid', skus_registry.get_marketplace_id(j, 'ebay_epid') or '')
-        resolved = {'identity': identity,
-                    'affiliate_url': (j.get('affiliate') or {}).get('ebay_epn_url', '')}
-        res = resolve_sku._FactoryResolution(
-            slug=junior,
-            input_text=f'shared {kind} {value} with {senior} ({len(slugs)} slugs: {", ".join(slugs)})')
-        res.collision = senior     # -> record.collision_with, the badge detail
-        rec = {'kind': kind, 'value': value, 'slugs': slugs, 'verdict': verdict,
-               'junior': junior, 'senior': senior}
-        if commit:
-            out = review_queue.enqueue(
-                res, resolved, j.get('vendor', ''), j.get('model', ''),
-                skus_registry.get_facet(j) or '',
-                contamination_key=j.get('contamination_key'),
-                reason_override='duplicate_identity_contradiction',
-                path=queue_path)
-            rec['queue_id'] = out['queue_id']
-            rec['status'] = out['status']
-        queued.append(rec)
+        senior = slugs[0]
+        for junior in slugs[1:]:
+            j = registry['skus'][junior]
+            verdict = _classify_pair(registry, senior, junior)
+            identity = dict(j.get('identity') or {})
+            # Freeze the junior's demoted marketplace shadows into the identity block
+            # so the record is self-contained (enqueue reads identity, not the entry).
+            identity.setdefault('epid', skus_registry.get_marketplace_id(j, 'ebay_epid') or '')
+            resolved = {'identity': identity,
+                        'affiliate_url': (j.get('affiliate') or {}).get('ebay_epn_url', '')}
+            res = resolve_sku._FactoryResolution(
+                slug=junior,
+                input_text=(f'shared {kind} {value} with {senior} '
+                            f'({len(slugs)} slugs: {", ".join(slugs)})'))
+            res.collision = senior     # -> record.collision_with, the badge detail
+            rec = {'kind': kind, 'value': value, 'slugs': slugs, 'verdict': verdict,
+                   'junior': junior, 'senior': senior}
+            if commit:
+                out = review_queue.enqueue(
+                    res, resolved, j.get('vendor', ''), j.get('model', ''),
+                    skus_registry.get_facet(j) or '',
+                    contamination_key=j.get('contamination_key'),
+                    reason_override='duplicate_identity_contradiction',
+                    path=queue_path)
+                rec['queue_id'] = out['queue_id']
+                rec['status'] = out['status']
+            queued.append(rec)
     return queued
 
 
@@ -145,8 +151,10 @@ def main(argv=None):
         flag = 'CLEAN DUP -> reject junior as `duplicate`' if rec['verdict'] == 'clean_dup' \
             else 'CONTRADICTION -> adjudicate (mis-stamp/successor)'
         qid = f"  [{rec.get('queue_id', 'dry')}]" if args.commit else '  [dry]'
-        print(f"{qid} {rec['kind']}={rec['value']!r}: {', '.join(rec['slugs'])}")
+        print(f"{qid} {rec['kind']}={rec['value']!r}: {rec['junior']} vs {rec['senior']}")
         print(f"        {flag}")
+    print(f"\n  {len(clusters)} cluster(s) -> {len(queued)} review item(s) "
+          f"(one per non-keeper slug).")
     if not args.commit:
         print("\n  Re-run with --commit to enqueue these into /admin.")
     else:
