@@ -502,6 +502,41 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     return 'written'
 
 
+def set_mpn(slug, mpn, provenance, path=SKUS_PATH):
+    """Surgically write the MPN anchor + its receipt for one SKU. UPGRADE-ONLY.
+
+    Sibling of set_gtin, for the OTHER identity anchor. MPN *is* an idempotency
+    key (see same_identity: epid + legacy_item_id + mpn), so upsert() would treat
+    an mpn addition as a NEW identity and could mint a duplicate rather than amend
+    the existing entry in place — wrong for stamping a recovered id onto a known
+    slug. This writes `identity.mpn` directly, the field the dedup anchors on, so
+    an identity-gap survivor (a kept slug with no product id) becomes joinable —
+    the field the dormant resolve_multisource matcher will read. Spine writes stay
+    in this module (resolve_sku doctrine).
+
+    UPGRADE-ONLY: refuses to overwrite a non-empty existing mpn (a first-pass id is
+    never clobbered by a recovered one). Provenance receipt goes to
+    identity.mpn_provenance (evidence layer), mirroring gtin_provenance.
+
+    Returns: 'written' | 'skipped-has-mpn' | 'missing-slug'. Atomic.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    identity = entry.setdefault('identity', {})
+    if identity.get('mpn'):
+        return 'skipped-has-mpn'
+
+    identity['mpn'] = mpn
+    identity['mpn_provenance'] = provenance
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'written'
+
+
 # The vocabulary `overrides` may carry. CO-DECLARED with
 # aggregator-build/assemble_card.py's CARD_IDENTITY_FIELDS, which is the read
 # side; tools/backfill_spec_fragments.py refuses to run if the two disagree.

@@ -138,6 +138,23 @@ def _guess_brand(title: str) -> str:
     return tok[0] if tok else ""
 
 
+def _passes_brand_floor(brand: str, title: str, floor) -> bool:
+    """Brand-quality floor (drop-resurrection guard). With a per-vertical brand
+    allowlist, keep a row only when a recognized brand (word-boundary, single- or
+    multi-word) appears in the inferred brand OR the listing title. This drops the
+    no-name / toy tail that otherwise slips through: `_guess_brand` falls back to
+    the first title token, which still yields a hyphenated slug and passes every
+    other screen. Empty/absent floor => permissive (other verticals + the off-box
+    test path are unaffected). Errs toward DROP on ambiguity — a real drone almost
+    always names its brand in the title, and a false drop merely defers to the next
+    listing, whereas a false keep resurrects the junk this guard exists to stop."""
+    if not floor:
+        return True
+    hay = f"{brand or ''} {title or ''}".lower()
+    return any(re.search(r"\b" + re.escape(str(fb).lower()) + r"\b", hay)
+               for fb in floor)
+
+
 def _clean_model(title: str) -> str:
     """Recover a clean 'Brand Model' string from a noisy listing title."""
     t = _PARENS.sub(" ", title)
@@ -208,6 +225,7 @@ def run(verticals, *, search_fn, classify_fn=None, slug_fn=None,
             continue
         facet = v.get("facet", "")
         gate_cat = v.get("gate_category", facet)
+        brand_floor = v.get("brand_floor") or []   # drop no-name/toy tail
         cat_id = v.get("ebay_category_id") or None
         cond = v.get("condition_ids")            # None => new + used
         for q in v.get("seed_queries", []):
@@ -225,6 +243,8 @@ def run(verticals, *, search_fn, classify_fn=None, slug_fn=None,
                 if _LOCAL_ACCESSORY.search(title):
                     continue                     # part/battery/case — covered_precision's
                                                  # job downstream, but not in this loop
+                if not _passes_brand_floor(brand, title, brand_floor):
+                    continue                     # no-name/toy — below the brand floor
                 if classify_fn is not None:
                     verdict = classify_fn({"brand": brand, "model": title})
                     if (verdict or {}).get("category") != gate_cat:

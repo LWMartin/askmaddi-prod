@@ -1,5 +1,5 @@
 {
-  "_comment": "eBay category sourcing verticals — the reusable, config-driven demand intake (spec maddi-ebay-category-sourcing). Each row opens ONE vertical's eBay supply tap; adding a row opens a vertical with NO code change (the real-estate 360/virtual-tour row is the reuse acceptance test). ebay_category_id: eBay leaf (Camera Drones ~179697, still to be confirmed live — null = no category scoping, rely on seed queries + the demand_gate facet screen). condition_ids: null = new + used (Lee 2026-08-27), [1000] = new only. gate_category: the demand_gate.classify category a kept row must match (the de-DJI'd drone screen).",
+  "_comment": "eBay category sourcing verticals — the reusable, config-driven demand intake (spec maddi-ebay-category-sourcing). Each row opens ONE vertical's eBay supply tap; adding a row opens a vertical with NO code change (the real-estate 360/virtual-tour row is the reuse acceptance test). ebay_category_id: eBay leaf (Camera Drones ~179697, still to be confirmed live — null = no category scoping, rely on seed queries + the demand_gate facet screen). condition_ids: null = new + used (Lee 2026-08-27), [1000] = new only. gate_category: the demand_gate.classify category a kept row must match (the de-DJI'd drone screen). brand_floor: optional per-vertical allowlist of recognized brands (word-boundary match on brand+title) — drops the no-name/toy tail that slips the slug check with a junk first-token brand; omit for no floor.",
   "verticals": [
     {
       "vertical": "aerial",
@@ -7,6 +7,10 @@
       "gate_category": "drone",
       "ebay_category_id": "179697",
       "condition_ids": null,
+      "brand_floor": [
+        "dji", "autel", "skydio", "parrot", "brinc", "anzu", "potensic",
+        "holy stone", "ruko", "hoverair", "hover", "zero zero", "ryze", "tello"
+      ],
       "seed_queries": [
         "dji mavic drone",
         "dji air drone",

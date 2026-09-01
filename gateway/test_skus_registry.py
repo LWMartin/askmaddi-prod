@@ -400,3 +400,30 @@ def test_build_entry_omits_tier_for_specific():
     e = reg.build_entry('sony-fx6', 'Sony', 'FX6', 'body', 'sony-fx6',
                         _resolved(), contamination_tier=None)
     assert 'contamination_tier' not in e
+
+
+# ── set_mpn — surgical identity-anchor writer (identity-gap survivors) ─────────
+_PROV = {'chosen_source': 'manufacturer.dji', 'conflict': False,
+         'observations': [{'source': 'bhphoto+abt', 'mpn': 'CP.FP.00000149.02'}]}
+
+
+def test_set_mpn_writes_and_rereads(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('dji-avata-2', _entry(mpn=None), path=p)   # identity-gap: no mpn
+    assert reg.set_mpn('dji-avata-2', 'CP.FP.00000149.02', _PROV, path=p) == 'written'
+    ident = json.loads(p.read_text())['skus']['dji-avata-2']['identity']
+    assert ident['mpn'] == 'CP.FP.00000149.02'
+    assert ident['mpn_provenance'] == _PROV
+
+
+def test_set_mpn_is_upgrade_only(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)             # already has mpn ILCE-7M4
+    assert reg.set_mpn('sony-a7iv', 'CP.FP.00000149.02', _PROV, path=p) == 'skipped-has-mpn'
+    assert json.loads(p.read_text())['skus']['sony-a7iv']['identity']['mpn'] == 'ILCE-7M4'
+
+
+def test_set_mpn_missing_slug(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    assert reg.set_mpn('ghost-slug', 'X', _PROV, path=p) == 'missing-slug'

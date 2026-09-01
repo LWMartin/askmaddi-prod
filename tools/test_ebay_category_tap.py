@@ -100,6 +100,59 @@ def test_local_accessory_sink_drops_batteries_and_parts():
     assert slugs == {"dji-avata-2"}                           # only the aircraft
 
 
+# ── brand-quality floor (drop-resurrection guard) ────────────────────────────
+
+_FLOOR_ROWS = [
+    {"item_id": "1", "title": "DJI Mini 4 Pro Camera Drone", "brand": ""},
+    {"item_id": "2", "title": "SIMREX X900 Foldable GPS Drone", "brand": ""},   # no-name
+    {"item_id": "3", "title": "Holy Stone HS720G GPS Drone", "brand": ""},      # multi-word brand
+]
+_VERT_FLOORED = [{"vertical": "aerial", "facet": "drone", "gate_category": "drone",
+                  "ebay_category_id": "179697", "condition_ids": None,
+                  "brand_floor": ["dji", "autel", "skydio", "holy stone"],
+                  "seed_queries": ["mixed drones"]}]
+
+
+def test_brand_floor_drops_no_name_keeps_recognized():
+    """A no-name listing (SIMREX) slips the accessory sink + slug check but is
+    below the brand floor; recognized brands (single- and multi-word) survive."""
+    search = _fake_search({"mixed drones": _FLOOR_ROWS})
+    out = tap.run(_VERT_FLOORED, search_fn=search, classify_fn=None)  # gate off; floor on
+    vendors = {p["vendor"] for p in out}
+    slugs = {p["slug"] for p in out}
+    assert vendors == {"DJI", "Holy Stone"}
+    assert not any("simrex" in s for s in slugs)   # the no-name was floored out
+
+
+def test_absent_brand_floor_is_permissive():
+    """No brand_floor key => no floor: the no-name passes (backward compat + the
+    off-box/other-vertical path is unaffected)."""
+    vert = [dict(_VERT_FLOORED[0])]
+    vert[0].pop("brand_floor")
+    search = _fake_search({"mixed drones": _FLOOR_ROWS})
+    out = tap.run(vert, search_fn=search, classify_fn=None)
+    assert any("simrex" in p["slug"] for p in out)
+
+
+def test_passes_brand_floor_helper():
+    floor = ["dji", "holy stone", "hover"]
+    assert tap._passes_brand_floor("DJI", "DJI Mavic 3", floor)
+    assert tap._passes_brand_floor("Mavic", "DJI Mavic 3 Pro", floor)   # title saves a mis-inferred brand
+    assert tap._passes_brand_floor("", "Holy Stone HS720G", floor)      # multi-word brand
+    assert not tap._passes_brand_floor("SIMREX", "SIMREX X900 Drone", floor)
+    assert tap._passes_brand_floor("whatever", "no brands here", [])    # empty floor = permissive
+    assert not tap._passes_brand_floor("", "Generic hovering quad", floor)  # \bhover\b != 'hovering'
+
+
+def test_config_aerial_carries_brand_floor():
+    """The shipped aerial vertical config actually enables the floor (guards
+    against a future edit silently dropping it)."""
+    cfg = json.loads((Path(__file__).resolve().parents[1]
+                      / "data" / "ebay_source_verticals.json").read_text())
+    aerial = next(v for v in cfg["verticals"] if v["vertical"] == "aerial")
+    assert "dji" in aerial["brand_floor"] and "autel" in aerial["brand_floor"]
+
+
 def test_default_slug_collapses_marketing_tail():
     assert tap.default_slug("DJI", "DJI Neo 2 * USA In Stock * 2-4 Shipping") == "dji-neo-2"
     assert tap.default_slug("DJI", "DJI Mini 5 Pro Fly More Combo (DJI RC 2)") == "dji-mini-5-pro"
