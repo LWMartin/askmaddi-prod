@@ -1,0 +1,10 @@
+# Canonicalize the www host to the apex domain. The :443 vhost carries
+# ServerAlias www.askmaddi.com, so www served 200 directly and Google reported
+# every www URL as "Alternate page with proper canonical tag". A 301 here
+# collapses the duplicate host to the single canonical origin. Apex requests
+# fail the condition and pass through untouched.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP_HOST} ^www\.askmaddi\.com$ [NC]
+    RewriteRule ^ https://askmaddi.com%{REQUEST_URI} [L,R=301]
+</IfModule>
