@@ -30,16 +30,16 @@
       "search_url": null,
       "affiliate_url": null
     },
-    "price_updated_at": "2026-08-09T00:41:30.783022+00:00"
+    "price_updated_at": "2026-08-21T18:26:54.934745+00:00"
   },
   "freshness": {
     "created_at": "2026-06-04T17:07:05.363616+00:00",
-    "last_built": "2026-08-09T00:41:30.773412+00:00",
-    "last_checked": "2026-08-09T00:41:30.773412+00:00",
-    "source_count": 16,
+    "last_built": "2026-08-21T18:26:54.906178+00:00",
+    "last_checked": "2026-08-21T18:26:54.906178+00:00",
+    "source_count": 15,
     "source_types": {
       "community": 1,
-      "pro": 15
+      "pro": 14
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
@@ -48,19 +48,19 @@
     "overall": "high",
     "per_axis": {
       "video_capability": "high",
-      "sensor_performance": "high",
       "handling": "high",
+      "sensor_performance": "high",
       "burst_buffer": "high",
-      "mount_compat": "high",
-      "image_quality": "high",
       "generation_context": "high",
       "evf_lcd": "high",
+      "mount_compat": "high",
       "stabilization": "medium",
       "autofocus_body": "medium",
-      "build": "medium",
+      "image_quality": "medium",
       "price": "medium",
       "battery_life": "medium",
       "connectivity": "medium",
+      "build": "medium",
       "dimensions": "medium",
       "weight": "medium"
     }
@@ -80,18 +80,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 65,
-        "neu": 26,
+        "neu": 25,
         "neg": 17,
-        "total": 108,
+        "total": 107,
         "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Lightning appeared, so I switched my Canon EOS R6 with Sigma 150-600mm lens to 4K video at 50fps.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
             "source_type": "youtube",
@@ -952,517 +944,17 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 15,
-        "polarity_agreement": 0.867,
+        "source_count": 14,
+        "polarity_agreement": 0.929,
         "dominant_polarity": "pos",
-        "max_source_share": 0.176,
+        "max_source_share": 0.178,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Lightning appeared, so I switched my Canon EOS R6 with Sigma 150-600mm lens to 4K video at 50fps.",
-        "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-        "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/"
-      }
-    },
-    {
-      "axis_id": "sensor_performance",
-      "display_name": "Sensor Performance",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 36,
-        "neu": 17,
-        "neg": 6,
-        "total": 59,
-        "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "It was a thrill to be among them, and patience paid off when one finally surfaced long enough for me to capture this shot.’ Instagram: @snappyserks Week 36: Capturing Shadows, Hong Kong by Sarah Muirhead Canon AE-1, Ilford Delta 400 Image: Sarah Muirhead ‘This photo was taken in Hong Kong on an…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "1/125sec at F6.3 ISO 1000 Image: David Robertshaw ‘As the light faded just before sunset",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "this image is made from a stack of five different exposures to capture the full dynamic range.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "boost and sharpness and it wasn't just because of the megapixels I think that the sensor itself was just a lot better and overall I've just been so happy with the image quality out of the a74 it's great in low light it has a really good balance of megapixels and low light the next big thing for me…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "it but the a74 does have dual ISO so when you're shooting video in slog 3 uh it has a base ISO of 800 and then a second ISO of 3200 it's not as good as this the um A7 S3 which has uh the second ISO at 12,8 00 which is just great cuz you get to 12,800 and",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "the camera just goes completely clean again this has the same thing but it's 3200 uh which is still great so I'm shooting at ISO 3200 now it's quite dark in here might not seem like it I won't add any grain to this video usually I add grain to my videos cuz I just like the Aesthetics of it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
-            "weight": 0.75,
-            "quote_excerpt": "cameras the image quality from the Sony a74 is Sublime it's stunning it's spectacular it is every descriptive word Under the Sun of amazing the amount of great photographs that I've been able to get with this camera is insane now I actually moved from the Sony a7r4 to this one and despite this…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
-            "weight": 0.75,
-            "quote_excerpt": "I haven't noticed a massive difference in my workflow you can still crop quite heavily into your photographs and with Tain so much detail another great thing about having 33 megapixels over something like 61 is it's not too much it doesn't start struggling in lower light conditions I love shooting…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
-            "weight": 0.75,
-            "quote_excerpt": "and post to really just maximize your images and take them to the next level also in low light the camera just performs extremely well and again it's really that sweet spot uh for being amazing quality you have the resolution you have the low light you have a dynamic range all without having insane…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "This is a slight bump to 32 megapixels and I don't know if I need that resolution in every situation.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "Now, if you do put a crop sensor lens on a full-frame camera, you're going to get a vignette.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
-            "weight": 0.75,
-            "quote_excerpt": "do low light tests [Music] do [Music] all right so we've just left nanton and the air museum had a great time in there now we're in the lovely town of stavely the first thing i really noticed this feels a lot like a sony a1 or you know a7r4 a7s3 one of the newer cameras on the market there",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
-            "weight": 0.75,
-            "quote_excerpt": "does give you a noticeable improvement in resolution however when you're focusing the camera in tracking mode it does drop back down to the standard resolution and then pop back up when you stop focusing i'm not finding it that jarring but it is noticeable you also have the option to go to a 120…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
-            "weight": 0.75,
-            "quote_excerpt": "range we're gonna have to wait for the full review for that but i have had a chance to look at the jpegs and this is what i'm finding it looks a lot like sony's other backside illuminated sensors 33 megapixels we're getting great detail here low light performance i'm actually seeing is actually…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
-            "weight": 0.75,
-            "quote_excerpt": "out of 24 megapixel sensors so my initial conclusion is that the jpegs are giving us lots more resolution and we're not taking a hit on anything like low light performance so i think anybody who gets a sony a74 is really going to appreciate the higher megapixel count here but you know will hurt…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
-            "weight": 0.75,
-            "quote_excerpt": "renowned for their autofocus and shooting performance and the a74 continues that tradition except in one area the new 33 megapixel sensor is backside illuminated but not stacked like the sensor on the a1 so readout speeds are relatively slow as a result shooting speeds are still 10 frames per…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
-            "weight": 0.75,
-            "quote_excerpt": "[Music] when it comes to photo quality the a74 also ups the ante over its predecessor you might think that the extra resolution means that the a74 is worse in low light than the a7 3 but nope in fact through much of its iso range the a74 performs better even than sony's low light champ the a7s3…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
-            "weight": 0.75,
-            "quote_excerpt": "clean and usable in most low light situations right up to iso 12800 with plenty of detail even in under exposed shots in fact the a74 has the least noise i've ever seen in that iso range photos exposed correctly are usable up to iso 25600 but noise becomes a serious issue after that sony has…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "profile iso on auto in full frame mode and this isn't like a memory recall profile either it actually remembers the last setting that you've made let's say for example i change the white balance from sunny to cloudy in video mode switch to photo mode snap a few shot and then come back to video mode…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "when we need to crop our photos and having those more megapixels to sample off of for any sort of photo manipulation and with 33 megapixels it's not as crazy high as the a7r the a1 where it's 40 50 60 megapixels that's where your computer will start to choke trying to process those high-res photo…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "the a7 iii and i'm not entirely sure if it's because it has some more megapixels therefore the noise is more apparent or if the a7 iii has some kind of noise reduction going on but i'm sure gerald will have a video getting into the nitty-gritty of iso and dynamic range performance he'll be way more…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "subject matter than i ever can but yeah just based on my test the a74 does look a little noisier compared to the a7 3 in terms of high iso performance okay so i kind of want to blast through these last few things right here just because i've been talking forever but there's still so much more to…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "First, we have every ISO with noise reduction switched off.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "The A74 has been pretty good for me in low light.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "With noise reduction set to normal on both cameras, they look pretty much exactly the same to me.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "okay now we're on the sony a74 could you tell any difference let's do a little side by side here you guys can pixel peep i'm not sure i think it's pretty similar but i would imagine because of that bigger sensor and then squishing it down that this a74 would actually look a little bit better in the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "24 frames per second but probably not as good in low light quick low light test this is iso 1 million 2 400 how am i looking all right let's dial it down just a little bit see how good it is this is iso 51200 these are absolutely absurd numbers that i'm saying right now but uh yeah how",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "light there was almost no there was very small noise i'm filming at 100 not my million i got a like i got a little excited there but 102 400 iso right now and i want to see i'm going to switch over to the a7s in just a second i want to see what's the difference because is this",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "the difference and now there could be that even though the noise is much smaller so in that way it's better in low light possibly but that the dynamic range you're starting to lose a lot of dynamic range or other things with the low but uh yeah i'm really curious to see how does this hold up okay…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "just gonna you can also go much higher sorry higher uh you can go all the way to 400 000 um iso on the a7s but as you can see it is not good at all after reviewing the footage i don't that what do you think is it better or worse switch it's better i don't know i'm confused",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "which supports sony's digital boom mics which are really good so the new 33 megapixel sensor is a highly welcome update because i personally crop a lot of my images especially on smaller birds and animals i can't get really close to so having those extra megapixels are super handy so i think 33…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "i pronounce that right that's the same processor as the more expensive a1 and a7 s3 has and thanks to that sony claims that we will see better low-light performance even though the 33 megapixel sensor so a higher megapixel count usually means worse low light capability so after my own little quick…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "on higher iso levels we actually have better contrast and details i made a quick test of this i know some youtubers that are going in depth with this i can link some of my favorite reviews of the camera down below for you to check out so let's talk about the autofocus the bird iaf and i haven't…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
-            "weight": 0.75,
-            "quote_excerpt": "light because the a1 isn't the best at low light so let's go in the metro for that when it comes to low light what i found out is that this camera is very much like the a7 iii and the regards that it has a isodynamic range up to 50 000 iso versus my a1 only goes to 30",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
-            "weight": 0.75,
-            "quote_excerpt": "new camera that is it's consistent and i really appreciate it and on top of that you also have the autofocus of the e1 which i mean it's just crazy yeah so let me know what you think i think that iso range is just like way more than enough for uh or needs it's just beautiful it's just great",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
-            "weight": 0.75,
-            "quote_excerpt": "now guys one thing that i didn't mention yet has 33 megapixels and when i was shooting and had a big advantage and even johan was saying that's one of the reason he wants to switch is for the flip screen and also that 33 megapixel because it allows you to crop in and still keep a little more quality",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
-            "weight": 0.75,
-            "quote_excerpt": "some neat things under the hood too that this one doesn't have for example it has an wider ISO range and the a74 also provides additional options when it comes to the raw file settings it also posts a higher maximum shutter speed which can be achieved actually on the sx700 but only when you're…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
-            "weight": 0.75,
-            "quote_excerpt": "this example right here it's quite extreme you won't really be underexposing the image this much but you can clearly see the difference in noise another thing I also think is interesting to keep in mind is that the a74 is actually 7K footage that is then down sampled to 4K while the a6700 is 6k…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
-            "weight": 0.75,
-            "quote_excerpt": "is something that I really much like about Sony but keep in mind though if you use APC lenses on the full frame you will have to switch into you know the super 35 crop mode the APC mode you know now when you look at the a6700 and the a74 it all depends on what you care about the",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "Now, besides video performance, the photo quality of the Sony A74 is so great.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "Now, let's talk about the Sony A74's image sensor.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "It's a 33 megapixel sensor, which is going to give you a ton of detail for photography, and it's going to give you really sharp video quality as well.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "And it's a full-frame sensor, so it's a larger sensor that's going to give you better depth of field than an APS-C camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "With that updated sensor also comes really great low light performance.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "And despite this camera not being like an A7S series cameras, so those S series cameras stand for sensitivity or sensitive and they mean they're more sensitive to light and they're better at low light image performance.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "And really all of Sony's cameras actually are known for pretty good low light performance.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "But I'm honestly shocked at how well the low light images look with the A74.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "But when you step up to Sony's full-frame mirrorless cameras, you get way more options for dual slot recording.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "It has a 33 megapixel sensor.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And both of these cameras have a 12 megapixel sensor.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "So this 33 megapixel sensor is way better for still photos.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And then also with Sony Clear Image, Zoom that works with some lenses, you can then zoom in even further, a little bit like 1.5 times, without losing resolution.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "But if you watched my other reviews on the FX3 and the a7SIII, you might remember that I said the 12 megapixel sensor was kind of their superpower.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "So why is it great now to have a higher resolution sensor when I said it was great to have a lower resolution sensor earlier?",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And speaking of those other Sony cameras, let's talk about how the a7IV stacks up against them when it comes to low light performance.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And I can stop this down to f5.0 so you can see how noisy the highest ISO of 409000 is on the a7SIII.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And again, this is something that there's really no way around when you have a high resolution sensor for video.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "You can take great photos with the 12 megapixel sensors on the other cameras",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "Even though I love a big full frame sensor, the ability to crop in can be super handy sometimes.",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 15,
-        "polarity_agreement": 0.667,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.186,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "I haven't noticed a massive difference in my workflow you can still crop quite heavily into your photographs and with Tain so much detail another great thing about having 33 megapixels over something like 61 is it's not too much it doesn't start struggling in lower light conditions I love shooting…",
-        "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
-        "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg"
+        "quote_excerpt": "I heard some people on YouTube when this camera talk came out talking about how it's overheated I've in the three years I've shot weddings all through summer here in New Zealand I've never had any Sony a74 even come up with a warning that it was getting too hot um so yeah 4K whatever it doesn't…",
+        "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+        "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ"
       }
     },
     {
@@ -1942,80 +1434,492 @@
       }
     },
     {
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 35,
+        "neu": 15,
+        "neg": 6,
+        "total": 56,
+        "sources": [
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "boost and sharpness and it wasn't just because of the megapixels I think that the sensor itself was just a lot better and overall I've just been so happy with the image quality out of the a74 it's great in low light it has a really good balance of megapixels and low light the next big thing for me…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "it but the a74 does have dual ISO so when you're shooting video in slog 3 uh it has a base ISO of 800 and then a second ISO of 3200 it's not as good as this the um A7 S3 which has uh the second ISO at 12,8 00 which is just great cuz you get to 12,800 and",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "the camera just goes completely clean again this has the same thing but it's 3200 uh which is still great so I'm shooting at ISO 3200 now it's quite dark in here might not seem like it I won't add any grain to this video usually I add grain to my videos cuz I just like the Aesthetics of it",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
+            "weight": 0.75,
+            "quote_excerpt": "cameras the image quality from the Sony a74 is Sublime it's stunning it's spectacular it is every descriptive word Under the Sun of amazing the amount of great photographs that I've been able to get with this camera is insane now I actually moved from the Sony a7r4 to this one and despite this…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
+            "weight": 0.75,
+            "quote_excerpt": "I haven't noticed a massive difference in my workflow you can still crop quite heavily into your photographs and with Tain so much detail another great thing about having 33 megapixels over something like 61 is it's not too much it doesn't start struggling in lower light conditions I love shooting…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
+            "weight": 0.75,
+            "quote_excerpt": "and post to really just maximize your images and take them to the next level also in low light the camera just performs extremely well and again it's really that sweet spot uh for being amazing quality you have the resolution you have the low light you have a dynamic range all without having insane…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "This is a slight bump to 32 megapixels and I don't know if I need that resolution in every situation.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "Now, if you do put a crop sensor lens on a full-frame camera, you're going to get a vignette.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "weight": 0.75,
+            "quote_excerpt": "do low light tests [Music] do [Music] all right so we've just left nanton and the air museum had a great time in there now we're in the lovely town of stavely the first thing i really noticed this feels a lot like a sony a1 or you know a7r4 a7s3 one of the newer cameras on the market there",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "weight": 0.75,
+            "quote_excerpt": "does give you a noticeable improvement in resolution however when you're focusing the camera in tracking mode it does drop back down to the standard resolution and then pop back up when you stop focusing i'm not finding it that jarring but it is noticeable you also have the option to go to a 120…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "weight": 0.75,
+            "quote_excerpt": "range we're gonna have to wait for the full review for that but i have had a chance to look at the jpegs and this is what i'm finding it looks a lot like sony's other backside illuminated sensors 33 megapixels we're getting great detail here low light performance i'm actually seeing is actually…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "weight": 0.75,
+            "quote_excerpt": "out of 24 megapixel sensors so my initial conclusion is that the jpegs are giving us lots more resolution and we're not taking a hit on anything like low light performance so i think anybody who gets a sony a74 is really going to appreciate the higher megapixel count here but you know will hurt…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
+            "weight": 0.75,
+            "quote_excerpt": "renowned for their autofocus and shooting performance and the a74 continues that tradition except in one area the new 33 megapixel sensor is backside illuminated but not stacked like the sensor on the a1 so readout speeds are relatively slow as a result shooting speeds are still 10 frames per…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
+            "weight": 0.75,
+            "quote_excerpt": "[Music] when it comes to photo quality the a74 also ups the ante over its predecessor you might think that the extra resolution means that the a74 is worse in low light than the a7 3 but nope in fact through much of its iso range the a74 performs better even than sony's low light champ the a7s3…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
+            "weight": 0.75,
+            "quote_excerpt": "clean and usable in most low light situations right up to iso 12800 with plenty of detail even in under exposed shots in fact the a74 has the least noise i've ever seen in that iso range photos exposed correctly are usable up to iso 25600 but noise becomes a serious issue after that sony has…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "profile iso on auto in full frame mode and this isn't like a memory recall profile either it actually remembers the last setting that you've made let's say for example i change the white balance from sunny to cloudy in video mode switch to photo mode snap a few shot and then come back to video mode…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "when we need to crop our photos and having those more megapixels to sample off of for any sort of photo manipulation and with 33 megapixels it's not as crazy high as the a7r the a1 where it's 40 50 60 megapixels that's where your computer will start to choke trying to process those high-res photo…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "the a7 iii and i'm not entirely sure if it's because it has some more megapixels therefore the noise is more apparent or if the a7 iii has some kind of noise reduction going on but i'm sure gerald will have a video getting into the nitty-gritty of iso and dynamic range performance he'll be way more…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "subject matter than i ever can but yeah just based on my test the a74 does look a little noisier compared to the a7 3 in terms of high iso performance okay so i kind of want to blast through these last few things right here just because i've been talking forever but there's still so much more to…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "First, we have every ISO with noise reduction switched off.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "The A74 has been pretty good for me in low light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "With noise reduction set to normal on both cameras, they look pretty much exactly the same to me.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "okay now we're on the sony a74 could you tell any difference let's do a little side by side here you guys can pixel peep i'm not sure i think it's pretty similar but i would imagine because of that bigger sensor and then squishing it down that this a74 would actually look a little bit better in the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "24 frames per second but probably not as good in low light quick low light test this is iso 1 million 2 400 how am i looking all right let's dial it down just a little bit see how good it is this is iso 51200 these are absolutely absurd numbers that i'm saying right now but uh yeah how",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "light there was almost no there was very small noise i'm filming at 100 not my million i got a like i got a little excited there but 102 400 iso right now and i want to see i'm going to switch over to the a7s in just a second i want to see what's the difference because is this",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "the difference and now there could be that even though the noise is much smaller so in that way it's better in low light possibly but that the dynamic range you're starting to lose a lot of dynamic range or other things with the low but uh yeah i'm really curious to see how does this hold up okay…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "just gonna you can also go much higher sorry higher uh you can go all the way to 400 000 um iso on the a7s but as you can see it is not good at all after reviewing the footage i don't that what do you think is it better or worse switch it's better i don't know i'm confused",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "which supports sony's digital boom mics which are really good so the new 33 megapixel sensor is a highly welcome update because i personally crop a lot of my images especially on smaller birds and animals i can't get really close to so having those extra megapixels are super handy so i think 33…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "i pronounce that right that's the same processor as the more expensive a1 and a7 s3 has and thanks to that sony claims that we will see better low-light performance even though the 33 megapixel sensor so a higher megapixel count usually means worse low light capability so after my own little quick…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "on higher iso levels we actually have better contrast and details i made a quick test of this i know some youtubers that are going in depth with this i can link some of my favorite reviews of the camera down below for you to check out so let's talk about the autofocus the bird iaf and i haven't…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
+            "weight": 0.75,
+            "quote_excerpt": "light because the a1 isn't the best at low light so let's go in the metro for that when it comes to low light what i found out is that this camera is very much like the a7 iii and the regards that it has a isodynamic range up to 50 000 iso versus my a1 only goes to 30",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
+            "weight": 0.75,
+            "quote_excerpt": "new camera that is it's consistent and i really appreciate it and on top of that you also have the autofocus of the e1 which i mean it's just crazy yeah so let me know what you think i think that iso range is just like way more than enough for uh or needs it's just beautiful it's just great",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-pierre-t-lambert-hardcore-sony-a7iv-field-test-review-worth-it-or-not",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
+            "weight": 0.75,
+            "quote_excerpt": "now guys one thing that i didn't mention yet has 33 megapixels and when i was shooting and had a big advantage and even johan was saying that's one of the reason he wants to switch is for the flip screen and also that 33 megapixel because it allows you to crop in and still keep a little more quality",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
+            "weight": 0.75,
+            "quote_excerpt": "some neat things under the hood too that this one doesn't have for example it has an wider ISO range and the a74 also provides additional options when it comes to the raw file settings it also posts a higher maximum shutter speed which can be achieved actually on the sx700 but only when you're…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
+            "weight": 0.75,
+            "quote_excerpt": "this example right here it's quite extreme you won't really be underexposing the image this much but you can clearly see the difference in noise another thing I also think is interesting to keep in mind is that the a74 is actually 7K footage that is then down sampled to 4K while the a6700 is 6k…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
+            "weight": 0.75,
+            "quote_excerpt": "is something that I really much like about Sony but keep in mind though if you use APC lenses on the full frame you will have to switch into you know the super 35 crop mode the APC mode you know now when you look at the a6700 and the a74 it all depends on what you care about the",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "Now, besides video performance, the photo quality of the Sony A74 is so great.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "Now, let's talk about the Sony A74's image sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "It's a 33 megapixel sensor, which is going to give you a ton of detail for photography, and it's going to give you really sharp video quality as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "And it's a full-frame sensor, so it's a larger sensor that's going to give you better depth of field than an APS-C camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "With that updated sensor also comes really great low light performance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "And despite this camera not being like an A7S series cameras, so those S series cameras stand for sensitivity or sensitive and they mean they're more sensitive to light and they're better at low light image performance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "And really all of Sony's cameras actually are known for pretty good low light performance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "But I'm honestly shocked at how well the low light images look with the A74.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "But when you step up to Sony's full-frame mirrorless cameras, you get way more options for dual slot recording.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "It has a 33 megapixel sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And both of these cameras have a 12 megapixel sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "So this 33 megapixel sensor is way better for still photos.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And then also with Sony Clear Image, Zoom that works with some lenses, you can then zoom in even further, a little bit like 1.5 times, without losing resolution.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "But if you watched my other reviews on the FX3 and the a7SIII, you might remember that I said the 12 megapixel sensor was kind of their superpower.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "So why is it great now to have a higher resolution sensor when I said it was great to have a lower resolution sensor earlier?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And speaking of those other Sony cameras, let's talk about how the a7IV stacks up against them when it comes to low light performance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And I can stop this down to f5.0 so you can see how noisy the highest ISO of 409000 is on the a7SIII.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And again, this is something that there's really no way around when you have a high resolution sensor for video.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "You can take great photos with the 12 megapixel sensors on the other cameras",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "Even though I love a big full frame sensor, the ability to crop in can be super handy sometimes.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 14,
+        "polarity_agreement": 0.714,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.196,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "I haven't noticed a massive difference in my workflow you can still crop quite heavily into your photographs and with Tain so much detail another great thing about having 33 megapixels over something like 61 is it's not too much it doesn't start struggling in lower light conditions I love shooting…",
+        "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
+        "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg"
+      }
+    },
+    {
       "axis_id": "burst_buffer",
       "display_name": "Burst & Buffer",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 20,
-        "neu": 21,
-        "neg": 9,
-        "total": 50,
+        "pos": 18,
+        "neu": 17,
+        "neg": 7,
+        "total": 42,
         "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I made sure my shutter speed was high because blue tits are quite fast-moving.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Unfortunately the shutter on my camera jammed, but thankfully my partner let me use his Leica CL.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I wanted to experiment with a long exposure, with the clouds moving swiftly across the lighthouse, it created the perfect moment for a dramatic seascape.’ Instagram: @sunnysohals Website: fineartamerica.com/profiles/sohal-scapes Week 39: Lightning Strikes Haulbowline by Ann Bruen Canon EOS R6…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I started photographing straight away and shot about half a roll over half an hour as people floated in and out below.’ Website: www.declanandrewsphotography.com Instagram: @declan.andrews.photography Week 22: Sweet Moment by Claire Norman Nikon Z7, 70-200mm, 1/2500sec at f/4, ISO 800, at 200mm…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "The best lesson I have learned in wildlife photography is that you simply cannot beat jumping in a hedge and having lucky timing when pressing the camera shutter.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I captured ladybirds on camassias using a fast shutter speed to ensure that the photograph was sharp and in focus.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I adjusted my shutter speed to 1/125 to capture the barn owl mid-flight.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Picking a moment to fire the shutter when the wind was calm enough.’ Instagram: @kdm_macro Week 4: Double Vision by Maruša Uranjek Canon EOS R10",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
             "source_type": "youtube",
@@ -2356,10 +2260,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 13,
-        "polarity_agreement": 0.385,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.3,
+        "source_count": 12,
+        "polarity_agreement": 0.417,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.357,
         "contested": true
       },
       "notes": [],
@@ -2367,718 +2271,6 @@
         "quote_excerpt": "Next, we have better mechanical shutter shooting speeds and buffer.",
         "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
         "url": "https://www.youtube.com/watch?v=VNIyACqk8x4"
-      }
-    },
-    {
-      "axis_id": "mount_compat",
-      "display_name": "Mount Compatibility",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 17,
-        "neu": 28,
-        "neg": 1,
-        "total": 46,
-        "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
-            "weight": 0.75,
-            "quote_excerpt": "Do you want a fixed lens, or interchangeable lenses?” The difference?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
-            "weight": 0.75,
-            "quote_excerpt": "Product specifications are available instantly, reviews are abundant, and tutorials covering nearly every photography and video topic imaginable can be found with a quick search.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Week 31: Daydreamer by Bonnie Gilmore Canon EOS R7, Sigma 150-600mm F5-6.3 DG OS HSM | Contemporary 015, 1/1250sec at f/8, ISO 1250 Image: Bonnie Gilmore After two years of photographing little owls, I finally captured the image I’d always dreamed of.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Instagram: @carolemilliganphotography Week 22: The Abyss by Andrew Robertson Canon EOS R5 Mark II, Canon RF10-20mm F4 L IS STM, 1/30sec at f/13, ISO 1000 Image: Andrew Robertson Photographed from inside an ice cave in Alaska.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Instagram: @familyonthemarsh Week 20: Mini Run by Jacki Gordon Canon EOS R5 and Canon RF 100mm F2.8 L Macro IS USM, 1/20sec at f/8, ISO 400 and +1 stop Image: Jacki Gordon My knees are quite dodgy after a lifetime of running and so it is time to repurpose my running shoes.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Lumix G Series Leica 35-100mm F2.8 lens (H-ES35100E)",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Sony 24-70mm F2.8 GM II",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "His quirky pose and bright personality are always a joy, robins never fail to make me smile!’ Facebook & Instagram: @philbishop.photography Week 49: Formerly Feral by Chris Kinch Sony A6000, Sony E 55-210mm F4.5-6.3 OSS, 1/60sec at f/6.3, ISO 3200, at 158mm Image: Chris Kinch ‘Nona was a feral…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "By Laura Peyton Canon EOS 80D, Sigma 150-600mm, 1/640sec at f/6.3, ISO 2500 Image: Laura Peyton ‘I love watching the birds eating the natural food resources this time of year, like berries.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "It’s always a very special feeling to be allowed to be in their presence.’ Instagram/Threads/Bluesky: @Naturehawk Week 41: Buttermere Autumn Awakening by Mark Hetherington Sony A7 iv with Sony 24-105mm lens, with Kase 6-stop ND filter, 10sec at f/14, ISO 50 Image: Mark Hetherington ‘Buttermere in…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Nikon 180-600mm f/5.6-6.3 at 600mm",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Canon EF 70-200mm f/2.8L IS USM II + Canon Extender EF 1.4x III",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Nikon Z 24-70mm f/4 lens",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "by Connor Hill Sony A7 IV, Sony FE 200-600mm F5.6-6.3 G OSS, 1/800sec at f/7.1, ISO 1000 Image: Connor Hill ‘Willow warbler in flight at HazIeton Common.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Nikon NIKKOR Z 600mm f/4 TC VR S",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "A beautiful symbiotic relationship.’ Website: www.dfwild.com Instagram: @dfwild Week 32: Red Dawn by Chris Thomson Nikon D810 , Tamron SP 24-70mm f/2.8, 8sec at f/11, ISO 50 Image: Chris Thomson ‘This is Loch Fada, the Trotternish ridge and the Old Man of Storr on a cold, crisp morning in May.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Spring Forward by Aden Howard Canon EOS R5",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Canon EF100-400mm f/4.5-5.6 L IS II USM",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Sony FE 24-105mm F4 G OSS lens",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Canon RF 70-200 F4 L IS USM",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Canon 500mm F4 L IS USM",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "I'm filming now on the Tamron 17 to 28 mil 2.8 and the Sony a74 and then I have my second one here uh which is pretty well used this is my older one with the Miki grip on there from the a92 cuz it's it uh fits the same in terms of reliability I've genuinely not had any problems",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "17 to 28 mil 2.8 50 mil 1.2 G Master my trusty old beaten up 24 mil 1.4 G Master 85 mil 1.4 G master and the Tamron 28 to 75 2.8 uh this is a great all round lens as well and a perfect example of why the mount system is so good um just for all the options",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
-            "weight": 0.75,
-            "quote_excerpt": "and if it doesn't it just begs the question again why does this Sony a74 a very similar price point have a crop but then again the cannon will probably have to spend half its life in the freezer so it doesn't melt itself this is a great way of pissing off both sides Canon uses Sony users all I",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
-            "weight": 0.75,
-            "quote_excerpt": "angle lens and pulling off a wide angle with that crop factor is very difficult however Sony does make some wide angle lenses specifically for sensors with a crop factor and if you use any of those then you can get that focal link so my favorite is the 11 mm f1.8 which I do have linked below and if",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
-            "weight": 0.75,
-            "quote_excerpt": "attach it with cables but hands down this is just the largest ecosystem of native lenses and accessories on any camera on the market right now when it comes to the features of this camera it has so many that there are just a bunch that you don't even realize how spoiled you are until you start…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "I really enjoy that all of Sony's EF lenses work between all of their cameras in their ecosystem.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "Whether you have a crop sensor APS-C camera or the top-of-the-line cinema camera, the lenses are going to work across all of them without an adapter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "Depending on what you're shooting, there's a lot of lens options for your Sony cameras.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "Sony has their own line of lenses and even their G Master lenses if you really want to ball out.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "There's probably some other companies, but there's a variety of lenses at different price points to match any type of user.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "But I've been very happy with my Tamron lenses, especially for variable zoom lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "One of which, no surprise, is the Fuji X100 6.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "however the thing is 4k 6d was such a logical next step from the a7 3 to the a74 and i thought i could get over it and for the most part i could for focal lengths that are 35 millimeters and up but then i remember i picked up the 14 g master i love this lens it's incredibly",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "I started off with the A7 III, which I borrowed off a friend to test out.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "Both the three and four were my workhorse cameras.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "I'm getting some close-ups here and I'm using the A75 [music] with the 50 F1.2 and I'm using it at f1.2 2 to make it as challenging as possible for the cameras.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "mount this to a larger lens like the 200 to 600 it doesn't look as awkward i'm really happy for that update and i feel like sony has really listened and taken stuff that we like from the uh a7 s3 and the a1 and put it inside of the body of the a74 so sony has come up with",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "it will fill the shoes of the a73 pretty well because what's made the a73 the popular camera that it is because it's the perfect hybrid camera it can do photography really well and you can do videography really well and you don't have to compromise too much on either side and i think it does just…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "So, this little camera right here is the Sony A74.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "And the A74 is the most budget friendly full-frame camera that Sony makes right now to support that two card slots.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "If you want to check out some high quality lenses that pair well with a camera like this, or any Sony camera for that matter, you can check out this video right here on screen.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "At this point, it's probably not a surprise that the Sony a7IV is a genuinely great camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And so basically that's talk about more of the basics of the Sony a7IV.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "It doesn't work with every lens, but it works with pretty much all Sony lenses.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And be sure to check out these reviews for the Sony a7SIII and FX3 to round out my \"Sony Camera Review Trilogy!™\"",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 11,
-        "polarity_agreement": 0.455,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.413,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "Whether you have a crop sensor APS-C camera or the top-of-the-line cinema camera, the lenses are going to work across all of them without an adapter.",
-        "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-        "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ"
-      }
-    },
-    {
-      "axis_id": "image_quality",
-      "display_name": "Image Quality",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 24,
-        "neu": 11,
-        "neg": 1,
-        "total": 36,
-        "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Instagram @ania.m.photography Week 29: Coastal Colours by Mark Richards Canon EOS 6D Mark II, Tamron 70-200 f2.8, 1/250sec at f/6.3, ISO 100, 200mm Image: Mark Richards Walking back to the car park after a morning of long-exposure work along the coast, I noticed this striking section of an…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "a black & white edit emphasised the forms and textures of the sand.’ Instagram: @pauldixonphotography Week 14: Cosmic Frequency by Joao Yordanov Serralheiro Sony Alpha 7 IV, Sony FE 14mm F1.8 GM, Benro Mach3 TMA28C w/ Benro Geared Head, Godox Intervalometer, 181x30sec at f/2.8, ISO 500 Image: Joao…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I am very pleased with how my images turned out",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "the colours are already hinting at the potential magic to come.’ Website: markhetherington.com Instagram: @markshetherington Facebook: markhetherington Week 40: Sunset At Penmon Point Lighthouse by Sandip Singh Canon EOS 5D Mark IV, Canon EF 24-70mm F2.8 at 28mm, 180.0s at f/5, ISO 100, 6 Stop ND…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I am enjoying taking photos with black & white film.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I wanted to capture a completely different aspect to how we normally see the river.’ Website: www.jksphotography.co.uk Facebook and Instagram: @jks.photographer Week 28: Backseat Drivers by Dominic Proctor Sony A6700, Sony FE 200-600mm F5.6-6.3 G, at 600mm, 1/800sec at f/8, ISO 1250 Image: Dominic…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "The image was processed with StarStax and styled in Lightroom.’ Instagram: @andy_wilkinson_ Website: awmedia.co.uk Week 11: Icelandic Nights by Jacob Starr Canon EOS 2000D, Canon EF-S 18-55mm IS II, 10sec at f/3.5, ISO 1600 Image: Jacob Starr ‘Exposed to the elements, in the middle of nowhere…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I adjusted my settings accordingly and enjoyed observing these beautiful chaffinches.’ Instagram: @david_twomeyphotography Week 7: New Year’s Princess by Natalia Zmyslowska Canon EOS R, Sigma 35mm F1.4 DG HSM | Art, 1/320sec at f/2.2, ISO 12,800, 35mm Image: Natalia Zmyslowska ‘During the Chinese…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I love the colours and the way they change as the light shifts, it’s just stunning.’ Instagram: @njd_photos Week 29: Flanders Sundown by Clive Geary Canon EOS R6, Canon RF 15-35mm F2.8 L, images stacked 1/6sec, 1/15sec, 1/40sec, 0.4sec, 1sec at f/16, ISO 400 Flanders Sundown by Clive Geary Canon…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Sony 24-105mm F4, 1/80sec at f/14, ISO 125 Image: Gemma Rourke ‘Thru-hiking the Kungsleden in Arctic Sweden, I witnessed raw elemental beauty combining to create images akin to paintings.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "6400 Image: Dave Lynch ‘I escaped a cloudy Aberdeen for 24 hours to shoot this image of the Fairy Pools on Skye.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "and for me it's one of the reasons why it's going to be one of those cameras similar to the d750 that uh just sticks around because it's just so good when the a74 came out the images had much more accurate color now I personally never really had an issue with the a73 colors just because I'm always…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
-            "weight": 0.75,
-            "quote_excerpt": "in raw and you can manipulate them almost endlessly to get them as you want but the a73 images did take a little bit more work than what I was used to the a74 came out and it just kind of changed everything and the files were just much more accurate way cleaner um there was kind of a nice",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
-            "weight": 0.75,
-            "quote_excerpt": "Now, there might be a bit of image quality difference.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
-            "weight": 0.75,
-            "quote_excerpt": "with every new camera lately and the a74 has perhaps its best setup yet the green cast we've seen on earlier models is gone and colors are accurate right out of the camera and easier to balance and post than ever before jpegs look great with a nice balance between detail and noise reduction the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "example you'll notice that there is no number markings on the eb dial and that's because you can now reprogram it you can have it change your shutter speed your aperture value cycle through your creative looks profile and change to kelvin on your white balance but the stuff that's gonna really…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "remember that i've changed my white balance to cloudy oh and you know how our video file names are caesar zero ones users or twos or three wow like photo files the camera will actually continue the sequential order even when you swap sd cards or you can even change the video file naming to whatever…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
-            "weight": 0.75,
-            "quote_excerpt": "light package similarly we also now have high efficiency image format which is a middle ground for raws and jpegs where you may not need all that data from a raw file but still want some of that flexibility in post compared to a jpeg file but let's move on to video because we have a lot to talk…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "One of the main differences I noticed is in the color rendering.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "Throughout this video, I'm showing you the JPEG straight out of [music] camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "I shot using different white balance settings on location to keep the images looking consistent since I didn't know if I would have access to the RAW files when I'm editing this video, but it turns out Lightroom has given partial support at the moment where lossless compressed images work, but…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "But, I noticed the A75 produced consistently warmer and greener images when using the same settings as the A74.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "For context, I always shoot with manual white balance at around 5200 Kelvin for any camera brand that I'm using as it gives me a good baseline.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "On the A75, I had to shoot at 4,800 Kelvin and a slightly higher tint to get natural looking colors.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
-            "weight": 0.75,
-            "quote_excerpt": "You can get great colors straight out of camera by adjusting your [music] white balance and tint accordingly, but it's something I think is worth pointing out, especially if you plan to use this camera alongside a different Sony [music] body.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
-            "weight": 0.75,
-            "quote_excerpt": "don't know have we reached that point of i don't know on top of that we have s cinetone colors which i absolutely love four two ten that was my iphone four two ten bit super nice to color grade the body is almost identical to the sony a7 iii except the dial system is a little bit different which",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
-            "weight": 0.75,
-            "quote_excerpt": "is a picture profile taken from sony's more advanced cinema cameras and i love the ascenditon so the b-roll you saw in the beginning of this video is all shot in a sino-tone picture profile and i really like the look of this picture profile i'm not really into color grading my stuff because i don't…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "So, this is great for professional color grading or even if you don't color grade your footage and you want the best possible colors out of your camera, that's really going to help get better colors.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "It's not some of the older generations of Sony cameras with the older sensors and the older color science.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "Fortunately, most of the time I film in the XAVC S mode, which is the second highest quality.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "But now let's talk about what is arguably the most important part of any camera, and that is the image quality.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "And I say, \"arguably, \"because this is a RED One from 2007, which is a professional movie-making camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "But setting the camera up, and using it, and getting to a point where you can get that image quality is a really tiring, involved process.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "So not only do all of these cameras have great image quality, but they're also very easy to use, which means it's very easy to get that great image quality.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "Filming in 10 bit, you have lots of color information that you can push and adjust and make things look just how you want them.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "If you do want to film in S-LOG, then you have even more flexibility with your exposure and your color.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.8,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.306,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "But now let's talk about what is arguably the most important part of any camera, and that is the image quality.",
-        "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-        "url": "https://www.youtube.com/watch?v=_qqL-rftWlI"
       }
     },
     {
@@ -3372,13 +2564,11 @@
         "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
         "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I"
       }
-    }
-  ],
-  "detail_axes": [
+    },
     {
       "axis_id": "evf_lcd",
       "display_name": "EVF & LCD",
-      "axis_type": "detail",
+      "axis_type": "lead",
       "measurement": null,
       "sentiment": {
         "pos": 20,
@@ -3646,38 +2836,268 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "compared to the a7 3 so the back panel still just over a million dots nothing fancy there it does fully articulate now when it comes to the evf we do have a bit of an improvement here we're moving up to a 3.69 million dot evf which is in line with the price point very similar to the competition",
-        "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
-        "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ"
+        "quote_excerpt": "It's incredibly helpful, not just for like vlogging stuff, but having an articulating screen.",
+        "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+        "url": "https://www.youtube.com/watch?v=_qqL-rftWlI"
       }
     },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 13,
+        "neu": 13,
+        "neg": 1,
+        "total": 27,
+        "sources": [
+          {
+            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
+            "weight": 0.75,
+            "quote_excerpt": "Do you want a fixed lens, or interchangeable lenses?” The difference?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
+            "weight": 0.75,
+            "quote_excerpt": "Product specifications are available instantly, reviews are abundant, and tutorials covering nearly every photography and video topic imaginable can be found with a quick search.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "I'm filming now on the Tamron 17 to 28 mil 2.8 and the Sony a74 and then I have my second one here uh which is pretty well used this is my older one with the Miki grip on there from the a92 cuz it's it uh fits the same in terms of reliability I've genuinely not had any problems",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "17 to 28 mil 2.8 50 mil 1.2 G Master my trusty old beaten up 24 mil 1.4 G Master 85 mil 1.4 G master and the Tamron 28 to 75 2.8 uh this is a great all round lens as well and a perfect example of why the mount system is so good um just for all the options",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-curtis-padley-sony-a7iv-long-term-review-the-almost-perfect-hybrid-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
+            "weight": 0.75,
+            "quote_excerpt": "and if it doesn't it just begs the question again why does this Sony a74 a very similar price point have a crop but then again the cannon will probably have to spend half its life in the freezer so it doesn't melt itself this is a great way of pissing off both sides Canon uses Sony users all I",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
+            "weight": 0.75,
+            "quote_excerpt": "angle lens and pulling off a wide angle with that crop factor is very difficult however Sony does make some wide angle lenses specifically for sensors with a crop factor and if you use any of those then you can get that focal link so my favorite is the 11 mm f1.8 which I do have linked below and if",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
+            "weight": 0.75,
+            "quote_excerpt": "attach it with cables but hands down this is just the largest ecosystem of native lenses and accessories on any camera on the market right now when it comes to the features of this camera it has so many that there are just a bunch that you don't even realize how spoiled you are until you start…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "I really enjoy that all of Sony's EF lenses work between all of their cameras in their ecosystem.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "Whether you have a crop sensor APS-C camera or the top-of-the-line cinema camera, the lenses are going to work across all of them without an adapter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "Depending on what you're shooting, there's a lot of lens options for your Sony cameras.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "Sony has their own line of lenses and even their G Master lenses if you really want to ball out.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "There's probably some other companies, but there's a variety of lenses at different price points to match any type of user.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "But I've been very happy with my Tamron lenses, especially for variable zoom lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "One of which, no surprise, is the Fuji X100 6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "however the thing is 4k 6d was such a logical next step from the a7 3 to the a74 and i thought i could get over it and for the most part i could for focal lengths that are 35 millimeters and up but then i remember i picked up the 14 g master i love this lens it's incredibly",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "I started off with the A7 III, which I borrowed off a friend to test out.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "Both the three and four were my workhorse cameras.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "I'm getting some close-ups here and I'm using the A75 [music] with the 50 F1.2 and I'm using it at f1.2 2 to make it as challenging as possible for the cameras.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "mount this to a larger lens like the 200 to 600 it doesn't look as awkward i'm really happy for that update and i feel like sony has really listened and taken stuff that we like from the uh a7 s3 and the a1 and put it inside of the body of the a74 so sony has come up with",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "it will fill the shoes of the a73 pretty well because what's made the a73 the popular camera that it is because it's the perfect hybrid camera it can do photography really well and you can do videography really well and you don't have to compromise too much on either side and i think it does just…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "So, this little camera right here is the Sony A74.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "And the A74 is the most budget friendly full-frame camera that Sony makes right now to support that two card slots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "If you want to check out some high quality lenses that pair well with a camera like this, or any Sony camera for that matter, you can check out this video right here on screen.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "At this point, it's probably not a surprise that the Sony a7IV is a genuinely great camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And so basically that's talk about more of the basics of the Sony a7IV.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "It doesn't work with every lens, but it works with pretty much all Sony lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And be sure to check out these reviews for the Sony a7SIII and FX3 to round out my \"Sony Camera Review Trilogy!™\"",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 10,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.259,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Whether you have a crop sensor APS-C camera or the top-of-the-line cinema camera, the lenses are going to work across all of them without an adapter.",
+        "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+        "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ"
+      }
+    }
+  ],
+  "detail_axes": [
     {
       "axis_id": "stabilization",
       "display_name": "Stabilization",
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 16,
-        "neu": 11,
+        "pos": 15,
+        "neu": 10,
         "neg": 2,
-        "total": 29,
+        "total": 27,
         "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "Instagram: @cornish_dronephotography Website: cornishdronephotography.co.uk Week 24: Aligned and waiting by Georgia Olympus Miju 2, Kodak Ultramax 400 Image: Georgia This photo was taken in a beautiful flat in Berlin which had the most amazing light in the evenings.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "80mm Image: Scott Tovell ‘First time shooting at this location and focusing heavily on a composition in the opposite direction",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-dan-watson-sony-a7iv-review-in-2025-should-you-still-buy-it",
             "source_type": "youtube",
@@ -3898,10 +3318,10 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.667,
+        "source_count": 8,
+        "polarity_agreement": 0.625,
         "dominant_polarity": "pos",
-        "max_source_share": 0.207,
+        "max_source_share": 0.222,
         "contested": false
       },
       "notes": [],
@@ -3917,27 +3337,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 19,
-        "neu": 6,
+        "pos": 18,
+        "neu": 5,
         "neg": 2,
-        "total": 27,
+        "total": 25,
         "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I wanted to convey a sense of lines and runners receding into the distance, so I opted for a wide aperture.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "four images, each with a different focus point",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
             "source_type": "youtube",
@@ -4142,71 +3546,36 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.778,
+        "source_count": 8,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "pos",
-        "max_source_share": 0.222,
+        "max_source_share": 0.24,
         "contested": false
       },
-      "notes": []
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "that we've had a lot of demanding autofocusing tests today but we did just have three whitetail bucks walk behind us right here in town and subject detection animals picking up their eyes quickly no problem and i do love sony's real-time tracking and their eye detect for humans as well i mean it…",
+        "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+        "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ"
+      }
     },
     {
-      "axis_id": "build",
-      "display_name": "Build Quality",
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 6,
-        "neu": 8,
-        "neg": 2,
-        "total": 16,
+        "pos": 17,
+        "neu": 7,
+        "neg": 1,
+        "total": 25,
         "sources": [
           {
-            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
             "weight": 0.75,
-            "quote_excerpt": "Instead, he asked me the following questions: “What do you want to shoot, stills or video?” “Is this for work or travel, or both?” “Is something like weather sealing important to you?” “Are you carrying it all day?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
-            "weight": 0.75,
-            "quote_excerpt": "Likewise, a professional photographer or videographer has likely solved the same technical challenges countless times under different conditions, navigating equipment failures, difficult clients, changing weather, tight deadlines, and creative obstacles.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "My main objective was to spend some valuable time with family but couldn’t resist “smuggling” my camera in under my coat.’ Instagram: @andycompo Website: andycomp38.wixsite.com/andy-compton-2 Week 44: Revive & Thrive by Natasha Winter Leica CL",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I was able to showcase the textures and form in a way that feels both dynamic and intimate.’ Instagram: @chloemillerphotography_ Week 47: Disconnection by Poultry_Motion Sony Alpha 1",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "And in the quiet of the phone boxes, art was to be found.’ Instagram: @leicacharm Model: @anjleebathia Week 13: North Cornish Gold by Daryl McCabe Sony Alpha 7 III , 70-200mm f/4, 1/500sec at f/4, ISO 320 Image: Daryl McCabe ‘This was a balmy January day in North Cornwall, with the rare combination…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "as well as allowing my camera to “see through” the dirty windows!’ Instagram: @charlesamesphotography Week 2: Daytime Harmony by Maria McGrath Canon EOS R7",
+            "quote_excerpt": "and for me it's one of the reasons why it's going to be one of those cameras similar to the d750 that uh just sticks around because it's just so good when the a74 came out the images had much more accurate color now I personally never really had an issue with the a73 colors just because I'm always…",
             "witness": "firsthand"
           },
           {
@@ -4214,7 +3583,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
             "weight": 0.75,
-            "quote_excerpt": "ironed out all the little quirks that the camera has uh which are not many to be fair the camera isn't perfect but it's pretty bloody close to it so let's just get straight into it I'm going to check some raw files down in the description so you guys can just have a play if you want to see",
+            "quote_excerpt": "in raw and you can manipulate them almost endlessly to get them as you want but the a73 images did take a little bit more work than what I was used to the a74 came out and it just kind of changed everything and the files were just much more accurate way cleaner um there was kind of a nice",
             "witness": "firsthand"
           },
           {
@@ -4222,15 +3591,111 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
             "weight": 0.75,
-            "quote_excerpt": "After a couple years of use, this camera has held up surprisingly well.",
+            "quote_excerpt": "Now, there might be a bit of image quality difference.",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_id": "youtube-engadget-sony-a7-iv-review-a-nearly-perfect-hybrid-powerhouse",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
             "weight": 0.75,
-            "quote_excerpt": "bring this review home until thank you okay over to chris okay so lots of video features to digest but let's talk about photography again because i've had a chance to look at the images now keep in mind this is an initial review we still can't open the raw file so i can't really talk about things…",
+            "quote_excerpt": "with every new camera lately and the a74 has perhaps its best setup yet the green cast we've seen on earlier models is gone and colors are accurate right out of the camera and easier to balance and post than ever before jpegs look great with a nice balance between detail and noise reduction the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "example you'll notice that there is no number markings on the eb dial and that's because you can now reprogram it you can have it change your shutter speed your aperture value cycle through your creative looks profile and change to kelvin on your white balance but the stuff that's gonna really…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "remember that i've changed my white balance to cloudy oh and you know how our video file names are caesar zero ones users or twos or three wow like photo files the camera will actually continue the sequential order even when you swap sd cards or you can even change the video file naming to whatever…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
+            "weight": 0.75,
+            "quote_excerpt": "light package similarly we also now have high efficiency image format which is a middle ground for raws and jpegs where you may not need all that data from a raw file but still want some of that flexibility in post compared to a jpeg file but let's move on to video because we have a lot to talk…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "One of the main differences I noticed is in the color rendering.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "Throughout this video, I'm showing you the JPEG straight out of [music] camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "I shot using different white balance settings on location to keep the images looking consistent since I didn't know if I would have access to the RAW files when I'm editing this video, but it turns out Lightroom has given partial support at the moment where lossless compressed images work, but…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "But, I noticed the A75 produced consistently warmer and greener images when using the same settings as the A74.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "For context, I always shoot with manual white balance at around 5200 Kelvin for any camera brand that I'm using as it gives me a good baseline.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "On the A75, I had to shoot at 4,800 Kelvin and a slightly higher tint to get natural looking colors.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-julia-trotti-why-im-not-buying-the-sony-a7v-vs-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
+            "weight": 0.75,
+            "quote_excerpt": "You can get great colors straight out of camera by adjusting your [music] white balance and tint accordingly, but it's something I think is worth pointing out, especially if you plan to use this camera alongside a different Sony [music] body.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-matti-haapoja-sony-a7-iv-review-good-but-not-what-you-were-expecting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
+            "weight": 0.75,
+            "quote_excerpt": "don't know have we reached that point of i don't know on top of that we have s cinetone colors which i absolutely love four two ten that was my iphone four two ten bit super nice to color grade the body is almost identical to the sony a7 iii except the dial system is a little bit different which",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-olle-nilsson-sony-a7-iv-hands-on-review-nature-bird-eye-af",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
+            "weight": 0.75,
+            "quote_excerpt": "is a picture profile taken from sony's more advanced cinema cameras and i love the ascenditon so the b-roll you saw in the beginning of this video is all shot in a sino-tone picture profile and i really like the look of this picture profile i'm not really into color grading my stuff because i don't…",
             "witness": "firsthand"
           },
           {
@@ -4238,15 +3703,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
             "weight": 0.75,
-            "quote_excerpt": "And we've talked about it at Think Media a few times on the channel, but there are just so many great cameras out there that we like to review that it feels like we haven't really had the chance to let this camera shine on the channel very much.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
-            "weight": 0.75,
-            "quote_excerpt": "There's also weather sealing with this camera.",
+            "quote_excerpt": "So, this is great for professional color grading or even if you don't color grade your footage and you want the best possible colors out of your camera, that's really going to help get better colors.",
             "witness": "unattested"
           },
           {
@@ -4254,7 +3711,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
             "weight": 0.75,
-            "quote_excerpt": "If you're somebody who shoots outdoors a lot and you need to make sure that your camera's not going to break if you take it out in the rain or into a dusty or sandy environment or something, it's going to be able to withstand some of those more challenging weather environments.",
+            "quote_excerpt": "It's not some of the older generations of Sony cameras with the older sensors and the older color science.",
             "witness": "unattested"
           },
           {
@@ -4262,23 +3719,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
             "weight": 0.75,
-            "quote_excerpt": "Very average quality LCD that they've been putting on everything.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "So while the image quality is great, it's hard to recommend something like that because it's not very practical to use most of the time.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
-            "weight": 0.75,
-            "quote_excerpt": "But even though overheating has not been an issue for me in the five months that I've been using this camera so far, for the sake of this video, I did want to do some, again, \"super scientific\" testing.",
+            "quote_excerpt": "Fortunately, most of the time I film in the XAVC S mode, which is the second highest quality.",
             "witness": "firsthand"
           },
           {
@@ -4286,20 +3727,65 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
             "weight": 0.75,
-            "quote_excerpt": "I've had no overheating issues ever with my Sony a7SIII, and if you really want a camera that you know will never ever overheat, that's the FX3, because again, it has a built-in fan to prevent overheating.",
+            "quote_excerpt": "But now let's talk about what is arguably the most important part of any camera, and that is the image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "And I say, \"arguably, \"because this is a RED One from 2007, which is a professional movie-making camera.",
             "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "But setting the camera up, and using it, and getting to a point where you can get that image quality is a really tiring, involved process.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "So not only do all of these cameras have great image quality, but they're also very easy to use, which means it's very easy to get that great image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "Filming in 10 bit, you have lots of color information that you can push and adjust and make things look just how you want them.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "If you do want to film in S-LOG, then you have even more flexibility with your exposure and your color.",
+            "witness": "unattested"
           }
         ]
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 7,
-        "polarity_agreement": 0.571,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.25,
-        "contested": true
+        "source_count": 9,
+        "polarity_agreement": 0.778,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.28,
+        "contested": false
       },
-      "notes": []
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "example you'll notice that there is no number markings on the eb dial and that's because you can now reprogram it you can have it change your shutter speed your aperture value cycle through your creative looks profile and change to kelvin on your white balance but the stuff that's gonna really…",
+        "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
+        "url": "https://www.youtube.com/watch?v=eVvUs9lFatY"
+      }
     },
     {
       "axis_id": "price",
@@ -4452,9 +3938,9 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "okay so price it's gonna be twenty five hundred dollars of body only twenty seven hundred dollars with the kit lens it's about five hundred dollars more than the current a7 iii right now and i don't know if the price for the a7 iii will drop but it makes sense considering how much they beeped up…",
-        "source_id": "youtube-jason-vong-sony-a7-iv-the-upgrade-weve-been-waiting-four",
-        "url": "https://www.youtube.com/watch?v=eVvUs9lFatY"
+        "quote_excerpt": "let me know all right so without lying were you able to uh see any difference when you were comparing the Cyber side well if you said that the right side was the a6700 then you are totally right and you get an awesome price of being right that's not a bad price you know that's a good price",
+        "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
+        "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM"
       }
     },
     {
@@ -4598,12 +4084,7 @@
         "max_source_share": 0.6,
         "contested": false
       },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "dance floor at a wedding when all the lights have been turned off it still works well but it could work a little bit better so a couple of small minor things to talk about the battery life on this camera is great um I can get through I've never used more than two batteries for a full wedding whether",
-        "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
-        "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ"
-      }
+      "notes": []
     },
     {
       "axis_id": "connectivity",
@@ -4746,32 +4227,135 @@
       }
     },
     {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 6,
+        "neg": 2,
+        "total": 12,
+        "sources": [
+          {
+            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
+            "weight": 0.75,
+            "quote_excerpt": "Instead, he asked me the following questions: “What do you want to shoot, stills or video?” “Is this for work or travel, or both?” “Is something like weather sealing important to you?” “Are you carrying it all day?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
+            "weight": 0.75,
+            "quote_excerpt": "Likewise, a professional photographer or videographer has likely solved the same technical challenges countless times under different conditions, navigating equipment failures, difficult clients, changing weather, tight deadlines, and creative obstacles.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-chris-turner-photographer-sony-a7iv-review-3-years-late",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
+            "weight": 0.75,
+            "quote_excerpt": "ironed out all the little quirks that the camera has uh which are not many to be fair the camera isn't perfect but it's pretty bloody close to it so let's just get straight into it I'm going to check some raw files down in the description so you guys can just have a play if you want to see",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
+            "weight": 0.75,
+            "quote_excerpt": "After a couple years of use, this camera has held up surprisingly well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7-iv-first-impressions-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
+            "weight": 0.75,
+            "quote_excerpt": "bring this review home until thank you okay over to chris okay so lots of video features to digest but let's talk about photography again because i've had a chance to look at the images now keep in mind this is an initial review we still can't open the raw file so i can't really talk about things…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "And we've talked about it at Think Media a few times on the channel, but there are just so many great cameras out there that we like to review that it feels like we haven't really had the chance to let this camera shine on the channel very much.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "There's also weather sealing with this camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-think-media-sony-a7iv-still-sonys-best-value-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
+            "weight": 0.75,
+            "quote_excerpt": "If you're somebody who shoots outdoors a lot and you need to make sure that your camera's not going to break if you take it out in the rain or into a dusty or sandy environment or something, it's going to be able to withstand some of those more challenging weather environments.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "Very average quality LCD that they've been putting on everything.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "So while the image quality is great, it's hard to recommend something like that because it's not very practical to use most of the time.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "But even though overheating has not been an issue for me in the five months that I've been using this camera so far, for the sake of this video, I did want to do some, again, \"super scientific\" testing.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tom-buck-the-almost-perfect-hybrid-camera-sony-a7iv-full-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
+            "weight": 0.75,
+            "quote_excerpt": "I've had no overheating issues ever with my Sony a7SIII, and if you really want a camera that you know will never ever overheat, that's the FX3, because again, it has a built-in fan to prevent overheating.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 6,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
       "axis_id": "dimensions",
       "display_name": "Dimensions",
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 4,
+        "pos": 2,
+        "neu": 3,
         "neg": 3,
-        "total": 10,
+        "total": 8,
         "sources": [
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "the half-deflated letters of the H and Y hanging in there to remind us simply to be happy.’ Instagram: @thereallittleamy Week 2: Battling Shorties by Carly-Ann Haxby Canon EOS R6 Mark II, Canon RF100-500mm F4.5-7.1 L IS USM with RF1.4x extender, 1/1600sec at f/10, ISO 16000, 700mm Image: Carly-Ann…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "By Wesley Kristopher Nikon Z 7II , Nikkor Z 24-120mm S f/4, 1/1000sec at f/4, ISO 200 Image: Wesley Kristopher ‘The Peak District is usually my proving ground for photography but when I heard a flock of ducks had taken to a couple of water tanks outside Sheffield City Hall I just had to investigate!",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
             "source_type": "youtube",
@@ -4840,18 +4424,13 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.75,
+        "source_count": 3,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "pos",
-        "max_source_share": 0.6,
+        "max_source_share": 0.75,
         "contested": false
       },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "I on the other hand like that it's small and compact simply because it takes up less space when I'm out in the wild so do you value small and compact over big and bulky also the a6700 is newer and it is equipped with some cool new features for both photography and the iography some of them like…",
-        "source_id": "youtube-that-icelandic-guy-sony-a6700-vs-sony-a7iv-which-is-actually-better",
-        "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM"
-      }
+      "notes": []
     },
     {
       "axis_id": "weight",
@@ -4859,10 +4438,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 6,
-        "neu": 4,
+        "pos": 5,
+        "neu": 1,
         "neg": 0,
-        "total": 10,
+        "total": 6,
         "sources": [
           {
             "source_id": "rss-adorama-learning-center-42west-why-human-guidance-in-photography-matters-so-much-in-the-age-2026",
@@ -4879,38 +4458,6 @@
             "weight": 0.75,
             "quote_excerpt": "“Photography literally doesn’t exist without light, so why wouldn’t you want to understand all its intricacies?",
             "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "the quiet human presence moving through it.’ Instagram: @the.project.photography Week 10: Upside-down House by Dale Hodgetts Canon EOS R6 Mark II, Canon EF 16-35mm f/2.8L III, 6sec at f/2.8, ISO 200 Image: Dale Hodgetts ‘I visited the light festival in Bristol with my mate on Sunday 22 February.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "I grabbed my camera and quickly took the shot.’ Instagram: @ian.hollowayphotos Week 7: Catching the Light by Helen Cherry Olympus OM-D E-M1 Mark II, Olympus 40-150mm Pro, 1/5000sec at f/3.5, ISO 1600, 142mm Image: Helen Cherry ‘Taken at Lynford Arboretum in Norfolk.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "hope entwined in a fleeting, magical moment.’ Social media: @theworldwithnat Website: theworldwithnat.com Week 6: Low Light, Slow Flight by Sarah Michelle Wyer Nikon Z7II, Nikon Z 100-400mm VR S, 1/20sec at f/5.6, ISO 640 Image: Sarah Michelle Wyer ‘By using a slow shutter speed, I was able to…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-            "weight": 0.75,
-            "quote_excerpt": "We then finally had to drive around him as he was not for mooooving!’ Instagram: @t29sra Week 1: Solitude in the Shadows by Dobrota Viorel-Daniel Canon EOS 70D, Canon 17-55mm, 1/80sec at f/4, ISO 100 Image: Dobrota Viorel-Daniel ‘We are living in a world where we are surrounded by big buildings…",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-davey-gravy-100000-shots-later-sony-a7iv",
@@ -4948,10 +4495,10 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.667,
+        "source_count": 5,
+        "polarity_agreement": 0.8,
         "dominant_polarity": "pos",
-        "max_source_share": 0.4,
+        "max_source_share": 0.333,
         "contested": false
       },
       "notes": [],
@@ -5402,21 +4949,14 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Reviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). Coverage of mount compatibility is mostly neutral: 37% positive, 61% neutral, 2% negative across 46 claims. On video capability, 87% of the 15 sources covering it point the same direction.",
+    "consensus_paragraph": "Reviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). On video capability, 93% of the 14 sources covering it point the same direction.",
     "aspect_breakdown": [
       {
         "aspect": "video_capability",
         "pos": 65,
-        "neu": 26,
+        "neu": 25,
         "neg": 17,
-        "total": 108
-      },
-      {
-        "aspect": "sensor_performance",
-        "pos": 36,
-        "neu": 17,
-        "neg": 6,
-        "total": 59
+        "total": 107
       },
       {
         "aspect": "handling",
@@ -5426,25 +4966,18 @@
         "total": 56
       },
       {
+        "aspect": "sensor_performance",
+        "pos": 35,
+        "neu": 15,
+        "neg": 6,
+        "total": 56
+      },
+      {
         "aspect": "burst_buffer",
-        "pos": 20,
-        "neu": 21,
-        "neg": 9,
-        "total": 50
-      },
-      {
-        "aspect": "mount_compat",
-        "pos": 17,
-        "neu": 28,
-        "neg": 1,
-        "total": 46
-      },
-      {
-        "aspect": "image_quality",
-        "pos": 24,
-        "neu": 11,
-        "neg": 1,
-        "total": 36
+        "pos": 18,
+        "neu": 17,
+        "neg": 7,
+        "total": 42
       },
       {
         "aspect": "generation_context",
@@ -5461,25 +4994,32 @@
         "total": 31
       },
       {
-        "aspect": "stabilization",
-        "pos": 16,
-        "neu": 11,
-        "neg": 2,
-        "total": 29
+        "aspect": "mount_compat",
+        "pos": 13,
+        "neu": 13,
+        "neg": 1,
+        "total": 27
       },
       {
-        "aspect": "autofocus_body",
-        "pos": 19,
-        "neu": 6,
+        "aspect": "stabilization",
+        "pos": 15,
+        "neu": 10,
         "neg": 2,
         "total": 27
       },
       {
-        "aspect": "build",
-        "pos": 6,
-        "neu": 8,
+        "aspect": "autofocus_body",
+        "pos": 18,
+        "neu": 5,
         "neg": 2,
-        "total": 16
+        "total": 25
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 17,
+        "neu": 7,
+        "neg": 1,
+        "total": 25
       },
       {
         "aspect": "price",
@@ -5503,27 +5043,34 @@
         "total": 14
       },
       {
+        "aspect": "build",
+        "pos": 4,
+        "neu": 6,
+        "neg": 2,
+        "total": 12
+      },
+      {
         "aspect": "dimensions",
-        "pos": 3,
-        "neu": 4,
+        "pos": 2,
+        "neu": 3,
         "neg": 3,
-        "total": 10
+        "total": 8
       },
       {
         "aspect": "weight",
-        "pos": 6,
-        "neu": 4,
+        "pos": 5,
+        "neu": 1,
         "neg": 0,
-        "total": 10
+        "total": 6
       }
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 556,
-      "evaluated": 438,
-      "non_evaluative": 118,
+      "examined": 500,
+      "evaluated": 416,
+      "non_evaluative": 84,
       "non_evaluative_breakdown": {
-        "non_claim": 118
+        "non_claim": 84
       },
       "off_axis": 0,
       "ruleset": {
@@ -5531,7 +5078,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "556 examined · 438 evaluated under askmaddi-polarity",
+      "receipt_line": "500 examined · 416 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -5545,7 +5092,7 @@
     "computed_by": "axis_roles@1",
     "most_discussed": "video_capability",
     "highest_rated": "handling",
-    "lowest_rated": "mount_compat"
+    "lowest_rated": "burst_buffer"
   },
   "sources": [
     {
@@ -5556,18 +5103,7 @@
       "url": "https://www.adorama.com/alc/guidance-in-age-of-ai/",
       "title": "Why Human Guidance in Photography Matters So Much in the Age of AI",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782234+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "rss-amateur-photographer-our-favourite-photo-taken-by-you-this-week-an-adorable-littl-2026",
-      "source_type": "pro",
-      "reviewer": "Amateur Photographer",
-      "platform": "web",
-      "url": "https://amateurphotographer.com/latest/articles/ap-picture-of-the-week-your-best-photos-shared/",
-      "title": "Our favourite photo taken by YOU! This week, an adorable little owl – plus more wildlife, street and landscape shots",
-      "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782243+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924558+00:00",
       "weight": 0.75
     },
     {
@@ -5578,7 +5114,7 @@
       "url": "https://www.youtube.com/watch?v=p-wNHaXjMnQ",
       "title": "Sony A7IV Review 3 years late",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782247+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924571+00:00",
       "weight": 0.75
     },
     {
@@ -5589,7 +5125,7 @@
       "url": "https://www.youtube.com/watch?v=QD1r2HE9wXg",
       "title": "Sony A7IV Long Term Review // The Almost Perfect Hybrid Camera",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782250+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924575+00:00",
       "weight": 0.75
     },
     {
@@ -5600,7 +5136,7 @@
       "url": "https://www.youtube.com/watch?v=DFW-2YCOIM0",
       "title": "Sony A7IV Review in 2025 | Should You Still Buy It?",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782252+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924578+00:00",
       "weight": 0.75
     },
     {
@@ -5611,7 +5147,7 @@
       "url": "https://www.youtube.com/watch?v=xhPv6j_q6dQ",
       "title": "100,000 Shots Later - Sony A7IV",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782255+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924580+00:00",
       "weight": 0.75
     },
     {
@@ -5622,7 +5158,7 @@
       "url": "https://www.youtube.com/watch?v=-jUV0HMo8vQ",
       "title": "Sony a7 IV First Impressions Review",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782257+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924583+00:00",
       "weight": 0.75
     },
     {
@@ -5633,7 +5169,7 @@
       "url": "https://www.youtube.com/watch?v=p9u93yNKAZ8",
       "title": "Sony A7 IV review: A nearly perfect hybrid powerhouse",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782259+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924585+00:00",
       "weight": 0.75
     },
     {
@@ -5644,7 +5180,7 @@
       "url": "https://www.youtube.com/watch?v=eVvUs9lFatY",
       "title": "Sony a7 IV - THE Upgrade We've Been Waiting FOUR!",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782262+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924588+00:00",
       "weight": 0.75
     },
     {
@@ -5655,7 +5191,7 @@
       "url": "https://www.youtube.com/watch?v=VNIyACqk8x4",
       "title": "Why I'm NOT Buying the Sony A7V (vs A7IV)",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782264+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924590+00:00",
       "weight": 0.75
     },
     {
@@ -5666,7 +5202,7 @@
       "url": "https://www.youtube.com/watch?v=a6pYpQSok-Q",
       "title": "Sony A7 IV Review // Good but Not What You Were Expecting???",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782267+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924592+00:00",
       "weight": 0.75
     },
     {
@@ -5677,7 +5213,7 @@
       "url": "https://www.youtube.com/watch?v=7-5DEgnhT-I",
       "title": "Sony A7 IV - HANDS ON REVIEW - Nature // Bird Eye-AF",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782269+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924595+00:00",
       "weight": 0.75
     },
     {
@@ -5688,7 +5224,7 @@
       "url": "https://www.youtube.com/watch?v=TihIMNLD5vg",
       "title": "Hardcore Sony A7IV FIELD TEST Review! Worth it or Not?",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782271+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924597+00:00",
       "weight": 0.75
     },
     {
@@ -5699,7 +5235,7 @@
       "url": "https://www.youtube.com/watch?v=qdzeOdTrQYM",
       "title": "SONY A6700 vs SONY A7IV — which is actually better?",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782274+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924599+00:00",
       "weight": 0.75
     },
     {
@@ -5710,7 +5246,7 @@
       "url": "https://www.youtube.com/watch?v=NDXcocaFj9w",
       "title": "Sony A7IV: Still Sony’s Best Value Camera?",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782276+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924602+00:00",
       "weight": 0.75
     },
     {
@@ -5721,17 +5257,17 @@
       "url": "https://www.youtube.com/watch?v=_qqL-rftWlI",
       "title": "The Almost Perfect Hybrid Camera: Sony a7IV Full Review",
       "publication_date": "",
-      "ingested_at": "2026-08-09T00:41:30.782278+00:00",
+      "ingested_at": "2026-08-21T18:26:54.924604+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/sony-a7iv/",
-    "reddit": "Sony A7 IV (ILCE-7M4)\n\nReviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). Coverage of mount compatibility is mostly neutral: 37% positive, 61% neutral, 2% negative across 46 claims. On video capability, 87% of the 15 sources covering it point the same direction.\n\nI pulled together all 16 reviews in one place: https://askmaddi.com/cards/sony-a7iv/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Sony A7 IV (ILCE-7M4)**\nReviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). Coverage of mount compatibility is mostly neutral: 37% positive, 61% neutral, 2% negative across 46 claims. On video capability, 87% of the 15 sources covering it point the same direction.\nAll 16 reviews in one place: https://askmaddi.com/cards/sony-a7iv/\n_(disclosure: I built this)_",
+    "reddit": "Sony A7 IV (ILCE-7M4)\n\nReviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). On video capability, 93% of the 14 sources covering it point the same direction.\n\nI pulled together all 15 reviews in one place: https://askmaddi.com/cards/sony-a7iv/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony A7 IV (ILCE-7M4)**\nReviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). On video capability, 93% of the 14 sources covering it point the same direction.\nAll 15 reviews in one place: https://askmaddi.com/cards/sony-a7iv/\n_(disclosure: I built this)_",
     "og": {
       "title": "Sony A7 IV (ILCE-7M4) — Reviewed",
-      "description": "Reviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). Coverage of mount compatibility is mostly neutral: 37% positive, 61% neutral, 2% negative across 46 claims. On video capability, 87% of the 15 sources covering it point the same direction.",
+      "description": "Reviewers are most positive about handling (73% positive, 16% neutral, 11% negative across 56 claims). On video capability, 93% of the 14 sources covering it point the same direction.",
       "image": null,
       "url": "https://askmaddi.com/cards/sony-a7iv/"
     }
@@ -5740,11 +5276,14 @@
     "driver": "build_card.py",
     "enrich_client": "flask",
     "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
+      "stage": "failed:1",
+      "artifact": "carried"
     },
     "blockers": [],
-    "warnings": [],
+    "warnings": [
+      "Facts stage exited 1 — specs may be incomplete. The corpus is unaffected; facts are additive.",
+      "Facts CARRIED from an earlier build — not re-fetched this run. The per-row dates in fact_provenance say how old they are."
+    ],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
   }
