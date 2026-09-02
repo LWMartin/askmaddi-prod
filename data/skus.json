@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-08-31",
+  "as_of": "2026-09-02",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -841,7 +841,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "5666C002",
+        "mpn": "4082C002",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -862,6 +862,13 @@
           "value": "900.00",
           "currency": "USD",
           "as_of": "2026-08-27T04:18:51Z"
+        },
+        "mpn_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-09-02",
+          "verdict": "CONTAMINATED-MPN-CORRECTED",
+          "note": "eBay resolve stamped another product's part number; corrected against the Adorama feed's canonical listings",
+          "corrected_from": "5666C002"
         }
       },
       "affiliate": {
@@ -1111,7 +1118,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7RM5B",
+        "mpn": "ILCE-7RM2/B",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -1187,6 +1194,13 @@
           "value": "2599.00",
           "currency": "USD",
           "as_of": "2026-08-26T04:18:10Z"
+        },
+        "mpn_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-09-02",
+          "verdict": "CONTAMINATED-MPN-CORRECTED",
+          "note": "eBay resolve stamped another product's part number; corrected against the Adorama feed's canonical listings",
+          "corrected_from": "ILCE7RM5B"
         }
       },
       "affiliate": {

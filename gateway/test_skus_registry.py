@@ -429,6 +429,37 @@ def test_set_mpn_missing_slug(tmp_path):
     assert reg.set_mpn('ghost-slug', 'X', _PROV, path=p) == 'missing-slug'
 
 
+def test_correct_mpn_swaps_contaminated_anchor(tmp_path):
+    p = tmp_path / 'skus.json'
+    # canon-r6 stamped with the R6 Mark II's part number (5666C002).
+    reg.upsert('canon-r6', _entry(mpn='5666C002'), path=p)
+    status = reg.correct_mpn('canon-r6', '4082C002', _PROV, expect_mpn='5666C002', path=p)
+    assert status == 'corrected'
+    ident = json.loads(p.read_text())['skus']['canon-r6']['identity']
+    assert ident['mpn'] == '4082C002'
+    assert ident['mpn_provenance']['corrected_from'] == '5666C002'
+
+
+def test_correct_mpn_refuses_on_stale_expect(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('canon-r6', _entry(mpn='5666C002'), path=p)
+    # Caller expected a DIFFERENT wrong value than what's on the spine -> no clobber.
+    assert reg.correct_mpn('canon-r6', '4082C002', _PROV, expect_mpn='9999X', path=p) == 'stale-expect'
+    assert json.loads(p.read_text())['skus']['canon-r6']['identity']['mpn'] == '5666C002'
+
+
+def test_correct_mpn_is_noop_when_already_correct(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('canon-r6', _entry(mpn='4082C002'), path=p)
+    assert reg.correct_mpn('canon-r6', '4082C002', _PROV, expect_mpn='4082C002', path=p) == 'no-op'
+
+
+def test_correct_mpn_missing_slug(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    assert reg.correct_mpn('ghost', 'X', _PROV, expect_mpn='Y', path=p) == 'missing-slug'
+
+
 def test_set_mpn_overwrites_placeholder(tmp_path):
     """A seller placeholder ('Dose not apply' typo, 'N/A', 'Does Not Apply') is
     treated as absent — the recovered real MPN must replace it, not be blocked."""

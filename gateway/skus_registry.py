@@ -666,6 +666,49 @@ def set_mpn(slug, mpn, provenance, path=SKUS_PATH):
     return 'written'
 
 
+def correct_mpn(slug, new_mpn, provenance, expect_mpn, path=SKUS_PATH):
+    """Overwrite a WRONG-but-real identity.mpn with a verified correction.
+
+    set_mpn is UPGRADE-ONLY and never clobbers a real id — correct for stamping a
+    recovered id, wrong when the existing id is CONTAMINATED: an eBay resolve that
+    stamped a DIFFERENT product's part number (canon-r6 carrying the R6 Mark II's
+    5666C002; sony-a7r carrying the a7R V's ILCE7RM5B). A contaminated anchor is
+    worse than absent — it false-matches the feed (ships another product's price)
+    and collides with the real product on the dedup key. This is the correction
+    door for that class.
+
+    COMPARE-AND-SWAP for safety: the write lands only if the current normalized
+    mpn equals normalized `expect_mpn` (the specific wrong value the caller
+    verified). If it has since changed, returns 'stale-expect' rather than a blind
+    overwrite — a correction is never a wholesale clobber. Records the receipt to
+    identity.mpn_provenance (mirroring set_mpn), carrying corrected_from so the
+    swap is auditable on the spine.
+
+    Returns 'corrected' | 'stale-expect' | 'no-op' | 'missing-slug'. Atomic.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    identity = entry.setdefault('identity', {})
+    current = identity.get('mpn')
+    norm = lambda v: re.sub(r"[^a-z0-9]", "", str(v or "").lower())
+    if norm(current) != norm(expect_mpn):
+        return 'stale-expect'
+    if norm(current) == norm(new_mpn):
+        return 'no-op'
+
+    prov = dict(provenance or {})
+    prov.setdefault('corrected_from', current)
+    identity['mpn'] = new_mpn
+    identity['mpn_provenance'] = prov
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'corrected'
+
+
 # The vocabulary `overrides` may carry. CO-DECLARED with
 # aggregator-build/assemble_card.py's CARD_IDENTITY_FIELDS, which is the read
 # side; tools/backfill_spec_fragments.py refuses to run if the two disagree.
