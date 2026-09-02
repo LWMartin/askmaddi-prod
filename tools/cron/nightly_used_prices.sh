@@ -71,6 +71,12 @@ PYEOF
     exit 2
 fi
 
+# Stage 1b: Adorama New-price refresh (the priced 'buy new' rung). SURGICAL +
+# NON-FATAL — writes pricing.current_new_usd into the same cards, preserving the
+# used_market band just written, so the SINGLE rebuild + bot_push below banks both
+# lanes in one commit. Never aborts the night (the used lane already succeeded).
+bash tools/cron/refresh_new_prices.sh || true
+
 # Stage 2: rebuild ONLY if a card actually changed
 if git diff --quiet -- data/cards/; then
     if [ "$FENCE" -eq 3 ]; then
