@@ -700,6 +700,47 @@ body {
     cursor: pointer;
 }
 
+/* ─── Recently added (server-rendered internal-link nav) ───────────── */
+
+.recent-cards-nav {
+    max-width: 1200px;          /* match .container (this nav is its sibling) */
+    margin: 0 auto;
+    padding: 0 var(--space-lg) var(--space-2xl);
+    width: 100%;
+}
+
+.recent-cards-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.recent-cards-list li {
+    margin: 0;
+}
+
+.recent-cards-list a {
+    display: inline-block;
+    padding: var(--space-xs) var(--space-md);
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-full);
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    text-decoration: none;
+    transition: all var(--transition-fast);
+}
+
+.recent-cards-list a:hover,
+.recent-cards-list a:focus-visible {
+    background: var(--color-primary-light);
+    border-color: var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
 /* ─── Footer ───────────────────────────────────────────────────── */
 
 .site-footer {
