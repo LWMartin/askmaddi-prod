@@ -349,6 +349,49 @@ def test_apply_hero_registry_absent_file_is_noop(tmp_path, monkeypatch):
     assert "image_hero" not in cards[0]["identity"]
 
 
+def test_apply_selfhost_registry_serves_local_path_over_ebay(tmp_path, monkeypatch):
+    import build_site as bs
+    reg = tmp_path / "selfhost_images.json"
+    reg.write_text('{"images": {'
+                   '"canon-35mm-f1-4": {"file": "images/heroes/canon-35mm-f1-4.jpg"}}}')
+    monkeypatch.setattr(bs, "SELFHOST_REGISTRY_PATH", reg)
+    cards = [
+        {"card_id": "canon-35mm-f1-4",
+         "identity": {"image_thumb": "https://i.ebayimg.com/x.jpg"}},   # eBay -> self-hosted
+        {"card_id": "unknown-card", "identity": {}},                    # not in registry -> untouched
+    ]
+    bs.apply_selfhost_registry(cards)
+    assert cards[0]["identity"]["image_hero"] == "/images/heroes/canon-35mm-f1-4.jpg"
+    assert cards[0]["identity"]["image_hero_source"] == "ebay_selfhost"
+    assert cards[0]["identity"]["image_thumb"] == "https://i.ebayimg.com/x.jpg"  # thumb preserved
+    assert "image_hero" not in cards[1]["identity"]
+
+
+def test_clean_hero_wins_over_selfhost(tmp_path, monkeypatch):
+    # Apply order in main(): hero registry first, self-host second. A card with a
+    # clean Wikipedia hero must NOT be downgraded to the self-host copy.
+    import build_site as bs
+    hero = tmp_path / "hero_images.json"
+    hero.write_text('{"heroes": {"sony-a1": {"url": "https://upload.wikimedia.org/clean.jpg"}}}')
+    self_ = tmp_path / "selfhost_images.json"
+    self_.write_text('{"images": {"sony-a1": {"file": "images/heroes/sony-a1.jpg"}}}')
+    monkeypatch.setattr(bs, "HERO_REGISTRY_PATH", hero)
+    monkeypatch.setattr(bs, "SELFHOST_REGISTRY_PATH", self_)
+    cards = [{"card_id": "sony-a1", "identity": {"image_thumb": "https://i.ebayimg.com/x.jpg"}}]
+    bs.apply_hero_registry(cards)
+    bs.apply_selfhost_registry(cards)
+    assert cards[0]["identity"]["image_hero"] == "https://upload.wikimedia.org/clean.jpg"
+    assert cards[0]["identity"]["image_hero_source"] == "wikimedia_commons"
+
+
+def test_apply_selfhost_registry_absent_file_is_noop(tmp_path, monkeypatch):
+    import build_site as bs
+    monkeypatch.setattr(bs, "SELFHOST_REGISTRY_PATH", tmp_path / "nope.json")
+    cards = [{"card_id": "x", "identity": {}}]
+    bs.apply_selfhost_registry(cards)      # must not raise
+    assert "image_hero" not in cards[0]["identity"]
+
+
 # ─── W3: on-sale price-drop badges (spec: maddi-feed-price-drop-signals) ─────
 
 def test_on_sale_badge_renders_a_genuine_drop():

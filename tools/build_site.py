@@ -1865,6 +1865,37 @@ def apply_hero_registry(cards):
     return cards
 
 
+SELFHOST_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "selfhost_images.json"
+
+
+def apply_selfhost_registry(cards):
+    """Second-tier image overlay below apply_hero_registry: a self-hosted copy of
+    the eBay fallback photo, served from our own /images/heroes/ so the
+    i.ebayimg.com host never lands in Product image / og:image / the page, and the
+    hero survives eBay listing churn (their thumb URLs rotate when a listing ends).
+
+    Applied ONLY when a card has no clean Wikipedia/Commons hero — that registry
+    is set first and wins here via the `if not image_hero` guard, so the self-host
+    copy is a floor that auto-upgrades the moment a clean photo is stamped. Same
+    rebuild-survival rationale as apply_hero_registry; registry is optional.
+    """
+    try:
+        reg = json.loads(SELFHOST_REGISTRY_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return cards  # optional; absence keeps prior (eBay-thumb) behavior
+    images = reg.get("images", {})
+    for card in cards:
+        entry = images.get(card.get("card_id"))
+        rel = entry.get("file") if isinstance(entry, dict) else None
+        if not rel:
+            continue
+        identity = card.setdefault("identity", {})
+        if not identity.get("image_hero"):
+            identity["image_hero"] = "/" + rel.lstrip("/")
+            identity["image_hero_source"] = "ebay_selfhost"
+    return cards
+
+
 ON_SALE_REGISTRY_PATH = Path(__file__).parent.parent / "data" / "on_sale_badges.json"
 
 
@@ -2446,6 +2477,7 @@ def main():
     apply_ebay_epid_registry(cards)
     apply_spine_gtins(cards)
     apply_hero_registry(cards)
+    apply_selfhost_registry(cards)   # de-eBay floor; clean hero above already won
     apply_on_sale_registry(cards)
 
     written = []
