@@ -1104,7 +1104,7 @@
     "sony-a7r": {
       "contamination_key": "sony-a7r",
       "vendor": "Sony",
-      "model": "A7R",
+      "model": "A7R II",
       "gtin": "00027242893832",
       "marketplace_ids": {
         "ebay_epid": "11057690094",
@@ -1187,7 +1187,7 @@
             ]
           }
         },
-        "market_title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW",
+        "market_title": "Sony Alpha a7R II Full-Frame Mirrorless Camera - Body Only",
         "image": "https://i.ebayimg.com/images/g/MRAAAOSw1TxmYMB2/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
         "price_seen": {
@@ -1201,6 +1201,13 @@
           "verdict": "CONTAMINATED-MPN-CORRECTED",
           "note": "eBay resolve stamped another product's part number; corrected against the Adorama feed's canonical listings",
           "corrected_from": "ILCE7RM5B"
+        },
+        "market_title_provenance": {
+          "method": "feed-verified-correction",
+          "source": "ruling-2026-09-02",
+          "verdict": "CONTAMINATED-TITLE-CORRECTED",
+          "note": "eBay resolve stamped the A7R V listing title onto this entry; corrected to the A7R II, anchored by chosen gtin 00027242893832 (ILCE-7RM2). Superseded gtin 00027242925977 is the A7R V.",
+          "corrected_from": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW"
         }
       },
       "affiliate": {
