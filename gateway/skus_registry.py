@@ -524,6 +524,38 @@ def upsert(slug, entry, path=SKUS_PATH):
     return status
 
 
+def delist(slug, path=SKUS_PATH):
+    """Remove one SKU entry from the spine entirely. REMOVAL PRIMITIVE.
+
+    The spine has been append-and-upgrade-only: mint (upsert), then correct in
+    place (set_gtin, set_override, adjudicate_gtin). There was no removal door,
+    by design — identity is durable. But a durable identity that is WRONG has
+    no exit: two SKUs minted onto one GTIN (a variant that scraped its sibling's
+    barcode, or the same product minted twice under two slugs) collide, and
+    neither of the in-place writers can resolve a collision because the anchor
+    they would rewrite is immutable-once-assigned. The designed resolution is to
+    drop the redundant twin, and this is that door.
+
+    Deliberately NARROW: it removes the whole entry and nothing else. It does
+    not touch card files, image registries, or the work queue — those are other
+    surfaces with other owners (see tools/delist_card.py, which orchestrates the
+    full retirement and calls this for the spine leg). Keeping the primitive to
+    one store keeps the resolve_sku doctrine (spine writes live in this module)
+    and the atomic-write perms guarantee intact.
+
+    Returns: 'delisted' | 'missing-slug'. Atomic via the same _atomic_write as
+    upsert, so the store stays askmaddi:pipeline 0640 across the rewrite.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    if slug not in skus:
+        return 'missing-slug'
+    skus.pop(slug)
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'delisted'
+
+
 def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
     """Surgically write the GTIN anchor + its receipt for one SKU. UPGRADE-ONLY.
 
