@@ -3,6 +3,8 @@ import json
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import ebay_category_tap as tap  # noqa: E402
 
@@ -132,6 +134,41 @@ def test_absent_brand_floor_is_permissive():
     search = _fake_search({"mixed drones": _FLOOR_ROWS})
     out = tap.run(vert, search_fn=search, classify_fn=None)
     assert any("simrex" in p["slug"] for p in out)
+
+
+# The exact classes that leaked into the live spine before the floor was
+# populated (2026-09-02 junk purge): spec-fragment lead tokens (5G/6K/X1/S1)
+# and off-brand toys (WeFone/Vivitar) mint a junk first-token "brand" that
+# slips the slug check. The full production brand_floor must floor them all
+# while keeping every recognized-brand drone — regression lock so the gate
+# can't silently loosen back to the leak.
+_PROD_FLOOR = ["dji", "autel", "skydio", "parrot", "brinc", "anzu", "potensic",
+               "holy stone", "ruko", "hoverair", "hover", "zero zero", "ryze", "tello"]
+_LEAK_TITLES = [
+    "5G Professional Dual WIFI Obstacle Avoidance Drone",
+    "6K 5G Professional 2Battery Obstacle Avoidance WiFi Drone",
+    "X1 Pro Action Flying Foldable 42 km/h Follow OmniTerra",
+    "X1 Self Flying Follow Me Mode Foldable Mini Drone",
+    "WeFone WF33 Drones for Adults Foldable 4.5",
+    "Vivitar DRCLS16 Duo Racing First Person View Goggles",
+    "S1 Drone",
+]
+_KEEP_TITLES = [
+    "HoverAir X1 Pro Skiing Action Flying Foldable",
+    "DJI Mavic 3 Pro Fly More Combo",
+    "Autel EVO II Pro V3 Rugged Bundle",
+    "Skydio 2 Plus",
+]
+
+
+@pytest.mark.parametrize("title", _LEAK_TITLES)
+def test_prod_floor_drops_the_2026_09_leak_classes(title):
+    assert not tap._passes_brand_floor(tap._guess_brand(title), title, _PROD_FLOOR)
+
+
+@pytest.mark.parametrize("title", _KEEP_TITLES)
+def test_prod_floor_keeps_recognized_drones(title):
+    assert tap._passes_brand_floor(tap._guess_brand(title), title, _PROD_FLOOR)
 
 
 def test_passes_brand_floor_helper():
