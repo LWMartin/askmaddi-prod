@@ -57,6 +57,7 @@ from pathlib import Path
 
 import skus_registry
 import slug_normalizer
+import spine_canonicalize
 import ebay_category_map
 import rebind_firewall
 import resolver_mfr_surface   # rung C (airlocked cell)
@@ -211,6 +212,14 @@ def lookup_or_mint(slug, *, vendor=None, model=None,
             f"neither is unbuildable — emit the identity shape (vendor+model) "
             f"to enable minting, or register the slug."
         )
+
+    # De-contaminate the model BEFORE it seeds the slug/label/identity. eBay-tap
+    # titles carry a leading duplicate brand ('Autel Autel Evo II ...') and
+    # trailing listing cruft; slug_normalizer slugifies f"{vendor} {model}", so a
+    # dirty model doubles the slug and poisons the label. canonicalize_model is
+    # conservative (strips only unambiguous noise, keeps version/variant tokens)
+    # and total (never raises, never empties an identity). (2026-09-03, aerial.)
+    model = spine_canonicalize.canonicalize_model(vendor, model) or model
 
     res = slug_normalizer.resolve_slug(vendor, model, skus_path=Path(skus_path))
 
