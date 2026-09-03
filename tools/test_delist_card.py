@@ -11,6 +11,8 @@ import stat
 import sys
 from pathlib import Path
 
+import pytest
+
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'gateway'))
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
@@ -190,3 +192,26 @@ def test_delist_keeps_store_group_readable(tmp_path):
     skus_registry.delist('a', path=skus)
     mode = stat.S_IMODE(skus.stat().st_mode)
     assert mode == 0o640
+
+
+def test_slugs_file_batches_targets(tmp_path):
+    """--slugs-file feeds a batch; # comments and blanks are ignored, and it
+    merges with any explicit --slug. Drives the aerial delist+re-mint batch."""
+    r1 = _repo(tmp_path / 'r', 'dji-dji-mavic-3-cine')
+    # second card in the same repo
+    (r1 / 'data' / 'cards' / 'dji-dji-air-3-only.json').write_text('{"card_id": "x"}')
+
+    listing = tmp_path / 'slugs.txt'
+    listing.write_text('# aerial batch\ndji-dji-mavic-3-cine\n\ndji-dji-air-3-only\n')
+
+    rc = dc.main(['--slugs-file', str(listing), '--repo', str(r1),
+                  '--files-only', '--apply'])
+    assert rc == 0
+    assert not (r1 / 'data' / 'cards' / 'dji-dji-mavic-3-cine.json').exists()
+    assert not (r1 / 'data' / 'cards' / 'dji-dji-air-3-only.json').exists()
+
+
+def test_requires_at_least_one_slug(tmp_path):
+    repo = _repo(tmp_path, 'panasonic-s5-mirrorless')
+    with pytest.raises(SystemExit):
+        dc.main(['--repo', str(repo), '--files-only'])  # neither --slug nor --slugs-file

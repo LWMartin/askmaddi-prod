@@ -140,8 +140,11 @@ def delist(slug, *, repo, skus_path, do_files, do_spine, apply):
 def main(argv=None):
     repo_default = Path(__file__).resolve().parent.parent
     ap = argparse.ArgumentParser(description=__doc__.strip().splitlines()[0])
-    ap.add_argument('--slug', action='append', default=[], required=True,
+    ap.add_argument('--slug', action='append', default=[],
                     help='Card/SKU slug to retire. Repeatable.')
+    ap.add_argument('--slugs-file', default=None,
+                    help='File of slugs to retire, one per line (# comments and '
+                         'blanks ignored). Merged with any --slug values.')
     ap.add_argument('--apply', action='store_true',
                     help='Actually remove. Without it this only reports (dry-run).')
     ap.add_argument('--files-only', action='store_true',
@@ -153,6 +156,15 @@ def main(argv=None):
     ap.add_argument('--skus-path', default=None,
                     help='Spine path to mutate (default: <repo>/data/skus.json).')
     args = ap.parse_args(argv)
+
+    slugs = list(args.slug)
+    if args.slugs_file:
+        for line in Path(args.slugs_file).read_text(encoding='utf-8').splitlines():
+            s = line.split('#', 1)[0].strip()
+            if s and s not in slugs:
+                slugs.append(s)
+    if not slugs:
+        ap.error('no slugs given — pass --slug and/or --slugs-file.')
 
     if args.files_only and args.spine_only:
         ap.error('--files-only and --spine-only are mutually exclusive (omit both for the full retirement).')
@@ -167,7 +179,7 @@ def main(argv=None):
     print(f'surfaces: {surfaces}')
     print(f'mode    : {mode}\n')
 
-    for slug in args.slug:
+    for slug in slugs:
         print(f'== {slug} ==')
         for surface, action, detail in delist(
                 slug, repo=args.repo, skus_path=skus_path,

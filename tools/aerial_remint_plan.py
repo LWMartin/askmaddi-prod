@@ -173,6 +173,9 @@ def main(argv=None):
     ap.add_argument('--ledger-path', default=str(root / 'data' / 'resolve-attempts.json'))
     ap.add_argument('--emit-slugs', default=None,
                     help='Write the delist target slugs, one per line.')
+    ap.add_argument('--refuel-only', action='store_true',
+                    help='Restrict --emit-slugs to targets with spool fuel '
+                         '(will_remint=Y) — excludes the delist→drop set.')
     args = ap.parse_args(argv)
 
     rows = build_plan(skus_path=args.skus_path, queue_path=args.queue_path,
@@ -212,9 +215,11 @@ def main(argv=None):
             print(f"      {r['slug']}")
 
     if args.emit_slugs:
+        emit = [r for r in targets if r['will_remint'] is True] if args.refuel_only else targets
         Path(args.emit_slugs).write_text(
-            '\n'.join(r['slug'] for r in targets) + '\n', encoding='utf-8')
-        print(f"\n  → {len(targets)} delist target slug(s) written to {args.emit_slugs}")
+            '\n'.join(r['slug'] for r in emit) + '\n', encoding='utf-8')
+        tag = ' (refuel-only)' if args.refuel_only else ''
+        print(f"\n  → {len(emit)} delist target slug(s){tag} written to {args.emit_slugs}")
     print("════ END ════")
     return 0
 

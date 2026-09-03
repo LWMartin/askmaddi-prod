@@ -105,3 +105,21 @@ def test_emit_slugs_writes_targets_only(tmp_path):
     written = out.read_text().split()
     assert 'dji-dji-air-3-only' in written
     assert 'dji-mavic-3' not in written        # clean entry is not a delist target
+
+
+def test_refuel_only_excludes_no_fuel_targets(tmp_path):
+    sp, qp, spool = _mini(
+        tmp_path,
+        skus={
+            'dji-dji-mavic-3-cine': {'vendor': 'DJI', 'model': 'DJI Mavic 3 Cine'},  # fuel
+            'autel-autel-evo-nano-pristine': {'vendor': 'Autel', 'model': 'Autel Evo Nano Pristine'},  # no fuel
+        },
+        spool=[{'vendor': 'DJI', 'model': 'DJI Mavic 3 Cine'}],
+    )
+    out = tmp_path / 'refuel.txt'
+    arp.main(['--skus-path', sp, '--queue-path', qp, '--spool-path', spool,
+              '--ledger-path', str(tmp_path / 'noledger.json'),
+              '--emit-slugs', str(out), '--refuel-only'])
+    written = out.read_text().split()
+    assert 'dji-dji-mavic-3-cine' in written              # has fuel → kept
+    assert 'autel-autel-evo-nano-pristine' not in written  # no fuel → excluded
