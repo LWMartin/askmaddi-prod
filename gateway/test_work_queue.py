@@ -573,3 +573,41 @@ def test_requeue_promoted_rebuild_flow_clears_resume_on_success(tmp_path):
     rec = wq.mark_published('sony-a7iv', path=p)
     assert rec['state'] == 'promoted'
     assert rec['requeued_from'] == 'promoted'     # audit trail persists
+
+
+# ── claim_next / demand-first front-of-line (2026-09-03) ────────────────────
+def test_claim_next_builds_highest_demand_first(tmp_path):
+    p = _path(tmp_path)
+    # Enroll cold-first, hot-last: pure FIFO would build 'cold' first. Demand
+    # priority must flip it so the mention-hot SKU is claimed before the cold one.
+    wq.enroll('cold-lens', 'Cold Lens', 'lens', demand=1, path=p)
+    time.sleep(0.01)
+    wq.enroll('hot-body', 'Hot Body', 'body', demand=11, path=p)
+    time.sleep(0.01)
+    wq.enroll('warm-lens', 'Warm Lens', 'lens', demand=6, path=p)
+    assert wq.claim_next(path=p)['slug'] == 'hot-body'    # demand 11
+    assert wq.claim_next(path=p)['slug'] == 'warm-lens'   # demand 6
+    assert wq.claim_next(path=p)['slug'] == 'cold-lens'   # demand 1
+
+
+def test_claim_next_equal_demand_falls_back_to_fifo(tmp_path):
+    p = _path(tmp_path)
+    wq.enroll('first', 'First', 'body', demand=5, path=p)
+    time.sleep(0.01)
+    wq.enroll('second', 'Second', 'body', demand=5, path=p)
+    assert wq.claim_next(path=p)['slug'] == 'first'   # equal demand -> oldest wins
+
+
+def test_enroll_stores_demand_default_zero(tmp_path):
+    p = _path(tmp_path)
+    rec = wq.enroll('no-demand', 'No Demand', 'body', path=p)
+    assert rec['demand'] == 0
+    rec2 = wq.enroll('with-demand', 'With Demand', 'body', demand=9, path=p)
+    assert rec2['demand'] == 9
+
+
+def test_claim_next_demandless_backlog_is_pure_fifo(tmp_path):
+    # A requeue sweep enrolls demand=0 records; they must still drain oldest-first.
+    p = _path(tmp_path)
+    _enroll_three(p)   # all demand default 0
+    assert wq.claim_next(path=p)['slug'] == 'sony-a7iv'

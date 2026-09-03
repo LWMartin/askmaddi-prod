@@ -389,6 +389,7 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
                 work_queue.enroll(
                     resolved_slug, ident['label'], ident['category'],
                     aliases=ident.get('aliases'),
+                    demand=prop.get('fork_n', 0),  # front-of-line weight
                     **enroll_kwargs,
                 )
                 summary['enrolled'] += 1

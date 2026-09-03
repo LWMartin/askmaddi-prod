@@ -208,13 +208,18 @@ def _roll_cap_if_new_day(queue):
 
 
 def enroll(slug, label, category, *, seed_urls=None, aliases=None, mount=None,
-           max_attempts=DEFAULT_MAX_ATTEMPTS, path=WORK_QUEUE_PATH):
+           demand=0, max_attempts=DEFAULT_MAX_ATTEMPTS, path=WORK_QUEUE_PATH):
     """Enroll a freshly-resolved SKU into the build queue at state `resolved`.
 
     Called by the factory resolve-pass exactly when resolve_proposal() returns
     outcome=='resolved' (a confident pick already written to the spine). The
     record carries precisely what build_card.py needs as input: slug -> --sku-id,
     label -> --sku-label, plus the optional category / seed_urls / aliases / mount.
+
+    `demand` is the proposal's mention/fork weight (resolve_pass forwards fork_n).
+    It is stored on the record so claim_next() can build highest-demand-first when
+    a resolved BACKLOG exists — the front-of-line lever. Default 0 (a requeue or a
+    demand-less enroll sorts after any mention-backed peer, ahead of nothing).
 
     IDEMPOTENT and FORWARD-ONLY: a slug already in the queue is returned untouched,
     regardless of its state. We never re-enroll a SKU that's building, review_ready,
@@ -244,6 +249,7 @@ def enroll(slug, label, category, *, seed_urls=None, aliases=None, mount=None,
         'build_attempts': 0,
         'max_attempts': int(max_attempts),
         'enrolled_at': _now(),
+        'demand': float(demand or 0),
         'last_error': None,
     }
     q[slug] = record
@@ -325,13 +331,19 @@ def set_aliases(slug, aliases, *, label=None, path=WORK_QUEUE_PATH):
 
 
 def claim_next(path=WORK_QUEUE_PATH):
-    """Atomically claim the oldest `resolved` record and mark it `building`.
+    """Atomically claim the highest-demand `resolved` record and mark it `building`.
 
-    The rotation cursor for the drip loop: each tick claims one SKU to build. FIFO
-    by enrolled_at so the queue drains in order (oldest demand first), and the
-    claim is a single atomic write so two overlapping ticks can't grab the same
-    record (last-write-wins at worst re-builds one card, never double-promotes —
-    the human gate downstream is unaffected).
+    The rotation cursor for the drip loop: each tick claims one SKU to build.
+    DEMAND-FIRST, then FIFO: records sort by descending `demand` (the mention/fork
+    weight enroll stored), tie-broken by enrolled_at so equal-demand peers still
+    drain oldest-first. This is the front-of-line lever — a mention-hot SKU that
+    resolves into a standing backlog builds (and gets crawlable) before colder
+    peers, instead of waiting its turn in pure arrival order. With no backlog
+    (the steady state — resolve drips ~1 and the drip drains it) demand and FIFO
+    agree, so this is a no-op there and only bites when a batch piles up (a requeue
+    sweep, a burst of enrollments). The claim is a single atomic write so two
+    overlapping ticks can't grab the same record (last-write-wins at worst
+    re-builds one card, never double-promotes — the human gate is unaffected).
 
     Returns the claimed record (now state=building), or None if nothing is
     resolved-and-waiting.
@@ -349,7 +361,10 @@ def claim_next(path=WORK_QUEUE_PATH):
     ]
     if not resolved:
         return None
-    resolved.sort(key=lambda r: r.get('enrolled_at', ''))
+    # Demand-first, enrolled_at as the FIFO tie-break. Negate demand for an
+    # ascending sort that still puts the largest demand first.
+    resolved.sort(key=lambda r: (-float(r.get('demand', 0) or 0),
+                                 r.get('enrolled_at', '')))
     record = resolved[0]
 
     record['state'] = 'building'
