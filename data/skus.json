@@ -11560,11 +11560,31 @@
         },
         "market_title": "Sony SEL70350G 70-350mm F/4.5-6.3 G OSS Telephoto Lens E-Mount #11702 866 905907",
         "image": "https://i.ebayimg.com/images/g/M38AAeSwo41p3Xeg/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/xWMAAOSweoReNtQO/s-l640.jpg",
         "price_seen": {
           "value": "826.50",
           "currency": "USD",
           "as_of": "2026-09-02T20:22:08Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-09-03T04:33:57Z",
+          "query": "Sony SEL70350G",
+          "winner": {
+            "item_id": "v1|394443900205|0",
+            "epid": "13034670616",
+            "title": "Sony E 70-350 F/4.5-6.3 G OSS Lens SEL70350G"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|394443900205|0",
+              "epid": "13034670616",
+              "title": "Sony E 70-350 F/4.5-6.3 G OSS Lens SEL70350G",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -11832,6 +11852,615 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-09-03T02:00:52Z"
+    },
+    "nikon-d7500": {
+      "contamination_key": "nikon-d7500",
+      "vendor": "Nikon",
+      "model": "d7500",
+      "gtin": "00018208953431",
+      "marketplace_ids": {
+        "ebay_epid": "237096362",
+        "ebay_legacy_item_id": "206311584181",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "1581",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0018208953431",
+              "gtin14": "00018208953431",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0018208953431",
+              "gtin14": "00018208953431",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0018208953431",
+              "gtin14": "00018208953431",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0018208953431",
+              "gtin14": "00018208953431",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Nikon D7500 Digital SLR Camera (Body Only)",
+        "image": "https://i.ebayimg.com/images/g/DtIAAeSwrBFqla9D/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/mxIAAOSwr5Jjt6BQ/s-l1200.jpg",
+        "price_seen": {
+          "value": "694.95",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:00:41Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206311584181?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8Qyz750gDLLY5jQIA9W7KS%2B0q7SOleK7M5p%2BsWYCZoImi3t2Gg4ozV1LxuZ%2FAkl45y56Pn4NpHsTuYYQlCRMgVL%2FOc0jIA8%2BjpflDjtNFke9TYkA5%2Ffd8jpHRSK0DO4IWc01QbXgnNBPnMyDusPCOZ2MA6VfakqtMDxHcv3quATql9Nux5TiqvrSBq8lEe97c%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:00:41Z"
+    },
+    "dji-dji-mavic-2-pro-only-flies-great": {
+      "contamination_key": "dji-dji-mavic-2-pro-only-flies-great",
+      "vendor": "DJI",
+      "model": "DJI Mavic 2 Pro Only - Flies Great!",
+      "gtin": "06958265174483",
+      "marketplace_ids": {
+        "ebay_epid": "23028682936",
+        "ebay_legacy_item_id": "287560871549",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CPMA0000001901",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": true,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "6958265174483",
+              "gtin14": "06958265174483",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0190021320598",
+              "gtin14": "00190021320598",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0190021333819",
+              "gtin14": "00190021333819",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0192223039957",
+              "gtin14": "00192223039957",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0190021320598",
+              "gtin14": "00190021320598",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0190021333819",
+              "gtin14": "00190021333819",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0192223039957",
+              "gtin14": "00192223039957",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "6958265174483",
+              "gtin14": "06958265174483",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021320598",
+              "gtin14": "00190021320598",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI Mavic 2 Pro Drone - Gray Great Condition. ",
+        "image": "https://i.ebayimg.com/images/g/hXgAAeSw7F9qmCod/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/sikAAOSwGkVjWP~j/s-l640.jpg",
+        "price_seen": {
+          "value": "449.99",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:45:23Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/287560871549?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:45:23Z"
+    },
+    "autel-autel-robotics-evo-max-4n-quad-thermal-range-finding": {
+      "contamination_key": "autel-autel-robotics-evo-max-4n-quad-thermal-range-finding",
+      "vendor": "Autel",
+      "model": "Autel Robotics Evo Max 4N Quad Thermal & Range Finding",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "278328988372",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "Evo Max 4N",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Autel Robotics Evo Max 4N Quad Camera with Thermal & Range Finding Drone",
+        "image": "https://i.ebayimg.com/images/g/lX8AAeSwhrBqf7Qu/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "5099.95",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:45:40Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/278328988372?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:45:40Z"
+    },
+    "hoverair-hoverair-x1-pro-skiing-action-flying-foldable": {
+      "contamination_key": "hoverair-hoverair-x1-pro-skiing-action-flying-foldable",
+      "vendor": "HoverAir",
+      "model": "HOVERAir X1 PRO Skiing , Action Flying , Foldable",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "398339496789",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "hover",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir X1 PRO Skiing Combo, 4K Action Flying Camera, Foldable Drone",
+        "image": "https://i.ebayimg.com/images/g/g3cAAeSwDqFqk85L/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "899.00",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:45:54Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/398339496789?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:45:54Z"
+    },
+    "hoverair-hoverair-x1-black-foldable-mini-self-flying-hdr-2-7": {
+      "contamination_key": "hoverair-hoverair-x1-black-foldable-mini-self-flying-hdr-2-7",
+      "vendor": "HoverAir",
+      "model": "HOVERAir X1 Black Foldable Mini Self Flying HDR 2.7K Video",
+      "gtin": "00313105114108",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407076604658",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "313105114108",
+              "gtin14": "00313105114108",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "HOVERAir X1 Drone Black Combo Foldable Mini Self Flying Camera HDR 2.7K Video",
+        "image": "https://i.ebayimg.com/images/g/0FYAAeSwDF1qWHEu/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "388.99",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:46:12Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407076604658?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9xwzsL0ltkSfRRP%2F65eJmstMjbWRezedU%2BcyvoKA8FWs%2FGepaicOziBD2lvKqZBBg6%2BcTyRCfiDNOYAa56vIQooKPqvd72PDYXmFtFsFS8l0eR5Gapq6flxvHQx%2B3J%2B8Y%2F9KnyKoX8HjulPFbLqwkXjwxttYteaPTEdTYclsYFO%2FyhIWtuouqScz6DlH0JkI4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:46:12Z"
+    },
+    "dji-dji-goggles": {
+      "contamination_key": "dji-dji-goggles",
+      "vendor": "DJI",
+      "model": "DJI Goggles",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "306788519592",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Goggles N3 (Refurbished)",
+        "image": "https://i.ebayimg.com/images/g/8rEAAeSwgNlpndnS/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "299.00",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:46:32Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/306788519592?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9mR62BtgapuHxxQ6guy9FuF95RBYXvypoiJvo0j2oDtsD4nbGnWtGcPf4UGhe4CtcwyKBMiOt2r6APUJudPZmazIBaj7vjD%2Bfj04ZBgFMTUaaN07y7sxBN1BH4C1vVrQ5Tjd%2Fn9yLhrUUER7Vi0Wa0yPwP%2Fm3iooyCgunO29%2F%2BdkjBdIA2dWU1dol0krHdAdA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:46:32Z"
+    },
+    "dji-dji-avata-pro-view-googles-2-rc-motion-2-factory": {
+      "contamination_key": "dji-dji-avata-pro-view-googles-2-rc-motion-2-factory",
+      "vendor": "DJI",
+      "model": "DJI Avata Pro-View Googles 2 RC Motion 2 FACTORY",
+      "gtin": "00190021078765",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "188645169502",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CP.FP.00000129.01",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021078765",
+              "gtin14": "00190021078765",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "New DJI Avata Pro-View Combo Googles 2 RC Motion 2 FPV Drone NEW FACTORY SEALED",
+        "image": "https://i.ebayimg.com/images/g/1mUAAeSwvw1qV8JI/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "697.00",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:46:56Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/188645169502?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:46:56Z"
+    },
+    "autel-2026-autel-evo-2-dual-640t-enterprise-v3-infrared-3d-o": {
+      "contamination_key": "autel-2026-autel-evo-2-dual-640t-enterprise-v3-infrared-3d-o",
+      "vendor": "Autel",
+      "model": "2026 Autel EVO 2 Dual 640T Enterprise V3 Infrared 3D Obstacle Avoidance",
+      "gtin": "00889520014434",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "318812479416",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "102001516",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0889520014434",
+              "gtin14": "00889520014434",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "2026 Autel EVO 2 Dual 640T Enterprise V3 Drone Infrared 3D Obstacle Avoidance",
+        "image": "https://i.ebayimg.com/images/g/rWMAAeSwZzRps9ip/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "4299.00",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:47:15Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318812479416?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAsCHNgUiiE%2FjQhlDTaMiAde%2FbJ8ZVJrrwxNASoQ%2BjNZv%2BmaoA9CF4ceJXEb60UQPXDKrkX5iNUozv6cENW6U9HjxfOVXbQx0H2JL4WF0aYBgJ7R5U0xsUxd4cHW52WzbiLlMexa%2FUp3JTW5vNitnLCOcLA9QEaKgXia73ExSVHdTZdE3HvL534y%2BNeJGsdZNMFCxfDq0BFB%2BhIfMe8Xegy5Bn61khXMPANwMt0bnLn3EC",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:47:15Z"
+    },
+    "dji-dji-mavic-3-cine": {
+      "contamination_key": "dji-dji-mavic-3-cine",
+      "vendor": "DJI",
+      "model": "DJI Mavic 3 Cine",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "257571561741",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CP.MA.00000441.01",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mavic 3 Cine - Brand New, Never Activated, Never Flown! (Drone Only)",
+        "image": "https://i.ebayimg.com/images/g/Va0AAeSwtZFqMsIn/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2000.00",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:47:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/257571561741?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:47:35Z"
+    },
+    "dji-dji-mavic-3-classic-display-unit": {
+      "contamination_key": "dji-dji-mavic-3-classic-display-unit",
+      "vendor": "DJI",
+      "model": "DJI Mavic 3 Classic Display Unit",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "327338591802",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mavic 3 Classic Drone Display Unit",
+        "image": "https://i.ebayimg.com/images/g/AeQAAeSwzbZqmEt8/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "149.99",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:47:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/327338591802?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:47:52Z"
+    },
+    "hoverair-hoverair-aqua-ip67-ai-10bit-hdr-1-1-28-cmos-basic-p": {
+      "contamination_key": "hoverair-hoverair-aqua-ip67-ai-10bit-hdr-1-1-28-cmos-basic-p",
+      "vendor": "HoverAir",
+      "model": "HOVERAir AQUA IP67 AI 10bit HDR 1 1 28 CMOS Basic Pack",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206387942174",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir AQUA IP67 AI 4K 10bit HDR 1 1 28 CMOS  Basic Pack",
+        "image": "https://i.ebayimg.com/images/g/70oAAeSwtAZqgmpk/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1965.34",
+          "currency": "USD",
+          "as_of": "2026-09-03T04:48:03Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206387942174?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAsCHNgUiiE%2FjQhlDTaMiAde%2BZzU7mG8JNTGveFSK2NGBoZ7Ctr0TWgQgNcS%2Fk39HshuC%2FJmjsUHCEIGmEuwMKUvtVKLL%2FWciS11m7HBN1%2FR3jGL5D469RHFSaiiXnaS9mzjJ0aFJIRGki1nDVqQFEUBwZsxMfQ5Hg%2BSrCtuabUR09Ni%2FElVb2u0Jx48EA4ftgHvDeg5N1Pri50hxwmUEqX6LptscNSC1ubAlqCESSZDF5",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T04:48:03Z"
+    },
+    "canon-50mm-f1-8": {
+      "contamination_key": "canon-50mm-f1-8",
+      "vendor": "Canon",
+      "model": "50mm f1.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206532133322",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon EF 50mm f1.8 II Lens #836",
+        "image": "https://i.ebayimg.com/images/g/Ta0AAeSwijdqmJZA/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "77.07",
+          "currency": "USD",
+          "as_of": "2026-09-03T10:00:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206532133322?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BpGfAgREOvRfZgtZf7Pikkq7E3QpYGPX%2FSKZNa4fhHjqz3dDpnDj9iNlgxi4%2BM1w5QEbCLLSNefzyxIP3XJjut6Xsk89L956Vxl7XMd0AShJr7zFMLT78%2FqPyR7SdU07HugOortino0QM8isZocaLgAardQa53FzhkN8xrGFwOZxY3%2BhDGg1SyDn%2FiWOsA6fo%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-03T10:00:24Z"
     }
   },
   "substrate": [
