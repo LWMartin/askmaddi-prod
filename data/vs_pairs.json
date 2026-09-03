@@ -1,0 +1,113 @@
+{
+  "_description": "Curated '<A> vs <B>' comparison pairs. Selection is a human judgment (or, later, the materialized comparator fork), NOT an on-card heuristic: no reliable on-card signal distinguishes a genuine cross-shop from a coincidence of category+price. build_vs_pages.py reads pairs[].{a,b} (card_ids), renders each as a grounded, verdict-free side-by-side, and skips any pair whose cards are missing or share too few axes. The comparator-fork fast-follow appends demand-true pairs here with source='comparator_fork'. Ratify/prune the 'proposed' entries before they go live.",
+  "version": "1",
+  "as_of": "2026-09-03",
+  "pairs": [
+    {
+      "a": "canon-r6",
+      "b": "canon-eos-r6-ii",
+      "reason": "direct succession",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "canon-eos-r6-ii",
+      "b": "canon-eos-r6-mark-iii",
+      "reason": "succession",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "canon-eos-r7",
+      "b": "canon-eos-r50",
+      "reason": "APS-C RF tiers",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7-v",
+      "b": "sony-a7s-iii",
+      "reason": "all-round vs video-first, same A7 line",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7-v",
+      "b": "sony-a7c",
+      "reason": "full-frame size/price tradeoff",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7-v",
+      "b": "sony-a1",
+      "reason": "step-up flagship",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7r-vi",
+      "b": "sony-a7-v",
+      "reason": "resolution vs all-round",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "panasonic-gh5",
+      "b": "panasonic-lumix-gh5-ii",
+      "reason": "direct succession",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "panasonic-lumix-gh5-ii",
+      "b": "panasonic-lumix-s5-ii",
+      "reason": "M4/3 vs full-frame step-up",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "fujifilm-x-s20",
+      "b": "fujifilm-x-t50",
+      "reason": "APS-C X-series siblings",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "nikon-d780",
+      "b": "nikon-z6-iii",
+      "reason": "DSLR vs mirrorless crossover",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "gopro-hero10",
+      "b": "gopro-hero6",
+      "reason": "action-cam succession",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "canon-35mm-f1-4",
+      "b": "sigma-35mm-f1-4",
+      "reason": "same 35/1.4 spec, first-party vs third-party",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7c",
+      "b": "canon-r6",
+      "reason": "compact full-frame cross-brand rivalry",
+      "source": "curated",
+      "status": "live"
+    },
+    {
+      "a": "sony-a7-v",
+      "b": "nikon-z6-iii",
+      "reason": "all-round full-frame, cross-brand",
+      "source": "curated",
+      "status": "live"
+    }
+  ],
+  "_ratified": "2026-09-03 \u2014 all 15 ratified by Lee (ship all)"
+}

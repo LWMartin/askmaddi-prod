@@ -141,7 +141,8 @@ def test_main_writes_expected_pages_to_out_dir(tmp_path):
     (cards_dir / "alpha-one.json").write_text(json.dumps(CARD_A), encoding="utf-8")
     (cards_dir / "beta-two.json").write_text(json.dumps(CARD_B), encoding="utf-8")
 
-    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir), "--min-shared", "2"])
+    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir),
+                 "--seed", str(tmp_path / "none.json"), "--auto", "--min-shared", "2"])
     assert rc == 0
 
     page = out_dir / "alpha-one-vs-beta-two" / "index.html"
@@ -158,7 +159,8 @@ def test_main_tolerates_a_malformed_card_file(tmp_path):
     (cards_dir / "beta-two.json").write_text(json.dumps(CARD_B), encoding="utf-8")
     (cards_dir / "broken.json").write_text("{not valid json", encoding="utf-8")
 
-    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir), "--min-shared", "2"])
+    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir),
+                 "--seed", str(tmp_path / "none.json"), "--auto", "--min-shared", "2"])
     assert rc == 0
     assert (out_dir / "alpha-one-vs-beta-two" / "index.html").exists()
 
@@ -170,7 +172,8 @@ def test_main_writes_nothing_when_no_pairs_clear_the_gate(tmp_path):
     (cards_dir / "alpha-one.json").write_text(json.dumps(CARD_A), encoding="utf-8")
     (cards_dir / "beta-two.json").write_text(json.dumps(CARD_B), encoding="utf-8")
 
-    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir), "--min-shared", "99"])
+    rc = V.main(["--cards-dir", str(cards_dir), "--out", str(out_dir),
+                 "--seed", str(tmp_path / "none.json"), "--auto", "--min-shared", "99"])
     assert rc == 0
     assert not out_dir.exists() or list(out_dir.iterdir()) == []
 

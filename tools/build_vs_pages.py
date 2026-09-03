@@ -260,26 +260,109 @@ def _load_cards(cards_dir):
     return cards
 
 
+# ─── Curated selection (the seed file) ───────────────────────────────────────
+# Which pairs to build is a HUMAN judgment, not an on-card heuristic: recon
+# proved no on-card signal (category, subcategory, price adjacency, shared
+# axes) reliably separates a real cross-shop from a coincidence — every
+# heuristic leaks nonsense pairs (a telephoto zoom vs a wide prime; a
+# point-and-shoot vs a mirrorless body). So the pairs live in a ratified seed
+# file, data/vs_pairs.json. The comparator-fork fast-follow appends demand-true
+# pairs to the SAME file (source='comparator_fork'), so this render/wire
+# pipeline is built once and later fed automatically.
+SEED_PATH = ROOT / 'data' / 'vs_pairs.json'
+
+
+def load_seed(path=SEED_PATH):
+    """Return the seed's list of (a_id, b_id) tuples. Missing/malformed → []."""
+    try:
+        doc = json.loads(Path(path).read_text(encoding='utf-8'))
+    except (json.JSONDecodeError, OSError):
+        return []
+    out = []
+    for entry in doc.get('pairs', []):
+        a, b = entry.get('a'), entry.get('b')
+        if a and b and a != b:
+            out.append((a, b))
+    return out
+
+
+def select_seeded_pairs(cards, seed, min_shared=1):
+    """Resolve seed (a_id, b_id) tuples to card pairs. A pair is kept only when
+    BOTH cards exist and share >= min_shared visible axes; the rest are reported
+    as skips (so a stale seed entry surfaces loudly instead of silently
+    vanishing). Canonical orientation + slug-sorted output — deterministic and
+    duplicate-free, same guarantees as select_pairs."""
+    by_id = {c['card_id']: c for c in cards}
+    pairs, skipped, seen = [], [], set()
+    for a_id, b_id in seed:
+        ca, cb = by_id.get(a_id), by_id.get(b_id)
+        if ca is None or cb is None:
+            missing = [i for i, c in ((a_id, ca), (b_id, cb)) if c is None]
+            skipped.append((a_id, b_id, f"missing card(s): {', '.join(missing)}"))
+            continue
+        n_shared = len(shared_axes(ca, cb))
+        if n_shared < min_shared:
+            skipped.append((a_id, b_id, f"only {n_shared} shared axis/axes"))
+            continue
+        lo, hi = (ca, cb) if ca['card_id'] <= cb['card_id'] else (cb, ca)
+        slug = vs_slug(lo, hi)
+        if slug in seen:
+            continue
+        seen.add(slug)
+        pairs.append((lo, hi))
+    pairs.sort(key=lambda pair: vs_slug(*pair))
+    return pairs, skipped
+
+
+def build_pages(cards, out_dir, seed_path=SEED_PATH, min_shared=2, fallback_auto=False):
+    """Write vs-pages for the curated seed (if present) into out_dir. Returns
+    (slugs_written, skipped). Falls back to the auto select_pairs primitive only
+    when fallback_auto is set AND no usable seed exists — production always runs
+    curated. Reusable as a library so build_site can call it in one build pass."""
+    seed = load_seed(seed_path)
+    skipped = []
+    if seed:
+        pairs, skipped = select_seeded_pairs(cards, seed, min_shared=1)
+        mode = 'curated'
+    elif fallback_auto:
+        pairs = select_pairs(cards, min_shared=min_shared)
+        mode = 'auto'
+    else:
+        pairs, mode = [], 'none'
+
+    out = Path(out_dir)
+    slugs = []
+    for card_a, card_b in pairs:
+        slug = vs_slug(card_a, card_b)
+        page_dir = out / slug
+        page_dir.mkdir(parents=True, exist_ok=True)
+        (page_dir / 'index.html').write_text(render_vs_page(card_a, card_b), encoding='utf-8')
+        slugs.append(slug)
+    return slugs, skipped, mode
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
         description="Build deterministic '<A> vs <B>' comparison pages from published card JSONs.")
     parser.add_argument('--cards-dir', default=str(ROOT / 'data' / 'cards'))
     parser.add_argument('--out', default=str(ROOT / 'browser' / 'vs'))
-    parser.add_argument('--min-shared', type=int, default=2)
+    parser.add_argument('--seed', default=str(SEED_PATH),
+                        help="Curated pair seed (data/vs_pairs.json). Absent -> --auto or nothing.")
+    parser.add_argument('--min-shared', type=int, default=2,
+                        help="Auto-mode shared-axis floor (ignored in curated mode).")
+    parser.add_argument('--auto', action='store_true',
+                        help="Fall back to the N^2 same-category primitive when no seed exists.")
     args = parser.parse_args(argv)
 
     cards = _load_cards(args.cards_dir)
-    pairs = select_pairs(cards, min_shared=args.min_shared)
+    slugs, skipped, mode = build_pages(
+        cards, args.out, seed_path=args.seed,
+        min_shared=args.min_shared, fallback_auto=args.auto)
 
-    out_dir = Path(args.out)
-    for card_a, card_b in pairs:
-        slug = vs_slug(card_a, card_b)
-        page_dir = out_dir / slug
-        page_dir.mkdir(parents=True, exist_ok=True)
-        (page_dir / 'index.html').write_text(render_vs_page(card_a, card_b), encoding='utf-8')
-
-    print(f'build_vs_pages: {len(cards)} card(s) loaded, '
-          f'{len(pairs)} comparison page(s) written to {out_dir}')
+    print(f'build_vs_pages [{mode}]: {len(cards)} card(s) loaded, '
+          f'{len(slugs)} comparison page(s) written to {args.out}')
+    for a_id, b_id, why in skipped:
+        print(f'  ! skipped {a_id} vs {b_id}: {why}')
     return 0
 
 

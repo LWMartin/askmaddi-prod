@@ -23,6 +23,7 @@ Real-data discipline (the v1 photography corpus is honest about its gaps):
 """
 
 import argparse
+import collections
 import html
 import json
 import re
@@ -1234,6 +1235,11 @@ def render_page(card, image_url=None):
     cat = (ident.get("category") or "").title()
     year = ident.get("year_introduced") or ""
     descriptor = " · ".join([x for x in [brand, f"{subcat} {cat}".strip(), str(year)] if x])
+    # Topical internal link to the card's brand hub (browse-by-brand IA).
+    _bslug = brand_slug(brand)
+    brand_footer_link = (
+        f'<span>·</span>\n      <a href="/brands/{esc(_bslug)}/">More {esc(brand)} →</a>'
+        if _bslug else "")
 
     fresh = card.get("freshness", {}) or {}
     source_count = fresh.get("source_count", len(card.get("sources", [])))
@@ -1504,6 +1510,7 @@ def render_page(card, image_url=None):
 
     <footer class="card-footer">
       <a href="/">\u2190 Back to AskMaddi</a>
+      {brand_footer_link}
       <span>·</span>
       <a href="/mission.html">Our method</a>
       <span>·</span>
@@ -1949,10 +1956,11 @@ def card_lastmod(card):
 SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html"]
 
 
-def write_sitemap(out_dir, cards, guides=None):
+def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None):
     """browser/sitemap.xml — static pages + every card page + every use-case
-    guide, lastmod from card data. Derived artifact: regenerates from cards +
-    guides, so Stage 6 additions and new guides are indexed for free."""
+    guide + the brand index and each brand page, lastmod from card data.
+    Derived artifact: regenerates from cards + guides + brands, so Stage 6
+    additions, new guides, and new brands are indexed for free."""
     card_mods = {c["card_id"]: card_lastmod(c) for c in cards}
     home_mod = max([m for m in card_mods.values() if m], default="")
 
@@ -1960,11 +1968,20 @@ def write_sitemap(out_dir, cards, guides=None):
         lm = f"\n    <lastmod>{lastmod}</lastmod>" if lastmod else ""
         return f"  <url>\n    <loc>{loc}</loc>{lm}\n  </url>"
 
+    def brand_mod(b):
+        return max([card_lastmod(c) for c in b["cards"] if card_lastmod(c)], default="")
+
     entries = [url_el(BASE_URL + "/", home_mod)]
     entries += [url_el(BASE_URL + p) for p in SITEMAP_STATIC_PAGES[1:]]
     entries += [url_el(f"{BASE_URL}/cards/{cid}/", mod) for cid, mod in sorted(card_mods.items())]
     entries += [url_el(f"{BASE_URL}/gear-for/{g['id']}/")
                 for g in sorted(guides or [], key=lambda g: g.get("id", "")) if g.get("id")]
+    if brands:
+        entries += [url_el(f"{BASE_URL}/brands/", home_mod)]
+        entries += [url_el(f"{BASE_URL}/brands/{b['slug']}/", brand_mod(b))
+                    for b in sorted(brands, key=lambda b: b["slug"])]
+    entries += [url_el(f"{BASE_URL}/vs/{slug}/", home_mod)
+                for slug in sorted(vs_slugs or [])]
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -2434,6 +2451,353 @@ def load_guides(guides_dir):
     return out
 
 
+# ─── Brand landing pages (browse-by-brand IA) ───────────────────────────────
+# Derived, whole-corpus artifacts like the sitemap/manifest: one page per brand
+# at /brands/<slug>/ plus a /brands/ index, grouped by category. Pure derivation
+# from identity.brand + identity.category — no new spine data, no hand-authoring.
+# Grouped by SLUG (not raw brand string) so casing variants — Fujifilm vs
+# FUJIFILM — collapse into one page instead of clobbering /brands/fujifilm/.
+
+# Friendly category labels + display order for the on-page grouping.
+BRAND_CATEGORY_LABELS = {
+    "body": "Cameras",
+    "lens": "Lenses",
+    "drone": "Drones",
+    "action_cam": "Action Cameras",
+    "support": "Tripods & Support",
+}
+BRAND_CATEGORY_ORDER = ["body", "lens", "drone", "action_cam", "support"]
+_OTHER_CATEGORY_LABEL = "Other Gear"
+# Singular forms for count phrasing ("1 lens", not "1 lenses").
+BRAND_CATEGORY_SINGULAR = {
+    "Cameras": "camera", "Lenses": "lens", "Drones": "drone",
+    "Action Cameras": "action camera", "Tripods & Support": "support item",
+    _OTHER_CATEGORY_LABEL: "item",
+}
+
+_BRAND_CSS = """
+.brand-hero{padding:1.5rem 0 .5rem}
+.brand-hero h1{margin:0 0 .4rem}
+.brand-intro{color:var(--color-text-secondary,#555);max-width:62ch;line-height:1.55}
+.brand-cat{scroll-margin-top:64px;margin:1.5rem 0 2rem}
+.brand-cat-head{font-size:15px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--color-text-muted,#9a938c);margin-bottom:1rem}
+.brand-index-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:var(--space-md,16px);margin-top:1.25rem}
+.brand-tile{display:block;background:var(--color-surface,#fff);border:1px solid var(--color-border-light,#f0ece8);border-radius:var(--radius-lg,16px);padding:var(--space-lg,24px);text-decoration:none;color:inherit;transition:box-shadow .25s ease,transform .25s ease,border-color .25s ease}
+.brand-tile:hover{box-shadow:var(--shadow-card-hover,0 6px 20px rgba(45,42,38,.12));transform:translateY(-3px);border-color:var(--color-border,#e5e0db)}
+.brand-tile .brand-name{font-size:1.15rem;font-weight:650;margin-bottom:.2rem}
+.brand-tile .brand-count{color:var(--color-text-muted,#9a938c);font-size:.9rem}
+.brand-tile .brand-breakdown{color:var(--color-text-secondary,#6b6560);font-size:.82rem;margin-top:.4rem}
+.brand-backlink{display:inline-block;margin:.2rem 0 .6rem;font-size:.9rem;color:var(--color-primary-dark,#c4623f);text-decoration:none}
+.brand-backlink:hover{text-decoration:underline}
+"""
+
+
+def brand_slug(name):
+    """URL-safe slug for a brand: 'Peak Design' -> 'peak-design'."""
+    return re.sub(r"[^a-z0-9]+", "-", (name or "").lower()).strip("-")
+
+
+def collect_brands(cards):
+    """Group cards by brand slug. Returns a list of dicts sorted by card count
+    desc then display name, each: {slug, display, cards, count, by_category}.
+
+    display = the most frequent raw casing of the brand (so Fujifilm wins over
+    FUJIFILM 6-to-2); by_category maps category -> [cards] in grid order."""
+    buckets = {}
+    for card in cards:
+        brand = (card.get("identity", {}) or {}).get("brand") or ""
+        slug = brand_slug(brand)
+        if not slug:
+            continue
+        b = buckets.setdefault(slug, {"slug": slug, "cards": [], "_names": collections.Counter()})
+        b["cards"].append(card)
+        b["_names"][brand] += 1
+
+    brands = []
+    for slug, b in buckets.items():
+        display = b["_names"].most_common(1)[0][0]
+        by_cat = collections.defaultdict(list)
+        for card in b["cards"]:
+            cat = (card.get("identity", {}) or {}).get("category") or ""
+            by_cat[cat if cat in BRAND_CATEGORY_LABELS else "_other"].append(card)
+        for cat in by_cat:
+            by_cat[cat].sort(key=lambda c: card_name(c).lower())
+        brands.append({
+            "slug": slug, "display": display, "cards": b["cards"],
+            "count": len(b["cards"]), "by_category": dict(by_cat),
+        })
+    brands.sort(key=lambda x: (-x["count"], x["display"].lower()))
+    return brands
+
+
+def _brand_category_sections(brand):
+    """Ordered (label, cat_key, cards) tuples for the categories a brand has."""
+    out = []
+    for cat in BRAND_CATEGORY_ORDER:
+        if brand["by_category"].get(cat):
+            out.append((BRAND_CATEGORY_LABELS[cat], cat, brand["by_category"][cat]))
+    if brand["by_category"].get("_other"):
+        out.append((_OTHER_CATEGORY_LABEL, "_other", brand["by_category"]["_other"]))
+    return out
+
+
+def _brand_category_phrase(brand):
+    """'cameras and lenses' — lowercased friendly labels of present categories,
+    for the SEO title/intro. Falls back to 'gear'."""
+    labels = [lbl.lower() for lbl, _c, _cs in _brand_category_sections(brand)
+              if lbl != _OTHER_CATEGORY_LABEL]
+    if not labels:
+        return "gear"
+    if len(labels) == 1:
+        return labels[0]
+    return ", ".join(labels[:-1]) + f" and {labels[-1]}"
+
+
+def _brand_teaser_card(card):
+    """Server-rendered teaser card for a brand grid — reuses the maddi.css
+    .teaser-card classes the client grid uses, so brand pages look native."""
+    cid = card["card_id"]
+    ident = card.get("identity", {}) or {}
+    name = card_name(card)
+    img = (ident.get("image_hero") or ident.get("image_thumb")
+           or card.get("image_thumb") or "")
+    sub = (ident.get("subcategory") or "").replace("-", " ").strip()
+    sub = "" if sub in ("", "unknown") else sub.title()
+    meta = sub or (ident.get("category") or "").title()
+    if img:
+        media = (f'<a class="card-image" href="/cards/{esc(cid)}/">'
+                 f'<img src="{esc(img)}" alt="{esc(name)}" loading="lazy"></a>')
+    else:
+        media = (f'<a class="card-image" href="/cards/{esc(cid)}/">'
+                 f'<span class="image-placeholder">📷</span></a>')
+    nl, nu = new_cta(card)
+    ul, uu = used_cta(card)
+    return (
+        f'<div class="teaser-card">'
+        f'{media}'
+        f'<div class="card-body">'
+        f'<a class="product-name" href="/cards/{esc(cid)}/">{esc(name)}</a>'
+        f'<div class="product-meta">{esc(meta)}</div>'
+        f'<div class="card-actions">'
+        f'<a class="btn-affiliate btn-buy-new" href="{esc(nu)}" target="_blank" '
+        f'rel="nofollow noopener sponsored" data-out>{esc(nl)} →</a>'
+        f'<a class="btn-affiliate btn-buy-used" href="{esc(uu)}" target="_blank" '
+        f'rel="nofollow noopener sponsored" data-out>{esc(ul)} →</a>'
+        f'</div></div></div>')
+
+
+def brand_jsonld(brand, canonical):
+    """CollectionPage + ItemList of the brand's products (name + card URL)."""
+    items = [
+        {"@type": "ListItem", "position": i + 1,
+         "url": f"{BASE_URL}/cards/{c['card_id']}/",
+         "name": card_name(c)}
+        for i, c in enumerate(brand["cards"])
+    ]
+    doc = {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": f"{brand['display']} — reviewed camera gear",
+        "url": canonical,
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(items),
+                       "itemListElement": items},
+    }
+    return json.dumps(doc, indent=2)
+
+
+def render_brand_page(brand):
+    disp = brand["display"]
+    slug = brand["slug"]
+    n = brand["count"]
+    canonical = f"{BASE_URL}/brands/{slug}/"
+    phrase = _brand_category_phrase(brand)
+    title = f"{disp} {phrase} — {n} reviewed on the evidence | AskMaddi"
+    meta_desc = (
+        f"Every {disp} product AskMaddi has synthesized independent reviews for "
+        f"— {n} {phrase}, grouped by type, each with claim-level reviewer "
+        f"sentiment and sourced evidence. We aggregate others' assessments; we "
+        f"don't rate.")
+    intro = (
+        f"Every {esc(disp)} product AskMaddi has synthesized independent reviews "
+        f"for, grouped by type. Each links to its full card — claim-level "
+        f"sentiment on concrete axes, every claim attributed. We present the "
+        f"evidence and let you decide; we don't crown a winner.")
+
+    sections = []
+    for label, cat_key, cat_cards in _brand_category_sections(brand):
+        grid = "".join(_brand_teaser_card(c) for c in cat_cards)
+        anchor = cat_key if cat_key != "_other" else "other"
+        sections.append(
+            f'<section class="brand-cat" id="{esc(anchor)}">'
+            f'<h2 class="brand-cat-head">{esc(label)} ({len(cat_cards)})</h2>'
+            f'<div class="card-grid">{grid}</div></section>')
+    sections_html = "\n".join(sections)
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{esc(canonical)}">
+  <meta property="og:title" content="{esc(disp)} gear — AskMaddi">
+  <meta property="og:description" content="{esc(meta_desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(canonical)}">
+  <meta property="og:site_name" content="{SITE_NAME}">
+  <script type="application/ld+json">
+{brand_jsonld(brand, canonical)}
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+  <style>{_BRAND_CSS}</style>
+</head>
+<body data-page="brand">
+  <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <a class="brand-backlink" href="/brands/">← All brands</a>
+      <section class="brand-hero">
+        <h1>{esc(disp)} — {n} reviewed</h1>
+        <p class="brand-intro">{intro}</p>
+      </section>
+      {sections_html}
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/brands/">All brands</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+    </footer>
+  </div>
+  <script src="/js/beacon.js" defer></script>
+</body>
+</html>
+"""
+
+
+def render_brands_index(brands):
+    canonical = f"{BASE_URL}/brands/"
+    n = len(brands)
+    title = f"Browse camera gear by brand — {n} brands | AskMaddi"
+    meta_desc = (
+        f"Browse AskMaddi's reviewed camera gear by brand — {n} brands, from "
+        f"Canon and Sony to Leica and Hasselblad. Claim-level reviewer sentiment "
+        f"and sourced evidence on every product. We synthesize reviews; we don't "
+        f"rate.")
+    intro = ("Browse the catalogue by maker. Every brand page collects that "
+             "maker's reviewed gear, grouped by type, each with the sourced "
+             "reviewer evidence behind it.")
+
+    tiles = []
+    for b in brands:
+        parts = [f"{len(cs)} "
+                 f"{BRAND_CATEGORY_SINGULAR[lbl] if len(cs) == 1 else lbl.lower()}"
+                 for lbl, _c, cs in _brand_category_sections(b)]
+        breakdown = " · ".join(parts)
+        tiles.append(
+            f'<a class="brand-tile" href="/brands/{esc(b["slug"])}/">'
+            f'<div class="brand-name">{esc(b["display"])}</div>'
+            f'<div class="brand-count">{b["count"]} '
+            f'{"product" if b["count"] == 1 else "products"}</div>'
+            f'<div class="brand-breakdown">{esc(breakdown)}</div></a>')
+    tiles_html = "".join(tiles)
+
+    items = [
+        {"@type": "ListItem", "position": i + 1,
+         "url": f"{BASE_URL}/brands/{b['slug']}/", "name": b["display"]}
+        for i, b in enumerate(brands)
+    ]
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        "name": "Camera gear by brand", "url": canonical,
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(items),
+                       "itemListElement": items},
+    }, indent=2)
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{esc(canonical)}">
+  <meta property="og:title" content="Browse camera gear by brand — AskMaddi">
+  <meta property="og:description" content="{esc(meta_desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(canonical)}">
+  <meta property="og:site_name" content="{SITE_NAME}">
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+  <style>{_BRAND_CSS}</style>
+</head>
+<body data-page="brands-index">
+  <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <section class="brand-hero">
+        <h1>Browse by brand</h1>
+        <p class="brand-intro">{intro}</p>
+      </section>
+      <div class="brand-index-grid">{tiles_html}</div>
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+      <span>·</span>
+      <a href="/why.html">Why AskMaddi</a>
+    </footer>
+  </div>
+  <script src="/js/beacon.js" defer></script>
+</body>
+</html>
+"""
+
+
+def write_brand_pages(out_dir, cards):
+    """Emit /brands/<slug>/index.html for every brand + /brands/index.html.
+    Returns the list of brand dicts (for sitemap wiring)."""
+    brands = collect_brands(cards)
+    out = Path(out_dir)
+    for b in brands:
+        bdir = out / "brands" / b["slug"]
+        bdir.mkdir(parents=True, exist_ok=True)
+        (bdir / "index.html").write_text(render_brand_page(b), encoding="utf-8")
+    idx = out / "brands"
+    idx.mkdir(parents=True, exist_ok=True)
+    (idx / "index.html").write_text(render_brands_index(brands), encoding="utf-8")
+    return brands
+
+
 def main():
     ap = argparse.ArgumentParser(description="Generate AskMaddi card detail pages.")
     ap.add_argument("--card", help="Path to a single card JSON.")
@@ -2509,6 +2873,28 @@ def main():
                   f"({c.get('ranked', 0)} ranked, {c.get('excluded', 0)} excluded, "
                   f"{c.get('pending_backfill', 0)} pending)")
 
+    # Brand landing pages: derived whole-corpus IA. Built on --cards-dir runs
+    # (never a single --card build, which would emit just one brand's page).
+    brands = []
+    vs_slugs = []
+    if args.cards_dir:
+        brands = write_brand_pages(out, cards)
+        written.append(str(out / "brands"))
+        print(f"  ✓ brands → {out}/brands/ "
+              f"({len(brands)} brand page(s) + index)")
+
+        # Curated '<A> vs <B>' comparison pages. Lazy import to avoid the
+        # circular (build_vs_pages imports build_site). Reads the ratified seed
+        # data/vs_pairs.json; renders each grounded side-by-side into browser/vs/
+        # so every existing whole-corpus build path (crons, admin publish) gets
+        # them and they land in the sitemap below.
+        import build_vs_pages as _vs
+        vs_slugs, vs_skipped, vs_mode = _vs.build_pages(cards, out / "vs")
+        written.append(str(out / "vs"))
+        print(f"  ✓ vs-pages [{vs_mode}] → {out}/vs/ ({len(vs_slugs)} page(s))")
+        for a_id, b_id, why in vs_skipped:
+            print(f"    ! skipped {a_id} vs {b_id}: {why}", file=sys.stderr)
+
     if args.manifest:
         manifest = {
             "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -2526,8 +2912,9 @@ def main():
                   f"({min(RECENT_CARDS_LIMIT, len(cards))} links)")
 
     if args.sitemap:
-        spath = write_sitemap(out, cards, guides=guides)
+        spath = write_sitemap(out, cards, guides=guides, brands=brands, vs_slugs=vs_slugs)
         print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(guides)} guide urls "
+              f"+ {len(brands)} brand urls + {len(vs_slugs)} vs urls "
               f"+ {len(SITEMAP_STATIC_PAGES)} static)")
         # llms.txt rides the sitemap flag deliberately: identical whole-file
         # semantics (regenerated from the cards loaded THIS run), so it gets
