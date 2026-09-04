@@ -48,6 +48,18 @@ def test_load_seed_missing_or_malformed_returns_empty(tmp_path):
     assert V.load_seed(bad) == []
 
 
+def test_load_seed_skips_unbuilt_statuses(tmp_path):
+    # 'live'/unset build; 'proposed'/'hold' stay dark until a human ratifies.
+    p = tmp_path / "seed.json"
+    p.write_text(json.dumps({"pairs": [
+        {"a": "aa", "b": "bb", "status": "live"},
+        {"a": "cc", "b": "dd"},                       # unset -> builds
+        {"a": "ee", "b": "ff", "status": "proposed"},  # comparator_fork -> dark
+        {"a": "gg", "b": "hh", "status": "hold"},
+    ]}), encoding="utf-8")
+    assert V.load_seed(p) == [("aa", "bb"), ("cc", "dd")]
+
+
 def test_load_seed_drops_incomplete_and_self_pairs(tmp_path):
     p = tmp_path / "seed.json"
     p.write_text(json.dumps({"pairs": [{"a": "aa"}, {"a": "xx", "b": "xx"},

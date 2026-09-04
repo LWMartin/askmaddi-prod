@@ -272,8 +272,16 @@ def _load_cards(cards_dir):
 SEED_PATH = ROOT / 'data' / 'vs_pairs.json'
 
 
+# Seed entries with these statuses are NOT built — they await the human ratify
+# gate (review-is-the-craft-seat). A pair with no status builds (back-compat with
+# external/test seeds); comparator_fork proposals land as 'proposed' and stay
+# dark until a human flips them to 'live'.
+_UNBUILT_STATUSES = {'proposed', 'proposed-crossbrand', 'hold', 'rejected'}
+
+
 def load_seed(path=SEED_PATH):
-    """Return the seed's list of (a_id, b_id) tuples. Missing/malformed → []."""
+    """Return the seed's buildable (a_id, b_id) tuples — those whose status is
+    live or unset. Missing/malformed → []."""
     try:
         doc = json.loads(Path(path).read_text(encoding='utf-8'))
     except (json.JSONDecodeError, OSError):
@@ -281,7 +289,7 @@ def load_seed(path=SEED_PATH):
     out = []
     for entry in doc.get('pairs', []):
         a, b = entry.get('a'), entry.get('b')
-        if a and b and a != b:
+        if a and b and a != b and entry.get('status') not in _UNBUILT_STATUSES:
             out.append((a, b))
     return out
 
