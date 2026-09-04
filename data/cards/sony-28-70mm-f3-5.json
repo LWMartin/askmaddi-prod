@@ -21,10 +21,16 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "pre_owned": 129.99,
+        "open_box": 189.99,
+        "refurbished": 181.5
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 11,
+      "price_updated_at": "2026-09-04T10:10:45.419937+00:00"
     },
     "price_updated_at": "2026-09-03T02:45:14.869352+00:00"
   },
