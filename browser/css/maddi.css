@@ -923,3 +923,18 @@ body {
 .vs-axis-row td { padding: var(--space-sm); color: var(--color-text-secondary); border-top: 1px solid var(--color-border-light); line-height: 1.4; }
 .vs-axis-row:nth-child(even) { background: var(--color-primary-light); }
 @media (max-width: 640px) { .vs-products { grid-template-columns: 1fr; } .vs-axis-table { font-size: 0.82rem; } }
+
+/* ─── /vs/ comparisons hub — tools/build_vs_pages.render_vs_index ────────────*/
+.vs-index-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:var(--space-md); margin-top:1rem; }
+.vs-tile { display:flex; flex-direction:column; gap:var(--space-sm); background:var(--color-surface); border:1px solid var(--color-border-light); border-radius:var(--radius-lg); padding:var(--space-lg); text-decoration:none; color:inherit; transition:box-shadow .25s ease, transform .25s ease, border-color .25s ease; }
+.vs-tile:hover { box-shadow:var(--shadow-card-hover); transform:translateY(-3px); border-color:var(--color-border); }
+.vs-tile-pair { font-size:1.02rem; font-weight:650; line-height:1.35; color:var(--color-text); }
+.vs-tile-vs { display:inline-block; font-size:.72rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:var(--color-primary-dark); background:var(--color-primary-light); border-radius:var(--radius-full); padding:1px 8px; vertical-align:middle; }
+.vs-tile-go { font-size:.85rem; font-weight:600; color:var(--color-primary-dark); margin-top:auto; }
+
+/* ─── Homepage browse entry-points (index.html .browse-nav) ──────────────────*/
+.browse-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:var(--space-md); max-width:600px; margin:var(--space-md) auto var(--space-lg); }
+.browse-nav a { display:inline-flex; align-items:center; gap:8px; padding:10px 20px; font-size:15px; font-weight:600; text-decoration:none; color:var(--color-text); background:var(--color-surface); border:1px solid var(--color-border); border-radius:var(--radius-full); transition:border-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast); }
+.browse-nav a:hover { border-color:var(--color-primary); color:var(--color-primary-dark); box-shadow:var(--shadow-card); transform:translateY(-2px); }
+.browse-nav a .browse-ico { font-size:17px; line-height:1; }
+@media (max-width:600px){ .browse-nav { flex-direction:column; align-items:stretch; } .browse-nav a { justify-content:center; } }

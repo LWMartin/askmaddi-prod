@@ -1980,8 +1980,10 @@ def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None):
         entries += [url_el(f"{BASE_URL}/brands/", home_mod)]
         entries += [url_el(f"{BASE_URL}/brands/{b['slug']}/", brand_mod(b))
                     for b in sorted(brands, key=lambda b: b["slug"])]
-    entries += [url_el(f"{BASE_URL}/vs/{slug}/", home_mod)
-                for slug in sorted(vs_slugs or [])]
+    if vs_slugs:
+        entries += [url_el(f"{BASE_URL}/vs/", home_mod)]
+        entries += [url_el(f"{BASE_URL}/vs/{slug}/", home_mod)
+                    for slug in sorted(vs_slugs)]
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'

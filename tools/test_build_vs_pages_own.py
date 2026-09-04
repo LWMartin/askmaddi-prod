@@ -182,3 +182,23 @@ def test_main_default_out_is_under_browser_vs():
     # sanity: the module-level ROOT anchors defaults under the repo, not cwd
     assert str(V.ROOT / "browser" / "vs").endswith("browser/vs")
     assert str(V.ROOT / "data" / "cards").endswith("data/cards")
+
+
+def test_build_pages_writes_vs_hub_index(tmp_path):
+    # build_pages emits the /vs/ hub listing every comparison, grouped by cat.
+    out = tmp_path / "vs"
+    slugs, _sk, _mode = V.build_pages(
+        [CARD_A, CARD_B], out, seed_path=tmp_path / "none.json",
+        min_shared=2, fallback_auto=True)
+    assert slugs == ["alpha-one-vs-beta-two"]
+    hub = (out / "index.html").read_text(encoding="utf-8")
+    assert "Compare cameras" in hub
+    assert 'href="/vs/alpha-one-vs-beta-two/"' in hub
+    assert "Alpha One" in hub and "Beta Two" in hub
+    assert "Cameras (1)" in hub          # category grouping (body -> Cameras)
+
+
+def test_build_pages_no_hub_when_no_pairs(tmp_path):
+    out = tmp_path / "vs"
+    V.build_pages([CARD_A], out, seed_path=tmp_path / "none.json", fallback_auto=True)
+    assert not (out / "index.html").exists()  # nothing to list -> no hub

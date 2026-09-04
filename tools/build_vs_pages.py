@@ -346,7 +346,131 @@ def build_pages(cards, out_dir, seed_path=SEED_PATH, min_shared=2, fallback_auto
         page_dir.mkdir(parents=True, exist_ok=True)
         (page_dir / 'index.html').write_text(render_vs_page(card_a, card_b), encoding='utf-8')
         slugs.append(slug)
+    # The /vs/ hub — a browsable index of every comparison, parallel to /brands/.
+    # Gives the homepage 'Compare gear' link a real destination and hands
+    # crawlers one page linking to all side-by-sides.
+    if pairs:
+        out.mkdir(parents=True, exist_ok=True)
+        (out / 'index.html').write_text(render_vs_index(pairs), encoding='utf-8')
     return slugs, skipped, mode
+
+
+# Friendly section labels for the hub, mirroring build_site's brand grouping.
+_VS_CAT_LABELS = {
+    'body': 'Cameras', 'lens': 'Lenses', 'drone': 'Drones',
+    'action_cam': 'Action Cameras', 'support': 'Tripods & Support',
+}
+_VS_CAT_ORDER = ['body', 'lens', 'drone', 'action_cam', 'support']
+
+
+def _pair_category(card_a, card_b):
+    return (card_a.get('identity', {}) or {}).get('category') or ''
+
+
+def render_vs_index(pairs):
+    """The /vs/ hub: every comparison as a tile, grouped by category. Reuses the
+    brand-index tile styling so it reads as a native browse page."""
+    canonical = B.abs_url('/vs/')
+    n = len(pairs)
+    title = f'Camera & gear comparisons — {n} side-by-sides | AskMaddi'
+    meta_desc = (
+        f'Browse {n} side-by-side gear comparisons — each restates the grounded '
+        f'review sentiment both products share, axis by axis, with no verdict. '
+        f'AskMaddi synthesizes reviews; you decide.')
+    intro = ('Two products, the same review axes, side by side. Each comparison '
+             'restates what reviewers said about both — grounded shares, no '
+             'winner crowned. Pick the pair you\'re weighing.')
+
+    # group pairs by category
+    by_cat = {}
+    for a, b in pairs:
+        by_cat.setdefault(_pair_category(a, b) or '_other', []).append((a, b))
+    sections = []
+    ordered_cats = [c for c in _VS_CAT_ORDER if c in by_cat] + \
+                   [c for c in by_cat if c not in _VS_CAT_ORDER]
+    for cat in ordered_cats:
+        label = _VS_CAT_LABELS.get(cat, 'Other Gear')
+        items = sorted(by_cat[cat], key=lambda ab: vs_slug(*ab))
+        tiles = []
+        for a, b in items:
+            slug = vs_slug(a, b)
+            na = a['identity']['display_name']
+            nb = b['identity']['display_name']
+            tiles.append(
+                f'<a class="vs-tile" href="/vs/{B.esc(slug)}/">'
+                f'<span class="vs-tile-pair">{B.esc(na)} '
+                f'<span class="vs-tile-vs">vs</span> {B.esc(nb)}</span>'
+                f'<span class="vs-tile-go">Compare →</span></a>')
+        sections.append(
+            f'<section class="brand-cat"><h2 class="brand-cat-head">'
+            f'{B.esc(label)} ({len(items)})</h2>'
+            f'<div class="vs-index-grid">{"".join(tiles)}</div></section>')
+    sections_html = '\n'.join(sections)
+
+    items = [{'@type': 'ListItem', 'position': i + 1,
+              'url': B.abs_url(f'/vs/{vs_slug(a, b)}/'),
+              'name': f"{a['identity']['display_name']} vs {b['identity']['display_name']}"}
+             for i, (a, b) in enumerate(sorted(pairs, key=lambda ab: vs_slug(*ab)))]
+    jsonld = json.dumps({
+        '@context': 'https://schema.org', '@type': 'CollectionPage',
+        'name': 'Camera & gear comparisons', 'url': canonical,
+        'isPartOf': {'@type': 'WebSite', 'name': B.SITE_NAME, 'url': B.BASE_URL + '/'},
+        'mainEntity': {'@type': 'ItemList', 'numberOfItems': len(items),
+                       'itemListElement': items},
+    }, indent=2)
+
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{B.esc(title)}</title>
+  <meta name="description" content="{B.esc(meta_desc)}">
+  <link rel="canonical" href="{B.esc(canonical)}">
+  <meta property="og:title" content="Camera &amp; gear comparisons — AskMaddi">
+  <meta property="og:description" content="{B.esc(meta_desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{B.esc(canonical)}">
+  <meta property="og:site_name" content="{B.SITE_NAME}">
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+</head>
+<body data-page="vs-index">
+  <div class="affiliate-disclosure-bar">{B.esc(DISCLOSURE_TEXT)}</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <a class="brand-backlink" href="/brands/">← Browse by brand</a>
+      <section class="brand-hero">
+        <h1>Compare cameras &amp; gear</h1>
+        <p class="brand-intro">{intro}</p>
+      </section>
+      {sections_html}
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/brands/">Browse by brand</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+    </footer>
+  </div>
+  <script src="/js/beacon.js" defer></script>
+</body>
+</html>
+"""
 
 
 def main(argv=None):
