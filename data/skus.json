@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-09-04",
+  "as_of": "2026-09-05",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -1556,7 +1556,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "147469332238",
+        "ebay_legacy_item_id": "407174343549",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -1572,23 +1572,23 @@
           "conflict": false,
           "observations": []
         },
-        "market_title": "Hasselblad 500C/M Camera Body Early 500CM #373",
-        "image": "https://i.ebayimg.com/images/g/VcgAAeSwjYdqafTz/s-l1600.jpg",
+        "market_title": "Hasselblad 500C/M Camera Body Early 500CM #816",
+        "image": "https://i.ebayimg.com/images/g/~ZYAAeSwVZ5qkGT0/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "840.92",
+          "value": "780.42",
           "currency": "USD",
-          "as_of": "2026-08-18T04:22:09Z"
+          "as_of": "2026-09-05T00:01:56Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/147469332238?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoGfYFPkwiKCW4ZNSs2u11xDs6BnqZctwV2LfuhvGqGs7o1ALu7L9K5ePILEKtzRrsY4HLMOENPvwI9ixjZilwL05smwZSzcxDC77XtJF%2FFGQ6wmdq8uStLz0NoyHg49YpEmzitYNNFJkQo7ELadkUYe3Z9l%2FTjjd%2FNKwKJ5srC8k2WaxTgR9FEj3OOL1mIJNlM2j3yzym3y6%2FBLX5G8ic0w%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/407174343549?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fic8CbZOtapJ9TrCI3Kj1W4Qp%2FOa79bykOpnYIzYYFs0cviDkwByQ%2BTHt0YLKIyOQ%2F2sn0UcFPBVV9NgqVUJPwTvf9uUurH9%2BGq%2BtPt%2FGMQujz7630%2BhbRXQ4sqfeh%2FFUP%2FXjTiqoDWalGLVp%2Fdk2UCB8oueWp%2BhCIGKe8i0p096kldDM4VjY%2By9h76eGJQtA%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-18T04:22:09Z"
+      "resolved_at": "2026-09-05T00:01:56Z"
     },
     "gopro-hero10": {
       "contamination_key": "gopro-hero10",
@@ -13381,7 +13381,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T10:02:15Z"
+      "resolved_at": "2026-09-04T10:02:15Z",
+      "spec_surface": {
+        "wikipedia_title": "Fujifilm_X-T3",
+        "wikipedia_title_resolved": "Fujifilm X-T3",
+        "wikipedia_stamped_at": "2026-09-05T02:34:47Z"
+      }
     },
     "canon-powershot-sx530": {
       "contamination_key": "canon-powershot-sx530",
@@ -13423,6 +13428,1668 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-09-04T10:02:32Z"
+    },
+    "canon-35mm-f2": {
+      "contamination_key": "canon-35mm-f2",
+      "vendor": "Canon",
+      "model": "35mm f2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "335911229607",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Near MINT Canon EF 35mm f/2 Wide Angle Prime non-IS EF Lens w/caps From Japan",
+        "image": "https://i.ebayimg.com/images/g/snMAAeSwzf9qiOej/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "189.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T12:00:45Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/335911229607?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8Rt2dZx96KIgrgDyxaS0Grbh3DUcEEAVG2aRgVuNcWdQRFwrmd4hsy0yKljagkC9ZebaBKjbCke16iAgQF%2FQIUd3nCZdzINjM0jIoU%2F36R47OGcYMgjvm8aOeXGKJZP0O5OCC2hpZm2RB9hVx15yAcevxdl9vwpugQGKk35UgYFa341KOvAmyAnAxNaRn86eg%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T12:00:45Z"
+    },
+    "nikon-35mm-f1-4": {
+      "contamination_key": "nikon-35mm-f1-4",
+      "vendor": "Nikon",
+      "model": "35mm f1.4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147542980969",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon Nikkor AI-S 35mm f1.4 Lens AIS #558",
+        "image": "https://i.ebayimg.com/images/g/cXgAAeSw~uRqfiIW/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "365.42",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:00:23Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147542980969?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-04T14:00:23Z"
+    },
+    "canon-15-30mm-f4-5": {
+      "contamination_key": "canon-15-30mm-f4-5",
+      "vendor": "Canon",
+      "model": "15 30mm f4.5",
+      "gtin": "00013803352047",
+      "marketplace_ids": {
+        "ebay_epid": "8057282682",
+        "ebay_legacy_item_id": "336591766662",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "5775C002",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0013803352047",
+              "gtin14": "00013803352047",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0013803352047",
+              "gtin14": "00013803352047",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0013803352047",
+              "gtin14": "00013803352047",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803352047",
+              "gtin14": "00013803352047",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon RF 15-30mm f/4.5-6.3 IS STM Lens",
+        "image": "https://i.ebayimg.com/images/g/jEsAAeSwYOtqDN2Q/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/h8oAAOSw5d1kKrOw/s-l1600.jpg",
+        "price_seen": {
+          "value": "439.95",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:00:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336591766662?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-04T14:00:42Z"
+    },
+    "sigma-16-28mm-f2-8": {
+      "contamination_key": "sigma-16-28mm-f2-8",
+      "vendor": "Sigma",
+      "model": "16 28mm f2.8",
+      "gtin": "00085126206697",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "178358384858",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "NA",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0085126206697",
+              "gtin14": "00085126206697",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "NoShip2US [MINT+ w/ Hood Caps] Sigma 16-28mm f/2.8 DG DN Contemporary SL/TL Ly10",
+        "image": "https://i.ebayimg.com/images/g/SQUAAeSw8EFqYvzB/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "589.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T12:03:17Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/178358384858?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T12:03:17Z"
+    },
+    "insta360-x4-8k-360-action": {
+      "contamination_key": "insta360-x4-8k-360-action",
+      "vendor": "Insta360",
+      "model": "x4 8k 360 action",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227482704373",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "Action",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Insta360 X4 8K 360 Action Cam",
+        "image": "https://i.ebayimg.com/images/g/Bi0AAeSw3vtqhcrQ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "300.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:01:21Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227482704373?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FdW2gMxQ9BExPmFp2sM066MN5ZhJ8XmqyJBjD2lAmXwlY3oGLyeOvaUbIyQP7Y594DTW32Aju17qBkmc4%2Fc9Z8FvFEFt5HZVeKP1KutVYxuvt1%2FUefgcWnN3M6y41WdYljOn0MUR6IS3aSY%2B3woTLHLShFglr%2FG2M0yalLSi617v%2F%2B790pL4ehBRSuSPjIacs%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T14:01:21Z"
+    },
+    "dji-osmo-nano-128gb": {
+      "contamination_key": "dji-osmo-nano-128gb",
+      "vendor": "DJI",
+      "model": "osmo nano 128gb",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336774743185",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Osmo Nano Standard Combo (128GB)",
+        "image": "https://i.ebayimg.com/images/g/cYsAAeSwIf9qmDGx/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "309.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:01:37Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336774743185?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T14:01:37Z"
+    },
+    "gopro-hero-wifi": {
+      "contamination_key": "gopro-hero-wifi",
+      "vendor": "GoPro",
+      "model": "hero wifi",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "278330532771",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "GoPro",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "GoPro HERO3 White Edition Action Camera WiFi Ready",
+        "image": "https://i.ebayimg.com/images/g/h30AAeSwiTNqlgp2/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "28.50",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:01:55Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/278330532771?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T14:01:55Z"
+    },
+    "godox-v860-ii-li-ion": {
+      "contamination_key": "godox-v860-ii-li-ion",
+      "vendor": "Godox",
+      "model": "v860 ii li ion",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "127789046902",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Olympus",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "BNIB BRAND NEW GODOX V860ii  ELECTRONIC FLASH VING LI-ION BOX FOR CANON CAMERA",
+        "image": "https://i.ebayimg.com/images/g/DaYAAeSwGTppz4Tu/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "143.98",
+          "currency": "USD",
+          "as_of": "2026-09-04T14:02:14Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/127789046902?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9C6gCmrsgkn3N2u05mOdOf4tzYpXMoGhj%2BcensQaeWXuOl24rO0QNfzaiYeinIPXxhkLejbzvaJjlCw1t6ADYXaMbfZFXh8Ja2sQD8e%2F%2BUziPYo6YCx0rbLF3rmPjV6YM7YV1Mj2LucW60DqpUzJF7c2FOpkVIcftoCY1Z2P2Jp80PAX5aVJ8tYsZ6EWlBsfY%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T14:02:14Z"
+    },
+    "sony-24mm-f1-8": {
+      "contamination_key": "sony-24mm-f1-8",
+      "vendor": "Sony",
+      "model": "24mm f1.8",
+      "gtin": "04905524796735",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407172073313",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "4905524796735",
+              "gtin14": "04905524796735",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sony 24mm f1.8 Zeiss Sonnar E ZA T* Lens SEL24F18Z #282",
+        "image": "https://i.ebayimg.com/images/g/6SEAAeSwmOBqj0rv/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "338.95",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:00:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407172073313?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8WpV0UAECmoyybJ06bAyEbVc7CsqHTqi82iuflfhcmAhL4QZ%2B6P4fkCCFMar01MpHzuNWStNiHZt2agL1fWeO5V01yErMWRKHuWgGZG1GpknslDWB1A5rxeuMMOszpag9uEcvuYGbVumAFfSJVNYJu9z2kgKy60BnimUQAG%2FfgJcBKSB8AA4o3U5PZ%2BmJqJ%2FI%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-04T16:00:24Z"
+    },
+    "canon-16-35mm-f2-8": {
+      "contamination_key": "canon-16-35mm-f2-8",
+      "vendor": "Canon",
+      "model": "16 35mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820060836941",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon EF 16‑35mm f/2.8L USM L‑Series Wide‑Angle Zoom Lens Full‑Frame EF Mount",
+        "image": "https://i.ebayimg.com/images/g/xhYAAeSwMk1qknd8/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "299.65",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:01:04Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820060836941?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde90ROI0nFZ8kQUqkIdm%2BQtqzCnpWB4zahP5%2BxlwYMsks6Lb62o8wGxUgUNCy%2F4U2K3X38JcCHGEnf0SsCWmLXT0djpdDQD73FfqnODgLDNWO1yuT3i65OwOijbiYnBaXfvKgnCu8r05FwCdQPtzbJOecix7JKXueJWCV02QZLKrF%2FvVAtfZNvixXsT----CHdQ%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T16:01:04Z"
+    },
+    "fujifilm-x-pro2": {
+      "contamination_key": "fujifilm-x-pro2",
+      "vendor": "Fujifilm",
+      "model": "x pro2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377330323979",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "FUJIFILM",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "FUJIFILM X-Pro2 Mirrorless Camera Body, Black {24.3MP} (BODY ONLY)",
+        "image": "https://i.ebayimg.com/images/g/KjEAAeSwbJRqQtgJ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "960.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:01:58Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377330323979?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Bd6Ryz%2FWl9FFTs5FvWpqS7cldCSicpq9mHrxohX%2FAMl5D48BU0aE0sb0C7xFE99PkokfsFysLhyRjTGeR0LM6YW9TV68MJ4XmVwdiS%2FVvWVEDn6TWq5goijfMKcg9Bcy%2FCqV2ld24oo9joqglVxeAkTVyhJzEipQaXzSc32OugxPLqD9lHucovN0t9ATLUnKU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T16:01:58Z",
+      "spec_surface": {
+        "wikipedia_title": "Fujifilm_X-Pro2",
+        "wikipedia_title_resolved": "Fujifilm X-Pro2",
+        "wikipedia_stamped_at": "2026-09-05T02:34:50Z"
+      }
+    },
+    "fujifilm-x-t30": {
+      "contamination_key": "fujifilm-x-t30",
+      "vendor": "Fujifilm",
+      "model": "x t30",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307157367412",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Fujifilm X-T30 26.1MP Mirrorless Camera Black Body Only - Shutter count  5499.",
+        "image": "https://i.ebayimg.com/images/g/BcgAAeSwSGdqkeTr/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "624.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:02:16Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307157367412?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T16:02:16Z",
+      "spec_surface": {
+        "wikipedia_title": "Fujifilm_X-T30",
+        "wikipedia_title_resolved": "Fujifilm X-T30",
+        "wikipedia_stamped_at": "2026-09-05T02:34:54Z"
+      }
+    },
+    "canon-eos-r100": {
+      "contamination_key": "canon-eos-r100",
+      "vendor": "Canon",
+      "model": "eos r100",
+      "gtin": "00013803356625",
+      "marketplace_ids": {
+        "ebay_epid": "15060658318",
+        "ebay_legacy_item_id": "135571883919",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "6052C002",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0013803356625",
+              "gtin14": "00013803356625",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0013803356625",
+              "gtin14": "00013803356625",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0013803356625",
+              "gtin14": "00013803356625",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803356625",
+              "gtin14": "00013803356625",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon EOS R100 24.1MP Mirrorless Camera - Black Body Only Canon",
+        "image": "https://i.ebayimg.com/images/g/HzQAAeSwwp1oxiv0/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/-HgAAOSwtw1llVAV/s-l1200.jpg",
+        "price_seen": {
+          "value": "324.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:02:34Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/135571883919?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FF%2BWkiY%2FujytbJRk7veglhB4OR9sJ38R6TdpICM1r8PgJNl0TzOwAfueE1KGfz8vzYi19bHBktmg%2By%2FjnotNrYG9f7eDPvs5Vx%2F9kohvHtdvMXsQEcGt7KPC1R%2BhjijIukJU9g0jzGUyZDcFVknXVbmPBw1OC%2BgCGuExXVGqbhAMDGh%2Ft3RRHZ8yK2zB5hFSk%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T16:02:34Z"
+    },
+    "sony-18-55mm-f3-5": {
+      "contamination_key": "sony-18-55mm-f3-5",
+      "vendor": "Sony",
+      "model": "18 55mm f3.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147524420965",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony E 18-55mm f3.5-5.6 SEL OSS Lens SEL1855 #741",
+        "image": "https://i.ebayimg.com/images/g/a48AAeSwgW9qjF~q/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "100.75",
+          "currency": "USD",
+          "as_of": "2026-09-04T18:03:38Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147524420965?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FCt460uXzYxz7qaspaBByXfUe6HSQrJ5aQy3xRDBwRcUZtCpJx3375JH22cbGrORvd28w0Ycd8IUi0bt4K9XPjTCKZ1zEuM%2B3pR8woVZInoeQOgMjDlgOSB3bhZl0%2FE%2B%2Feaa2WOQcn77pYOhKLBYGwVzO%2FpNarBinNP1MThfKZu0aqGC1Q32VF0kiRip1Qs7A%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-04T18:03:38Z"
+    },
+    "sigma-60mm-f2-8": {
+      "contamination_key": "sigma-60mm-f2-8",
+      "vendor": "Sigma",
+      "model": "60mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147482605582",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sigma 60mm f2.8 EX DN Autofocus Art Lens Micro 4/3 MFT",
+        "image": "https://i.ebayimg.com/images/g/IwAAAeSwD5hqH14G/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "119.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T16:03:32Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147482605582?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FMNHf5GLxNsB0zHX1DhM%2B0FEoP8KgxkwbzhMrgO1h0D6ZhD5hLDX%2BFe8qxoGWA9ltbsD6rkFT2gyf9iDgbNyIViKVJ4GLBFMfR4%2B4IHQNxo7irXIUuqfyCXbpBrHTJqGaXSkbK1UdJ%2B%2BFnLLPWD3wyiQ7YWPR0HNSC3ICbwpujLps8bEJJ5L4B0AKfE0x0jlU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T16:03:32Z"
+    },
+    "canon-28-70mm-f2-8": {
+      "contamination_key": "canon-28-70mm-f2-8",
+      "vendor": "Canon",
+      "model": "28 70mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407177637119",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "[Near MINT /w Hood] Canon EF 28-70mm f/2.8 L USM AF Lens for EOS From JAPAN",
+        "image": "https://i.ebayimg.com/images/g/Km4AAeSwWfhqkkjz/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "269.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T18:05:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407177637119?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FyPEezl8ZE%2BfUgvPJfHf%2BXHtfMzva%2FSgTeY%2Fs2rhsRX%2FIwmydTrj4HGTJuUSI%2BaYKzCAaB%2BQHlzk2mQ0HAhD8sLRL4AAX4lmzRjzvI0drcrJVaV0YOfjnUogSbD0NbXuH3YWNTWZnaY1Lp5o7GTe%2BxRw75cauiz6cCCGsbP1Mtj1Z45YftDCcmckI9uZ38TF4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T18:05:35Z",
+      "rebind_rejected": {
+        "ts": "2026-09-04T20:01:02Z",
+        "item_id": "188870000589",
+        "title": "Works [As-Is] Canon EF 28-70mm f/2.8 L USM Zoom Lens From JAPAN",
+        "price_seen": {
+          "value": "199.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:01:02Z"
+        },
+        "signals": [
+          "junk_title"
+        ],
+        "hard": true
+      }
+    },
+    "canon-16-28mm-f2-8": {
+      "contamination_key": "canon-16-28mm-f2-8",
+      "vendor": "Canon",
+      "model": "16 28mm f2.8",
+      "gtin": "00013803382266",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "326948640699",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "6906C002",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "013803382266",
+              "gtin14": "00013803382266",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon RF 16-28mm f/2.8 IS STM Lens",
+        "image": "https://i.ebayimg.com/images/g/5VIAAeSwA11pYU3M/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "989.95",
+          "currency": "USD",
+          "as_of": "2026-09-04T18:05:54Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/326948640699?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T18:05:54Z"
+    },
+    "sony-24-50mm-f2-8": {
+      "contamination_key": "sony-24-50mm-f2-8",
+      "vendor": "Sony",
+      "model": "24 50mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206534001149",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony FE 24-50mm f2.8 G Lens SEL2450G #175",
+        "image": "https://i.ebayimg.com/images/g/OnMAAeSwptdqmdGO/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1085.05",
+          "currency": "USD",
+          "as_of": "2026-09-04T18:06:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206534001149?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9aIqNR%2FxeZgnNC2XFkQ1TfnSEO%2Bo1mg2AjeXBpYREqLr7s95cwoUJAxb%2B0vwxa1IsGgMEGtW7JL5XXzWMLB33SEeuT66vHL6qcFuQ5YEctmi2j5ZxDQpTddA%2F4WP4tRzNRwkLE3oaTOfYaf3MfnlwhoZ4t4oi6sWiKwVtQD0vYCTQ8MOyUHoW14wj3NKepyRA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T18:06:42Z"
+    },
+    "canon-powershot-sx730": {
+      "contamination_key": "canon-powershot-sx730",
+      "vendor": "Canon",
+      "model": "powershot sx730",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "158257063117",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "\"Near MINT w/Box\" Canon PowerShot SX 730 HS Black 20.1MP Compact Digital Camera",
+        "image": "https://i.ebayimg.com/images/g/pQoAAeSwlDZqcCwH/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "449.90",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:05:16Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/158257063117?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8AvnWryKv0AMvtiizT2PzwJV9x5x7CdcGlU9N4FSn7baDyQxV8J6%2FSYOxXDXvHisiwbL1TGfdRDTBsDi4xnMgQy2Qp%2BWJKrQh2RVrJRfWrrT5uvMHBSBDd%2FmXcRWgoPakKVkmNCrPZqVfT02TTkdhGpmSQHgyUl7ceD44t0rs1bR8Af4hQy1LbQcm797%2BN0QI%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T20:05:16Z"
+    },
+    "nikon-z8": {
+      "contamination_key": "nikon-z8",
+      "vendor": "Nikon",
+      "model": "z8",
+      "gtin": "00018208959570",
+      "marketplace_ids": {
+        "ebay_epid": "18060992611",
+        "ebay_legacy_item_id": "115845208654",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "1695",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0018208959570",
+              "gtin14": "00018208959570",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0018208959570",
+              "gtin14": "00018208959570",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0018208959570",
+              "gtin14": "00018208959570",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0018208959570",
+              "gtin14": "00018208959570",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Nikon Z8  Z 8 Mirrorless Camera Body Only",
+        "image": "https://i.ebayimg.com/images/g/GPsAAeSwGUtqmbci/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/HTwAAOSw2uZkmo2-/s-l1600.jpg",
+        "price_seen": {
+          "value": "3098.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:05:34Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/115845208654?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T20:05:34Z",
+      "spec_surface": {
+        "wikipedia_title": "Nikon_Z8",
+        "wikipedia_title_resolved": "Nikon Z8",
+        "wikipedia_stamped_at": "2026-09-05T02:34:57Z"
+      }
+    },
+    "canon-eos-r5-ii": {
+      "contamination_key": "canon-eos-r5-ii",
+      "vendor": "Canon",
+      "model": "eos r5 ii",
+      "gtin": "00013803375381",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "257721098963",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "6536C002",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "013803375381",
+              "gtin14": "00013803375381",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon EOS R5 Mark II 45MP Full Frame Mirrorless Digital Camera Body NEW",
+        "image": "https://i.ebayimg.com/images/g/tzEAAeSw3vtqmMAa/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "3449.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:05:58Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/257721098963?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T20:05:58Z"
+    },
+    "om-system-40-150mm-f4-0": {
+      "contamination_key": "om-system-40-150mm-f4-0",
+      "vendor": "OM SYSTEM",
+      "model": "40 150mm f4.0",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147547806827",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "OM System",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "OM SYSTEM M.Zuiko Digital ED 40-150mm F4.0 PRO Near Mint",
+        "image": "https://i.ebayimg.com/images/g/V~AAAeSwzf9qmdg5/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "670.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:06:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147547806827?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T20:06:42Z"
+    },
+    "dji-35mm-f2-8": {
+      "contamination_key": "dji-35mm-f2-8",
+      "vendor": "DJI",
+      "model": "35mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "298558337717",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI DL 35mm F2.8 LS ASPH Lens",
+        "image": "https://i.ebayimg.com/images/g/7qIAAeSwh45pZ4~g/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1338.80",
+          "currency": "USD",
+          "as_of": "2026-09-04T20:07:08Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/298558337717?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FHT6%2BS7tY%2FNo5IK%2B18%2BBJ4YlJdrvVZDKS0fCv%2FTXwC7UkbpBEot3AQj7qiFLwgGJE1ygjmvb8Dex2Lud5NX6AfIkONQiKPR7%2F9gOmEk7QPxR7l4ydz3fL7kuhQhfKCqsMDXhe10412HGzAyG3sigLW3LkSiI8kGM6udCd9accxOS5eW7c64Mzf%2BFXugcUnvrM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T20:07:08Z"
+    },
+    "sony-fx30": {
+      "contamination_key": "sony-fx30",
+      "vendor": "Sony",
+      "model": "fx30",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147543041088",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony FX30 Digital Cinema Camera Body (No Top Handle) #045",
+        "image": "https://i.ebayimg.com/images/g/eW0AAeSwpoNqffro/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1537.29",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:01:28Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147543041088?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde91Gmyk5dLcq1ULOFZLzxcka%2BrF82YJGnX1QDXbaayzXP3QH9%2F8CobcvP%2FGQy1TPtP2ghVs5hj006%2FzRiuDE2cgyyP567AxKK2VvdpMrZNyFL5hYJbVuXtIhllBQCkak8I2DAC%2BQEMGv0m5mFoSbHU079MIm%2FTir%2F5NqoGzDZ8MKrwS03x5wbYY1MzqbsndvgU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:01:28Z"
+    },
+    "fujifilm-x100vi": {
+      "contamination_key": "fujifilm-x100vi",
+      "vendor": "Fujifilm",
+      "model": "x100vi",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "366647893644",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Fujifilm X100VI Digital 40.2MP Compact Camera Black - shutter count 3100",
+        "image": "https://i.ebayimg.com/images/g/iRwAAeSwXeFqhVVG/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1842.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:01:47Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/366647893644?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BkwRqWmxze5znaOilucnrmG6PpeX5i6n8qO9uxHMVF8dzzTnH%2F5OqGkgcbXk%2Bp06B3UQGY8CZX6fOzTr3OEXAwmT1wCAY83nnNkHUb4aX7M9RYTLiD2d%2F0YEtvv9XGshN9OBlC3y2DciL8SL0aLfH88BZ9GD1%2FgwoTNELXoUPnvCTD8I87XTeALwhyBky2ZA0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:01:47Z"
+    },
+    "sony-zv-e1": {
+      "contamination_key": "sony-zv-e1",
+      "vendor": "Sony",
+      "model": "zv e1",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "188852083801",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony ZV-E1 12.1MP Mirrorless Digital Camera Body Only",
+        "image": "https://i.ebayimg.com/images/g/tYoAAeSwddFqkTqC/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1399.99",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:02:03Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/188852083801?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:02:03Z"
+    },
+    "nikon-d5600": {
+      "contamination_key": "nikon-d5600",
+      "vendor": "Nikon",
+      "model": "d5600",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "158257892410",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon D5600 DSLR Camera Body 24.1MP, 4 Batteries Charger  3,326 Shutter Count!",
+        "image": "https://i.ebayimg.com/images/g/0f8AAeSwzkRqmxDk/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "340.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:02:37Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/158257892410?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2B8oax6v23i3KNmOmDei%2FJP6saPufOoZPkNZs7Cdh%2F5NCIVcUJLoMZy0X7FPWiiaD0GuZDnpfj3VW4SOgd2r7Untz2m8vfPDicyXNHHUmSGyrB758h4eQnGtckP3e%2BimSSan1Dc5zW5jo3fz8Mip%2BpIajjvfaT9CRF%2BOpUVGmHDwoo6U1xUn8XjbDZ7dVoEf04%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:02:37Z",
+      "spec_surface": {
+        "wikipedia_title": "Nikon_D5600",
+        "wikipedia_title_resolved": "Nikon D5600",
+        "wikipedia_stamped_at": "2026-09-05T02:35:05Z"
+      }
+    },
+    "fujifilm-x-100s-ii": {
+      "contamination_key": "fujifilm-x-100s-ii",
+      "vendor": "Fujifilm",
+      "model": "x 100s ii",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "398303157465",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Fujifilm X100S 16.3MP X-Trans CMOS II 23mm F2 Fixed Lens Camera Black",
+        "image": "https://i.ebayimg.com/images/g/mh8AAeSw0fJqhYv5/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "590.36",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:02:56Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/398303157465?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2B6eV814Y8%2BtEI9FHXWuhJmu9g3kbfy1RcttVwq3wdJ7xrp9asyoXT8ct1mSVfA5gI24m00IXvkfb9AV%2BMF1dTLfna1vbWOfGIP%2BjqEK7BGoX4LRtiet3S4WIHuMdvYnbTLBOhuA6F8KyfllosEm9nioKopZJEEy%2F8Us%2BsKRfSUP5E%2FOSEj3O19AC6JToFWlX4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:02:56Z"
+    },
+    "nikon-55-200mm-f4": {
+      "contamination_key": "nikon-55-200mm-f4",
+      "vendor": "Nikon",
+      "model": "55 200mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "158234945757",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon AF-S DX NIKKOR 55-200mm f/4-5.6 G ED VR",
+        "image": "https://i.ebayimg.com/images/g/pd8AAeSw1nRqklyM/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "80.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:03:34Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/158234945757?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8FbWjtZZqCMaMPGTwW0EmMrf4cQBgaUc2c2UJPepQGOXAsoq%2FHoMI5LF69npA8rRCOpMYKwQVAXqrZp0ZkTiA6osjBEo7Q%2BC7KpT2Nseb8mcij5KXgXQ%2BisO%2F1tNbM--PHy9Xsu%2Bppp8UsxP4LZ2G8QIlp0KXHM21EU33V9tV8pyGjPjhI8%2FdV1CyuAl3fdBM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:03:34Z"
+    },
+    "sigma-24mm-f2": {
+      "contamination_key": "sigma-24mm-f2",
+      "vendor": "Sigma",
+      "model": "24mm f2",
+      "gtin": "00085126403652",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820084714874",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "085126403652",
+              "gtin14": "00085126403652",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sigma 24mm F/2 DG DN Contemporary (for Sony E mount) -Near Mint- #96",
+        "image": "https://i.ebayimg.com/images/g/mfgAAeSwp~Bqmhee/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "368.00",
+          "currency": "USD",
+          "as_of": "2026-09-04T22:03:51Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820084714874?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-04T22:03:51Z"
+    },
+    "pentax-75mm-f2-8": {
+      "contamination_key": "pentax-75mm-f2-8",
+      "vendor": "Pentax",
+      "model": "75mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307131030041",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "PENTAX",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "PENTAX SMC A 645 75mm f/2.8",
+        "image": "https://i.ebayimg.com/images/g/gqYAAeSwguZqgsbX/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "408.50",
+          "currency": "USD",
+          "as_of": "2026-09-05T00:00:46Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307131030041?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9ZyurSi1HVg9Pe7sZifbf4AxCNL5a%2FGMUOpN7LcXxsDMUG%2F7AWHw4BocytbT4S7igLcteYwOZ7lJrlwO6kHcwuYdA56%2Fo51GP7nkkrlpRtqbK4YVWs7r9kQx4uIauXW7VmgDHgg02yP7aNTIo6kS%2BSBBXUMRXlhHZOVDzzyfVwNe%2Bi8tbryzZW0b%2FA0fft5rA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-05T00:00:46Z"
+    },
+    "nikon-105mm-f2-5": {
+      "contamination_key": "nikon-105mm-f2-5",
+      "vendor": "Nikon",
+      "model": "105mm f2.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "267775403871",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon Nikkor 105mm F2.5 Ai-s - Outstanding Gorgeous Mint ++++ Condition",
+        "image": "https://i.ebayimg.com/images/g/hr0AAeSw4C1qmfcN/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "790.00",
+          "currency": "USD",
+          "as_of": "2026-09-05T00:01:06Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/267775403871?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-05T00:01:06Z"
+    },
+    "nikon-sb-5000-af-speedlight": {
+      "contamination_key": "nikon-sb-5000-af-speedlight",
+      "vendor": "Nikon",
+      "model": "sb 5000 af speedlight",
+      "gtin": "00018208048151",
+      "marketplace_ids": {
+        "ebay_epid": "25030639919",
+        "ebay_legacy_item_id": "227486087602",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "4815",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0018208048151",
+              "gtin14": "00018208048151",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0018208048151",
+              "gtin14": "00018208048151",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0018208048151",
+              "gtin14": "00018208048151",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0018208048151",
+              "gtin14": "00018208048151",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Nikon SB-5000 AF Speedlight Flash",
+        "image": "https://i.ebayimg.com/images/g/aCkAAeSwrKZqd8CQ/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/r7YAAOSwqspckfvX/s-l640.jpg",
+        "price_seen": {
+          "value": "249.99",
+          "currency": "USD",
+          "as_of": "2026-09-05T00:01:21Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227486087602?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BmsuIkp%2B8U87tulSMhaYxVpWCcKtnnam7vHr%2Fa%2FwVGGJZm8HS7A1A89mRVj%2FVt8NCWHF7A0Dk3GwxKG651SG6hOzE5bD9d2pOQdSDRj%2BPrWtDzuNr4Wjbp0cuU6c6nMlBWyCbXpPzsvdRPTBLal8Y5oBKMGEj7s6o3GkYNYKy3lQG0Bw5yOszFEu%2BwIz6bOcQ%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-05T00:01:21Z"
+    },
+    "dji-osmo-mobile-7": {
+      "contamination_key": "dji-osmo-mobile-7",
+      "vendor": "DJI",
+      "model": "osmo mobile 7",
+      "gtin": "00190021122598",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "178275310222",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "190021122598",
+              "gtin14": "00190021122598",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI Osmo Mobile 7 Smartphone 3-Axis Gimbal Stabilizer - Gray",
+        "image": "https://i.ebayimg.com/images/g/dTUAAeSwxNpqRi2p/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "59.99",
+          "currency": "USD",
+          "as_of": "2026-09-05T00:01:37Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/178275310222?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fog0ZnxeATGH1n0nL1hWItTPjiYpavcZsz%2BeR%2F6qMoJzwlokxp98NTExdtG9GRrGc0p4IwsjnrRRmEaO3g3mAUHal%2BJvG4kGtrdKhSxP8pThfuF5TIATyot5mw1CFTpL3BJKM8786UXfwS6JocmnUrr88%2FXVuBCzrsLokJ8JueGKyeoCON95csdsiJWcKyOnQ%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-05T00:01:37Z"
+    },
+    "dji-osmo-mobile-6": {
+      "contamination_key": "dji-osmo-mobile-6",
+      "vendor": "DJI",
+      "model": "osmo mobile 6",
+      "gtin": "00190021064249",
+      "marketplace_ids": {
+        "ebay_epid": "22056829660",
+        "ebay_legacy_item_id": "227494311841",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CPOS0000021301",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0190021064249",
+              "gtin14": "00190021064249",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0190021064249",
+              "gtin14": "00190021064249",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0190021064249",
+              "gtin14": "00190021064249",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021064249",
+              "gtin14": "00190021064249",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI Osmo Mobile 6 Smartphone Gimbal Stabilizer",
+        "image": "https://i.ebayimg.com/images/g/KZUAAeSwgqhqkKJV/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/DfsAAOSwGNpja44L/s-l640.jpg",
+        "price_seen": {
+          "value": "56.00",
+          "currency": "USD",
+          "as_of": "2026-09-05T00:02:46Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227494311841?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BZpR9LXWHuRla%2FqO8uZevq5Zfek5Pmp2MjPPdg3ic%2Bln034iO77DXlS7kQf6Y8its4z6eUWfFobWEL867CdsU1efaRndEhaXPddW86JMCpAKjKB1DkHo19lgzRQ5%2B0Sm%2FqcZknh42DjVcmAHO%2BWBughQiHlzlXX6xJ60lOUBqwPt6DeJ4osNxKR7gk1W8L9I8%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-05T00:02:46Z"
     }
   },
   "substrate": [
