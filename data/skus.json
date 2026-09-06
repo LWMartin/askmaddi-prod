@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-09-05",
+  "as_of": "2026-09-06",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -15401,7 +15401,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "198618749051",
+        "ebay_legacy_item_id": "178471969824",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -15417,23 +15417,23 @@
           "conflict": false,
           "observations": []
         },
-        "market_title": "DJI - Mavic 3 Pro Camera Drone With  (DJI RC)  -  Excellent condition",
-        "image": "https://i.ebayimg.com/images/g/6JkAAeSw2G9qinci/s-l1600.jpg",
+        "market_title": "DJI Mavic 3 Pro ONLY (With Warranty) Hasselblad 4/3 CMOS 4k Triple Camera Drone",
+        "image": "https://i.ebayimg.com/images/g/5lQAAOSwms5la~Iq/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "1599.00",
+          "value": "1999.99",
           "currency": "USD",
-          "as_of": "2026-09-05T04:45:57Z"
+          "as_of": "2026-09-06T04:45:28Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/198618749051?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/178471969824?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-09-05T04:45:57Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-06T04:45:28Z"
     },
     "yongnuo-yn560-ii-speedlite": {
       "contamination_key": "yongnuo-yn560-ii-speedlite",
@@ -15922,6 +15922,269 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-09-05T08:03:05Z"
+    },
+    "dji-osmo-360-ii": {
+      "contamination_key": "dji-osmo-360-ii",
+      "vendor": "DJI",
+      "model": "osmo 360 ii",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "128025041237",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Original DJI Osmo 360 II Standard Combo Updated Built-in 105GB",
+        "image": "https://i.ebayimg.com/images/g/90wAAeSwFplqff63/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "739.00",
+          "currency": "USD",
+          "as_of": "2026-09-06T04:00:29Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/128025041237?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-06T04:00:29Z"
+    },
+    "sigma-85mm-f1-2": {
+      "contamination_key": "sigma-85mm-f1-2",
+      "vendor": "Sigma",
+      "model": "85mm f1.2",
+      "gtin": "00085126321567",
+      "marketplace_ids": {
+        "ebay_epid": "523898094",
+        "ebay_legacy_item_id": "357654188906",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "321956",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0085126321567",
+              "gtin14": "00085126321567",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0085126321567",
+              "gtin14": "00085126321567",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0085126321567",
+              "gtin14": "00085126321567",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "085126321567",
+              "gtin14": "00085126321567",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sigma 85mm F1.4 DG HSM Art Full-Frame Sensor Lens for Sigma - 321956",
+        "image": "https://i.ebayimg.com/images/g/T5QAAeSw~wdo0Z0j/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/q44AAOSwZQxg~t6g/s-l640.jpg",
+        "price_seen": {
+          "value": "999.99",
+          "currency": "USD",
+          "as_of": "2026-09-06T04:01:11Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/357654188906?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-06T04:01:11Z"
+    },
+    "ricoh-40mm": {
+      "contamination_key": "ricoh-40mm",
+      "vendor": "Ricoh",
+      "model": "40mm",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "267719223204",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "15230"
+      },
+      "identity": {
+        "brand": "Ricoh",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Ricoh 126-C Auto CDS Camera 126 Film Camera 40mm F 2.8 Rikenon Lens - NO BATTERY",
+        "image": "https://i.ebayimg.com/images/g/NakAAeSwvAFqS2ye/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "49.99",
+          "currency": "USD",
+          "as_of": "2026-09-06T04:01:51Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/267719223204?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DLYv8pibpVoodWqtR5Dim29zo0K6n5mmoJC53XFAqW%2BJLMh6VQGRNeRSzC0DUBaJfeQNviu3xcFx2mH3gOiqNer49jmGTHPm76aerbwT1PM%2BhDjvWtfQeSuaIEHq5fdtWB90MNX78ETFeZ0AuRflo6%2BRhAzltKdbM4rxhG%2Bsm%2F1Xaf7VF79HHkd0j7MXyRjU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-06T04:01:51Z"
+    },
+    "dji-air-2-works-perfectly": {
+      "contamination_key": "dji-air-2-works-perfectly",
+      "vendor": "DJI",
+      "model": "Air 2 - - Works Perfectly!",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "117397711344",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Air 2 Drone - Fly More Combo - Works Perfectly!",
+        "image": "https://i.ebayimg.com/images/g/3YkAAeSwZERqnF0L/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "375.00",
+          "currency": "USD",
+          "as_of": "2026-09-06T04:45:46Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/117397711344?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-06T04:45:46Z"
+    },
+    "autel-rtk-module-evo-ii-enterprise-v2": {
+      "contamination_key": "autel-rtk-module-evo-ii-enterprise-v2",
+      "vendor": "Autel",
+      "model": "RTK Module EVO II Enterprise - V2",
+      "gtin": "00889520012072",
+      "marketplace_ids": {
+        "ebay_epid": "23054569068",
+        "ebay_legacy_item_id": "168572977237",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "182969"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "102000619",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0889520012072",
+              "gtin14": "00889520012072",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0889520012072",
+              "gtin14": "00889520012072",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0889520012072",
+              "gtin14": "00889520012072",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0889520012072",
+              "gtin14": "00889520012072",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Autel Robotics RTK Module for EVO II Enterprise V2 and V3 Series Drone",
+        "image": "https://i.ebayimg.com/images/g/mwgAAeSwUr5qahny/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/dEMAAOSwwtxja1np/s-l640.jpg",
+        "price_seen": {
+          "value": "499.00",
+          "currency": "USD",
+          "as_of": "2026-09-06T04:46:04Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/168572977237?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FFU3jpGT6L55sGE6IrdlLO1fn0CkymSg9lkndeEbhkWtYcf9oq4WuFMYILV--lyn9g8A5LegSrg2d3O8Bqf%2B8Sf3wu%2Fe%2BsHv7ohdiJV2N85DqAoPuiWlw%2FDZa5mMvnnpCMwFlh6WLO6ccSE1Bi9q5iLNTqqkfYC8dVRsuKuUad9utiM%2FO%2FQ3WGq4jSJ3tqixA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-06T04:46:04Z"
     }
   },
   "substrate": [
