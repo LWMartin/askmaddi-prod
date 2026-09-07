@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-09-06",
+  "as_of": "2026-09-07",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -16393,7 +16393,28 @@
         "mpn": "2200",
         "brand": "Nikon",
         "market_title": "Nikon 40mm f/2.8G AF-S DX Micro Nikkor Lens.",
-        "image": "https://www.adorama.com/images/Large/NK4028U.jpg"
+        "image": "https://www.adorama.com/images/Large/NK4028U.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/yWoAAMXQq8BQ7uCc/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-09-07T04:35:11Z",
+          "query": "Nikon 2200",
+          "winner": {
+            "item_id": "v1|336778690788|0",
+            "epid": "100104005",
+            "title": "Nikon Coolpix 2200 2.0MP Digital Camera Silver - Tested Working & Case"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|336778690788|0",
+              "epid": "100104005",
+              "title": "Nikon Coolpix 2200 2.0MP Digital Camera Silver - Tested Working & Case",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-nikon-40mm-f-28g-af-s-dx-micro-nikkor-lens%2Fp%2Fus2099850",
@@ -17208,6 +17229,178 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-09-06T17:58:42Z"
+    },
+    "sigma-35mm-f1-2": {
+      "contamination_key": "sigma-35mm-f1-2",
+      "vendor": "Sigma",
+      "model": "35mm f1.2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "358922345699",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "SIGMA",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "SIGMA 35mm F1.2 DG DN Art SONYE -EXC- 1228",
+        "image": "https://i.ebayimg.com/images/g/4a4AAeSwgqhqj5Gk/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "652.93",
+          "currency": "USD",
+          "as_of": "2026-09-07T04:00:45Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/358922345699?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BrW7LX612ZBJ86mQwtfjpbogTWrdm4w6lZAJx5I3TJMNArm9oJM2%2BzWTJPxC7CSEPMoIEchczcGEVI725xCLoycEXF3r9xWB9ZQaJAIg%2F2mTloCD2ZzU2UzGchR9%2BvHU2gzP1S9s6jeL1f9iY3pB%2B6vIyz2A7mj7C3cUL%2Fw97%2FRXOkZZstJlLe8lmewXT9%2BzY%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-07T04:00:45Z"
+    },
+    "olympus-12mm-f2": {
+      "contamination_key": "olympus-12mm-f2",
+      "vendor": "Olympus",
+      "model": "12mm f2",
+      "gtin": "04545350047382",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227041843629",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Olymppus",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "4545350047382",
+              "gtin14": "04545350047382",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "OLYMPUS M. ZUIKO DIGITAL ED 12mm F/2.0 Black",
+        "image": "https://i.ebayimg.com/images/g/SPwAAeSw361o~Dyc/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "339.99",
+          "currency": "USD",
+          "as_of": "2026-09-07T04:01:07Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227041843629?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-07T04:01:07Z"
+    },
+    "hoverair-white-hoverair-x1-self-flying-120g-pocket-sized-pal": {
+      "contamination_key": "hoverair-white-hoverair-x1-self-flying-120g-pocket-sized-pal",
+      "vendor": "HoverAir",
+      "model": "White HOVERAir X1 Self-Flying 120g Pocket-Sized Palm Takeoff",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336781836621",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "ZZ-X1-C-B",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "White HOVERAir X1 Combo Self-Flying Camera 120g Pocket-Sized Drone Palm Takeoff",
+        "image": "https://i.ebayimg.com/images/g/utoAAeSwTtFqmh~W/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "269.00",
+          "currency": "USD",
+          "as_of": "2026-09-07T04:46:19Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336781836621?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-07T04:46:19Z"
+    },
+    "hoverair-x1-self-flying-pocket-sized-hdr-video-capture-palm": {
+      "contamination_key": "hoverair-x1-self-flying-pocket-sized-hdr-video-capture-palm",
+      "vendor": "HoverAir",
+      "model": "X1 Self-Flying Pocket-Sized HDR Video Capture Palm Takeoff",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "285762007463",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir X1 Self-Flying Camera Pocket-Sized Drone HDR Video Capture Palm Takeoff",
+        "image": "https://i.ebayimg.com/images/g/oh4AAOSwpMhmC-S5/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "329.00",
+          "currency": "USD",
+          "as_of": "2026-09-07T04:46:38Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/285762007463?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9bH%2Fa%2B36LNTe5pq7ncjF09Oxml8r7qct9LqYRLaK8wc9UdE5x8V2Z8nyuf65Ymfy3eAZymlLEZS7w81qgzVedHi4fi9aSifBFpdKBbGqEhsBeOtsDicH4ax0Y3MoZPJvFcCQZSmgXtekaLLynNdfB%2Fqg5vjH2TSBXt9I4om63ZuCpOQT7h2E7wqz9YKVMmsA8%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-07T04:46:38Z"
     }
   },
   "substrate": [
