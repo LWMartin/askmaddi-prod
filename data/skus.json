@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-09-07",
+  "as_of": "2026-09-08",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -17401,6 +17401,248 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-09-07T04:46:38Z"
+    },
+    "autel-evo-lite-enterprise-640t-thermal": {
+      "contamination_key": "autel-evo-lite-enterprise-640t-thermal",
+      "vendor": "Autel",
+      "model": "EVO Lite Enterprise 640T Thermal",
+      "gtin": "00724725271049",
+      "marketplace_ids": {
+        "ebay_epid": "19053473783",
+        "ebay_legacy_item_id": "287570375400",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "EVOLITE",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0724725271049",
+              "gtin14": "00724725271049",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Autel EVO Lite 640T Enterprise, 640x512@30 fps Thermal Imaging,1/2''",
+        "image": "https://i.ebayimg.com/images/g/xKwAAeSwhGJqJhxl/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/Lh4AAOSw2qdi2QCE/s-l640.jpg",
+        "price_seen": {
+          "value": "2799.00",
+          "currency": "USD",
+          "as_of": "2026-09-07T04:46:06Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/287570375400?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-07T18:26:31Z"
+    },
+    "canon-35-105mm-f3-5": {
+      "contamination_key": "canon-35-105mm-f3-5",
+      "vendor": "Canon",
+      "model": "35 105mm f3.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307009447985",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "NA",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon EF 35-105mm f/3.5-4.5 Zoom Lens with Original Box for EOS Cameras",
+        "image": "https://i.ebayimg.com/images/g/yYIAAeSwBdhqM75U/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "117.73",
+          "currency": "USD",
+          "as_of": "2026-09-08T00:01:04Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307009447985?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BkAXe2rs6Zcht8gYQysqxhzAiEmou6DTI4HKn8hv1OBbLd5FmY2XbYzRm5weVu2Alg9yHadEhXuaFlC3%2BYDXSiLtMqr0HoMWkqm0uLdjZm0whuqwPwwR%2FHwz2%2Baul6aISEBVXJIkF6WRrI58r54LViWmB9jDpYnX56p6Ze%2B0bIbZAUxYdRwkAcOu9x%2BxOtaOw%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-08T00:01:04Z"
+    },
+    "nikon-10mm-f2-8": {
+      "contamination_key": "nikon-10mm-f2-8",
+      "vendor": "Nikon",
+      "model": "10mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377220966753",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon NIKKOR 1 10mm f/2.8 Wide Angle Lens Black CX",
+        "image": "https://i.ebayimg.com/images/g/Bm4AAeSwh5lp21Bz/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "129.91",
+          "currency": "USD",
+          "as_of": "2026-09-08T02:01:00Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377220966753?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8j%2B2ONDz4mPHtlAhLBFcc7yq8zerahX4O%2BBSu9IQb5fjkq5D6cWiVthdt8InWq7bNpuiMSqtZYi%2F8oVcWzzoqck4JHB6YBbUFb%2FLQV1Cibjgh3UnfU46r3j6wutq3VhhZV6d3VruMUTvlfb1HydO5JYC5qiHyJ%2F58RNvTTHiU53G8ha%2FmM7Ga1RQp9NysP0y0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-08T02:01:00Z"
+    },
+    "nikon-135mm-f2": {
+      "contamination_key": "nikon-135mm-f2",
+      "vendor": "Nikon",
+      "model": "135mm f2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820062151415",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "[Near MINT+++] Nikon Ai-s Ais Nikkor 135mm F2 MF Telephoto Lens From JAPAN",
+        "image": "https://i.ebayimg.com/images/g/q6QAAeSwddFqku1q/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "329.99",
+          "currency": "USD",
+          "as_of": "2026-09-08T00:01:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820062151415?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8oEJ0A5Lqa9MteSU4MseukpRs%2FLwlk7tvbT6fs3QfXdFESsgm9fKIClf159eyPw%2BGXvLwP4gt34TkN4IJIhRw%2FTCLqiT5ZPh31TCr0NED4tAxfPHSWK4wdSDTFBwUdkTHfpc8GS2QBOXWMAbmac33EIiZoa7leLWQj81yrmDNAcedveIC6u4CL2hX5wa1qcqw%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-08T00:01:42Z"
+    },
+    "sigma-30mm-f1-4": {
+      "contamination_key": "sigma-30mm-f1-4",
+      "vendor": "Sigma",
+      "model": "30mm f1.4",
+      "gtin": "00085126302719",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227506492055",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "SIGMA OPTICS",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "085126302719",
+              "gtin14": "00085126302719",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sigma 30mm f/1.4 DC DN Contemporary Lens (J05024884)",
+        "image": "https://i.ebayimg.com/images/g/8hUAAeSwau1qm1CH/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "124.95",
+          "currency": "USD",
+          "as_of": "2026-09-08T00:01:59Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227506492055?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-09-08T00:01:59Z"
     }
   },
   "substrate": [
