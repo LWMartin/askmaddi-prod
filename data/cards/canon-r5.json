@@ -21,44 +21,38 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 1536.79,
-        "refurbished": 1913.3,
-        "open_box": 3599.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 27,
-      "price_updated_at": "2026-08-17T10:10:02.328661+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-08-07T00:39:38.559801+00:00"
+    "price_updated_at": "2026-09-09T00:09:35.278039+00:00"
   },
   "freshness": {
     "created_at": "2026-07-15T21:38:29.582735+00:00",
-    "last_built": "2026-08-07T00:39:38.549906+00:00",
-    "last_checked": "2026-08-07T00:39:38.549906+00:00",
-    "source_count": 16,
+    "last_built": "2026-09-09T00:09:35.271190+00:00",
+    "last_checked": "2026-09-09T00:09:35.271190+00:00",
+    "source_count": 15,
     "source_types": {
-      "pro": 16
+      "pro": 15
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
   },
   "confidence": {
-    "overall": "high",
+    "overall": "medium",
     "per_axis": {
       "video_capability": "high",
       "sensor_performance": "high",
       "burst_buffer": "high",
       "mount_compat": "high",
       "handling": "high",
-      "autofocus_body": "high",
-      "generation_context": "high",
+      "autofocus_body": "medium",
       "stabilization": "high",
+      "generation_context": "high",
       "image_quality": "high",
       "price": "high",
-      "build": "high",
+      "build": "medium",
       "battery_life": "medium",
       "evf_lcd": "medium",
       "connectivity": "medium",
@@ -2292,35 +2286,11 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 34,
-        "neu": 14,
+        "pos": 33,
+        "neu": 12,
         "neg": 3,
-        "total": 51,
+        "total": 48,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "I had gone to the cathedral to try out my new Hasselblad X2D II with a 20-35mm lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "turtles.” – PhillipKukelhan “Two years ago, I decided to upgrade a Canon 40D 12mp with the used X-T4.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "when Sony released the A7RII, I decided to rent it for a big annual job.” – reflux83 Fujifilm X-S20 | Fujinon XF 56mm F1.2 R WR | 56mm | F1.2 | 1/170 sec | ISO 6400 Minolta TC-1 “I decided to get the XF 56mm F1.2 WR because the image quality is so good that it compensates for the fact",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
             "source_type": "youtube",
@@ -2709,10 +2679,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 13,
-        "polarity_agreement": 0.692,
+        "source_count": 12,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "pos",
-        "max_source_share": 0.196,
+        "max_source_share": 0.208,
         "contested": false
       },
       "notes": [],
@@ -2728,19 +2698,11 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 27,
+        "pos": 26,
         "neu": 11,
         "neg": 6,
-        "total": 44,
+        "total": 43,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "Personally, there isn’t a better feeling than successfully capturing these moments.” – ronphoto “As a second-generation photographer, I grew up using Canon, and most of my gear was handed down from my father.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
             "source_type": "youtube",
@@ -3089,10 +3051,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 13,
-        "polarity_agreement": 0.769,
+        "source_count": 12,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "pos",
-        "max_source_share": 0.182,
+        "max_source_share": 0.186,
         "contested": false
       },
       "notes": [],
@@ -3109,18 +3071,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 30,
-        "neu": 5,
+        "neu": 4,
         "neg": 4,
-        "total": 39,
+        "total": 38,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "By allowing you to direct the AF system immediately to the intended subject",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-duade-paton-why-the-canon-r5-is-the-best-value-wildlife-camera-in-2025",
             "source_type": "youtube",
@@ -3427,354 +3381,20 @@
           }
         ]
       },
-      "confidence": "high",
+      "confidence": "medium",
       "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.7,
+        "source_count": 9,
+        "polarity_agreement": 0.778,
         "dominant_polarity": "pos",
-        "max_source_share": 0.154,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "By allowing you to direct the AF system immediately to the intended subject",
-        "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-        "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/"
-      }
-    },
-    {
-      "axis_id": "generation_context",
-      "display_name": "Generation Context",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 28,
-        "neu": 6,
-        "neg": 4,
-        "total": 38,
-        "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "I made a great decision in upgrading from a Canon R6 Mark II to a Canon R5 Mark II when I reviewed my files from the June 26",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "Thanks to everyone who took the time to submit a favorite photo from their first new camera purchase.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
-            "weight": 0.75,
-            "quote_excerpt": "if you were to ask me what the best camera to buy right now is I would say this camera the camera that I'm filming on that camera is the Canon R5 and even though it's a few years old the cameras had multiple updates that have allowed it to stay at the top of the hybrid camera list that",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
-            "weight": 0.75,
-            "quote_excerpt": "is that it has the same camera body profile as both the R6 and the R6 Mark II which probably doesn't sound too exciting at first but the nice thing is that means you can share camera grips or cages or all the same sort of accessories also it has the 400 megapixel Stitch Ibis Stitch mode which is a",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
-            "weight": 0.75,
-            "quote_excerpt": "with the R5 other than the fact that the R6 Mark II now has some features that aren't in the R5 that are making me wish they were in the R5 one of the challenges that I face when using both of those cameras is that the top interface is different the R6 Mark II has this new dial switch",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-david-muir-canon-r5-review-2025-best-beginner-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=8J4eCCUcCaI",
-            "weight": 0.75,
-            "quote_excerpt": "R5 and the new R5 there is not that many differences that make it a huge leap up in technology I'll put up in the screen what the main differences between the two cameras are but probably for me it's a slightly more stickier and snappier autofocus system but I've never struggled with the one on the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-duade-paton-why-the-canon-r5-is-the-best-value-wildlife-camera-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=QfjThuThayE",
-            "weight": 0.75,
-            "quote_excerpt": "So, I think you can see from the photos that I shared and the photos that were submitted, the R5 has brought a lot of joy to both me and to many of you, and I'm sure it will bring more joy to anyone who buys it in the future.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
-            "weight": 0.75,
-            "quote_excerpt": "[Music] hi i'm dustin abbott and i'm here today to give you my definitive review of finally the canon eos r5 a camera that in many ways i think has probably been at least my most highly anticipated canon camera probably since the eos 5d mark iv a camera that i highly anticipated as one that you…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
-            "weight": 0.75,
-            "quote_excerpt": "know their third generation of cameras at that point but fortunately canon has really been working on the innovation front and in many ways the announcement of the os r5 was kind of more of a sony type announcement in the sense that it was just loaded with technical innovation and specs that when…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
-            "weight": 0.75,
-            "quote_excerpt": "and handling the things that have changed from the osr to the r5 and then also some of the major new designs and specifications and to see the advances that canon has made here in the physical design and features of this camera let's take a look so let's take a little bit of a look at the eos r5",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
-            "weight": 0.75,
-            "quote_excerpt": "the a7r series and so it's a little bit hard to direct compare them but i'm going to compare it to the a9 mark ii because there are a variety of interesting similarities there and so obviously in terms of the build here this is the largest of the three cameras here i will also say it is the nicest",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
-            "weight": 0.75,
-            "quote_excerpt": "so what that tells me is that the r5 should be a more a much more capable camera in low light conditions than what the a9 mark ii is now another area of interest is when it comes to the shutter and the buffer depth and so um again this camera is kind of strap straddling the a7r and the",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
-            "weight": 0.75,
-            "quote_excerpt": "What do you get when you take an excellent photo camera, add important improvements to the video functionality over the previous release, and then market it terribly focusing on novelty features that don't perform reliably?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
-            "weight": 0.75,
-            "quote_excerpt": "when I compared it to the a7S III",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
-            "weight": 0.75,
-            "quote_excerpt": "When the EOS R came out, you had a decision to make between it and the 5D Mark IV and in many ways, the DSLR was better.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-eos-r5-photography-review-res-noise-dr-af-ibis-le-gps",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
-            "weight": 0.75,
-            "quote_excerpt": "particular review but i do plan to update my page at cameralabs.com later first up the eos r5 at the top and the eos r6 in the bottom where as you'd expect the r5 is comfortably out resolving its more affordable 20 megapixel sibling but for many the more important comparison will be against the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-eos-r5-photography-review-res-noise-dr-af-ibis-le-gps",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
-            "weight": 0.75,
-            "quote_excerpt": "original eos r and rp which really failed to impress for action and when compared side by side with the new models they feel positively sluggish indeed it's the speed and confidence of the r5 and r6 which will be most apparent to existing eos r owners and arguably one of the biggest reasons to…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-harry-collins-photography-canon-r5-2-year-long-term-review-from-a-pro-wildlife-photograp",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=HE0eR5n-tEo",
-            "weight": 0.75,
-            "quote_excerpt": "happy and content with this setup um and who knows maybe they'll change my mind but as of right now there's not a lot that I'm missing and I don't regret having switched over for a second other than you know I wish Canon would get some new lenses out there but you know again rumors are coming on…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
-            "weight": 0.75,
-            "quote_excerpt": "little over two years now my go-to camera is the sony a1 and i have a mix between sony and sigma lenses in my bag the main reason for deciding to go with sony over nikon and canon two years ago was simple iaf and lock on tracking i don't know what canon did to catch up with sony so",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
-            "weight": 0.75,
-            "quote_excerpt": "a few firmware updates and new lenses being released you cannot go wrong with the canon r5 it's a fantastic camera in its price point for pretty much any situation you throw at it amazing video amazing stills top-notch auto focus great raw files great lens selection both native and adapted and…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
-            "weight": 0.75,
-            "quote_excerpt": "use r5s and some r6s for pretty much all of our videos at this point steven uses the r5 over his 5d mark iv and neither of us will be going back to dslrs the truth of the matter is i can't see this camera being outdated anytime soon we're talking years but will i ever switch to canon for",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-ken-rockwell-canon-eos-r5-review-sample-images-by-ken-rockwell",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Y1cdjhqMf9I",
-            "weight": 0.75,
-            "quote_excerpt": "the only thing's missing there's no more touch bar from the eos r i never liked that touch bar anyway so good riddance it's got a multi-way thumb controller the electronic shutter only goes as fast as an 8 000th it doesn't go up to 32 000 there's some crazy speeds like admittedly even the iphone…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-lee-zavitz-canon-eos-r5-the-photographic-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
-            "weight": 0.75,
-            "quote_excerpt": "which is just kind of a variation of the old lpe6 battery you can use the older canon batteries i just think that the newer one has a higher capacity which will allow the camera to run longer the ibis system seems really well thought out considering it's like the first version of ibis in the canon…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-lee-zavitz-canon-eos-r5-the-photographic-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
-            "weight": 0.75,
-            "quote_excerpt": "a long time so it does look nice on the back of the screen as well as the jpegs but pretty much most cameras that are coming out now actually also look amazing and if you're shooting raw then it's going to look any way you want it to but i do think that you know this is a generation",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
-            "weight": 0.75,
-            "quote_excerpt": "Right, today we are taking a look at the original Canon R5 and whether this is still worth looking at as an option for a new camera in 2025 and going into 2026.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
-            "weight": 0.75,
-            "quote_excerpt": "There's the R5 II which has loads of improvements over the R5, the R6 II which offers a lower resolution but still some great hybrid performance as well.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
-            "weight": 0.75,
-            "quote_excerpt": "But the original R5 definitely still holds up as a seriously capable camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-peter-mckinnon-hands-on-with-the-new-canon-eos-r5-the-grail-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
-            "weight": 0.75,
-            "quote_excerpt": "it's one of the biggest releases for canon for sure this is back to the 5d mark ii days let's talk about those days for a second hands up who remembers a filmmaker by the name of vincent laforay amazing made a film called reverie back in i'm gonna say it was like november 2008 with the 5d mark ii",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-peter-mckinnon-hands-on-with-the-new-canon-eos-r5-the-grail-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
-            "weight": 0.75,
-            "quote_excerpt": "always be a staple in my mind learning from him when i was much younger that was a big deal for canon that was a huge camera release the 5d mark ii the r5 i feel and i think a lot of people would agree with me the r5 is that big deal of a release now for canon let's",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
-            "weight": 0.75,
-            "quote_excerpt": "in 2024 and lastly has got to be it shoots on two different types of card formats now it's not a major negative because I'll explain why in a second which is why I wasn't sure to add it into this video but basically it shoots on sa Express type B and SD which is fine it's great you know",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
-            "weight": 0.75,
-            "quote_excerpt": "slightly older camera is secondhand options are firstly far cheaper and easier to come by so yes it's expensive brand new but second hand you can find an absolute [Applause] bargain and there we go there is my long-term review on what I think about the R5 if it's still relevant in 2024 me…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
-            "weight": 0.75,
-            "quote_excerpt": "a great camera for about the same price uh secondhand as the R5 brand new for the R6 Mark II and you can pick that up with pretty much all of the problems SED with the R5 but you're not getting that resolution so write down in the comments below what you think do you own an R5 and still",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
-            "weight": 0.75,
-            "quote_excerpt": "want one or have you more migrated over to another camera I would love to hear your guys' feedback cuz genuinely although I love the R5 maybe this might be the last year of me owning one I've been James for photo fever and I'll catch you guys next time",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-photo-genius-canon-eos-r5-photography-review-how-hot-is-the-r5-mirrorless-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=k22o_556DJE",
-            "weight": 0.75,
-            "quote_excerpt": "1.2 prime lens this lens is an absolute monster beautiful so today is the day sadly when all this gear has to go back so let me tell you a bit about my seven days with the r5 now i want to make it clear from the beginning of this video that i'm not going to be talking about the",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-photo-genius-canon-eos-r5-photography-review-how-hot-is-the-r5-mirrorless-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=k22o_556DJE",
-            "weight": 0.75,
-            "quote_excerpt": "the r5 now for this i had to think long and hard about this one because to be honest this camera was an absolute joy to use i'm really struggling to think about anything i didn't like about this camera it is a pretty amazing camera okay it's not a cheap camera of course it's effectively a…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
-            "weight": 0.75,
-            "quote_excerpt": "is also a very capable camera the one big difference between the R5 and the r six Mark III and why I recommend the R5 is that the shutter count for the R5 is rated for 500,000 shots where the shutter on the r six Mark II is rated for 300,000 shots maybe that's a big deal for you maybe",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
-            "weight": 0.75,
-            "quote_excerpt": "your photography career or as a hobbyist who just wants to hold on to a camera for a long time the R5 5 should last you a long time and the other thing to consider too is like camera technology hasn't really evolved that much over the last what 8 n years 45 megapixel you have your autofocus you have",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
-            "weight": 0.75,
-            "quote_excerpt": "YouTube channel and on my blog I'll link them both sorry I'm playing here I'll link them both down below and um yeah definitely it's R5 awesome camera you won't regret picking one up and uh yeah this video is over peace out thanks for watching and I will see you guys in the next video",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 16,
-        "polarity_agreement": 0.875,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.132,
+        "max_source_share": 0.158,
         "contested": false
       },
       "notes": []
-    }
-  ],
-  "detail_axes": [
+    },
     {
       "axis_id": "stabilization",
       "display_name": "Stabilization",
-      "axis_type": "detail",
+      "axis_type": "lead",
       "measurement": null,
       "sentiment": {
         "pos": 23,
@@ -4102,6 +3722,319 @@
         "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
         "url": "https://www.youtube.com/watch?v=NfQd_at1EJI"
       }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 26,
+        "neu": 6,
+        "neg": 4,
+        "total": 36,
+        "sources": [
+          {
+            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
+            "weight": 0.75,
+            "quote_excerpt": "if you were to ask me what the best camera to buy right now is I would say this camera the camera that I'm filming on that camera is the Canon R5 and even though it's a few years old the cameras had multiple updates that have allowed it to stay at the top of the hybrid camera list that",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
+            "weight": 0.75,
+            "quote_excerpt": "is that it has the same camera body profile as both the R6 and the R6 Mark II which probably doesn't sound too exciting at first but the nice thing is that means you can share camera grips or cages or all the same sort of accessories also it has the 400 megapixel Stitch Ibis Stitch mode which is a",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
+            "weight": 0.75,
+            "quote_excerpt": "with the R5 other than the fact that the R6 Mark II now has some features that aren't in the R5 that are making me wish they were in the R5 one of the challenges that I face when using both of those cameras is that the top interface is different the R6 Mark II has this new dial switch",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-david-muir-canon-r5-review-2025-best-beginner-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=8J4eCCUcCaI",
+            "weight": 0.75,
+            "quote_excerpt": "R5 and the new R5 there is not that many differences that make it a huge leap up in technology I'll put up in the screen what the main differences between the two cameras are but probably for me it's a slightly more stickier and snappier autofocus system but I've never struggled with the one on the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-duade-paton-why-the-canon-r5-is-the-best-value-wildlife-camera-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QfjThuThayE",
+            "weight": 0.75,
+            "quote_excerpt": "So, I think you can see from the photos that I shared and the photos that were submitted, the R5 has brought a lot of joy to both me and to many of you, and I'm sure it will bring more joy to anyone who buys it in the future.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
+            "weight": 0.75,
+            "quote_excerpt": "[Music] hi i'm dustin abbott and i'm here today to give you my definitive review of finally the canon eos r5 a camera that in many ways i think has probably been at least my most highly anticipated canon camera probably since the eos 5d mark iv a camera that i highly anticipated as one that you…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
+            "weight": 0.75,
+            "quote_excerpt": "know their third generation of cameras at that point but fortunately canon has really been working on the innovation front and in many ways the announcement of the os r5 was kind of more of a sony type announcement in the sense that it was just loaded with technical innovation and specs that when…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
+            "weight": 0.75,
+            "quote_excerpt": "and handling the things that have changed from the osr to the r5 and then also some of the major new designs and specifications and to see the advances that canon has made here in the physical design and features of this camera let's take a look so let's take a little bit of a look at the eos r5",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
+            "weight": 0.75,
+            "quote_excerpt": "the a7r series and so it's a little bit hard to direct compare them but i'm going to compare it to the a9 mark ii because there are a variety of interesting similarities there and so obviously in terms of the build here this is the largest of the three cameras here i will also say it is the nicest",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-canon-eos-r5-definitive-camera-review-4k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
+            "weight": 0.75,
+            "quote_excerpt": "so what that tells me is that the r5 should be a more a much more capable camera in low light conditions than what the a9 mark ii is now another area of interest is when it comes to the shutter and the buffer depth and so um again this camera is kind of strap straddling the a7r and the",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
+            "weight": 0.75,
+            "quote_excerpt": "What do you get when you take an excellent photo camera, add important improvements to the video functionality over the previous release, and then market it terribly focusing on novelty features that don't perform reliably?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
+            "weight": 0.75,
+            "quote_excerpt": "when I compared it to the a7S III",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gerald-undone-canon-r5-r6-review-good-cameras-terrible-marketing",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
+            "weight": 0.75,
+            "quote_excerpt": "When the EOS R came out, you had a decision to make between it and the 5D Mark IV and in many ways, the DSLR was better.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gordon-laing-canon-eos-r5-photography-review-res-noise-dr-af-ibis-le-gps",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
+            "weight": 0.75,
+            "quote_excerpt": "particular review but i do plan to update my page at cameralabs.com later first up the eos r5 at the top and the eos r6 in the bottom where as you'd expect the r5 is comfortably out resolving its more affordable 20 megapixel sibling but for many the more important comparison will be against the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gordon-laing-canon-eos-r5-photography-review-res-noise-dr-af-ibis-le-gps",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
+            "weight": 0.75,
+            "quote_excerpt": "original eos r and rp which really failed to impress for action and when compared side by side with the new models they feel positively sluggish indeed it's the speed and confidence of the r5 and r6 which will be most apparent to existing eos r owners and arguably one of the biggest reasons to…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-harry-collins-photography-canon-r5-2-year-long-term-review-from-a-pro-wildlife-photograp",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=HE0eR5n-tEo",
+            "weight": 0.75,
+            "quote_excerpt": "happy and content with this setup um and who knows maybe they'll change my mind but as of right now there's not a lot that I'm missing and I don't regret having switched over for a second other than you know I wish Canon would get some new lenses out there but you know again rumors are coming on…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
+            "weight": 0.75,
+            "quote_excerpt": "little over two years now my go-to camera is the sony a1 and i have a mix between sony and sigma lenses in my bag the main reason for deciding to go with sony over nikon and canon two years ago was simple iaf and lock on tracking i don't know what canon did to catch up with sony so",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
+            "weight": 0.75,
+            "quote_excerpt": "a few firmware updates and new lenses being released you cannot go wrong with the canon r5 it's a fantastic camera in its price point for pretty much any situation you throw at it amazing video amazing stills top-notch auto focus great raw files great lens selection both native and adapted and…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jared-polin-canon-eos-r5-one-year-later-reviewdoes-it-hold-up",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
+            "weight": 0.75,
+            "quote_excerpt": "use r5s and some r6s for pretty much all of our videos at this point steven uses the r5 over his 5d mark iv and neither of us will be going back to dslrs the truth of the matter is i can't see this camera being outdated anytime soon we're talking years but will i ever switch to canon for",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-ken-rockwell-canon-eos-r5-review-sample-images-by-ken-rockwell",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Y1cdjhqMf9I",
+            "weight": 0.75,
+            "quote_excerpt": "the only thing's missing there's no more touch bar from the eos r i never liked that touch bar anyway so good riddance it's got a multi-way thumb controller the electronic shutter only goes as fast as an 8 000th it doesn't go up to 32 000 there's some crazy speeds like admittedly even the iphone…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-lee-zavitz-canon-eos-r5-the-photographic-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
+            "weight": 0.75,
+            "quote_excerpt": "which is just kind of a variation of the old lpe6 battery you can use the older canon batteries i just think that the newer one has a higher capacity which will allow the camera to run longer the ibis system seems really well thought out considering it's like the first version of ibis in the canon…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-lee-zavitz-canon-eos-r5-the-photographic-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
+            "weight": 0.75,
+            "quote_excerpt": "a long time so it does look nice on the back of the screen as well as the jpegs but pretty much most cameras that are coming out now actually also look amazing and if you're shooting raw then it's going to look any way you want it to but i do think that you know this is a generation",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
+            "weight": 0.75,
+            "quote_excerpt": "Right, today we are taking a look at the original Canon R5 and whether this is still worth looking at as an option for a new camera in 2025 and going into 2026.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
+            "weight": 0.75,
+            "quote_excerpt": "There's the R5 II which has loads of improvements over the R5, the R6 II which offers a lower resolution but still some great hybrid performance as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-park-cameras-canon-r5-in-2025-still-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
+            "weight": 0.75,
+            "quote_excerpt": "But the original R5 definitely still holds up as a seriously capable camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-hands-on-with-the-new-canon-eos-r5-the-grail-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
+            "weight": 0.75,
+            "quote_excerpt": "it's one of the biggest releases for canon for sure this is back to the 5d mark ii days let's talk about those days for a second hands up who remembers a filmmaker by the name of vincent laforay amazing made a film called reverie back in i'm gonna say it was like november 2008 with the 5d mark ii",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-hands-on-with-the-new-canon-eos-r5-the-grail-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
+            "weight": 0.75,
+            "quote_excerpt": "always be a staple in my mind learning from him when i was much younger that was a big deal for canon that was a huge camera release the 5d mark ii the r5 i feel and i think a lot of people would agree with me the r5 is that big deal of a release now for canon let's",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
+            "weight": 0.75,
+            "quote_excerpt": "in 2024 and lastly has got to be it shoots on two different types of card formats now it's not a major negative because I'll explain why in a second which is why I wasn't sure to add it into this video but basically it shoots on sa Express type B and SD which is fine it's great you know",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
+            "weight": 0.75,
+            "quote_excerpt": "slightly older camera is secondhand options are firstly far cheaper and easier to come by so yes it's expensive brand new but second hand you can find an absolute [Applause] bargain and there we go there is my long-term review on what I think about the R5 if it's still relevant in 2024 me…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
+            "weight": 0.75,
+            "quote_excerpt": "a great camera for about the same price uh secondhand as the R5 brand new for the R6 Mark II and you can pick that up with pretty much all of the problems SED with the R5 but you're not getting that resolution so write down in the comments below what you think do you own an R5 and still",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-photo-feaver-canon-r5-review-after-90000-frames-should-you-buy-in-2024",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
+            "weight": 0.75,
+            "quote_excerpt": "want one or have you more migrated over to another camera I would love to hear your guys' feedback cuz genuinely although I love the R5 maybe this might be the last year of me owning one I've been James for photo fever and I'll catch you guys next time",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-photo-genius-canon-eos-r5-photography-review-how-hot-is-the-r5-mirrorless-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=k22o_556DJE",
+            "weight": 0.75,
+            "quote_excerpt": "1.2 prime lens this lens is an absolute monster beautiful so today is the day sadly when all this gear has to go back so let me tell you a bit about my seven days with the r5 now i want to make it clear from the beginning of this video that i'm not going to be talking about the",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-photo-genius-canon-eos-r5-photography-review-how-hot-is-the-r5-mirrorless-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=k22o_556DJE",
+            "weight": 0.75,
+            "quote_excerpt": "the r5 now for this i had to think long and hard about this one because to be honest this camera was an absolute joy to use i'm really struggling to think about anything i didn't like about this camera it is a pretty amazing camera okay it's not a cheap camera of course it's effectively a…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
+            "weight": 0.75,
+            "quote_excerpt": "is also a very capable camera the one big difference between the R5 and the r six Mark III and why I recommend the R5 is that the shutter count for the R5 is rated for 500,000 shots where the shutter on the r six Mark II is rated for 300,000 shots maybe that's a big deal for you maybe",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
+            "weight": 0.75,
+            "quote_excerpt": "your photography career or as a hobbyist who just wants to hold on to a camera for a long time the R5 5 should last you a long time and the other thing to consider too is like camera technology hasn't really evolved that much over the last what 8 n years 45 megapixel you have your autofocus you have",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-vasko-obscura-canon-eos-r5-in-2025-is-it-worth-buying",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
+            "weight": 0.75,
+            "quote_excerpt": "YouTube channel and on my blog I'll link them both sorry I'm playing here I'll link them both down below and um yeah definitely it's R5 awesome camera you won't regret picking one up and uh yeah this video is over peace out thanks for watching and I will see you guys in the next video",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 15,
+        "polarity_agreement": 0.867,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.139,
+        "contested": false
+      },
+      "notes": []
     },
     {
       "axis_id": "image_quality",
@@ -4606,18 +4539,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 7,
-        "neu": 7,
+        "neu": 6,
         "neg": 3,
-        "total": 17,
+        "total": 16,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "Last week, we asked our readers what photos made them realize their new gear was worth it.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-duade-paton-why-the-canon-r5-is-the-best-value-wildlife-camera-in-2025",
             "source_type": "youtube",
@@ -4748,12 +4673,12 @@
           }
         ]
       },
-      "confidence": "high",
+      "confidence": "medium",
       "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.5,
+        "source_count": 9,
+        "polarity_agreement": 0.444,
         "dominant_polarity": "neu",
-        "max_source_share": 0.176,
+        "max_source_share": 0.188,
         "contested": true
       },
       "notes": [],
@@ -5293,7 +5218,7 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Reviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",
+    "consensus_paragraph": "Reviewers are most positive about autofocus (79% positive, 11% neutral, 10% negative across 38 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",
     "aspect_breakdown": [
       {
         "aspect": "video_capability",
@@ -5318,29 +5243,22 @@
       },
       {
         "aspect": "mount_compat",
-        "pos": 34,
-        "neu": 14,
+        "pos": 33,
+        "neu": 12,
         "neg": 3,
-        "total": 51
+        "total": 48
       },
       {
         "aspect": "handling",
-        "pos": 27,
+        "pos": 26,
         "neu": 11,
         "neg": 6,
-        "total": 44
+        "total": 43
       },
       {
         "aspect": "autofocus_body",
         "pos": 30,
-        "neu": 5,
-        "neg": 4,
-        "total": 39
-      },
-      {
-        "aspect": "generation_context",
-        "pos": 28,
-        "neu": 6,
+        "neu": 4,
         "neg": 4,
         "total": 38
       },
@@ -5350,6 +5268,13 @@
         "neu": 8,
         "neg": 7,
         "total": 38
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 26,
+        "neu": 6,
+        "neg": 4,
+        "total": 36
       },
       {
         "aspect": "image_quality",
@@ -5368,9 +5293,9 @@
       {
         "aspect": "build",
         "pos": 7,
-        "neu": 7,
+        "neu": 6,
         "neg": 3,
-        "total": 17
+        "total": 16
       },
       {
         "aspect": "battery_life",
@@ -5410,11 +5335,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 595,
-      "evaluated": 496,
-      "non_evaluative": 99,
+      "examined": 587,
+      "evaluated": 492,
+      "non_evaluative": 95,
       "non_evaluative_breakdown": {
-        "non_claim": 99
+        "non_claim": 95
       },
       "off_axis": 0,
       "ruleset": {
@@ -5422,7 +5347,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "595 examined · 496 evaluated under askmaddi-polarity",
+      "receipt_line": "587 examined · 492 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -5440,17 +5365,6 @@
   },
   "sources": [
     {
-      "source_id": "rss-dpreview-gps-media-the-photos-that-made-photographers-fall-in-love-with-their-n-2026",
-      "source_type": "pro",
-      "reviewer": "DPReview (GPS Media)",
-      "platform": "web",
-      "url": "https://www.dpreview.com/articles/the-photos-that-made-photographers-fall-in-love-with-their-new-camera/",
-      "title": "The photos that made photographers fall in love with their new camera",
-      "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559087+00:00",
-      "weight": 0.75
-    },
-    {
       "source_id": "youtube-anthony-gugliotta-the-best-camera-for-hybrid-shooters-canon-r5",
       "source_type": "pro",
       "reviewer": "Anthony Gugliotta",
@@ -5458,7 +5372,7 @@
       "url": "https://www.youtube.com/watch?v=0Zs2bC5J2Nw",
       "title": "The BEST CAMERA 📷 for Hybrid Shooters // Canon R5",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559096+00:00",
+      "ingested_at": "2026-09-09T00:09:35.276988+00:00",
       "weight": 0.75
     },
     {
@@ -5469,7 +5383,7 @@
       "url": "https://www.youtube.com/watch?v=8J4eCCUcCaI",
       "title": "Canon R5 Review 2025.  Best Beginner Camera?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559099+00:00",
+      "ingested_at": "2026-09-09T00:09:35.276998+00:00",
       "weight": 0.75
     },
     {
@@ -5480,7 +5394,7 @@
       "url": "https://www.youtube.com/watch?v=QfjThuThayE",
       "title": "Why the Canon R5 Is the Best Value Wildlife Camera in 2025",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559102+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277002+00:00",
       "weight": 0.75
     },
     {
@@ -5491,7 +5405,7 @@
       "url": "https://www.youtube.com/watch?v=5qoViYN8NZ4",
       "title": "Canon EOS R5 Definitive Camera Review | 4K",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559104+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277005+00:00",
       "weight": 0.75
     },
     {
@@ -5502,7 +5416,7 @@
       "url": "https://www.youtube.com/watch?v=qDXPiu3wpBs",
       "title": "Canon R5 & R6 Review: GOOD Cameras. TERRIBLE Marketing.",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559107+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277008+00:00",
       "weight": 0.75
     },
     {
@@ -5513,7 +5427,7 @@
       "url": "https://www.youtube.com/watch?v=YT5GeNH3Ip0",
       "title": "Canon EOS R5 PHOTOGRAPHY review (Res, Noise, DR, AF, IBIS, LE, GPS)",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559109+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277011+00:00",
       "weight": 0.75
     },
     {
@@ -5524,7 +5438,7 @@
       "url": "https://www.youtube.com/watch?v=HE0eR5n-tEo",
       "title": "Canon R5 - 2 Year Long Term Review from a Pro Wildlife Photographer - Should You Still Buy in 2024?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559112+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277014+00:00",
       "weight": 0.75
     },
     {
@@ -5535,7 +5449,7 @@
       "url": "https://www.youtube.com/watch?v=38A96SdhzuU",
       "title": "Canon EOS R5 \"One YEAR Later\" REVIEW...does it hold up?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559114+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277019+00:00",
       "weight": 0.75
     },
     {
@@ -5546,7 +5460,7 @@
       "url": "https://www.youtube.com/watch?v=Y1cdjhqMf9I",
       "title": "Canon EOS R5 Review & Sample Images by Ken Rockwell",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559117+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277023+00:00",
       "weight": 0.75
     },
     {
@@ -5557,7 +5471,7 @@
       "url": "https://www.youtube.com/watch?v=x0SJjJv0ygM",
       "title": "Canon EOS R5 - The Photographic Review",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559119+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277026+00:00",
       "weight": 0.75
     },
     {
@@ -5568,7 +5482,7 @@
       "url": "https://www.youtube.com/watch?v=NfQd_at1EJI",
       "title": "Canon R5 in 2025: Still Worth Buying?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559121+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277029+00:00",
       "weight": 0.75
     },
     {
@@ -5579,7 +5493,7 @@
       "url": "https://www.youtube.com/watch?v=HB3RI14DZMQ",
       "title": "Hands ON with the NEW CANON EOS R5! THE GRAIL CAMERA!",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559124+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277031+00:00",
       "weight": 0.75
     },
     {
@@ -5590,7 +5504,7 @@
       "url": "https://www.youtube.com/watch?v=uFSBJarMBCs",
       "title": "Canon R5 Review After 90,000 Frames | Should You Buy In 2024?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559126+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277034+00:00",
       "weight": 0.75
     },
     {
@@ -5601,7 +5515,7 @@
       "url": "https://www.youtube.com/watch?v=k22o_556DJE",
       "title": "Canon EOS R5 Photography Review - How hot is the R5 Mirrorless Camera?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559128+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277036+00:00",
       "weight": 0.75
     },
     {
@@ -5612,31 +5526,19 @@
       "url": "https://www.youtube.com/watch?v=LGKt1nxhDXk",
       "title": "Canon EOS R5 in 2025 Is It Worth Buying?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T00:39:38.559131+00:00",
+      "ingested_at": "2026-09-09T00:09:35.277039+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/canon-r5/",
-    "reddit": "Canon R5\n\nReviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\n\nI pulled together all 16 reviews in one place: https://askmaddi.com/cards/canon-r5/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Canon R5**\nReviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\nAll 16 reviews in one place: https://askmaddi.com/cards/canon-r5/\n_(disclosure: I built this)_",
+    "reddit": "Canon R5\n\nReviewers are most positive about autofocus (79% positive, 11% neutral, 10% negative across 38 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\n\nI pulled together all 15 reviews in one place: https://askmaddi.com/cards/canon-r5/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon R5**\nReviewers are most positive about autofocus (79% positive, 11% neutral, 10% negative across 38 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.\nAll 15 reviews in one place: https://askmaddi.com/cards/canon-r5/\n_(disclosure: I built this)_",
     "og": {
       "title": "Canon R5 — Reviewed",
-      "description": "Reviewers are most positive about autofocus (77% positive, 13% neutral, 10% negative across 39 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",
+      "description": "Reviewers are most positive about autofocus (79% positive, 11% neutral, 10% negative across 38 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",
       "image": null,
       "url": "https://askmaddi.com/cards/canon-r5/"
     }
-  },
-  "_build_provenance": {
-    "driver": "build_card.py",
-    "enrich_client": "flask",
-    "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
-    },
-    "blockers": [],
-    "warnings": [],
-    "shippable": true,
-    "note": "Real gemma enrichment via flask shim."
   }
 }

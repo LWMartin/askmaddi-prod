@@ -15,32 +15,26 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 1997,
-    "current_new_source": "adorama_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z6iii-mirrorless-camera%2Fp%2Fnkz6m3",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z6iii-mirrorless-camera%2Fp%2Fnkz6m3",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 1709.99,
-        "open_box": 1950.0,
-        "refurbished": 1886.28
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 22,
-      "price_updated_at": "2026-09-08T10:10:32.495614+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-08-26T07:11:54.372513+00:00"
+    "price_updated_at": "2026-09-09T00:04:31.060088+00:00"
   },
   "freshness": {
     "created_at": "2026-08-26T07:11:54.351810+00:00",
-    "last_built": "2026-08-26T07:11:54.351810+00:00",
-    "last_checked": "2026-08-26T07:11:54.351810+00:00",
-    "source_count": 24,
+    "last_built": "2026-09-09T00:04:31.046440+00:00",
+    "last_checked": "2026-09-09T00:04:31.046440+00:00",
+    "source_count": 22,
     "source_types": {
-      "pro": 24
+      "pro": 22
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
@@ -53,9 +47,9 @@
       "burst_buffer": "high",
       "image_quality": "high",
       "evf_lcd": "high",
-      "mount_compat": "high",
       "generation_context": "high",
       "autofocus_body": "high",
+      "mount_compat": "high",
       "handling": "high",
       "price": "high",
       "stabilization": "high",
@@ -4095,538 +4089,6 @@
       }
     },
     {
-      "axis_id": "mount_compat",
-      "display_name": "Mount Compatibility",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 15,
-        "neu": 41,
-        "neg": 7,
-        "total": 63,
-        "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Nikon Z9 | Nikon Nikkor Z 800mm F6.3 VR S | F10 | 1/1600 sec | ISO 800 Flock of Gold Bence Máté / Wildlife Photographer of the Year Photographer: Bence Máté Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Sony a9 III | Sony FE 600mm F4 GM OSS + 1.4x teleconverter | F8 | 1/4000 sec | ISO 5000 Mutual Friends Ernest Porter / Wildlife Photographer of the Year Photographer: Ernest Porter Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Canon EOS R7 | Canon RF 400mm F2.8 L IS USM | F2.8 | 1/5000 sec | ISO 800 Lifted to the Surface Vegard Byrkjeland Aasen / Wildlife Photographer of the Year Photographer: Vegard Byrkjeland Aasen Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Sony a7R V | Sony FE 200-600mm F5.6-6.3 G OSS at 467mm | F11 | 1/640 sec | ISO 4000 Split-Second Escape Jens Cullmann / Wildlife Photographer of the Year Photographer: Jens Cullmann Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Canon EOS R3 | Canon RF 100-300mm F2.8 L IS USM | Canon Extender RF 2x | F9 | 1/4000 sec | ISO 2500 Hidden Dragon Gil Wizen / Wildlife Photographer of the Year Photographer: Gil Wizen Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Nikon D500 | Tokina AT-X 107 DX Fisheye 10-17mm F3.5-4.5 | F16 | 1/200 sec | ISO 500 | Aquatica AD500 housing | 2x YS-250 Sea & Sea strobes Pooltime Pastime Loren Elliott / Wildlife Photographer of the Year Photographer: Loren Elliott Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Sony a9 II | Sony FE 24-70mm F2.8 GM II at 24mm | F4 | 1/1000 sec | ISO 320 Ocean Protector Ralph Pace / Wildlife Photographer of the Year Photographer: Ralph Pace Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Leica Q3 43 | Leica Apo-Summicron 43mm F2 ASPH.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Nikon D850 | Nikon AF-S Nikkor 300mm F4E PF ED VR | F8 | 1/1250 sec | ISO 400 Urban Wanderer Sora Miyazawa / Wildlife Photographer of the Year Photographer: Sora Miyazawa Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Technical details: Nikon Z6 III | Nikon Nikkor Z 24-120mm F4 S at 24mm | F4 | 1/10 sec | ISO 200 The Art of Flying Jack Crockford / Wildlife Photographer of the Year Photographer: Jack Crockford Award: Highly Commended",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
-            "weight": 0.75,
-            "quote_excerpt": "First of all, just some basic specs about the Nikon Z63.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
-            "weight": 0.75,
-            "quote_excerpt": "And just for reference, I currently shoot on the Nikkor 180-600 mm lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
-            "weight": 0.75,
-            "quote_excerpt": "Obviously, you're not going to get the same cropping ability as you would on a flagship camera like the Z8 or the Nikon Z9.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
-            "weight": 0.75,
-            "quote_excerpt": "So, if you want a solid camera and your primary purpose is to video birds or video wildlife in general, the Nikon Z63, in my opinion, is where it's at.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
-            "weight": 0.75,
-            "quote_excerpt": "I think if you're looking to make the jump from a bridge camera or even want to get your first mirrorless camera, the Nikon Z6 III is perfect for you.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "I want to thank Nikon Canada for sending me a loaner of this camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "And obviously, it's going to be specific to whatever lens you have attached, but the focus system itself seems to work well with a wide variety of both first and third-party lenses in my test.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "There's just a few kind of specific instances where I feel like Canon and Nikon are Canon and Sony, I should say, are just a little bit better in that regard.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "Now, that's not the case for the um the Sony a7S which is easily the best of the bunch here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "There are things that Nikon has going for it that maybe Canon doesn't have, you know, access to certain third-party lenses.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
-            "weight": 0.75,
-            "quote_excerpt": "Sony, of course, has a very, very robust system of lenses and accessories that is probably tops in the market right now.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-fabian-fopp-nature-photography-nikon-z6-iii-vs-nikon-z8-which-is-the-best-option-for-wil",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9ffIJWI2Tn0",
-            "weight": 0.75,
-            "quote_excerpt": "However, for shooting with telephoto lenses, I don't find this so relevant, and I was happy with the performance of both of them.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gerald-undone-nikon-z6-iii-review-best-in-class",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=UDm9CbRxyg0",
-            "weight": 0.75,
-            "quote_excerpt": "However, nothing is without compromises and in the case of the Nikon Z6 III, being that fast comes with some dynamic range drawbacks.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-nikon-z6-iii-review-best-in-class",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=UDm9CbRxyg0",
-            "weight": 0.75,
-            "quote_excerpt": "We're using the second version of the Nikon LUT on this camera similar to the Z8, but that still means that exposing is unnatural.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jan-wegener-buy-or-pass-nikon-z6-iii-in-the-field-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4",
-            "weight": 0.75,
-            "quote_excerpt": "or the Z 9 so for someone like me who loves to shoot and raw this features only somewhat usable at the moment but hopefully in the future Nikon will be able to implement a full raw precapture mode I know this is going to divide a lot of you guys but I love the introduction of a very angle",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jan-wegener-buy-or-pass-nikon-z6-iii-in-the-field-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4",
-            "weight": 0.75,
-            "quote_excerpt": "I wanted to so I had to use the two times extender again but for these King fishes just like for the shaw Birds the two times extender actually worked really well and gave me some fabulous photos what I really enjoy about using cameras at the Z 6 Mark II and Nikon super light telephoto lenses like…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-nikon-z6-iii-real-world-preview-did-they-finally-do-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dm0fMNLXRoY",
-            "weight": 0.75,
-            "quote_excerpt": "before we get to the actual specs of the camera the outside and the inside all b-roll that you're seeing out on location was shot with the z63 now what you're seeing here in the studio since we don't have a z63 in hands anymore is being shot with the Canon EOS R5 which is what we've been using for",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-ken-rockwell-nikon-z6-iii-review-sample-images-by-ken-rockwell",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=hbFr0TLsOsA",
-            "weight": 0.75,
-            "quote_excerpt": "all the intimate details of the GT3 RS this is with the Nikon Z 24 to 120 mm F4 at 24 mm at F4 handheld at a 13th at auto ISO 500 I use radio photo software to bring details into the shadows and this is funny because the car was up on a lift and I was trying not",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kyle-meshna-nikon-z6iii-why-this-is-the-most-important-nikon-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=V5gQpCY-clY",
-            "weight": 0.75,
-            "quote_excerpt": "a bit extreme I truly think that this is the most important Nikon camera and it might just save the brand let me explain a quick disclaimer Nikon did loan me the z63 test out but they've never paid me they have no say in what I say and they don't get to see this video before you do so",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kyle-meshna-nikon-z6iii-why-this-is-the-most-important-nikon-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=V5gQpCY-clY",
-            "weight": 0.75,
-            "quote_excerpt": "z-mount lenses yes you can adapt older lenses but in 2024 this should not be your requirement anymore yes they're making strides to build out the lineup and optically the lenses they do have are fantastic but in my mind Sony still wins out in terms of native selection number of third party options…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "I did it with the Nikon Z 9, I did it with the Nikon Z 8, >> [music] >> and after a year of traveling internationally and incorporating it into my creative [music] work, I am ready to do it with the Nikon Z 6 Mark III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "Now, like I said earlier in the video, that's not going to be too much of an issue if you have the right lens",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "That being said, just a quick note on the actual photo capabilities of this camera, it's able to do all of the shooting modes that the Nikon Z8 and the Z9 are able to do.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "[music] Now, I want to take a moment to do something and just stack this up against the Nikon Z8 so you guys can actually see the size difference and really just some of the changes that are going to come when working with the Z8 and what you're getting and what you're not getting.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "That's not going to be an option on the Nikon Z6 Mark III.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "I have done and spent my time vlogging on the Nikon Z 9 cuz I was used to doing it on the 1DX Mark II.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "So, the next thing that I want to talk about are lens recommendations.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "And I want to talk about two families here in the S line, the 1.8 series of lenses and the 1.2 series of lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "But, for video, I think these 1.8 S-Line lenses are perfect.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "And that comes from my Costa Rica trip where we were hiking through the jungle, I fell in love with these even more even though I am a sucker for any lens at 1.2.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "And the same thing goes with the Nikon Z9 and the Nikon Z8.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "I used it for travel photo content creation and I used [music] it for filmmaking work as well alongside the Nikon Z8.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
-            "weight": 0.75,
-            "quote_excerpt": "That being said, [music] nobody really offers that in the Nikon lineup.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "Most Nikon lenses easily go up to 1.4 or 1.8.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "So, you have plenty of low light lenses available for this camera system.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "I've mainly been using this camera with the NiSi Athena lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "So in a lot of ways, the Nikon Z6 III wins hands down.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "But, the Z6 III is as good as the Lumix autofocus or the Fuji autofocus.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "And as a side note, you can also use the Sony E-mount lenses with the Nikon Z6 III with an adapter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
-            "weight": 0.75,
-            "quote_excerpt": "The autofocus won't be as good as native, and there are some stabilization issues, but imagine if you could put Sony lenses on a Canon RF body.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-art-of-photography-nikon-z6-iii-its-outstanding",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_XVzctRsXXA",
-            "weight": 0.75,
-            "quote_excerpt": "above so I think that was the right choice for Nikon to stay with this the thing that impresses me the most about the z63 though is going to be this partially stack semos sensor I think this was such a boon for Nikon in terms of being able to get some major performance improvements in camera…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-art-of-photography-nikon-z6-iii-its-outstanding",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_XVzctRsXXA",
-            "weight": 0.75,
-            "quote_excerpt": "able to do so this actually competes very well when you look at the ecosystem what's available out there and it's coming in at the same price point it becomes kind of a no-brainer for people I think Nikon with the Z line has come up with an amazing series of lenses and I think this is really a…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uMXANiK8hbY",
-            "weight": 0.75,
-            "quote_excerpt": "This is the Nikon Z63 and I've been using it for over a year.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=uMXANiK8hbY",
-            "weight": 0.75,
-            "quote_excerpt": "Anyways, what do you think about the Nikon Z63?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
-            "weight": 0.75,
-            "quote_excerpt": "This is the Nikon Z63, and it has one major flaw.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
-            "weight": 0.75,
-            "quote_excerpt": "And that is expected for a camera that is going to have more dynamic rings.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
-            "weight": 0.75,
-            "quote_excerpt": "As I've hinted quite a bit in this video, I shoot mainly landscape photography with the Z63.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
-            "weight": 0.75,
-            "quote_excerpt": "I just got back from San Francisco where I spend a week running around and taking photos mainly with my Z63.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
-            "weight": 0.75,
-            "quote_excerpt": "ring on a lot of the professional grade lenses but overall the experience of handling and even carrying these is pretty similar wait there are some huge differences in specs but we're going to get to those but first we want to think our sponsor Adorama because whether you choose any of these…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
-            "weight": 0.75,
-            "quote_excerpt": "isn't you can get lenses lights and any other accessories that you might need for photography at our sponsor atarama not only is it fun and easy to shop there but they have everything that you can imagine at great prices with good shipping so check them out our link to Adorama is down below and…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
-            "weight": 0.75,
-            "quote_excerpt": "adarama whichever one of the cameras you get or the lenses or the lights Adorama has everything you need start at this link here and that adoma know that you heard about them through us and that helps keep these unbiased reviews coming remember we've never accepted a sponsorship from any camera or…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-zach-mayfield-nikon-z6iii-long-term-review-serious-quirks-insane-value",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zOBBpCA5s8M",
-            "weight": 0.75,
-            "quote_excerpt": "when I first heard about the Nikon z63 I honestly wasn't much of a huge fan I heard about the partially stacked sensor which has some benefits like faster readouts and some cons which is apparently worse dynamic range but then I had a pretty ridiculous thought what if I tried the camera for myself…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-zach-mayfield-nikon-z6iii-long-term-review-serious-quirks-insane-value",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zOBBpCA5s8M",
-            "weight": 0.75,
-            "quote_excerpt": "that's what I did I've been trying this camera out for a couple months I shot some engagement photography filmed an awesome hip-hop concert as well as gathered some tests and various dad footage so that I could compile this review together of the Nikon z63 from the perspective of a this video was…",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 16,
-        "polarity_agreement": 0.562,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.206,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "Technical details: Canon EOS R7 | Canon RF 400mm F2.8 L IS USM | F2.8 | 1/5000 sec | ISO 800 Lifted to the Surface Vegard Byrkjeland Aasen / Wildlife Photographer of the Year Photographer: Vegard Byrkjeland Aasen Award: Highly Commended",
-        "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-        "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/"
-      }
-    },
-    {
       "axis_id": "generation_context",
       "display_name": "Generation Context",
       "axis_type": "lead",
@@ -5133,28 +4595,18 @@
         "source_id": "youtube-the-art-of-photography-nikon-z6-iii-its-outstanding",
         "url": "https://www.youtube.com/watch?v=_XVzctRsXXA"
       }
-    }
-  ],
-  "detail_axes": [
+    },
     {
       "axis_id": "autofocus_body",
       "display_name": "Autofocus",
-      "axis_type": "detail",
+      "axis_type": "lead",
       "measurement": null,
       "sentiment": {
         "pos": 25,
-        "neu": 14,
+        "neu": 13,
         "neg": 15,
-        "total": 54,
+        "total": 53,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "The competition recognizes photographs across numerous subjects and approaches, including animal behavior, portraits, underwater scenes, urban wildlife, photojournalism and ecosystem-focused work.",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-bh-photo-video-pro-audio-nikon-z6-iii-vs-z7-ii-vs-z8-vs-z9-find-out-which-one-is-for-you",
             "source_type": "youtube",
@@ -5583,17 +5035,471 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 17,
-        "polarity_agreement": 0.588,
+        "source_count": 16,
+        "polarity_agreement": 0.625,
         "dominant_polarity": "pos",
-        "max_source_share": 0.222,
-        "contested": true
+        "max_source_share": 0.226,
+        "contested": false
       },
       "notes": [],
       "face_quote": {
         "quote_excerpt": "on a branch for instance that's near where the bird should come up and then you focus onto the bird when it appears in your frame the automatic mods will work much better one thing that is missing from the Z 6 ma II that we have in the Z 8 and the z9 is a dedicated bird subject detection",
         "source_id": "youtube-jan-wegener-buy-or-pass-nikon-z6-iii-in-the-field-review",
         "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4"
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 15,
+        "neu": 31,
+        "neg": 7,
+        "total": 53,
+        "sources": [
+          {
+            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
+            "weight": 0.75,
+            "quote_excerpt": "First of all, just some basic specs about the Nikon Z63.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
+            "weight": 0.75,
+            "quote_excerpt": "And just for reference, I currently shoot on the Nikkor 180-600 mm lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
+            "weight": 0.75,
+            "quote_excerpt": "Obviously, you're not going to get the same cropping ability as you would on a flagship camera like the Z8 or the Nikon Z9.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
+            "weight": 0.75,
+            "quote_excerpt": "So, if you want a solid camera and your primary purpose is to video birds or video wildlife in general, the Nikon Z63, in my opinion, is where it's at.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bright-eyed-birding-the-nikon-z6iii-for-bird-photography-1-year-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
+            "weight": 0.75,
+            "quote_excerpt": "I think if you're looking to make the jump from a bridge camera or even want to get your first mirrorless camera, the Nikon Z6 III is perfect for you.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "I want to thank Nikon Canada for sending me a loaner of this camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "And obviously, it's going to be specific to whatever lens you have attached, but the focus system itself seems to work well with a wide variety of both first and third-party lenses in my test.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "There's just a few kind of specific instances where I feel like Canon and Nikon are Canon and Sony, I should say, are just a little bit better in that regard.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "Now, that's not the case for the um the Sony a7S which is easily the best of the bunch here.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "There are things that Nikon has going for it that maybe Canon doesn't have, you know, access to certain third-party lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-abbott-nikon-z6iii-review-in-2026-still-worth-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
+            "weight": 0.75,
+            "quote_excerpt": "Sony, of course, has a very, very robust system of lenses and accessories that is probably tops in the market right now.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-fabian-fopp-nature-photography-nikon-z6-iii-vs-nikon-z8-which-is-the-best-option-for-wil",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9ffIJWI2Tn0",
+            "weight": 0.75,
+            "quote_excerpt": "However, for shooting with telephoto lenses, I don't find this so relevant, and I was happy with the performance of both of them.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gerald-undone-nikon-z6-iii-review-best-in-class",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=UDm9CbRxyg0",
+            "weight": 0.75,
+            "quote_excerpt": "However, nothing is without compromises and in the case of the Nikon Z6 III, being that fast comes with some dynamic range drawbacks.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-nikon-z6-iii-review-best-in-class",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=UDm9CbRxyg0",
+            "weight": 0.75,
+            "quote_excerpt": "We're using the second version of the Nikon LUT on this camera similar to the Z8, but that still means that exposing is unnatural.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jan-wegener-buy-or-pass-nikon-z6-iii-in-the-field-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4",
+            "weight": 0.75,
+            "quote_excerpt": "or the Z 9 so for someone like me who loves to shoot and raw this features only somewhat usable at the moment but hopefully in the future Nikon will be able to implement a full raw precapture mode I know this is going to divide a lot of you guys but I love the introduction of a very angle",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jan-wegener-buy-or-pass-nikon-z6-iii-in-the-field-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4",
+            "weight": 0.75,
+            "quote_excerpt": "I wanted to so I had to use the two times extender again but for these King fishes just like for the shaw Birds the two times extender actually worked really well and gave me some fabulous photos what I really enjoy about using cameras at the Z 6 Mark II and Nikon super light telephoto lenses like…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jared-polin-nikon-z6-iii-real-world-preview-did-they-finally-do-it",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=dm0fMNLXRoY",
+            "weight": 0.75,
+            "quote_excerpt": "before we get to the actual specs of the camera the outside and the inside all b-roll that you're seeing out on location was shot with the z63 now what you're seeing here in the studio since we don't have a z63 in hands anymore is being shot with the Canon EOS R5 which is what we've been using for",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-ken-rockwell-nikon-z6-iii-review-sample-images-by-ken-rockwell",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=hbFr0TLsOsA",
+            "weight": 0.75,
+            "quote_excerpt": "all the intimate details of the GT3 RS this is with the Nikon Z 24 to 120 mm F4 at 24 mm at F4 handheld at a 13th at auto ISO 500 I use radio photo software to bring details into the shadows and this is funny because the car was up on a lift and I was trying not",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-kyle-meshna-nikon-z6iii-why-this-is-the-most-important-nikon-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=V5gQpCY-clY",
+            "weight": 0.75,
+            "quote_excerpt": "a bit extreme I truly think that this is the most important Nikon camera and it might just save the brand let me explain a quick disclaimer Nikon did loan me the z63 test out but they've never paid me they have no say in what I say and they don't get to see this video before you do so",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-kyle-meshna-nikon-z6iii-why-this-is-the-most-important-nikon-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=V5gQpCY-clY",
+            "weight": 0.75,
+            "quote_excerpt": "z-mount lenses yes you can adapt older lenses but in 2024 this should not be your requirement anymore yes they're making strides to build out the lineup and optically the lenses they do have are fantastic but in my mind Sony still wins out in terms of native selection number of third party options…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "I did it with the Nikon Z 9, I did it with the Nikon Z 8, >> [music] >> and after a year of traveling internationally and incorporating it into my creative [music] work, I am ready to do it with the Nikon Z 6 Mark III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "Now, like I said earlier in the video, that's not going to be too much of an issue if you have the right lens",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "That being said, just a quick note on the actual photo capabilities of this camera, it's able to do all of the shooting modes that the Nikon Z8 and the Z9 are able to do.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "[music] Now, I want to take a moment to do something and just stack this up against the Nikon Z8 so you guys can actually see the size difference and really just some of the changes that are going to come when working with the Z8 and what you're getting and what you're not getting.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "That's not going to be an option on the Nikon Z6 Mark III.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "I have done and spent my time vlogging on the Nikon Z 9 cuz I was used to doing it on the 1DX Mark II.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "So, the next thing that I want to talk about are lens recommendations.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "And I want to talk about two families here in the S line, the 1.8 series of lenses and the 1.2 series of lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "But, for video, I think these 1.8 S-Line lenses are perfect.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "And that comes from my Costa Rica trip where we were hiking through the jungle, I fell in love with these even more even though I am a sucker for any lens at 1.2.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "And the same thing goes with the Nikon Z9 and the Nikon Z8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "I used it for travel photo content creation and I used [music] it for filmmaking work as well alongside the Nikon Z8.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
+            "weight": 0.75,
+            "quote_excerpt": "That being said, [music] nobody really offers that in the Nikon lineup.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "Most Nikon lenses easily go up to 1.4 or 1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "So, you have plenty of low light lenses available for this camera system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "I've mainly been using this camera with the NiSi Athena lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "So in a lot of ways, the Nikon Z6 III wins hands down.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "But, the Z6 III is as good as the Lumix autofocus or the Fuji autofocus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "And as a side note, you can also use the Sony E-mount lenses with the Nikon Z6 III with an adapter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-nikon-z6-iii-in-2026-everyone-is-wrong-about-this-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
+            "weight": 0.75,
+            "quote_excerpt": "The autofocus won't be as good as native, and there are some stabilization issues, but imagine if you could put Sony lenses on a Canon RF body.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-art-of-photography-nikon-z6-iii-its-outstanding",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_XVzctRsXXA",
+            "weight": 0.75,
+            "quote_excerpt": "above so I think that was the right choice for Nikon to stay with this the thing that impresses me the most about the z63 though is going to be this partially stack semos sensor I think this was such a boon for Nikon in terms of being able to get some major performance improvements in camera…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-art-of-photography-nikon-z6-iii-its-outstanding",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_XVzctRsXXA",
+            "weight": 0.75,
+            "quote_excerpt": "able to do so this actually competes very well when you look at the ecosystem what's available out there and it's coming in at the same price point it becomes kind of a no-brainer for people I think Nikon with the Z line has come up with an amazing series of lenses and I think this is really a…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uMXANiK8hbY",
+            "weight": 0.75,
+            "quote_excerpt": "This is the Nikon Z63 and I've been using it for over a year.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uMXANiK8hbY",
+            "weight": 0.75,
+            "quote_excerpt": "Anyways, what do you think about the Nikon Z63?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
+            "weight": 0.75,
+            "quote_excerpt": "This is the Nikon Z63, and it has one major flaw.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
+            "weight": 0.75,
+            "quote_excerpt": "And that is expected for a camera that is going to have more dynamic rings.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
+            "weight": 0.75,
+            "quote_excerpt": "As I've hinted quite a bit in this video, I shoot mainly landscape photography with the Z63.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-project-photography-the-nikon-z6-iiis-fatal-flaw",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
+            "weight": 0.75,
+            "quote_excerpt": "I just got back from San Francisco where I spend a week running around and taking photos mainly with my Z63.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
+            "weight": 0.75,
+            "quote_excerpt": "ring on a lot of the professional grade lenses but overall the experience of handling and even carrying these is pretty similar wait there are some huge differences in specs but we're going to get to those but first we want to think our sponsor Adorama because whether you choose any of these…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
+            "weight": 0.75,
+            "quote_excerpt": "isn't you can get lenses lights and any other accessories that you might need for photography at our sponsor atarama not only is it fun and easy to shop there but they have everything that you can imagine at great prices with good shipping so check them out our link to Adorama is down below and…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tony-chelsea-northrup-nikon-z6-iii-vs-sony-a7-iv-vs-canon-eos-r6-ii-full-frame-mirrorles",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
+            "weight": 0.75,
+            "quote_excerpt": "adarama whichever one of the cameras you get or the lenses or the lights Adorama has everything you need start at this link here and that adoma know that you heard about them through us and that helps keep these unbiased reviews coming remember we've never accepted a sponsorship from any camera or…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-zach-mayfield-nikon-z6iii-long-term-review-serious-quirks-insane-value",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zOBBpCA5s8M",
+            "weight": 0.75,
+            "quote_excerpt": "when I first heard about the Nikon z63 I honestly wasn't much of a huge fan I heard about the partially stacked sensor which has some benefits like faster readouts and some cons which is apparently worse dynamic range but then I had a pretty ridiculous thought what if I tried the camera for myself…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-zach-mayfield-nikon-z6iii-long-term-review-serious-quirks-insane-value",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zOBBpCA5s8M",
+            "weight": 0.75,
+            "quote_excerpt": "that's what I did I've been trying this camera out for a couple months I shot some engagement photography filmed an awesome hip-hop concert as well as gathered some tests and various dad footage so that I could compile this review together of the Nikon z63 from the perspective of a this video was…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 15,
+        "polarity_agreement": 0.533,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.245,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "I did it with the Nikon Z 9, I did it with the Nikon Z 8, >> >> and after a year of traveling internationally and incorporating it into my creative work, I am ready to do it with the Nikon Z 6 Mark III.",
+        "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
+        "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A"
       }
     },
     {
@@ -6371,18 +6277,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 19,
-        "neu": 5,
+        "neu": 4,
         "neg": 12,
-        "total": 36,
+        "total": 35,
         "sources": [
-          {
-            "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-            "weight": 0.75,
-            "quote_excerpt": "Aiming for a split shot, he flipped the camera upside down to aid buoyancy distribution and adjusted his position, slowly approaching the curious school.",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-bh-photo-video-pro-audio-nikon-z6-iii-vs-z7-ii-vs-z8-vs-z9-find-out-which-one-is-for-you",
             "source_type": "youtube",
@@ -6667,10 +6565,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 19,
-        "polarity_agreement": 0.526,
+        "source_count": 18,
+        "polarity_agreement": 0.556,
         "dominant_polarity": "pos",
-        "max_source_share": 0.139,
+        "max_source_share": 0.143,
         "contested": true
       },
       "notes": [],
@@ -6863,9 +6761,9 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Just keep that in mind with respect to battery life.",
-        "source_id": "youtube-sidney-baker-green-nikon-z6-iii-long-term-review-the-creator-camera-nikon-got-right",
-        "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A"
+        "quote_excerpt": "However, this will eat more battery life as a result, which is why I always recommend having three to four batteries on you when out on long shoots.",
+        "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
+        "url": "https://www.youtube.com/watch?v=uMXANiK8hbY"
       }
     },
     {
@@ -6993,12 +6891,7 @@
         "max_source_share": 0.308,
         "contested": true
       },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "Something that I've been paying very close attention to over this past year has been the Z63's build quality.",
-        "source_id": "youtube-the-project-photography-the-nikon-z6-iii-long-term-review-a-true-workhorse",
-        "url": "https://www.youtube.com/watch?v=uMXANiK8hbY"
-      }
+      "notes": []
     },
     {
       "axis_id": "connectivity",
@@ -7588,7 +7481,7 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Reviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 14 neutral, 15 negative claims).",
+    "consensus_paragraph": "Reviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 13 neutral, 15 negative claims).",
     "aspect_breakdown": [
       {
         "aspect": "video_capability",
@@ -7626,13 +7519,6 @@
         "total": 65
       },
       {
-        "aspect": "mount_compat",
-        "pos": 15,
-        "neu": 41,
-        "neg": 7,
-        "total": 63
-      },
-      {
         "aspect": "generation_context",
         "pos": 22,
         "neu": 26,
@@ -7642,9 +7528,16 @@
       {
         "aspect": "autofocus_body",
         "pos": 25,
-        "neu": 14,
+        "neu": 13,
         "neg": 15,
-        "total": 54
+        "total": 53
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 15,
+        "neu": 31,
+        "neg": 7,
+        "total": 53
       },
       {
         "aspect": "handling",
@@ -7663,9 +7556,9 @@
       {
         "aspect": "stabilization",
         "pos": 19,
-        "neu": 5,
+        "neu": 4,
         "neg": 12,
-        "total": 36
+        "total": 35
       },
       {
         "aspect": "battery_life",
@@ -7705,11 +7598,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 850,
+      "examined": 838,
       "evaluated": 552,
-      "non_evaluative": 298,
+      "non_evaluative": 286,
       "non_evaluative_breakdown": {
-        "non_claim": 298
+        "non_claim": 286
       },
       "off_axis": 0,
       "ruleset": {
@@ -7717,7 +7610,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "850 examined · 552 evaluated under askmaddi-polarity",
+      "receipt_line": "838 examined · 552 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -7731,31 +7624,9 @@
     "computed_by": "axis_roles@1",
     "most_discussed": "video_capability",
     "highest_rated": "handling",
-    "lowest_rated": "mount_compat"
+    "lowest_rated": "sensor_performance"
   },
   "sources": [
-    {
-      "source_id": "rss-dpreview-gps-media-wildlife-photographer-of-the-year-offers-a-first-look-at-its-2026",
-      "source_type": "pro",
-      "reviewer": "DPReview (GPS Media)",
-      "platform": "web",
-      "url": "https://www.dpreview.com/photography/wildlife-photographer-of-the-year-offers-a-first-look-at-its-standout-2026-images/",
-      "title": "Wildlife Photographer of the Year offers a first look at its standout 2026 images",
-      "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370947+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "rss-nikon-rumors-nikon-usa-rebates-for-august-2026-new-z6-iii-trade-in-progra-2026",
-      "source_type": "pro",
-      "reviewer": "Nikon Rumors",
-      "platform": "web",
-      "url": "https://nikonrumors.com/2026/08/19/nikon-usa-rebates-for-august-2026-new-z6-iii-trade-in-program.aspx/",
-      "title": "Nikon USA rebates for August 2026: new Z6 III trade-in program",
-      "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370965+00:00",
-      "weight": 0.75
-    },
     {
       "source_id": "youtube-bh-photo-video-pro-audio-nikon-z6-iii-vs-z7-ii-vs-z8-vs-z9-find-out-which-one-is-for-you",
       "source_type": "pro",
@@ -7764,7 +7635,7 @@
       "url": "https://www.youtube.com/watch?v=4n9qp2M6gDw",
       "title": "Nikon Z6 III vs. Z7 II vs. Z8 vs. Z9: Find Out Which One Is for You",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370969+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055560+00:00",
       "weight": 0.75
     },
     {
@@ -7775,7 +7646,7 @@
       "url": "https://www.youtube.com/watch?v=XspL6kT4Ar0",
       "title": "The Nikon Z6iii for Bird Photography – 1 Year Review",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370972+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055571+00:00",
       "weight": 0.75
     },
     {
@@ -7786,7 +7657,7 @@
       "url": "https://www.youtube.com/watch?v=064d712kTzs",
       "title": "Nikon Z6 III | Full Camera Review",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370975+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055575+00:00",
       "weight": 0.75
     },
     {
@@ -7797,7 +7668,7 @@
       "url": "https://www.youtube.com/watch?v=2ewFlZSRAek",
       "title": "Nikon Z6III Review in 2026 | Still Worth It?",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370980+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055578+00:00",
       "weight": 0.75
     },
     {
@@ -7808,7 +7679,7 @@
       "url": "https://www.youtube.com/watch?v=9ffIJWI2Tn0",
       "title": "Nikon Z6 III vs Nikon Z8 - Which is the BEST option for Wildlife Photography?",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370985+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055581+00:00",
       "weight": 0.75
     },
     {
@@ -7819,7 +7690,7 @@
       "url": "https://www.youtube.com/watch?v=UDm9CbRxyg0",
       "title": "Nikon Z6 III Review: Best in Class!",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370990+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055584+00:00",
       "weight": 0.75
     },
     {
@@ -7830,7 +7701,7 @@
       "url": "https://www.youtube.com/watch?v=wVh3s_eIlR4",
       "title": "BUY Or PASS? Nikon Z6 III IN THE FIELD Review",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.370996+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055587+00:00",
       "weight": 0.75
     },
     {
@@ -7841,7 +7712,7 @@
       "url": "https://www.youtube.com/watch?v=dm0fMNLXRoY",
       "title": "Nikon Z6 III REAL WORLD Preview: Did they FINALLY Do It?!",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371002+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055593+00:00",
       "weight": 0.75
     },
     {
@@ -7852,7 +7723,7 @@
       "url": "https://www.youtube.com/watch?v=n20aQmh8LM4",
       "title": "Why the Nikon Z6 III is the Best Hybrid Camera",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371008+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055597+00:00",
       "weight": 0.75
     },
     {
@@ -7863,7 +7734,7 @@
       "url": "https://www.youtube.com/watch?v=hbFr0TLsOsA",
       "title": "Nikon Z6 III Review & Sample Images by Ken Rockwell",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371013+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055600+00:00",
       "weight": 0.75
     },
     {
@@ -7874,7 +7745,7 @@
       "url": "https://www.youtube.com/watch?v=V5gQpCY-clY",
       "title": "Nikon Z6III - Why This Is The Most Important Nikon Camera",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371019+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055603+00:00",
       "weight": 0.75
     },
     {
@@ -7885,7 +7756,7 @@
       "url": "https://www.youtube.com/watch?v=-W2xbnoOgK0",
       "title": "Nikon Z6III   I've discovered some things",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371024+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055605+00:00",
       "weight": 0.75
     },
     {
@@ -7896,7 +7767,7 @@
       "url": "https://www.youtube.com/watch?v=Iw8yijTZQ5E",
       "title": "Nikon Z6 III: It's Finally Here, and It's FANTASTIC!",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371030+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055608+00:00",
       "weight": 0.75
     },
     {
@@ -7907,7 +7778,7 @@
       "url": "https://www.youtube.com/watch?v=zyD5GibgYrY",
       "title": "Nikon Z6 III Review: A Little Rough Around the Edges!",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371036+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055610+00:00",
       "weight": 0.75
     },
     {
@@ -7918,7 +7789,7 @@
       "url": "https://www.youtube.com/watch?v=9Vtbtr_2-6A",
       "title": "Nikon Z6 III Long-Term Review | The Creator Camera Nikon Got Right",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371041+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055613+00:00",
       "weight": 0.75
     },
     {
@@ -7929,7 +7800,7 @@
       "url": "https://www.youtube.com/watch?v=LPT0OtZIbKs",
       "title": "Nikon Z6 III in 2026 - Everyone is wrong about this camera",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371046+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055616+00:00",
       "weight": 0.75
     },
     {
@@ -7940,7 +7811,7 @@
       "url": "https://www.youtube.com/watch?v=_XVzctRsXXA",
       "title": "Nikon Z6 III :: It's Outstanding",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371049+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055618+00:00",
       "weight": 0.75
     },
     {
@@ -7951,7 +7822,7 @@
       "url": "https://www.youtube.com/watch?v=uMXANiK8hbY",
       "title": "The Nikon Z6 III LONG TERM Review: A TRUE Workhorse",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371051+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055621+00:00",
       "weight": 0.75
     },
     {
@@ -7962,7 +7833,7 @@
       "url": "https://www.youtube.com/watch?v=08LNpHMy0ak",
       "title": "The Nikon Z6 III's FATAL FLAW",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371054+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055624+00:00",
       "weight": 0.75
     },
     {
@@ -7973,7 +7844,7 @@
       "url": "https://www.youtube.com/watch?v=CkIznWgGpj8",
       "title": "Nikon Z6 III Dynamic Range Review: TESTED",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371057+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055626+00:00",
       "weight": 0.75
     },
     {
@@ -7984,7 +7855,7 @@
       "url": "https://www.youtube.com/watch?v=nWK8RIEidcw",
       "title": "Nikon Z6 III vs Sony a7 IV vs Canon EOS R6 II: Full-frame mirrorless camera review!",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371059+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055629+00:00",
       "weight": 0.75
     },
     {
@@ -7995,31 +7866,19 @@
       "url": "https://www.youtube.com/watch?v=zOBBpCA5s8M",
       "title": "Nikon Z6III long-term review: serious quirks & insane value",
       "publication_date": "",
-      "ingested_at": "2026-08-26T07:11:54.371061+00:00",
+      "ingested_at": "2026-09-09T00:04:31.055631+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/nikon-z6-iii/",
-    "reddit": "Nikon z6 iii\n\nReviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 14 neutral, 15 negative claims).\n\nI pulled together all 24 reviews in one place: https://askmaddi.com/cards/nikon-z6-iii/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Nikon z6 iii**\nReviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 14 neutral, 15 negative claims).\nAll 24 reviews in one place: https://askmaddi.com/cards/nikon-z6-iii/\n_(disclosure: I built this)_",
+    "reddit": "Nikon z6 iii\n\nReviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 13 neutral, 15 negative claims).\n\nI pulled together all 22 reviews in one place: https://askmaddi.com/cards/nikon-z6-iii/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon z6 iii**\nReviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 13 neutral, 15 negative claims).\nAll 22 reviews in one place: https://askmaddi.com/cards/nikon-z6-iii/\n_(disclosure: I built this)_",
     "og": {
       "title": "Nikon z6 iii — Reviewed",
-      "description": "Reviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 14 neutral, 15 negative claims).",
+      "description": "Reviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 13 neutral, 15 negative claims).",
       "image": null,
       "url": "https://askmaddi.com/cards/nikon-z6-iii/"
     }
-  },
-  "_build_provenance": {
-    "driver": "build_card.py",
-    "enrich_client": "forced_choice",
-    "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
-    },
-    "blockers": [],
-    "warnings": [],
-    "shippable": true,
-    "note": "Real gemma enrichment via flask shim."
   }
 }

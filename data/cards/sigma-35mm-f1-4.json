@@ -21,26 +21,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "refurbished": 277.6,
-        "pre_owned": 370.78,
-        "open_box": 899.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 10,
-      "price_updated_at": "2026-09-08T10:10:41.960086+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-02T21:05:11.769947+00:00"
+    "price_updated_at": "2026-09-09T00:14:49.839036+00:00"
   },
   "freshness": {
     "created_at": "2026-09-02T21:05:11.750845+00:00",
-    "last_built": "2026-09-02T21:05:11.750845+00:00",
-    "last_checked": "2026-09-02T21:05:11.750845+00:00",
-    "source_count": 15,
+    "last_built": "2026-09-09T00:14:49.822958+00:00",
+    "last_checked": "2026-09-09T00:14:49.822958+00:00",
+    "source_count": 14,
     "source_types": {
-      "pro": 15
+      "pro": 14
     },
     "build_model": "claude-sonnet-4-5-20250929",
     "build_version": "stage6-v0.1"
@@ -1399,50 +1393,10 @@
       "current_body_compatibility": [],
       "sentiment": {
         "pos": 18,
-        "neu": 25,
+        "neu": 20,
         "neg": 9,
-        "total": 52,
+        "total": 47,
         "sources": [
-          {
-            "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "here is the full list of “winners”: Award Category Winner (B&H link) EISA Camera of the Year Sony Alpha 7 V EISA Best Buy Camera Fujifilm X-T30 III EISA APS-C Camera Fujifilm X-E5 EISA Professional Camera Sony Alpha 7R VI EISA Photo/Video Camera Nikon ZR EISA Compact Camera Panasonic LUMIX DC-L10…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "f/2.8 S II EISA Wide Angle Lens Sigma 35mm F1.4 DG II | Art EISA Wide Angle Zoom Lens Tamron 16-30mm F/2.8 Di III VXD G2 EISA Standard Lens Nikon Nikkor Z DX MC 35mm f/1.7 EISA Standard Zoom Lens Tamron 35-100mm F/2.8 Di III VXD EISA Telephoto Lens Sigma 200mm F2 DG OS | Sports EISA Telephoto Zoom…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "Nikon Nikkor Z 70-200mm f/2.8 VR S II EISA Wildlife Lens OM System M.ZUIKO ED 50-200mm f2.8 IS PRO EISA Travel Zoom Lens Sigma 20-200mm F3.5-6.3 DG | Contemporary EISA Macro Lens Sony FE 100mm F2.8 Macro GM OSS EISA Portrait Lens Sigma 135mm F1.4 DG | Art EISA Photo/Video Lens Canon RF 20-50mm F4L…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "Buy Lens Canon RF 45mm F1.2 STM EISA Photo Smartphone OPPO Find X9 Ultra EISA Photo Software Excire Foto 2027 EISA Analog Accessory VALOI easy35 v2 EISA Analog Camera Lomo MC-A 35 mm Film Camera Via PhotoRumors The post Nikon received four EISA photography awards appeared first on Nikon Rumors .",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "Related posts: Sigma 300-600mm f/4 DG OS Sports lens for Sony E-mount tested on the Nikon Z9 camera with the Megadap Pro adapter New Nikon Nikkor Z 70-200mm f/2.8 VR S II lens officially announced, available for pre-order Sigma 35mm f/1.4 DG II Art lens tested on the Nikon Zf & Z9",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-christopher-frost-sigma-35mm-f14-dg-hsm-art-lens-review-aps-c-full-frame-with-samples",
             "source_type": "youtube",
@@ -1822,16 +1776,16 @@
         ]
       },
       "convergence": {
-        "source_count": 14,
-        "polarity_agreement": 0.571,
+        "source_count": 13,
+        "polarity_agreement": 0.538,
         "dominant_polarity": "neu",
-        "max_source_share": 0.192,
+        "max_source_share": 0.213,
         "contested": true
       },
       "face_quote": {
-        "quote_excerpt": "Nikon Nikkor Z 70-200mm f/2.8 VR S II EISA Wildlife Lens OM System M.ZUIKO ED 50-200mm f2.8 IS PRO EISA Travel Zoom Lens Sigma 20-200mm F3.5-6.3 DG | Contemporary EISA Macro Lens Sony FE 100mm F2.8 Macro GM OSS EISA Portrait Lens Sigma 135mm F1.4 DG | Art EISA Photo/Video Lens Canon RF 20-50mm F4L…",
-        "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-        "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/"
+        "quote_excerpt": "It's now my favorite 35 millimeter lens on Sony E-mount or L-mount, for which it's also available.",
+        "source_id": "youtube-gerald-undone-my-new-favorite-lens-sigma-35mm-f14-dg-ii-art",
+        "url": "https://www.youtube.com/watch?v=niF6RmexCTc"
       }
     },
     {
@@ -2613,9 +2567,9 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Distortion is also very similar.",
-        "source_id": "youtube-gerald-undone-my-new-favorite-lens-sigma-35mm-f14-dg-ii-art",
-        "url": "https://www.youtube.com/watch?v=niF6RmexCTc"
+        "quote_excerpt": "the Distortion characteristic on a full-frame camera there's a hint of barrel Distortion but it's pretty much negligible that's rather low for this kind of lens so it's a good performance on an apsc camera again a very small amount of barrel Distortion is detectable but nothing you'd notice in…",
+        "source_id": "youtube-christopher-frost-sigma-35mm-f14-dg-hsm-art-lens-review-aps-c-full-frame-with-samples",
+        "url": "https://www.youtube.com/watch?v=qzxiAZ90S5o"
       }
     },
     {
@@ -2989,9 +2943,9 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "fringing in front of and behind the point of focus if you look closely at this picture you can spot a little purple fringing in front of the point of focus and a little green fringing behind if you stop The Lens down to f2.8 it largely goes away but again even at f1.4 this is a comparatively good…",
-        "source_id": "youtube-christopher-frost-sigma-35mm-f14-dg-hsm-art-lens-review-aps-c-full-frame-with-samples",
-        "url": "https://www.youtube.com/watch?v=qzxiAZ90S5o"
+        "quote_excerpt": "lot of l lenses you might miss that if you're shooting in rain or rough conditions could be a deal breaker for you and as you might expect chromatic aberration definitely exists on this lens for video i haven't really noticed it too much but when shooting pictures it exists if you're like me you…",
+        "source_id": "youtube-josh-winiarski-a-masterpiece-sigma-35mm-f14-art-lens-review",
+        "url": "https://www.youtube.com/watch?v=UZVlvVwyLPk"
       }
     },
     {
@@ -3804,12 +3758,7 @@
         "max_source_share": 0.182,
         "contested": false
       },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "i'm not going to say it's good at handling it but it's not terrible also this lens doesn't have image stabilization oh if they had put image stabilization in this lens i gladly would have shelled out another 200 or so for it 35 millimeters is wide enough that it's not a super shaky lens but it does…",
-        "source_id": "youtube-josh-winiarski-a-masterpiece-sigma-35mm-f14-art-lens-review",
-        "url": "https://www.youtube.com/watch?v=UZVlvVwyLPk"
-      }
+      "notes": []
     },
     {
       "axis_id": "af_noise",
@@ -3976,7 +3925,7 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 15 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).",
+    "consensus_paragraph": "Synthesized from 14 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
@@ -4443,11 +4392,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 419,
+      "examined": 414,
       "evaluated": 301,
-      "non_evaluative": 118,
+      "non_evaluative": 113,
       "non_evaluative_breakdown": {
-        "non_claim": 118
+        "non_claim": 113
       },
       "off_axis": 0,
       "ruleset": {
@@ -4455,7 +4404,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "419 examined · 301 evaluated under askmaddi-polarity",
+      "receipt_line": "414 examined · 301 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -4808,17 +4757,6 @@
   },
   "sources": [
     {
-      "source_id": "rss-nikon-rumors-nikon-received-four-eisa-photography-awards-2026",
-      "source_type": "pro",
-      "reviewer": "Nikon Rumors",
-      "platform": "web",
-      "url": "https://nikonrumors.com/2026/08/24/nikon-received-four-eisa-photography-awards.aspx/",
-      "title": "Nikon received four EISA photography awards",
-      "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758632+00:00",
-      "weight": 0.75
-    },
-    {
       "source_id": "youtube-christopher-frost-sigma-35mm-f14-dg-hsm-art-lens-review-aps-c-full-frame-with-samples",
       "source_type": "pro",
       "reviewer": "Christopher Frost",
@@ -4826,7 +4764,7 @@
       "url": "https://www.youtube.com/watch?v=qzxiAZ90S5o",
       "title": "Sigma 35mm f/1.4 DG HSM 'Art' Lens review (APS-C & full frame, with samples)",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758645+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828070+00:00",
       "weight": 0.75
     },
     {
@@ -4837,7 +4775,7 @@
       "url": "https://www.youtube.com/watch?v=mIl1atBXhV0",
       "title": "Sigma 35mm f/1.4 DG II 'Art' lens review",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758649+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828082+00:00",
       "weight": 0.75
     },
     {
@@ -4848,7 +4786,7 @@
       "url": "https://www.youtube.com/watch?v=5m_0tn8o_Gw",
       "title": "Sigma 35mm F1.4 DG DN Review",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758652+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828087+00:00",
       "weight": 0.75
     },
     {
@@ -4859,7 +4797,7 @@
       "url": "https://www.youtube.com/watch?v=YdU7hqpM05c",
       "title": "Sigma 35mm F1.4 DG DN ART Definitive Review | 4K",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758655+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828091+00:00",
       "weight": 0.75
     },
     {
@@ -4870,7 +4808,7 @@
       "url": "https://www.youtube.com/watch?v=niF6RmexCTc",
       "title": "My New Favorite Lens! – Sigma 35mm f/1.4 DG II Art",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758658+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828094+00:00",
       "weight": 0.75
     },
     {
@@ -4881,7 +4819,7 @@
       "url": "https://www.youtube.com/watch?v=JJl8MPb3Pr4",
       "title": "SIGMA STRIKES BACK! - Sigma 35mm F1.4 DG DN Art Lens for Sony Review",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758661+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828097+00:00",
       "weight": 0.75
     },
     {
@@ -4892,7 +4830,7 @@
       "url": "https://www.youtube.com/watch?v=tbCq9W2WLlA",
       "title": "Sigma 35mm f1.4 DG II Art REVIEW : the best I've tested!",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758663+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828099+00:00",
       "weight": 0.75
     },
     {
@@ -4903,7 +4841,7 @@
       "url": "https://www.youtube.com/watch?v=6MMsTcQhAmY",
       "title": "SIGMA 35mm f1.4 II Art Lens REVIEW: is CHEAPER Actually BETTER??? (vs Sony 35 f1.4 GM)",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758666+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828104+00:00",
       "weight": 0.75
     },
     {
@@ -4914,7 +4852,7 @@
       "url": "https://www.youtube.com/watch?v=UZVlvVwyLPk",
       "title": "A Masterpiece - Sigma 35mm f/1.4 ART Lens Review",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758669+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828108+00:00",
       "weight": 0.75
     },
     {
@@ -4925,7 +4863,7 @@
       "url": "https://www.youtube.com/watch?v=l8qklsQO5qw",
       "title": "Sigma 35mm F1.4 - Review & Comparison",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758672+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828111+00:00",
       "weight": 0.75
     },
     {
@@ -4936,7 +4874,7 @@
       "url": "https://www.youtube.com/watch?v=FFrZsVFstu8",
       "title": "The ONLY PRIME LENS you need? Sigma 35mm F1.4 Art Lens Review",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758674+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828114+00:00",
       "weight": 0.75
     },
     {
@@ -4947,7 +4885,7 @@
       "url": "https://www.youtube.com/watch?v=jThWPB9tP0s",
       "title": "Sigma's New 35mm f/1.4 DG II Art Is an INSTANT CLASSIC!",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758677+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828116+00:00",
       "weight": 0.75
     },
     {
@@ -4958,7 +4896,7 @@
       "url": "https://www.youtube.com/watch?v=1S_H_FXbjTw",
       "title": "Sigma 35mm f/1.4 DG II: NEW BENCHMARK",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758679+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828120+00:00",
       "weight": 0.75
     },
     {
@@ -4969,31 +4907,19 @@
       "url": "https://www.youtube.com/watch?v=6lcCIQfNe2A",
       "title": "NEW Sigma 35mm f/1.4 DG DN vs OLD Sigma 35mm f/1.4 DG HSM - PHOTO & VIDEO REVIEW!",
       "publication_date": "",
-      "ingested_at": "2026-09-02T21:05:11.758682+00:00",
+      "ingested_at": "2026-09-09T00:14:49.828122+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/sigma-35mm-f1-4/",
-    "reddit": "Sigma 35mm f1.4\n\nSynthesized from 15 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).\n\nI pulled together all 15 reviews in one place: https://askmaddi.com/cards/sigma-35mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Sigma 35mm f1.4**\nSynthesized from 15 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).\nAll 15 reviews in one place: https://askmaddi.com/cards/sigma-35mm-f1-4/\n_(disclosure: I built this)_",
+    "reddit": "Sigma 35mm f1.4\n\nSynthesized from 14 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).\n\nI pulled together all 14 reviews in one place: https://askmaddi.com/cards/sigma-35mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sigma 35mm f1.4**\nSynthesized from 14 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).\nAll 14 reviews in one place: https://askmaddi.com/cards/sigma-35mm-f1-4/\n_(disclosure: I built this)_",
     "og": {
       "title": "Sigma 35mm f1.4 — Reviewed",
-      "description": "Synthesized from 15 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).",
+      "description": "Synthesized from 14 reviewer sources for Sigma 35mm f1.4. Optical performance draws the most discussion: 42 positive, 8 neutral, and 22 negative across 72 sentiment markers. The most criticism lands on chromatic aberration: 22% positive, 33% neutral, 45% negative across 18 claims. Opinion is split on AF for video (19 positive, 9 neutral, 11 negative claims).",
       "image": null,
       "url": "https://askmaddi.com/cards/sigma-35mm-f1-4/"
     }
-  },
-  "_build_provenance": {
-    "driver": "build_card.py",
-    "enrich_client": "forced_choice",
-    "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
-    },
-    "blockers": [],
-    "warnings": [],
-    "shippable": true,
-    "note": "Real gemma enrichment via flask shim."
   }
 }

@@ -26,27 +26,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 1100.0,
-        "refurbished": 2604.0,
-        "open_box": 2639.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 30,
-      "price_updated_at": "2026-08-17T10:10:09.146791+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-08-07T01:17:12.853109+00:00"
+    "price_updated_at": "2026-09-09T00:06:42.164440+00:00"
   },
   "freshness": {
     "created_at": "2026-07-03T15:30:13.842102+00:00",
-    "last_built": "2026-08-07T01:17:12.836388+00:00",
-    "last_checked": "2026-08-07T01:17:12.836388+00:00",
-    "source_count": 24,
+    "last_built": "2026-09-09T00:06:42.153767+00:00",
+    "last_checked": "2026-09-09T00:06:42.153767+00:00",
+    "source_count": 22,
     "source_types": {
-      "community": 1,
-      "pro": 23
+      "pro": 22
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
@@ -58,8 +51,8 @@
       "evf_lcd": "high",
       "sensor_performance": "high",
       "stabilization": "high",
-      "mount_compat": "high",
       "handling": "high",
+      "mount_compat": "high",
       "burst_buffer": "high",
       "image_quality": "high",
       "generation_context": "high",
@@ -2074,19 +2067,11 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 65,
+        "pos": 64,
         "neu": 20,
         "neg": 16,
-        "total": 101,
+        "total": 100,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "The telephoto helps break down the scene into smaller, tighter compositions and compresses it, i.e., it makes distant objects in the background appear closer because of its inherent optical design.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -2891,10 +2876,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 22,
-        "polarity_agreement": 0.727,
+        "source_count": 21,
+        "polarity_agreement": 0.714,
         "dominant_polarity": "pos",
-        "max_source_share": 0.168,
+        "max_source_share": 0.17,
         "contested": false
       },
       "notes": [],
@@ -2911,26 +2896,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 49,
-        "neu": 25,
-        "neg": 12,
-        "total": 86,
+        "neu": 24,
+        "neg": 11,
+        "total": 84,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "Camera Settings Values used to capture light: aperture, shutter, and ISO.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "If the light is good, but the camera settings are not right, those shadows and highlights will not be captured properly.",
-            "witness": "unattested"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -3607,10 +3576,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 20,
-        "polarity_agreement": 0.5,
+        "source_count": 19,
+        "polarity_agreement": 0.526,
         "dominant_polarity": "pos",
-        "max_source_share": 0.14,
+        "max_source_share": 0.143,
         "contested": true
       },
       "notes": [],
@@ -3627,18 +3596,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 41,
-        "neu": 17,
+        "neu": 16,
         "neg": 12,
-        "total": 70,
+        "total": 69,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "If possible, take a vertical shot as well for two reasons.",
-            "witness": "unattested"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -4195,10 +4156,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 20,
-        "polarity_agreement": 0.65,
+        "source_count": 19,
+        "polarity_agreement": 0.684,
         "dominant_polarity": "pos",
-        "max_source_share": 0.143,
+        "max_source_share": 0.145,
         "contested": false
       },
       "notes": [],
@@ -4209,596 +4170,16 @@
       }
     },
     {
-      "axis_id": "mount_compat",
-      "display_name": "Mount Compatibility",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 27,
-        "neu": 37,
-        "neg": 3,
-        "total": 67,
-        "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "Here is my setup when both are being used for photos: One has a wide-angle and the other a telephoto, a 70-200mm f2.8 lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "One has a wide-angle and the other a mid-range 24-70 f2.8 lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "On this occasion, I left the a7r IV with a wide-angle lens and quickly mounted a telephoto lens on the a7s III to take a close-up of the hills.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Related reading: Best full-frame mirrorless cameras Best E-Mount lenses Best Sony cameras Follow AP on Facebook",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Along the way, he's shot extensively with cameras and lenses of almost every imaginable type, brand and format.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "photography guides Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "I also shot with the A7S III alongside the Canon EOS R5, R6 and Lumix S1H, so look out for my upcoming comparisons if youâd like to see how their photo and video quality measures-up.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
-            "weight": 0.75,
-            "quote_excerpt": "shoot Best vlogging camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-photography-and-film-will-help-us-to-educate-people-fascinat-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/photography/awards-and-competitions/photography-and-film-will-help-us-to-educate-people-fascinating-underwater-shot-captures-red-sea-coral-doctors-at-work-winning-a-science-photo-award",
-            "weight": 0.75,
-            "quote_excerpt": "\"We followed the scientists at KAUST [King Abdullah University of Science and Technology] to the so-called 'marine microbiome lab' where they install incubation chambers to check coral health.\" (Image credit: Uli Kunz) Using a Sony A7S III in a Nauticam camera housing with a Nauticam Wide Angle…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
-            "weight": 0.75,
-            "quote_excerpt": "err)); Popular Camera news Camera rumors Opinions Photo mag deals Podcast Cheatsheets Cameras Video Cameras Sony A7S III review Designed especially for filmmakers",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
-            "weight": 0.75,
-            "quote_excerpt": "But camera brands from Kodak to Yashica aren’t made by who you think 3 DxO PhotoLab 9 review: Squeeze every last drop of image quality from your RAW Files 4 Young mountaineers to get their hands on top-tier Tamron lenses for hiking photography collaboration – here's the one I'd pick 5 This…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Aside from scanning past YouTube headers, I didn’t know much about the Sony a7S III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Okay, with that disclaimer out of the way, let’s get into talking about my time with the a7S III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I’d heard about the S-cinetone because it’s also an option in the larger Sony Venice.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I had two loaner lenses to go along with the camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "The Sony FE 24mm f/1.4 GM and the FE 50mm f/1.2 GM .",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Again, I am not familiar with the entire lens lineup for Sony.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "This allows you to mount smart accessories directly into the camera’s hotshoe without needing to resort to external wires.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I don’t own a large collection of Sony batteries, so I always had a V-mount solution ready.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "As I mentioned earlier, my Sony a7S III loaner arrived at the same time as my Nikon Z 9.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I also currently own a Canon EOS R5 and a Fuji GFX 100 .",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "But, if you prefer smaller cameras, are already in the Sony world, and don’t need internal RAW video, you will be just fine with the a7S III.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I enjoyed my time with the Sony a7S III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Just Buy This One Sony a7R IV Fails at a Key Moment Join the Fstoppers community for free Post comments and join in the discussions Browse the site ad-free Share your work and get featured in the community Compete in the photo contests for fun and prizes Create free account or Log in 10 Comments…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "1 0 Report Julian Ray March 12, 2022 - 5:04 pm As always Chris a very enjoyable read and great insight into a tiny bit of the Sony world.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "I have the a7siii along with the a1 that I use for photography, the 8k in that is also very nice.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Was a Canon T2i in '10 but not support by '12 is reason for Sony.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
-            "source_type": "reviewer_blog",
-            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
-            "weight": 0.75,
-            "quote_excerpt": "Example I was in the Antelope Canyon '17 and forgot my adapter for the tripod using the A7rii (IBIS) and FE 12-24mm f/4 not only did I use Hand Held but did bracketed shots also at 12mm, everyone else used sticks doing long exposure for the dimly lit canyon and the best anyone had was a 16mm.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bh-photo-video-pro-audio-sony-a7s-iii-hands-on-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=pcsHlajnQ68",
-            "weight": 0.75,
-            "quote_excerpt": "form factor than type b cards which is what you usually see the card slots can actually accept either card which is pretty cool looking forward see if express type a can provide much faster speeds than sd cards and have plenty of room to grow the lcd is nice but honestly day like today you need the…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-brandon-li-sony-a7siii-my-extended-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
-            "weight": 0.75,
-            "quote_excerpt": "of myself in a narrative style so in this section i'm going to show you some behind the scenes of how i set these shots up got the 50 millimeter zeiss f 1.4 lens on the a7s3 here this is my slider here this is the syrup magic carpet slider and on it i have the syrup genie pan tilt",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-brandon-li-sony-a7siii-my-extended-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
-            "weight": 0.75,
-            "quote_excerpt": "a pretty decent image with them on the a7 s3 anyway because this camera is so sharp the lenses do cover a larger image circle than advertised so by not cropping in all the way to aps-c i could keep some of the curvature and distortion on the edges of the frame which i feel actually adds to the…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "This is my Sony A7S3.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "This may be controversial, but Sony has some of the best lens selections for their cameras.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "Because I've been shooting with Sony for quite a while now, there is so many lens options, and I've acquired my own collection of lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "Despite having a selection of endless lenses, the lens that I find I use the most on the A7S3 is the 17 to 28 2.8 from Tamron.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "However, if I need these lenses, my friends are awesome and they're happy to lend them to me.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
-            "weight": 0.75,
-            "quote_excerpt": "There's Canon, there's Fuji, there's Lumix, and that's kind of tough to choose between.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7s-iii-first-impressions-review-4k120p-video-16-bit-raw-video",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
-            "weight": 0.75,
-            "quote_excerpt": "but they're not they're actually for a brand new card type called cf express type a now cfxpress type a's look a lot like sds they do have a slightly different form factor however they both fit either sd or cf press a into the same slot and this camera is backwards compatible there's very few…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7s-iii-first-impressions-review-4k120p-video-16-bit-raw-video",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
-            "weight": 0.75,
-            "quote_excerpt": "like being able to shoot anamorphic or academy ratio or program in custom luts all stuff you'd see on high-end cinema cameras that the sony is not going to offer you so we've been out here shooting with the a7 s3 all day and it's just been very reliable and a pleasure to shoot with the autofocus…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-dpreview-tv-sony-a7s-iii-review-best-run-and-gun-camera-available-today",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Af9_fGEOAB8",
-            "weight": 0.75,
-            "quote_excerpt": "jordan here to talk about using the a7 s3 to shoot video and i've been fortunate enough to use it to shoot a few of our episodes our new a to e-mount adapter episode as well as our z5 versus rp were shot on the a7 s3 so you can check those for more image samples but i want to",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-fstoppers-sony-a7s-iii-review-my-favorite-video-camera-ever",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=KIGaQLvm1ec",
-            "weight": 0.75,
-            "quote_excerpt": "have full frame sensors that are significantly larger now for that reason you would expect the small lenses that are on the micro four thirds camera would be significantly cheaper but if you buy third-party lenses that are abundant for sony mirrorless cameras and non-existent for micro four-thirds…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "One, I am not a Sony fanboy.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "Lastly, I will be making some comparisons to the Canon R5, which I also have, but I'm not trying to start a brand war here and I don't want to see that in the comments.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "And for those of you that just want the quick answer, I will be pre-ordering at least two of the Sony a7S III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "They've also included a screw-on, protective cable cage with the camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "It does not have S-Cinetone, but you can use the same S-Log3 LUTs from the FX9 with great success and it'll match that camera very well.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
-            "weight": 0.75,
-            "quote_excerpt": "And, because of the price difference, I can get two of these, all of those accessories and a lens for the price of the C300 Mark III.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-ijustine-sony-a7s-iii-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VmX1nIJL-m8",
-            "weight": 0.75,
-            "quote_excerpt": "But with this right now we're shooting with a 1.8 24 millimeter G Master lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kai-w-sony-a7s-iii-hands-on-review-what-a-huge-surprise-this-is",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
-            "weight": 0.75,
-            "quote_excerpt": "I wouldn't be able to get these kind of shots with that a7 III handheld.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-kai-w-sony-a7s-iii-hands-on-review-what-a-huge-surprise-this-is",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
-            "weight": 0.75,
-            "quote_excerpt": "It's really quite surprising that Sony have gone the practical route, not the route of making a bold statement.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "different body in my \"best cameras of 2020\" video which was the last video that i actually made i awarded the best video camera of the year to the alpha 7s iii even though it isn't officially classified as one by sony it has the designation interchangeable lens camera e-mount ilce which they have…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "so despite being a mirrorless stills camera officially it's also a killer video camera sony's fx6 camera came in a close second but the value for money of the a7s iii pushed it ahead to me and the fx6 has the new acronym i l m e which stands for interchangeable lens movie e-mount which the fx3 also…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "the top left-hand corner on top of the fx3 there is the usual multi-interface shoe but something new is three quarter 20 mounting points two of them are used for the included handle pro audio unit this is very much based on the XLR K3M device that you can buy for sony cameras with mi shoes gives…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "on this handle with those screws feels pretty solid unlike the xlr k3m unit you don't get an included microphone or the extension cable for the mi shoe not having these is not that big a deal on this camera i mean the microphone was really never that great but better than none, the extension cable…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "you could use it for an hdmi clamp though as there isn't any other hdmi protector that comes with the camera unlike with the a7s iii, but maybe that mounting point and the one on the grip and underneath could be used with the upcoming air peak drone...",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "when i first found out about the camera it was via presentation and one of the things that was said was it has a cage built into it so you don't need one i would certainly recommend getting one if you buy this camera and intend to mount a monitor or an external evf like the Zacuto gratical on it",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "just like the a7s iii there's only one tripod mounting point underneath there's no additional locating hole so your tripod plates will start to come loose and spin a cage will fix this as it will give you many mounting points on the underside of your camera just be aware that you will need to buy a…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
-            "weight": 0.75,
-            "quote_excerpt": "the one i'm showing here on the fx3 is the one made for the sony rx1.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-remsy-atassi-why-i-still-choose-the-a7s-iii-over-the-fx3-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
-            "weight": 0.75,
-            "quote_excerpt": "And, you know, you have a great kind of negative image on the FX3 or the a7S III, a lot that you can work with.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-remsy-atassi-why-i-still-choose-the-a7s-iii-over-the-fx3-in-2026",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
-            "weight": 0.75,
-            "quote_excerpt": "I actually shot my most recent project, a lot of it on the a7S III with anamorphic lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-sidney-diongzon-sony-a7s-iii-full-review-before-you-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=-wWMV9GJLpM",
-            "weight": 0.75,
-            "quote_excerpt": "g-master lens when i put that lens on the a7 s3 that bigger grip just made it a lot more comfortable to hold like it felt really good it felt right it felt really right and after using the camera on that very first day i was super impressed with the overall image quality and really impressed with…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-t-j-audio-the-sony-fxiii-and-a7siii-in-2025-which-one",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=vZ8-pmabdqs",
-            "weight": 0.75,
-            "quote_excerpt": "the Sony FX3 and the A7S3.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-through-the-lens-sony-a7s-iii-2024-watch-before-you-buy",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=_JKrR1-4YO8",
-            "weight": 0.75,
-            "quote_excerpt": "A7 S3 is still so popular and why you might also want to pick up this camera the three main cameras with the 12 megapixel full-frame sensor are the Sony A7 S3 the Sony zv1 and the Sony fx3 all three of these cameras have the same sensor but they have very different designs because all three cameras…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
-            "weight": 0.75,
-            "quote_excerpt": "The Sony A7S3 uses Sony's E-mount, so it shares lenses with the FX6.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
-            "weight": 0.75,
-            "quote_excerpt": "One set of lenses for both cameras, no adapters, no duplication, no friction.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "high",
-      "convergence": {
-        "source_count": 21,
-        "polarity_agreement": 0.667,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.254,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "The Sony A7S3 uses Sony's E-mount, so it shares lenses with the FX6.",
-        "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
-        "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4"
-      }
-    },
-    {
       "axis_id": "handling",
       "display_name": "Handling",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 33,
-        "neu": 12,
+        "pos": 32,
+        "neu": 11,
         "neg": 20,
-        "total": 65,
+        "total": 63,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "Dual Camera Setup in Landscape Photography I carry two cameras.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "Only experience can teach a landscape photographer the fine balance between enjoying the moment and capturing it.",
-            "witness": "unattested"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -5307,17 +4688,549 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 18,
-        "polarity_agreement": 0.556,
+        "source_count": 17,
+        "polarity_agreement": 0.588,
         "dominant_polarity": "pos",
-        "max_source_share": 0.123,
+        "max_source_share": 0.127,
         "contested": true
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Only experience can teach a landscape photographer the fine balance between enjoying the moment and capturing it.",
-        "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-        "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/"
+        "quote_excerpt": "Because of the ergonomics of this camera, I believe that it's actually informed the way that I shoot using it.",
+        "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+        "url": "https://www.youtube.com/watch?v=vQOHmteGzhM"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 27,
+        "neu": 33,
+        "neg": 3,
+        "total": 63,
+        "sources": [
+          {
+            "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Related reading: Best full-frame mirrorless cameras Best E-Mount lenses Best Sony cameras Follow AP on Facebook",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Along the way, he's shot extensively with cameras and lenses of almost every imaginable type, brand and format.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "photography guides Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I also shot with the A7S III alongside the Canon EOS R5, R6 and Lumix S1H, so look out for my upcoming comparisons if youâd like to see how their photo and video quality measures-up.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cameralabs-gordon-laing-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
+            "weight": 0.75,
+            "quote_excerpt": "shoot Best vlogging camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
+            "weight": 0.75,
+            "quote_excerpt": "err)); Popular Camera news Camera rumors Opinions Photo mag deals Podcast Cheatsheets Cameras Video Cameras Sony A7S III review Designed especially for filmmakers",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
+            "weight": 0.75,
+            "quote_excerpt": "But camera brands from Kodak to Yashica aren’t made by who you think 3 DxO PhotoLab 9 review: Squeeze every last drop of image quality from your RAW Files 4 Young mountaineers to get their hands on top-tier Tamron lenses for hiking photography collaboration – here's the one I'd pick 5 This…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Aside from scanning past YouTube headers, I didn’t know much about the Sony a7S III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Okay, with that disclaimer out of the way, let’s get into talking about my time with the a7S III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I’d heard about the S-cinetone because it’s also an option in the larger Sony Venice.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I had two loaner lenses to go along with the camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony FE 24mm f/1.4 GM and the FE 50mm f/1.2 GM .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Again, I am not familiar with the entire lens lineup for Sony.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "This allows you to mount smart accessories directly into the camera’s hotshoe without needing to resort to external wires.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I don’t own a large collection of Sony batteries, so I always had a V-mount solution ready.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "As I mentioned earlier, my Sony a7S III loaner arrived at the same time as my Nikon Z 9.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I also currently own a Canon EOS R5 and a Fuji GFX 100 .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "But, if you prefer smaller cameras, are already in the Sony world, and don’t need internal RAW video, you will be just fine with the a7S III.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I enjoyed my time with the Sony a7S III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Just Buy This One Sony a7R IV Fails at a Key Moment Join the Fstoppers community for free Post comments and join in the discussions Browse the site ad-free Share your work and get featured in the community Compete in the photo contests for fun and prizes Create free account or Log in 10 Comments…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "1 0 Report Julian Ray March 12, 2022 - 5:04 pm As always Chris a very enjoyable read and great insight into a tiny bit of the Sony world.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "I have the a7siii along with the a1 that I use for photography, the 8k in that is also very nice.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Was a Canon T2i in '10 but not support by '12 is reason for Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-a-review-of-the-sony-a7s-iii-in-the-field-2022",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
+            "weight": 0.75,
+            "quote_excerpt": "Example I was in the Antelope Canyon '17 and forgot my adapter for the tripod using the A7rii (IBIS) and FE 12-24mm f/4 not only did I use Hand Held but did bracketed shots also at 12mm, everyone else used sticks doing long exposure for the dimly lit canyon and the best anyone had was a 16mm.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-sony-a7s-iii-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=pcsHlajnQ68",
+            "weight": 0.75,
+            "quote_excerpt": "form factor than type b cards which is what you usually see the card slots can actually accept either card which is pretty cool looking forward see if express type a can provide much faster speeds than sd cards and have plenty of room to grow the lcd is nice but honestly day like today you need the…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-brandon-li-sony-a7siii-my-extended-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
+            "weight": 0.75,
+            "quote_excerpt": "of myself in a narrative style so in this section i'm going to show you some behind the scenes of how i set these shots up got the 50 millimeter zeiss f 1.4 lens on the a7s3 here this is my slider here this is the syrup magic carpet slider and on it i have the syrup genie pan tilt",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-brandon-li-sony-a7siii-my-extended-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
+            "weight": 0.75,
+            "quote_excerpt": "a pretty decent image with them on the a7 s3 anyway because this camera is so sharp the lenses do cover a larger image circle than advertised so by not cropping in all the way to aps-c i could keep some of the curvature and distortion on the edges of the frame which i feel actually adds to the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "This is my Sony A7S3.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "This may be controversial, but Sony has some of the best lens selections for their cameras.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "Because I've been shooting with Sony for quite a while now, there is so many lens options, and I've acquired my own collection of lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "Despite having a selection of endless lenses, the lens that I find I use the most on the A7S3 is the 17 to 28 2.8 from Tamron.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "However, if I need these lenses, my friends are awesome and they're happy to lend them to me.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
+            "weight": 0.75,
+            "quote_excerpt": "There's Canon, there's Fuji, there's Lumix, and that's kind of tough to choose between.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7s-iii-first-impressions-review-4k120p-video-16-bit-raw-video",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
+            "weight": 0.75,
+            "quote_excerpt": "but they're not they're actually for a brand new card type called cf express type a now cfxpress type a's look a lot like sds they do have a slightly different form factor however they both fit either sd or cf press a into the same slot and this camera is backwards compatible there's very few…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7s-iii-first-impressions-review-4k120p-video-16-bit-raw-video",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
+            "weight": 0.75,
+            "quote_excerpt": "like being able to shoot anamorphic or academy ratio or program in custom luts all stuff you'd see on high-end cinema cameras that the sony is not going to offer you so we've been out here shooting with the a7 s3 all day and it's just been very reliable and a pleasure to shoot with the autofocus…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dpreview-tv-sony-a7s-iii-review-best-run-and-gun-camera-available-today",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Af9_fGEOAB8",
+            "weight": 0.75,
+            "quote_excerpt": "jordan here to talk about using the a7 s3 to shoot video and i've been fortunate enough to use it to shoot a few of our episodes our new a to e-mount adapter episode as well as our z5 versus rp were shot on the a7 s3 so you can check those for more image samples but i want to",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-fstoppers-sony-a7s-iii-review-my-favorite-video-camera-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=KIGaQLvm1ec",
+            "weight": 0.75,
+            "quote_excerpt": "have full frame sensors that are significantly larger now for that reason you would expect the small lenses that are on the micro four thirds camera would be significantly cheaper but if you buy third-party lenses that are abundant for sony mirrorless cameras and non-existent for micro four-thirds…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "One, I am not a Sony fanboy.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "Lastly, I will be making some comparisons to the Canon R5, which I also have, but I'm not trying to start a brand war here and I don't want to see that in the comments.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "And for those of you that just want the quick answer, I will be pre-ordering at least two of the Sony a7S III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "They've also included a screw-on, protective cable cage with the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "It does not have S-Cinetone, but you can use the same S-Log3 LUTs from the FX9 with great success and it'll match that camera very well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
+            "weight": 0.75,
+            "quote_excerpt": "And, because of the price difference, I can get two of these, all of those accessories and a lens for the price of the C300 Mark III.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-ijustine-sony-a7s-iii-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VmX1nIJL-m8",
+            "weight": 0.75,
+            "quote_excerpt": "But with this right now we're shooting with a 1.8 24 millimeter G Master lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-kai-w-sony-a7s-iii-hands-on-review-what-a-huge-surprise-this-is",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
+            "weight": 0.75,
+            "quote_excerpt": "I wouldn't be able to get these kind of shots with that a7 III handheld.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-kai-w-sony-a7s-iii-hands-on-review-what-a-huge-surprise-this-is",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
+            "weight": 0.75,
+            "quote_excerpt": "It's really quite surprising that Sony have gone the practical route, not the route of making a bold statement.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "different body in my \"best cameras of 2020\" video which was the last video that i actually made i awarded the best video camera of the year to the alpha 7s iii even though it isn't officially classified as one by sony it has the designation interchangeable lens camera e-mount ilce which they have…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "so despite being a mirrorless stills camera officially it's also a killer video camera sony's fx6 camera came in a close second but the value for money of the a7s iii pushed it ahead to me and the fx6 has the new acronym i l m e which stands for interchangeable lens movie e-mount which the fx3 also…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "the top left-hand corner on top of the fx3 there is the usual multi-interface shoe but something new is three quarter 20 mounting points two of them are used for the included handle pro audio unit this is very much based on the XLR K3M device that you can buy for sony cameras with mi shoes gives…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "on this handle with those screws feels pretty solid unlike the xlr k3m unit you don't get an included microphone or the extension cable for the mi shoe not having these is not that big a deal on this camera i mean the microphone was really never that great but better than none, the extension cable…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "you could use it for an hdmi clamp though as there isn't any other hdmi protector that comes with the camera unlike with the a7s iii, but maybe that mounting point and the one on the grip and underneath could be used with the upcoming air peak drone...",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "when i first found out about the camera it was via presentation and one of the things that was said was it has a cage built into it so you don't need one i would certainly recommend getting one if you buy this camera and intend to mount a monitor or an external evf like the Zacuto gratical on it",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "just like the a7s iii there's only one tripod mounting point underneath there's no additional locating hole so your tripod plates will start to come loose and spin a cage will fix this as it will give you many mounting points on the underside of your camera just be aware that you will need to buy a…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-philip-bloom-sony-fx3-vs-a7s-iii-what-exactly-is-a-cinema-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
+            "weight": 0.75,
+            "quote_excerpt": "the one i'm showing here on the fx3 is the one made for the sony rx1.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-remsy-atassi-why-i-still-choose-the-a7s-iii-over-the-fx3-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
+            "weight": 0.75,
+            "quote_excerpt": "And, you know, you have a great kind of negative image on the FX3 or the a7S III, a lot that you can work with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-remsy-atassi-why-i-still-choose-the-a7s-iii-over-the-fx3-in-2026",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
+            "weight": 0.75,
+            "quote_excerpt": "I actually shot my most recent project, a lot of it on the a7S III with anamorphic lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-sidney-diongzon-sony-a7s-iii-full-review-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-wWMV9GJLpM",
+            "weight": 0.75,
+            "quote_excerpt": "g-master lens when i put that lens on the a7 s3 that bigger grip just made it a lot more comfortable to hold like it felt really good it felt right it felt really right and after using the camera on that very first day i was super impressed with the overall image quality and really impressed with…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-t-j-audio-the-sony-fxiii-and-a7siii-in-2025-which-one",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vZ8-pmabdqs",
+            "weight": 0.75,
+            "quote_excerpt": "the Sony FX3 and the A7S3.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-through-the-lens-sony-a7s-iii-2024-watch-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=_JKrR1-4YO8",
+            "weight": 0.75,
+            "quote_excerpt": "A7 S3 is still so popular and why you might also want to pick up this camera the three main cameras with the 12 megapixel full-frame sensor are the Sony A7 S3 the Sony zv1 and the Sony fx3 all three of these cameras have the same sensor but they have very different designs because all three cameras…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony A7S3 uses Sony's E-mount, so it shares lenses with the FX6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
+            "weight": 0.75,
+            "quote_excerpt": "One set of lenses for both cameras, no adapters, no duplication, no friction.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 19,
+        "polarity_agreement": 0.632,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.27,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "The Sony A7S3 uses Sony's E-mount, so it shares lenses with the FX6.",
+        "source_id": "youtube-western-approaches-is-the-sony-a7s-iii-still-a-powerhouse-in-2025",
+        "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4"
       }
     },
     {
@@ -5326,35 +5239,11 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 29,
-        "neu": 22,
+        "pos": 28,
+        "neu": 20,
         "neg": 12,
-        "total": 63,
+        "total": 60,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "In this article, I want to share how to make every shutter click count when time is against you.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "I had the right camera settings dialed in: Aperture Priority mode at f/11, ISO 100, and letting the camera calculate the shutter speed.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "I do, however, make a deliberate preference of using both for photography at times, omitting shooting video footage.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -5839,11 +5728,11 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 19,
-        "polarity_agreement": 0.579,
+        "source_count": 18,
+        "polarity_agreement": 0.611,
         "dominant_polarity": "pos",
-        "max_source_share": 0.143,
-        "contested": true
+        "max_source_share": 0.15,
+        "contested": false
       },
       "notes": [],
       "face_quote": {
@@ -5860,19 +5749,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 34,
+        "pos": 33,
         "neu": 17,
         "neg": 8,
-        "total": 59,
+        "total": 58,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "Light Generates shadows and highlights, resulting in contrast: a prime quality of an appealing image.",
-            "witness": "unattested"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -6341,17 +6222,17 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 21,
-        "polarity_agreement": 0.667,
+        "source_count": 20,
+        "polarity_agreement": 0.65,
         "dominant_polarity": "pos",
-        "max_source_share": 0.119,
+        "max_source_share": 0.121,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "And I'm still happy with the image quality that I get from these.",
-        "source_id": "youtube-davey-gravy-should-you-get-the-sony-a7siii-in-2025",
-        "url": "https://www.youtube.com/watch?v=vQOHmteGzhM"
+        "quote_excerpt": "You have to be in the dedicated photo or video option on the dial to set a custom white balance.",
+        "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
+        "url": "https://www.youtube.com/watch?v=AG79FkN7EPk"
       }
     },
     {
@@ -6789,18 +6670,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 31,
-        "neu": 7,
+        "neu": 6,
         "neg": 6,
-        "total": 44,
+        "total": 43,
         "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-            "weight": 0.75,
-            "quote_excerpt": "We will cover composition and desert light, the technical edge of a dual-body camera setup, and my workflow for recovering those almost -perfect shots where the focus has just missed the mark.",
-            "witness": "firsthand"
-          },
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
             "source_type": "reviewer_blog",
@@ -7149,10 +7022,10 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 15,
-        "polarity_agreement": 0.933,
+        "source_count": 14,
+        "polarity_agreement": 1.0,
         "dominant_polarity": "pos",
-        "max_source_share": 0.114,
+        "max_source_share": 0.116,
         "contested": false
       },
       "notes": []
@@ -7428,9 +7301,9 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Something I forgot to mention in the video I noticed when I was editing was that when we're talking about battery life, that the USB-C port on this camera has now been upgraded to accept power delivery.",
-        "source_id": "youtube-gerald-undone-the-sony-a7s-iii-a-technical-masterpiece",
-        "url": "https://www.youtube.com/watch?v=AG79FkN7EPk"
+        "quote_excerpt": "kill seven z batteries in a day i don't understand how gonna make a documentary about this but yeah battery life for me is perfect and if we compare it to the a6500 one of these z batteries will last as long as three of these then i like the fact that the movie mode is right next to the",
+        "source_id": "youtube-dreamduo-films-sony-a7siii-full-review-does-it-live-up-to-the-hype",
+        "url": "https://www.youtube.com/watch?v=ew2qRS19sk0"
       }
     },
     {
@@ -7808,9 +7681,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 9,
-        "neu": 3,
+        "neu": 2,
         "neg": 2,
-        "total": 14,
+        "total": 13,
         "sources": [
           {
             "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
@@ -7826,14 +7699,6 @@
             "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
             "weight": 0.75,
             "quote_excerpt": "Measuring 20 x 28 x 2.8mm, they’re smaller than either SD cards or the CFexpress Type B cards used in other mirrorless models, which adopt the XQD form factor (38.5 x 29.8 x 3.8mm).",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-photography-and-film-will-help-us-to-educate-people-fascinat-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/photography/awards-and-competitions/photography-and-film-will-help-us-to-educate-people-fascinating-underwater-shot-captures-red-sea-coral-doctors-at-work-winning-a-science-photo-award",
-            "weight": 0.75,
-            "quote_excerpt": "opting for a 16mm focal length",
             "witness": "unattested"
           },
           {
@@ -7928,11 +7793,11 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 7,
-        "polarity_agreement": 0.571,
+        "source_count": 6,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "pos",
-        "max_source_share": 0.357,
-        "contested": true
+        "max_source_share": 0.385,
+        "contested": false
       },
       "notes": []
     },
@@ -7943,18 +7808,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 7,
-        "neu": 1,
+        "neu": 0,
         "neg": 3,
-        "total": 11,
+        "total": 10,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-photography-and-film-will-help-us-to-educate-people-fascinat-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/photography/awards-and-competitions/photography-and-film-will-help-us-to-educate-people-fascinating-underwater-shot-captures-red-sea-coral-doctors-at-work-winning-a-science-photo-award",
-            "weight": 0.75,
-            "quote_excerpt": "You might also likeâ€¦ Take a look at the best waterproof cameras as well as the best underwater housings for cameras and phones.",
-            "witness": "unattested"
-          },
           {
             "source_id": "rss-digital-camera-world-sony-a7s-iii-review-2020",
             "source_type": "reviewer_blog",
@@ -8039,10 +7896,10 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.5,
+        "source_count": 7,
+        "polarity_agreement": 0.571,
         "dominant_polarity": "pos",
-        "max_source_share": 0.273,
+        "max_source_share": 0.3,
         "contested": true
       },
       "notes": []
@@ -8403,7 +8260,7 @@
     ]
   },
   "synthesis": {
-    "consensus_paragraph": "Reviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.",
+    "consensus_paragraph": "Reviewers are most positive about autofocus (72% positive, 14% neutral, 14% negative across 43 claims). The most criticism lands on handling: 51% positive, 17% neutral, 32% negative across 63 claims. Coverage of mount compatibility is mostly neutral: 43% positive, 52% neutral, 5% negative across 63 claims.",
     "aspect_breakdown": [
       {
         "aspect": "video_capability",
@@ -8414,52 +8271,52 @@
       },
       {
         "aspect": "evf_lcd",
-        "pos": 65,
+        "pos": 64,
         "neu": 20,
         "neg": 16,
-        "total": 101
+        "total": 100
       },
       {
         "aspect": "sensor_performance",
         "pos": 49,
-        "neu": 25,
-        "neg": 12,
-        "total": 86
+        "neu": 24,
+        "neg": 11,
+        "total": 84
       },
       {
         "aspect": "stabilization",
         "pos": 41,
-        "neu": 17,
+        "neu": 16,
         "neg": 12,
-        "total": 70
+        "total": 69
+      },
+      {
+        "aspect": "handling",
+        "pos": 32,
+        "neu": 11,
+        "neg": 20,
+        "total": 63
       },
       {
         "aspect": "mount_compat",
         "pos": 27,
-        "neu": 37,
+        "neu": 33,
         "neg": 3,
-        "total": 67
-      },
-      {
-        "aspect": "handling",
-        "pos": 33,
-        "neu": 12,
-        "neg": 20,
-        "total": 65
-      },
-      {
-        "aspect": "burst_buffer",
-        "pos": 29,
-        "neu": 22,
-        "neg": 12,
         "total": 63
       },
       {
+        "aspect": "burst_buffer",
+        "pos": 28,
+        "neu": 20,
+        "neg": 12,
+        "total": 60
+      },
+      {
         "aspect": "image_quality",
-        "pos": 34,
+        "pos": 33,
         "neu": 17,
         "neg": 8,
-        "total": 59
+        "total": 58
       },
       {
         "aspect": "generation_context",
@@ -8471,9 +8328,9 @@
       {
         "aspect": "autofocus_body",
         "pos": 31,
-        "neu": 7,
+        "neu": 6,
         "neg": 6,
-        "total": 44
+        "total": 43
       },
       {
         "aspect": "battery_life",
@@ -8499,16 +8356,16 @@
       {
         "aspect": "dimensions",
         "pos": 9,
-        "neu": 3,
+        "neu": 2,
         "neg": 2,
-        "total": 14
+        "total": 13
       },
       {
         "aspect": "build",
         "pos": 7,
-        "neu": 1,
+        "neu": 0,
         "neg": 3,
-        "total": 11
+        "total": 10
       },
       {
         "aspect": "weight",
@@ -8520,11 +8377,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 951,
-      "evaluated": 763,
-      "non_evaluative": 188,
+      "examined": 934,
+      "evaluated": 756,
+      "non_evaluative": 178,
       "non_evaluative_breakdown": {
-        "non_claim": 188
+        "non_claim": 178
       },
       "off_axis": 0,
       "ruleset": {
@@ -8532,7 +8389,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "951 examined · 763 evaluated under askmaddi-polarity",
+      "receipt_line": "934 examined · 756 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -8545,21 +8402,10 @@
   "axis_roles": {
     "computed_by": "axis_roles@1",
     "most_discussed": "video_capability",
-    "highest_rated": "battery_life",
+    "highest_rated": "autofocus_body",
     "lowest_rated": "mount_compat"
   },
   "sources": [
-    {
-      "source_id": "rss-adorama-learning-center-42west-chasing-the-light-a-guide-to-desert-landscape-photography-an-2026",
-      "source_type": "community",
-      "reviewer": "Adorama Learning Center / 42West",
-      "platform": "web",
-      "url": "https://www.adorama.com/alc/desert-landscape-photography-guide/",
-      "title": "Chasing the Light: A Guide to Desert Landscape Photography and Composition",
-      "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852071+00:00",
-      "weight": 0.75
-    },
     {
       "source_id": "rss-amateur-photographer-sony-alpha-7s-iii-review-sony-s-video-star-still-shines-2025",
       "source_type": "pro",
@@ -8568,7 +8414,7 @@
       "url": "https://amateurphotographer.com/review/sony-alpha-7s-iii-review/",
       "title": "Sony Alpha 7S III review - Sony's video star still shines",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852090+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163381+00:00",
       "weight": 0.75
     },
     {
@@ -8579,18 +8425,7 @@
       "url": "https://www.cameralabs.com/sony-a7s-iii-review/",
       "title": "Sony A7S III review",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852094+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "rss-digital-camera-world-photography-and-film-will-help-us-to-educate-people-fascinat-2026",
-      "source_type": "pro",
-      "reviewer": "Digital Camera World",
-      "platform": "web",
-      "url": "https://www.digitalcameraworld.com/photography/awards-and-competitions/photography-and-film-will-help-us-to-educate-people-fascinating-underwater-shot-captures-red-sea-coral-doctors-at-work-winning-a-science-photo-award",
-      "title": "\"Photography and film will help us to educate peopleâ€� â€“Fascinating underwater shot captures Red Sea 'coral doctors' at work, winning a science photo award",
-      "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852099+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163391+00:00",
       "weight": 0.75
     },
     {
@@ -8601,7 +8436,7 @@
       "url": "https://www.digitalcameraworld.com/reviews/sony-a7s-iii-review",
       "title": "Sony A7S III review",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852102+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163396+00:00",
       "weight": 0.75
     },
     {
@@ -8612,7 +8447,7 @@
       "url": "https://fstoppers.com/reviews/review-sony-a7s-iii-field-598697",
       "title": "A Review of the Sony a7S III In the Field",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852105+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163399+00:00",
       "weight": 0.75
     },
     {
@@ -8623,7 +8458,7 @@
       "url": "https://www.youtube.com/watch?v=pcsHlajnQ68",
       "title": "Sony a7S III | Hands-on Review",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852108+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163402+00:00",
       "weight": 0.75
     },
     {
@@ -8634,7 +8469,7 @@
       "url": "https://www.youtube.com/watch?v=dFGwi6II3i8",
       "title": "Sony A7sIII - My Extended Review",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852111+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163405+00:00",
       "weight": 0.75
     },
     {
@@ -8645,7 +8480,7 @@
       "url": "https://www.youtube.com/watch?v=vQOHmteGzhM",
       "title": "Should You Get The Sony A7Siii in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852114+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163407+00:00",
       "weight": 0.75
     },
     {
@@ -8656,7 +8491,7 @@
       "url": "https://www.youtube.com/watch?v=iDZHHO3baxU",
       "title": "Sony a7S III First Impressions Review (4K/120p video, 16-bit Raw video)",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852117+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163414+00:00",
       "weight": 0.75
     },
     {
@@ -8667,7 +8502,7 @@
       "url": "https://www.youtube.com/watch?v=Af9_fGEOAB8",
       "title": "Sony a7S III Review: Best 'run and gun' camera available today?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852119+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163418+00:00",
       "weight": 0.75
     },
     {
@@ -8678,7 +8513,7 @@
       "url": "https://www.youtube.com/watch?v=ew2qRS19sk0",
       "title": "Sony A7sIII Full Review | Does it live up to the hype?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852122+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163421+00:00",
       "weight": 0.75
     },
     {
@@ -8689,7 +8524,7 @@
       "url": "https://www.youtube.com/watch?v=KIGaQLvm1ec",
       "title": "Sony a7S III Review: My Favorite Video Camera Ever",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852125+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163424+00:00",
       "weight": 0.75
     },
     {
@@ -8700,7 +8535,7 @@
       "url": "https://www.youtube.com/watch?v=AG79FkN7EPk",
       "title": "The SONY a7S III: A Technical MASTERPIECE!",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852128+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163427+00:00",
       "weight": 0.75
     },
     {
@@ -8711,7 +8546,7 @@
       "url": "https://www.youtube.com/watch?v=VmX1nIJL-m8",
       "title": "Sony A7s III Review!",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852131+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163429+00:00",
       "weight": 0.75
     },
     {
@@ -8722,7 +8557,7 @@
       "url": "https://www.youtube.com/watch?v=VQ2GK3riMg8",
       "title": "Sony a7S III Hands-on Review - What a HUGE Surprise This is...",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852133+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163432+00:00",
       "weight": 0.75
     },
     {
@@ -8733,7 +8568,7 @@
       "url": "https://www.youtube.com/watch?v=q2Lzn2aI11Y",
       "title": "A7S III Honest Review - ALL the GOOD & BAD in 11 min!",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852136+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163434+00:00",
       "weight": 0.75
     },
     {
@@ -8744,7 +8579,7 @@
       "url": "https://www.youtube.com/watch?v=MDGuqzVEWcY",
       "title": "Sony FX3 vs A7S III: What EXACTLY is a CINEMA CAMERA?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852139+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163436+00:00",
       "weight": 0.75
     },
     {
@@ -8755,7 +8590,7 @@
       "url": "https://www.youtube.com/watch?v=E4n9pg39IDQ",
       "title": "Why I Still Choose the A7S III Over the FX3 in 2026",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852141+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163439+00:00",
       "weight": 0.75
     },
     {
@@ -8766,7 +8601,7 @@
       "url": "https://www.youtube.com/watch?v=-wWMV9GJLpM",
       "title": "Sony a7S III Full Review - BEFORE YOU BUY!",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852144+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163441+00:00",
       "weight": 0.75
     },
     {
@@ -8777,7 +8612,7 @@
       "url": "https://www.youtube.com/watch?v=vZ8-pmabdqs",
       "title": "The Sony FXIII and A7SIII in 2025 | Which One?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852147+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163443+00:00",
       "weight": 0.75
     },
     {
@@ -8788,7 +8623,7 @@
       "url": "https://www.youtube.com/watch?v=_JKrR1-4YO8",
       "title": "Sony A7s III (2024) | Watch Before You Buy",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852149+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163446+00:00",
       "weight": 0.75
     },
     {
@@ -8799,7 +8634,7 @@
       "url": "https://www.youtube.com/watch?v=tTziJBQy_iw",
       "title": "Sony A7S III - Review After the Hype [ Sony A7S3 ]",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852152+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163448+00:00",
       "weight": 0.75
     },
     {
@@ -8810,31 +8645,19 @@
       "url": "https://www.youtube.com/watch?v=Egwmwy-Ffc4",
       "title": "Is the Sony A7S III still a POWERHOUSE in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-08-07T01:17:12.852154+00:00",
+      "ingested_at": "2026-09-09T00:06:42.163451+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/sony-a7s-iii/",
-    "reddit": "Sony A7S III\n\nReviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.\n\nI pulled together all 24 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Sony A7S III**\nReviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.\nAll 24 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n_(disclosure: I built this)_",
+    "reddit": "Sony A7S III\n\nReviewers are most positive about autofocus (72% positive, 14% neutral, 14% negative across 43 claims). The most criticism lands on handling: 51% positive, 17% neutral, 32% negative across 63 claims. Coverage of mount compatibility is mostly neutral: 43% positive, 52% neutral, 5% negative across 63 claims.\n\nI pulled together all 22 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony A7S III**\nReviewers are most positive about autofocus (72% positive, 14% neutral, 14% negative across 43 claims). The most criticism lands on handling: 51% positive, 17% neutral, 32% negative across 63 claims. Coverage of mount compatibility is mostly neutral: 43% positive, 52% neutral, 5% negative across 63 claims.\nAll 22 reviews in one place: https://askmaddi.com/cards/sony-a7s-iii/\n_(disclosure: I built this)_",
     "og": {
       "title": "Sony A7S III — Reviewed",
-      "description": "Reviewers are most positive about battery life (71% positive, 16% neutral, 13% negative across 31 claims). The most criticism lands on handling: 51% positive, 18% neutral, 31% negative across 65 claims. Coverage of mount compatibility is mostly neutral: 40% positive, 55% neutral, 5% negative across 67 claims.",
+      "description": "Reviewers are most positive about autofocus (72% positive, 14% neutral, 14% negative across 43 claims). The most criticism lands on handling: 51% positive, 17% neutral, 32% negative across 63 claims. Coverage of mount compatibility is mostly neutral: 43% positive, 52% neutral, 5% negative across 63 claims.",
       "image": null,
       "url": "https://askmaddi.com/cards/sony-a7s-iii/"
     }
-  },
-  "_build_provenance": {
-    "driver": "build_card.py",
-    "enrich_client": "flask",
-    "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
-    },
-    "blockers": [],
-    "warnings": [],
-    "shippable": true,
-    "note": "Real gemma enrichment via flask shim."
   }
 }

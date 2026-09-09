@@ -21,25 +21,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 699.99,
-        "refurbished": 1155.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 39,
-      "price_updated_at": "2026-09-08T10:10:20.887515+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-03T04:23:39.014481+00:00"
+    "price_updated_at": "2026-09-09T00:11:38.658907+00:00"
   },
   "freshness": {
     "created_at": "2026-09-03T04:23:39.003049+00:00",
-    "last_built": "2026-09-03T04:23:39.003049+00:00",
-    "last_checked": "2026-09-03T04:23:39.003049+00:00",
-    "source_count": 17,
+    "last_built": "2026-09-09T00:11:38.653648+00:00",
+    "last_checked": "2026-09-09T00:11:38.653648+00:00",
+    "source_count": 16,
     "source_types": {
-      "pro": 17
+      "pro": 16
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
@@ -49,13 +44,13 @@
     "per_axis": {
       "evf_lcd": "high",
       "mount_compat": "high",
-      "burst_buffer": "high",
       "handling": "high",
+      "burst_buffer": "medium",
       "dimensions": "medium",
       "price": "high",
       "image_quality": "medium",
-      "video_capability": "medium",
       "generation_context": "medium",
+      "video_capability": "medium",
       "build": "medium",
       "stabilization": "medium",
       "autofocus_body": "medium",
@@ -80,26 +75,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 12,
-        "neu": 39,
+        "neu": 37,
         "neg": 18,
-        "total": 69,
+        "total": 67,
         "sources": [
-          {
-            "source_id": "rss-digital-camera-world-photographer-says-sun-photo-destroyed-his-camera-s-sensor-he-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/photographer-says-sun-photo-destroyed-his-cameras-sensor-heres-why-you-may-need-to-heed-the-warnings",
-            "weight": 0.75,
-            "quote_excerpt": "The Fujifilm X100F sports Fujifilmâ€™s Hybrid Viewfinder, which means it can be used as an electronic viewfinder and an optical viewfinder.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-photographer-says-sun-photo-destroyed-his-camera-s-sensor-he-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/photographer-says-sun-photo-destroyed-his-cameras-sensor-heres-why-you-may-need-to-heed-the-warnings",
-            "weight": 0.75,
-            "quote_excerpt": "When photographing the sun, it is imperative that you never look at it through an optical viewfinder, as this could seriously damage your eyesight.",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-adamhasacamera-should-you-buy-the-fujifilm-x100f-in-2026-honest-review",
             "source_type": "youtube",
@@ -640,17 +619,17 @@
       },
       "confidence": "high",
       "convergence": {
-        "source_count": 11,
-        "polarity_agreement": 0.455,
+        "source_count": 10,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neg",
-        "max_source_share": 0.652,
+        "max_source_share": 0.672,
         "contested": true
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "The Fujifilm X100F sports Fujifilmâ€™s Hybrid Viewfinder, which means it can be used as an electronic viewfinder and an optical viewfinder.",
-        "source_id": "rss-digital-camera-world-photographer-says-sun-photo-destroyed-his-camera-s-sensor-he-2026",
-        "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/photographer-says-sun-photo-destroyed-his-cameras-sensor-heres-why-you-may-need-to-heed-the-warnings"
+        "quote_excerpt": "And it's got a very cool viewfinder that gives an optical and an electronic view.",
+        "source_id": "youtube-gordon-laing-fujifilm-x100f-review",
+        "url": "https://www.youtube.com/watch?v=s1PC_XkWBs8"
       }
     },
     {
@@ -1074,12 +1053,7 @@
         "max_source_share": 0.68,
         "contested": true
       },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "But if you mount them on the X100F, you no longer need to go into a menu and say, \"By the way, I fitted this adapter lens.\" It it knows they electronically communicate.",
-        "source_id": "youtube-gordon-laing-fujifilm-x100f-review",
-        "url": "https://www.youtube.com/watch?v=s1PC_XkWBs8"
-      }
+      "notes": []
     },
     {
       "axis_id": "handling",
@@ -3085,9 +3059,9 @@
       {
         "aspect": "evf_lcd",
         "pos": 12,
-        "neu": 39,
+        "neu": 37,
         "neg": 18,
-        "total": 69
+        "total": 67
       },
       {
         "aspect": "mount_compat",
@@ -3176,11 +3150,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 420,
-      "evaluated": 225,
-      "non_evaluative": 195,
+      "examined": 416,
+      "evaluated": 224,
+      "non_evaluative": 192,
       "non_evaluative_breakdown": {
-        "non_claim": 195
+        "non_claim": 192
       },
       "off_axis": 0,
       "ruleset": {
@@ -3188,7 +3162,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "420 examined · 225 evaluated under askmaddi-polarity",
+      "receipt_line": "416 examined · 224 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -3206,17 +3180,6 @@
   },
   "sources": [
     {
-      "source_id": "rss-digital-camera-world-photographer-says-sun-photo-destroyed-his-camera-s-sensor-he-2026",
-      "source_type": "pro",
-      "reviewer": "Digital Camera World",
-      "platform": "web",
-      "url": "https://www.digitalcameraworld.com/cameras/compact-cameras/photographer-says-sun-photo-destroyed-his-cameras-sensor-heres-why-you-may-need-to-heed-the-warnings",
-      "title": "Photographer says sun photo â€œdestroyedâ€� his cameraâ€™s sensor. Hereâ€™s why you may need to heed the warnings",
-      "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011284+00:00",
-      "weight": 0.75
-    },
-    {
       "source_id": "youtube-aaron-yang-the-camera-that-saved-my-creativity-fujifilm-x100f",
       "source_type": "pro",
       "reviewer": "Aaron Yang",
@@ -3224,7 +3187,7 @@
       "url": "https://www.youtube.com/watch?v=qUCT-iQbQf0",
       "title": "the camera that saved my creativity | fujifilm x100F",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011300+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657910+00:00",
       "weight": 0.75
     },
     {
@@ -3235,7 +3198,7 @@
       "url": "https://www.youtube.com/watch?v=v--6mDxjfSo",
       "title": "Should You Buy the Fujifilm X100F in 2026? (Honest Review)",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011306+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657922+00:00",
       "weight": 0.75
     },
     {
@@ -3246,7 +3209,7 @@
       "url": "https://www.youtube.com/watch?v=rNq0QytJeac",
       "title": "I Was 100% Wrong About the Fujifilm X100F",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011311+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657926+00:00",
       "weight": 0.75
     },
     {
@@ -3257,7 +3220,7 @@
       "url": "https://www.youtube.com/watch?v=Q9EhmyB-uEY",
       "title": "Fujifilm X100F Product Overview",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011339+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657929+00:00",
       "weight": 0.75
     },
     {
@@ -3268,7 +3231,7 @@
       "url": "https://www.youtube.com/watch?v=Lt2MU5PGY9c",
       "title": "The X100F in 2022",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011345+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657931+00:00",
       "weight": 0.75
     },
     {
@@ -3279,7 +3242,7 @@
       "url": "https://www.youtube.com/watch?v=s1PC_XkWBs8",
       "title": "Fujifilm X100F review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011350+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657934+00:00",
       "weight": 0.75
     },
     {
@@ -3290,7 +3253,7 @@
       "url": "https://www.youtube.com/watch?v=Ji3DmHaMob4",
       "title": "X100F Review after 5 Years of Use",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011355+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657936+00:00",
       "weight": 0.75
     },
     {
@@ -3301,7 +3264,7 @@
       "url": "https://www.youtube.com/watch?v=DfJ5Bclb6_s",
       "title": "FUJIFILM X100F / X100V — is it worth it?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011359+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657941+00:00",
       "weight": 0.75
     },
     {
@@ -3312,7 +3275,7 @@
       "url": "https://www.youtube.com/watch?v=VZCJv_RgBJU",
       "title": "Enjoy Photography Again! Fuji X100F Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011364+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657945+00:00",
       "weight": 0.75
     },
     {
@@ -3323,7 +3286,7 @@
       "url": "https://www.youtube.com/watch?v=GE1-pHwAJ30",
       "title": "The Fujifilm X100F. Still worth it in 2025?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011369+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657948+00:00",
       "weight": 0.75
     },
     {
@@ -3334,7 +3297,7 @@
       "url": "https://www.youtube.com/watch?v=DtiPan0sViU",
       "title": "Fujifilm X100F - The Perfect Camera?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011373+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657950+00:00",
       "weight": 0.75
     },
     {
@@ -3345,7 +3308,7 @@
       "url": "https://www.youtube.com/watch?v=VmbKyo65AuA",
       "title": "Fujifilm X100F Camera Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011378+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657952+00:00",
       "weight": 0.75
     },
     {
@@ -3356,7 +3319,7 @@
       "url": "https://www.youtube.com/watch?v=IbnkszqGvnQ",
       "title": "Fujifilm X100VI vs X100V vs X100F - Which Is Better?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011383+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657955+00:00",
       "weight": 0.75
     },
     {
@@ -3367,7 +3330,7 @@
       "url": "https://www.youtube.com/watch?v=0tTMfjLPcHQ",
       "title": "Fuji X100F Review After 8 Months",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011388+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657957+00:00",
       "weight": 0.75
     },
     {
@@ -3378,7 +3341,7 @@
       "url": "https://www.youtube.com/watch?v=8pjX4d6sC_s",
       "title": "I didn't know I needed this camera (Fujifilm X100F review)",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011393+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657959+00:00",
       "weight": 0.75
     },
     {
@@ -3389,31 +3352,19 @@
       "url": "https://www.youtube.com/watch?v=PC26CTfy4CE",
       "title": "Fujifilm X100F - a camera that stopped my creative burnout",
       "publication_date": "",
-      "ingested_at": "2026-09-03T04:23:39.011398+00:00",
+      "ingested_at": "2026-09-09T00:11:38.657962+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/fujifilm-x100f/",
-    "reddit": "Fujifilm x100f\n\nReviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.\n\nI pulled together all 17 reviews in one place: https://askmaddi.com/cards/fujifilm-x100f/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Fujifilm x100f**\nReviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.\nAll 17 reviews in one place: https://askmaddi.com/cards/fujifilm-x100f/\n_(disclosure: I built this)_",
+    "reddit": "Fujifilm x100f\n\nReviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.\n\nI pulled together all 16 reviews in one place: https://askmaddi.com/cards/fujifilm-x100f/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Fujifilm x100f**\nReviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.\nAll 16 reviews in one place: https://askmaddi.com/cards/fujifilm-x100f/\n_(disclosure: I built this)_",
     "og": {
       "title": "Fujifilm x100f — Reviewed",
       "description": "Reviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.",
       "image": null,
       "url": "https://askmaddi.com/cards/fujifilm-x100f/"
     }
-  },
-  "_build_provenance": {
-    "driver": "build_card.py",
-    "enrich_client": "forced_choice",
-    "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
-    },
-    "blockers": [],
-    "warnings": [],
-    "shippable": true,
-    "note": "Real gemma enrichment via flask shim."
   }
 }
