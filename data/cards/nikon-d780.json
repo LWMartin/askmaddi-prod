@@ -15,18 +15,24 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": null,
-    "current_new_source": null,
-    "current_new_url": null,
-    "affiliate_url": null,
+    "current_new_usd": 1547,
+    "current_new_source": "adorama_feed",
+    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-d780-fx-format-dslr-camera-body-only%2Fp%2Finkd780",
+    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-d780-fx-format-dslr-camera-body-only%2Fp%2Finkd780",
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "refurbished": 899.98,
+        "pre_owned": 680.0,
+        "open_box": 1499.9
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 26,
+      "price_updated_at": "2026-09-08T10:10:30.182632+00:00"
     },
-    "price_updated_at": "2026-09-09T00:12:47.038731+00:00"
+    "price_updated_at": "2026-09-01T03:23:17.171779+00:00"
   },
   "freshness": {
     "created_at": "2026-09-01T03:23:17.146853+00:00",
@@ -6422,5 +6428,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/nikon-d780/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }

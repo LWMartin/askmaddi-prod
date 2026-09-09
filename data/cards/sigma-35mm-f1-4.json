@@ -21,12 +21,18 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "refurbished": 277.6,
+        "pre_owned": 370.78,
+        "open_box": 899.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 10,
+      "price_updated_at": "2026-09-08T10:10:41.960086+00:00"
     },
-    "price_updated_at": "2026-09-09T00:14:49.839036+00:00"
+    "price_updated_at": "2026-09-02T21:05:11.769947+00:00"
   },
   "freshness": {
     "created_at": "2026-09-02T21:05:11.750845+00:00",
@@ -4921,5 +4927,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/sigma-35mm-f1-4/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }

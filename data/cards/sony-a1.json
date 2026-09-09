@@ -15,18 +15,24 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": null,
-    "current_new_source": null,
-    "current_new_url": null,
-    "affiliate_url": null,
+    "current_new_usd": 5698,
+    "current_new_source": "adorama_feed",
+    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-1-mirrorless-camera%2Fp%2Fisoa1",
+    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-alpha-1-mirrorless-camera%2Fp%2Fisoa1",
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "open_box": 3095.93,
+        "refurbished": 2744.0,
+        "pre_owned": 2799.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 34,
+      "price_updated_at": "2026-09-08T10:10:48.501230+00:00"
     },
-    "price_updated_at": "2026-09-08T23:53:53.774236+00:00"
+    "price_updated_at": "2026-08-07T00:45:43.838149+00:00"
   },
   "freshness": {
     "created_at": "2026-07-09T18:22:31.886052+00:00",
@@ -9911,5 +9917,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/sony-a1/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }

@@ -15,18 +15,24 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": null,
-    "current_new_source": null,
-    "current_new_url": null,
-    "affiliate_url": null,
+    "current_new_usd": 1997,
+    "current_new_source": "adorama_feed",
+    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z6iii-mirrorless-camera%2Fp%2Fnkz6m3",
+    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z6iii-mirrorless-camera%2Fp%2Fnkz6m3",
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "pre_owned": 1709.99,
+        "open_box": 1950.0,
+        "refurbished": 1886.28
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 22,
+      "price_updated_at": "2026-09-08T10:10:32.495614+00:00"
     },
-    "price_updated_at": "2026-09-09T00:04:31.060088+00:00"
+    "price_updated_at": "2026-08-26T07:11:54.372513+00:00"
   },
   "freshness": {
     "created_at": "2026-08-26T07:11:54.351810+00:00",
@@ -7880,5 +7886,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/nikon-z6-iii/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }

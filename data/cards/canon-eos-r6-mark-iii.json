@@ -15,18 +15,24 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": null,
-    "current_new_source": null,
-    "current_new_url": null,
-    "affiliate_url": null,
+    "current_new_usd": 2799,
+    "current_new_source": "adorama_feed",
+    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fcanon-eos-r6-mark-iii-mirrorless-camera-body-only%2Fp%2Fcar6m3",
+    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fcanon-eos-r6-mark-iii-mirrorless-camera-body-only%2Fp%2Fcar6m3",
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "open_box": 2499.0,
+        "refurbished": 2558.35,
+        "pre_owned": 2239.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 14,
+      "price_updated_at": "2026-09-08T10:10:12.004400+00:00"
     },
-    "price_updated_at": "2026-09-09T00:01:18.137392+00:00"
+    "price_updated_at": "2026-08-26T04:45:17.165184+00:00"
   },
   "freshness": {
     "created_at": "2026-08-26T04:45:17.151148+00:00",
@@ -6884,5 +6890,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/canon-eos-r6-mark-iii/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }

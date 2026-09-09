@@ -21,12 +21,18 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "pre_owned": 879.62,
+        "open_box": 1050.0,
+        "refurbished": 1055.55
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 34,
+      "price_updated_at": "2026-09-08T10:10:49.778920+00:00"
     },
-    "price_updated_at": "2026-09-08T23:59:05.833670+00:00"
+    "price_updated_at": "2026-08-08T00:00:58.765934+00:00"
   },
   "freshness": {
     "created_at": "2026-07-17T17:21:14.736263+00:00",
@@ -8031,5 +8037,17 @@
       "image": null,
       "url": "https://askmaddi.com/cards/sony-a7c/"
     }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "flask",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
   }
 }
