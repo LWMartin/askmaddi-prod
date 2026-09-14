@@ -858,3 +858,34 @@ def test_a_stale_block_degrades_to_recomputation_rather_than_crashing():
                           'most_discussed': 'an_axis_that_left',
                           'highest_rated': None, 'lowest_rated': None}
     assert select_teaser_axes(card) is not None
+
+
+def test_guides_hub_lists_all_guides_gear_typed_no_verdict(tmp_path):
+    """/gear-for/ hub links every guide, labels gear_type (Cameras/Lenses for X),
+    and never renders a verdict word."""
+    from build_site import write_guides_hub
+    guides = [
+        {"id": "cameras-for-astrophotography", "display_name": "Astrophotography",
+         "applies_to": ["body"], "ranked": [{"card_id": "a"}, {"card_id": "b"}]},
+        {"id": "lenses-for-astrophotography", "display_name": "Astrophotography",
+         "applies_to": ["lens"], "ranked": [{"card_id": "c"}]},
+        {"id": "real-estate-architecture", "display_name": "Real Estate & Architecture",
+         "applies_to": ["body"], "ranked": [{"card_id": "d"}]},
+    ]
+    assert write_guides_hub(str(tmp_path), guides) is True
+    html = (tmp_path / "gear-for" / "index.html").read_text()
+    for gid in ("cameras-for-astrophotography", "lenses-for-astrophotography",
+                "real-estate-architecture"):
+        assert f"/gear-for/{gid}/" in html
+    assert "Cameras for Astrophotography" in html
+    assert "Lenses for Astrophotography" in html
+    assert "CollectionPage" in html
+    low = html.lower()
+    for w in ("best", "top ", "#1", "winner", "worth it"):
+        assert w not in low, f"verdict word rendered: {w!r}"
+
+
+def test_guides_hub_empty_guides_noop(tmp_path):
+    from build_site import write_guides_hub
+    assert write_guides_hub(str(tmp_path), []) is False
+    assert not (tmp_path / "gear-for" / "index.html").exists()

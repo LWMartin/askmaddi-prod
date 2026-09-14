@@ -96,16 +96,20 @@
             <!-- Buying guides entry point (spec: maddi-use-case-guides). Present
                  fit, not a verdict — no "best" (askmaddi-present-dont-rate-voice). -->
             <div class="guide-promo">
-                <span class="guide-promo-text">Shopping for a specific job? See our sourced gear guide for <strong>Real Estate &amp; Architecture</strong>.</span>
-                <a class="guide-promo-btn" href="/gear-for/real-estate-architecture/">View guide &rarr;</a>
+                <span class="guide-promo-text">Shopping for a specific kind of photography? See our sourced <strong>gear guides</strong> — astro, wildlife, street, real estate and more.</span>
+                <a class="guide-promo-btn" href="/gear-for/">Browse guides &rarr;</a>
             </div>
 
-            <!-- Browse entry points: the brand IA and the comparisons hub.
-                 Static (cards.js only owns .review-cards below); the nightly
-                 cron only rewrites the RECENT-CARDS region, so these persist. -->
+            <!-- Browse entry points: guides, brand IA, comparisons, and the
+                 review-terrain surfaces. Static (cards.js only owns .review-cards
+                 below); the nightly cron only rewrites the RECENT-CARDS region,
+                 so these persist. -->
             <nav class="browse-nav" aria-label="Browse the catalogue">
+                <a href="/gear-for/"><span class="browse-ico" aria-hidden="true">🧭</span> Gear guides</a>
                 <a href="/brands/"><span class="browse-ico" aria-hidden="true">🏷</span> Browse by brand</a>
                 <a href="/vs/"><span class="browse-ico" aria-hidden="true">⚖️</span> Compare gear</a>
+                <a href="/where-they-split/"><span class="browse-ico" aria-hidden="true">💬</span> Where reviewers split</a>
+                <a href="/fit/"><span class="browse-ico" aria-hidden="true">🎯</span> Use-case fit</a>
             </nav>
 
             <!-- Review Cards Section (populated by cards.js from manifest) -->

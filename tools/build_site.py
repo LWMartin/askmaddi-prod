@@ -2004,6 +2004,8 @@ def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None,
     entries = [url_el(BASE_URL + "/", home_mod)]
     entries += [url_el(BASE_URL + p) for p in SITEMAP_STATIC_PAGES[1:]]
     entries += [url_el(f"{BASE_URL}/cards/{cid}/", mod) for cid, mod in sorted(card_mods.items())]
+    if guides:
+        entries += [url_el(f"{BASE_URL}/gear-for/", home_mod)]  # guides browse hub
     entries += [url_el(f"{BASE_URL}/gear-for/{g['id']}/")
                 for g in sorted(guides or [], key=lambda g: g.get("id", "")) if g.get("id")]
     if brands:
@@ -2838,6 +2840,117 @@ def write_brand_pages(out_dir, cards):
     return brands
 
 
+def _guide_gear_noun(guide):
+    return "Lenses" if guide.get("applies_to") == ["lens"] else "Cameras"
+
+
+def render_guides_index(guides):
+    """The /gear-for/ hub — a friendly browse landing for every use-case guide.
+    Reuses the brand-index tile styling. Voice: present fit, never rate."""
+    canonical = f"{BASE_URL}/gear-for/"
+    n = len(guides)
+    title = f"Gear guides by use case — {n} sourced guides | AskMaddi"
+    meta_desc = (
+        f"Pick what you shoot — {n} AskMaddi gear guides (astrophotography, "
+        f"wildlife, street, real estate and more), each showing the cameras or "
+        f"lenses that fit, ranked by reviewer evidence. We synthesize reviews; we "
+        f"don't rate.")
+    intro = ("Pick what you shoot. Each guide shows the gear that fits the job — "
+             "ordered by the reviewer evidence behind it, not by our opinion. "
+             "We chart the terrain; you decide.")
+    # Sort so a use-case's cameras + lenses sit together; real-estate leads.
+    def _key(g):
+        d = (g.get("display_name") or g.get("id") or "").lower()
+        return (0 if "real estate" in d or "architecture" in d else 1, d,
+                0 if _guide_gear_noun(g) == "Cameras" else 1)
+    tiles = []
+    for g in sorted(guides, key=_key):
+        gid = g.get("id")
+        if not gid:
+            continue
+        nm = f"{_guide_gear_noun(g)} for {g.get('display_name') or gid}"
+        cnt = len(g.get("ranked", []))
+        tiles.append(
+            f'<a class="brand-tile" href="/gear-for/{esc(gid)}/">'
+            f'<div class="brand-name">{esc(nm)}</div>'
+            f'<div class="brand-count">{cnt} ranked</div>'
+            f'<div class="brand-breakdown">by reviewer evidence</div></a>')
+    tiles_html = "".join(tiles)
+    items = [{"@type": "ListItem", "position": i + 1,
+              "url": f"{BASE_URL}/gear-for/{g['id']}/",
+              "name": f"{_guide_gear_noun(g)} for {g.get('display_name') or g['id']}"}
+             for i, g in enumerate(sorted(guides, key=_key)) if g.get("id")]
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "CollectionPage",
+        "name": "Gear guides by use case", "url": canonical,
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+        "mainEntity": {"@type": "ItemList", "numberOfItems": len(items),
+                       "itemListElement": items},
+    }, indent=2)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{esc(title)}</title>
+  <meta name="description" content="{esc(meta_desc)}">
+  <link rel="canonical" href="{esc(canonical)}">
+  <meta property="og:title" content="Gear guides by use case — AskMaddi">
+  <meta property="og:description" content="{esc(meta_desc)}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{esc(canonical)}">
+  <meta property="og:site_name" content="{SITE_NAME}">
+  <script type="application/ld+json">
+{jsonld}
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+  <style>{_BRAND_CSS}</style>
+</head>
+<body data-page="guides-index">
+  <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <section class="brand-hero">
+        <h1>Gear guides by use case</h1>
+        <p class="brand-intro">{intro}</p>
+      </section>
+      <div class="brand-index-grid">{tiles_html}</div>
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+      <span>·</span>
+      <a href="/why.html">Why AskMaddi</a>
+    </footer>
+  </div>
+  <script src="/js/beacon.js" defer></script>
+</body>
+</html>
+"""
+
+
+def write_guides_hub(out_dir, guides):
+    """Emit /gear-for/index.html — the guides browse hub. Returns True if written."""
+    if not guides:
+        return False
+    idx = Path(out_dir) / "gear-for"
+    idx.mkdir(parents=True, exist_ok=True)
+    (idx / "index.html").write_text(render_guides_index(guides), encoding="utf-8")
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser(description="Generate AskMaddi card detail pages.")
     ap.add_argument("--card", help="Path to a single card JSON.")
@@ -2961,6 +3074,11 @@ def main():
             print(f"  ✓ guide {gid} → {gpage} "
                   f"({c.get('ranked', 0)} ranked, {c.get('excluded', 0)} excluded, "
                   f"{c.get('pending_backfill', 0)} pending)")
+        # Guides browse hub (/gear-for/) — the top-level discovery page linking
+        # every guide, so they are reachable from the homepage browse-nav.
+        if write_guides_hub(out, guides):
+            written.append(str(out / "gear-for" / "index.html"))
+            print(f"  ✓ guides hub → {out}/gear-for/ ({len(guides)} guides)")
 
     # Brand landing pages: derived whole-corpus IA. Built on --cards-dir runs
     # (never a single --card build, which would emit just one brand's page).
