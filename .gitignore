@@ -58,6 +58,13 @@ data/.factory.lock
 # untracked-but-unignored preflight hazard as .factory.lock above.
 data/resolve-attempts.json
 
+# corpus_thin_recovery ledger (2026-09-14) — same runtime class, same miss: the
+# 06:20 recovery cron writes it into /opt, it was never gitignored, so it counted
+# as FOREIGN dirt and aborted the nightly used-price rebuild-and-bank (bot_push
+# --fence-only exit 2). Runtime state, never committed — the banker's allowlist
+# must not grow to include it (see the subscribers.jsonl note above).
+data/corpus-thin-recovery.json
+
 # Stray process-capture output — never legitimate state, must never count as foreign dirt (nightly bot aborts on it). 2026-08-05.
 nohup.out
 **/nohup.out
