@@ -1227,7 +1227,7 @@ def breadcrumb_jsonld(card, canonical_url):
     return json.dumps(obj, indent=2).replace("</", "<\\/")
 
 
-def render_page(card, image_url=None):
+def render_page(card, image_url=None, surface_map=None):
     ident = card["identity"]
     name = ident["display_name"]
     brand = ident.get("brand", "")
@@ -1240,6 +1240,28 @@ def render_page(card, image_url=None):
     brand_footer_link = (
         f'<span>·</span>\n      <a href="/brands/{esc(_bslug)}/">More {esc(brand)} →</a>'
         if _bslug else "")
+
+    # Phase B — inbound links from the card into the guides it's ranked in and
+    # its own derived surfaces (divergence / spec-Q&A / use-case-fit). This is
+    # the card-as-hub that carries crawl authority out to the long-tail pages.
+    # Populated only on whole-corpus builds via surface_map; a single --card
+    # publish renders "" until the next nightly rebuild. Voice: "Featured in",
+    # never a verdict.
+    _cid = card["card_id"]
+    _sm = (surface_map or {}).get(_cid) or {}
+    _feat = [f'<a href="/gear-for/{esc(g.get("id"))}/">{esc(g.get("display_name") or g.get("id"))}</a>'
+             for g in _sm.get("guides", []) if g.get("id")]
+    _more = []
+    if _sm.get("divergence"):
+        _more.append(f'<a href="/where-they-split/{esc(_cid)}/">Where reviewers split</a>')
+    if _sm.get("specs"):
+        _more.append(f'<a href="/specs/{esc(_cid)}/">Specs, answered</a>')
+    if _sm.get("fit"):
+        _more.append(f'<a href="/fit/{esc(_cid)}/">Use-case fit</a>')
+    surface_footer_html = (
+        (f'<div class="card-featured-in">Featured in: {" · ".join(_feat)}</div>' if _feat else "")
+        + (f'<div class="card-more-surfaces">More on the {esc(name)}: {" · ".join(_more)}</div>'
+           if _more else ""))
 
     fresh = card.get("freshness", {}) or {}
     source_count = fresh.get("source_count", len(card.get("sources", [])))
@@ -1508,6 +1530,7 @@ def render_page(card, image_url=None):
       <p class="subscribe-note" aria-live="polite"></p>
     </section>
 
+    {surface_footer_html}
     <footer class="card-footer">
       <a href="/">\u2190 Back to AskMaddi</a>
       {brand_footer_link}
@@ -2856,18 +2879,67 @@ def main():
     apply_on_sale_registry(cards)
 
     written = []
+
+    # \u2500\u2500 Surfaces precompute (whole-corpus builds only) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    # Load guides + generate the 3 derived surfaces UP FRONT so the card loop can
+    # link each card to the guides it's ranked in AND to its own divergence/spec/
+    # fit pages (Phase B inbound authority). Also yields the surface URLs for the
+    # sitemap. Single --card publish: stays empty; card gets the links at the next
+    # nightly whole-corpus rebuild. Additive \u2014 never rewrites a card page.
+    guides = load_guides(args.guides_dir) if args.guides_dir else []
+    surface_urls = []
+    surface_map = {}
+    if args.cards_dir:
+        def _surface_urls(items):
+            urls = []
+            for it in items:
+                s = str(it)
+                if "://" in s:
+                    urls.append(s if s.endswith("/") else s + "/")
+                else:
+                    rel = Path(s).resolve().relative_to(out.resolve()).parent
+                    urls.append(f"{BASE_URL}/{rel.as_posix()}/")
+            return urls
+
+        def _cid_of(item):
+            s = str(item).rstrip("/")
+            if s.endswith("index.html"):
+                s = s[:-len("index.html")].rstrip("/")
+            return s.rsplit("/", 1)[-1]
+        import build_divergence_pages as _div
+        import build_spec_qa_pages as _sq
+        import build_usecase_fit_pages as _uf
+        _dp = _div.build_pages(cards, str(out), BASE_URL)
+        _sp = _sq.build_pages(cards, str(out), BASE_URL)
+        _fp = _uf.build_pages(cards, guides, str(out), BASE_URL)
+        surface_urls = _surface_urls(_dp) + _surface_urls(_sp) + _surface_urls(_fp)
+        _div_ids = {_cid_of(x) for x in _dp}
+        _spec_ids = {_cid_of(x) for x in _sp}
+        _fit_ids = {_cid_of(x) for x in _fp}
+        for _c in cards:
+            _cid = _c["card_id"]
+            surface_map[_cid] = {
+                "guides": [g for g in guides
+                           if any(r.get("card_id") == _cid for r in g.get("ranked", []))],
+                "divergence": _cid in _div_ids,
+                "specs": _cid in _spec_ids,
+                "fit": _cid in _fit_ids,
+            }
+        written += [str(out / "where-they-split"), str(out / "specs"), str(out / "fit")]
+        print(f"  \u2713 surfaces \u2192 divergence {len(_dp)}, spec-Q&A {len(_sp)}, "
+              f"use-case-fit {len(_fp)} page(s)")
+
     for card in cards:
         cid = card["card_id"]
         page_dir = out / "cards" / cid
         page_dir.mkdir(parents=True, exist_ok=True)
         page = page_dir / "index.html"
-        page.write_text(render_page(card, image_url=args.image_url), encoding="utf-8")
+        page.write_text(render_page(card, image_url=args.image_url,
+                                    surface_map=surface_map), encoding="utf-8")
         written.append(str(page))
         print(f"  \u2713 {cid} \u2192 {page}")
 
-    guides = []
     if args.guides_dir:
-        guides = load_guides(args.guides_dir)
         cards_by_id = {c["card_id"]: c for c in cards}
         for guide in guides:
             gid = guide.get("id")
@@ -2888,7 +2960,6 @@ def main():
     # (never a single --card build, which would emit just one brand's page).
     brands = []
     vs_slugs = []
-    surface_urls = []
     if args.cards_dir:
         brands = write_brand_pages(out, cards)
         written.append(str(out / "brands"))
@@ -2906,37 +2977,8 @@ def main():
         print(f"  ✓ vs-pages [{vs_mode}] → {out}/vs/ ({len(vs_slugs)} page(s))")
         for a_id, b_id, why in vs_skipped:
             print(f"    ! skipped {a_id} vs {b_id}: {why}", file=sys.stderr)
-
-        # Long-tail derived surfaces (footprint-surfaces 2026-09-14): divergence
-        # ("where reviewers push back"), spec-Q&A, and use-case-fit. Siblings of
-        # vs-pages: each emits new page dirs from the committed cards (+ guide
-        # artifacts for fit) and returns its written index.html paths, which we
-        # turn into canonical URLs for the sitemap. Lazy imports (they pull
-        # build_site helpers — circular at module load). Additive: never touch
-        # card pages, so the price cron is untouched.
-        # Convention-agnostic: the generators return EITHER a canonical URL
-        # (divergence, spec-Q&A) OR a filesystem index.html path (use-case-fit).
-        # Normalize both to a trailing-slash canonical URL for the sitemap.
-        def _surface_urls(items):
-            urls = []
-            for it in items:
-                s = str(it)
-                if "://" in s:
-                    urls.append(s if s.endswith("/") else s + "/")
-                else:
-                    rel = Path(s).resolve().relative_to(out.resolve()).parent
-                    urls.append(f"{BASE_URL}/{rel.as_posix()}/")
-            return urls
-        import build_divergence_pages as _div
-        _dp = _div.build_pages(cards, str(out), BASE_URL)
-        import build_spec_qa_pages as _sq
-        _sp = _sq.build_pages(cards, str(out), BASE_URL)
-        import build_usecase_fit_pages as _uf
-        _fp = _uf.build_pages(cards, guides, str(out), BASE_URL)
-        surface_urls = _surface_urls(_dp) + _surface_urls(_sp) + _surface_urls(_fp)
-        written += [str(out / "where-they-split"), str(out / "specs"), str(out / "fit")]
-        print(f"  ✓ surfaces → divergence {len(_dp)}, spec-Q&A {len(_sp)}, "
-              f"use-case-fit {len(_fp)} page(s)")
+        # (The 3 long-tail surfaces are generated in the precompute block above,
+        # before the card loop, so cards can link to them — surface_urls set there.)
 
     if args.manifest:
         manifest = {
