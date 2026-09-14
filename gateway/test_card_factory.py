@@ -684,3 +684,32 @@ def test_drip_log_lines_are_utc_stamped(tmp_path, monkeypatch, capsys):
     assert rc == 0
     out = capsys.readouterr().out.strip()
     assert re.match(stamp, out) and 'locked_out' in out, out
+
+
+def test_build_card_runner_web_and_yt_flags(tmp_path, monkeypatch):
+    """--web / --yt on the factory thread through to the build_card cmd (the
+    written-review + YouTube corpus legs). Mirror of the --yt contract."""
+    captured = {}
+
+    class _Proc:
+        returncode = 0; stderr = ''; stdout = ''
+
+    def fake_run(cmd, cwd, capture_output, text):
+        captured['cmd'] = cmd
+        return _Proc()
+
+    monkeypatch.setattr(cf.subprocess, 'run', fake_run)
+    rec = {'slug': 'sony-a9', 'label': 'Sony A9', 'category': 'body',
+           'seed_urls': 'x.json', 'aliases': [], 'mount': 'E'}
+    # web only
+    cf.build_card_runner(build_card_path='/tmp/aggregator-build/build_card.py',
+                         enrich_client='mock', web=True)(rec)
+    assert '--web' in captured['cmd'] and '--yt' not in captured['cmd']
+    # both
+    cf.build_card_runner(build_card_path='/tmp/aggregator-build/build_card.py',
+                         enrich_client='mock', yt=True, web=True)(rec)
+    assert '--web' in captured['cmd'] and '--yt' in captured['cmd']
+    # neither (default)
+    cf.build_card_runner(build_card_path='/tmp/aggregator-build/build_card.py',
+                         enrich_client='mock')(rec)
+    assert '--web' not in captured['cmd'] and '--yt' not in captured['cmd']

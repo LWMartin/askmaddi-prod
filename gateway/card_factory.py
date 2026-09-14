@@ -164,7 +164,7 @@ def single_flight(lock_path=DEFAULT_LOCK_PATH):
 
 def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
                       enrich_client='flask', python=None, out_root=None,
-                      yt=False):
+                      yt=False, web=False):
     """Produce the PRODUCTION runner: a callable(record) -> (rc, card_path, detail).
 
     The returned callable shells out to build_card.py --stop-stage assemble for one
@@ -282,6 +282,12 @@ def build_card_runner(build_card_path=DEFAULT_BUILD_CARD, askmaddi_prod=None,
             # are what the drip exists to produce. Egress follows PROXY_URL
             # (inherited env); unset = bare box IP, the honest default.
             cmd += ['--yt']
+        if web:
+            # Stage 1c: written-review ARTICLES (fetch_web, trafilatura, bare-IP)
+            # auto-resolved from web-urls/<sku>. Independent of YouTube — the
+            # supply lane that carries the corpus while YT is bot-gated, so a
+            # web-covered card builds instead of failing "no sources."
+            cmd += ['--web']
 
         proc = subprocess.run(
             cmd, cwd=str(build_card_path.parent),
@@ -498,6 +504,11 @@ def _build_arg_parser():
                    help='Quality-first: pass --yt to build_card so every drip '
                         'build runs Stage 1b (paced YouTube transcript leg). '
                         'Egress follows PROXY_URL from the environment.')
+    p.add_argument('--web', action='store_true',
+                   help='Pass --web to build_card so every drip build runs the '
+                        'fetch_web stage (written-review articles auto-resolved '
+                        'from web-urls/<sku>). Bare-IP, independent of YouTube — '
+                        'builds web-covered cards while YT is bot-gated.')
     p.add_argument('--enrich-client', choices=['flask', 'mock', 'forced_choice'],
                    default='flask',
                    help="enrich backend: flask (VPS gemma shim), forced_choice "
@@ -536,6 +547,7 @@ def main(argv=None):
         enrich_client=args.enrich_client,
         out_root=args.out_root,
         yt=args.yt,
+        web=args.web,
     )
 
     if args.once:
