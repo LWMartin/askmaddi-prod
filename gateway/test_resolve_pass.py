@@ -13,6 +13,8 @@ real lookup_proposal (used by the pass to get build identity) works. Proves:
 """
 import datetime
 import json
+import socket
+
 import pytest
 
 import resolve_sku
@@ -533,3 +535,79 @@ def test_duplicate_identity_counts_and_permanently_escorts(skus_path, wq_path, t
     assert wq.get('autel-evo-2-pro-rugged', path=wq_path) is None
     saved = json.loads(ledger.read_text())
     assert saved['autel-evo-2-pro-rugged'] == resolve_pass.DECONTAM_MARK
+
+
+# ── live-service transient resilience (judge cold-load / timeout) ─────────────
+def _transient_resolver(transient_slugs, outcomes=None):
+    """resolve_fn that raises socket.timeout for slugs in `transient_slugs`
+    (simulating the Ollama judge timing out mid-pick), else returns a scripted
+    outcome (default 'resolved'). Records call order so a test can assert the
+    batch continued past a blip."""
+    outcomes = outcomes or {}
+    calls = []
+
+    def resolve_fn(slug, **kwargs):
+        calls.append(slug)
+        if slug in transient_slugs:
+            raise socket.timeout("simulated judge timeout")
+        return {'slug': slug, 'outcome': outcomes.get(slug, 'resolved'),
+                'detail': 'x', 'confidence': 0.9}
+    return resolve_fn, calls
+
+
+def test_single_transient_skips_without_cooling_and_continues(skus_path, wq_path, tmp_path):
+    # A judge timeout on one slug must NOT abort the batch and must NOT cool the
+    # slug (it retries un-penalised next run); the following slug still resolves.
+    ledger = tmp_path / 'attempts.json'
+    proposals = _props(('sony-a7s-iii', 5), ('canon-r5-ii', 4))
+    rf, calls = _transient_resolver({'sony-a7s-iii'})
+    summary = resolve_pass.run(
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger))
+    assert calls == ['sony-a7s-iii', 'canon-r5-ii']   # batch continued past the blip
+    assert summary['transient'] == 1
+    assert summary['enrolled'] == 1
+    assert wq.get('canon-r5-ii', path=wq_path) is not None
+    # NOT cooled: the transient slug is absent from the ledger, so it retries next run
+    assert 'sony-a7s-iii' not in json.loads(ledger.read_text())
+
+
+def test_transient_streak_aborts_but_persists_ledger(skus_path, wq_path, tmp_path):
+    # A no_candidate cools first, then a sustained outage (>= TRANSIENT_ABORT_STREAK
+    # consecutive judge timeouts) aborts the run — but the ledger is still PERSISTED
+    # (the pre-fix bug lost it), so the cooled slug survives; the raised error is a
+    # transient type. The transient slugs themselves are never cooled.
+    ledger = tmp_path / 'attempts.json'
+    n = resolve_pass.TRANSIENT_ABORT_STREAK
+    proposals = _props(('pd-travel-tripod', 9)) + \
+        _props(*[(f'ghost-{i}', 8 - i) for i in range(n)])
+    transient = {f'ghost-{i}' for i in range(n)}
+    rf, calls = _transient_resolver(transient, {'pd-travel-tripod': 'no_candidate'})
+    with pytest.raises(resolve_pass._TRANSIENT_ERRORS):
+        resolve_pass.run(
+            proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+            resolve_fn=rf, skus_path=skus_path, work_queue_path=wq_path,
+            attempts_ledger_path=str(ledger))
+    saved = json.loads(ledger.read_text())
+    assert saved.get('pd-travel-tripod')                      # progress persisted
+    assert not any(k.startswith('ghost-') for k in saved)     # transients not cooled
+
+
+def test_transient_streak_resets_on_reachable_resolve(skus_path, wq_path, tmp_path):
+    # Transients interleaved with a reachable resolve must NOT abort: the streak
+    # resets, so isolated cold-load blips never trip the outage guard.
+    ledger = tmp_path / 'attempts.json'
+    n = resolve_pass.TRANSIENT_ABORT_STREAK
+    seq = [f'ta-{i}' for i in range(n - 1)] + ['sony-a7s-iii'] + \
+          [f'tb-{i}' for i in range(n - 1)]
+    proposals = _props(*[(s, 1) for s in seq])
+    transient = {s for s in seq if s != 'sony-a7s-iii'}
+    rf, calls = _transient_resolver(transient)
+    summary = resolve_pass.run(   # must NOT raise
+        proposals, ebay=None, gemma=None, demand_log=None, review_queue=None,
+        resolve_fn=rf, skus_path=skus_path, work_queue_path=wq_path,
+        attempts_ledger_path=str(ledger))
+    assert calls == seq                       # every slug attempted, no abort
+    assert summary['transient'] == 2 * (n - 1)
+    assert summary['enrolled'] == 1

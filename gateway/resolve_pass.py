@@ -52,7 +52,9 @@ import argparse
 import datetime
 import json
 import os
+import socket
 import sys
+import urllib.error
 from pathlib import Path
 
 # --- sibling-import bootstrap (cron robustness) -------------------------------
@@ -100,6 +102,22 @@ RETRY_TTL_DAYS = 7
 # sentinel instead of a timestamp and _cooling skips it with no TTL. Visible on
 # `cat data/resolve-attempts.json` as `"<slug>": "decontaminated"`.
 DECONTAM_MARK = 'decontaminated'
+
+# Transient live-service failures during a resolve: the Ollama judge cold-loads
+# or times out (gemma.pick -> socket.timeout / URLError after its own one retry).
+# NOT a per-slug routing decision: the slug is skipped WITHOUT cooling (so it
+# retries next run, un-penalised) and the batch continues, instead of one blip
+# aborting the whole run AND losing the ledger. A genuine SUSTAINED outage still
+# aborts loudly — see TRANSIENT_ABORT_STREAK below. (Only stdlib network/timeout
+# types here: ebay_api is imported lazily in main() AFTER env_bootstrap — a
+# module-level import would read empty creds — so its EbayAPIError is deliberately
+# not in this module-level tuple. An eBay outage still surfaces as before.)
+_TRANSIENT_ERRORS = (socket.timeout, TimeoutError, urllib.error.URLError)
+# Consecutive transient failures that mean "the service is down, not a blip":
+# abort the batch (the original contract) rather than spin through the whole
+# proposals list timing out. The ledger is still persisted (finally) so no
+# cooldown progress is lost. A single reachable resolve resets the streak.
+TRANSIENT_ABORT_STREAK = 5
 
 
 def _load_ledger(path):
@@ -259,7 +277,7 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
         'total': 0, 'enrolled': 0, 'already_queued': 0,
         'no_candidate': 0, 'errors': 0, 'skipped_enrolled': 0,
         'skipped_cooldown': 0, 'decontaminated': 0, 'deferred': 0,
-        'duplicate_identity': 0,
+        'duplicate_identity': 0, 'transient': 0,
         'enrolled_slugs': [], 'error_slugs': [],
     }
 
@@ -293,6 +311,13 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
                  'skus_path': skus_path}
     if floor is not None:
         rp_kwargs['floor'] = floor
+
+    # Live-service resilience: an isolated judge/eBay transient skips its slug and
+    # continues; a streak of them means a real outage and aborts after the ledger
+    # is saved (below the loop). Reset by any reachable resolve.
+    consecutive_transient = 0
+    last_transient = None
+    aborted_transient = False
 
     for prop in proposals:
         slug = prop['slug']
@@ -347,8 +372,27 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
                 ledger[slug] = now_iso  # unregistered -> TTL-skip until fixed
             if on_event:
                 on_event(event)
+            consecutive_transient = 0  # clean determination -> not an outage
+            continue
+        except _TRANSIENT_ERRORS as e:
+            # Live-service blip (Ollama judge cold-load/timeout, eBay Browse
+            # hiccup): NOT a routing outcome. Skip this slug WITHOUT cooling it —
+            # the ledger is untouched, so it retries un-penalised next run — and
+            # continue the batch. A single blip must not abort the run or lose the
+            # ledger (the pre-fix failure mode). A sustained outage trips the
+            # streak abort below, preserving the original "abort on outage" intent.
+            summary['transient'] += 1
+            event.update(outcome='transient', detail=str(e))
+            if on_event:
+                on_event(event)
+            consecutive_transient += 1
+            last_transient = e
+            if consecutive_transient >= TRANSIENT_ABORT_STREAK:
+                aborted_transient = True
+                break
             continue
 
+        consecutive_transient = 0  # a reachable resolve clears the outage streak
         kind = outcome.get('outcome')
         event['outcome'] = kind
 
@@ -436,6 +480,11 @@ def run(proposals, *, ebay, gemma, demand_log, review_queue,
 
     if attempts_ledger_path:
         _save_ledger(ledger, attempts_ledger_path)
+    if aborted_transient:
+        # Sustained live-service outage: the ledger is now persisted (no cooldown
+        # progress lost — the pre-fix bug), so surface the outage loudly. main()
+        # renders a clean message; a cron logs a non-zero exit.
+        raise last_transient
     return summary
 
 
@@ -510,13 +559,23 @@ def main(argv=None):
         tag = ev.get('outcome', '?')
         print(f"  [{tag:>13}] {ev['slug']} (fork={ev.get('fork_n')})")
 
-    summary = run(
-        proposals, ebay=ebay_api, gemma=gemma,
-        demand_log=demand_log, review_queue=review_queue,
-        floor=args.floor, on_event=_log, max_new=args.max_new,
-        attempts_ledger_path=(None if args.no_ledger else args.attempts_ledger),
-        retry_ttl_days=args.retry_ttl_days,
-    )
+    try:
+        summary = run(
+            proposals, ebay=ebay_api, gemma=gemma,
+            demand_log=demand_log, review_queue=review_queue,
+            floor=args.floor, on_event=_log, max_new=args.max_new,
+            attempts_ledger_path=(None if args.no_ledger else args.attempts_ledger),
+            retry_ttl_days=args.retry_ttl_days,
+        )
+    except _TRANSIENT_ERRORS as e:
+        # Sustained live-service outage (>= TRANSIENT_ABORT_STREAK in a row). The
+        # ledger was persisted inside run() before this propagated, so no cooldown
+        # progress is lost; the next cron tick retries. Loud, non-zero, no crash.
+        print(f"\n[resolve_pass] ABORTED: live-service outage — "
+              f"{TRANSIENT_ABORT_STREAK}+ consecutive transient failures "
+              f"({type(e).__name__}: {e}). Ledger saved; next cron tick retries.",
+              file=sys.stderr)
+        return 3
 
     print(f"\n[resolve_pass] done: {summary['enrolled']} enrolled, "
           f"{summary['already_queued']} queued (straggler), "
@@ -525,7 +584,8 @@ def main(argv=None):
           f"{summary['skipped_cooldown']} cooling (skipped), "
           f"{summary['decontaminated']} decontaminated (built dup), "
           f"{summary['duplicate_identity']} duplicate-identity (dropped/flagged), "
-          f"{summary['deferred']} deferred (over --max).")
+          f"{summary['deferred']} deferred (over --max), "
+          f"{summary['transient']} transient (skipped, uncooled).")
     if summary['enrolled']:
         print(f"[resolve_pass] enrolled -> work_queue (factory will build): "
               f"{', '.join(summary['enrolled_slugs'])}")
