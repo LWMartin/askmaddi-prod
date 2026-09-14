@@ -1956,7 +1956,8 @@ def card_lastmod(card):
 SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html"]
 
 
-def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None):
+def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None,
+                  surface_urls=None):
     """browser/sitemap.xml — static pages + every card page + every use-case
     guide + the brand index and each brand page, lastmod from card data.
     Derived artifact: regenerates from cards + guides + brands, so Stage 6
@@ -1984,6 +1985,9 @@ def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None):
         entries += [url_el(f"{BASE_URL}/vs/", home_mod)]
         entries += [url_el(f"{BASE_URL}/vs/{slug}/", home_mod)
                     for slug in sorted(vs_slugs)]
+    if surface_urls:
+        # Long-tail derived surfaces (where-they-split / specs / fit) + their hubs.
+        entries += [url_el(u, home_mod) for u in sorted(set(surface_urls))]
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
            '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
@@ -2071,7 +2075,8 @@ def write_llms_txt(out_dir, cards, guides=None):
             ranked = " · ".join(
                 f"{r.get('rank')}. {r.get('display_name')}"
                 for r in g.get("ranked", []))
-            line = f"- [Cameras for {disp}]({BASE_URL}/gear-for/{gid}/)"
+            gear = "Lenses" if g.get("applies_to") == ["lens"] else "Cameras"
+            line = f"- [{gear} for {disp}]({BASE_URL}/gear-for/{gid}/)"
             if crit:
                 line += f": ranked on {crit}"
             if ranked:
@@ -2324,15 +2329,19 @@ def render_guide(guide, cards_by_id):
     else:
         crit_phrase = crit_names[0] if crit_names else ""
     n = len(guide.get("ranked", []))
-    title = f"Cameras for {disp} — {n} ranked by reviewer evidence | AskMaddi"
+    # Gear noun from the profile's applies_to: a lens guide must read "Lenses for
+    # X", not "Cameras for X" (the finer camera/lens guide split, 2026-09-14).
+    gear = "Lenses" if guide.get("applies_to") == ["lens"] else "Cameras"
+    gear_l = gear.lower()
+    title = f"{gear} for {disp} — {n} ranked by reviewer evidence | AskMaddi"
     meta_desc = (
-        f"How {n} cameras compare for {disp.lower()}, ranked on the criteria the "
+        f"How {n} {gear_l} compare for {disp.lower()}, ranked on the criteria the "
         f"work leans on — {crit_phrase.lower()} — with the sourced reviewer "
         f"evidence behind every position. AskMaddi synthesizes reviews; it does "
         f"not rate.")
     intro = (
         f"On the criteria {disp.lower()} leans on — {esc(crit_phrase)} — here is "
-        f"how the reviewed cameras compare, with the sourced evidence behind each "
+        f"how the reviewed {gear_l} compare, with the sourced evidence behind each "
         f"position. We don't crown a winner; we show the fit and let you decide.")
 
     rank_items = []
@@ -2378,7 +2387,7 @@ def render_guide(guide, cards_by_id):
   <title>{esc(title)}</title>
   <meta name="description" content="{esc(meta_desc)}">
   <link rel="canonical" href="{esc(canonical)}">
-  <meta property="og:title" content="Cameras for {esc(disp)} — AskMaddi">
+  <meta property="og:title" content="{gear} for {esc(disp)} — AskMaddi">
   <meta property="og:description" content="{esc(meta_desc)}">
   <meta property="og:type" content="website">
   <meta property="og:url" content="{esc(canonical)}">
@@ -2404,7 +2413,7 @@ def render_guide(guide, cards_by_id):
 
     <article class="card-detail">
       <section class="g-hero">
-        <h1>Cameras for {esc(disp)}</h1>
+        <h1>{gear} for {esc(disp)}</h1>
         <p class="g-criteria-intro">{intro}</p>
       </section>
 
@@ -2421,7 +2430,7 @@ def render_guide(guide, cards_by_id):
       {_guide_caveats_html(guide)}
 
       <section class="card-section">
-        <p class="src-intro">Every position above traces to the reviewer claims on each camera's card. We don't write opinions — we synthesize theirs, and we present fit rather than a verdict.</p>
+        <p class="src-intro">Every position above traces to the reviewer claims on each product's card. We don't write opinions — we synthesize theirs, and we present fit rather than a verdict.</p>
       </section>
     </article>
 
@@ -2879,6 +2888,7 @@ def main():
     # (never a single --card build, which would emit just one brand's page).
     brands = []
     vs_slugs = []
+    surface_urls = []
     if args.cards_dir:
         brands = write_brand_pages(out, cards)
         written.append(str(out / "brands"))
@@ -2897,6 +2907,37 @@ def main():
         for a_id, b_id, why in vs_skipped:
             print(f"    ! skipped {a_id} vs {b_id}: {why}", file=sys.stderr)
 
+        # Long-tail derived surfaces (footprint-surfaces 2026-09-14): divergence
+        # ("where reviewers push back"), spec-Q&A, and use-case-fit. Siblings of
+        # vs-pages: each emits new page dirs from the committed cards (+ guide
+        # artifacts for fit) and returns its written index.html paths, which we
+        # turn into canonical URLs for the sitemap. Lazy imports (they pull
+        # build_site helpers — circular at module load). Additive: never touch
+        # card pages, so the price cron is untouched.
+        # Convention-agnostic: the generators return EITHER a canonical URL
+        # (divergence, spec-Q&A) OR a filesystem index.html path (use-case-fit).
+        # Normalize both to a trailing-slash canonical URL for the sitemap.
+        def _surface_urls(items):
+            urls = []
+            for it in items:
+                s = str(it)
+                if "://" in s:
+                    urls.append(s if s.endswith("/") else s + "/")
+                else:
+                    rel = Path(s).resolve().relative_to(out.resolve()).parent
+                    urls.append(f"{BASE_URL}/{rel.as_posix()}/")
+            return urls
+        import build_divergence_pages as _div
+        _dp = _div.build_pages(cards, str(out), BASE_URL)
+        import build_spec_qa_pages as _sq
+        _sp = _sq.build_pages(cards, str(out), BASE_URL)
+        import build_usecase_fit_pages as _uf
+        _fp = _uf.build_pages(cards, guides, str(out), BASE_URL)
+        surface_urls = _surface_urls(_dp) + _surface_urls(_sp) + _surface_urls(_fp)
+        written += [str(out / "where-they-split"), str(out / "specs"), str(out / "fit")]
+        print(f"  ✓ surfaces → divergence {len(_dp)}, spec-Q&A {len(_sp)}, "
+              f"use-case-fit {len(_fp)} page(s)")
+
     if args.manifest:
         manifest = {
             "generated_at": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
@@ -2914,10 +2955,11 @@ def main():
                   f"({min(RECENT_CARDS_LIMIT, len(cards))} links)")
 
     if args.sitemap:
-        spath = write_sitemap(out, cards, guides=guides, brands=brands, vs_slugs=vs_slugs)
+        spath = write_sitemap(out, cards, guides=guides, brands=brands,
+                              vs_slugs=vs_slugs, surface_urls=surface_urls)
         print(f"  \u2713 sitemap \u2192 {spath} ({len(cards)} card urls + {len(guides)} guide urls "
               f"+ {len(brands)} brand urls + {len(vs_slugs)} vs urls "
-              f"+ {len(SITEMAP_STATIC_PAGES)} static)")
+              f"+ {len(surface_urls)} surface urls + {len(SITEMAP_STATIC_PAGES)} static)")
         # llms.txt rides the sitemap flag deliberately: identical whole-file
         # semantics (regenerated from the cards loaded THIS run), so it gets
         # the same --card clobber guard for free and no caller can rebuild
