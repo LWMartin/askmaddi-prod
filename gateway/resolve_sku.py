@@ -926,6 +926,52 @@ def _enqueue_sourced(slug, review_queue, review_queue_path, vendor, model,
     }
 
 
+def _carried_identity_source(target, product_url):
+    """Rung F — synthesize a SourceResolution from the proposal's OWN carried feed
+    identity (the Adorama demand-feed door). Same return shape as the rung C/D/E
+    resolvers so it flows through _best_sourced -> _enqueue_sourced unchanged.
+
+    Deliberately narrow: returns None unless a real join key (a GTIN, or a
+    NON-placeholder MPN) AND a brand+model are present. A bare vendor/model is not
+    enough to mint off a self-asserted claim — that is the eBay/mfr rungs' job.
+    The demand feed is the same Adorama source as rung E and carries a genuine
+    GTIN, so a hit is deterministic (confidence 1.0); its buyable_url is the
+    Partnerize CTA the promote step surfaces. Source-independent: any future
+    proposal source that carries hard identity + a buyable url enrolls off-market
+    for free."""
+    gtin = str(target.get('gtin')).strip() if target.get('gtin') else None
+    mpn = target.get('mpn')
+    has_mpn_key = bool(mpn) and not skus_registry._is_placeholder_mpn(mpn)
+    if not (gtin or has_mpn_key):
+        return None
+    brand = target.get('brand') or target.get('vendor')
+    model = target.get('canonical_model') or target.get('model')
+    if not (brand and model):
+        return None
+    # A BUYABLE url is required: rung F's value (like rung E) is a deterministic
+    # id carrying the affiliate CTA the promote step surfaces. No url -> this is a
+    # bare id claim from some other source, not the buyable-listing case; leave it
+    # at the honest no_candidate floor rather than propose a CTA-less off-market
+    # card. Today every demand_surface proposal carries one; this guards future
+    # sources that might pass an id without a listing.
+    buyable = target.get('source_url') or product_url
+    if not buyable:
+        return None
+    return {
+        'source': 'adorama_demand_feed',
+        'identity': {
+            'gtin': gtin, 'mpn': mpn if has_mpn_key else None,
+            'brand': brand, 'canonical_model': model,
+            'image': target.get('image'),
+        },
+        'confidence': 1.0, 'deterministic': True,
+        'aliases': [], 'relations': {'predecessor': [], 'competitor': []},
+        'raw': dict(target),
+        'buyable_url': buyable,
+        'why': 'carried GTIN/MPN + buyable url from the Adorama demand feed',
+    }
+
+
 def resolve_multisource(slug, *, ebay, gemma, demand_log, review_queue,
                         mfr_surface=resolver_mfr_surface,
                         xconfirm=resolver_xconfirm,
@@ -987,6 +1033,18 @@ def resolve_multisource(slug, *, ebay, gemma, demand_log, review_queue,
     # Rung E — Adorama in-stock catalogue (narrowest source, last; carries the
     # buyable CTA). Offline index lookup, no live fetch.
     e_res = adorama_gtin.resolve(src_target) if adorama_gtin else None
+    # Rung F — the proposal's OWN carried feed identity (the demand-feed door),
+    # tried ONLY when the search-index rung E misses. Brand-new releases live on
+    # the Adorama DEMAND feed (phantom-ops demand_surface_adapter) — carrying a
+    # deterministic GTIN/MPN + a Partnerize buyable url — before the search-index
+    # EXPORT rung E reads catches up, and before any used eBay listing exists. That
+    # identity already crossed the airlock on the proposal (the same shape rung E
+    # emits), so trust it rather than dead-ending at no_candidate. Folded into the
+    # e_res slot so _best_sourced / _enqueue_sourced surface its buyable_url
+    # unchanged; its `source` label ('adorama_demand_feed') keeps the record
+    # truthful about which door the identity came through.
+    if e_res is None:
+        e_res = _carried_identity_source(src_target, product_url)
 
     sourced = _best_sourced(c_res, d_res, e_res, floor)
     if sourced is not None:

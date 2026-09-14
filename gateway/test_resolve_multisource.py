@@ -248,3 +248,75 @@ def test_all_rungs_miss_logs_unmet_at_floor(skus_path, queue_path, demand_path):
     # the true "no identity anywhere" floor: demand logged exactly here
     assert demand_path.exists()
     assert review_queue.load_pending(queue_path) == []
+
+
+# ── rung F: trust the proposal's OWN carried feed identity ───────────────────
+def test_carried_identity_source_join_key_gate():
+    # A GTIN is a real join key -> deterministic SourceResolution.
+    r = resolve_sku._carried_identity_source(
+        {'gtin': '027242932883', 'mpn': 'SEL814G', 'brand': 'Sony',
+         'canonical_model': 'FE 8-14mm F3.5', 'source_url': 'https://buy/x'}, None)
+    assert r and r['deterministic'] is True and r['confidence'] == 1.0
+    assert r['source'] == 'adorama_demand_feed'
+    assert r['identity']['gtin'] == '027242932883'
+    assert r['buyable_url'] == 'https://buy/x'
+    # A non-placeholder MPN alone (no GTIN) is still a join key.
+    r2 = resolve_sku._carried_identity_source(
+        {'mpn': 'SEL814G', 'vendor': 'Sony', 'model': 'FE 8-14mm F3.5'}, 'https://u')
+    assert r2 and r2['identity']['mpn'] == 'SEL814G'
+
+
+def test_carried_identity_source_refuses_without_join_key():
+    # No GTIN and only a PLACEHOLDER mpn -> not identity-bearing -> None
+    # (a bare self-asserted vendor/model must not mint off-market).
+    assert resolve_sku._carried_identity_source(
+        {'mpn': 'Does Not Apply', 'brand': 'Sony', 'model': 'FE 8-14mm'}, 'u') is None
+    assert resolve_sku._carried_identity_source(
+        {'brand': 'Sony', 'model': 'FE 8-14mm'}, 'u') is None
+    # A join key but no brand/model -> None (nothing to enqueue).
+    assert resolve_sku._carried_identity_source({'gtin': '027242932883'}, 'u') is None
+    # A full id + brand/model but NO buyable url -> None (rung F needs the CTA).
+    assert resolve_sku._carried_identity_source(
+        {'gtin': '027242932883', 'brand': 'Sony', 'canonical_model': 'FE 8-14mm'}, None) is None
+
+
+def test_ebay_miss_carried_gtin_enrolls_offmarket_rung_f(skus_path, queue_path, demand_path):
+    # The brand-new-release case: no eBay listing, and C/D/E (search-index) all
+    # miss, but the PROPOSAL carries a deterministic GTIN + Partnerize buyable url
+    # from the Adorama DEMAND feed. Rung F trusts it -> off-market propose to
+    # /admin (never the spine), carrying the CTA through to affiliate_url.
+    ebay = MockEbay(candidates=[])
+    out = resolve_sku.resolve_multisource(
+        'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
+        demand_log=demand_log, review_queue=review_queue,
+        mfr_surface=_NULL, xconfirm=_NULL, adorama_gtin=_NULL,
+        vendor='Sony', model='FE 8-14mm F3.5', gtin='027242932883', mpn='SEL814G',
+        product_url='https://adorama.prf.hn/click/camref:1101l5Pw9q/sel814g',
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['outcome'] == 'queued' and out['reason'] == 'sourced_offmarket'
+    assert out['source'] == 'adorama_demand_feed'
+    rec = review_queue.load_pending(queue_path)[0]
+    assert rec['identity']['gtin'] == '027242932883'
+    assert rec['affiliate_url'] == 'https://adorama.prf.hn/click/camref:1101l5Pw9q/sel814g'
+    assert not demand_path.exists()   # identity recovered off-market -> no unmet log
+
+
+def test_rung_e_search_index_still_wins_over_carried_f(skus_path, queue_path, demand_path):
+    # When rung E (search-index) DOES resolve, rung F is never consulted: the
+    # discovered index hit (with its own source label) is used, not the carried id.
+    ebay = MockEbay(candidates=[])
+    e = MockRung({'source': 'adorama', 'identity': {'gtin': '0818373021234',
+                  'mpn': 'X1', 'brand': 'Sony', 'canonical_model': 'idx', 'image': None},
+                  'confidence': 1.0, 'deterministic': True, 'aliases': [],
+                  'relations': {'predecessor': [], 'competitor': []},
+                  'buyable_url': 'https://idx/url', 'why': 'index GTIN exact'})
+    out = resolve_sku.resolve_multisource(
+        'sony-a7s-iii', ebay=ebay, gemma=_gemma(-1, 0.0),
+        demand_log=demand_log, review_queue=review_queue,
+        mfr_surface=_NULL, xconfirm=_NULL, adorama_gtin=e,
+        vendor='Sony', model='carried', gtin='999', product_url='https://carried/url',
+        floor=0.70, skus_path=skus_path,
+        review_queue_path=queue_path, demand_log_path=demand_path)
+    assert out['source'] == 'adorama'           # rung E, not the carried feed
+    assert review_queue.load_pending(queue_path)[0]['identity']['gtin'] == '0818373021234'
