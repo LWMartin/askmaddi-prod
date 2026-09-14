@@ -1653,6 +1653,12 @@ def select_teaser_axes(card):
     scored.sort(key=lambda t: t[1], reverse=True)
     floor = max(15, 0.1 * scored[0][1])
     qualifying = [t for t in scored if t[1] >= floor]
+    # Floor gate (2026-09-14): a card where NO axis clears the floor is too thinly
+    # reviewed to headline teaser axes — return none rather than fill sub-floor
+    # axes on noise. Matches the legacy selector (which never fills below the
+    # floor); keeps the block/fallback equivalence the transitional test asserts.
+    if not qualifying:
+        return []
 
     def _aid(a):
         return a.get("axis_id") or a.get("display_name") or id(a)
