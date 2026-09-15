@@ -1,0 +1,2543 @@
+{
+  "id": "lenses-for-sports",
+  "display_name": "Sports & Action",
+  "applies_to": [
+    "lens"
+  ],
+  "query_aliases": [
+    "best lens for sports photography",
+    "best sports lens",
+    "best telephoto lens for sports",
+    "best lens for action photography",
+    "best lens for indoor sports",
+    "best 70-200 for sports"
+  ],
+  "criteria": [
+    {
+      "axis": "af_performance",
+      "weight": 3,
+      "display": "af_performance"
+    },
+    {
+      "axis": "optical_performance",
+      "weight": 2,
+      "display": "Optical Performance"
+    },
+    {
+      "axis": "build",
+      "weight": 2,
+      "display": "Build Quality"
+    },
+    {
+      "axis": "chromatic_aberration",
+      "weight": 1,
+      "display": "Chromatic Aberration"
+    },
+    {
+      "axis": "handling",
+      "weight": 1,
+      "display": "Handling"
+    }
+  ],
+  "profile_notes": "Sports glass — fast-focusing telephoto reach. GATE: focal_length_mm >= 70 (sports is a telephoto discipline; specs.py first-number resolves a 70-200 -> 70, 100-400 -> 100, all correctly in; a 24-70 -> 24 and wide primes fall out). Aperture DELIBERATELY NOT gated: sports pros use both f/2.8 teles (indoor) and slower f/4.5-5.6 super-tele zooms (100-400/200-600 outdoor) — a fast-aperture gate would wrongly exclude the latter. CRUX at 3: af_performance — autofocus acquisition/tracking speed on the lens side is the defining sports-lens criterion (a soft-but-fast lens beats a sharp-but-hunting one for keeper rate on fast subjects). SECONDARY at 2: optical_performance (sharp wide-open, since sports is often shot at max aperture for shutter speed) and build (pro sports teles are weather-sealed workhorses shot in rain and dust). SUPPORTING at 1: chromatic_aberration (high-contrast edges — a white jersey against dark crowd), handling (balance of a long lens through a long match). Deliberately UNWEIGHTED: bokeh, coma, vignetting, distortion, filter_thread, color_rendition, af_noise. gear_class excludes novelty only. DISTINCT-FINGERPRINT CHECK: differs from wildlife lenses (gate focal>=300 super-tele) by the broader tele gate (>=70 catches the 70-200 class that IS sports but not classic wildlife) and by leading af_performance rather than reach-at-all-costs. Ratified by Lee 2026-09-15.",
+  "ranked": [
+    {
+      "card_id": "sony-100-400mm-f4-5",
+      "display_name": "Sony 100 400mm f4.5",
+      "rankable": true,
+      "score": 3.6121,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.6034,
+          "pos": 121,
+          "neg": 16,
+          "total": 174,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.2069,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100-400mm-f45-56-gm-oss-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=ybc2MI00Qxk",
+              "witness": "firsthand",
+              "quote": "sensor let's start at the widest angle of 100 mm and the brightest apture of f4.5 in the middle of the image we immediately see razor sharpness with very good contrast and the image Corners also fantastic what a great st…"
+            },
+            {
+              "source_id": "youtube-corinne-joye-votaw-sony-100-400mm-f45-gm-oss-review-my-new-favorite-sports-photography-l",
+              "url": "https://www.youtube.com/watch?v=6TV2g7uaBvA",
+              "witness": "firsthand",
+              "quote": "Um but I would do a 400 and 70 to 200 and 400 and a 70 to 200 both 2.8 both great shoot day shoot night great but even at day I'd find this lens is actually sharper the 400 2.8 Sony in my opinion is actually sharper and …"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sony-100-400mm-f45-56-oss-g-master-review-4k",
+              "url": "https://www.youtube.com/watch?v=IK43tVIlS7c",
+              "witness": "firsthand",
+              "quote": "deliver good quality but with some versatility of focal length and so if you want more information you want all the nitty gritty the details about build handling autofocus image quality i recommend that you take a look a…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.5909,
+          "pos": 15,
+          "neg": 2,
+          "total": 22,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.1818,
+          "top_sources": [
+            {
+              "source_id": "youtube-andy-vu-photography-sony-fe-100-400mm-f4-5-gm-the-wildlife-photography-game-changer",
+              "url": "https://www.youtube.com/watch?v=hPwrsnwMqKs",
+              "witness": "firsthand",
+              "quote": "In my opinion, this is one of the best wildlife room lens Sony has ever made."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100-400mm-f45-56-gm-oss-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=ybc2MI00Qxk",
+              "witness": "unattested",
+              "quote": "lens are it slightly tougher build quality and slightly sharper image quality at 400 MM most people to be honest will be just as satisfied with a much less expensive Sigma lens but those who are willing to give up its go…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100-400mm-f45-gm-oss-camera-lens-review",
+              "url": "https://www.youtube.com/watch?v=0tyYoldxOnI",
+              "witness": "unattested",
+              "quote": "&gt;&gt; [music] &gt;&gt; The lens is built of a combination of metal and heavy-duty plastic parts, and feels gorgeous to hold and [music] to touch."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.5,
+          "pos": 8,
+          "neg": 1,
+          "total": 14,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sony-100-400mm-f45-gm-oss-review-the-best-100-400-ever",
+              "url": "https://www.youtube.com/watch?v=93Cof3kVhTA",
+              "witness": "firsthand",
+              "quote": "I also didn't notice any kind of issue with fringing."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100-400mm-f45-gm-oss-camera-lens-review",
+              "url": "https://www.youtube.com/watch?v=0tyYoldxOnI",
+              "witness": "unattested",
+              "quote": "And finally, related to bokeh comes longitudinal chromatic aberration."
+            },
+            {
+              "source_id": "youtube-sony-camera-channel-introducing-fe-100-400mm-f45-gm-oss-sony-α-lens",
+              "url": "https://www.youtube.com/watch?v=LpfQjgo9b_0",
+              "witness": "unattested",
+              "quote": "FE 100-400mm F4.5 GM OSS Superb resolution from 100 mm to 400 mm Outstanding resolution The ED XA and XA elements contribute to exquisite G Master TM bokeh The ED XA and XA elements contribute to exquisite G Master TM bo…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.7234,
+          "pos": 38,
+          "neg": 4,
+          "total": 47,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.7234,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sony-100-400mm-f45-56-oss-g-master-review-4k",
+              "url": "https://www.youtube.com/watch?v=IK43tVIlS7c",
+              "witness": "firsthand",
+              "quote": "you get really good steady hand-holding results and so that part certainly works well also a really strong point here is the autofocus and i think that really while the canon in some ways is still the superior lens i wou…"
+            },
+            {
+              "source_id": "youtube-karolina-norée-wildlife-photography-gear-review-sony-a7rvi-100-400mm-f45",
+              "url": "https://www.youtube.com/watch?v=BYl1cfo8D8c",
+              "witness": "firsthand",
+              "quote": "With a prime lens, I have one less thing to worry about out in the field, and that helps me focus on my composition a lot more."
+            },
+            {
+              "source_id": "youtube-petapixel-the-sony-100-400mm-f45-g-master-is-excellent",
+              "url": "https://www.youtube.com/watch?v=4tQa0AN5y3E",
+              "witness": "firsthand",
+              "quote": "On the side of lens here, I've got all my classic controls."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): chromatic_aberration"
+      ],
+      "rank": 1
+    },
+    {
+      "card_id": "sony-100mm-f2-8",
+      "display_name": "Sony 100mm f2.8",
+      "rankable": true,
+      "score": 3.5841,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.5385,
+          "pos": 65,
+          "neg": 16,
+          "total": 91,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.0769,
+          "top_sources": [
+            {
+              "source_id": "youtube-lee-zavitz-can-you-use-a-macro-lens-for-portraits-sony-100mm-f28-macro-gm",
+              "url": "https://www.youtube.com/watch?v=H314yZUhsLs",
+              "witness": "firsthand",
+              "quote": "Now, I have a feeling it's going to be mega ultra sharp because it's tuned for macro photography, and so that might not be something you actually want in portraits."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100mm-f28-macro-gm-oss-lens-2x-teleconverter-review",
+              "url": "https://www.youtube.com/watch?v=fuq6726ALSM",
+              "witness": "unattested",
+              "quote": "In the middle of the image, picture quality is razor sharp, straight from f2.8 with excellent contrast."
+            },
+            {
+              "source_id": "youtube-david-zhou-the-new-sony-100mm-f28-gm-is-amazing-but",
+              "url": "https://www.youtube.com/watch?v=9JB40OSLy7w",
+              "witness": "unattested",
+              "quote": "It's a really sharp lens."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.7273,
+          "pos": 9,
+          "neg": 1,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.4545,
+          "top_sources": [
+            {
+              "source_id": "youtube-petapixel-sony-100mm-f28-macro-gm-review-its-great",
+              "url": "https://www.youtube.com/watch?v=LZJu9X7r6Bw",
+              "witness": "firsthand",
+              "quote": "Now, this new G Master lens has a lot of bells and whistles, and we've got better weather sealing, we've got image stabilization, more advanced auto focusing capabilities."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100mm-f28-macro-gm-oss-lens-2x-teleconverter-review",
+              "url": "https://www.youtube.com/watch?v=fuq6726ALSM",
+              "witness": "unattested",
+              "quote": "There's a good amount of weather sealing around the rear of the lens as well."
+            },
+            {
+              "source_id": "youtube-david-zhou-the-new-sony-100mm-f28-gm-is-amazing-but",
+              "url": "https://www.youtube.com/watch?v=9JB40OSLy7w",
+              "witness": "unattested",
+              "quote": "The build of the lens is consistent with the latest Sony G Master lenses when it comes to materials and weather sealing."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.3684,
+          "pos": 12,
+          "neg": 5,
+          "total": 19,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.3684,
+          "top_sources": [
+            {
+              "source_id": "youtube-gerald-undone-sony-100mm-f28-macro-gm-lens-review",
+              "url": "https://www.youtube.com/watch?v=KUbWBAEt87o",
+              "witness": "firsthand",
+              "quote": "Here we're taking a look at chromatic aberration, specifically longitudinal chromatic aberration, which is color fringing on out of focus areas to the foreground and background."
+            },
+            {
+              "source_id": "youtube-zy-cheng-this-lens-took-sony-10-years-fe-100mm-f28-macro-gm-oss-review",
+              "url": "https://www.youtube.com/watch?v=piasd6uJy3E",
+              "witness": "firsthand",
+              "quote": "Aside from maybe a smidge of chromatic aberration, I can't really notice any visible impact on resolution."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100mm-f28-macro-gm-oss-lens-2x-teleconverter-review",
+              "url": "https://www.youtube.com/watch?v=fuq6726ALSM",
+              "witness": "unattested",
+              "quote": "All right, they're definitely looking a bit hazier with some color fringing."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.6842,
+          "pos": 13,
+          "neg": 0,
+          "total": 19,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.6842,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sony-fe-100mm-f28-macro-gm-oss-review-the-new-gold-standard",
+              "url": "https://www.youtube.com/watch?v=6zwQQURl1yI",
+              "witness": "firsthand",
+              "quote": "But I do like the Sony has that padded front edge, making it a nice stable place to set the lens down like that."
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-100mm-f28-macro-gm-lens-review",
+              "url": "https://www.youtube.com/watch?v=KUbWBAEt87o",
+              "witness": "firsthand",
+              "quote": "As I was saying, there's sort of a subjective improvement where if you just take in this lens you have the full focus range available, you have it in autofocus, and you're just kind of like walking up and taking pictures…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-100mm-f28-macro-gm-oss-lens-2x-teleconverter-review",
+              "url": "https://www.youtube.com/watch?v=fuq6726ALSM",
+              "witness": "unattested",
+              "quote": "So macro lenses such as these traditionally double up as portrait lenses in use as well."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build"
+      ],
+      "rank": 2
+    },
+    {
+      "card_id": "canon-70-200mm-f2-8",
+      "display_name": "Canon 70 200mm f2.8",
+      "rankable": true,
+      "score": 2.6623,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.5941,
+          "pos": 70,
+          "neg": 10,
+          "total": 101,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.1881,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-70-200mm-f28-l-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=Zzghu79su-E",
+              "witness": "firsthand",
+              "quote": "my apsc camera which is an 18 megapixel Canon 60D which is quite a common image sensor for Canon cameras today it's pretty sharp but newer lenses do perform a little better let's look at the performance at 70 mm first wi…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-full-review-canon-rf-70-200mm-f28-l-is-usm-z",
+              "url": "https://www.youtube.com/watch?v=duIu7MqDMLY",
+              "witness": "firsthand",
+              "quote": "Shooters are going to be pleased simply to have a 70 to 200 mm option with internal Zoom well how about image quality let's start by testing it on a fullframe camera my 45 map Canon EOS R5 and Camera Corrections are turn…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-70-200mm-f28l-is-definitive-review-4k",
+              "url": "https://www.youtube.com/watch?v=wGYQQ2wI1JQ",
+              "witness": "firsthand",
+              "quote": "iso 100 and of course in an indoor setting so the shot ended up um you know metering at one tenth of a second and so under you know normal circumstances that would have been a blurry mess but the effective combination of…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.56,
+          "pos": 18,
+          "neg": 4,
+          "total": 25,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.12,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-70-200mm-f28-l-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=Zzghu79su-E",
+              "witness": "firsthand",
+              "quote": "tightly but it's not advertised as being weather sealed so you should avoid taking it out in the rain but all in all the lens is built to the highest standard and it's a pleasure to use my favorite advantage of having an…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-70-200mm-f28l-is-definitive-review-4k",
+              "url": "https://www.youtube.com/watch?v=wGYQQ2wI1JQ",
+              "witness": "firsthand",
+              "quote": "a great system if you want to store your gear in a drawer out of sight and protected from the elements for more information visit store.lens and use coupon code dustin15 for 15 off your purchase now we're going to start …"
+            },
+            {
+              "source_id": "youtube-tknorth-is-the-canon-rf-70-200mm-f28-worth-your-money-in-2024",
+              "url": "https://www.youtube.com/watch?v=MrEMfoj29Q8",
+              "witness": "firsthand",
+              "quote": "jump in what's cracking my photography friends I'm TK North hope you're all doing well and happy New Year this is my first video for 2024 so far I have really put this lens to Great use over the past few months taken it …"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.125,
+          "pos": 3,
+          "neg": 4,
+          "total": 8,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.125,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-70-200mm-f28l-is-definitive-review-4k",
+              "url": "https://www.youtube.com/watch?v=wGYQQ2wI1JQ",
+              "witness": "firsthand",
+              "quote": "but beyond that i would recommend staying away from minimum aperture unless absolutely necessary one final thing to point out is there is a very mild amount but there is a little bit there of lateral chromatic aberration…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.4792,
+          "pos": 31,
+          "neg": 8,
+          "total": 48,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.4792,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-full-review-canon-rf-70-200mm-f28-l-is-usm-z",
+              "url": "https://www.youtube.com/watch?v=duIu7MqDMLY",
+              "witness": "firsthand",
+              "quote": "completely smoothly and can be locked in or out of automatic mode due to the way Cannon's Mount system currently works this ring will only work when shooting in video mode and not when shooting Stills except on a new R1 …"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-70-200mm-f28l-is-definitive-review-4k",
+              "url": "https://www.youtube.com/watch?v=wGYQQ2wI1JQ",
+              "witness": "firsthand",
+              "quote": "life yeah in real life i think it actually does a great job as far as getting to those ratings you know a lot of times they require you to be able to hand hold shots at just incredibly low shutter speeds and frankly as f…"
+            },
+            {
+              "source_id": "youtube-hyun-ralph-jeong-canon-rf-70-200mm-f28-review-vs-ef-70-200mm-f28",
+              "url": "https://www.youtube.com/watch?v=nSw9nRXctPM",
+              "witness": "firsthand",
+              "quote": "apart from the size and weight as well they have relocated the zoom ring to the front of the lens and I usually hate it when lens manufacturers do that but because the lens is so much shorter it still feels quite natural…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): chromatic_aberration"
+      ],
+      "rank": 3
+    },
+    {
+      "card_id": "sony-20-70mm-f4",
+      "display_name": "Sony 20 70mm f4",
+      "rankable": true,
+      "score": 2.2879,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3333,
+          "pos": 63,
+          "neg": 21,
+          "total": 126,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-20-70mm-f4-g-full-frame-lens-review",
+              "url": "https://www.youtube.com/watch?v=s7p5CBALPqQ",
+              "witness": "firsthand",
+              "quote": "dramatically wide while still being quite easy to shoot with and this super wide angle is particularly useful for video makers shooting blogs or using Digital Image stabilization which tends to crop your image a bit and …"
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-20-70mm-f4-g-lens-review",
+              "url": "https://www.youtube.com/watch?v=NOIEADB2cRY",
+              "witness": "firsthand",
+              "quote": "Now, as usual, let's jump into Lightroom so I can show you some test images and discuss the results and quality of this lens."
+            },
+            {
+              "source_id": "youtube-gordon-laing-sony-20-70mm-f4-g-review-best-lens-for-sony-creators",
+              "url": "https://www.youtube.com/watch?v=HYrW6e1X774",
+              "witness": "firsthand",
+              "quote": "which boasts a bright F 2.8 aperture for a very reasonable 700 I have a full review on my camera Labs website if you're interested but the Tamron really is a wide angle Zoom only concentrating on the shorter rather than …"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.5455,
+          "pos": 6,
+          "neg": 0,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0909,
+          "top_sources": [
+            {
+              "source_id": "youtube-peter-lindgren-sony-20-70mm-f4-full-frame-lens-review",
+              "url": "https://www.youtube.com/watch?v=Jgc7_YoMUDg",
+              "witness": "firsthand",
+              "quote": "When it comes to the build quality of this lens, I do think it feels solid."
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-20-70mm-f4-g-lens-review",
+              "url": "https://www.youtube.com/watch?v=NOIEADB2cRY",
+              "witness": "unattested",
+              "quote": "Not guaranteed to be 100% dust and moisture proof, but all the seams are sealed, the buttons and switches have silicone rubber gaskets, and there's a rubber ring seal around the lens mount."
+            },
+            {
+              "source_id": "youtube-jan-smid-master-qep-sony-20-70mm-f4-review-a-landscape-photographers-dreamor-disaster",
+              "url": "https://www.youtube.com/watch?v=t7QeI1w-z0I",
+              "witness": "unattested",
+              "quote": "Right out of the box, the Sony 20 70mm F/4 G feels solid."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.1667,
+          "pos": 2,
+          "neg": 1,
+          "total": 6,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.1667,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-20-70mm-f4-g-full-frame-lens-review",
+              "url": "https://www.youtube.com/watch?v=s7p5CBALPqQ",
+              "witness": "firsthand",
+              "quote": "news at F4 very little color fringing on bcka Highlights is visible at all so it's not a real problem overall well can I be honest when I first received the lens I felt a certain cynical curiosity how could it possibly p…"
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-20-70mm-f4-g-lens-review",
+              "url": "https://www.youtube.com/watch?v=NOIEADB2cRY",
+              "witness": "firsthand",
+              "quote": "Anyway, okay, so here we're talking about chromatic aberration, which is something I like to check always."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3636,
+          "pos": 11,
+          "neg": 3,
+          "total": 22,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.3636,
+          "top_sources": [
+            {
+              "source_id": "youtube-gerald-undone-sony-20-70mm-f4-g-lens-review",
+              "url": "https://www.youtube.com/watch?v=NOIEADB2cRY",
+              "witness": "firsthand",
+              "quote": "Then you've got the zoom ring, which is, it's good, it feels good, it's well dampened, it's exactly the amount of force I would want to have for zoom, and doesn't seem to come out on its own, which is nice."
+            },
+            {
+              "source_id": "youtube-gordon-laing-sony-20-70mm-f4-g-review-best-lens-for-sony-creators",
+              "url": "https://www.youtube.com/watch?v=HYrW6e1X774",
+              "witness": "firsthand",
+              "quote": "one of the popular applications for this lens I'm going to start with a coverage comparison to illustrate how big a deal 20 mil is for handheld pieces to camera versus longer lenses so let's start with the lens set to 28…"
+            },
+            {
+              "source_id": "youtube-jan-smid-master-qep-sony-20-70mm-f4-review-a-landscape-photographers-dreamor-disaster",
+              "url": "https://www.youtube.com/watch?v=t7QeI1w-z0I",
+              "witness": "firsthand",
+              "quote": "We believe this lens stands out because of its well balanced focal range."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration"
+      ],
+      "rank": 4
+    },
+    {
+      "card_id": "sony-85mm-f1-4",
+      "display_name": "Sony 85mm f1.4",
+      "rankable": true,
+      "score": 2.2284,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3086,
+          "pos": 49,
+          "neg": 24,
+          "total": 81,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.6173,
+          "top_sources": [
+            {
+              "source_id": "youtube-benj-haisch-sony-85mm-f14gm-ii-worth-the-wait",
+              "url": "https://www.youtube.com/watch?v=7pGZO0kLWfI",
+              "witness": "firsthand",
+              "quote": "there was never a point where I thought this is too much cat's eye or too like it just didn't look harsh or anything like that and with a lens that is just as sharp as this thing is sometimes you can get some weird stuff…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-85mm-f14-gm-lens-review-with-samples-full-frame-aps-c",
+              "url": "https://www.youtube.com/watch?v=DjinU4xsB_0",
+              "witness": "firsthand",
+              "quote": "real world more importantly though is the lens's image quality so let's start by testing it on a fullframe camera my 42 map Sony a7r 2 in the middle of the image at f1.4 right away we see excellent sh sharpness and contr…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-85mm-f14-gm-mark-ii-lens-review",
+              "url": "https://www.youtube.com/watch?v=VBDGjV5OguY",
+              "witness": "firsthand",
+              "quote": "testing it on a fullframe camera my 42 megap Sony a7r 3 in camera Corrections are turned on in the middle of the image at f1.4 we see perfect sharpness and contrast with neutral colors that excellent image quality contin…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.5556,
+          "pos": 6,
+          "neg": 1,
+          "total": 9,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.1111,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sony-fe-85mm-f14-gm-review-4k",
+              "url": "https://www.youtube.com/watch?v=Uroo5SXNqaw",
+              "witness": "firsthand",
+              "quote": "of all let's take a look at the build and the design of this lens as i noted in an episode where i compared it with others this is a lens that in many ways has the most premium build of any of the current 85 millimeter o…"
+            },
+            {
+              "source_id": "youtube-juan-de-swardt-review-sony-fe-85mm-f14-gm-ii-shot-on-fx3-and-fx6",
+              "url": "https://www.youtube.com/watch?v=KMxivcKA7nY",
+              "witness": "firsthand",
+              "quote": "lens not in a physical way but in a way that showcases the artistic ability of the lens when Sony gave me the challenge to shoot the whole project on 85 mm immediately I wondered how the heck will I shoot my establisher …"
+            },
+            {
+              "source_id": "youtube-petapixel-sony-85mm-f14-gm-ii-review-smaller-sharper-speedier",
+              "url": "https://www.youtube.com/watch?v=gq_nYtGLXlI",
+              "witness": "firsthand",
+              "quote": "it's fully sealed like all G Master lenses are we also have a nice 11 bladed aperture this should give us rounder bouquet we're going to take a look at that as well so Sony claims they've improved the bokeh characteristi…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.1667,
+          "pos": 8,
+          "neg": 5,
+          "total": 18,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1667,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-85mm-f14-gm-lens-review-with-samples-full-frame-aps-c",
+              "url": "https://www.youtube.com/watch?v=DjinU4xsB_0",
+              "witness": "firsthand",
+              "quote": "hint of purple fringing too the image Corners look about the same very good but still with slightly lower contrast let's stop down to FS2 that's better the lens's contrast shoots straight up and we're left with absolutel…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sony-fe-85mm-f14-gm-ii-review-does-it-stand-out-from-the-crowd",
+              "url": "https://www.youtube.com/watch?v=lmv0utF01TI",
+              "witness": "firsthand",
+              "quote": "correct maybe a stop in the corners but again something you could leave entirely uncorrected and your images might be better looking for it I also found that fringing L to Chromatic aberration were basically perfectly co…"
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-85mm-f14-gm-ii-review-the-lensiest-of-lenses",
+              "url": "https://www.youtube.com/watch?v=deG7vGdYaEg",
+              "witness": "firsthand",
+              "quote": "Here, we're gonna look at LoCA, Longitudinal Chromatic Aberration, Which is when things go out of focus to the foreground or the background, color fringing is introduced, usually opposite colors in each direction."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3333,
+          "pos": 11,
+          "neg": 4,
+          "total": 21,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-benj-haisch-sony-85mm-f14gm-ii-worth-the-wait",
+              "url": "https://www.youtube.com/watch?v=7pGZO0kLWfI",
+              "witness": "firsthand",
+              "quote": "the 135 the fact that I don't use this lens nearly enough it's I basically bought this because I wanted to get the 85 but I just knew it wasn't going to make me feel the it just wasn't like it didn't have the right autof…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sony-fe-85mm-f14-gm-ii-review-does-it-stand-out-from-the-crowd",
+              "url": "https://www.youtube.com/watch?v=lmv0utF01TI",
+              "witness": "firsthand",
+              "quote": "don't like aperture Rings just lock it in the auto mode and you'll never have to worry about it if you don't want to advertently go into the auto mode just lock it while you're in the actual manual aperture position and …"
+            },
+            {
+              "source_id": "youtube-gerald-undone-sony-85mm-f14-gm-ii-review-the-lensiest-of-lenses",
+              "url": "https://www.youtube.com/watch?v=deG7vGdYaEg",
+              "witness": "firsthand",
+              "quote": "So the last thing I wanna do, since like I said, I usually consider this lens more of a portrait lens, well, what if you're actually taking portraits?"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build"
+      ],
+      "rank": 5
+    },
+    {
+      "card_id": "sony-70-350mm-f4-5",
+      "display_name": "Sony 70 350mm f4.5",
+      "rankable": true,
+      "score": 2.0083,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3506,
+          "pos": 43,
+          "neg": 16,
+          "total": 77,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.7013,
+          "top_sources": [
+            {
+              "source_id": "youtube-cameradecision-test-lab-sony-e-70-350mm-f45-63-g-oss-lens-review-is-that-a-lens-in-your",
+              "url": "https://www.youtube.com/watch?v=yY9XJbhDrE8",
+              "witness": "firsthand",
+              "quote": "70 to 350 is consistently very good the minimum focusing distance of the 70 to 350 mil is 1.1 M or 3.6 ft which I am not very happy about the lens at this distance provides a maximum magnification ratio of 0.23 x which i…"
+            },
+            {
+              "source_id": "youtube-chris-pitch-sony-e-70-350mm-f45-63-g-oss-aps-c-my-little-review-landscape-wildlife-macro",
+              "url": "https://www.youtube.com/watch?v=XJnkJr_QlyQ",
+              "witness": "firsthand",
+              "quote": "Keep in mind that in 4K at 120 frames per second with my Sony A6700 there is a crop."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-e-70-350mm-f45-63-g-oss-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=eoR6raIBHJ0",
+              "witness": "firsthand",
+              "quote": "hope the quality is there when less lens was first announced I got a little excited I love it when manufacturers focus on their aps-c lineups and Sony have certainly been doing that on an aps-c camera this lenses zoom ra…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.4167,
+          "pos": 6,
+          "neg": 1,
+          "total": 12,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.8333,
+          "top_sources": [
+            {
+              "source_id": "youtube-cameradecision-test-lab-sony-e-70-350mm-f45-63-g-oss-lens-review-is-that-a-lens-in-your",
+              "url": "https://www.youtube.com/watch?v=yY9XJbhDrE8",
+              "witness": "firsthand",
+              "quote": "I honestly think that this lens doesn't get the attention that it deserves it is compact lightweight has excellent image quality fast and accurate focusing on body controls weather sealing and an effective image stabiliz…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sony-e-70-350mm-f45-63-g-oss-telephoto-zoom-review-da",
+              "url": "https://www.youtube.com/watch?v=LpmonOfXrnE",
+              "witness": "firsthand",
+              "quote": "It's a lens that I think as I noted it's held up really well."
+            },
+            {
+              "source_id": "youtube-john-sison-sony-70-350mm-f45-63-g-series-lens-review-john-sison",
+              "url": "https://www.youtube.com/watch?v=NJgZQdLPnvc",
+              "witness": "firsthand",
+              "quote": "the mouth of the lens so this is just to prevent oh not perfection protect the lens from any dust and moisture from getting inside and of course if you have a sort of rubber I guess weather resistant design along the zoo…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 5,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sony-e-70-350mm-f45-63-g-oss-telephoto-zoom-review-da",
+              "url": "https://www.youtube.com/watch?v=LpmonOfXrnE",
+              "witness": "unattested",
+              "quote": "You can just see that there is really no fringing to be seen in any portion here either before or after the plane of focus."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.4737,
+          "pos": 11,
+          "neg": 2,
+          "total": 19,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.4737,
+          "top_sources": [
+            {
+              "source_id": "youtube-cameradecision-test-lab-sony-e-70-350mm-f45-63-g-oss-lens-review-is-that-a-lens-in-your",
+              "url": "https://www.youtube.com/watch?v=yY9XJbhDrE8",
+              "witness": "firsthand",
+              "quote": "to carry with you all day the zoom ring on this lens is a bit hard to rotate but it may very well be specific to my copy the zoom ring is wide though which is good and it takes only 90° rotation to go from 70 to 350 mil …"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sony-e-70-350mm-f45-63-g-oss-telephoto-zoom-review-da",
+              "url": "https://www.youtube.com/watch?v=LpmonOfXrnE",
+              "witness": "firsthand",
+              "quote": "But I found that even if I added some complication here, like I think this lens looks good, you know, maybe a little bit of nervousness in this area, but you know, throughout this more complex scene, it's actually handle…"
+            },
+            {
+              "source_id": "youtube-gary-jahman-tech-life-sony-70-350mm-f45-63-g-oss-unboxing-and-first-impression",
+              "url": "https://www.youtube.com/watch?v=HeKphyMw9RM",
+              "witness": "firsthand",
+              "quote": "lens then it doesn't extend automatically and then we got here feels really solid feels a very solid properly built lens guys this is if you feel this in your hand you know that the quality is just good it's good let's p…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration"
+      ],
+      "rank": 6
+    },
+    {
+      "card_id": "sigma-85mm-f1-2",
+      "display_name": "Sigma 85mm f1.2",
+      "rankable": true,
+      "score": 1.6262,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.5484,
+          "pos": 22,
+          "neg": 5,
+          "total": 31,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.0968,
+          "top_sources": [
+            {
+              "source_id": "rss-dpreview-gps-media-is-the-sigma-85mm-f1-2-art-the-new-portrait-champion-for-e-a-2026",
+              "url": "https://www.dpreview.com/samples/is-the-sigma-85mm-f1-2-art-the-new-portrait-champion-for-e-and-l-mount/",
+              "witness": "firsthand",
+              "quote": "While we haven’t put the lens through a full battery of tests to determine every aspect of its image quality, it’s hard to find much fault with the samples we’ve taken."
+            },
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-85mm-f-1-2-dg-art-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-85mm-f-1-2-dg-art-review",
+              "witness": "unattested",
+              "quote": "giving stunning image quality in all respects, backed up by fast and consistently accurate autofocus and pro-grade handling."
+            },
+            {
+              "source_id": "fstoppers-education-sigmas-85mm-f12-beautiful-bokeh-one-real-weakness-904533",
+              "url": "https://fstoppers.com/education/sigmas-85mm-f12-beautiful-bokeh-one-real-weakness-904533?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "On image quality, the results hold up under a demanding."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-85mm-f-1-2-dg-art-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-85mm-f-1-2-dg-art-review",
+              "witness": "unattested",
+              "quote": "Multiple weather-seals are fitted throughout the lens to ensure a dust/splash-proof build, giving good protection when shooting in."
+            },
+            {
+              "source_id": "petapixel-2026-09-07-sigma-85mm-f-1-2-dg-art-review-sigma-is-the-alpha-this-time",
+              "url": "https://petapixel.com/2026/09/07/sigma-85mm-f-1-2-dg-art-review-sigma-is-the-alpha-this-time/",
+              "witness": "unattested",
+              "quote": "The lens is rugged and sealed as usual."
+            },
+            {
+              "source_id": "rss-amateur-photographer-sigma-85mm-f1-2-dg-art-review-sony-portrait-photographers-ne-2026",
+              "url": "https://amateurphotographer.com/review/sigma-85mm-f1-2-dg-art-review-sony-portrait-photographers-need-this-lens/",
+              "witness": "unattested",
+              "quote": "The lens has a dust and splash-resistant construction , and the front element has a water and oil-repellent coating."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 2,
+          "neg": 2,
+          "total": 12,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-85mm-f-1-2-dg-art-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-85mm-f-1-2-dg-art-review",
+              "witness": "unattested",
+              "quote": "Two SLD (Special Low Dispersion) elements are also featured, to enhance clarity and to suppress chromatic aberration."
+            },
+            {
+              "source_id": "fstoppers-education-sigmas-85mm-f12-beautiful-bokeh-one-real-weakness-904533",
+              "url": "https://fstoppers.com/education/sigmas-85mm-f12-beautiful-bokeh-one-real-weakness-904533?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "The one genuine weakness is longitudinal chromatic aberration, which stays strong on bokeh highlights from f/1.2 through f/4 before fading around f/5.6."
+            },
+            {
+              "source_id": "fstoppers-gear-sigmas-new-85mm-f12-art-combines-huge-aperture-905-g-body-904524",
+              "url": "https://fstoppers.com/gear/sigmas-new-85mm-f12-art-combines-huge-aperture-905-g-body-904524?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "These elements are intended to reduce axial chromatic aberration, an issue that can."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.5294,
+          "pos": 10,
+          "neg": 1,
+          "total": 17,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.5294,
+          "top_sources": [
+            {
+              "source_id": "petapixel-2026-09-07-sigma-85mm-f-1-2-dg-art-review-sigma-is-the-alpha-this-time",
+              "url": "https://petapixel.com/2026/09/07/sigma-85mm-f-1-2-dg-art-review-sigma-is-the-alpha-this-time/",
+              "witness": "firsthand",
+              "quote": "I like having an aperture ring on the Art."
+            },
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-85mm-f-1-2-dg-art-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-85mm-f-1-2-dg-art-review",
+              "witness": "unattested",
+              "quote": "The lens has a large, grippy manual focus ring that&rsquo;s mounted toward the front end of the barrel."
+            },
+            {
+              "source_id": "fstoppers-gear-sigmas-new-85mm-f12-art-combines-huge-aperture-905-g-body-904524",
+              "url": "https://fstoppers.com/gear/sigmas-new-85mm-f12-art-combines-huge-aperture-905-g-body-904524?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "Combined with the f/1.2 maximum aperture and 85mm focal length, that design is intended to maintain relatively circular."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration"
+      ],
+      "rank": 7
+    },
+    {
+      "card_id": "panasonic-70-200mm-f4",
+      "display_name": "Panasonic 70 200mm f4",
+      "rankable": true,
+      "score": 1.5318,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": -0.1579,
+          "pos": 10,
+          "neg": 16,
+          "total": 38,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -0.3158,
+          "top_sources": [
+            {
+              "source_id": "youtube-darryl-carey-panasonic-s-pro-70-200mm-f28-vs-s-pro-70-200mm-f4-sample-photos",
+              "url": "https://www.youtube.com/watch?v=U3UYO0IuOHQ",
+              "witness": "firsthand",
+              "quote": "I've done this video so you guys can look at the resolution and the sharpness from both of these lenses with the teleconverter one of the photos and videos will shot with this which is my panasonic lumix s1 are now they …"
+            },
+            {
+              "source_id": "youtube-digimaniecz-panasonic-lumix-s-70-200mm-f4-ois-review-samples-engcz-subtitles",
+              "url": "https://www.youtube.com/watch?v=Cd5R5QlhLcQ",
+              "witness": "unattested",
+              "quote": "+0.3 EV Sharpness at centre"
+            },
+            {
+              "source_id": "youtube-photojoseph-l-mount-2x-14x-teleconverters-70-200mm-f4-lens-for-lumix-s1-s1r",
+              "url": "https://www.youtube.com/watch?v=MNkVV7HCbCk",
+              "witness": "unattested",
+              "quote": "And they are all perfectly tack sharp in focus."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.6667,
+          "pos": 2,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-dpreview-tv-panasonic-s-pro-70-200mm-f4-ois-overview",
+              "url": "https://www.youtube.com/watch?v=MSQL9Ne3OPs",
+              "witness": "unattested",
+              "quote": "of construction and is dust and moisture sealed for more information on the panasonic lumix s pro 70 to 200 millimeter f4o is visit DP review calm [Music] you"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.2,
+          "pos": 2,
+          "neg": 3,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.2,
+          "top_sources": [],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.7143,
+          "pos": 11,
+          "neg": 1,
+          "total": 14,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.7143,
+          "top_sources": [
+            {
+              "source_id": "youtube-photojoseph-l-mount-2x-14x-teleconverters-70-200mm-f4-lens-for-lumix-s1-s1r",
+              "url": "https://www.youtube.com/watch?v=MNkVV7HCbCk",
+              "witness": "firsthand",
+              "quote": "Because on the S1, which what I'm using here today, what's kind of cool is you see the focal length of the lens as you're spinning the zoom ring and you will see it translated!"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration, handling"
+      ],
+      "rank": 8
+    },
+    {
+      "card_id": "canon-200-400mm-f4",
+      "display_name": "Canon 200 400mm f4",
+      "rankable": true,
+      "score": 1.3434,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.4444,
+          "pos": 41,
+          "neg": 13,
+          "total": 63,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.8889,
+          "top_sources": [
+            {
+              "source_id": "youtube-brendan-van-son-canon-200-400mm-f4-review-in-the-field-in-africa",
+              "url": "https://www.youtube.com/watch?v=c8KYL00r4rE",
+              "witness": "firsthand",
+              "quote": "be done i'm absolutely loving the contrast and color i'm getting off this lens [Music] one of the biggest selling points of this 200 to 400 millimeter is this 1.4 times extender that's on it the 1.4 times extender is act…"
+            },
+            {
+              "source_id": "youtube-joe-whitnall-photography-canon-200-400mm-f4-how-am-i-getting-on-with-it-will-i-be-sellin",
+              "url": "https://www.youtube.com/watch?v=ItR5mCeQVYk",
+              "witness": "firsthand",
+              "quote": "all if the glass this one on this photo the next photo is of an otter and I thought I'd do a photo where the subject is off to us the side slightly so you can see if the corners of the photo are nice and sharp yeah as yo…"
+            },
+            {
+              "source_id": "youtube-joe-whitnall-photography-canon-200-400mm-f4-vs-500mm-f4",
+              "url": "https://www.youtube.com/watch?v=JW5L6FIhEUg",
+              "witness": "firsthand",
+              "quote": "overall the um Jagger itself is nicely in Focus you can see how sharp the sort of bit of tree she's standing on is and the p ps everything up the face isn't as quite as in Focus as I was hoping it would be at 5.6 but um …"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.4545,
+          "pos": 7,
+          "neg": 2,
+          "total": 11,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.9091,
+          "top_sources": [
+            {
+              "source_id": "youtube-fox-fir-ultimate-wildlife-filmmaking-lens-canon-200400mm-f4-test",
+              "url": "https://www.youtube.com/watch?v=pALqHGa85v8",
+              "witness": "firsthand",
+              "quote": "So, it's nothing against the lens, all about the environment that I was shooting in."
+            },
+            {
+              "source_id": "youtube-photo-feaver-canon-ef-200-400mm-f4l-is-usm-lens-in-depth-review",
+              "url": "https://www.youtube.com/watch?v=eppmCmYdp8g",
+              "witness": "firsthand",
+              "quote": "a lens Hood if you are shooting towards the Sun so as you can see by those image quality tests this lens really did outperform my expectations I thought it was an amazing lens when it comes to the overall image quality I…"
+            },
+            {
+              "source_id": "youtube-joe-whitnall-photography-canon-200-400mm-f4-vs-500mm-f4",
+              "url": "https://www.youtube.com/watch?v=JW5L6FIhEUg",
+              "witness": "unattested",
+              "quote": "but overall it's not actually too bad it's very usable taking a bit of a hit on the plate there as well but again this does come everything apart from a gradient filter um holder which are massively expensive but it's go…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 1,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-richard-birchett-wildlife-photography-should-you-buy-canon-ef-200-400mm-f4-l-is-usm-ext",
+              "url": "https://www.youtube.com/watch?v=aBmo_DmUutk",
+              "witness": "unattested",
+              "quote": "time so that's something to bear in mind as well but you do that with any sort of telecon converter that does happen um also the chromatic aberration or color fringing it's called is pretty much absent at the 200 to 400 …"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.5455,
+          "pos": 8,
+          "neg": 2,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.5455,
+          "top_sources": [
+            {
+              "source_id": "youtube-joe-whitnall-photography-canon-200-400mm-f4-how-am-i-getting-on-with-it-will-i-be-sellin",
+              "url": "https://www.youtube.com/watch?v=ItR5mCeQVYk",
+              "witness": "firsthand",
+              "quote": "and how it still even works very well with the R6 I've got as well I've used it with the R6 quite a lot no problems at all it's just such a good versatile lens as I say I will still keep the 300 and the 500 because if I …"
+            },
+            {
+              "source_id": "youtube-photo-feaver-canon-ef-200-400mm-f4l-is-usm-lens-in-depth-review",
+              "url": "https://www.youtube.com/watch?v=eppmCmYdp8g",
+              "witness": "firsthand",
+              "quote": "really easy to use even with gloves I took this lens uh to Norfolk and it was very cold so I had gloves on and it was easy to use so if you are thinking of taking this lens to a very cold environment maybe the Arctic or …"
+            },
+            {
+              "source_id": "youtube-richard-birchett-wildlife-photography-should-you-buy-canon-ef-200-400mm-f4-l-is-usm-ext",
+              "url": "https://www.youtube.com/watch?v=aBmo_DmUutk",
+              "witness": "firsthand",
+              "quote": "in Flight it's all over it I've used it on the R3 I've used it on the R7 which gives you that extended reach you know it really does fit the bill and I'm well happy with the lens um I know a lot of people that say they'r…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration, handling"
+      ],
+      "rank": 9
+    },
+    {
+      "card_id": "sigma-16-300mm-f3-5",
+      "display_name": "Sigma 16 300mm f3.5",
+      "rankable": true,
+      "score": 0.9314,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.0094,
+          "pos": 42,
+          "neg": 41,
+          "total": 106,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.0189,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-sigma-16-300mm-f35-67-dc-os-c-lens-review",
+              "url": "https://www.youtube.com/watch?v=ZbQC6ZWntRk",
+              "witness": "firsthand",
+              "quote": "is lower than you might expect for a lens with such a huge Zoom capability as I mentioned though it only offers an apsc image Circle so if you're shooting on a full-frame camera you will have to revert to its lower resol…"
+            },
+            {
+              "source_id": "youtube-michael-sladek-photography-sigma-16-300mm-f35-67-dc-os-contemporary-zoom-lens-review",
+              "url": "https://www.youtube.com/watch?v=AeFTwORGvJY",
+              "witness": "firsthand",
+              "quote": "And I think you also see uh how I think good the image quality is in these photos."
+            },
+            {
+              "source_id": "youtube-arron-prescott-sigma-16-300mm-f35-67-dc-os-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=3I0SWJZIgcU",
+              "witness": "unattested",
+              "quote": "It 16 to 300 mm range gives it an effective zoom range of 19 times, covering a range of wide angle all the way to super telephoto."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.3,
+          "pos": 13,
+          "neg": 4,
+          "total": 30,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.6,
+          "top_sources": [
+            {
+              "source_id": "youtube-curtis-padley-sigma-16-300mm-f35-67-dc-os-the-ultimate-aps-c-do-it-all-lens",
+              "url": "https://www.youtube.com/watch?v=wBFijYLUuTY",
+              "witness": "firsthand",
+              "quote": "Now just before we get on to talking about this lens's build quality for those curious the racing event that I'm attending today is Donington Historic Festival and there is a whole toy box of cars here."
+            },
+            {
+              "source_id": "youtube-arron-prescott-sigma-16-300mm-f35-67-dc-os-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=3I0SWJZIgcU",
+              "witness": "unattested",
+              "quote": "The packaging is all cardboard and there's nothing unexpected in the box, just the lens hood, which is plastic, petal-shaped, and 67 mm."
+            },
+            {
+              "source_id": "youtube-arthur-r-sigma-16-300mm-f35-67-dc-os-a-lens-that-does-it-all",
+              "url": "https://www.youtube.com/watch?v=p6gEWewmKy0",
+              "witness": "unattested",
+              "quote": "the front there is a nice size front element barely visible lens specs printed in glossy black here and made in Japan on the bottom inside there are 20 elements in 14 groups a nine rounded blade diaphragm and for autofoc…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 4,
+          "neg": 4,
+          "total": 16,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-curtis-padley-sigma-16-300mm-f35-67-dc-os-the-ultimate-aps-c-do-it-all-lens",
+              "url": "https://www.youtube.com/watch?v=wBFijYLUuTY",
+              "witness": "firsthand",
+              "quote": "The only area where I do see this then struggling slightly is with chromatic aberration which is something I was honestly expecting."
+            },
+            {
+              "source_id": "youtube-arron-prescott-sigma-16-300mm-f35-67-dc-os-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=3I0SWJZIgcU",
+              "witness": "unattested",
+              "quote": "Now, there is noticeable purple color fringing at the edges as well."
+            },
+            {
+              "source_id": "youtube-jacek-sopotnicki-jack-sputnik-sigma-16-300mm-f35-67-dc-os-the-almost-perfect-travel-zoom",
+              "url": "https://www.youtube.com/watch?v=aZisAiK39mk",
+              "witness": "unattested",
+              "quote": "There is some amount of chromatic aberration there."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3125,
+          "pos": 18,
+          "neg": 8,
+          "total": 32,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.3125,
+          "top_sources": [
+            {
+              "source_id": "youtube-arron-prescott-sigma-16-300mm-f35-67-dc-os-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=3I0SWJZIgcU",
+              "witness": "firsthand",
+              "quote": "I took this lens away for a few days and didn't feel for a moment that I wished I had a second lens with me that would have covered more focal lengths."
+            },
+            {
+              "source_id": "youtube-jacek-sopotnicki-jack-sputnik-sigma-16-300mm-f35-67-dc-os-the-almost-perfect-travel-zoom",
+              "url": "https://www.youtube.com/watch?v=aZisAiK39mk",
+              "witness": "firsthand",
+              "quote": "then I do recommend this Sigma it's a lovely tool it's a lovely lens that I really fall in love with and uh taking it to some places like Morocco or anywhere like you feel like you want to you know enjoy this photography…"
+            },
+            {
+              "source_id": "youtube-arthur-r-sigma-16-300mm-f35-67-dc-os-a-lens-that-does-it-all",
+              "url": "https://www.youtube.com/watch?v=p6gEWewmKy0",
+              "witness": "unattested",
+              "quote": "if you are packing it for travel and what a smooth Zoom ring mechanism it is nice rubberized grippy finish here there is a bit of heft to the rotation but it's very smooth no slop whatsoever Sigma does zoom lenses really…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [],
+      "flags": [
+        "missing weighted axes: af_performance"
+      ],
+      "rank": 10
+    },
+    {
+      "card_id": "sony-28-70mm-f3-5",
+      "display_name": "Sony 28 70mm f3.5",
+      "rankable": true,
+      "score": 0.0139,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.1132,
+          "pos": 23,
+          "neg": 17,
+          "total": 53,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.2264,
+          "top_sources": [
+            {
+              "source_id": "youtube-120fps-ingaf-far-more-than-a-kit-lens-sony-fe-28-70mm-f35-56-oss-2019-review",
+              "url": "https://www.youtube.com/watch?v=hGoCyncOLKM",
+              "witness": "firsthand",
+              "quote": "a pretty competent variable aperture soom lens but what am i five reasons why this is far more than just a kit lens [Music] first up is it's solid and versatile picture quality the image quality that you get from the 28 …"
+            },
+            {
+              "source_id": "youtube-chance-talks-cameras-sony-28-70mm-f35-56-kit-lens-review-underrated",
+              "url": "https://www.youtube.com/watch?v=EuUaBlX3KzM",
+              "witness": "firsthand",
+              "quote": "I do have to say the zoom Wing itself is a little bit glitty but I haven't exactly taken care of this because you know it's a cheap lens so build C better than some but definitely not on power with like a GM lens or you …"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sony-fe-28-70mm-f35-56-oss-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=RKXERyzY470",
+              "witness": "firsthand",
+              "quote": "how about image quality I'm going to really push this lens by trying it on a Sony a7r 2 with its demanding 42 map image sensor at 28 mm and at f3.5 image quality in the middle is extremely sharp over in the corners we se…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.1667,
+          "pos": 4,
+          "neg": 6,
+          "total": 12,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-120fps-ingaf-far-more-than-a-kit-lens-sony-fe-28-70mm-f35-56-oss-2019-review",
+              "url": "https://www.youtube.com/watch?v=hGoCyncOLKM",
+              "witness": "firsthand",
+              "quote": "merely a kit lens but after spending a little time with it recently in our review of the Sony a7 - I want it to shine a light firmly on this lens again on the used market you can pick up a 28 to 70 for around 150 quid fo…"
+            },
+            {
+              "source_id": "youtube-chance-talks-cameras-sony-28-70mm-f35-56-kit-lens-review-underrated",
+              "url": "https://www.youtube.com/watch?v=EuUaBlX3KzM",
+              "witness": "firsthand",
+              "quote": "judge for yourself so let's get right into it so kit lenses have never exactly been the most nicely buit of lenses this one is made I think mostly of plastic yeah you can hear it feels kind of flimsy but it feels decent …"
+            },
+            {
+              "source_id": "youtube-adam-toy-a-good-kit-lens-reviewing-the-sony-fe-28-70mm-f35-56-oss-ii",
+              "url": "https://www.youtube.com/watch?v=BzpJsOKYeSE",
+              "witness": "unattested",
+              "quote": "It's just built into the lens."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.0667,
+          "pos": 2,
+          "neg": 3,
+          "total": 15,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.0667,
+          "top_sources": [
+            {
+              "source_id": "youtube-adam-toy-a-good-kit-lens-reviewing-the-sony-fe-28-70mm-f35-56-oss-ii",
+              "url": "https://www.youtube.com/watch?v=BzpJsOKYeSE",
+              "witness": "firsthand",
+              "quote": "And we have enable profile corrections and then remove chromatic aberration."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.1875,
+          "pos": 8,
+          "neg": 5,
+          "total": 16,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1875,
+          "top_sources": [
+            {
+              "source_id": "youtube-120fps-ingaf-far-more-than-a-kit-lens-sony-fe-28-70mm-f35-56-oss-2019-review",
+              "url": "https://www.youtube.com/watch?v=hGoCyncOLKM",
+              "witness": "firsthand",
+              "quote": "really great to use and just genuinely it feels really premium in hand now next up on my list is the rock-solid image stabilization or optical steadyshot as Sony call it whatever you want to call it is truly impressive w…"
+            },
+            {
+              "source_id": "youtube-dorian-davids-sony-fe-28-70mm-f35-56-kit-lens-experience",
+              "url": "https://www.youtube.com/watch?v=rI3k4lfJJpQ",
+              "witness": "firsthand",
+              "quote": "not just a review video of the lens but it's meant to show you the possibilities you have with it if you are interested purely in the pros and cons of this lens then feel free to skip to that part later in the video i st…"
+            },
+            {
+              "source_id": "youtube-jerad-hill-photographer-review-sony-28-70mm-f35-56-fe-oss-interchangeable-standard-zoom",
+              "url": "https://www.youtube.com/watch?v=Iv5Jivf8pQQ",
+              "witness": "firsthand",
+              "quote": "little bit better but I don't have a whole lot of experience with kit lenses because I've usually just buy the body so for me the features about this lens that I really like obviously are the price it's not that expensiv…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build"
+      ],
+      "rank": 11
+    },
+    {
+      "card_id": "canon-18-200mm-f3-5",
+      "display_name": "Canon 18 200mm f3.5",
+      "rankable": true,
+      "score": -0.0242,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": -0.1455,
+          "pos": 15,
+          "neg": 23,
+          "total": 55,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -0.2909,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-s-18-200mm-f35-56-is-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=RUzoLE88aks",
+              "witness": "unattested",
+              "quote": "same picture quality as lenses with shorter Zoom ranges or prime lenses that don't Zoom at all another problem with super zoom lenses is that they're not very fast they don't let in a lot of light their maximum apertures…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sigma-18-200mm-f35-63-os-macro-c-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=kYV-gjoKYBw",
+              "witness": "unattested",
+              "quote": "as you zoom in from f3.5 at 18 mm all the way down to f6.3 at 200 mm which really is a very dark aperture it's simply the price you pay for having a long Zoom range let's look at this lens's build quality the first thing…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-tamron-18-200mm-f35-63-di-ii-vc-lens-review-dslr-lens-with-samples",
+              "url": "https://www.youtube.com/watch?v=JLly6F9z6No",
+              "witness": "unattested",
+              "quote": "like if you use it on a fullframe camera obviously it's much happier at home on a smaller apsc sensor but lenses with huge Zoom ranges often have weaker picture quality as well as a dark maximum aperture they don't let i…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 2,
+          "neg": 2,
+          "total": 7,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-juan-jose-jaramillo-review-canon-ef-s-18-200mm-f35-56",
+              "url": "https://www.youtube.com/watch?v=37TwMskfaAg",
+              "witness": "firsthand",
+              "quote": "hi guys for you and welcome to this view in this video I'm going to talk about the canon ef-s 18 to 200 millimeter so this is a lens which is made in plastic it is not a very solid length I guess compared to some other l…"
+            },
+            {
+              "source_id": "youtube-cameras-direct-camerasdirectcomau-canon-ef-s-18-200mm-f35-56-usm-lens-review-cameras-dir",
+              "url": "https://www.youtube.com/watch?v=T3lMBdQXWxE",
+              "witness": "unattested",
+              "quote": "The image quality might not be as good as different / separate lenses like 18-55 55-250, but you know what, the versatility that this lens offers is why it is so popular."
+            },
+            {
+              "source_id": "youtube-christopher-frost-tamron-18-200mm-f35-63-di-ii-vc-lens-review-dslr-lens-with-samples",
+              "url": "https://www.youtube.com/watch?v=JLly6F9z6No",
+              "witness": "unattested",
+              "quote": "seems to be half plastic and half metal as you can see here there is however a rubber gasket around the lens mount which gives you an extra level of weather sealing the lens's rubberized Zoom ring is not particularly smo…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.2667,
+          "pos": 8,
+          "neg": 4,
+          "total": 15,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.2667,
+          "top_sources": [
+            {
+              "source_id": "youtube-juan-jose-jaramillo-review-canon-ef-s-18-200mm-f35-56",
+              "url": "https://www.youtube.com/watch?v=37TwMskfaAg",
+              "witness": "firsthand",
+              "quote": "some downsides and I'm going to explain them to you arm so in this case basically the only downside of this lens is that it is a 3.5 to 5.6 length so basically the aperture is not a concept aperture so when you're going …"
+            },
+            {
+              "source_id": "youtube-cameras-direct-camerasdirectcomau-canon-ef-s-18-200mm-f35-56-usm-lens-review-cameras-dir",
+              "url": "https://www.youtube.com/watch?v=T3lMBdQXWxE",
+              "witness": "unattested",
+              "quote": "The other great feature with this lens is that they do have a lock on the lens here which prevents it from sliding out, so when you're walking along the lens isn't going to extend accidentally."
+            },
+            {
+              "source_id": "youtube-christopher-frost-tamron-18-200mm-f35-63-di-ii-vc-lens-review-dslr-lens-with-samples",
+              "url": "https://www.youtube.com/watch?v=JLly6F9z6No",
+              "witness": "unattested",
+              "quote": "easy with this lens also you should only turn the focus ring when the lens is set to manual focus otherwise you could damage the Focus motor both the zoom and focus rings turn the same way as Nikon lenses do and the oppo…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance",
+        "chromatic_aberration"
+      ],
+      "thin_axes": [
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance, chromatic_aberration",
+        "thin (< 15 claims): build"
+      ],
+      "rank": 12
+    },
+    {
+      "card_id": "canon-100mm-f2-8",
+      "display_name": "Canon 100mm f2.8",
+      "rankable": true,
+      "score": -0.2924,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3019,
+          "pos": 27,
+          "neg": 11,
+          "total": 53,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.6038,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-100mm-f28-usm-macro-review-full-frame-test-results",
+              "url": "https://www.youtube.com/watch?v=PVBwvfD-dNo",
+              "witness": "firsthand",
+              "quote": "[Music] howdy everyone now a little while ago I made a review of Canon's 100 mm f2.8 USM macro lens and you can watch that full review by clicking on the link below or the link in the description I tested it on my apsc c…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100mm-f28-l-macro-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=_TzCuYb-3Sw",
+              "witness": "firsthand",
+              "quote": "edge less sharpness but still amazing F4 looks about the same let's stop down to f5.6 oddly the lens looks just a tiny bit softer here which shouldn't happen also the middle of the image looks just a tiny bit softer too …"
+            },
+            {
+              "source_id": "youtube-gordon-laing-canon-rf-100mm-f28l-macro-review-vs-ef-100mm-f28l-macro",
+              "url": "https://www.youtube.com/watch?v=m0cQWnOPIMI",
+              "witness": "firsthand",
+              "quote": "i expected from canon specs and actually worked out a little bit worse on the day of course your mileage will almost certainly vary but i'd love to hear the kind of results that you're getting if you're using these lense…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.4,
+          "pos": 1,
+          "neg": 5,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.8,
+          "top_sources": [
+            {
+              "source_id": "youtube-isaac-mijangos-canon-100mm-f28-macro-review-2022-underrated",
+              "url": "https://www.youtube.com/watch?v=S34fCkWD9Sk",
+              "witness": "firsthand",
+              "quote": "about it I wanted the L Series glass with is but after using this lens for probably five months now I can safely say that my worries were non-existent the very first thing that you're going to notice about this lens is t…"
+            },
+            {
+              "source_id": "youtube-photo-feaver-the-canon-100mm-f28-usm-macro-lens-review",
+              "url": "https://www.youtube.com/watch?v=W5MktI7a3Nc",
+              "witness": "firsthand",
+              "quote": "bag let's find out in this review so the first thing i want to talk about guys is the overall build quality and the design of this lens i must say it's not too bad it's a predominantly premium plastic and metal construct…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-100mm-f28-usm-macro-lens-review-with-sample-pictures",
+              "url": "https://www.youtube.com/watch?v=zZsqk13KA8w",
+              "witness": "unattested",
+              "quote": "It's one of Canon's older lenses now, but the build quality is still pretty solid."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.25,
+          "pos": 0,
+          "neg": 1,
+          "total": 4,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.25,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100mm-f28-l-macro-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=_TzCuYb-3Sw",
+              "witness": "firsthand",
+              "quote": "Baka comes longitudinal chromatic aberration this is something that's been a real issue in the past for Canon's macro lenses however on this RF model it's a bit more under control than usual we do still see just a little…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.1538,
+          "pos": 5,
+          "neg": 3,
+          "total": 13,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.1538,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100mm-f28-l-macro-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=_TzCuYb-3Sw",
+              "witness": "firsthand",
+              "quote": "I'm just on the border of whether to recommend or highly recommend it if you can put up with a focus shifting problem which isn't terribly serious then this lens is a dream come true well I had a blast testing out this l…"
+            },
+            {
+              "source_id": "youtube-isaac-mijangos-canon-100mm-f28-macro-review-2022-underrated",
+              "url": "https://www.youtube.com/watch?v=S34fCkWD9Sk",
+              "witness": "firsthand",
+              "quote": "image stabilization and that was an unneeded thought to have all that our cameras now have is and the lens takes advantage of that I think that the way that this lens is used for most people one you're going to be holdin…"
+            },
+            {
+              "source_id": "youtube-stewart-wood-canon-100mm-f28-l-is-usm-macro-lens-review-with-samples-aps-c",
+              "url": "https://www.youtube.com/watch?v=L1DiERm3I8Q",
+              "witness": "firsthand",
+              "quote": "from what I have seen from this lens the best thing on this lens for me as a macro photography is the focusing ring because masami's freedom to move around and focus on my subject that my 50 millimeter on extension ship …"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration, handling"
+      ],
+      "rank": 13
+    },
+    {
+      "card_id": "canon-100-400mm-f5-6",
+      "display_name": "Canon 100 400mm f5.6",
+      "rankable": true,
+      "score": -0.3907,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.0745,
+          "pos": 42,
+          "neg": 35,
+          "total": 94,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1489,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100-400mm-f56-8-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=PnR27O7RDWc",
+              "witness": "firsthand",
+              "quote": "fantastic but what about image quality I'll be testing this lens on a Canon EOS R5 with its full frame 45 map sensor with in camera Corrections turned on at 100 mm and at 5.6 sharpness and contrast are very good in the m…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-100-400mm-f56-8-is-usm-definitive-review-da",
+              "url": "https://www.youtube.com/watch?v=1ZJT9fJReyI",
+              "witness": "firsthand",
+              "quote": "is fairly well controlled so here's a look at the test chart and this is at 100 millimeters at 5.6 is our maximum aperture here and so as you can see looking at things globally looks okay zooming into the center we have …"
+            },
+            {
+              "source_id": "youtube-jan-rybář-canon-rf-100-400mm-f56-8-review-200-sample-photos-shot-with-canon-r6-v",
+              "url": "https://www.youtube.com/watch?v=RiPwdt5cJTs",
+              "witness": "firsthand",
+              "quote": "To put it to the test, I took it to Prague Zoo and through roughly 200 sample photos, we'll see what to expect from it in real world use, how sharp it is at different apertures, and whether that f/5.6-8 aperture is reall…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.2222,
+          "pos": 6,
+          "neg": 10,
+          "total": 18,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.4444,
+          "top_sources": [
+            {
+              "source_id": "youtube-foxtailwhipz-canons-most-underrated-lens-rf-100-400mm-f56-8-is-usm",
+              "url": "https://www.youtube.com/watch?v=i_yI01O_I_s",
+              "witness": "firsthand",
+              "quote": "I didn't have any issues with it paired with my R50 which is also a camera that isn't weather sealed now for this type of lens which is usually used for wildlife photography and outdoor stuff like that can be a deal brea…"
+            },
+            {
+              "source_id": "youtube-photo-feaver-the-canon-rf-100-400mm-f56-80-is-usm-lens-in-depth-review",
+              "url": "https://www.youtube.com/watch?v=J-HzwFRbYvo",
+              "witness": "firsthand",
+              "quote": "the build quality now the idea for this lens is it's designed to be as small and as lightweight as possible and that definitely does get reflected within the build quality it isn't as well built as other super telephoto …"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100-400mm-f56-8-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=PnR27O7RDWc",
+              "witness": "unattested",
+              "quote": "and also it won't make a good lens for Sports Photography unless you're able to shoot in bright sunlight or willing to use exceptionally High ISO levels still the good news is that the high ISO image quality of Canon's c…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.3333,
+          "pos": 1,
+          "neg": 3,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-100-400mm-f56-8-is-usm-definitive-review-da",
+              "url": "https://www.youtube.com/watch?v=1ZJT9fJReyI",
+              "witness": "firsthand",
+              "quote": "nice and mild and for an rf lens it's actually quite low now i didn't see any kind of huge issue with aberrations in the typical fringing kind of way so here along the edge of this frame we're looking for lateral chromat…"
+            },
+            {
+              "source_id": "youtube-jared-polin-canons-cheapest-rf-zoom-lens-100-400mm-f56-8-is-reviewis-it-worth-it",
+              "url": "https://www.youtube.com/watch?v=pkp3BiXu9sY",
+              "witness": "firsthand",
+              "quote": "right-handed batter and then we have the pitcher in his windup let's zoom in on his face is it sharp yeah I mean there's some wow there's actually some green fringing around the edge of his face that's what you're going …"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-100-400mm-f56-8-is-usm-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=PnR27O7RDWc",
+              "witness": "unattested",
+              "quote": "to Baka comes longitudinal chromatic aeration at the lens's brightest apertures a little purple and yellow highlighting can be seen around the plane of focus stop down a little and it goes away quite quickly overall well…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.2381,
+          "pos": 10,
+          "neg": 5,
+          "total": 21,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.2381,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-canon-rf-100-400mm-f56-8-is-usm-definitive-review-da",
+              "url": "https://www.youtube.com/watch?v=1ZJT9fJReyI",
+              "witness": "firsthand",
+              "quote": "lot of detail across this frame uh all things considered and so you know that's an image where i think that the lens you know has really handled this the situation fairly well which goes to show the lens like this one of…"
+            },
+            {
+              "source_id": "youtube-jared-polin-canons-cheapest-rf-zoom-lens-100-400mm-f56-8-is-reviewis-it-worth-it",
+              "url": "https://www.youtube.com/watch?v=pkp3BiXu9sY",
+              "witness": "firsthand",
+              "quote": "these big ass helmets that make it much harder to focus on especially with so many guys Crossing and running across the field now with that being said I did use the Canon R5 I chose not to use the R3 because honestly if …"
+            },
+            {
+              "source_id": "youtube-foxtailwhipz-canons-most-underrated-lens-rf-100-400mm-f56-8-is-usm",
+              "url": "https://www.youtube.com/watch?v=i_yI01O_I_s",
+              "witness": "unattested",
+              "quote": "technically is outperforming its bigger brother in terms of stabilization which is a big surprise all right next up this is a pretty quick one but most budget Canon RF lenses don't have a focus and control ring they'll j…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): chromatic_aberration"
+      ],
+      "rank": 14
+    },
+    {
+      "card_id": "canon-28-105mm-f3-5",
+      "display_name": "Canon 28 105mm f3.5",
+      "rankable": true,
+      "score": -0.7857,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": -0.25,
+          "pos": 23,
+          "neg": 43,
+          "total": 80,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-jordanphotoaudio-canon-ef-28-105mm-f35-45-lens-review",
+              "url": "https://www.youtube.com/watch?v=2_pdOC8-thI",
+              "witness": "firsthand",
+              "quote": "the 18 through 55 is it does zoom out a little more 18 is of course a bit more zoomed out than 28 but of course 28 is more than wide enough I would not complain about that at [Music] all now image quality wise I'd say th…"
+            },
+            {
+              "source_id": "youtube-technologyadvisor1-28-105mm-f35-45-canon-review",
+              "url": "https://www.youtube.com/watch?v=_5KRLeECczY",
+              "witness": "firsthand",
+              "quote": "is a sharp lines in comparison to this so um let's move to some images I have on the computer and hopefully we'll be able to discuss the results in more detail hello Ron and welcome to another examples video um obviously…"
+            },
+            {
+              "source_id": "youtube-virtual-aviator-review-canon-ef-28-105mm-f35-45-ii-usm-zoom-lens",
+              "url": "https://www.youtube.com/watch?v=dJ2n-rkwEec",
+              "witness": "firsthand",
+              "quote": "production until the year 2010 when count when Canon finally threw in the tower and ceased production of this lens I find this lens to be soft throughout its Zoom range and at most aperture points however when I step it …"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.1429,
+          "pos": 3,
+          "neg": 4,
+          "total": 7,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.2857,
+          "top_sources": [
+            {
+              "source_id": "youtube-technologyadvisor1-28-105mm-f35-45-canon-review",
+              "url": "https://www.youtube.com/watch?v=_5KRLeECczY",
+              "witness": "firsthand",
+              "quote": "lens attached to it so I would certainly recommend this if you guys have got a film camera definitely because it's quite handy lens to have however the image quality does feel quite soft to me in comparison to other lens…"
+            },
+            {
+              "source_id": "youtube-virtual-aviator-review-canon-ef-28-105mm-f35-45-ii-usm-zoom-lens",
+              "url": "https://www.youtube.com/watch?v=dJ2n-rkwEec",
+              "witness": "firsthand",
+              "quote": "any professional setting because as I mentioned earlier um I think the results are just a tad soft compared to other lenses the bill quality of this lens is pretty good um the housing is plastic but it's a hard plastic u…"
+            },
+            {
+              "source_id": "youtube-jordanphotoaudio-canon-ef-28-105mm-f35-45-vs-50mm-f18-ii",
+              "url": "https://www.youtube.com/watch?v=zkzQvIVwofE",
+              "witness": "unattested",
+              "quote": "build quality the 28 through 105 wins by far there's no doubt about that is a much better built lens than the 50 millimeter F 1.8 now the 50 is often called The Plastic Fantastic because it is one of the most plasticky l…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 2,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-28-135mm-f35-56-is-usm-lens-review-with-samples-full-frame-and-a",
+              "url": "https://www.youtube.com/watch?v=DiNwvca7nMM",
+              "witness": "unattested",
+              "quote": "aberration also known as color fringing on contrasting edges it's pretty ugly stop the aperture down to f5.6 and there's a touch more sharpness improving again at f8 and the lens is sharpest at f11 that color fringing is…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 2,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-nicholas-hornbrook-a-cheap-canon-ef-zoom-and-its-not-terrible",
+              "url": "https://www.youtube.com/watch?v=dkx2RxR2xu0",
+              "witness": "firsthand",
+              "quote": "never take it with me so I'm wondering is it worth taking with me so I brought it out with me finally put it on the 1y Mark I and right away it felt like a pretty decent pairing the lens is light the body is heavy but to…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration, handling"
+      ],
+      "rank": 15
+    },
+    {
+      "card_id": "nikon-85mm-f1-8",
+      "display_name": "Nikon 85mm f1.8",
+      "rankable": true,
+      "score": -1.2333,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3,
+          "pos": 5,
+          "neg": 2,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.6,
+          "top_sources": [
+            {
+              "source_id": "youtube-alex-lynch-nikon-85mm-f18g-hands-on-review",
+              "url": "https://www.youtube.com/watch?v=HLeqX1ucxBg",
+              "witness": "firsthand",
+              "quote": "Focus this lens being a prime lens has almost no Distortion forr users will notice slight V getting at f1.8 and F2 but DX users won't notice it at all like I said at the beginning of this video this lens is the sharpest …"
+            },
+            {
+              "source_id": "youtube-jared-polin-nikon-85mm-f18g-afs-review-and-comparison",
+              "url": "https://www.youtube.com/watch?v=UUulOaBSG1A",
+              "witness": "firsthand",
+              "quote": "you know which lenses for you if there's a difference between them keep in mind that you can download all of these unedited JPEG files uh basically they're raw files and I'm going to export them to jpegs not making any c…"
+            },
+            {
+              "source_id": "youtube-theyo-larbi-nikkor-85mm-f18-review-and-tests",
+              "url": "https://www.youtube.com/watch?v=Aj0sBzitNkU",
+              "witness": "unattested",
+              "quote": "making your subjects pop in every shot and with that 85 millimeter telephoto zoomed in the lens you wouldn't have to be so uncomfortably close to your subject just to take pictures of them image quality is also impressiv…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.5,
+          "pos": 1,
+          "neg": 3,
+          "total": 4,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-theyo-larbi-nikkor-85mm-f18-review-and-tests",
+              "url": "https://www.youtube.com/watch?v=Aj0sBzitNkU",
+              "witness": "firsthand",
+              "quote": "issue carrying this around while not entirely metal the lens still features a solid build quality that's durable and can withstand regular use we have the manual Auto and fully manual slider on the side the lens mount in…"
+            },
+            {
+              "source_id": "youtube-alex-lynch-nikon-85mm-f18g-hands-on-review",
+              "url": "https://www.youtube.com/watch?v=HLeqX1ucxBg",
+              "witness": "unattested",
+              "quote": "is pretty good and it's pretty solid the focus ring feels very nice and it has a rubber finish but the whole lens is just plastic though that also means it's lighter while still having weather ceiling and the rubber gask…"
+            },
+            {
+              "source_id": "youtube-critical-reviews-nikon-85mm-f18g-af-s-10-reasons-you-shouldnt-buy-it",
+              "url": "https://www.youtube.com/watch?v=3tr7oARcxDs",
+              "witness": "unattested",
+              "quote": "Although it has a premium look, the lens is primarily made of plastic."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 2,
+          "total": 4,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-alex-lynch-nikon-85mm-f18g-hands-on-review",
+              "url": "https://www.youtube.com/watch?v=HLeqX1ucxBg",
+              "witness": "unattested",
+              "quote": "controlled and you won't really notice it except for where there's very harsh contrast in areas where it's not in Focus so as you can see in this picture right here where things aren't perfectly in Focus you'll get quite…"
+            },
+            {
+              "source_id": "youtube-critical-reviews-nikon-85mm-f18g-af-s-10-reasons-you-shouldnt-buy-it",
+              "url": "https://www.youtube.com/watch?v=3tr7oARcxDs",
+              "witness": "unattested",
+              "quote": "Reason number two, chromatic aberration."
+            },
+            {
+              "source_id": "youtube-theyo-larbi-nikkor-85mm-f18-review-and-tests",
+              "url": "https://www.youtube.com/watch?v=Aj0sBzitNkU",
+              "witness": "unattested",
+              "quote": "with and the last thing is with chromatic aberrations or purple fringing when it comes to shooting at White apertures now if the situation you're shooting doesn't have that harsh contrast then you have absolutely no issu…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": -0.3333,
+          "pos": 1,
+          "neg": 2,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-david-saylors-nikon-85mm-f18d-lens-review",
+              "url": "https://www.youtube.com/watch?v=mUo0CPvqAw8",
+              "witness": "firsthand",
+              "quote": "here just fine but at the end of the day I can recommend this lens from my real world experience with it works great it is a prime lens so you know you have to zoom with your feet so be ready for that as far as the lens …"
+            },
+            {
+              "source_id": "youtube-critical-reviews-nikon-85mm-f18g-af-s-10-reasons-you-shouldnt-buy-it",
+              "url": "https://www.youtube.com/watch?v=3tr7oARcxDs",
+              "witness": "unattested",
+              "quote": "While great for portraits, it lacks the versatility of zoom lenses, making it less suitable for dynamic shooting environments."
+            },
+            {
+              "source_id": "youtube-theyo-larbi-nikkor-85mm-f18-review-and-tests",
+              "url": "https://www.youtube.com/watch?v=Aj0sBzitNkU",
+              "witness": "unattested",
+              "quote": "no exception the 85 mil F 1.8 feels solid in the hands with a mount and a smooth yet firm Focus ring it's a lot comfortable to use note that there's no weather sealing on this so don't take it out too much in unfavorable…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "optical_performance",
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): optical_performance, build, chromatic_aberration, handling"
+      ],
+      "rank": 16
+    }
+  ],
+  "excluded": [
+    {
+      "card_id": "om-system-12-40mm-f2-8",
+      "display_name": "OM SYSTEM 12 40mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 40"
+      ]
+    },
+    {
+      "card_id": "sony-35mm-f2-8",
+      "display_name": "Sony 35mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "canon-35mm-f1-4",
+      "display_name": "Canon 35mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "nikon-16-50mm-f2-8",
+      "display_name": "Nikon 16 50mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "leica-50mm-f1-4",
+      "display_name": "Leica 50mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "sigma-35mm-f1-2-dg-dn-art",
+      "display_name": "Sigma 35mm F1.2 DG DN Art",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "canon-45mm-f1-2",
+      "display_name": "Canon 45mm f1.2",
+      "reasons": [
+        "require focal_length_mm >= 70: got 45"
+      ]
+    },
+    {
+      "card_id": "sony-fe-35mm-f1-4-gm",
+      "display_name": "Sony FE 35mm F1.4 GM",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "leica-50mm-f2",
+      "display_name": "Leica 50mm f2",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "zeiss-35mm-f1-4",
+      "display_name": "Zeiss 35mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "olympus-12mm-f2",
+      "display_name": "Olympus 12mm f2",
+      "reasons": [
+        "require focal_length_mm >= 70: got 12"
+      ]
+    },
+    {
+      "card_id": "canon-50mm-f2-5",
+      "display_name": "Canon 50mm f2.5",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "sigma-14-24mm-f2-8",
+      "display_name": "Sigma 14 24mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 24"
+      ]
+    },
+    {
+      "card_id": "sony-16-25mm-f2-8",
+      "display_name": "Sony 16 25mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 25"
+      ]
+    },
+    {
+      "card_id": "sony-12-24mm-f2-8",
+      "display_name": "Sony 12 24mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 24"
+      ]
+    },
+    {
+      "card_id": "sony-50mm-f2-8",
+      "display_name": "Sony 50mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "sigma-56mm-f1-4",
+      "display_name": "Sigma 56mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 56"
+      ]
+    },
+    {
+      "card_id": "nikon-28mm-f2-8",
+      "display_name": "Nikon 28mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 28"
+      ]
+    },
+    {
+      "card_id": "panasonic-lumix-s-35mm",
+      "display_name": "Panasonic lumix s 35mm",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "canon-50mm-f1-8",
+      "display_name": "Canon 50mm f1.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 50"
+      ]
+    },
+    {
+      "card_id": "sigma-35mm-f1-4",
+      "display_name": "Sigma 35mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "canon-16mm-f2-8",
+      "display_name": "Canon 16mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 16"
+      ]
+    },
+    {
+      "card_id": "fujifilm-16mm-f2-8",
+      "display_name": "Fujifilm 16mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 16"
+      ]
+    },
+    {
+      "card_id": "rokinon-35mm",
+      "display_name": "Rokinon 35mm",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "olympus-60mm-f2-8",
+      "display_name": "Olympus 60mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 60"
+      ]
+    },
+    {
+      "card_id": "tamron-12-20mm-f2-8",
+      "display_name": "Tamron 12 20mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 20"
+      ]
+    },
+    {
+      "card_id": "sigma-35-art-dg-dn-ii",
+      "display_name": "Sigma 35mm f/1.4 DG DN Art II",
+      "reasons": [
+        "require focal_length_mm >= 70: got 35"
+      ]
+    },
+    {
+      "card_id": "sigma-23mm-f1-4",
+      "display_name": "Sigma 23mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 70: got 23"
+      ]
+    }
+  ],
+  "pending_backfill": [
+    {
+      "card_id": "gopro-hero11",
+      "display_name": "GoPro hero11",
+      "unknowns": [
+        "focal_length_mm: focal_length_mm not present on card"
+      ]
+    },
+    {
+      "card_id": "dji-dji-air-2s-da2sue1",
+      "display_name": "DJI DJI Air 2S DA2SUE1",
+      "unknowns": [
+        "focal_length_mm: focal_length_mm not present on card"
+      ]
+    }
+  ],
+  "counts": {
+    "in_scope": 46,
+    "ranked": 16,
+    "excluded": 28,
+    "pending_backfill": 2
+  }
+}
