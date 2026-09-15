@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/K4AAAeSwmA5qbGwJ/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "ZV-E10"
   },
   "pricing": {
     "msrp_usd": null,
@@ -6908,19 +6909,372 @@
         "anchor": 343,
         "anchor_source": "wikidata",
         "unit": "g"
+      },
+      "weight_with_battery_g": {
+        "value": "343 g (12.1 oz) (including battery pack, SD card)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "115.2 × 64.2 × 44.8 mm | 4 5/8 × 2 5/8 × 1 13/16 in.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Sony E-mount lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_format": {
+        "value": "APS-C size (23.5 mm × 15.6 mm), CMOS image sensor",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Approx. 24 200 000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "raw_formats": {
+        "value": "JPEG (DCF Ver. 2.0, Exif Ver. 2.32, MPF Baseline) compliant, RAW (Sony ARW 2.3 format)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_resolution_dots": {
+        "value": "921 600 dots",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "Still images: 1/4 000 second to 30 seconds, BULB Movies: 1/4 000 second to 1/4 second (1/3 EV step) | 1080 60p-compatible devices: up to 1/60 second in AUTO mode (up to 1/30 second in Auto slow shutter mode) 1080 50p-compatible devices: up to 1/50 second in AUTO mode (up to 1/25 second in Auto slow shutter mode)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "video_codecs": {
+        "value": "MPEG-4 AVC/H.264 XAVC S ver.1.0 format compliant | Video: MPEG-4 AVC/H.264 | Audio: LPCM 2ch (48 kHz 16 bit)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "af_low_light_ev": {
+        "value": "–3 EV to +20 EV (at ISO 100 equivalent, F2.0)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "usb": {
+        "value": "SuperSpeed USB 5Gbps (USB 3.2)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI type D micro jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "audio_io": {
+        "value": "Ø 3.5 mm Stereo mini jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "wireless": {
+        "value": "IEEE 802.11 b/g/n",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.weight": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q119877840",
-        "fetched_at": "2026-08-24T11:12:17.448165+00:00",
+        "fetched_at": "2026-09-15T16:58:18.606618+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.weight_with_battery_g": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Mass (Approx.)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Power, general]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (W/H/D) (Approx.)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Power, general]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[System]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_format": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Image format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Image sensor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixel number of camera",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Image sensor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.raw_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "File format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Recording format]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.lcd_resolution_dots": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Total number of dots",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Monitor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Speed range",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Shutter]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.video_codecs": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Movie (XAVC S format)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Recording format]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.af_low_light_ev": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Sensitivity Range",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Auto focus system]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.usb": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "USB Type-C terminal",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "slot_name"
+        }
+      },
+      "specs.audio_io": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "(Microphone) terminal",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.wireless": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
+        "fetched_at": "2026-09-15T16:58:18.543759+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Supported format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Wireless LAN]"
+          ],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q119877840",
+        "fetched_at": "2026-09-15T16:58:18.606618+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/K4AAAeSwmA5qbGwJ/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_ZV-E10_with_Sony_E_16-50mm_F3.5-5.6_OSS_PZ_-_by_Henry_Söderlund_(51375243603).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about connectivity (77% positive, 18% neutral, 5% negative across 22 claims). The most criticism lands on burst & buffer: 28% positive, 30% neutral, 42% negative across 57 claims. Opinion is split on EVF & LCD (18 positive, 17 neutral, 11 negative claims).",

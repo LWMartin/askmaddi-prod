@@ -4828,6 +4828,94 @@
         "anchor": null,
         "anchor_source": "",
         "unit": ""
+      },
+      "weight_g": {
+        "value": "L-Mount：615g / 21.7oz. Canon RF Mount：625g / 22.0oz. FUJIFILM X Mount：615g / 21.7oz. Sony E-mount：615g / 21.7oz.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "L-Mount：φ73.8mm x 121.4mm / φ2.9in. x 4.8in. Canon RF Mount：φ73.8mm x 121.4mm / φ2.9in. x 4.8in. FUJIFILM X Mount：φ73.8mm x 123.7mm / φ2.9in. x 4.9in. Sony E-mount：φ73.8mm x 123.4mm / φ2.9in. x 4.9in.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "L-Mount,Canon RF Mount,FUJIFILM X Mount,Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "coverage": {
+        "value": "APS-C [DC]",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "min_aperture": {
+        "value": "F22-45",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "optical_construction": {
+        "value": "20 elements in 14 groups (1 FLD, 4 SLD, 4 aspherical elements)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "angle_of_view_deg": {
+        "value": "L-Mount：83.2-5.4° Canon RF Mount：79.9-5.1° FUJIMILM X Mount：83.2-5.4° Sony E-mount：83.2-5.4°",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "min_focus_distance_cm": {
+        "value": "17(W)-105(T)cm / 6.7(W)-41.4(T)in.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_magnification": {
+        "value": "1:2 at f=70mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "diaphragm_blades": {
+        "value": "9 (rounded diaphragm)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "filter_thread_mm": {
+        "value": "φ67mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
@@ -4853,6 +4941,138 @@
           "key": "model",
           "section": [],
           "via": "designation"
+        }
+      },
+      "specs.weight_g": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (Diameter × Length)",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Corresponding Mount",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.coverage": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Sensor Format",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.min_aperture": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Minimum Aperture",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.optical_construction": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens Construction",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.angle_of_view_deg": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Angle of View",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.min_focus_distance_cm": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Minimum Focusing Distance",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.max_magnification": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Maximum Magnification Ratio",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.diaphragm_blades": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Number of Diaphragm Blades",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.filter_thread_mm": {
+        "source": "manufacturer",
+        "url": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
+        "fetched_at": "2026-09-15T16:58:10.430776+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Filter Size",
+          "section": [],
+          "via": "alias"
         }
       }
     },

@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/tbAAAOSw5XdjWMb0/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "ILME-FX3"
   },
   "pricing": {
     "msrp_usd": null,
@@ -6012,7 +6013,119 @@
         "unit": "g"
       },
       "mount": {
-        "value": "Sony E-mount",
+        "value": "Sony E-mount lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_with_battery_g": {
+        "value": "715 g (1 lb 9.3 oz) (including battery pack, SD card)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "129.7 × 77.8 × 84.5 mm 5 1/8 × 3 1/8 × 3 3/8 in.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_format": {
+        "value": "35 mm full frame (35.6 mm × 23.8 mm), CMOS image sensor",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Approx. 12 100 000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "raw_formats": {
+        "value": "JPEG (compliant with DCF Ver. 2.0, Exif Ver. 2.32, and MPF Baseline), HEIF (MPEG-A MIAF compliant), RAW (Sony ARW 5.0 format compliant)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "ibis": {
+        "value": "In-camera sensor shift image stabilization system",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_resolution_dots": {
+        "value": "1 440 000 dots",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "Still images: 1/8 000 second to 30 seconds, BULB Movies: 1/8 000 second to 1/4 second (1/3 EV step) In AUTO mode 60p-compatible devices: up to 1/60 second (up to 1/30 second in Auto slow shutter mode) 50p-compatible devices: up to 1/50 second (up to 1/25 second in Auto slow shutter mode) When [Shutter Mode] is set to [Angle] 5.6° to 64F (5.6° to 360° when [Rec Frame Rate] is set to [119.88p] / [100p] or when shooting slow-motion/quick-motion movies)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "video_codecs": {
+        "value": "XAVC Ver2.1: MP4 format compliant | Video: MPEG-H HEVC/H.265 | Audio: LPCM 2ch (48 kHz 16 bit), LPCM 4ch (48 kHz 24 bit) *1 , LPCM 2ch (48 kHz 24 bit) *1 , MPEG-4 AAC-LC 2ch *2",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "af_low_light_ev": {
+        "value": "–6 EV to +20 EV (at ISO 100 equivalent, F2.0)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "usb": {
+        "value": "SuperSpeed USB 5 Gbps (USB 3.2) | Compatible with USB Power Delivery",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI type A jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "audio_io": {
+        "value": "Ø 3.5 mm Stereo mini jack",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "wireless": {
+        "value": "IEEE 802.11 a/b/g/n/ac",
         "low": null,
         "high": null,
         "anchor": null,
@@ -6024,21 +6137,278 @@
       "specs.weight": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q105883413",
-        "fetched_at": "2026-08-28T19:37:48.512675+00:00",
+        "fetched_at": "2026-09-15T16:58:15.840080+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       },
       "specs.mount": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Lens",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[System]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.weight_with_battery_g": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Mass (Approx.)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Power, general]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dimensions (W/H/D) (Approx.)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Power, general]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_format": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Image format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Image sensor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixel number of camera",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Image sensor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.raw_formats": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "File format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Recording format]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.ibis": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "System",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[SteadyShot]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.lcd_resolution_dots": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Total number of dots",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Monitor]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Speed range",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Shutter]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.video_codecs": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Movie (XAVC HS format)",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Recording format]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.af_low_light_ev": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Sensitivity Range",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Auto focus system]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.usb": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "USB Type-C terminal",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "slot_name"
+        }
+      },
+      "specs.audio_io": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "​ (Microphone) terminal",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Input/output terminals]"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.wireless": {
+        "source": "manufacturer",
+        "url": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
+        "fetched_at": "2026-09-15T16:58:15.777436+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Supported format",
+          "section": [
+            "Specifications",
+            "Camera",
+            "[Wireless LAN]"
+          ],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q105883413",
-        "fetched_at": "2026-08-28T19:37:48.512675+00:00",
+        "fetched_at": "2026-09-15T16:58:15.840080+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Sony E-mount lens",
+        "divergent": "Sony E-mount",
+        "canonical_source": "manufacturer",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/tbAAAOSw5XdjWMb0/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_FX3_with_Sony_FE_24mm_F1.4_GM_-_by_Henry_Söderlund_(51061907312,_cropped).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about build quality (64% positive, 18% neutral, 18% negative across 22 claims). The most criticism lands on EVF & LCD: 19% positive, 49% neutral, 32% negative across 53 claims. Opinion is split on image quality (16 positive, 18 neutral, 15 negative claims).",
