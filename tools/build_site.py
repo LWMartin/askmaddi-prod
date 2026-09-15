@@ -1258,10 +1258,17 @@ def render_page(card, image_url=None, surface_map=None):
         _more.append(f'<a href="/specs/{esc(_cid)}/">Specs, answered</a>')
     if _sm.get("fit"):
         _more.append(f'<a href="/fit/{esc(_cid)}/">Use-case fit</a>')
+    # Per-axis "reviewer takes" pages — one link each, the card carrying crawl
+    # authority out to its long-tail aspect pages.
+    _aspect_links = [
+        f'<a href="/aspect/{esc(_cid)}/{esc(a)}/">{esc(a.replace("_", " "))}</a>'
+        for a in (_sm.get("aspects") or [])]
     surface_footer_html = (
         (f'<div class="card-featured-in">Featured in: {" · ".join(_feat)}</div>' if _feat else "")
         + (f'<div class="card-more-surfaces">More on the {esc(name)}: {" · ".join(_more)}</div>'
-           if _more else ""))
+           if _more else "")
+        + (f'<div class="card-aspect-takes">Reviewer takes: {" · ".join(_aspect_links)}</div>'
+           if _aspect_links else ""))
 
     fresh = card.get("freshness", {}) or {}
     source_count = fresh.get("source_count", len(card.get("sources", [])))
@@ -3029,19 +3036,31 @@ def main():
         import build_spec_qa_pages as _sq
         import build_usecase_fit_pages as _uf
         import build_price_band_pages as _pb
+        import build_axis_pages as _ax
         _dp = _div.build_pages(cards, str(out), BASE_URL)
         _sp = _sq.build_pages(cards, str(out), BASE_URL)
         _fp = _uf.build_pages(cards, guides, str(out), BASE_URL)
+        # Per-axis micro-pages (/aspect/<cid>/<axis>/), evidence-gated. Returns
+        # absolute URLs; the per-card aspect list for the card→aspect inbound
+        # link is derived from the URL shape below.
+        _ap = _ax.build_pages(cards, str(out), BASE_URL)
         # Price-banded lists ("[category|guide] under $X"). Derived from pricing
         # the corpus already carries + the guide artifacts already loaded, so a
         # newly-built/priced card auto-appears in its bands on this whole-corpus
         # run — no per-card sorting step. Returns absolute URLs already.
         _pb_urls = _pb.build_pages(cards, guides, str(out), BASE_URL)
         surface_urls = (_surface_urls(_dp) + _surface_urls(_sp)
-                        + _surface_urls(_fp) + list(_pb_urls))
+                        + _surface_urls(_fp) + list(_pb_urls) + list(_ap))
         _div_ids = {_cid_of(x) for x in _dp}
         _spec_ids = {_cid_of(x) for x in _sp}
         _fit_ids = {_cid_of(x) for x in _fp}
+        # aspect URLs are /aspect/<cid>/<axis>/ — group axis_ids per card for the
+        # card→aspect inbound link ("Reviewer takes").
+        _aspect_by_cid = {}
+        for u in _ap:
+            parts = u.rstrip("/").split("/")
+            if len(parts) >= 2:
+                _aspect_by_cid.setdefault(parts[-2], []).append(parts[-1])
         for _c in cards:
             _cid = _c["card_id"]
             surface_map[_cid] = {
@@ -3050,11 +3069,13 @@ def main():
                 "divergence": _cid in _div_ids,
                 "specs": _cid in _spec_ids,
                 "fit": _cid in _fit_ids,
+                "aspects": sorted(_aspect_by_cid.get(_cid, [])),
             }
         written += [str(out / "where-they-split"), str(out / "specs"),
-                    str(out / "fit"), str(out / "under")]
+                    str(out / "fit"), str(out / "under"), str(out / "aspect")]
         print(f"  \u2713 surfaces \u2192 divergence {len(_dp)}, spec-Q&A {len(_sp)}, "
-              f"use-case-fit {len(_fp)}, price-band {len(_pb_urls)} page(s)")
+              f"use-case-fit {len(_fp)}, price-band {len(_pb_urls)}, "
+              f"aspect {len(_ap)} page(s)")
 
     for card in cards:
         cid = card["card_id"]
