@@ -5294,156 +5294,14 @@
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
       "rank": 31
-    },
-    {
-      "card_id": "olympus-12mm-f2",
-      "display_name": "Olympus 12mm f2",
-      "rankable": true,
-      "score": -1.5556,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 2,
-          "s": 0.2222,
-          "pos": 4,
-          "neg": 2,
-          "total": 9,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4444,
-          "top_sources": [
-            {
-              "source_id": "admiringlight-blog-olympus-m-zuiko-12mm-f2-review",
-              "url": "https://admiringlight.com/blog/olympus-m-zuiko-12mm-f2-review/",
-              "witness": "unattested",
-              "quote": "12mm f/2 is a wide angle lens, bordering on ultra-wide.&nbsp; It gives an equivalent field of view as that of a 24mm lens on a."
-            },
-            {
-              "source_id": "mirrorlessons-2013-04-24-olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens",
-              "url": "https://www.mirrorlessons.com/2013/04/24/olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens-for-micro-four-thirds/",
-              "witness": "unattested",
-              "quote": "point to invest in good wide angle lenses."
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "bokeh",
-          "weight": 2,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "mirrorlessons-2013-04-24-olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens",
-              "url": "https://www.mirrorlessons.com/2013/04/24/olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens-for-micro-four-thirds/",
-              "witness": "firsthand",
-              "quote": "sensor, I was concerned about the shallow depth of field and the bokeh."
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "af_noise",
-          "weight": 1,
-          "s": -1.0,
-          "pos": 0,
-          "neg": 1,
-          "total": 1,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -1.0,
-          "top_sources": [
-            {
-              "source_id": "mirrorlessons-2013-04-24-olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens",
-              "url": "https://www.mirrorlessons.com/2013/04/24/olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens-for-micro-four-thirds/",
-              "witness": "unattested",
-              "quote": "well, and the internal motor is silent enough."
-            }
-          ],
-          "axis_display": "AF Noise"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "admiringlight-blog-olympus-m-zuiko-12mm-f2-review",
-              "url": "https://admiringlight.com/blog/olympus-m-zuiko-12mm-f2-review/",
-              "witness": "unattested",
-              "quote": "The slight warm hue to the silver of the 12mm lens is not present on the 45mm, which is a much cooler silver gray color.&nbsp;."
-            }
-          ],
-          "axis_display": "Color Rendition"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": -1.0,
-          "pos": 0,
-          "neg": 1,
-          "total": 1,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -1.0,
-          "top_sources": [
-            {
-              "source_id": "mirrorlessons-2013-04-24-olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens",
-              "url": "https://www.mirrorlessons.com/2013/04/24/olympus-m-zuiko-12mm-f2-review-the-best-wide-angle-lens-for-micro-four-thirds/",
-              "witness": "unattested",
-              "quote": "months is that it produces some unpleasant purple fringing, especially if direct light hits the lens."
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "optical_performance",
-        "bokeh",
-        "af_noise",
-        "color_rendition",
-        "chromatic_aberration"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
-      ],
-      "rank": 32
     }
   ],
   "excluded": [
     {
-      "card_id": "canon-28-105mm-f3-5",
-      "display_name": "Canon 28 105mm f3.5",
+      "card_id": "canon-100-400mm-f5-6",
+      "display_name": "Canon 100 400mm f5.6",
       "reasons": [
-        "require max_aperture <= 2.8: got 3.5"
-      ]
-    },
-    {
-      "card_id": "sony-20-70mm-f4",
-      "display_name": "Sony 20 70mm f4",
-      "reasons": [
-        "require max_aperture <= 2.8: got 4"
+        "require max_aperture <= 2.8: got 5.6"
       ]
     },
     {
@@ -5454,22 +5312,22 @@
       ]
     },
     {
-      "card_id": "canon-100-400mm-f5-6",
-      "display_name": "Canon 100 400mm f5.6",
-      "reasons": [
-        "require max_aperture <= 2.8: got 5.6"
-      ]
-    },
-    {
-      "card_id": "sony-100-400mm-f4-5",
-      "display_name": "Sony 100 400mm f4.5",
-      "reasons": [
-        "require max_aperture <= 2.8: got 4.5"
-      ]
-    },
-    {
       "card_id": "canon-200-400mm-f4",
       "display_name": "Canon 200 400mm f4",
+      "reasons": [
+        "require max_aperture <= 2.8: got 4"
+      ]
+    },
+    {
+      "card_id": "canon-28-105mm-f3-5",
+      "display_name": "Canon 28 105mm f3.5",
+      "reasons": [
+        "require max_aperture <= 2.8: got 3.5"
+      ]
+    },
+    {
+      "card_id": "panasonic-70-200mm-f4",
+      "display_name": "Panasonic 70 200mm f4",
       "reasons": [
         "require max_aperture <= 2.8: got 4"
       ]
@@ -5482,8 +5340,15 @@
       ]
     },
     {
-      "card_id": "panasonic-70-200mm-f4",
-      "display_name": "Panasonic 70 200mm f4",
+      "card_id": "sony-100-400mm-f4-5",
+      "display_name": "Sony 100 400mm f4.5",
+      "reasons": [
+        "require max_aperture <= 2.8: got 4.5"
+      ]
+    },
+    {
+      "card_id": "sony-20-70mm-f4",
+      "display_name": "Sony 20 70mm f4",
       "reasons": [
         "require max_aperture <= 2.8: got 4"
       ]
@@ -5512,20 +5377,6 @@
       ]
     },
     {
-      "card_id": "gopro-hero11",
-      "display_name": "GoPro hero11",
-      "unknowns": [
-        "max_aperture: max_aperture not present on card"
-      ]
-    },
-    {
-      "card_id": "dji-dji-air-2s-da2sue1",
-      "display_name": "DJI DJI Air 2S DA2SUE1",
-      "unknowns": [
-        "max_aperture: max_aperture not present on card"
-      ]
-    },
-    {
       "card_id": "rokinon-35mm",
       "display_name": "Rokinon 35mm",
       "unknowns": [
@@ -5534,9 +5385,9 @@
     }
   ],
   "counts": {
-    "in_scope": 46,
-    "ranked": 32,
+    "in_scope": 43,
+    "ranked": 31,
     "excluded": 10,
-    "pending_backfill": 4
+    "pending_backfill": 2
   }
 }

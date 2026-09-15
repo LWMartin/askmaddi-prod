@@ -2460,24 +2460,31 @@
   ],
   "excluded": [
     {
-      "card_id": "om-system-12-40mm-f2-8",
-      "display_name": "OM SYSTEM 12 40mm f2.8",
+      "card_id": "canon-100-400mm-f5-6",
+      "display_name": "Canon 100 400mm f5.6",
       "reasons": [
-        "require focal_length_mm >= 50: got 40"
+        "require max_aperture <= 2.8: got 5.6"
       ]
     },
     {
-      "card_id": "sony-35mm-f2-8",
-      "display_name": "Sony 35mm f2.8",
+      "card_id": "canon-16mm-f2-8",
+      "display_name": "Canon 16mm f2.8",
       "reasons": [
-        "require focal_length_mm >= 50: got 35"
+        "require focal_length_mm >= 50: got 16"
       ]
     },
     {
-      "card_id": "canon-35mm-f1-4",
-      "display_name": "Canon 35mm f1.4",
+      "card_id": "canon-18-200mm-f3-5",
+      "display_name": "Canon 18 200mm f3.5",
       "reasons": [
-        "require focal_length_mm >= 50: got 35"
+        "require max_aperture <= 2.8: got 3.5"
+      ]
+    },
+    {
+      "card_id": "canon-200-400mm-f4",
+      "display_name": "Canon 200 400mm f4",
+      "reasons": [
+        "require max_aperture <= 2.8: got 4"
       ]
     },
     {
@@ -2488,8 +2495,8 @@
       ]
     },
     {
-      "card_id": "sigma-35mm-f1-2-dg-dn-art",
-      "display_name": "Sigma 35mm F1.2 DG DN Art",
+      "card_id": "canon-35mm-f1-4",
+      "display_name": "Canon 35mm f1.4",
       "reasons": [
         "require focal_length_mm >= 50: got 35"
       ]
@@ -2502,36 +2509,99 @@
       ]
     },
     {
-      "card_id": "sony-fe-35mm-f1-4-gm",
-      "display_name": "Sony FE 35mm F1.4 GM",
+      "card_id": "fujifilm-16mm-f2-8",
+      "display_name": "Fujifilm 16mm f2.8",
       "reasons": [
-        "require focal_length_mm >= 50: got 35"
+        "require focal_length_mm >= 50: got 16"
       ]
     },
     {
-      "card_id": "sony-20-70mm-f4",
-      "display_name": "Sony 20 70mm f4",
+      "card_id": "nikon-28mm-f2-8",
+      "display_name": "Nikon 28mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 50: got 28"
+      ]
+    },
+    {
+      "card_id": "om-system-12-40mm-f2-8",
+      "display_name": "OM SYSTEM 12 40mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 50: got 40"
+      ]
+    },
+    {
+      "card_id": "panasonic-70-200mm-f4",
+      "display_name": "Panasonic 70 200mm f4",
       "reasons": [
         "require max_aperture <= 2.8: got 4"
       ]
     },
     {
-      "card_id": "zeiss-35mm-f1-4",
-      "display_name": "Zeiss 35mm f1.4",
+      "card_id": "panasonic-lumix-s-35mm",
+      "display_name": "Panasonic lumix s 35mm",
       "reasons": [
         "require focal_length_mm >= 50: got 35"
       ]
     },
     {
-      "card_id": "olympus-12mm-f2",
-      "display_name": "Olympus 12mm f2",
+      "card_id": "rokinon-35mm",
+      "display_name": "Rokinon 35mm",
       "reasons": [
-        "require focal_length_mm >= 50: got 12"
+        "require focal_length_mm >= 50: got 35"
       ]
     },
     {
       "card_id": "sigma-14-24mm-f2-8",
       "display_name": "Sigma 14 24mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 50: got 24"
+      ]
+    },
+    {
+      "card_id": "sigma-16-300mm-f3-5",
+      "display_name": "Sigma 16 300mm f3.5",
+      "reasons": [
+        "require max_aperture <= 2.8: got 3.5"
+      ]
+    },
+    {
+      "card_id": "sigma-23mm-f1-4",
+      "display_name": "Sigma 23mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 50: got 23"
+      ]
+    },
+    {
+      "card_id": "sigma-35-art-dg-dn-ii",
+      "display_name": "Sigma 35mm f/1.4 DG DN Art II",
+      "reasons": [
+        "require focal_length_mm >= 50: got 35"
+      ]
+    },
+    {
+      "card_id": "sigma-35mm-f1-2-dg-dn-art",
+      "display_name": "Sigma 35mm F1.2 DG DN Art",
+      "reasons": [
+        "require focal_length_mm >= 50: got 35"
+      ]
+    },
+    {
+      "card_id": "sigma-35mm-f1-4",
+      "display_name": "Sigma 35mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 50: got 35"
+      ]
+    },
+    {
+      "card_id": "sony-100-400mm-f4-5",
+      "display_name": "Sony 100 400mm f4.5",
+      "reasons": [
+        "require max_aperture <= 2.8: got 4.5"
+      ]
+    },
+    {
+      "card_id": "sony-12-24mm-f2-8",
+      "display_name": "Sony 12 24mm f2.8",
       "reasons": [
         "require focal_length_mm >= 50: got 24"
       ]
@@ -2544,80 +2614,10 @@
       ]
     },
     {
-      "card_id": "sony-12-24mm-f2-8",
-      "display_name": "Sony 12 24mm f2.8",
-      "reasons": [
-        "require focal_length_mm >= 50: got 24"
-      ]
-    },
-    {
-      "card_id": "canon-18-200mm-f3-5",
-      "display_name": "Canon 18 200mm f3.5",
-      "reasons": [
-        "require max_aperture <= 2.8: got 3.5"
-      ]
-    },
-    {
-      "card_id": "canon-100-400mm-f5-6",
-      "display_name": "Canon 100 400mm f5.6",
-      "reasons": [
-        "require max_aperture <= 2.8: got 5.6"
-      ]
-    },
-    {
-      "card_id": "sony-100-400mm-f4-5",
-      "display_name": "Sony 100 400mm f4.5",
-      "reasons": [
-        "require max_aperture <= 2.8: got 4.5"
-      ]
-    },
-    {
-      "card_id": "canon-200-400mm-f4",
-      "display_name": "Canon 200 400mm f4",
+      "card_id": "sony-20-70mm-f4",
+      "display_name": "Sony 20 70mm f4",
       "reasons": [
         "require max_aperture <= 2.8: got 4"
-      ]
-    },
-    {
-      "card_id": "nikon-28mm-f2-8",
-      "display_name": "Nikon 28mm f2.8",
-      "reasons": [
-        "require focal_length_mm >= 50: got 28"
-      ]
-    },
-    {
-      "card_id": "panasonic-lumix-s-35mm",
-      "display_name": "Panasonic lumix s 35mm",
-      "reasons": [
-        "require focal_length_mm >= 50: got 35"
-      ]
-    },
-    {
-      "card_id": "sigma-16-300mm-f3-5",
-      "display_name": "Sigma 16 300mm f3.5",
-      "reasons": [
-        "require max_aperture <= 2.8: got 3.5"
-      ]
-    },
-    {
-      "card_id": "panasonic-70-200mm-f4",
-      "display_name": "Panasonic 70 200mm f4",
-      "reasons": [
-        "require max_aperture <= 2.8: got 4"
-      ]
-    },
-    {
-      "card_id": "sigma-35mm-f1-4",
-      "display_name": "Sigma 35mm f1.4",
-      "reasons": [
-        "require focal_length_mm >= 50: got 35"
-      ]
-    },
-    {
-      "card_id": "canon-16mm-f2-8",
-      "display_name": "Canon 16mm f2.8",
-      "reasons": [
-        "require focal_length_mm >= 50: got 16"
       ]
     },
     {
@@ -2628,15 +2628,8 @@
       ]
     },
     {
-      "card_id": "fujifilm-16mm-f2-8",
-      "display_name": "Fujifilm 16mm f2.8",
-      "reasons": [
-        "require focal_length_mm >= 50: got 16"
-      ]
-    },
-    {
-      "card_id": "rokinon-35mm",
-      "display_name": "Rokinon 35mm",
+      "card_id": "sony-35mm-f2-8",
+      "display_name": "Sony 35mm f2.8",
       "reasons": [
         "require focal_length_mm >= 50: got 35"
       ]
@@ -2649,6 +2642,13 @@
       ]
     },
     {
+      "card_id": "sony-fe-35mm-f1-4-gm",
+      "display_name": "Sony FE 35mm F1.4 GM",
+      "reasons": [
+        "require focal_length_mm >= 50: got 35"
+      ]
+    },
+    {
       "card_id": "tamron-12-20mm-f2-8",
       "display_name": "Tamron 12 20mm f2.8",
       "reasons": [
@@ -2656,42 +2656,18 @@
       ]
     },
     {
-      "card_id": "sigma-35-art-dg-dn-ii",
-      "display_name": "Sigma 35mm f/1.4 DG DN Art II",
+      "card_id": "zeiss-35mm-f1-4",
+      "display_name": "Zeiss 35mm f1.4",
       "reasons": [
         "require focal_length_mm >= 50: got 35"
       ]
-    },
-    {
-      "card_id": "sigma-23mm-f1-4",
-      "display_name": "Sigma 23mm f1.4",
-      "reasons": [
-        "require focal_length_mm >= 50: got 23"
-      ]
     }
   ],
-  "pending_backfill": [
-    {
-      "card_id": "gopro-hero11",
-      "display_name": "GoPro hero11",
-      "unknowns": [
-        "max_aperture: max_aperture not present on card",
-        "focal_length_mm: focal_length_mm not present on card"
-      ]
-    },
-    {
-      "card_id": "dji-dji-air-2s-da2sue1",
-      "display_name": "DJI DJI Air 2S DA2SUE1",
-      "unknowns": [
-        "max_aperture: max_aperture not present on card",
-        "focal_length_mm: focal_length_mm not present on card"
-      ]
-    }
-  ],
+  "pending_backfill": [],
   "counts": {
-    "in_scope": 46,
+    "in_scope": 43,
     "ranked": 14,
-    "excluded": 30,
-    "pending_backfill": 2
+    "excluded": 29,
+    "pending_backfill": 0
   }
 }
