@@ -3028,10 +3028,17 @@ def main():
         import build_divergence_pages as _div
         import build_spec_qa_pages as _sq
         import build_usecase_fit_pages as _uf
+        import build_price_band_pages as _pb
         _dp = _div.build_pages(cards, str(out), BASE_URL)
         _sp = _sq.build_pages(cards, str(out), BASE_URL)
         _fp = _uf.build_pages(cards, guides, str(out), BASE_URL)
-        surface_urls = _surface_urls(_dp) + _surface_urls(_sp) + _surface_urls(_fp)
+        # Price-banded lists ("[category|guide] under $X"). Derived from pricing
+        # the corpus already carries + the guide artifacts already loaded, so a
+        # newly-built/priced card auto-appears in its bands on this whole-corpus
+        # run — no per-card sorting step. Returns absolute URLs already.
+        _pb_urls = _pb.build_pages(cards, guides, str(out), BASE_URL)
+        surface_urls = (_surface_urls(_dp) + _surface_urls(_sp)
+                        + _surface_urls(_fp) + list(_pb_urls))
         _div_ids = {_cid_of(x) for x in _dp}
         _spec_ids = {_cid_of(x) for x in _sp}
         _fit_ids = {_cid_of(x) for x in _fp}
@@ -3044,9 +3051,10 @@ def main():
                 "specs": _cid in _spec_ids,
                 "fit": _cid in _fit_ids,
             }
-        written += [str(out / "where-they-split"), str(out / "specs"), str(out / "fit")]
+        written += [str(out / "where-they-split"), str(out / "specs"),
+                    str(out / "fit"), str(out / "under")]
         print(f"  \u2713 surfaces \u2192 divergence {len(_dp)}, spec-Q&A {len(_sp)}, "
-              f"use-case-fit {len(_fp)} page(s)")
+              f"use-case-fit {len(_fp)}, price-band {len(_pb_urls)} page(s)")
 
     for card in cards:
         cid = card["card_id"]
