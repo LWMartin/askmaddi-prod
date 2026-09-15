@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "ILCE-7R"
   },
   "pricing": {
     "msrp_usd": null,
@@ -4568,7 +4569,7 @@
       "specs.weight": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q20653320",
-        "fetched_at": "2026-08-24T01:40:33.688212+00:00",
+        "fetched_at": "2026-09-15T15:59:00.678061+00:00",
         "license": "",
         "reason": "",
         "extraction": null
@@ -4576,7 +4577,7 @@
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q20653320",
-        "fetched_at": "2026-08-24T01:40:33.688212+00:00",
+        "fetched_at": "2026-09-15T15:59:00.678061+00:00",
         "license": "",
         "reason": "",
         "extraction": null
@@ -4584,13 +4585,30 @@
       "specs.material": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q20653320",
-        "fetched_at": "2026-08-24T01:40:33.688212+00:00",
+        "fetched_at": "2026-09-15T15:59:00.678061+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q20653320",
+        "fetched_at": "2026-09-15T15:59:00.678061+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Sony_Alpha_ILCE-7R_front_2014_CP+.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about sensor performance (67% positive, 21% neutral, 12% negative across 48 claims). The most criticism lands on battery life: 39% positive, 15% neutral, 46% negative across 33 claims. Opinion is split on handling (18 positive, 19 neutral, 15 negative claims).",

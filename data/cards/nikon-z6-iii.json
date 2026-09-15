@@ -11,7 +11,9 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/xD4AAeSwhDJqiG~t/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "gtin": "018208018901",
+    "mpn": "NIKON Z6_III"
   },
   "pricing": {
     "msrp_usd": null,
@@ -7330,7 +7332,7 @@
       "specs.weight_g": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7342,7 +7344,7 @@
       "specs.dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7354,7 +7356,7 @@
       "specs.sensor_dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7366,7 +7368,7 @@
       "specs.iso_native": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7378,7 +7380,7 @@
       "specs.shutter_speed_range": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7390,7 +7392,7 @@
       "specs.battery_model": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7402,7 +7404,7 @@
       "specs.card_formats": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7414,7 +7416,7 @@
       "specs.processor": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z6III?action=raw",
-        "fetched_at": "2026-08-26T07:08:20.159496+00:00",
+        "fetched_at": "2026-09-15T15:58:36.598434+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7482,9 +7484,34 @@
           "section": [],
           "via": "llm"
         }
+      },
+      "identity.gtin": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q126959969",
+        "fetched_at": "2026-09-15T15:58:36.609675+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q126959969",
+        "fetched_at": "2026-09-15T15:58:36.609675+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/xD4AAeSwhDJqiG~t/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikon_Z6III_13_jul_2024a.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about handling (60% positive, 26% neutral, 14% negative across 50 claims). The most criticism lands on sensor performance: 25% positive, 38% neutral, 37% negative across 122 claims. Opinion is split on autofocus (25 positive, 13 neutral, 15 negative claims).",

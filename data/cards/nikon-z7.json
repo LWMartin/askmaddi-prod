@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/j-QAAOSwIPhgyuee/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "NIKON Z 7"
   },
   "pricing": {
     "msrp_usd": null,
@@ -3527,19 +3528,196 @@
         "anchor": null,
         "anchor_source": "",
         "unit": ""
+      },
+      "weight_g": {
+        "value": "585g (body only)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "134 * 100.5 * 67.5 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_dimensions_mm": {
+        "value": "35.9 mm × 23.9 mm Full-frame",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "ISO 64–25600 (standard); ISO 32-102400 (expandable)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "30s - 1/8000s",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "EN-EL15b",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "1 × CFexpress Type B / XQD",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "Expeed 6",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q56239873",
-        "fetched_at": "2026-08-22T18:20:17.585796+00:00",
+        "fetched_at": "2026-09-15T15:58:39.647592+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "dimensions",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.sensor_dimensions_mm": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "sensor_size",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutter_speeds",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.card_formats": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "recording_medium",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.processor": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_Z7?action=raw",
+        "fetched_at": "2026-09-15T15:58:39.639432+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "iproc",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q56239873",
+        "fetched_at": "2026-09-15T15:58:39.647592+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/j-QAAOSwIPhgyuee/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikon_Z7.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about stabilization (69% positive, 5% neutral, 26% negative across 19 claims). The most criticism lands on autofocus: 41% positive, 23% neutral, 36% negative across 44 claims. Opinion is split on handling (22 positive, 8 neutral, 11 negative claims).",

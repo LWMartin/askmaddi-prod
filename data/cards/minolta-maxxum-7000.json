@@ -2394,7 +2394,16 @@
   "facts": {
     "specs": {},
     "provenance": {},
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/14kAAMXQOT5Q9x6f/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Minolta7000.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about handling (42% positive, 42% neutral, 16% negative across 26 claims). The most criticism lands on battery life: 27% positive, 27% neutral, 46% negative across 15 claims. Opinion is split on EVF & LCD (5 positive, 7 neutral, 7 negative claims).",

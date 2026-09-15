@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/lH4AAeSwrBFqhLgX/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "X-T200"
   },
   "pricing": {
     "msrp_usd": null,
@@ -4586,7 +4587,7 @@
       "specs.weight_g": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4598,7 +4599,7 @@
       "specs.dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4610,7 +4611,7 @@
       "specs.mount": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4622,7 +4623,7 @@
       "specs.sensor_dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4634,7 +4635,7 @@
       "specs.iso_native": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4646,7 +4647,7 @@
       "specs.evf_magnification": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4658,7 +4659,7 @@
       "specs.shutter_speed_range": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4670,7 +4671,7 @@
       "specs.battery_model": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4682,7 +4683,7 @@
       "specs.card_formats": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Fujifilm_X-T200?action=raw",
-        "fetched_at": "2026-08-28T20:35:19.667748+00:00",
+        "fetched_at": "2026-09-15T15:57:58.288643+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -4774,6 +4775,14 @@
           "section": [],
           "via": "llm"
         }
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q85116337",
+        "fetched_at": "2026-09-15T15:57:58.297772+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
       }
     },
     "conflicts": [
@@ -4784,6 +4793,14 @@
         "canonical_source": "wikipedia",
         "divergent_source": "wikidata",
         "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/lH4AAeSwrBFqhLgX/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Fujifilm_X-T200_9_feb_2020a.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
       }
     ]
   },

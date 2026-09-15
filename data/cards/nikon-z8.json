@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/HTwAAOSw2uZkmo2-/s-l1600.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "NIKON Z 8"
   },
   "pricing": {
     "msrp_usd": null,
@@ -1605,7 +1606,7 @@
       "specs.weight_g": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1617,7 +1618,7 @@
       "specs.dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1629,7 +1630,7 @@
       "specs.sensor_dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1641,7 +1642,7 @@
       "specs.iso_native": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1653,7 +1654,7 @@
       "specs.shutter_speed_range": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1665,7 +1666,7 @@
       "specs.battery_model": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1677,7 +1678,7 @@
       "specs.card_formats": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1689,7 +1690,7 @@
       "specs.processor": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
+        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1757,9 +1758,26 @@
           "section": [],
           "via": "llm"
         }
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q118287749",
+        "fetched_at": "2026-09-15T15:58:42.802242+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/HTwAAOSw2uZkmo2-/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikon_Z_8_27_may_2023b.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "",

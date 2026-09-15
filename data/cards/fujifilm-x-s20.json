@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/eb4AAOSwbFhlP9bb/s-l1600.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "X-S20"
   },
   "pricing": {
     "msrp_usd": null,
@@ -4869,7 +4870,79 @@
   "facts": {
     "specs": {
       "mount": {
-        "value": "Fujifilm X-mount",
+        "value": "Interchangeable lens",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": "491 g ; including battery and memory card",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "127.7 x 85.1 x 65.4 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_dimensions_mm": {
+        "value": "23.5 mm × 15.6 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "160–12800 (standard) ; 80–51200 (extended)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "evf_magnification": {
+        "value": "0.62× with 50 mm lens (35 mm format equivalent)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "4 s to 1/4000 s (mechanical), ; 4 s to 1/32000 s (electronic)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "NP-W235 Li-ion; (USB rechargeable)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "SD, SDHC, SDXC, UHS-II",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "X-Processor 5",
         "low": null,
         "high": null,
         "anchor": null,
@@ -4879,15 +4952,152 @@
     },
     "provenance": {
       "specs.mount": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "lens",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "dimensions",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.sensor_dimensions_mm": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "sensor_size",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.evf_magnification": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "magnification",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutter_speeds",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.card_formats": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "storage",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.processor": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Fujifilm_X-S20?action=raw",
+        "fetched_at": "2026-09-15T15:57:48.924212+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "iproc",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q118638176",
-        "fetched_at": "2026-09-01T15:30:47.552676+00:00",
+        "fetched_at": "2026-09-15T15:57:48.934937+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Interchangeable lens",
+        "divergent": "Fujifilm X-mount",
+        "canonical_source": "wikipedia",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/eb4AAOSwbFhlP9bb/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Fujifilm_X-S20_19_aug_2023a.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about handling (76% positive, 15% neutral, 9% negative across 53 claims). Coverage of connectivity is mostly neutral: 31% positive, 69% neutral, 0% negative across 16 claims.",

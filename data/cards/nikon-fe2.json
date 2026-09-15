@@ -2084,19 +2084,148 @@
         "anchor": null,
         "anchor_source": "",
         "unit": ""
+      },
+      "weight_g": {
+        "value": "550 g",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "142.5 × 57.5 × 90 mm (3.5 x 5.61 x 2.26 in)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "ISO 12 – 4000",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "evf_magnification": {
+        "value": "0.86x with 50 mm lens at infinity",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "8s – 1/4000s; M250 (mechanical 1/250s); Bulb (B)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "2x 1.5V LR44",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q3341827",
-        "fetched_at": "2026-08-24T02:17:35.628390+00:00",
+        "fetched_at": "2026-09-15T15:58:26.196486+00:00",
         "license": "",
         "reason": "",
         "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.dimensions_mm": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "dimensions",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.evf_magnification": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "magnification",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutterRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_FE2?action=raw",
+        "fetched_at": "2026-09-15T15:58:26.191979+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/piMAAeSwAzZqc~o2/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/NikonFE2blkfrt50f14.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about build quality (67% positive, 26% neutral, 7% negative across 27 claims). The most criticism lands on battery life: 27% positive, 46% neutral, 27% negative across 26 claims.",

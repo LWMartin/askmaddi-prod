@@ -7,7 +7,8 @@
     "brand": "Peak Design",
     "model": "Travel Tripod",
     "sku_alt_names": [
-      "PD Travel Tripod"
+      "PD Travel Tripod",
+      "TT-CB-5-150-AL-1"
     ],
     "category": "support",
     "subcategory": "tripod",
@@ -7154,7 +7155,7 @@
       "specs.weight_g": {
         "source": "manufacturer",
         "url": "https://www.peakdesign.com/products/travel-tripod",
-        "fetched_at": "2026-08-10T17:06:50.800400+00:00",
+        "fetched_at": "2026-09-15T15:58:47.373858+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7168,7 +7169,7 @@
       "specs.max_load_kg": {
         "source": "manufacturer",
         "url": "https://www.peakdesign.com/products/travel-tripod",
-        "fetched_at": "2026-08-10T17:06:50.800400+00:00",
+        "fetched_at": "2026-09-15T15:58:47.373858+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7182,7 +7183,7 @@
       "specs.leg_sections": {
         "source": "manufacturer",
         "url": "https://www.peakdesign.com/products/travel-tripod",
-        "fetched_at": "2026-08-10T17:06:50.800400+00:00",
+        "fetched_at": "2026-09-15T15:58:47.373858+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7196,7 +7197,7 @@
       "specs.leg_lock_type": {
         "source": "manufacturer",
         "url": "https://www.peakdesign.com/products/travel-tripod",
-        "fetched_at": "2026-08-10T17:06:50.800400+00:00",
+        "fetched_at": "2026-09-15T15:58:47.373858+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -7206,9 +7207,26 @@
           ],
           "via": "alias"
         }
+      },
+      "identity.sku_alt_names": {
+        "source": "manufacturer",
+        "url": "https://www.peakdesign.com/products/travel-tripod",
+        "fetched_at": "2026-09-15T15:58:47.373858+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://cdn.shopify.com/s/files/1/2986/1172/files/TTA-6-1.jpg?v=1762276006&width=700&height=700&crop=center",
+        "divergent": "https://cdn.shopify.com/s/files/1/2986/1172/files/Tripod-Hero-Aluminum_b18688b2-387f-4aa5-9508-0c23fa69e0f8.jpg?v=1727455502",
+        "canonical_source": "card",
+        "divergent_source": "manufacturer",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about build quality (76% positive, 18% neutral, 6% negative across 17 claims). The most criticism lands on foot versatility: 32% positive, 32% neutral, 36% negative across 50 claims. Opinion is split on head type (46 positive, 55 neutral, 29 negative claims).",

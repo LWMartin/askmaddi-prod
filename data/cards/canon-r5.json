@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "Canon EOS R5"
   },
   "pricing": {
     "msrp_usd": null,
@@ -5209,19 +5210,234 @@
         "anchor": null,
         "anchor_source": "",
         "unit": ""
+      },
+      "dimensions_mm": {
+        "value": "Approx. 138.5×97.5×88.0 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_dimensions_mm": {
+        "value": "Approx. 36.0×24.0 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": "Max. approx. 45.0 megapixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "ISO 100–51200 (in 1/3-stop, 1-stop increments)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_resolution_dots": {
+        "value": "Approx. 2,100,000 dots",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "LP-E6P / LP-E6NH / LP-E6N / LP-E6",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "af_low_light_ev": {
+        "value": "EV –6 to 20 (With an f/1.2 lens*, center AF point, One-Shot AF, at 23°C / 73°F, ISO 100)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "usb": {
+        "value": "USB Type-C",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "hdmi": {
+        "value": "HDMI micro OUT terminal (Type D) / CEC not supported",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q85750498",
-        "fetched_at": "2026-08-07T00:39:36.468952+00:00",
+        "fetched_at": "2026-09-15T15:57:36.157726+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "(W)×(H)×(D)",
+          "section": [
+            "Dimensions and weight"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.sensor_dimensions_mm": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Screen size",
+          "section": [
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.resolution_mp": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Effective pixels *1*2",
+          "section": [
+            "Image sensor"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.iso_native": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Normal ISO speed",
+          "section": [
+            "Exposure control"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.lcd_resolution_dots": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Dot count",
+          "section": [
+            "Screen"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Compatible battery packs",
+          "section": [
+            "Power source"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.af_low_light_ev": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Focusing brightness range (in still photo shooting)",
+          "section": [
+            "Autofocus"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.usb": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Terminal type",
+          "section": [
+            "External interface"
+          ],
+          "via": "alias"
+        }
+      },
+      "specs.hdmi": {
+        "source": "manufacturer",
+        "url": "https://cam.start.canon/en/C003/manual/html/UG-09_Reference_0100.html",
+        "fetched_at": "2026-09-15T15:57:36.077478+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "HDMI video / audio output",
+          "section": [
+            "HDMI output"
+          ],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q85750498",
+        "fetched_at": "2026-09-15T15:57:36.157726+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/vEgAAOSwpqFgLQ6L/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Canon_EOS_R5_(cropped).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about autofocus (79% positive, 11% neutral, 10% negative across 38 claims). The most criticism lands on battery life: 46% positive, 27% neutral, 27% negative across 15 claims.",

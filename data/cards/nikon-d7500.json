@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/mxIAAOSwr5Jjt6BQ/s-l1200.jpg",
-    "image_source": "ebay_catalog"
+    "image_source": "ebay_catalog",
+    "mpn": "NIKON D7500"
   },
   "pricing": {
     "msrp_usd": null,
@@ -3314,7 +3315,55 @@
   "facts": {
     "specs": {
       "mount": {
-        "value": "Nikon F-mount",
+        "value": "Interchangeable",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": "640 g body only",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "100–51,200 in 1, 1/2 or 1/3 EV steps (down to 50 and up to 1,640,000 as expansion)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "30 s – 1/8000 s, bulb",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "EN-EL15a",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "SD/SDHC/SDXC",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "EXPEED 5",
         "low": null,
         "high": null,
         "anchor": null,
@@ -3324,15 +3373,116 @@
     },
     "provenance": {
       "specs.mount": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "lens",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutterRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.card_formats": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "recording_medium",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.processor": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D7500?action=raw",
+        "fetched_at": "2026-09-15T15:58:18.567550+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "iproc",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q29368251",
-        "fetched_at": "2026-09-03T05:23:13.760951+00:00",
+        "fetched_at": "2026-09-15T15:58:18.573575+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Interchangeable",
+        "divergent": "Nikon F-mount",
+        "canonical_source": "wikipedia",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/mxIAAOSwr5Jjt6BQ/s-l1200.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikon_D7500_with_50mm_lens.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about sensor performance (68% positive, 19% neutral, 13% negative across 31 claims). The most criticism lands on EVF & LCD: 36% positive, 24% neutral, 40% negative across 33 claims. Opinion is split on handling (15 positive, 8 neutral, 13 negative claims).",

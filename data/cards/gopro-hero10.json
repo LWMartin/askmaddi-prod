@@ -6,7 +6,9 @@
     "display_name": "GoPro hero10",
     "brand": "GoPro",
     "model": "hero10",
-    "sku_alt_names": [],
+    "sku_alt_names": [
+      "CHDHX-101-master"
+    ],
     "category": "action_cam",
     "subcategory": "action-camera",
     "year_introduced": null,
@@ -3457,9 +3459,26 @@
           ],
           "via": "llm"
         }
+      },
+      "identity.sku_alt_names": {
+        "source": "manufacturer",
+        "url": "https://gopro.com/en/us/shop/cameras/hero10-black/CHDHX-101-master.html",
+        "fetched_at": "2026-09-15T15:58:00.681641+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/lJ0AAeSwgIBqggnC/s-l1600.jpg",
+        "divergent": "https://gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw9cb2b889/images/Product%20Images/cameras/CHDHX-101-master/compare-h10.png",
+        "canonical_source": "card",
+        "divergent_source": "manufacturer",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about field of view (73% positive, 24% neutral, 3% negative across 33 claims). The most criticism lands on battery & runtime: 27% positive, 27% neutral, 46% negative across 15 claims. Opinion is split on image quality (17 positive, 13 neutral, 9 negative claims). On video quality, 90% of the 19 sources covering it point the same direction.",

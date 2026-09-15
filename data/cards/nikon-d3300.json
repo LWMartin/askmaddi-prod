@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/vDIAAeSwNRJqjkQN/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "NIKON D3300"
   },
   "pricing": {
     "msrp_usd": null,
@@ -3466,7 +3467,47 @@
   "facts": {
     "specs": {
       "mount": {
-        "value": "Nikon F-mount",
+        "value": "Interchangeable, Nikon F-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": "410 g without battery, memory card or body cap",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "100–12800 in 1/3 EV steps, up to 25600 as Hi 1",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "30 s to 1/4000 s in 1/2 or 1/3 stops and Bulb, 1/200 s X-sync",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "Nikon EN-EL14a, EN-EL14 rechargeable Lithium-Ion battery",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "Secure Digital, SDHC and SDXC compatible, UHS-I bus",
         "low": null,
         "high": null,
         "anchor": null,
@@ -3476,15 +3517,104 @@
     },
     "provenance": {
       "specs.mount": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "lens",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutterRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.card_formats": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D3300?action=raw",
+        "fetched_at": "2026-09-15T15:58:09.077632+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "storage",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "identity.mpn": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q15678251",
-        "fetched_at": "2026-09-02T00:41:27.270275+00:00",
+        "fetched_at": "2026-09-15T15:58:09.083208+00:00",
         "license": "",
         "reason": "",
         "extraction": null
       }
     },
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Interchangeable, Nikon F-mount",
+        "divergent": "Nikon F-mount",
+        "canonical_source": "wikipedia",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/vDIAAeSwNRJqjkQN/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/2023_Nikon_D3300_(1).jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about build quality (44% positive, 17% neutral, 39% negative across 18 claims). The most criticism lands on EVF & LCD: 28% positive, 38% neutral, 34% negative across 32 claims. Opinion is split on sensor performance (22 positive, 11 neutral, 17 negative claims).",
