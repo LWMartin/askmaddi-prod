@@ -93,10 +93,27 @@ def _itemlist_jsonld(base_url, canonical, name, rows):
     }
 
 
+def _breadcrumb_jsonld(base_url, h1, canonical):
+    # Home → Gear by budget (/under/) → this band. All real served pages.
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home",
+             "item": abs_url(base_url, "/")},
+            {"@type": "ListItem", "position": 2, "name": "Gear by budget",
+             "item": abs_url(base_url, "/under/")},
+            {"@type": "ListItem", "position": 3, "name": h1, "item": canonical},
+        ],
+    }
+
+
 def _render(base_url, slug, title, h1, intro, rows, back=None):
     canonical = abs_url(base_url, f"/under/{slug}/")
     jsonld = json.dumps(_itemlist_jsonld(base_url, canonical, h1, rows),
                         indent=2, ensure_ascii=False).replace("</", "<\\/")
+    crumb = json.dumps(_breadcrumb_jsonld(base_url, h1, canonical),
+                       indent=2, ensure_ascii=False).replace("</", "<\\/")
     items = "\n".join(
         f'    <li><a href="{esc(abs_url(base_url, f"/cards/{cid}/"))}">{esc(nm)}</a>'
         f' <span class="pb-price">{esc(_money(price))} <em>{esc(ch)}</em></span></li>'
@@ -123,6 +140,9 @@ ul.pb-list{{list-style:none;padding:0}} ul.pb-list li{{padding:.5rem 0;border-bo
 </style>
 <script type="application/ld+json">
 {jsonld}
+</script>
+<script type="application/ld+json">
+{crumb}
 </script>
 </head>
 <body>

@@ -82,6 +82,22 @@ def _pick_quotes(sentiment, face_quote, reviewers):
     return rows[:MAX_QUOTES]
 
 
+def _breadcrumb_jsonld(base_url, cid, product, aspect, canonical):
+    # Home → Product → Aspect: every node is a REAL served page (no invented
+    # category), so the trail is honest — SERP breadcrumbs + crawl context.
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home",
+             "item": abs_url(base_url, "/")},
+            {"@type": "ListItem", "position": 2, "name": product,
+             "item": abs_url(base_url, f"/cards/{cid}/")},
+            {"@type": "ListItem", "position": 3, "name": aspect, "item": canonical},
+        ],
+    }
+
+
 def _jsonld(base_url, canonical, product, aspect, sent):
     # WebPage about the aspect + sourced COUNT notes (positive/negative), never a
     # rating (witness-stance). numberOfItems on the evidence, not a verdict.
@@ -115,6 +131,8 @@ def render_axis_page(card, ax, base_url):
         for q in quotes)
     jsonld = json.dumps(_jsonld(base_url, canonical, product, aspect, sent),
                         indent=2, ensure_ascii=False).replace("</", "<\\/")
+    crumb = json.dumps(_breadcrumb_jsonld(base_url, cid, product, aspect, canonical),
+                       indent=2, ensure_ascii=False).replace("</", "<\\/")
     title = f"{product} {aspect} — what reviewers say | AskMaddi"
     return f"""<!DOCTYPE html>
 <html lang="en">
@@ -135,6 +153,9 @@ h1{{font-size:1.4rem}} .ax-counts{{color:#333;background:#f6f6f6;padding:.6rem .
 </style>
 <script type="application/ld+json">
 {jsonld}
+</script>
+<script type="application/ld+json">
+{crumb}
 </script>
 </head>
 <body>

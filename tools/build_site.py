@@ -2122,6 +2122,21 @@ def write_llms_txt(out_dir, cards, guides=None):
             lines.append(line)
     lines += [
         "",
+        "## By budget",
+        "",
+        "> Same cards and guides, filtered by price ceiling — the "
+        "> \"[category] under $X\" and \"[use-case] under $X\" shape. A filter, "
+        "> not a ranking; each entry shows its actual price and channel.",
+        "",
+        f"- [Gear by budget]({BASE_URL}/under/): cameras & lenses under $500 /"
+        f" $1000 / $2000 / $3000, and each use-case guide filtered to a budget.",
+        "",
+        "## Reviewer takes by aspect",
+        "",
+        f"- Per-aspect syntheses at {BASE_URL}/aspect/<product>/<aspect>/ "
+        f"(e.g. autofocus, video, low-light): the sourced pos/mixed/critical "
+        f"counts and quotes for one product on one axis.",
+        "",
         "## Method",
         "",
         f"- [Why AskMaddi]({BASE_URL}/why.html): editorial philosophy",
@@ -2357,10 +2372,19 @@ _GUIDE_CSS = """
 """
 
 
-def render_guide(guide, cards_by_id):
+def render_guide(guide, cards_by_id, bands=None):
     disp = guide.get("display_name", "")
     gid = guide.get("id", "")
     canonical = f"{BASE_URL}/gear-for/{gid}/"
+    # Breadcrumb: Home → Gear guides (/gear-for/) → this guide. Real pages only.
+    breadcrumb_ld = json.dumps({
+        "@context": "https://schema.org", "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": abs_url("/")},
+            {"@type": "ListItem", "position": 2, "name": "Gear guides",
+             "item": abs_url("/gear-for/")},
+            {"@type": "ListItem", "position": 3, "name": disp, "item": canonical},
+        ]}, indent=2).replace("</", "<\\/")
     crit_names = [c["display"] for c in guide.get("criteria", [])]
     if len(crit_names) > 1:
         crit_phrase = ", ".join(crit_names[:-1]) + f" and {crit_names[-1]}"
@@ -2417,6 +2441,15 @@ def render_guide(guide, cards_by_id):
             f'{ctas}</li>')
     rank_html = '<ol class="g-rank">' + "".join(rank_items) + "</ol>"
 
+    # Guide → price-band cross-link (only bands that actually have a page).
+    band_html = ""
+    if bands:
+        blinks = " · ".join(
+            f'<a href="/under/{esc(gid)}-under-{b}/">under ${b:,}</a>'
+            for b in sorted(bands))
+        band_html = (f'<p class="g-budget">Shopping to a budget? {gear} for '
+                     f'{esc(disp.lower())} {blinks}.</p>')
+
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -2432,6 +2465,9 @@ def render_guide(guide, cards_by_id):
   <meta property="og:site_name" content="{SITE_NAME}">
   <script type="application/ld+json">
 {guide_jsonld(guide, canonical)}
+  </script>
+  <script type="application/ld+json">
+{breadcrumb_ld}
   </script>
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/css/maddi.css">
@@ -2453,6 +2489,7 @@ def render_guide(guide, cards_by_id):
       <section class="g-hero">
         <h1>{gear} for {esc(disp)}</h1>
         <p class="g-criteria-intro">{intro}</p>
+        {band_html}
       </section>
 
       <section class="card-section">
@@ -3015,6 +3052,7 @@ def main():
     guides = load_guides(args.guides_dir) if args.guides_dir else []
     surface_urls = []
     surface_map = {}
+    guide_bands = {}
     if args.cards_dir:
         def _surface_urls(items):
             urls = []
@@ -3051,6 +3089,15 @@ def main():
         _pb_urls = _pb.build_pages(cards, guides, str(out), BASE_URL)
         surface_urls = (_surface_urls(_dp) + _surface_urls(_sp)
                         + _surface_urls(_fp) + list(_pb_urls) + list(_ap))
+        # guide → which price-bands actually got a page, for the guide→band
+        # cross-link. Guide×band slugs carry "-for-" (cameras-FOR-wildlife-under-N);
+        # category slugs (cameras-under-N) do not, so they're excluded.
+        for u in _pb_urls:
+            slug = u.rstrip("/").rsplit("/", 1)[-1]
+            if "-for-" in slug and "-under-" in slug:
+                _g, _b = slug.rsplit("-under-", 1)
+                if _b.isdigit():
+                    guide_bands.setdefault(_g, []).append(int(_b))
         _div_ids = {_cid_of(x) for x in _dp}
         _spec_ids = {_cid_of(x) for x in _sp}
         _fit_ids = {_cid_of(x) for x in _fp}
@@ -3097,7 +3144,8 @@ def main():
             gdir = out / "gear-for" / gid
             gdir.mkdir(parents=True, exist_ok=True)
             gpage = gdir / "index.html"
-            gpage.write_text(render_guide(guide, cards_by_id), encoding="utf-8")
+            gpage.write_text(render_guide(guide, cards_by_id,
+                                          bands=guide_bands.get(gid)), encoding="utf-8")
             written.append(str(gpage))
             c = guide.get("counts", {})
             print(f"  ✓ guide {gid} → {gpage} "
