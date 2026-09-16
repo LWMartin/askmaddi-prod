@@ -70,6 +70,22 @@ _CATEGORY_MAP = {
                          # there is an id imprecision, which the guard reports as
                          # a NON-BREAKING notice (facet outside the settled
                          # body/lens/support regime), not a hard drift.
+    # ── drones (aerial vertical) ──
+    '179697': 'drone',   # Drones (Cameras & Photo > Drones) — the clean drone
+                         # leaf. Added 2026-09-16 after 54/66 DJI SKUs sat with
+                         # facet='' and two (dji-air-3, dji-mini-3) reached
+                         # review_ready built as vertical=photography with null
+                         # axes. Verified against the live spine: 83 SKUs carry
+                         # 179697 and ~all are genuine drones (DJI/HOVERAir/Autel/
+                         # Skydio); the lone non-drone (a Mavic 3 Classic *display
+                         # unit* listed under Drones) is an eBay listing
+                         # imprecision the publish-gate review still backstops.
+                         # NOTE the sibling leaf 182969 is DELIBERATELY NOT mapped:
+                         # it is mixed (dji-mini-3/air-3s drones BUT ALSO the RS 4
+                         # Mini *gimbal* and an Autel RTK *module*), so it abstains
+                         # to '' -> review, exactly the safety seam. Like
+                         # action_cam, drone is a VERTICAL bucket the eBay id only
+                         # advisorily derives (not in SETTLED_FACETS).
 }
 
 # The controlled buckets this module is allowed to emit (besides '' = unknown).
@@ -77,7 +93,7 @@ _CATEGORY_MAP = {
 # action_cam (and future vertical buckets) are derived by the vertical pipeline,
 # so the map is advisory there — the guard (test) hard-enforces only the settled
 # regime and reports vertical/unmapped cases as loud, non-breaking notices.
-CONTROLLED_CATEGORIES = ('body', 'lens', 'support', 'action_cam')
+CONTROLLED_CATEGORIES = ('body', 'lens', 'support', 'action_cam', 'drone')
 
 # The regime whose facets the eBay id AUTHORITATIVELY derives. A genuine
 # disagreement WITHIN this set is a hard drift (the guard fails). A facet outside

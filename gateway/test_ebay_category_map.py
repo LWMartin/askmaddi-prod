@@ -124,6 +124,33 @@ def test_action_cam_leaf_maps_and_is_controlled():
     assert 'action_cam' not in ecm.SETTLED_FACETS
 
 
+def test_drone_leaf_maps_and_is_controlled():
+    # 179697 (Cameras & Photo > Drones) is the clean drone leaf.
+    assert ecm.category_for('179697') == 'drone'
+    assert 'drone' in ecm.CONTROLLED_CATEGORIES
+    # ...but drone is a VERTICAL bucket, NOT part of the settled hard-guarded regime.
+    assert 'drone' not in ecm.SETTLED_FACETS
+
+
+def test_mixed_drone_leaf_182969_is_not_mapped():
+    # 182969 is deliberately unmapped: it carries drones AND a gimbal AND an RTK
+    # module in the live spine, so it must abstain to '' (review), never guess.
+    assert ecm.category_for('182969') == ''
+    assert ecm.is_known('182969') is False
+
+
+def test_reconcile_drone_is_advisory_notice_not_drift():
+    # A drone facet agrees outright with its leaf.
+    assert ecm.reconcile('drone', '179697') == 'ok'
+    # drone vs a settled bucket is a NON-BREAKING notice (map does not own drone).
+    assert ecm.reconcile('drone', '88433') == 'notice'
+    # The settled regime seeing the drone leaf is likewise only a notice, never
+    # a hard drift — the eBay id is at most advisory for the vertical.
+    assert ecm.reconcile('body', '179697') == 'notice'
+    # Unmapped id still abstains -> notice.
+    assert ecm.reconcile('drone', '99999999') == 'notice'
+
+
 def test_reconcile_settled_agreement_and_drift():
     # Agreement within the settled regime.
     assert ecm.reconcile('lens', '3323') == 'ok'
