@@ -3384,15 +3384,143 @@
         "anchor": 895,
         "anchor_source": "wikidata",
         "unit": "g"
+      },
+      "takeoff_weight_g": {
+        "value": null,
+        "low": 899,
+        "high": 899,
+        "anchor": 899,
+        "anchor_source": "curated",
+        "unit": "g"
+      },
+      "max_flight_time_min": {
+        "value": null,
+        "low": 46,
+        "high": 46,
+        "anchor": 46,
+        "anchor_source": "curated",
+        "unit": "min"
+      },
+      "max_transmission_km": {
+        "value": null,
+        "low": 15,
+        "high": 15,
+        "anchor": 15,
+        "anchor_source": "curated",
+        "unit": "km"
+      },
+      "sensor_size": {
+        "value": "4/3 CMOS (Hasselblad)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "5.1K (5120x2700)",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_frame_rate": {
+        "value": null,
+        "low": 200,
+        "high": 200,
+        "anchor": 200,
+        "anchor_source": "curated",
+        "unit": "fps"
+      },
+      "max_wind_ms": {
+        "value": null,
+        "low": 12,
+        "high": 12,
+        "anchor": 12,
+        "anchor_source": "curated",
+        "unit": "m/s"
+      },
+      "folded_dimensions": {
+        "value": "221x96.3x90.3 mm",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.weight": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q138608534",
-        "fetched_at": "2026-09-15T00:10:12.994342+00:00",
+        "fetched_at": "2026-09-21T21:27:49.068063+00:00",
         "license": "",
         "reason": "",
+        "extraction": null
+      },
+      "specs.takeoff_weight_g": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications",
+        "extraction": null
+      },
+      "specs.max_flight_time_min": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications",
+        "extraction": null
+      },
+      "specs.max_transmission_km": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications (O3+, FCC)",
+        "extraction": null
+      },
+      "specs.sensor_size": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications",
+        "extraction": null
+      },
+      "specs.max_frame_rate": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications - 1080p/200fps (highest fps at any resolution)",
+        "extraction": null
+      },
+      "specs.max_wind_ms": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications - Level 5 wind resistance",
+        "extraction": null
+      },
+      "specs.folded_dimensions": {
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-09-21",
+        "license": "",
+        "reason": "DJI Mavic 3 Cine official specifications (folded, without propellers)",
         "extraction": null
       }
     },
