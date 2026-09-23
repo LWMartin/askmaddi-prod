@@ -22,13 +22,13 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 53.99
+        "pre_owned": 58.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
       "sample_size": 5,
-      "price_updated_at": "2026-09-15T10:11:05.366275+00:00"
+      "price_updated_at": "2026-09-23T10:12:51.072783+00:00"
     },
     "price_updated_at": "2026-09-14T23:16:58.568490+00:00"
   },
@@ -2042,8 +2042,90 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "guide_number": {
+        "value": null,
+        "low": 60,
+        "high": 60,
+        "anchor": 60,
+        "anchor_source": "claude-search",
+        "unit": "m"
+      },
+      "power_source": {
+        "value": "4x AA",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "recycle_time_full": {
+        "value": null,
+        "low": 3,
+        "high": 3,
+        "anchor": 3,
+        "anchor_source": "claude-search",
+        "unit": "s"
+      },
+      "sync_speed_max": {
+        "value": "1/8000",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "s"
+      },
+      "wireless_channels": {
+        "value": null,
+        "low": 15,
+        "high": 15,
+        "anchor": 15,
+        "anchor_source": "claude-search",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.guide_number": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "GN 60 (m, ISO100 @200mm), via WebSearch of B&H product page — source: https://www.bhphotovideo.com/c/product/1311157-REG/yongnuo_yn600ex_rt_ii_speedlite_for.html",
+        "extraction": null
+      },
+      "specs.power_source": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4x AA batteries, via WebSearch of B&H product page — source: https://www.bhphotovideo.com/c/product/1311157-REG/yongnuo_yn600ex_rt_ii_speedlite_for.html",
+        "extraction": null
+      },
+      "specs.recycle_time_full": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "approx 3s full-power recycle, via WebSearch — source: https://www.bhphotovideo.com/c/product/1311157-REG/yongnuo_yn600ex_rt_ii_speedlite_for.html",
+        "extraction": null
+      },
+      "specs.sync_speed_max": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "HSS up to 1/8000s, via WebSearch of B&H product page — source: https://www.bhphotovideo.com/c/product/1311157-REG/yongnuo_yn600ex_rt_ii_speedlite_for.html",
+        "extraction": null
+      },
+      "specs.wireless_channels": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "2.4GHz 15-channel radio, via WebSearch of B&H product page — source: https://www.bhphotovideo.com/c/product/1311157-REG/yongnuo_yn600ex_rt_ii_speedlite_for.html",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

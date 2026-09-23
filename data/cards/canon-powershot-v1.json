@@ -22,15 +22,15 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "open_box": 699.95,
-        "pre_owned": 700.0,
-        "refurbished": 705.0
+        "refurbished": 699.2,
+        "open_box": 700.0,
+        "pre_owned": 700.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 22,
-      "price_updated_at": "2026-09-15T10:10:16.410201+00:00"
+      "sample_size": 24,
+      "price_updated_at": "2026-09-23T10:11:55.869973+00:00"
     },
     "price_updated_at": "2026-09-01T00:11:36.315396+00:00"
   },
@@ -5505,8 +5505,122 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "fps_mechanical": {
+        "value": null,
+        "low": 15,
+        "high": 15,
+        "anchor": 15,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "lcd_articulation": {
+        "value": "fully-articulated",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "3840x2160",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "processor": {
+        "value": "DIGIC X",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 22.3,
+        "high": 22.3,
+        "anchor": 22.3,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "1.4-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 426,
+        "high": 426,
+        "anchor": 426,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.fps_mechanical": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "15 fps continuous, photographyblog — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "vari-angle LCD (rotates 270deg), photographyblog — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K UHD, photographyblog + WebSearch agree — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "DIGIC X processor, photographyblog — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "22.3MP stills, photographyblog + WebSearch agree — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1.4-type CMOS sensor, photographyblog — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "426 g, photographyblog — source: https://www.photographyblog.com/reviews/canon_powershot_v1_review",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

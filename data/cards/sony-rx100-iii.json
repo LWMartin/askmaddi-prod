@@ -21,10 +21,15 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "pre_owned": 439.9,
+        "refurbished": 565.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 43,
+      "price_updated_at": "2026-09-23T10:12:47.755014+00:00"
     },
     "price_updated_at": "2026-09-15T10:06:53.994810+00:00"
   },
@@ -1153,8 +1158,106 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "evf_resolution_dots": {
+        "value": null,
+        "low": 1440000,
+        "high": 1440000,
+        "anchor": 1440000,
+        "anchor_source": "claude-search",
+        "unit": "dots"
+      },
+      "lcd_articulation": {
+        "value": "tilting",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "1920x1080",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 20.1,
+        "high": 20.1,
+        "anchor": 20.1,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "1-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 290,
+        "high": 290,
+        "anchor": 290,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.evf_resolution_dots": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1.44M-dot pop-up OLED EVF, photographyblog — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "180-degree tilting LCD, photographyblog — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1080/50p (no 4K on RX100 III), photographyblog — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "20.1MP, photographyblog + WebSearch agree — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1.0-type (13.2x8.8mm), photographyblog — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "290 g with battery+media, photographyblog — source: https://www.photographyblog.com/reviews/sony_cybershot_dsc_rx100_iii_review",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

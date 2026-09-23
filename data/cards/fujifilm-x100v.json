@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/VcUAAeSwZDpqNq8F/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "X100V"
   },
   "pricing": {
     "msrp_usd": null,
@@ -21,10 +22,16 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "pre_owned": 1290.0,
+        "refurbished": 1743.34,
+        "open_box": 1950.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 32,
+      "price_updated_at": "2026-09-23T10:12:05.478082+00:00"
     },
     "price_updated_at": "2026-09-15T06:59:24.987483+00:00"
   },
@@ -2055,9 +2062,156 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
-    "conflicts": []
+    "specs": {
+      "cipa_rating": {
+        "value": null,
+        "low": 350,
+        "high": 350,
+        "anchor": 350,
+        "anchor_source": "claude-search",
+        "unit": "shots"
+      },
+      "fps_mechanical": {
+        "value": null,
+        "low": 11,
+        "high": 11,
+        "anchor": 11,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "iso_native": {
+        "value": "160-12800",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_articulation": {
+        "value": "tilting",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "X-Processor 4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 26.1,
+        "high": 26.1,
+        "anchor": 26.1,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "APS-C",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 478,
+        "high": 478,
+        "anchor": 478,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q124998434",
+        "fetched_at": "2026-09-23T14:22:44.012805+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.cipa_rating": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "350 shots CIPA rating (50% flash), per neocamera spec table — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.fps_mechanical": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "11 fps continuous shooting, per neocamera spec table — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 160-12800 (expandable 80-51200); WebSearch and neocamera agree — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "3-inch tilting touchscreen LCD; WebSearch and neocamera agree — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "X-Processor 4 image processor; stated in WebSearch summary — source: https://www.photographyblog.com/reviews/fujifilm_x100v_review",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "26.1MP effective (26MP stated); WebSearch and neocamera agree — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "X-Trans BSI-CMOS 4, APS-C format; agreed by WebSearch summary and neocamera spec page — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "478 g including battery and card (CIPA), per neocamera spec table — source: https://www.neocamera.com/camera/fuji/x100v",
+        "extraction": null
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/VcUAAeSwZDpqNq8F/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Fujifilm_X100V_9_feb_2020b.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about sensor performance (40% positive, 48% neutral, 12% negative across 25 claims). Coverage of EVF & LCD is mostly neutral: 20% positive, 70% neutral, 10% negative across 20 claims.",

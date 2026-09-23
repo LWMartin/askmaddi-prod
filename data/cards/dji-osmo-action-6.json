@@ -21,10 +21,16 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {},
+      "bands": {
+        "refurbished": 298.0,
+        "pre_owned": 298.99,
+        "open_box": 499.0
+      },
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null
+      "affiliate_url": null,
+      "sample_size": 13,
+      "price_updated_at": "2026-09-23T10:11:58.704058+00:00"
     },
     "price_updated_at": "2026-09-15T14:42:34.497269+00:00"
   },
@@ -1726,8 +1732,122 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "battery_mah": {
+        "value": null,
+        "low": 1950,
+        "high": 1950,
+        "anchor": 1950,
+        "anchor_source": "claude-search",
+        "unit": "mAh"
+      },
+      "max_frame_rate": {
+        "value": null,
+        "low": 120,
+        "high": 120,
+        "anchor": 120,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "max_video_resolution": {
+        "value": "4K",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_size": {
+        "value": "1/1.1-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "stabilization_type": {
+        "value": "RockSteady / HorizonSteady",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "waterproof_depth_m": {
+        "value": null,
+        "low": 20,
+        "high": 20,
+        "anchor": 20,
+        "anchor_source": "claude-search",
+        "unit": "m"
+      },
+      "weight_g": {
+        "value": null,
+        "low": 149,
+        "high": 149,
+        "anchor": 149,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.battery_mah": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1950 mAh battery, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.max_frame_rate": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K/120fps, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K up to 120fps (4:3), via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.sensor_size": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1/1.1-type sensor, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.stabilization_type": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "electronic IS, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.waterproof_depth_m": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "waterproof to 20m without case, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "149 g, via WebSearch of DJI specs — source: https://www.dji.com/osmo-action-6/specs",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

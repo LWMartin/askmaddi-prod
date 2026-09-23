@@ -22,15 +22,15 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 700.0,
         "open_box": 950.0,
-        "refurbished": 892.8
+        "refurbished": 890.0,
+        "pre_owned": 799.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
       "sample_size": 10,
-      "price_updated_at": "2026-09-15T10:10:44.758487+00:00"
+      "price_updated_at": "2026-09-23T10:12:23.473122+00:00"
     },
     "price_updated_at": "2026-08-23T07:28:48.938171+00:00"
   },
@@ -3256,8 +3256,170 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "evf_resolution_dots": {
+        "value": null,
+        "low": 3600000,
+        "high": 3600000,
+        "anchor": 3600000,
+        "anchor_source": "claude-search",
+        "unit": "dots"
+      },
+      "fps_electronic": {
+        "value": null,
+        "low": 12,
+        "high": 12,
+        "anchor": 12,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "ibis": {
+        "value": true,
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "ibis_stops": {
+        "value": null,
+        "low": 6.5,
+        "high": 6.5,
+        "anchor": 6.5,
+        "anchor_source": "claude-search",
+        "unit": "stops"
+      },
+      "iso_native": {
+        "value": "200-25600",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_articulation": {
+        "value": "fully-articulated",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "4096x2160",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 20.3,
+        "high": 20.3,
+        "anchor": 20.3,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "Four-Thirds",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 647,
+        "high": 647,
+        "anchor": 647,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.evf_resolution_dots": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "3.6M-dot OLED EVF, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.fps_electronic": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "12 fps electronic, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.ibis": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "5-axis in-body IS, neocamera + WebSearch — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.ibis_stops": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "6.5-stop Dual IS 2, neocamera + WebSearch agree — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 200-25600, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "fully-articulated (rotating) LCD, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "C4K (4096x2160) @60p, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "20.3MP (neocamera lists 20MP), WebSearch — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "Four-Thirds Live MOS, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "647 g body, neocamera — source: https://www.neocamera.com/camera/panasonic/gh5ii",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

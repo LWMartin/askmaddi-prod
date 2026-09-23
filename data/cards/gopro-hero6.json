@@ -23,14 +23,14 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 70.0,
+        "pre_owned": 63.99,
         "open_box": 125.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 14,
-      "price_updated_at": "2026-09-15T10:10:25.713879+00:00"
+      "sample_size": 17,
+      "price_updated_at": "2026-09-23T10:12:07.418601+00:00"
     },
     "price_updated_at": "2026-08-26T16:57:43.816527+00:00"
   },
@@ -3318,7 +3318,40 @@
     }
   ],
   "facts": {
-    "specs": {},
+    "specs": {
+      "battery_mah": {
+        "value": null,
+        "low": 1220,
+        "high": 1220,
+        "anchor": 1220,
+        "anchor_source": "claude-search",
+        "unit": "mAh"
+      },
+      "max_video_resolution": {
+        "value": "4K",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "sensor_size": {
+        "value": "1/2.3-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "waterproof_depth_m": {
+        "value": null,
+        "low": 10,
+        "high": 10,
+        "anchor": 10,
+        "anchor_source": "claude-search",
+        "unit": "m"
+      }
+    },
     "provenance": {
       "identity.mpn": {
         "source": "wikidata",
@@ -3326,6 +3359,38 @@
         "fetched_at": "2026-09-15T15:58:01.554552+00:00",
         "license": "",
         "reason": "",
+        "extraction": null
+      },
+      "specs.battery_mah": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1220 mAh removable battery, via WebSearch — source: https://www.dpreview.com/products/gopro/actioncams/gopro_hero6_black/specifications",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K up to 60fps, dpreview + newsshooter agree — source: https://www.dpreview.com/products/gopro/actioncams/gopro_hero6_black/specifications",
+        "extraction": null
+      },
+      "specs.sensor_size": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1/2.3-type 12MP sensor, dpreview — source: https://www.dpreview.com/products/gopro/actioncams/gopro_hero6_black/specifications",
+        "extraction": null
+      },
+      "specs.waterproof_depth_m": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "waterproof to 10m (33ft) without housing, dpreview — source: https://www.dpreview.com/products/gopro/actioncams/gopro_hero6_black/specifications",
         "extraction": null
       }
     },

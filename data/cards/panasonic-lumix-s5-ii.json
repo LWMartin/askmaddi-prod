@@ -22,15 +22,15 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 1211.0,
-        "open_box": 1449.99,
-        "refurbished": 1400.3
+        "pre_owned": 1197.38,
+        "refurbished": 1372.08,
+        "open_box": 1449.99
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
       "sample_size": 30,
-      "price_updated_at": "2026-09-15T10:10:46.304360+00:00"
+      "price_updated_at": "2026-09-23T10:12:25.226418+00:00"
     },
     "price_updated_at": "2026-08-22T16:30:38.068703+00:00"
   },
@@ -6996,8 +6996,202 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "evf_resolution_dots": {
+        "value": null,
+        "low": 3680000,
+        "high": 3680000,
+        "anchor": 3680000,
+        "anchor_source": "claude-search",
+        "unit": "dots"
+      },
+      "fps_electronic": {
+        "value": null,
+        "low": 30,
+        "high": 30,
+        "anchor": 30,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "fps_mechanical": {
+        "value": null,
+        "low": 9,
+        "high": 9,
+        "anchor": 9,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "ibis": {
+        "value": true,
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "ibis_stops": {
+        "value": null,
+        "low": 5,
+        "high": 5,
+        "anchor": 5,
+        "anchor_source": "claude-search",
+        "unit": "stops"
+      },
+      "iso_native": {
+        "value": "100-51200",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_articulation": {
+        "value": "fully-articulated",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "5952x3968",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "processor": {
+        "value": "Venus Engine",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 24.2,
+        "high": 24.2,
+        "anchor": 24.2,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "full-frame",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 740,
+        "high": 740,
+        "anchor": 740,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.evf_resolution_dots": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "3.68M-dot EVF, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.fps_electronic": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "30 fps electronic shutter, Wikipedia + WebSearch agree — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.fps_mechanical": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "9 fps mechanical shutter, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.ibis": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "5-axis in-body stabilization present, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.ibis_stops": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "5-stop IBIS, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 100-51200, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "fully-articulating touchscreen LCD, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "6K open-gate (approx 5952x3968) up to 30p, Wikipedia + WebSearch — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "Venus Engine processor, Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "24.2MP, Wikipedia + WebSearch agree — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "full-frame sensor, Wikipedia + WebSearch agree — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "740 g incl. battery+card, Wikipedia + WebSearch agree — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_S5II",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

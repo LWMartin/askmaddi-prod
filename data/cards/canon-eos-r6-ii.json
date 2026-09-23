@@ -22,15 +22,15 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 1389.0,
-        "open_box": 1809.0,
-        "refurbished": 1678.0
+        "refurbished": 1648.25,
+        "pre_owned": 1369.0,
+        "open_box": 1729.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 26,
-      "price_updated_at": "2026-09-15T10:10:13.682564+00:00"
+      "sample_size": 23,
+      "price_updated_at": "2026-09-23T10:11:52.388646+00:00"
     },
     "price_updated_at": "2026-08-25T22:12:04.327536+00:00"
   },
@@ -4413,8 +4413,202 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "af_points": {
+        "value": null,
+        "low": 4897,
+        "high": 4897,
+        "anchor": 4897,
+        "anchor_source": "claude-search",
+        "unit": ""
+      },
+      "cipa_rating": {
+        "value": null,
+        "low": 760,
+        "high": 760,
+        "anchor": 760,
+        "anchor_source": "claude-search",
+        "unit": "shots"
+      },
+      "evf_resolution_dots": {
+        "value": null,
+        "low": 3690000,
+        "high": 3690000,
+        "anchor": 3690000,
+        "anchor_source": "claude-search",
+        "unit": "dots"
+      },
+      "fps_electronic": {
+        "value": null,
+        "low": 40,
+        "high": 40,
+        "anchor": 40,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "fps_mechanical": {
+        "value": null,
+        "low": 12,
+        "high": 12,
+        "anchor": 12,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "ibis": {
+        "value": true,
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "100-102400",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_articulation": {
+        "value": "fully-articulated",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "3840x2160",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 24,
+        "high": 24,
+        "anchor": 24,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "full-frame",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 680,
+        "high": 680,
+        "anchor": 680,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.af_points": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4897-point Dual Pixel CMOS AF II, neocamera — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.cipa_rating": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "760 shots CIPA, neocamera — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.evf_resolution_dots": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "3.69M-dot EVF (3.7MP), neocamera + WebSearch agree — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.fps_electronic": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "40 fps electronic shutter, neocamera + WebSearch agree — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.fps_mechanical": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "12 fps mechanical shutter, neocamera — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.ibis": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "in-body image stabilization present, neocamera + WebSearch — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 100-102400, neocamera + WebSearch agree — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "vari-angle rotating LCD (fully-articulated), neocamera — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K UHD @60fps, neocamera — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "24MP CMOS, neocamera + WebSearch agree — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "Full-Frame (36x24mm), neocamera + WebSearch agree — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "680 g, neocamera spec table — source: https://www.neocamera.com/camera/canon/r6markii",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

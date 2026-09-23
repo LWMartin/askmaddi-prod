@@ -22,15 +22,14 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 45.0,
-        "open_box": 83.99,
-        "refurbished": 139.99
+        "open_box": 74.99,
+        "pre_owned": 39.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 25,
-      "price_updated_at": "2026-09-15T10:10:28.607252+00:00"
+      "sample_size": 27,
+      "price_updated_at": "2026-09-23T10:12:10.104211+00:00"
     },
     "price_updated_at": "2026-09-09T15:54:04.171496+00:00"
   },
@@ -1088,8 +1087,138 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "construction_material": {
+        "value": "aluminum",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "folded_length_cm": {
+        "value": null,
+        "low": 40,
+        "high": 40,
+        "anchor": 40,
+        "anchor_source": "claude-search",
+        "unit": "cm"
+      },
+      "head_class": {
+        "value": "ball",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "head_included": {
+        "value": true,
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "leg_sections": {
+        "value": null,
+        "low": 4,
+        "high": 4,
+        "anchor": 4,
+        "anchor_source": "claude-search",
+        "unit": ""
+      },
+      "max_height_cm": {
+        "value": null,
+        "low": 144,
+        "high": 144,
+        "anchor": 144,
+        "anchor_source": "claude-search",
+        "unit": "cm"
+      },
+      "max_load_kg": {
+        "value": null,
+        "low": 4,
+        "high": 4,
+        "anchor": 4,
+        "anchor_source": "claude-search",
+        "unit": "kg"
+      },
+      "weight_g": {
+        "value": null,
+        "low": 1360,
+        "high": 1360,
+        "anchor": 1360,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.construction_material": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "aluminum alloy legs, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.folded_length_cm": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "15.75 in (40 cm) folded; Befree Compact Alu - VERIFY VARIANT, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.head_class": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "ball head, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.head_included": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "ball head included in kit, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.leg_sections": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4 leg sections, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.max_height_cm": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "56.7 in (144 cm) max height; Befree Compact Alu - VERIFY VARIANT, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.max_load_kg": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "8.8 lb (4 kg) load; base Befree Compact Aluminum (MKBFRA4) - VERIFY VARIANT, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "3 lb (1360 g); Befree Compact Alu - VERIFY VARIANT, via WebSearch — source: https://www.bhphotovideo.com/c/product/969739-REG/manfrotto_mkbfra4_bh_befree_compact_travel_photo.html",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {
