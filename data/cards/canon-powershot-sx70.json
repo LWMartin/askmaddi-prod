@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/OroAAeSwXDpqarC4/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "Canon PowerShot SX70 HS"
   },
   "pricing": {
     "msrp_usd": null,
@@ -23,13 +24,13 @@
       "source": "ebay",
       "bands": {
         "pre_owned": 388.0,
-        "open_box": 827.2
+        "open_box": 817.67
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 32,
-      "price_updated_at": "2026-09-15T10:10:15.878230+00:00"
+      "sample_size": 31,
+      "price_updated_at": "2026-09-23T10:11:55.349739+00:00"
     },
     "price_updated_at": "2026-08-23T08:14:43.883371+00:00"
   },
@@ -3300,8 +3301,130 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "fps_mechanical": {
+        "value": null,
+        "low": 10,
+        "high": 10,
+        "anchor": 10,
+        "anchor_source": "claude-search",
+        "unit": "fps"
+      },
+      "iso_native": {
+        "value": "100-3200",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_video_resolution": {
+        "value": "3840x2160",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "px"
+      },
+      "processor": {
+        "value": "DIGIC 8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 20.3,
+        "high": 20.3,
+        "anchor": 20.3,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "1/2.3-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "weight_g": {
+        "value": null,
+        "low": 608,
+        "high": 608,
+        "anchor": 608,
+        "anchor_source": "claude-search",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q140493759",
+        "fetched_at": "2026-09-23T14:22:36.864457+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.fps_mechanical": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "10 fps one-shot AF, via WebSearch of Canon — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 100-3200, via WebSearch of neocamera — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.max_video_resolution": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "4K UHD video, via WebSearch of Canon — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "DIGIC 8 processor, via WebSearch of Canon — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "20.3MP, via WebSearch of neocamera/Canon — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1/2.3-type CMOS, via WebSearch of neocamera/Canon — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      },
+      "specs.weight_g": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "608 g, via WebSearch of neocamera — source: https://www.neocamera.com/camera/canon/sx70hs",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

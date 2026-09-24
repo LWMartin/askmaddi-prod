@@ -11,7 +11,8 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/82YAAeSw371qYkDt/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_source": "ebay_listing",
+    "mpn": "X100F"
   },
   "pricing": {
     "msrp_usd": null,
@@ -22,14 +23,14 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 697.99,
-        "refurbished": 1005.32
+        "refurbished": 1005.32,
+        "pre_owned": 733.99
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 41,
-      "price_updated_at": "2026-09-15T10:10:24.450411+00:00"
+      "sample_size": 46,
+      "price_updated_at": "2026-09-23T10:12:04.890074+00:00"
     },
     "price_updated_at": "2026-09-03T04:23:39.014481+00:00"
   },
@@ -3054,9 +3055,108 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
-    "conflicts": []
+    "specs": {
+      "iso_native": {
+        "value": "200-12800",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "lcd_articulation": {
+        "value": "fixed",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "X-Processor Pro",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 24.3,
+        "high": 24.3,
+        "anchor": 24.3,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "APS-C",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "identity.mpn": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q126029978",
+        "fetched_at": "2026-09-23T14:22:41.920002+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "native ISO 200-12800 (exp 51200), via WebSearch — source: https://www.photographyblog.com/reviews/fujifilm_x100f_review",
+        "extraction": null
+      },
+      "specs.lcd_articulation": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "fixed 3-inch LCD, via WebSearch — source: https://www.photographyblog.com/reviews/fujifilm_x100f_review",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "X-Processor Pro, via WebSearch of photographyblog — source: https://www.photographyblog.com/reviews/fujifilm_x100f_review",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "24.3MP, via WebSearch of photographyblog — source: https://www.photographyblog.com/reviews/fujifilm_x100f_review",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "APS-C X-Trans CMOS III, via WebSearch of photographyblog — source: https://www.photographyblog.com/reviews/fujifilm_x100f_review",
+        "extraction": null
+      }
+    },
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/82YAAeSw371qYkDt/s-l1600.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Fujifilm_X100F.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about handling (53% positive, 30% neutral, 17% negative across 47 claims). Coverage of mount compatibility is mostly neutral: 22% positive, 66% neutral, 12% negative across 50 claims.",

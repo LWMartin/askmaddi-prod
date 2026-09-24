@@ -22,13 +22,13 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 175.0
+        "pre_owned": 164.35
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 3,
-      "price_updated_at": "2026-09-15T10:10:45.263879+00:00"
+      "sample_size": 4,
+      "price_updated_at": "2026-09-23T10:12:24.042446+00:00"
     },
     "price_updated_at": "2026-08-17T18:33:13.181127+00:00"
   },
@@ -6916,8 +6916,74 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "iso_native": {
+        "value": "100-1600",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Four Thirds",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 10.1,
+        "high": 10.1,
+        "anchor": 10.1,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "Four-Thirds",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "ISO 100-1600, via WebSearch of Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_DMC-L10",
+        "extraction": null
+      },
+      "specs.mount": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "Four Thirds lens mount, via WebSearch of Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_DMC-L10",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "10.1 effective MP, via WebSearch of Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_DMC-L10",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "Four-Thirds Live MOS, via WebSearch of Wikipedia — source: https://en.wikipedia.org/wiki/Panasonic_Lumix_DMC-L10",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {

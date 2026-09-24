@@ -28,7 +28,7 @@
       "search_url": null,
       "affiliate_url": null,
       "sample_size": 12,
-      "price_updated_at": "2026-09-15T10:10:15.359021+00:00"
+      "price_updated_at": "2026-09-23T10:11:54.804929+00:00"
     },
     "price_updated_at": "2026-09-01T16:04:58.664569+00:00"
   },
@@ -1417,8 +1417,74 @@
     }
   ],
   "facts": {
-    "specs": {},
-    "provenance": {},
+    "specs": {
+      "iso_native": {
+        "value": "100-1600",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "processor": {
+        "value": "DIGIC III",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "resolution_mp": {
+        "value": null,
+        "low": 7.1,
+        "high": 7.1,
+        "anchor": 7.1,
+        "anchor_source": "claude-search",
+        "unit": "MP"
+      },
+      "sensor_format": {
+        "value": "1/2.5-inch",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.iso_native": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "ISO 100-1600, via WebSearch of imaging-resource — source: https://www.imaging-resource.com/cameras/canon-sd800-is-review/",
+        "extraction": null
+      },
+      "specs.processor": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "DIGIC III processor, via WebSearch — source: https://www.imaging-resource.com/cameras/canon-sd800-is-review/",
+        "extraction": null
+      },
+      "specs.resolution_mp": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "7.1MP CCD, via WebSearch of imaging-resource — source: https://www.imaging-resource.com/cameras/canon-sd800-is-review/",
+        "extraction": null
+      },
+      "specs.sensor_format": {
+        "source": "claude-search",
+        "url": "",
+        "fetched_at": "2026-09-23",
+        "license": "",
+        "reason": "1/2.5-type CCD, via WebSearch of imaging-resource — source: https://www.imaging-resource.com/cameras/canon-sd800-is-review/",
+        "extraction": null
+      }
+    },
     "conflicts": []
   },
   "synthesis": {
