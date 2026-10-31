@@ -2008,7 +2008,8 @@ def card_lastmod(card):
     return best[:10]
 
 
-SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html"]
+SITEMAP_STATIC_PAGES = ["/", "/mission.html", "/privacy.html", "/terms.html",
+                        "/review-badge.html"]
 
 
 def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None,
@@ -2894,6 +2895,178 @@ def render_brands_index(brands):
 """
 
 
+_BADGE_TOOL_CSS = (
+    ".badge-tool{max-width:640px;margin:0 auto}"
+    ".badge-tool label{display:block;font-weight:600;margin:14px 0 6px}"
+    ".badge-tool select{width:100%;padding:9px 10px;border:1px solid #d9dce1;"
+    "border-radius:8px;font-size:15px;background:#fff}"
+    ".badge-preview{margin:18px 0;padding:22px;border:1px dashed #cfd3d8;"
+    "border-radius:10px;display:flex;justify-content:center;background:#f7f8fa}"
+    ".badge-code{width:100%;min-height:120px;padding:10px;border:1px solid #d9dce1;"
+    "border-radius:8px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;"
+    "font-size:12px;line-height:1.5;white-space:pre-wrap;word-break:break-all}"
+    ".badge-copy{margin-top:10px;padding:10px 18px;border:0;border-radius:8px;"
+    "background:#1a1d21;color:#fff;font-size:14px;font-weight:600;cursor:pointer}"
+    ".badge-copy:hover{background:#000}"
+    ".badge-how{margin-top:26px;color:#4a4f56;font-size:14px;line-height:1.6}"
+)
+
+
+def render_review_badge_page(cards):
+    """/review-badge.html — the passive BACKLINK ENGINE (embed-widget sell page).
+
+    Partners pick a product + theme and copy a self-contained, inline-styled,
+    FOLLOWABLE anchor they paste on their own review / blog / forum post. Every
+    install is an authority link back to the matching card — the off-page lever a
+    young domain needs. Zero infra, zero cost, no account: pure static HTML + JS,
+    card data inlined at build time (no runtime fetch / CORS). Indexable + sitemap-
+    listed so it also ranks for 'review badge / embed' intent."""
+    rows = []
+    for c in cards:
+        te = teaser_entry(c)
+        rows.append({"id": te["card_id"], "name": te["display_name"],
+                     "count": te.get("source_count") or 0})
+    rows.sort(key=lambda r: r["name"].lower())
+    cards_js = json.dumps(rows, ensure_ascii=False)
+    canonical = f"{BASE_URL}/review-badge.html"
+    title = "Free review badge — embed a neutral AskMaddi synthesis | AskMaddi"
+    meta_desc = ("Add a free AskMaddi review badge to your site: a neutral, sourced "
+                 "synthesis link for any camera or lens, drawn from dozens of "
+                 "independent reviews. One line of HTML, no account, no cost.")
+    jsonld = json.dumps({
+        "@context": "https://schema.org", "@type": "WebPage",
+        "name": "AskMaddi review badge", "url": canonical,
+        "description": meta_desc,
+        "isPartOf": {"@type": "WebSite", "name": SITE_NAME, "url": BASE_URL + "/"},
+    }, indent=2)
+
+    tpl = """<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>__TITLE__</title>
+  <meta name="description" content="__DESC__">
+  <link rel="canonical" href="__CANONICAL__">
+  <meta property="og:title" content="Free AskMaddi review badge">
+  <meta property="og:description" content="__DESC__">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="__CANONICAL__">
+  <meta property="og:site_name" content="__SITE__">
+  <script type="application/ld+json">
+__JSONLD__
+  </script>
+  <link rel="icon" type="image/png" href="/images/logo.png">
+  <link rel="stylesheet" href="/css/maddi.css">
+  <link rel="stylesheet" href="/css/cards-detail.css">
+  <style>__CSS__</style>
+</head>
+<body data-page="review-badge">
+  <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
+  <div class="container">
+    <header class="header-compact">
+      <a href="/" class="logo-title"><img src="/images/logo.png" alt="AskMaddi" class="site-logo">AskMaddi</a>
+      <div class="search-box">
+        <input type="text" id="detail-search-input" placeholder="Search a product…" onkeydown="if(event.key==='Enter')document.getElementById('detail-search-button').click()">
+        <button id="detail-search-button" onclick="location.href='/?q='+encodeURIComponent(document.getElementById('detail-search-input').value)">Ask Maddi</button>
+      </div>
+    </header>
+
+    <article class="card-detail">
+      <section class="brand-hero">
+        <h1>Add a free review badge to your site</h1>
+        <p class="brand-intro">A small, neutral badge that links to AskMaddi's sourced
+        synthesis for any camera or lens — what dozens of independent reviews actually
+        said, with every claim attributed. Drop it next to your own review as a credibility
+        reference. Free, no account, one line of HTML.</p>
+      </section>
+
+      <div class="badge-tool">
+        <label for="bcard">Product</label>
+        <select id="bcard"></select>
+        <label for="btheme">Theme</label>
+        <select id="btheme">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+
+        <div class="badge-preview" id="bprev"></div>
+
+        <label for="bcode">Copy this HTML and paste it where you want the badge:</label>
+        <textarea class="badge-code" id="bcode" readonly></textarea>
+        <button class="badge-copy" id="bcopy" type="button">Copy HTML</button>
+
+        <div class="badge-how">
+          <p><strong>How it works:</strong> paste the HTML anywhere on your page. The badge
+          links to the neutral AskMaddi card for that product. The link is a normal,
+          followable link — no tricks, no nofollow. We don't track your visitors and
+          there's nothing to install.</p>
+        </div>
+      </div>
+    </article>
+
+    <footer class="card-footer">
+      <a href="/">← Back to AskMaddi</a>
+      <span>·</span>
+      <a href="/brands/">Browse by brand</a>
+      <span>·</span>
+      <a href="/mission.html">Our method</a>
+    </footer>
+  </div>
+
+  <script>
+  (function(){
+    var CARDS = __CARDS__;
+    var BASE = "__BASE__";
+    function esc(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+    function buildSnippet(id,name,count,theme){
+      var dark = theme==='dark';
+      var bg = dark?'#1a1d21':'#ffffff', fg = dark?'#f2f4f7':'#1a1d21';
+      var sub = dark?'#9aa0a6':'#5b6168', bd = dark?'#343a40':'#d9dce1';
+      var url = BASE+'/cards/'+id+'/?utm_source=review_badge&utm_medium=embed';
+      var line = 'Synthesized from '+count+' independent review'+(count==1?'':'s')+' · AskMaddi';
+      return '<a href="'+url+'" target="_blank" rel="noopener" '+
+        'style="display:inline-flex;align-items:center;gap:10px;max-width:360px;'+
+        'padding:10px 14px;border:1px solid '+bd+';border-radius:10px;background:'+bg+';'+
+        'color:'+fg+';font:14px/1.3 -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;'+
+        'text-decoration:none;box-sizing:border-box;">'+
+        '<img src="'+BASE+'/images/logo.png" alt="AskMaddi" width="28" height="28" '+
+        'style="border-radius:6px;flex:none;">'+
+        '<span style="display:flex;flex-direction:column;">'+
+        '<strong style="font-weight:600;">'+esc(name)+'</strong>'+
+        '<span style="color:'+sub+';font-size:12px;">'+esc(line)+'</span>'+
+        '</span></a>';
+    }
+    var sel=document.getElementById('bcard'), th=document.getElementById('btheme');
+    var prev=document.getElementById('bprev'), code=document.getElementById('bcode');
+    CARDS.forEach(function(c,i){var o=document.createElement('option');o.value=i;o.textContent=c.name;sel.appendChild(o);});
+    function render(){
+      var c=CARDS[sel.value||0]; if(!c)return;
+      var html=buildSnippet(c.id,c.name,c.count,th.value);
+      prev.innerHTML=html; code.value=html;
+    }
+    sel.addEventListener('change',render); th.addEventListener('change',render);
+    document.getElementById('bcopy').addEventListener('click',function(){
+      code.select();
+      try{navigator.clipboard.writeText(code.value);}catch(e){document.execCommand('copy');}
+      this.textContent='Copied!'; var b=this; setTimeout(function(){b.textContent='Copy HTML';},1500);
+    });
+    render();
+  })();
+  </script>
+</body>
+</html>
+"""
+    return (tpl.replace("__TITLE__", esc(title))
+               .replace("__DESC__", esc(meta_desc))
+               .replace("__CANONICAL__", canonical)
+               .replace("__SITE__", esc(SITE_NAME))
+               .replace("__JSONLD__", jsonld)
+               .replace("__CSS__", _BADGE_TOOL_CSS)
+               .replace("__CARDS__", cards_js)
+               .replace("__BASE__", BASE_URL))
+
+
 def write_brand_pages(out_dir, cards):
     """Emit /brands/<slug>/index.html for every brand + /brands/index.html.
     Returns the list of brand dicts (for sitemap wiring)."""
@@ -3203,6 +3376,13 @@ def main():
         print(f"  ✓ vs-pages [{vs_mode}] → {out}/vs/ ({len(vs_slugs)} page(s))")
         for a_id, b_id, why in vs_skipped:
             print(f"    ! skipped {a_id} vs {b_id}: {why}", file=sys.stderr)
+        # Embed/backlink badge sell page — the passive BACKLINK ENGINE. A self-
+        # contained, inline-styled, FOLLOWABLE anchor partners paste on their own
+        # sites; every install is an authority link back. Zero infra / cost.
+        bpath = out / "review-badge.html"
+        bpath.write_text(render_review_badge_page(cards), encoding="utf-8")
+        written.append(str(bpath))
+        print(f"  ✓ review-badge → {bpath} (embed backlink sell page, {len(cards)} cards)")
         # (The 3 long-tail surfaces are generated in the precompute block above,
         # before the card loop, so cards can link to them — surface_urls set there.)
 
