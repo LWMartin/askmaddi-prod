@@ -72,6 +72,25 @@ PARTNERIZE_SHORT = "https://prf.hn/l/PlDklJx/"  # generic homepage fallback
 BASE_URL = "https://askmaddi.com"
 SITE_NAME = "AskMaddi"
 
+# ─── Cloudflare Web Analytics — grey-cloud FALLBACK beacon (dormant) ─────────
+# askmaddi.com is currently PROXIED (orange cloud), so Cloudflare auto-injects
+# beacon.min.js at the edge on every HTML response — no in-code beacon needed.
+# This helper is a fallback for if the domain ever returns to DNS-only (grey
+# cloud), where auto-injection does NOT run. The token is PUBLIC (it ships in
+# client HTML, not a secret). LEAVE CF_BEACON_TOKEN EMPTY while orange-cloud
+# auto-injects — setting it then double-counts (two beacons per page). Empty
+# token => no tag emitted, a safe no-op.
+CF_BEACON_TOKEN = ""
+
+
+def cf_beacon_tag():
+    """Cloudflare Web Analytics <script> (trailing newline), or '' when unset."""
+    if not CF_BEACON_TOKEN:
+        return ""
+    return ('  <script defer src="https://static.cloudflareinsights.com/'
+            'beacon.min.js" '
+            f'data-cf-beacon=\'{{"token": "{CF_BEACON_TOKEN}"}}\'></script>\n')
+
 
 def abs_url(path_or_url):
     """Absolute URL for OG/JSON-LD/sitemap. Pass-through if already absolute."""
@@ -1462,7 +1481,7 @@ def render_page(card, image_url=None, surface_map=None):
   <link rel="icon" type="image/png" href="/images/logo.png">
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
-</head>
+{cf_beacon_tag()}</head>
 <body data-category="{esc(page_category)}">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
@@ -2025,6 +2044,12 @@ def write_sitemap(out_dir, cards, guides=None, brands=None, vs_slugs=None,
                     for slug in sorted(vs_slugs)]
     if surface_urls:
         # Long-tail derived surfaces (where-they-split / specs / fit) + their hubs.
+        # /aspect/ pages are EXCLUDED from the sitemap on purpose: ~1,288 thin
+        # programmatic combos dilute crawl budget on a young/low-authority domain
+        # and bury the real money-pages (cards + brand/fit/vs hubs). They stay on
+        # the site and remain reachable if internally linked — we just stop
+        # advertising them for crawl so Google spends its budget where it counts.
+        surface_urls = [u for u in surface_urls if "/aspect/" not in u]
         entries += [url_el(u, home_mod) for u in sorted(set(surface_urls))]
 
     xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
@@ -2473,7 +2498,7 @@ def render_guide(guide, cards_by_id, bands=None):
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
   <style>{_GUIDE_CSS}</style>
-</head>
+{cf_beacon_tag()}</head>
 <body data-page="guide">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
