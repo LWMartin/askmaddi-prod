@@ -72,23 +72,25 @@ PARTNERIZE_SHORT = "https://prf.hn/l/PlDklJx/"  # generic homepage fallback
 BASE_URL = "https://askmaddi.com"
 SITE_NAME = "AskMaddi"
 
-# ─── Cloudflare Web Analytics — grey-cloud FALLBACK beacon (dormant) ─────────
-# askmaddi.com is currently PROXIED (orange cloud), so Cloudflare auto-injects
-# beacon.min.js at the edge on every HTML response — no in-code beacon needed.
-# This helper is a fallback for if the domain ever returns to DNS-only (grey
-# cloud), where auto-injection does NOT run. The token is PUBLIC (it ships in
-# client HTML, not a secret). LEAVE CF_BEACON_TOKEN EMPTY while orange-cloud
-# auto-injects — setting it then double-counts (two beacons per page). Empty
-# token => no tag emitted, a safe no-op.
-CF_BEACON_TOKEN = ""
+# ─── Cloudflare Web Analytics beacon (in-repo injection) ─────────────────────
+# askmaddi.com is PROXIED (orange cloud), but Cloudflare's AUTOMATIC beacon
+# injection never fired — confirmed absent a full day after the flip (a known
+# free-plan / recently-flipped-zone soft spot). So we inject the beacon
+# OURSELVES, in-repo, which is reliable and testable. The token is PUBLIC (it
+# ships in client HTML, not a secret). If CF's automatic injection is ever
+# enabled AND starts working, blank this token (or disable the CF auto-site) to
+# avoid double-counting. Static hand-maintained pages (index.html, mission.html,
+# …) carry the identical snippet hardcoded — keep them in sync on token rotation.
+CF_BEACON_TOKEN = "babeddd948a14911ba69f569b7ecd6e1"
 
 
 def cf_beacon_tag():
-    """Cloudflare Web Analytics <script> (trailing newline), or '' when unset."""
+    """Cloudflare Web Analytics <script> (trailing newline), or '' when unset.
+    Matches the exact snippet Cloudflare's dashboard emits (type=module)."""
     if not CF_BEACON_TOKEN:
         return ""
-    return ('  <script defer src="https://static.cloudflareinsights.com/'
-            'beacon.min.js" '
+    return ('  <script type="module" '
+            'src="https://static.cloudflareinsights.com/beacon.min.js" '
             f'data-cf-beacon=\'{{"token": "{CF_BEACON_TOKEN}"}}\'></script>\n')
 
 
@@ -2766,7 +2768,7 @@ def render_brand_page(brand):
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
   <style>{_BRAND_CSS}</style>
-</head>
+{cf_beacon_tag()}</head>
 <body data-page="brand">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
@@ -2861,7 +2863,7 @@ def render_brands_index(brands):
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
   <style>{_BRAND_CSS}</style>
-</head>
+{cf_beacon_tag()}</head>
 <body data-page="brands-index">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
@@ -2960,7 +2962,7 @@ __JSONLD__
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
   <style>__CSS__</style>
-</head>
+__BEACON__</head>
 <body data-page="review-badge">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
@@ -3064,6 +3066,7 @@ __JSONLD__
                .replace("__JSONLD__", jsonld)
                .replace("__CSS__", _BADGE_TOOL_CSS)
                .replace("__CARDS__", cards_js)
+               .replace("__BEACON__", cf_beacon_tag())
                .replace("__BASE__", BASE_URL))
 
 
@@ -3149,7 +3152,7 @@ def render_guides_index(guides):
   <link rel="stylesheet" href="/css/maddi.css">
   <link rel="stylesheet" href="/css/cards-detail.css">
   <style>{_BRAND_CSS}</style>
-</head>
+{cf_beacon_tag()}</head>
 <body data-page="guides-index">
   <div class="affiliate-disclosure-bar">Disclosure: We earn a commission when you buy through links on this page, at no cost to you.</div>
   <div class="container">
