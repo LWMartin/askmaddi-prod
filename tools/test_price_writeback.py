@@ -135,104 +135,156 @@ def test_result_feeds_build_site_new_cta(tmp_path):
 
 
 # ─── Withdrawal of stale feed prices (2026-11-04) ─────────────────────────────
-def _feed_card(price=1999.0):
+# Evidence rule: withdraw only when the card's OWN pinned product is absent or
+# unavailable in the SAME-DAY snapshot; pinned-and-in-stock = matcher miss.
+DAY = "2026-11-04"
+
+
+def _aff(n):
+    return ("https://adorama.prf.hn/click/camref:x/destination:"
+            f"https%3A%2F%2Fwww.adorama.com%2Fprod{n}.html")
+
+
+def _feed_card(n=0, price=1999.0):
     return _card({"current_new_usd": price, "current_new_source": "adorama_feed",
-                  "current_new_url": AFF, "affiliate_url": AFF})
+                  "current_new_url": _aff(n), "affiliate_url": _aff(n)})
 
 
-def _cards(tmp_path, specs):
-    """specs: {slug: card}. Returns the cards dir."""
+def _cards(tmp_path, n=10, extra=None):
     d = tmp_path / "cards"
     d.mkdir()
+    specs = {f"c{i}": _feed_card(i) for i in range(n)}
+    specs.update(extra or {})
     for slug, card in specs.items():
         (d / f"{slug}.json").write_text(json.dumps(card, indent=2), encoding="utf-8")
     return d
 
 
-def _gone(slug):
-    return {"slug": slug, "has_card": True, "needs_eyes": False, "new": None}
+def _snap(tmp_path, rows, day=DAY):
+    sd = tmp_path / "snap"
+    sd.mkdir(exist_ok=True)
+    (sd / f"{day}.jsonl").write_text("\n".join(json.dumps(r) for r in rows) + "\ngarbage\n")
+    return sd
+
+
+def _row(n, stock="In Stock", cond="N"):
+    return {"product_url": _aff(n), "stock_status": stock, "condition": cond, "price": 1}
+
+
+def _gone(*slugs, day=DAY):
+    return {"snapshot_date": day, "proposals": [
+        {"slug": s, "has_card": True, "needs_eyes": False, "new": None} for s in slugs]}
 
 
 def _load(d, slug):
     return json.loads((d / f"{slug}.json").read_text())
 
 
-def test_withdraw_clears_only_the_price_on_a_feed_priced_card(tmp_path):
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
-    w, why = price_writeback.plan_withdrawals(_sheet(_gone("c0")), d)
-    assert why is None and [r["slug"] for r in w] == ["c0"]
+def test_reconstructs_2026_11_04_box_dry_run(tmp_path):
+    # The real case: 2 pinned products In Stock (matcher missed them) must be KEPT,
+    # 1 delisted + 1 out of stock withdrawn.
+    d = _cards(tmp_path)
+    sd = _snap(tmp_path, [_row(1, "In Stock"), _row(2, "In Stock"), _row(3, "Out of Stock")])
+    w, why, misses = price_writeback.plan_withdrawals(_gone("c0", "c1", "c2", "c3"), d,
+                                                      snapshot_dir=sd, max_fraction=0.5)
+    assert why is None
+    assert {r["slug"]: r["evidence"] for r in w} == {"c0": "not in feed",
+                                                    "c3": "out of stock / not New"}
+    assert sorted(misses) == ["c1", "c2"]
+
+
+def test_listed_but_not_new_counts_as_unavailable(tmp_path):
+    d = _cards(tmp_path)
+    sd = _snap(tmp_path, [_row(0, "In Stock", cond="U")])
+    w, _, misses = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=sd)
+    assert [r["slug"] for r in w] == ["c0"] and not misses
+
+
+def test_fails_closed_without_same_day_evidence(tmp_path):
+    d = _cards(tmp_path)
+    for kwargs, sheet in (({}, _gone("c0")),                                   # no snapshot dir
+                          ({"snapshot_dir": _snap(tmp_path, [], day="2026-11-03")}, _gone("c0")),
+                          ({"snapshot_dir": tmp_path / "snap"},
+                           {"proposals": _gone("c0")["proposals"]})):          # no snapshot_date
+        w, why, _ = price_writeback.plan_withdrawals(sheet, d, **kwargs)
+        assert w == [] and "none withdrawn" in why
+
+
+def test_clears_only_the_price(tmp_path):
+    d = _cards(tmp_path)
+    w, _, _ = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=_snap(tmp_path, []))
     before = _load(d, "c0")
     price_writeback.apply_withdrawals(w, d)
     after = _load(d, "c0")
     assert after["pricing"]["current_new_usd"] is None
     for k in ("current_new_source", "current_new_url", "affiliate_url", "used_market"):
-        assert after["pricing"][k] == before["pricing"][k]      # link + source + used kept
+        assert after["pricing"][k] == before["pricing"][k]
     assert {k: v for k, v in after.items() if k != "pricing"} == \
            {k: v for k, v in before.items() if k != "pricing"}
 
 
-def test_withdraw_ignores_hand_set_and_already_withdrawn_prices(tmp_path):
-    hand = _card({"current_new_usd": 500.0, "current_new_source": "manual"})
-    gone = _feed_card(price=None)
-    d = _cards(tmp_path, {"hand": hand, "gone": gone, "ok": _feed_card()})
-    w, why = price_writeback.plan_withdrawals(_sheet(_gone("hand"), _gone("gone")), d)
-    assert w == [] and why is None          # not ours / nothing to clear -> no churn
-
-
-def test_withdraw_respects_exclude(tmp_path):
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
-    w, _ = price_writeback.plan_withdrawals(_sheet(_gone("c0")), d, exclude={"c0"})
+def test_ignores_hand_set_already_withdrawn_and_excluded(tmp_path):
+    d = _cards(tmp_path, extra={"hand": _card({"current_new_usd": 500.0,
+                                              "current_new_source": "manual"}),
+                                "gone": _feed_card(99, price=None)})
+    sd = _snap(tmp_path, [])
+    w, why, m = price_writeback.plan_withdrawals(_gone("hand", "gone"), d, snapshot_dir=sd)
+    assert (w, why, m) == ([], None, [])                 # nothing to do -> no churn
+    w, _, _ = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=sd, exclude={"c0"})
     assert w == []
 
 
 def test_safety_wall_boundary(tmp_path):
-    # 5 feed-priced cards: 1 withdrawal = 20% (allowed), 2 = 40% (all withheld).
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
-    w, why = price_writeback.plan_withdrawals(_sheet(_gone("c0")), d)
+    d = _cards(tmp_path, n=5)                            # 1/5 = 20% allowed, 2/5 withheld
+    sd = _snap(tmp_path, [])
+    w, why, _ = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=sd)
     assert len(w) == 1 and why is None
-    w, why = price_writeback.plan_withdrawals(_sheet(_gone("c0"), _gone("c1")), d)
+    w, why, _ = price_writeback.plan_withdrawals(_gone("c0", "c1"), d, snapshot_dir=sd)
     assert w == [] and "feed fault" in why
 
 
 def test_withdrawn_card_renders_unpriced_cta_on_exact_product(tmp_path):
     import build_site
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
-    w, _ = price_writeback.plan_withdrawals(_sheet(_gone("c0")), d)
+    d = _cards(tmp_path)
+    w, _, _ = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=_snap(tmp_path, []))
     price_writeback.apply_withdrawals(w, d)
-    label, url = build_site.new_cta(_load(d, "c0"))
-    assert label == "Check price at Adorama" and url == AFF
+    assert build_site.new_cta(_load(d, "c0")) == ("Check price at Adorama", _aff(0))
 
 
 def test_price_returns_the_next_night(tmp_path):
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
-    w, _ = price_writeback.plan_withdrawals(_sheet(_gone("c0")), d)
+    d = _cards(tmp_path)
+    w, _, _ = price_writeback.plan_withdrawals(_gone("c0"), d, snapshot_dir=_snap(tmp_path, []))
     price_writeback.apply_withdrawals(w, d)
     back = _sheet({"slug": "c0", "has_card": True, "needs_eyes": False,
-                   "new": {"matched_by": "gtin", "price_usd": 1899.0, "affiliate_url": AFF}})
+                   "new": {"matched_by": "gtin", "price_usd": 1899.0, "affiliate_url": _aff(0)}})
     changes, _, _ = price_writeback.plan(back, d)
     price_writeback.apply_changes(changes, d)
     assert _load(d, "c0")["pricing"]["current_new_usd"] == 1899
 
 
-def test_main_apply_withdraws_reports_and_patches_manifest(tmp_path, capsys):
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
+def test_main_end_to_end(tmp_path, capsys):
+    d = _cards(tmp_path)
+    sd = _snap(tmp_path, [_row(1, "In Stock")])
     sheet = tmp_path / "sheet.json"
-    sheet.write_text(json.dumps(_sheet(_gone("c0"))))
+    sheet.write_text(json.dumps(_gone("c0", "c1")))
     manifest = tmp_path / "m.json"
-    manifest.write_text(json.dumps({"cards": [{"card_id": "c0", "pricing": {"new_price": 1999,
-                                                                          "new_url": AFF}}]}))
+    manifest.write_text(json.dumps({"cards": [{"card_id": "c0", "pricing": {
+        "new_price": 1999, "new_url": _aff(0)}}]}))
     out = tmp_path / "changed.txt"
-    price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply",
+    price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply", "--snapshot-dir", str(sd),
                           "--manifest", str(manifest), "--changed-out", str(out)])
-    assert "WITHDREW 1" in capsys.readouterr().out
+    text = capsys.readouterr().out
+    assert "WITHDREW 1" in text and "matcher miss" in text and "c1" in text
     assert out.read_text().split() == ["c0"]
-    entry = json.loads(manifest.read_text())["cards"][0]["pricing"]
-    assert entry == {"new_price": None, "new_url": AFF}
+    assert _load(d, "c1")["pricing"]["current_new_usd"] == 1999.0     # kept
+    assert json.loads(manifest.read_text())["cards"][0]["pricing"] == {"new_price": None,
+                                                                       "new_url": _aff(0)}
 
 
-def test_main_no_withdraw_flag(tmp_path):
-    d = _cards(tmp_path, {f"c{i}": _feed_card() for i in range(5)})
+def test_main_without_snapshot_withdraws_nothing(tmp_path, capsys):
+    d = _cards(tmp_path)
     sheet = tmp_path / "sheet.json"
-    sheet.write_text(json.dumps(_sheet(_gone("c0"))))
-    price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply", "--no-withdraw"])
+    sheet.write_text(json.dumps(_gone("c0")))
+    price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply"])
     assert _load(d, "c0")["pricing"]["current_new_usd"] == 1999.0
+    assert "none withdrawn" in capsys.readouterr().out

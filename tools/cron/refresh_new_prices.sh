@@ -46,8 +46,12 @@ if ! ( cd "$AGG" && PYTHONPATH="$AGG" "$RUNNER_PY" -m ingest.price_backfill "$ST
 fi
 
 # 2. Apply the New fields onto the cards (surgical; needs_eyes held by default).
+#    --snapshot-dir lets the writeback WITHDRAW a feed price, but only on positive
+#    evidence about the card's own pinned product in the same-day snapshot (absent
+#    or out of stock); a pinned product still in stock is a matcher miss and keeps
+#    its price. Without the store, no price is ever withdrawn (fail closed).
 if ! ( cd "$REPO" && python3 tools/price_writeback.py "$SHEET" \
-        --cards-dir data/cards --apply ); then
+        --cards-dir data/cards --snapshot-dir "$STORE" --apply ); then
     echo "$(date -Iseconds) new-prices: WARN price_writeback failed"
     exit 0
 fi
