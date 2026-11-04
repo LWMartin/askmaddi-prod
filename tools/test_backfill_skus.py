@@ -403,3 +403,50 @@ def test_gate_override_confirms_new_slug(monkeypatch):
         override='tamron-28-75-g2')
     assert entry is not None
     assert review.get('slug_gate') == 'override'
+
+
+# ─── Part-number aliases stay out of the coarse token pool (2026-11-04) ──────
+# A 2026-09-15 alias add ('PT-L-BK-1') let a sibling variant's part number
+# ('PT-T-BK-1', the Pro Tall) share fragments {pt, bk, 1} and auto-accept past
+# DOMINANCE_MARGIN without Gemma. These tests use SYNTHETIC identities so they
+# hold regardless of what the nightly writes into data/cards.
+
+_PD_PRO = {
+    'brand': 'Peak Design', 'model': 'Pro Tripod',
+    'sku_alt_names': ['PD Pro Tripod', 'Peak Design Pro Lite Tripod',
+                      'Peak Design Pro Tall Tripod', 'Pro Lite Tripod',
+                      'Pro Tall Tripod'],
+}
+
+
+@pytest.mark.parametrize('alias,expected', [
+    ('PT-L-BK-1', True), ('ILCE-7M4', True), ('ILCE7M5/B', True),
+    ('A7 IV', False), ('a7iv', False), ('EF-S', False),
+    ('Pro Lite Tripod', False), ('', False), (None, False),
+])
+def test_is_part_number_shape(alias, expected):
+    assert bf._is_part_number(alias) is expected
+
+
+def test_part_number_alias_does_not_change_ref_tokens():
+    with_pn = dict(_PD_PRO, sku_alt_names=_PD_PRO['sku_alt_names'] + ['PT-L-BK-1'])
+    assert bf._ref_tokens(with_pn) == bf._ref_tokens(_PD_PRO)
+
+
+def test_part_number_alias_cannot_lift_sibling_variant_to_auto_accept(monkeypatch):
+    # Reconstructs the 2026-09-15 failure: before the fix this auto-accepted v1|f.
+    cands = [
+        {'item_id': 'v1|f', 'title': 'Peak Design Pro Tall Carbon Tripod PT-T-BK-1', 'epid': '', 'brand': ''},
+        {'item_id': 'v1|h', 'title': 'Peak Design Pro Tripod', 'epid': '', 'brand': ''},
+    ]
+    monkeypatch.setattr(bf.ebay_api, '_search_candidates', lambda q, limit=10: cands)
+    resolved = []
+    monkeypatch.setattr(bf.ebay_api, 'resolve',
+                        lambda item_id, customid=None: resolved.append(item_id) or
+                        {'identity': {'epid': 'E'}, 'affiliate_url': 'u', '_raw': {}})
+    idn = dict(_PD_PRO, sku_alt_names=_PD_PRO['sku_alt_names'] + ['PT-L-BK-1'])
+    entry, review = bf.backfill_card('peak-design-pro-tripod',
+                                     {'identity': idn, 'category': 'support'},
+                                     use_gemma=False)
+    assert review['decision'] == 'needs_review'
+    assert 'v1|f' not in resolved

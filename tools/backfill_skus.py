@@ -128,12 +128,35 @@ _USED_BUNDLE_TOKENS = {'bundle', 'lenses', 'kit', 'combo', 'lot'}
 _USED_BUNDLE_PENALTY = 0.6   # multiplier; enough to drop below DOMINANCE_MARGIN
 
 
+# A part-number-shaped alias: one word (no whitespace) carrying a hyphen or
+# slash AND a digit — 'PT-L-BK-1', 'ILCE-7M4', 'ILCE7M5/B'. Model-name aliases
+# ('A7 IV', 'a7iv', 'EF-S') do not match.
+_PART_NUMBER_RE = re.compile(r'^(?=\S*\d)(?=\S*[-/])\S+$')
+
+
+def _is_part_number(alias):
+    return bool(_PART_NUMBER_RE.match((alias or '').strip()))
+
+
 def _ref_tokens(card_idn):
-    """The card's identity token set: brand + model + alt-names, noise removed."""
+    """The card's identity token set: brand + model + alt-names, noise removed.
+
+    Part-number-shaped aliases are EXCLUDED. _tokens() would shatter
+    'PT-L-BK-1' into {'pt','l','bk','1'}, and a sibling variant's part number
+    ('PT-T-BK-1', the Pro Tall) shares three of those fragments — so the
+    sibling out-scored the true product past DOMINANCE_MARGIN and auto-accepted
+    without Gemma (2026-09-15 alias add; caught by
+    test_gemma_resolves_close_survivors, which then blocked every nightly bank
+    until 2026-11-04). Fragment overlap on part numbers is exactly the
+    part-number guessing this coarse scorer must not do (see _score); Gemma
+    still receives every alias verbatim in its prompt.
+    """
     ref = set()
     ref |= _tokens(card_idn.get('brand'))
     ref |= _tokens(card_idn.get('model'))
     for alt in (card_idn.get('sku_alt_names') or []):
+        if _is_part_number(alt):
+            continue
         ref |= _tokens(alt)
     return ref - _NOISE_TOKENS
 
