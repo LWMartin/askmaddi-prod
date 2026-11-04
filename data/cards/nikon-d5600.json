@@ -1,0 +1,1055 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-d5600",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon d5600",
+    "brand": "Nikon",
+    "model": "d5600",
+    "sku_alt_names": [],
+    "category": "body",
+    "subcategory": "mirrorless",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/0f8AAeSwzkRqmxDk/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 265.0,
+        "refurbished": 392.35,
+        "open_box": 500.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 35,
+      "price_updated_at": "2026-11-04T10:11:43.739157+00:00"
+    },
+    "price_updated_at": "2026-09-24T10:35:26.135666+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T10:35:26.132433+00:00",
+    "last_built": "2026-09-24T10:35:26.132433+00:00",
+    "last_checked": "2026-09-24T10:35:26.132433+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "mount_compat": "medium",
+      "sensor_performance": "low",
+      "connectivity": "low",
+      "generation_context": "low",
+      "price": "medium",
+      "autofocus_body": "low",
+      "evf_lcd": "low",
+      "battery_life": "low",
+      "burst_buffer": "low",
+      "dimensions": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 17,
+        "neg": 0,
+        "total": 17,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "limits compatibility to AF-S (and earlier high-end only AF-I) lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "compatible with the new video-centric AF-P series, the first lenses from Nikon to use a stepper motor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon D5500 &nbsp; Although the more basic entry-level&nbsp; D3400 sensor produces just.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Staying with a DSLR, you could opt for a Canon EOS 80D .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "My personal first DSLR was the Nikon D5100, so.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON D5600 + 18-55mm f/3.5-5.6 @ 18mm, ISO 100, 1/250, f/8.0 That said, it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "From the D5200 to the D5300, Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON D5600 + 18-55mm f/3.5-5.6 @ 55mm, ISO 200, 1/160, f/5.6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON D5600 + 18-55mm f/3.5-5.6 @ 18mm, ISO 100, 1/40, f/8.0 So, it is not.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "Index Photo Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops Support Us Submit Content",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ After the end of the Kickstarter campaign , the new Peak Design Field Bracket for Nikon cameras is now available for sale at B&H Photo .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ You can order the new Brightin Star 28mm f/2.8 full-frame pancake liquid silver lens with a Z-mount lens adapter ( additional information ).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Meike lens roadmap: new autofocus zooms and fast f/1.2 primes .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Nikon Japan started selling a new wooden lens display stand for Z-mount lenses .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Isotta released a new underwater housing for the Nikon ZR camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Nikon NIKKOR Z 70-200mm f2.8 S II lens first impressions with Sean LeBlanc.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Z Cinema feature overview: Nikon ME-D10 shotgun microphone for ZR cameras audio test & comparison.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.412,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "→ You can order the new Brightin Star 28mm f/2.8 full-frame pancake liquid silver lens with a Z-mount lens adapter ( additional information ).",
+        "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+        "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/"
+      }
+    },
+    {
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 7,
+        "neg": 1,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon D5600 sensor review: Solid performer - DXOMARK Skip to content Sensors &nbsp;>&nbsp; Nikon D5600 &nbsp;>&nbsp; Sensor&nbsp;Test Results &nbsp; Specifications and features As the sixth-generation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "(APS-C) CMOS sensor without AA filter and Expeed 4 processor that delivers 14-bit compressed NEFs at up to 4fps (5fps at 12-bit), as well as.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "24-MP DX -format (APS-C) CMOS sensor EXPEED.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "overall DxOMark score of 84 points, the&nbsp; Nikon D5600 sensor is an excellent&nbsp; performer, but with no improvement over the earlier D5500 , it looks.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "Overall, Nikon&rsquo;s best-performing DX sensor is.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "in the color sensitivity results, where the&nbsp; D3400 is ahead at low to mid-ISOs but delivers similar results in dynamic range and SNR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "that the cheaper&nbsp; D3400 uses a different sensor than the D5600 , or perhaps a similar one that has been tweaked.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusion Nikon&rsquo;s strategy of offering similar sensor performance throughout the series of DX-format DSLRs continues with the D5600 ..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "back to the D5200 (which has a similarly high-quality 24-megapixel camera sensor).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.889,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "in the color sensitivity results, where the&nbsp; D3400 is ahead at low to mid-ISOs but delivers similar results in dynamic range and SNR.",
+        "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+        "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/"
+      }
+    },
+    {
+      "axis_id": "connectivity",
+      "display_name": "Connectivity",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "focus points) ISO 100-25600 (with expansion) 5 fps continuous shooting with CAF Built-in Bluetooth and WiFi with NFC connectivity Measurements: Nikon D5600 &nbsp; With an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "Reviews Smartphones Camera Sensors Camera Lenses Wireless Speakers Laptops Articles Test results Best of Tech articles Insights About us Our company Our Label Smart Choice.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "The newest Nikon D5600 builds upon prior cameras in the lineup mainly by adding Nikon&rsquo;s SnapBridge, which is a way to sync photos (most commonly.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "SnapBridge also lets you see live view remotely and take pictures, although it is not.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 2,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "the&nbsp; D5600 is that we&rsquo;ve come to expect more from an update, it is perhaps somewhat unfair to criticize Nikon for releasing the D5000 (and.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "is hard to argue that each one of these successive DSLRs adds many new features upon its predecessors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "generation, Nikon added a touchscreen and a bit more battery life to the D5500, but they took away GPS.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "unreasonable to think that a photographer considering the Nikon D5600 would be just as well-served with an older version of the same camera, even going.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "is available now at price of around $699 (USD) body only, around $100 over the earlier D5500 .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "best-performing sensors, although it and even the newer, similar-performing, pricier ($1500) Sony A6500 still don&rsquo;t quite match the Nikon D7200 (87 points), which is also.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "If you enjoy our articles, this is the easiest way to support Photography Life at no extra cost to you.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "→ Report from Japan: the top 10 used cameras with the biggest price increases (Nikon D5600 at #1, Nikon Z9 at #10).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "If you enjoy our articles, this is the easiest way to support Photography Life at no extra cost to you.",
+        "source_id": "photographylife-reviews-nikon-d5600",
+        "url": "https://photographylife.com/reviews/nikon-d5600"
+      }
+    },
+    {
+      "axis_id": "autofocus_body",
+      "display_name": "Autofocus",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "phase-detection AF system (with 9 cross-type focus points), but the&nbsp; D5600 has no internal AF motor (like other recent models in the D5000 series), which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "to 20 EV Base ISO ISO 100 Maximum ISO ISO 25,600 Autofocus System Nikon Multi-CAM 4800DX Focus Points 39-point, 9 cross-type AF system AF Detection.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "Range -1 to +19 EV Auto AF Fine-Tune No Group AF Mode No Face Detection Yes, in live view Video Output MOV, H.264/MPEG-4 Video Maximum.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "evf_lcd",
+      "display_name": "EVF & LCD",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+            "weight": 0.75,
+            "quote_excerpt": "4 image processor 3.2 in 1.04M-dot fully articulating LCD touchscreen monitor Full HD video up to 60 fps Multi-cam 4800DX 39-point AF (with 9 cross-type.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "4000 Image Processor EXPEED 4 Viewfinder Type Pentamirror Viewfinder Coverage 95% Viewfinder Magnification 0.82x Built-in Flash Yes Storage Media 1x SD Continuous Shooting Speed 5.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "Resolution 1920 x 1080 (HD) up to 60 fps 4K Time-lapse Recording No LCD Size 3.2&Prime; diagonal TFT-LCD LCD Resolution 1,036,800 dots Tilting LCD Yes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "battery_life",
+      "display_name": "Battery Life",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "Touchscreen LCD Yes Built-in GPS No Built-in Bluetooth Yes Built-in Wi-Fi / NFC Yes, NFC Battery EN-EL14a Lithium-ion Battery Battery Life 970 shots (CIPA) Battery.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "burst_buffer",
+      "display_name": "Burst & Buffer",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "FPS Buffer Size (RAW, 14-bit) 11 Max Shutter Speed 1/4000 to 30 sec Shutter Durability 100,000 cycles Exposure Metering Sensor 2016-pixel RGB Matrix Meter, 0.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-d5600",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-d5600",
+            "weight": 0.75,
+            "quote_excerpt": "Feature Nikon D5600 Sensor Resolution 24 Megapixels Sensor Type CMOS Sensor Size 23.5&times;15.6mm Sensor Pixel Size 3.92&micro; Low Pass Filter No Image Size 6000 x.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "weight_g": {
+        "value": "465 g",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "mount": {
+        "value": "Interchangeable, Nikon F-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "iso_native": {
+        "value": "ISO 100-25600",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "shutter_speed_range": {
+        "value": "1/4000 to 30 s",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "battery_model": {
+        "value": "Nikon EN-EL14A Lithium-Ion",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "card_formats": {
+        "value": "Secure Digital, SDSC, SDHC, SDXC, supports UHS-I bus.",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "evf_magnification": {
+        "value": "95% coverage, 0.82x magnification",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "fps_electronic": {
+        "value": "5 fps",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "fps_mechanical": {
+        "value": "5 fps",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "max_image_resolution": {
+        "value": "6000 × 4000 pixels",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight_g": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "weight",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.mount": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "lens",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.iso_native": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "speedRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.shutter_speed_range": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "shutterRange",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.battery_model": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "battery",
+          "section": [],
+          "via": "slot_name"
+        }
+      },
+      "specs.card_formats": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "recording_medium",
+          "section": [],
+          "via": "alias"
+        }
+      },
+      "specs.evf_magnification": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "viewfinder",
+          "section": [],
+          "via": "llm"
+        }
+      },
+      "specs.fps_electronic": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "cont",
+          "section": [],
+          "via": "llm"
+        }
+      },
+      "specs.fps_mechanical": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "cont",
+          "section": [],
+          "via": "llm"
+        }
+      },
+      "specs.max_image_resolution": {
+        "source": "wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Nikon_D5600?action=raw",
+        "fetched_at": "2026-09-24T10:33:22.909850+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "res",
+          "section": [],
+          "via": "llm-extract"
+        }
+      }
+    },
+    "conflicts": [
+      {
+        "field": "specs.mount",
+        "canonical": "Interchangeable, Nikon F-mount",
+        "divergent": "Nikon F-mount",
+        "canonical_source": "wikipedia",
+        "divergent_source": "wikidata",
+        "note": "categorical disagreement; canonical is higher-authority"
+      }
+    ]
+  },
+  "synthesis": {
+    "consensus_paragraph": "",
+    "aspect_breakdown": [
+      {
+        "aspect": "mount_compat",
+        "pos": 0,
+        "neu": 17,
+        "neg": 0,
+        "total": 17
+      },
+      {
+        "aspect": "sensor_performance",
+        "pos": 1,
+        "neu": 7,
+        "neg": 1,
+        "total": 9
+      },
+      {
+        "aspect": "connectivity",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 0,
+        "neu": 2,
+        "neg": 2,
+        "total": 4
+      },
+      {
+        "aspect": "price",
+        "pos": 0,
+        "neu": 3,
+        "neg": 1,
+        "total": 4
+      },
+      {
+        "aspect": "autofocus_body",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "evf_lcd",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "battery_life",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      },
+      {
+        "aspect": "burst_buffer",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 47,
+      "evaluated": 6,
+      "non_evaluative": 41,
+      "non_evaluative_breakdown": {
+        "non_claim": 41
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "47 examined · 6 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "dxomark-nikon-d5600-sensor-review-solid-performer",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.dxomark.com/nikon-d5600-sensor-review-solid-performer/",
+      "title": "Nikon D5600 sensor review: Solid performer - DXOMARK",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:35:26.134286+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-d5600",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-d5600",
+      "title": "Nikon D5600 Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:35:26.134296+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-nikon-rumors-weekly-nikon-news-flash-900-2026",
+      "source_type": "pro",
+      "reviewer": "Nikon Rumors",
+      "platform": "web",
+      "url": "https://nikonrumors.com/2026/08/23/weekly-nikon-news-flash-900.aspx/",
+      "title": "Weekly Nikon news flash #900",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:35:26.134300+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-d5600/",
+    "reddit": "Nikon d5600\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-d5600/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon d5600**\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-d5600/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon d5600 — Reviewed",
+      "description": "Nikon d5600 — all 3 reviews in one place.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-d5600/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

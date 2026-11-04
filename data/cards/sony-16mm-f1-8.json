@@ -1,0 +1,1562 @@
+{
+  "card_version": "1.0",
+  "card_id": "sony-16mm-f1-8",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Sony 16mm f1.8",
+    "brand": "Sony",
+    "model": "16mm f1.8",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/BusAAeSwQtRqUTxR/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 480.1,
+        "pre_owned": 479.8,
+        "open_box": 449.99
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 12,
+      "price_updated_at": "2026-11-04T10:12:28.832125+00:00"
+    },
+    "price_updated_at": "2026-09-25T02:49:09.354259+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-25T02:49:09.335712+00:00",
+    "last_built": "2026-09-25T02:49:09.335712+00:00",
+    "last_checked": "2026-09-25T02:49:09.335712+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 1,
+        "neg": 3,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Performance\n\nSharpness is exceptionally sharp at f/1.8, with slight softening in corners that requires pixel-level inspection.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Coma is minimal in corners, visible only under magnification, with reduced astigmatism compared to the 20mm f/1.8 G.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF (resolution) at 42 megapixels Despite the small design, Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "managed to keep the resolution on a very high level.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The image center is already excellent at f/1.8, followed by a very good near-center field..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "taken as a measure of sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The FE 16mm f/1.8 G is a bit sharper, which isn&#8217;t all that surprising given the wider field-of-view.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It is sharp enough at f/1.8 and quite impressively so at medium apertures.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Corner sharpness is soft even when stopped down due to heavy distortion correction.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Optical Performance Sharpness is exceptionally sharp at f/1.8, with slight softening in corners that requires pixel-level inspection.",
+        "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+        "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 0,
+          "neg": 2,
+          "total": 2,
+          "sources": [
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "It probably won&#8217;t matter too much, but the AF in the Sony lens is superior in this comparison.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Of course, it&#8217;s MUCH slower &#8211; but many of us don&#8217;t really speed in this lens class.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": null,
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 2,
+          "neu": 6,
+          "neg": 1,
+          "total": 9,
+          "sources": [
+            {
+              "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+              "weight": 0.75,
+              "quote_excerpt": "Two XD Linear Motors provide fast, near-silent autofocus capable of tracking at 120 fps during boost shooting.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+              "weight": 0.75,
+              "quote_excerpt": "Internal focusing prevents rotation of polarizing filters.Minimum Focus Distance\n\nThe minimum focus distance is 0.15m in autofocus mode (0.13m manual focus).",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The dedicated aperture ring has a nice click action to it &#8211; which can be de-clicked for video use.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "end Sony lenses, there&#8217;s also a focus stop button.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "XD (extreme dynamic) linear motors&nbsp;for focusing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Manual focusing works &#8220;by wire&#8221;, as usual.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+              "weight": 0.75,
+              "quote_excerpt": "exhibit a bit of focus breathing, owners of recent Sony cameras can take advantage of automatic compensation.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+              "source_type": "reviewer_blog",
+              "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+              "weight": 0.75,
+              "quote_excerpt": "Focus breathing is very minor when transitioning from near to far focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+              "source_type": "reviewer_blog",
+              "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+              "weight": 0.75,
+              "quote_excerpt": "With focus breathing compensation, the resulting crop is easily manageable.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 0.667,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.556,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 3,
+        "neu": 0,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Weather sealing is standard for Sony lenses; it performed well in heavy snow without issues.Controls & Autofocus\n\nThe aperture ring offers 1/3-stop delineations with an automatic mode option.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At merely 304g, it undercuts comparable lenses by a substantial margin, and it doesn't compromise on build quality..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It feels well made, is weather resistant and comes with a fast AF.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Very compact and lightweight design Pretty sharp for such a lens Feels sturdy despite the low weight The Bad Vignetting WAY too high Relies heavily.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.75,
+        "contested": false
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "At merely 304g, it undercuts comparable lenses by a substantial margin, and it doesn't compromise on build quality..",
+        "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+        "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 3,
+        "neu": 6,
+        "neg": 0,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony FE 16mm f/1.8 G Review - OpticalLimits Close Menu Facebook X (Twitter) Instagram Trending Nikkor Z 28mm f/2.8 Review Fujinon XF 10-24mm f/4 R.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "OIS WR ( Fujifilm ) Review Nikkor Z 40mm f/2 Review Sigma 105mm f/1.4 DG HSM ART (Nikon F) Review Nikkor Z 24-50mm f/4-6.3 Review.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "WR ( Fujifilm ) Review Facebook X (Twitter) Instagram Sony FE (Full Format) Sony FE 16mm f/1.8 G Review By Klaus July 27, 2025 Updated:.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The next one in line is the Sony FE 16mm f/1.8 G.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Realizing a 16mm f/1.8 in such a small package is quite an achievement &#8211; assuming that Sony managed to keep the optical performance intact..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In the case of the Sony FE 16mm f/1.8 G, the compromise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "you want something truly special, there&#8217;s the awesome sigma 14mm f/1.4 DG DN ART (left) which is arguably the greatest lens in this category &#8211;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "75 % 75% Highly Recommended The Sony FE 16mm f/1.8 G may not excel in every category, but as a package, it could well be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "} E-mount Prime Ultra-wide Related Posts Fujinon XF 10-24mm f/4 R OIS WR ( Fujifilm ) Review 6 September 15, 2026 Nikkor Z 40mm f/2.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens demonstrates suitability for astrophotography with minimal corner aberrations and excellent star rendering.Price\n\nRetail price: $799 USD / $1,099 CAD.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is certainly the more affordable Viltrox AF 16mm f/1.8 LAB FE (to the left below).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Price & Recommendation\n\nThe lens costs $800.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Price & Recommendation The lens costs $800.",
+        "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+        "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "G lenses come with one or two compromises compared to their GM counterparts.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Size & Weight\n\nThe Sony FE 16mm f/1.8 G lens weighs 304g (10.7oz) and measures Φ73.8 x 75mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "It is approximately 18% lighter than the Sony FE 20mm f/1.8 G (373g) and smaller overall, making it Sony's most compact 16mm f/1.8 option — the competing Viltrox model weighs 550g.Build Quality\n\nThe lens features metal construction with a smooth aperture ring, Iris Lock feature, and Click switch…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "size and weight of the Sony lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Optical & Build\n\nThe Sony FE 16mm f/1.8 G lens weighs 10.5 ounces (304 grams) with a 67mm filter thread size.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 4,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion is less than anticipated for a 16mm lens, with minimal stretching at frame edges.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "mode &amp; aperture lock dust and moisture resistant Distortions Ultra-wide lenses tend to have rather high native image distortions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony FE 16mm f/1.8 G is one of those lenses where Sony decided to disable the distortion controls in the menu.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Image distortions are high in RAW images but fully auto-corrected.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on auto-correction for distortions Optical Performance 7.5 Build Quality 9 Price / Performance 8 if (typeof olid !== 'undefined') { var eb=\"/active/eb.php?olid=\"+olid; document.write(\" \"); w3IncludeHTML();.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.8,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 5,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is average for wide-angle lenses, noticeable at f/1.8 but stylistically acceptable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Uncorrected RAW images show a vignetting of more than 5EV (f-stops) at f/1.8 and stopping down doesn&#8217;t make a hell of a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Basically, Sony decided to trade in vignetting for the compact design here.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "GM does produce less vignetting, though, so it doesn&#8217;t require as much of a signal boost &#8211; which can be important e.g.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The biggest weakness is vignetting - and auto-correction can't eliminate the issue in full here.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Astigmatism is rampant in corners; pinpoint lights develop unsightly wings.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic aberration is nearly absent across test images.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberrations (CAs) Lateral CAs are low, with a peak CA pixel width of ~0.5px or less at the image borders.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Longitudinal chromatic aberration is almost none detected.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusions\n\nThe review characterizes the lens as a wide-angle jack of all trades suitable for landscapes, astrophotography, architecture, video, and events.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f/1.8 f/2.2 f/2.8 f/4 Sun Stars Below is a sequence of 100% cropped images from f/1.8 all the way up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to f/16 &#8211; illustrating the sun star behavior.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sun stars are an aperture effect that shows up if a bright light source is part of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Due to the circular aperture shape, the sun stars are non-existent at f/1.8 and f/2.8.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.8,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 0,
+        "neg": 2,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh is velvety and soft via an 11-blade circular aperture with smooth focus falloff.Video & Astrophotography\n\nFocus breathing suppression enables smooth video operation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "level, and the outer image field is very good.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the bokeh is usually of lesser concern with ultra-wide lenses, but the Sony lens is faster than most lenses in it class, so let&#8217;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh is a weak point; specular highlights show onion rings and a strong soap bubble effect.Video\n\nThe 16mm focal length suits vlogging.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "It accepts 67mm screw-on filters — a notable advantage over the 14mm f/1.8 GM.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "x 75 mm Weight 304g Filter size 67mm Hood petal-shaped (bayonet mount, supplied) Available Mounts Sony FE Other features Focus stop button aperture rings w/clickless.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "It features a 16mm focal length with f/1.8 maximum aperture and a minimum focusing distance of 15 centimeters (5.9 inches).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Videographers will also like the de-clickable aperture ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "The manual focus ring feels sloppy, while the aperture ring feels excellent.Optical Performance\n\nCenter sharpness shows good detail at f/1.8; stopping down improves contrast significantly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Construction includes weather resistance suitable for harsh conditions.Autofocus & Handling\n\nTwin linear focusing motors deliver fast, quiet autofocus performance.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "16",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Sony 16mm f1.8. AF for video draws the most discussion: 2 positive, 6 neutral, and 1 negative across 9 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 5,
+        "neu": 1,
+        "neg": 3,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Performance\n\nSharpness is exceptionally sharp at f/1.8, with slight softening in corners that requires pixel-level inspection.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Coma is minimal in corners, visible only under magnification, with reduced astigmatism compared to the 20mm f/1.8 G.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF (resolution) at 42 megapixels Despite the small design, Sony.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 0,
+        "neu": 0,
+        "neg": 2,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It probably won&#8217;t matter too much, but the AF in the Sony lens is superior in this comparison.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Of course, it&#8217;s MUCH slower &#8211; but many of us don&#8217;t really speed in this lens class.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 2,
+        "neu": 6,
+        "neg": 1,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Two XD Linear Motors provide fast, near-silent autofocus capable of tracking at 120 fps during boost shooting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Internal focusing prevents rotation of polarizing filters.Minimum Focus Distance\n\nThe minimum focus distance is 0.15m in autofocus mode (0.13m manual focus).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The dedicated aperture ring has a nice click action to it &#8211; which can be de-clicked for video use.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 3,
+        "neu": 0,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Weather sealing is standard for Sony lenses; it performed well in heavy snow without issues.Controls & Autofocus\n\nThe aperture ring offers 1/3-stop delineations with an automatic mode option.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At merely 304g, it undercuts comparable lenses by a substantial margin, and it doesn't compromise on build quality..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It feels well made, is weather resistant and comes with a fast AF.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 1,
+        "neg": 4,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion is less than anticipated for a 16mm lens, with minimal stretching at frame edges.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "mode &amp; aperture lock dust and moisture resistant Distortions Ultra-wide lenses tend to have rather high native image distortions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony FE 16mm f/1.8 G is one of those lenses where Sony decided to disable the distortion controls in the menu.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 5,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is average for wide-angle lenses, noticeable at f/1.8 but stylistically acceptable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Uncorrected RAW images show a vignetting of more than 5EV (f-stops) at f/1.8 and stopping down doesn&#8217;t make a hell of a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Basically, Sony decided to trade in vignetting for the compact design here.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic aberration is nearly absent across test images.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberrations (CAs) Lateral CAs are low, with a peak CA pixel width of ~0.5px or less at the image borders.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Longitudinal chromatic aberration is almost none detected.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusions\n\nThe review characterizes the lens as a wide-angle jack of all trades suitable for landscapes, astrophotography, architecture, video, and events.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f/1.8 f/2.2 f/2.8 f/4 Sun Stars Below is a sequence of 100% cropped images from f/1.8 all the way up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to f/16 &#8211; illustrating the sun star behavior.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 2,
+        "neu": 0,
+        "neg": 2,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh is velvety and soft via an 11-blade circular aperture with smooth focus falloff.Video & Astrophotography\n\nFocus breathing suppression enables smooth video operation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "level, and the outer image field is very good.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the bokeh is usually of lesser concern with ultra-wide lenses, but the Sony lens is faster than most lenses in it class, so let&#8217;s.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+            "weight": 0.75,
+            "quote_excerpt": "It accepts 67mm screw-on filters — a notable advantage over the 14mm f/1.8 GM.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "x 75 mm Weight 304g Filter size 67mm Hood petal-shaped (bayonet mount, supplied) Available Mounts Sony FE Other features Focus stop button aperture rings w/clickless.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "It features a 16mm focal length with f/1.8 maximum aperture and a minimum focusing distance of 15 centimeters (5.9 inches).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Videographers will also like the de-clickable aperture ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "The manual focus ring feels sloppy, while the aperture ring feels excellent.Optical Performance\n\nCenter sharpness shows good detail at f/1.8; stopping down improves contrast significantly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+            "source_type": "reviewer_blog",
+            "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+            "weight": 0.75,
+            "quote_excerpt": "Construction includes weather resistance suitable for harsh conditions.Autofocus & Handling\n\nTwin linear focusing motors deliver fast, quiet autofocus performance.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 70,
+      "evaluated": 44,
+      "non_evaluative": 26,
+      "non_evaluative_breakdown": {
+        "non_claim": 26
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "70 examined · 44 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 0,
+      "neu": 1,
+      "neg": 0,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+          "source_type": "reviewer_blog",
+          "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+          "weight": 0.75,
+          "quote_excerpt": "G lenses come with one or two compromises compared to their GM counterparts.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": null,
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "autumnschrock-com-blog-sony-16mm-f18-g-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.autumnschrock.com/blog/sony-16mm-f18-g-review",
+      "title": "Sony FE 16mm f/1.8 G Lens Review | Autumn Schrock",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T02:49:09.338161+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "opticallimits-sony-sony-fe-full-format-sony-fe-16mm-f-1-8-g-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://opticallimits.com/sony/sony-fe-full-format/sony-fe-16mm-f-1-8-g-review/",
+      "title": "Sony FE 16mm f/1.8 G Review - OpticalLimits",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T02:49:09.338170+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "petapixel-com-2025-02-26-sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://petapixel.com/2025/02/26/sony-fe-16mm-f-1-8-g-review-worthwhile-compromises-for-compactness/",
+      "title": "Sony FE 16mm f/1.8 G Review | PetaPixel",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T02:49:09.338174+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-16mm-f1-8/",
+    "reddit": "Sony 16mm f1.8\n\nSynthesized from 3 reviewer sources for Sony 16mm f1.8. AF for video draws the most discussion: 2 positive, 6 neutral, and 1 negative across 9 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sony-16mm-f1-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony 16mm f1.8**\nSynthesized from 3 reviewer sources for Sony 16mm f1.8. AF for video draws the most discussion: 2 positive, 6 neutral, and 1 negative across 9 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/sony-16mm-f1-8/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony 16mm f1.8 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Sony 16mm f1.8. AF for video draws the most discussion: 2 positive, 6 neutral, and 1 negative across 9 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-16mm-f1-8/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

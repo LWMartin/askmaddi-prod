@@ -1,0 +1,745 @@
+{
+  "card_version": "1.0",
+  "card_id": "sony-fx6",
+  "vertical": "video",
+  "identity": {
+    "display_name": "Sony fx6",
+    "brand": "Sony",
+    "model": "fx6",
+    "sku_alt_names": [],
+    "category": "action_cam",
+    "subcategory": "action-camera",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/KQQAAeSw~oRqJzyH/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 5299.99
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 17,
+      "price_updated_at": "2026-11-04T10:12:48.735894+00:00"
+    },
+    "price_updated_at": "2026-09-16T07:03:53.234487+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-16T07:03:53.221409+00:00",
+    "last_built": "2026-09-16T07:03:53.221409+00:00",
+    "last_checked": "2026-09-16T07:03:53.221409+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "field_of_view": "medium",
+      "video_quality": "low",
+      "price": "low",
+      "image_quality": "low",
+      "ease_of_use": "low",
+      "mount_compat": "low",
+      "weight": "low",
+      "audio_capture": "low",
+      "dimensions": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "field_of_view",
+      "display_name": "Field of View",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 6,
+        "neg": 1,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "FX6 and the Vazen 85mm T2.8mm Full-Frame 1.8x anamorphic lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "So smooth, in fact, you can set ND to auto and watch the depth of field in a scene.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "my kitchen on the Vazen 85mm T2.8 Full-Frame 1.8 anamorphic lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony FX6 Autofocus Flaring a lens is about as good a test of a camera&#8217;s autofocus features as one can find.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "The Autofocus is excellent when shooting with Sony E-mount lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony 24-105mm, the camera lens combination felt practically feather-weight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "The app uses your phone’s camera to simulate the field of view of a chosen cinema sensor and focal length combination, switching automatically between the ultra-wide, wide, and telephoto modules to pick the one that requires the least cropping.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "It ships with aspect ratio presets running from 9:16 to 2.40:1, a default lens list that can be extended with up to 20 custom focal lengths, and a zoom mode covering 4mm to 999mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "iOS covers a handful of camera hardware configurations; Android covers thousands, each reporting its lens and sensor characteristics slightly differently, and a viewfinder app is only as accurate as the metadata the phone hands it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "Anyone planning to hand scout images to a DP or a client should calibrate once against a real camera and lens before trusting the framing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+            "weight": 0.75,
+            "quote_excerpt": "And with the new FX5 positioned above the FX3A , a pricier FX3A also narrows the gap to Sony’s newest compact Cinema Line body, which may change the upgrade math for some.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.545,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "video_quality",
+      "display_name": "Video Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 10,
+        "neg": 1,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "3 / S Cinetone, Preset, and User Scene files with User LUTs XAVC Long GOP and XAVC-I All Intra 4:2:2 10bit recording formats Frame Rates.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "and can internally record up to 240fps in HD and 120fps in 4K.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "little lower on the scale when shooting at 24.00p and cranked all the way up when shooting at 120fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony FX6 is a 4K.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "We see cameras coming out with 12K, 8K, 6K options, and Sony present us with a 4K camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "FX6 can internally and continuously record 120fps in 4K (QFHD) and 240fps in HD.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "It is nice to have the opportunity to shoot 120fps in 4K, but I rarely have the need.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "need the 120fps, and the feature helps Sony FX6 owners use the camera on more gigs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "DCI 4K / QFHD as well as HD.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "Both worked at the highest resolution and frame rate without any problems.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "GoPro Mission 1 Pro ILS Production Framerate Malpractice in cameras, video devices, software &amp; services Latest Production ProVideo Coalition’s Best in Show Winners from IBC.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "For us, normal users, the app will cost around 11.42 USD/9.80 Euros.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+            "weight": 0.75,
+            "quote_excerpt": "According to an official notice from Sony Marketing Corporation , the company is revising manufacturer ex-works prices and recommended retail prices for certain products sold in Japan, effective September 1, 2026.",
+            "witness": "reported"
+          },
+          {
+            "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+            "weight": 0.75,
+            "quote_excerpt": "It is worth noting that these are manufacturer list prices; street prices in Japan have typically sat well below them, and how far retail pricing moves after September 1 remains to be seen.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+            "weight": 0.75,
+            "quote_excerpt": "That said, US pricing on this platform has already moved this year: the FX3A currently carries a list price of $4,298 at B&H , up from the roughly $3,900 level it held earlier, though at the time of writing it is discounted to $3,998 with an instant saving.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+            "weight": 0.75,
+            "quote_excerpt": "Anyone in Europe or North America weighing an FX-series purchase should keep an eye on local pricing over the coming weeks; manufacturer cost pressure rarely stays confined to one market for long.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.8,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "For us, normal users, the app will cost around 11.42 USD/9.80 Euros.",
+        "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+        "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/"
+      }
+    },
+    {
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "What is most important to me is the color the camera delivers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "color palette led by the Sony Venice.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "What Sony is doing is giving stunning color, my opinion here, to the masses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "Options for internal recording and color options are Slog 3 and wide color.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "ease_of_use",
+      "display_name": "Ease of Use",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "touch-screen helps with this because the most accessed features appear on that touch-screen menu too.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "More information is available on the Kader website , and the app itself can be found on Google Play .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+            "weight": 0.75,
+            "quote_excerpt": "Has the lack of maintained viewfinder apps ever pushed you to an iPhone for scouting, or does your Android workflow hold up?",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "foundation for the Sony FX6 is a new 10.2MP full-frame back-illuminated CMOS Exmor R Sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "the Thunderbolt 5 Dock from OWC You Might Also Like m I had a few rounds of email events with their Tech Support.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "and weight of the Sony FS5 ii.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "the size and weight of the FX6.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "audio_capture",
+      "display_name": "Audio Capture",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "While I am not a huge fan of external recorders, I understand.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+            "weight": 0.75,
+            "quote_excerpt": "Size and shape The Sony FX6 is very close to the size.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q123857992",
+        "fetched_at": "2026-09-16T07:03:51.001735+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "",
+    "aspect_breakdown": [
+      {
+        "aspect": "field_of_view",
+        "pos": 4,
+        "neu": 6,
+        "neg": 1,
+        "total": 11
+      },
+      {
+        "aspect": "video_quality",
+        "pos": 0,
+        "neu": 10,
+        "neg": 1,
+        "total": 11
+      },
+      {
+        "aspect": "price",
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4
+      },
+      {
+        "aspect": "ease_of_use",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2
+      },
+      {
+        "aspect": "weight",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2
+      },
+      {
+        "aspect": "audio_capture",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 40,
+      "evaluated": 10,
+      "non_evaluative": 30,
+      "non_evaluative_breakdown": {
+        "non_claim": 30
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "40 examined · 10 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": null,
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "provideocoalition-reviewing-the-new-sony-fx6",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.provideocoalition.com/reviewing-the-new-sony-fx6/",
+      "title": "Reviewing The New Sony FX6 by Brian Hallett",
+      "publication_date": "",
+      "ingested_at": "2026-09-16T07:03:53.222512+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-cined-kader-director-s-viewfinder-a-modern-android-viewfinder-app-2026",
+      "source_type": "pro",
+      "reviewer": "CineD",
+      "platform": "web",
+      "url": "https://www.cined.com/kader-directors-viewfinder-a-modern-android-viewfinder-app-built-by-a-working-dp/",
+      "title": "Kader Director’s Viewfinder – A Modern Android Viewfinder App Built by a Working DP",
+      "publication_date": "",
+      "ingested_at": "2026-09-16T07:03:53.222522+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-cined-sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx3-2026",
+      "source_type": "pro",
+      "reviewer": "CineD",
+      "platform": "web",
+      "url": "https://www.cined.com/sony-raises-cinema-line-prices-in-japan-fx3-jumps-19-fx6-fx30-and-fr7-also-affected/",
+      "title": "Sony Raises Cinema Line Prices in Japan – FX3 Jumps 19%, FX6, FX30, and FR7 Also Affected",
+      "publication_date": "",
+      "ingested_at": "2026-09-16T07:03:53.222527+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-fx6/",
+    "reddit": "Sony fx6\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sony-fx6/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony fx6**\nAll 3 reviews in one place: https://askmaddi.com/cards/sony-fx6/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony fx6 — Reviewed",
+      "description": "Sony fx6 — all 3 reviews in one place.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-fx6/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

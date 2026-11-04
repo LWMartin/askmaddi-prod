@@ -1,0 +1,2023 @@
+{
+  "card_version": "1.0",
+  "card_id": "sony-a6600",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Sony a6600",
+    "brand": "Sony",
+    "model": "a6600",
+    "sku_alt_names": [],
+    "category": "body",
+    "subcategory": "mirrorless",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/PKIAAOSwe-Rk8Itu/s-l640.jpg",
+    "image_source": "ebay_catalog"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 680.78,
+        "refurbished": 789.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 42,
+      "price_updated_at": "2026-11-04T10:12:39.910836+00:00"
+    },
+    "price_updated_at": "2026-09-24T02:02:11.936814+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T02:02:11.921218+00:00",
+    "last_built": "2026-09-24T02:02:11.921218+00:00",
+    "last_checked": "2026-09-24T02:02:11.921218+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "medium",
+    "per_axis": {
+      "sensor_performance": "medium",
+      "video_capability": "medium",
+      "mount_compat": "medium",
+      "price": "medium",
+      "image_quality": "medium",
+      "autofocus_body": "medium",
+      "generation_context": "medium",
+      "burst_buffer": "medium",
+      "battery_life": "low",
+      "evf_lcd": "medium",
+      "stabilization": "low",
+      "connectivity": "low",
+      "build": "low",
+      "handling": "low",
+      "dimensions": "low",
+      "weight": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 15,
+        "neu": 18,
+        "neg": 0,
+        "total": 33,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Intro The Sony A6600 is an upper mid-range mirrorless camera with a 24 Megapixel APSC sensor, built-in stabilisation, 4k video, 11fps bursts.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the M6 II, I feel 24 or thereabouts remains a sweet-spot for resolution, noise and dynamic range on an APSC sensor and you can.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony A6600 sensor review - DXOMARK Skip to content Sensors &nbsp;>&nbsp; Sony A6600 &nbsp;>&nbsp; Sensor&nbsp;Test Results Overall performance Image quality compared In-depth comparisons Portrait Landscape.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony A6600 24MP sensor achieves an overall DXOMark score of 82, which puts it in 21st place.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(joint 4th) overall in our database of APS-C and Four-Thirds sensors used in mirrorless cameras, dropping to joint 6th when we include APS-C DSLRs.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A6600 sensor is strongest in our Sports ( low-light ISO ) category, and at 1497 ISO, achieves the highest value we&rsquo;ve measured for this sensor.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The A6600 achieves a maximum dynamic range of 13.4 EV at its expanded setting of ISO 50, and it also has an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "excellent high ISO dynamic range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Image quality compared A strong result in the Sports category means that the A6600 has low noise and good dynamic range,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "but it&rsquo;s worth remembering that the results in ISO values in this category are a function of SNR and dynamic range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "leading sensors are very small indeed, and all of the recent Sony 24MP APS-C sensors going back to 2016 achieve very similar results in this.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Still, the E-M1 Mark II&rsquo;s lower- resolution 20.4MP sensor is the best of its type and comes remarkably close, achieving a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Maximum dynamic range and color sensitivity of the M5 is 12.4 EV and 23.4 bits, respectively, while its low-light ISO score is just 0.2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "However, while the similarly-sized APS-C Canon sensor is 0.4 bits lower at base, the smaller Four-Thirds sensor in the Olympus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "full- frame sensors, but slightly better than the Four-Thirds Olympus at 13.3 bits and just less than the APS-C Canon at 14 bits.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The A6600 achieves the maximum dynamic range at its expanded setting of ISO 50 (ISO 70 measured), though ISO 100 offers an identical.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Even so, the Sony A6600 captures an extra +0.56 EV more than the smaller Four-Thirds sensor in the Olympus at its lowest sensitivity setting,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It also trumps the Canon at ISO 100 (measured ISO 69) with a dynamic range that is +1 EV wider..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "More importantly, with the exception of ISO 200 (measured 142), the Sony has a wider dynamic range than either rival at every sensitivity setting up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "when capturing high-contrast scenes at higher ISOs (such as when hand-held, for instance).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dynamic range threshold of 10 EV and has a dynamic range that is nearly a stop (+0.93 EV) wider than the Olympus and +1.33 EV.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Also worth noting is that images from the Sony A6600 sensor remain within our minimum 6 EV (measured at 6.78 EV).",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dynamic range quality threshold at the extended sensitivity setting of ISO 51,200.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "SNR 18% results for all three cameras are similar, especially at high ISOs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Even so, images from the Sony A6600 sensor are slightly cleaner than.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony&rsquo;s credit, the A6600 sensor maintains that difference between the two until ISO 12,800 (ISO 25,600 on the Olympus).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusion Sony continues to stay ahead with its 24MP APS-C Exmor sensor, particularly with regard to low-light performance and high ISO dynamic range, though.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "for APS-C, Canon has trumped Sony in resolution with a new 32.5MP sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the A6600 is so good that most photographers quite honestly don't really NEED to go out and buy a full-frame camera setup just for the image quality alone.With the APS-C crop factor (1.5x) and impressive autofocus system",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Out of every genre of photography, this is primarily what the A6600 will excel at, especially compared to the older generation cameras in this lineup.Sony has spent a long time making all of their 24-megapixel sensors some of the best around, and that goes for both full-frame and crop-sensor bodies.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Even at extremely high ISOs, where many older APS-C cameras failed, including the old A6000, the A6600 is very impressive.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Instead of relying on a pop-up flash that ruins the moment and kills your visual creativity, why not put to good use the A6600's incredible high ISO performance?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Unless you're making huge prints, you can easily shoot at ISO 12800 or ISO 6400 and not worry about losing detail or color.All in all, the A6600 has a lot to offer, and checks all the boxes in terms of what you're probably looking for in a portable, affordable, yet highly capable digital camera…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.788,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "The A6600 achieves a maximum dynamic range of 13.4 EV at its expanded setting of ISO 50, and it also has an.",
+        "source_id": "dxomark-sony-a6600-sensor-review",
+        "url": "https://www.dxomark.com/sony-a6600-sensor-review/"
+      }
+    },
+    {
+      "axis_id": "video_capability",
+      "display_name": "Video Capability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 7,
+        "neu": 12,
+        "neg": 3,
+        "total": 22,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "across almost the entire frame, 11fps shooting, unlimited video recording, 4k up to 30p, 1080 up to 120p, a screen that angles all the way.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "in fact itâs the first A6000 model not to have one, with Sonyâs justification being that target customers will either be video shooters or high-end.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "terms of video alone, I even managed to record a single 4k 24p clip lasting three hours and 25 minutes on a full charge.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "than 400 photos or just one hourâs worth of 4k video (cut into two clips too) on a single charge.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "port will output clean 4k, but sadly thereâs still no 10-bit here internal or external, again a feature available on the Fujifilm X-T3 and even.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: The A6600 inherits the movie quality, video autofocus and unlimited recording of the A6400 before it, with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So you can film uncropped 1080 at 24, 25, 30, 50 or 60p, or at 100 or 120p with a mild crop for slow motion..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Set the camera to 4k.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "4k video is available at 60 or 100Mbit.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "4k above 30p, nor any 10-bit recording internal or external &#8211; all of which is available on the Fujifilm X-T3 &#8211; but thereâs no arguing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with the quality of Sonyâs oversampled 4k footage.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Hereâs an example I filmed in 4k 24p and itâs jam-packed with detail.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "grade your footage, thereâs the usual array of Picture Profiles available, including S-Log 2, 3 and HLG, although again no 10-bit option.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "also one of the only companies besides Panasonic to offer unlimited movie recording times beyond the usual 30 minute limit, and while Panasonic reserves it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "around one hourâs worth of 4k, the bigger battery in the A6600 allowed me to record a single 4k 24p clip beyond three hours without.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "recording 3 hours, 25 mins and 17 secs of 4k 24p at 60Mbit/s in a single clip measuring 89GB &#8211; seriously impressive stuff for anyone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "record half hour 4k clips up to 30p and only two of them on a single charge.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Video capture is 4K/30p full- pixel readout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and video Native ISO 100&ndash;32,000, with expansion to ISO 50&ndash;102,400 11 fps maximum burst 3-inch tilt screen 4K UHD/30fps video, Full HD at up to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It's definitely beautiful, with detailed, vibrant 4K footage indeed, however, the actual specs aren't anything to write home about, and serious videographers might consider the A6600 to be just a backup or BTS camera to something like the A7 III, let alone the new A7S III.Of course, image quality…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "once that buffer starts to get full, the UHS type-1 SD cards will take forever to write all your RAW images, compared to the more expensive Sony full-frame cameras with UHS type-2 SD card slots.Speaking of performance, though, let's talk about the one aspect where the A6600 utterly destroys the…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "CIPA rates the A6600 to as high as 810 shots, and in our experience, that's easily doubled for real-world active shooting, and even tripled for low power consumption tasks like time-lapse photography, which the A6600 has built-in.It definitely qualifies as tiny, compared to any other flagship…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.773,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "So you can film uncropped 1080 at 24, 25, 30, 50 or 60p, or at 100 or 120p with a mild crop for slow motion..",
+        "source_id": "cameralabs-sony-alpha-a6600-review",
+        "url": "https://www.cameralabs.com/sony-alpha-a6600-review/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 15,
+        "neg": 2,
+        "total": 18,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "already exists in the A7 III with the bonus of full-frame.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the Sony A6600 at B&amp;H , Adorama , or Wex .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony A6600 at B&amp;H , Adorama , or Wex .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Like other recent Sony cameras, the A6600 lets you choose from a variety.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Cameras , Sony cameras Tagged under: A6600 , Alpha , review , Sony permalink Sony A6600 Check.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "waterproof camera 2022 Best Canon Lenses Best Fujifilm lenses 2023 Best Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon Laing Support Camera Labs Buy Gordon a coffee!.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera Best.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sports Conclusion The Sony A6600 is the follow-up to the A6500, and is now the premium camera in the company&rsquo;s range of rangefinder-style, mirrorless interchangeable-lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with the Micro-Four-Thirds Olympus OM-D E-M1 Mark II.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "All three in our database&mdash;the M100, the M5, and the M56&mdash;perform similarly, though the 24.2MP Canon EOS M5 is arguably the.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "closest direct competitor to the Sony A6600.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lens range is a little limited, though it can access Canon&rsquo;s vast EF range using an EF-M adapter..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a +0.3 EV advantage over the Olympus, but only around +0.1 EV over the Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Whether you're looking at the modern mirrorless flagships like the Fuji X-T4, or the older DSLR generation of DX and EF-S flagships like the Nikon D500 or Canon 7D mkII, the Sony A6600 is by far the most portable.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.611,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Whether you're looking at the modern mirrorless flagships like the Fuji X-T4, or the older DSLR generation of DX and EF-S flagships like the Nikon D500 or Canon 7D mkII, the Sony A6600 is by far the most portable.",
+        "source_id": "slrlounge-com-sony-a6600-review",
+        "url": "https://www.slrlounge.com/sony-a6600-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 9,
+        "neg": 4,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "above 30p or in 10 bit, revealingly all available on the Fujifilm X-T3 at a similar price.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "recent A6400 lacks the stabilisation, long battery and headphone jack, but is otherwise almost identical and costs a considerable $500 less, while the arguably more.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "compelling full-frame A7 III could end up working out a similar price depending on the lenses you couple them with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; &nbsp; Check prices on the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prices at B&amp;H Recent Posts Canon RF 7-14mm f2.8-3.5L Fisheye review Canon RF 14mm f1.4L VCM review Nikon Z 24-105mm f4-7.1 review so far Fujifilm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A6600 Check prices at Wex Sony A6600 Check prices at Adorama Like my reviews?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony A6600 Check prices at Adorama.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With the introduction of the Mark III, the price has fallen significantly, though not quite to the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As Canon&rsquo;s top-of-the-range APS-C mirrorless camera, costing around $1000 when launched in 2016, the EOS M5 is aimed at much the same.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like the Olympus, it has also come down in price, however, it&rsquo;s overdue for a refresh.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With a well-rounded feature set, the Sony A6600 is an attractive camera at a relatively affordable price.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The only major drawback is that the sensor is exposed when changing lenses, but then again, most mirrorless cameras have this drawback.Considering that you're inheriting most of the autofocus prowess from the $4,500 Sony A9 II, there is absolutely a great value to be had in this $1,398 camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The flagship APS-C option from Fuji, for comparison, costs $1,699, and its autofocus system, although impressive, is still not on par with Sony's Real-Time Tracking.Despite the A6600 inheriting the awesome autofocus interface from the A9 series, unfortunately, it does not inherit the awesome body…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "On the other hand, if you've had a lot of experience with cameras that have the more traditional design and ergonomics, like the Sony A9 II, or the Nikon Z6, or the new Canon EOS R6, then the handling of the Sony A6600 will feel noticeably beginner-oriented, especially for its ~$1,400 price tag.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.533,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 6,
+        "neg": 2,
+        "total": 12,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "That said, if you want Sonyâs steadily refined photo and movie quality coupled with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "beyond it to the written version, then check out my quality results, sample images and final verdict pages!",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony A6600 doesn&rsquo;t compare quite so well in the Portrait ( color depth ) category.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "very good maximum color depth of 13.4 bits at its expanded setting of ISO 50, it doesn&rsquo;t fare quite so well after that, especially at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "very good maximum color depth of 23.7 bits, and has both a wide maximum dynamic range of 12.8 EV and a very strong Sports score.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Portrait (color depth) All three sensors share similar maximum color depth.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It certainly outperforms the Canon EOS M5 for color depth at low to mid sensitivities, but even then, the Olympus has a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "marginally higher color depth at ISO 400 (measured ISO 162).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "our 14-bit color depth threshold of acceptable image quality when set to ISO 12,800 (measured 9,275 ISO), which is around a stop lower than leading.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "overall image quality is largely unchanged from earlier models.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "our interactive image sensor ranking tool .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Colors, contrast, and dynamic range are beautiful at almost all ISOs.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.75,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "autofocus_body",
+      "display_name": "Autofocus",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 5,
+        "neg": 1,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like other recent Sony bodies, the A6600 allows you to tap to reposition the AF area &#8211; including.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "APSC sensor introduced on the A6300 three and a half years earlier, which means it also inherits a broad array of 425 phase-detect autofocus points.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of autofocus areas from a variable-sized single area through Zone to Wide where you hand over the reins entirely to the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with Sony cameras where I rarely over-ride the Wide area mode with Real Time Tracking as it simply works so well for most subjects.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "may now offer phase-detect AF across the entire frame, but Sonyâs eye and overall tracking software remains the most confident in my view.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera&rsquo;s autofocus to select dynamically between tracking AF and eye and face detection AF modes, without additional user input.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Key specifications: 24.2-MP APS-C Exmor CMOS sensor Real-Time Tracking AF for stills.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on-chip phase detection autofocus has slightly better dynamic range and has significantly better color sensitivity throughout the sensitivity range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Thankfully, the A6600 delivers autofocus performance that rivals its full-frame siblings, too.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "You'll want to spend a lot of time getting to know the AF system, though, because the interface for focus point control is very complex, and the best feature, Real-Time Tracking AF, takes some figuring out to engage properly.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Once you do get it figured out, though, you'll enjoy what is, no exaggeration, the absolute best autofocus performance of any APS-C mirrorless camera, period.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.455,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 5,
+        "neg": 1,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "enjoyed shooting with the A6600 especially with the 16-55mm f2.8, potential buyers have to ask themselves how much theyâd exploit those upgrades over the cheaper.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Announced in August 2019, it replaces the three-year-old A6500 as Sonyâs flagship body and like that model, follows the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "far the highlight of the A6600 and its number one upgrade over earlier models.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "still pleased to see it here &#8211; along with the bigger battery, itâs another of the key upgrades over the A6400 and A6500.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Itâs no different from other recent Sonys, but it still works well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "However, Sony removed the built-in flash found in its predecessor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "E-M1 Mark II is a premium model that is pitched at a similar market segment as the Sony A6600.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the inclusion of its Real-Time Tracking Autofocus for both stills and video, along with a larger battery over its predecessor, make it an appealing upgrade.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There was poor battery life, unreliable autofocus, and generally not the same level of responsiveness and speed that we could get from a similarly priced DSLR from 5+ years ago.Now, things have definitely changed!",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With this sixth camera, Sony has added an impressive battery, indeed one of the best in the whole mirrorless market, as well as one of the best autofocus systems of any mirrorless camera.Other than that, at first glance, the A6600 appears to be quite similar to the original, six-year-old A6000.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So, what else has been changed, and what else could still be improved?",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.455,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "burst_buffer",
+      "display_name": "Burst & Buffer",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 9,
+        "neg": 1,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The shutter block remains unchanged too with a top mechanical speed of 1/4000 when most.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "photographers who typically donât use popup flashes, but I still find them handy for quick fills and I miss it here &#8211; what do you.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "To be fair, Fujifilmâs X-T3 doesnât have a popup flash either, but at least it includes a small bounceable flashgun in the box.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "for sports, action and wildlife, and after shooting a large burst you can be left waiting some time for the buffer to clear.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "are unchanged from the A6300, which means a top mechanical speed of 11fps with autofocus or 8fps if youâd like live-ish feedback between frames.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "20fps if you switch to their electronic shutter, while Canonâs M6 II boasts a 14fps mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a while for a full buffer to clear after a long burst or a bunch of RAW images &#8211; you can see the images counting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A continuous shooting rate of up to 11 fps is possible, with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The camera may be able to shoot at 11 FPS",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The buffer is generous, but once it's full, you'll have to sit around and wait for it to slowly clear.Sony has removed the pop-up flash from this camera.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.7,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "battery_life",
+      "display_name": "Battery Life",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 2,
+        "neg": 0,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "up to face you, built-in stabilisation, mic and headphone jacks and the longest battery life of any camera in its class.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The A6600 becomes the first Sony APSC body to use the companyâs higher capacity FZ100 battery pack, increasing the life to 810 shots under CIPA.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But overall with stabilisation, much longer battery life and a headphone jack, the A6600.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the full-framers which use it &#8211; but I managed over 900 shots on a single charge including several minutes of video and Wifi use.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "short, itâs the longest life of any mirrorless camera Iâve tested.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "You can see it here passing three hours with 8% of the battery remaining &#8211; I ended up.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It inherits the professional, high-capacity battery of its full-frame siblings, the Sony NP-FZ100, which means it will basically last longer than almost any other camera on the market for stills photography, and it will last almost long enough to fill up multiple memory cards for 4K video.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.857,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "evf_lcd",
+      "display_name": "EVF & LCD",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 2,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like the A6400, the viewfinder remains XGA in resolution, thereâs only one card slot (albeit rotated within the chunkier.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: in another disappointing move, the A6600 inherits the 2.36 Million dot OLED viewfinder introduced back.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the viewfinder doesnât affect the image quality, but you do appreciate the extra detail when manually focusing and experience less moire on detailed scenes.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above:the A6600 inherits the articulated screen mechanism of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "when composing through the viewfinder &#8211; but not much else.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Despite the compact dimensions, there&rsquo;s a 2.3 M-dot EVF and a 3-inch, 921k-dot touchscreen LCD that can tilt 180 degrees for vlogging.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "that big, beautiful viewfinder, you'll find it hard to make do with the A6600's control layout and general ergonomics.The A6600 is fast in every way, from FPS to autofocus, except in this one subtle nuance: its memory card slot only goes up to UHS-1",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.714,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "stabilization",
+      "display_name": "Stabilization",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 5,
+        "neg": 1,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the same 24 Megapixel sensor, AF system, 11fps bursts, unlimited movie recording, XGA viewfinder and tilting touchscreen, but it adds more than just built-in stabilisation..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "shifts the sensor to stabilise any lens you attach and like the A6500 before it, with variable results depending on your movement at the time..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With Steadyshot enabled in the menu, the view is temporarily wobbly, but after a second or so of holding the shutter release down, the system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Letting go of the shutter or AF button though disengaged the stabilisation with the wobbles returning, so.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "effect of the best models out there, but still proved beneficial for static shooting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "modes, the stabilisation and a vlogging test, please check out my full review video at the top of this page!",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like its forerunner, the new model features a 24.2 MP Exmor CMOS sensor and in-body image stabilization (IBIS).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.857,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "connectivity",
+      "display_name": "Connectivity",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like most new cameras, the A6600 is equipped with Wifi and Bluetooth, the former allowing quick remote control, while the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and USB 2.0 data transfer, plus NFC for connection to mobile devices and Bluetooth for location data acquisition.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "120fps Two cards slots: single SD UHS-I + Memory Stick Pro Wi-Fi, USB 2.0, NFC, and Bluetooth Overall performance Click on the score chart above.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Smartphones Camera Sensors Camera Lenses Wireless Speakers Laptops Articles Test results Best of Tech articles Insights About us Our company Our Label Smart Choice Label.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 2,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The image quality and overall performance is more than good enough for me to say that unless you're truly pushing the envelope of photography with extremely challenging conditions",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As a high-powered camera that is also capable of casual walk-around photography, and a battery that can last literally all day no matter what you're shooting, nothing beats the Sony A6600.The A6600, like its little sibling A6400, and its predecessor A6500, is weather-sealed and made mostly of…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It might not be as extensively sealed as the likes of flagships from Olympus or Fuji, but it's still going to be relatively impervious to the elements.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Basically, the Sony A6600 is a great all-around camera that almost any type of photographer could find to be well-suited for their needs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony has kept the whole A6x00 lineup relatively similar in terms of ergonomics, which is to say, the physical controls are kind of limited in comparison to the A9-series.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Any photographer who knows what it's like to have dual command dials optimally positioned for exposure control, plus enough additional dials and buttons to assign to all the frequently-used functions",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "16:9 video as it fills the screen, but when shooting still photos in the native 3:2 shape, the image will be presented in a crop.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sony-a6600-sensor-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+            "weight": 0.75,
+            "quote_excerpt": "terms of sensor size is the one it replaces, the Sony A6500.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It's very lightweight and compact compared to its full-frame A7-series and A9-series siblings, and of course, it's much more affordable than any current-generation Sony full-frame camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "slrlounge-com-sony-a6600-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.slrlounge.com/sony-a6600-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you're doing a lot of low-light photography, my advice would just be, find good light.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 503,
+        "high": 503,
+        "anchor": 503,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q96309118",
+        "fetched_at": "2026-09-24T02:02:09.801987+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q96309118",
+        "fetched_at": "2026-09-24T02:02:09.801987+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Reviewers are most positive about video capability (32% positive, 54% neutral, 14% negative across 22 claims). Coverage of mount compatibility is mostly neutral: 6% positive, 83% neutral, 11% negative across 18 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "sensor_performance",
+        "pos": 15,
+        "neu": 18,
+        "neg": 0,
+        "total": 33
+      },
+      {
+        "aspect": "video_capability",
+        "pos": 7,
+        "neu": 12,
+        "neg": 3,
+        "total": 22
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 1,
+        "neu": 15,
+        "neg": 2,
+        "total": 18
+      },
+      {
+        "aspect": "price",
+        "pos": 2,
+        "neu": 9,
+        "neg": 4,
+        "total": 15
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 4,
+        "neu": 6,
+        "neg": 2,
+        "total": 12
+      },
+      {
+        "aspect": "autofocus_body",
+        "pos": 5,
+        "neu": 5,
+        "neg": 1,
+        "total": 11
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 5,
+        "neu": 5,
+        "neg": 1,
+        "total": 11
+      },
+      {
+        "aspect": "burst_buffer",
+        "pos": 0,
+        "neu": 9,
+        "neg": 1,
+        "total": 10
+      },
+      {
+        "aspect": "battery_life",
+        "pos": 5,
+        "neu": 2,
+        "neg": 0,
+        "total": 7
+      },
+      {
+        "aspect": "evf_lcd",
+        "pos": 1,
+        "neu": 4,
+        "neg": 2,
+        "total": 7
+      },
+      {
+        "aspect": "stabilization",
+        "pos": 1,
+        "neu": 5,
+        "neg": 1,
+        "total": 7
+      },
+      {
+        "aspect": "connectivity",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4
+      },
+      {
+        "aspect": "build",
+        "pos": 1,
+        "neu": 0,
+        "neg": 2,
+        "total": 3
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2
+      },
+      {
+        "aspect": "weight",
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 167,
+      "evaluated": 82,
+      "non_evaluative": 85,
+      "non_evaluative_breakdown": {
+        "non_claim": 85
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "167 examined · 82 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "sensor_performance",
+    "highest_rated": "video_capability",
+    "lowest_rated": "mount_compat"
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-sony-alpha-a6600-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/sony-alpha-a6600-review/",
+      "title": "Sony A6600 review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T02:02:11.926628+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dxomark-sony-a6600-sensor-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.dxomark.com/sony-a6600-sensor-review/",
+      "title": "Sony A6600 sensor review - DXOMARK",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T02:02:11.926642+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "slrlounge-com-sony-a6600-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.slrlounge.com/sony-a6600-review/",
+      "title": "Sony A6600 Review | SLR Lounge",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T02:02:11.926648+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-a6600/",
+    "reddit": "Sony a6600\n\nReviewers are most positive about video capability (32% positive, 54% neutral, 14% negative across 22 claims). Coverage of mount compatibility is mostly neutral: 6% positive, 83% neutral, 11% negative across 18 claims.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sony-a6600/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony a6600**\nReviewers are most positive about video capability (32% positive, 54% neutral, 14% negative across 22 claims). Coverage of mount compatibility is mostly neutral: 6% positive, 83% neutral, 11% negative across 18 claims.\nAll 3 reviews in one place: https://askmaddi.com/cards/sony-a6600/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony a6600 — Reviewed",
+      "description": "Reviewers are most positive about video capability (32% positive, 54% neutral, 14% negative across 22 claims). Coverage of mount compatibility is mostly neutral: 6% positive, 83% neutral, 11% negative across 18 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-a6600/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

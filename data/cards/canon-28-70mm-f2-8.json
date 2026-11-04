@@ -1,0 +1,2191 @@
+{
+  "card_version": "1.0",
+  "card_id": "canon-28-70mm-f2-8",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Canon 28 70mm f2.8",
+    "brand": "Canon",
+    "model": "28 70mm f2.8",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/iRkAAeSwhPFp-Z6m/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 244.92
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 15,
+      "price_updated_at": "2026-11-04T10:10:15.445774+00:00"
+    },
+    "price_updated_at": "2026-09-26T07:08:25.993675+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-26T07:08:25.986234+00:00",
+    "last_built": "2026-09-26T07:08:25.986234+00:00",
+    "last_checked": "2026-09-26T07:08:25.986234+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 2,
+        "neg": 5,
+        "total": 12,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Ok now for a distant quality test, starting at 28mm f2.8, and due to my limited time with the lens so far, Iâve had to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a good degree of detail wide-open, with little to no benefit to closing the aperture down.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As you close the aperture, the details become a tad crisper, but Iâd certainly.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "but this becomes crisper as you close the aperture down a little.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So like most new lenses, the 28-70 is respectably sharp across the frame..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a closer look at the subject, thereâs sharp details too.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF (resolution) at 45 megapixels The Canon RF 28-70mm f/2.8 IS STM has the weirdest resolution characteristic that we&#8217;ve.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "center quality and a very good outer image field.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At 70mm, the broader center is still superb, but the border/corner quality falls apart.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality is still good at f/2.8 but the corners are downright poor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(LW/PH) which can be taken as a measure of sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "And speaking of light, sunlight this time, the lens delivers pleasant and sharp sunbursts at all focal lengths..",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "MTF (resolution) at 45 megapixels The Canon RF 28-70mm f/2.8 IS STM has the weirdest resolution characteristic that we&#8217;ve.",
+        "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+        "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 10,
+          "neg": 1,
+          "total": 11,
+          "sources": [
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "to take into consideration, but youâre basically looking at the physical impact of wanting the same zoom range but with an aperture one stop faster..",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "alone for native full-frame lenses with autofocus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "the closest focusing distance at 28mm is 27cm.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "And now for the lens at 70mm f2.8 where you can see the focusing remains very quick.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Note the closest focusing distance at 70mm is 35cm.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "lens at 28mm f2.8 using face detection and the whole AF area on the EOS R8.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "focus closer, but not quite by as much as at 28mm.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The lens relies heavily on image autocorrection.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "An autofocus anamorphic lens has even entered the chat.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "With this combination, I was constantly selecting focus for the lens and hoping it stayed put.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "that the AF and MF button on the side, traditionally indicated by two markers, actually has three on this lens: AF, Control, and MF.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.636,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 8,
+          "neg": 2,
+          "total": 10,
+          "sources": [
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "is a smooth spinning ring which as mentioned earlier can adjust manual focus or act as a custom control ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Letâs try that last test at 70 2.8 for video with a single AF.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "But first a quick look at focus breathing without body-compensation enabled, starting.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "up questions when it comes to the lens buffet: Do you know what you want in focus?",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "spoiled with things like lens buffets, autofocus has come a long way.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "Back-focusing in video mode seems like a bygone mistake of the past.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "the camera on what to focus on, it will continue to search, particularly when the elements are small.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "it from AF to MF to control what’s in focus (more on that button in On The Side).",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "According to the Canon UK site , changing the slot to “Control” turns the focus ring.",
+              "witness": "reported"
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "source_type": "reviewer_blog",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "weight": 0.75,
+              "quote_excerpt": "Pro Photo First Look: Hands-on with the GoPro Mission 1 Pro ILS Production Framerate Malpractice in cameras, video devices, software &amp; services Latest Art of.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.7,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dust and moisture-resistant, including a rubber grommet at the mount as well as seals around the rings and switches.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "few lenses that could well be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon used lots of plastics, but overall the lens feels well-made - if it wasn't for the retractable zoom mechanism.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite"
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 3,
+        "neu": 27,
+        "neg": 3,
+        "total": 33,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f4L which for only a little extra gives you a broader zoom range, L build quality, and a lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "To be fair, many of us have been asking for mid-range Canon RF lenses - and with its bright aperture,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the Canon RF 28-70mm f2.8 IS STM at B&amp;H , Adorama , WEX UK or Calumet.de .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like other RF lenses, it only works on EOS R bodies (plus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "some cinema models), and is not compatible with EF DSLRs or EOS M mirrorless cameras.&nbsp; Launched in September 2024, the 28-70 provides a more affordable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the right which helped launch the EOS R system.&nbsp;This beast of a lens weighs almost 1.5kg and costs around three grand.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "academic since neither are currently available in the RF mount, so if you own an EOS R camera youâre still pretty much looking to Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So again Iâd say a step-up from entry-level lenses, but.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 Published in: Canon lenses , Lenses permalink Recent Posts Nikon Z 24-105mm f4-7.1 review so far Fujifilm instax mini.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon RF 28-70mm f/2.8 IS STM Review - OpticalLimits Close Menu Facebook X (Twitter) Instagram Trending Fujinon XF 90mm f/2 R LM WR ( Fujifilm).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Review Viltrox AF 14mm f/4, 20mm f/2.8, 40mm f/2.5 and 50mm f/2 AIR now available in L-mount Panasonic Lumix S 20mm f/2.5 announced Sony FE.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": ") Review Nikkor Z 40mm f/2 Review Sigma 105mm f/1.4 DG HSM ART (Nikon F) Review Facebook X (Twitter) Instagram Canon RF Canon RF 28-70mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Reddit WhatsApp Copy Link Formally, Canon doesn&#8217;t have a &#8220;prosumer&#8221; (mid-grade) grade lens lineup like Sony with its G class.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "One of them is the Canon RF 28-70mm f/2.8 IS STM.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses, but this isn&#8217;t one of them, obviously.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Canon RF 28-70mm f/2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens within the Canon lineup (or fall back to an EF adapter solution).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the superior choice &#8211; or the Canon RF 24-105mm f/4 IS USM L (to the right) which is comparable in price.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f/2.8 STM IS is a somewhat strange combination of qualities that you can find in professional and budget lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you absolutely need a fast standard zoom lens but can't afford the L-lens, Canon RF 28-70mm f/2.8 STM IS is a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "w3IncludeHTML(); } Canon Standard Zoom Related Posts Fujinon XF 10-24mm f/4 R OIS WR ( Fujifilm ) Review 6 September 15, 2026 Nikkor Z 40mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Review: Canon RF 28-70mm F2.8 IS STM Lens by Michelle DeLateur - ProVideo Coalition Skip to content twitter facebook pinterest On the menu: A compact,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "we have an increasing buffet of options for most lens mounts.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "ever with one glaring exception: the Canon RF mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Until recently, Canon RF users have been restricted to either purchase lenses from Canon’s own rather.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "I used a Canon R8,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "lens in MF to decide for the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "what Sigma and Tamron do, but they don’t currently have any full frame lenses announced.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "wildlife, and sports realms with the 50-1000mm T5.0-8.9 Cine-Servo Lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.394,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "To be fair, many of us have been asking for mid-range Canon RF lenses - and with its bright aperture,.",
+        "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+        "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 2,
+        "neu": 7,
+        "neg": 4,
+        "total": 13,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "mid-range positioning also makes it one of the most expensive non-L lenses in the RF series to date, uncomfortably approaching the price of the 24-105mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If youâre after a more affordable 2.8 zoom, consider adapting an EF model with some great prices on used.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Itâs a rare mid-range option in Canonâs RF series, aimed as an upgrade from the basic kit zooms, and while the price makes.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "it one of the most expensive non-L lenses in the RF series to date, it does remain a lot cheaper than the other bright RF.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "28-70 2.8 for three years now, and Tamron a 28-75 2.8 for six years, both at around two thirds the price of the Canon.&nbsp;But thatâs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Canon RF 28-70mm f2.8 IS STM at B&amp;H , Adorama , WEX UK or.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "hardly budget money and more comparable to the Canon RF 24-105mm f/4 USM L IS.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "isn't much wrong about it, but this isn't a cheap lens by any standard.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The Canon RF lens line is expensive, yes, but gorgeous..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "lens and each is at a cost.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma’s 24-70mm F2.8 ART lens for Sony and L Mount is $1,099.00, the same price as the lens reviewed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "It does not have stabilization and it is considered a budget lens at $489.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "28-70mm RF F2.8 , which is a full frame lens with stabilization seems like a fair cost all things considered.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.462,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "The Canon RF lens line is expensive, yes, but gorgeous..",
+        "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+        "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f/2.8 IS STM Review By Klaus February 26, 2025 Updated: August 20, 2026 Facebook Twitter Pinterest LinkedIn Tumblr Email Share Facebook Twitter LinkedIn Pinterest Email.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 3,
+        "neu": 3,
+        "neg": 1,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF Lightweight and compact The Bad What happened at 70mm, Canon?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Both lenses are heavy hitters, but they are also heavy in weight and heavily priced: the 28-70mm F2.0 L comes in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "So, what is someone interested in a lightweight full frame zoom RF lens to do?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Lighter Fare: The lens is impressively small, so small that it could.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "or your daily workhorse is the 24-70 F2.8, this lens will feel as light as a feather.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "because it is lighter, if you ever felt the need to vlog or take a selfie, you can still do so at 28mm with little.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "content you want with a light weight full frame travel friendly lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.857,
+        "contested": true
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 5,
+        "neg": 4,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Speaking of digital compensation, like most modern lenses the RF 28-70 is designed to use a profile to correct for.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is updated for this lens or youâll see the distortion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The RAW distortion level that we can observe below is not great, but it&#8217;s not terrible either.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At 28mm, there is a heavy barrel distortion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Neutral distortion is reached around the 35mm mark, from which point.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "onward the distortion type switches to pincushion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Funnily, the pincushion distortion at 70mm is somewhat overcompensated to a mild barrel distortion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "28mm f/2.8, the image corners are almost black (without distortion correction).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "distortion and vignetting is high, but then again - image autocorrection is a fact of life now anyway.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.778,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 3,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There are some benefits to closing the aperture a stop or two if youâd like the best quality into the corners, but you certainly wouldnât.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As you close the aperture down youâll.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting While the RAW distortions aren&#8217;t too bad, the RAW vignetting is &#8211; which is not unheard of in consumer-focused Canon zoom lenses (&#8230;).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At f/8, vignetting is still at 2 EV (f-stops).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The vignetting is less extreme.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This reduces the vignetting to a maximum.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As long as the aperture is near-circular, there isn&#8217;t much going on &#8211; the bright light is just rendered.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.714,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 2,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberrations (CAs) Lateral CAs mostly hover around 1px on average at the image borders.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "/ LoCA LoCAs, aka bokeh fringing, aka axial CAs is a color fringing effect on the Z-axis.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "front of the focus point and a greenish tint behind &#8211; and it&#8217;s nearly impossible to fully correct in post.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "IS STM produces some color fringing at f/2.8 as you can see below.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sun-Stars Sun stars are an aperture effect that occurs at strong light sources &#8211; such as streetlamps in nighttime city scenes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 7,
+        "neg": 2,
+        "total": 13,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "potential bokeh, without the cost or heft of higher-end L lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Obviously youâll enjoy greater background blur with a brighter prime, or indeed the 28-70 f2 if you.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This is the maximum blurring youâll achieve with this lens and a subject.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Here the background understandably isnât as blurred as youâd manage with a longer or brighter lens, but thereâs still some separation and if you take.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If youâre really into portraits or prefer greater background blur, Iâd consider the RF 85.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For a closer look at the bokeh quality, hereâs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a quick test taken at 70mm f2.8 from the closest focusing distance.&nbsp;Looking closely at the bokeh blobs, thereâs very faint outlining and onion-ringing visible, placing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f/2.8 f/4 f/5.6 Bokeh The primary reason for preferring a fast standard zoom lens over something like a 24-105mm f/4 is shallow.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "depth-of-field photography, so let&#8217;s check out the bokeh.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The more critical background blur is nervous (shown to the left below).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The foreground blur (to the right) is very.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "bokeh, on the other hand, is the opposite: mere perfect circles, the treat, look layered and to some, unpleasing, upon blowing up the image.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "focus, and you’re ok with both the onion bokeh and the price, and you’re on the move, this compact and light lens will never leave.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.538,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Out-of-focus highlights are fairly nicely rendered near the image center.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When looking at the highlight rendering across the whole image field,.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "barrel is a 67mm filter thread and a bayonet for an optional lens hood, although despite the fairly high price, Canon has continued its unpopular.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "x 76.5 mm Weight 495g Filter size φ67mm Hood petal-shaped, bayonet mount, OPTIONAL Other features Image stabilizer (5.5 stops, 7 stops w/ IBIS), &nbsp;weather-resistant Distortions.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The barrel gradually extends further as you zoom through the labeled focal lengths of 35, 50 and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Then to store the lens in its shortest length, just zoom back to 28 and keep twisting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "tradition of not including a hood with non-L lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focus distance 0.27m (max magnification 0.24x) Dimensions φ 92.2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "If you want a compact zoom that is RF glass and is full frame, this.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.6,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the zoom ring from its transport position.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "In order to operate the lens you need to &#8220;set the lens to the shooting position.&#8221; Appetizers: The Onion Rings Onion rings take.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 1,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "slower or noisier at focusing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It is both very fast and silent.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Please do note, however, that this comes at the cost of increased sensor noise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "lens has a quiet and fast AF function, a huge win for Canon.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "70",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/2.8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Canon 28 70mm f2.8. Bokeh draws the most discussion: 4 positive, 7 neutral, and 2 negative across 13 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 5,
+        "neu": 2,
+        "neg": 5,
+        "total": 12,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Ok now for a distant quality test, starting at 28mm f2.8, and due to my limited time with the lens so far, Iâve had to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a good degree of detail wide-open, with little to no benefit to closing the aperture down.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As you close the aperture, the details become a tad crisper, but Iâd certainly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 0,
+        "neu": 10,
+        "neg": 1,
+        "total": 11,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to take into consideration, but youâre basically looking at the physical impact of wanting the same zoom range but with an aperture one stop faster..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "alone for native full-frame lenses with autofocus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the closest focusing distance at 28mm is 27cm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 8,
+        "neg": 2,
+        "total": 10,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is a smooth spinning ring which as mentioned earlier can adjust manual focus or act as a custom control ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Letâs try that last test at 70 2.8 for video with a single AF.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But first a quick look at focus breathing without body-compensation enabled, starting.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dust and moisture-resistant, including a rubber grommet at the mount as well as seals around the rings and switches.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "few lenses that could well be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon used lots of plastics, but overall the lens feels well-made - if it wasn't for the retractable zoom mechanism.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 5,
+        "neg": 4,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Speaking of digital compensation, like most modern lenses the RF 28-70 is designed to use a profile to correct for.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is updated for this lens or youâll see the distortion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The RAW distortion level that we can observe below is not great, but it&#8217;s not terrible either.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 4,
+        "neg": 3,
+        "total": 7,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There are some benefits to closing the aperture a stop or two if youâd like the best quality into the corners, but you certainly wouldnât.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As you close the aperture down youâll.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting While the RAW distortions aren&#8217;t too bad, the RAW vignetting is &#8211; which is not unheard of in consumer-focused Canon zoom lenses (&#8230;).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 0,
+        "neu": 2,
+        "neg": 2,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberrations (CAs) Lateral CAs mostly hover around 1px on average at the image borders.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "/ LoCA LoCAs, aka bokeh fringing, aka axial CAs is a color fringing effect on the Z-axis.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "front of the focus point and a greenish tint behind &#8211; and it&#8217;s nearly impossible to fully correct in post.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sun-Stars Sun stars are an aperture effect that occurs at strong light sources &#8211; such as streetlamps in nighttime city scenes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 4,
+        "neu": 7,
+        "neg": 2,
+        "total": 13,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "potential bokeh, without the cost or heft of higher-end L lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Obviously youâll enjoy greater background blur with a brighter prime, or indeed the 28-70 f2 if you.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This is the maximum blurring youâll achieve with this lens and a subject.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Out-of-focus highlights are fairly nicely rendered near the image center.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When looking at the highlight rendering across the whole image field,.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "barrel is a 67mm filter thread and a bayonet for an optional lens hood, although despite the fairly high price, Canon has continued its unpopular.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "x 76.5 mm Weight 495g Filter size φ67mm Hood petal-shaped, bayonet mount, OPTIONAL Other features Image stabilizer (5.5 stops, 7 stops w/ IBIS), &nbsp;weather-resistant Distortions.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The barrel gradually extends further as you zoom through the labeled focal lengths of 35, 50 and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Then to store the lens in its shortest length, just zoom back to 28 and keep twisting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "tradition of not including a hood with non-L lenses.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the zoom ring from its transport position.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "In order to operate the lens you need to &#8220;set the lens to the shooting position.&#8221; Appetizers: The Onion Rings Onion rings take.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 2,
+        "neu": 1,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "slower or noisier at focusing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It is both very fast and silent.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Please do note, however, that this comes at the cost of increased sensor noise.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 139,
+      "evaluated": 60,
+      "non_evaluative": 79,
+      "non_evaluative_breakdown": {
+        "non_claim": 79
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "139 examined · 60 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 0,
+      "neu": 1,
+      "neg": 0,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+          "source_type": "reviewer_blog",
+          "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+          "weight": 0.75,
+          "quote_excerpt": "f/2.8 IS STM Review By Klaus February 26, 2025 Updated: August 20, 2026 Facebook Twitter Pinterest LinkedIn Tumblr Email Share Facebook Twitter LinkedIn Pinterest Email.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+      "title": "Canon RF 28-70mm f2.8 IS STM review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T07:08:25.989855+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+      "title": "Canon RF 28-70mm f/2.8 IS STM Review - OpticalLimits",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T07:08:25.989865+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+      "title": "Review: Canon RF 28-70mm F2.8 IS STM Lens by Michelle DeLateur - ProVideo Coalition",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T07:08:25.989869+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/canon-28-70mm-f2-8/",
+    "reddit": "Canon 28 70mm f2.8\n\nSynthesized from 3 reviewer sources for Canon 28 70mm f2.8. Bokeh draws the most discussion: 4 positive, 7 neutral, and 2 negative across 13 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/canon-28-70mm-f2-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon 28 70mm f2.8**\nSynthesized from 3 reviewer sources for Canon 28 70mm f2.8. Bokeh draws the most discussion: 4 positive, 7 neutral, and 2 negative across 13 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/canon-28-70mm-f2-8/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Canon 28 70mm f2.8 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Canon 28 70mm f2.8. Bokeh draws the most discussion: 4 positive, 7 neutral, and 2 negative across 13 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/canon-28-70mm-f2-8/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

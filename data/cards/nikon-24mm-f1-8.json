@@ -1,0 +1,1962 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-24mm-f1-8",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon 24mm f1.8",
+    "brand": "Nikon",
+    "model": "24mm f1.8",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/C8UAAeSwFs9qmkOg/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 429.0,
+        "pre_owned": 179.99,
+        "open_box": 799.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 11,
+      "price_updated_at": "2026-11-04T10:11:34.018573+00:00"
+    },
+    "price_updated_at": "2026-09-24T15:38:32.581005+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T15:38:32.567735+00:00",
+    "last_built": "2026-09-24T15:38:32.567735+00:00",
+    "last_checked": "2026-09-24T15:38:32.567735+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 1,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Focus Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens demonstrates spectacular image quality across apertures, including drop-dead gorgeous results when shooting wide-open at f/1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "It is even sharper than the Nikon 24mm f/1.4G ED, and it is priced.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "these lenses in terms of sharpness performance?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "focusing performance and sharpness tests in the lab.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.6,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "these lenses in terms of sharpness performance?",
+        "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+        "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 2,
+          "neu": 9,
+          "neg": 0,
+          "total": 11,
+          "sources": [
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "[+] &nbsp; &nbsp; Closest focus distance is 0.25m (0.82ft.) with a magnification of 1:6.7.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "of working distance at minimum focus distance.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The F Nikkor achieves 1:5 in manual focus, the Sigma 1:5.3.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Focus on the F Nikkor and the Sigma works similarly with the only differences being a direct linear gearing and that the focus ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Repeatability (the accuracy of focus on the same.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "is no focus variation whether the lens focuses from a closer distance or from infinity.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "0.32m (1:10 magnification), which is pretty fast.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+              "weight": 0.75,
+              "quote_excerpt": "Minimum focus distance is 0.25m, with a maximum magnification ratio of 0.15x.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+              "weight": 0.75,
+              "quote_excerpt": "The focus ring can be customized to control aperture or exposure compensation during autofocus.Performance Characteristics\n\nAutofocus is fast and virtually silent.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Other Nikon Z lenses such as the Nikon Z 24-70mm f/4 S also feature metal focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "the single manual/autofocus switch and the large focusing ring.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.636,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 1,
+          "neu": 10,
+          "neg": 2,
+          "total": 13,
+          "sources": [
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "to get down to 1:5.7 at 0.23m with manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "&#8211; plus an optional electronic stabilization in video mode.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "[0] Auto focus: Yes, with built-in AF drive.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The focus ring has a variable gearing that allows.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "for very precise manual focus when turned slowly.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Unfortunately this feature cannot be switched to linear gearing which makes smooth focus pulling for videographers almost.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "It automatically falls back to its customary focus control when the lens is.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The problematic focus shift of this lens should be eliminated by the feature of the Nikon Z cameras to focus stopped down.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "But if you record video with the built-in microphone the AF-drive.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The lens is free of focus breathing: whenÂ I adjusted the focus from.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "their Nikon F equivalents that feature rubber focus rings.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "much on manual focusing when using mirrorless cameras, it is nice to be able to use it for overriding focus, or for other camera and.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "since all Nikon Z lenses autofocus with focus-by-wire motors, the focus ring is not coupled mechanically to anything.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.769,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 3,
+        "neu": 3,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Sealing: yes,Â a rubber grommet at the lens-mount plus further special weather-sealing throughout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and is sealed against the weather like Nikon&#8217;s pro lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But its build quality is unsurpassed and the optical.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "very well, thanks to its solid metal base, a tough plastic shell, metal focus ring, and weather-sealed construction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "the lens is &ldquo;extensively sealed to keep dust and moisture out&rdquo;, which means that there are separate rubber rings for each part of the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "I have used the Nikon Z 24mm f/1.8 S in very cold and sandy weather conditions in Death Valley.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "But its build quality is unsurpassed and the optical.",
+        "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+        "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 6,
+        "neu": 43,
+        "neg": 2,
+        "total": 51,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 24mm f1.8 S review | Cameralabs Summary The Nikon Z 24mm f1.8 SÂ is a very good wide angle prime lens for owners.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Intro The Nikon Z 24mm f1.8 S is a wide-angle prime lens for Nikonâs Z-series mirrorless cameras of DX.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or FX format: on a cropped body like the Z50 the lens is equivalent in angle-of-view and depth-of-field to a 35mm f2.8 lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "full-frame body the Z 24mm f1.8 S is the widest Z-mount prime lens with autofocus you can get at the time of writing, giving a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But thanks to Nikon&#8217;s FTZ adapter, existing F-mount lenses can alternatively be easily used on the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So the new Z 24mm f1.8 S faces competition from a host of other wide angle lenses with the F-mount, most notably.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "To find out whetherÂ the new Nikon Z 24mm f1.8 S rightfully carries the &#8220;S&#8221; moniker I tested its optical qualities.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the 45MP Z7 body against a few other lenses of which the Zeiss 28mm f1.4 Otus is my current referenceÂ wide angle lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "if youâre interested in the other Z lenses in Nikonâs line-upÂ check out our in-depth reviews:Â Nikon Z 14-30mm f4.0 S review Â /Â Nikon.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "50mm f1.8 S review Â /Â Nikon Z 58mm f0.95 S Noct review /Â Nikon Z 85mm f1.8 S review .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Facts from the catalog As usual I&#8217;ll have a look at the technical data of the new Nikon Z 24mm f1.8 S first.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The new Nikon Z 24mm f1.8 S uses Nikon&#8217;s Nano-Coating to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "That&#8217;s similar to the F Nikkor but I must say the new pouches for the Z lenses areÂ disappointing: the.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "F Nikkor and the Sigma don&#8217;t have an aperture control ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z camera Above from left to right: Nikon Z 14-30mm f4.0 S, Nikon Z 24mm f1.8 S, Nikon Z 24-70mm f2.8 S &nbsp; Alternatives.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The market for wide-angle prime lenses is pretty crowded but no other manufacturer offersÂ a 24mm lens for Nikon&#8217;s Z-mount so far.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "we have to look at F-mount lenses which can be used via Nikon&#8217;s FTZ adapter &#8211; adding another 31mm in length and 133g in weight..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But still there is only one other 24mm f1.8 lens: Nikon has the AF-S 24mm f1.8G ED from 2014 for 700 EUR / 750 USD..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For more information see my Nikon 24mm f1.8G review Â where it got a recommendation.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon offers the AF-S 20mm f1.8G from 2014.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "They also have the AF-S 28mm f1.8G from 2012 (630 EUR / 700 USD) which earned a recommendation in my Nikon 28mm f1.8G review.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Zeiss 28mm f1.4 Otus from 2015 is myÂ currentÂ reference wide-angle prime lens..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There&#8217;s also a bunch of Samyang/Rokinon/Walimex 24mm f1.4 lenses for F-mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Finally you might also consider the Nikon Z 24-70mm f2.8 S as an alternative.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z 24mm f1.8 S, but it does not need an adapter like the other alternatives above, and offers very good optical performance which got it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a Highly Recommended in my Nikon Z 24-70mm f2.8 S review .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Lenses , Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The angle of view is 84 degrees and the minimum aperture is f/16.Build and Controls\n\nConstruction uses high-quality plastics with a metal mounting plate.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 24mm f/1.8 S Review Home → Reviews → Cameras and Lenses Introduction Nikon introduced the wide-angle NIKKOR Z 24mm f/1.8 S in September.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "of 2019 for its mirrorless Z mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "been very pleased by the quality of the Z mount lenses after thoroughly testing them on both Nikon Z6 and Z7 camera bodies.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 24mm f/1.8 S is a bit more expensive compared to the F-mount Nikon 24mm f/1.8G ED, which we found to be a superb.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon Z 24mm f/1.8 S is.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 24mm f/1.8 S @ 24mm,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "ISO 64, 3 sec, f/11.0 Note: It is important to point out that Z-mount lenses such as the Nikon Z 24mm f/1.8 S are only.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "designed to be used on Nikon&rsquo;s Z-series cameras that have industry&rsquo;s shortest flange distance of 16.0mm, which means that they cannot be adapted to any.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "other camera system on the market today (see lens mounts explained for more information).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The optical formula of the Nikon Z 24mm f/1.8 S consists.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "elements and groups, except with two aspherical and two ED lens elements.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Here is a quick comparison summary of these lenses: Lens Feature Nikon Z 24mm f/1.8 S Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "24mm f/1.8G Nikon 24mm f/1.4G Sigma 24mm f/1.4 Art Camera Mount Nikon Z Nikon F Nikon F 5 Mounts Elements / Groups 12 / 10.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "24mm f/1.8 S @ 24mm, ISO 64, 1 sec, f/11.0 Build Quality Similar to other Nikon Z primes, the Z 24mm f/1.8 S is built.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The metal lens mount has a total of four locking ears for a very secure and tight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "of the lens when storing it in your camera bag, you can attach it in reverse position.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 24mm f/1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "S @ 24mm, ISO 64, 1/25, f/8.0 The next page of this review covers the optical characteristics of the Nikon Z 24mm f/1.8 S, including.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Beginner Photography Lens Database Lens Index Photo Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops Support.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.588,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 1,
+        "neu": 8,
+        "neg": 2,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Price: The lens is pretty expensive at a list price of 1200 EUR (incl.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It costs 660 EUR / 800 USD and came recommended in my Nikon 20mm f1.8G ED review.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma offers the AF 24mm 1.4 DG HSM Â Art from 2012 for a relatively low price of 750 EUR / 900 USD.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikon Z 24mm f1.8 S at Amazon , B&amp;H , Adorama , or Wex .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses permalink Nikon Z 24mm f1.8 S Check prices at B&amp;H Recent Posts Canon RF 14mm f1.4L VCM review Nikon Z 24-105mm f4-7.1 review so.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 24mm f1.8 S Check prices at Wex Nikon Z 24mm f1.8 S Check prices at Amazon Like.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 24mm f1.8 S Check prices at Amazon More Camera Labs Blog Camera reviews Lenses Cameralabs Photography Podcast Buyers&#8217;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 24mm f/1.8 S @ 24mm, ISO 64, 0.8 sec, f/5.6 With its price tag of $1100, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "At $2K, it is also a very expensive lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "much more reasonably at $850, so it is a solid choice worth comparing to.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.727,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": null,
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and weight makes it a good match for the compact Z-series bodies it's designed for.Â The new Z Nikkor also focuses fast and reliably and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Please keep in mind that the Sigma has a 2/3 of a stop brighter focal ratio which influences size and weight of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Weight: 447g (15.9 oz.) plus 23g for the lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "All this obviously comes with a big weight disadvantage &ndash; the lens weighs 665 grams, which.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion is effectively eliminated through automatic corrections.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Distortion is effectively eliminated through automatic corrections.",
+        "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+        "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review"
+      }
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It also delivers usable close-up performance when stopped down a little and retains its high contrast exceptionally well even in contra-light situations.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic aberration shows practically zero colour fringing even in the extreme corners of the frame.Stabilization\n\nThe lens has no in-lens VR and relies on the camera body's 5-stop, 5-axis stabilization.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "from the background compared to f2.8 or f4.0 zooms.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Learn Beginner Photography Landscape Photography Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an independent website with no.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 6,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Filter-thread: 72mm same as the Nikon Z 24-70mm f4.0S and the F Nikkor..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "It features a 9-blade diaphragm and Nano Crystal Coat to reduce ghosting and flare.Physical Specifications\n\nThe lens measures 78x97mm and uses a 72mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "3 FLD, 4 SLD Coating Nano, SIC Nano, SIC Nano SML Diaphragm 9 (Rounded) 7 (Rounded) 9 (Rounded) 9 (Rounded) Filter Size 72mm 72mm 77mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKKOR Z 24mm f/1.8 S @ 24mm, ISO 400, 1/20, f/8.0 Similar to other Z-series lenses, the filter thread is plastic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "a modern lens, the front section of the lens does not rotate when focusing, which makes it easy to use circular filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "24mm f/1.8 S has a 72mm filter size, which is the same size as on the Nikon 24mm f/1.8G ED.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "that lens Size (diameter x length):Â 78 xÂ 97mm (3.1 x 3.8in.).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens hood adds 34mm and is 98mm in diameter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A magnification of 1:10 is achieved at 0.32m giving a working distance of 17cm with lens hood attached..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "2.9x zoom range covering a wide array of very useful focal lengths at a constant f2.8 focal ratio.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 3,
+        "neg": 3,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sigma has a nice well-padded case.Â [0] Aperture ring: the multi-function control ring of an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although the lens control ring has not the same benefit as having a focus ring plus a dedicated aperture ring on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens it gives you more flexibility to control one of the more important shooting parameters directly from a nice ring on the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens has a mixed feature set: It&#8217;s neither very small nor very light but it offers the nifty feature of the multi-purpose control ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "will take a closer look at this lens and see how it stacks up against its Nikon F cousins, as well as the Sigma 24mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "That said, with the large focus ring made out of metal, the Nikon Z-series prime lenses handle differently in the cold compared to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "of the lens, as I have pointed out earlier, Nikon decided to put a very large focusing ring, which is great.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Handling The Nikon Z 24mm f/1.8 S has a very sparse set of controls, with just.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "This is somewhat disappointing handling for an expensive S-series lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.556,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 2,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; AF-operation of the lens isÂ barely audible from the outside.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens is clearly not as quiet as the Nikon Z 24-70mm f4S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens to change the aperture this works smoothly and without noise.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "24",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Nikon 24mm f1.8. AF for video draws the most discussion: 1 positive, 10 neutral, and 2 negative across 13 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 1,
+        "neu": 3,
+        "neg": 1,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Focus Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens demonstrates spectacular image quality across apertures, including drop-dead gorgeous results when shooting wide-open at f/1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "It is even sharper than the Nikon 24mm f/1.4G ED, and it is priced.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 2,
+        "neu": 9,
+        "neg": 0,
+        "total": 11,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] &nbsp; &nbsp; Closest focus distance is 0.25m (0.82ft.) with a magnification of 1:6.7.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of working distance at minimum focus distance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The F Nikkor achieves 1:5 in manual focus, the Sigma 1:5.3.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 1,
+        "neu": 10,
+        "neg": 2,
+        "total": 13,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to get down to 1:5.7 at 0.23m with manual focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&#8211; plus an optional electronic stabilization in video mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Auto focus: Yes, with built-in AF drive.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 3,
+        "neu": 3,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Sealing: yes,Â a rubber grommet at the lens-mount plus further special weather-sealing throughout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and is sealed against the weather like Nikon&#8217;s pro lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But its build quality is unsurpassed and the optical.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion is effectively eliminated through automatic corrections.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It also delivers usable close-up performance when stopped down a little and retains its high contrast exceptionally well even in contra-light situations.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic aberration shows practically zero colour fringing even in the extreme corners of the frame.Stabilization\n\nThe lens has no in-lens VR and relies on the camera body's 5-stop, 5-axis stabilization.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "from the background compared to f2.8 or f4.0 zooms.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Learn Beginner Photography Landscape Photography Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an independent website with no.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 6,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Filter-thread: 72mm same as the Nikon Z 24-70mm f4.0S and the F Nikkor..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "It features a 9-blade diaphragm and Nano Crystal Coat to reduce ghosting and flare.Physical Specifications\n\nThe lens measures 78x97mm and uses a 72mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "3 FLD, 4 SLD Coating Nano, SIC Nano, SIC Nano SML Diaphragm 9 (Rounded) 7 (Rounded) 9 (Rounded) 9 (Rounded) Filter Size 72mm 72mm 77mm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "that lens Size (diameter x length):Â 78 xÂ 97mm (3.1 x 3.8in.).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens hood adds 34mm and is 98mm in diameter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A magnification of 1:10 is achieved at 0.32m giving a working distance of 17cm with lens hood attached..",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 3,
+        "neu": 3,
+        "neg": 3,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sigma has a nice well-padded case.Â [0] Aperture ring: the multi-function control ring of an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although the lens control ring has not the same benefit as having a focus ring plus a dedicated aperture ring on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens it gives you more flexibility to control one of the more important shooting parameters directly from a nice ring on the lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 0,
+        "neg": 2,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; AF-operation of the lens isÂ barely audible from the outside.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens is clearly not as quiet as the Nikon Z 24-70mm f4S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens to change the aperture this works smoothly and without noise.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 128,
+      "evaluated": 39,
+      "non_evaluative": 89,
+      "non_evaluative_breakdown": {
+        "non_claim": 89
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "128 examined · 39 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-nikon-z-24mm-f1-8-s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/nikon-z-24mm-f1-8-s-review/",
+      "title": "Nikon Z 24mm f1.8 S review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T15:38:32.570976+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "digitalcameraworld-com-reviews-nikon-nikkor-z-24mm-f18-s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.digitalcameraworld.com/reviews/nikon-nikkor-z-24mm-f18-s-review",
+      "title": "Nikon Nikkor Z 24mm f/1.8 S review | Digital Camera World",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T15:38:32.570986+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-z-24mm-f1-8-s",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-z-24mm-f1-8-s",
+      "title": "Nikon Z 24mm f/1.8 S Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T15:38:32.570990+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-24mm-f1-8/",
+    "reddit": "Nikon 24mm f1.8\n\nSynthesized from 3 reviewer sources for Nikon 24mm f1.8. AF for video draws the most discussion: 1 positive, 10 neutral, and 2 negative across 13 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-24mm-f1-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon 24mm f1.8**\nSynthesized from 3 reviewer sources for Nikon 24mm f1.8. AF for video draws the most discussion: 1 positive, 10 neutral, and 2 negative across 13 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-24mm-f1-8/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon 24mm f1.8 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Nikon 24mm f1.8. AF for video draws the most discussion: 1 positive, 10 neutral, and 2 negative across 13 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-24mm-f1-8/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

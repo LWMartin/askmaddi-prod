@@ -1,0 +1,1813 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-35mm-f1-4",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon 35mm f1.4",
+    "brand": "Nikon",
+    "model": "35mm f1.4",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/cXgAAeSw~uRqfiIW/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 216.73,
+        "pre_owned": 345.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 13,
+      "price_updated_at": "2026-11-04T10:11:35.308535+00:00"
+    },
+    "price_updated_at": "2026-09-24T10:06:57.998695+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T10:06:57.985592+00:00",
+    "last_built": "2026-09-24T10:06:57.985592+00:00",
+    "last_checked": "2026-09-24T10:06:57.985592+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "bokeh": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 2,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Continue: Image Quality Pages: 1 2 3 Tags: 35mm , 35mm f/1.4 , lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "And the Z 35mm f1.4 shows good resolution across the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the test and Reikan FoCal did the chore of evaluating the sharpness of all shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera produced no outliers in the 40 shots from 1/40 down to 1/10 sec (2 stops) with (average) sharpness clearly better than at 1/40 sec.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "And the Z 35mm f1.4 shows good resolution across the.",
+        "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+        "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 3,
+          "neu": 6,
+          "neg": 0,
+          "total": 9,
+          "sources": [
+            {
+              "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+              "weight": 0.75,
+              "quote_excerpt": "Unlike most of my other Nikon lenses, though, I did occasionally have the 35mm f/1.4 miss focus every once in.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+              "weight": 0.75,
+              "quote_excerpt": "Overall, the focus is good,.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "separate focus and control ring over the Z 35mm f1.8 S at a lower price.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "[+] Autofocus: Both lenses offer autofocus with built-in focus drive..",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "On the Z 35mm f1.8 S the focus ring can.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The manual focus VoigtlÃ¤nder 35mm f2 APO-Lanthar which I&#8217;ll use for comparing optical performance costs 1099 EUR / 749 USD / 849 GBP..",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "S, Nikon Z 35mm f1.4, VoigtlÃ¤nder 35mm f2 APO-Lanthar Focus Focus accuracy and repeatability is critical to consistently produce sharp shots.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "focus on the same subject after repeated focus-acquisition) of the Nikon Z 35mm f1.4 is good (measured 96.0% in Reikan FoCal with max defocus) with.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Nikon Z 35mm f1.4 on a Nikon Z8 camera body, I did a series of 140 test-shots hand-held with shutter speeds from 1/40 of a.",
+              "witness": "firsthand"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.778,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 13,
+          "neg": 1,
+          "total": 14,
+          "sources": [
+            {
+              "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+              "weight": 0.75,
+              "quote_excerpt": "First, there is the broad rubberized focus ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+              "weight": 0.75,
+              "quote_excerpt": "Nikon has also added a control ring behind the focus ring, to allow for programmed.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+              "weight": 0.75,
+              "quote_excerpt": "including an AF/MF switch, so changing to manual focus must be done in the camera&#8217;s menus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "plus an optional electronic stabilization in video mode.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Manual-focus override is by simply turning the dedicated focus ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The focus ring has the usual variable gearing which allows for very precise manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "You can reverse the focus ring direction and switch to linear response with different settings for focus throw in camera.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "It is located behind the focus ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "be configured to act as multi-function ring &#8211; but then you lose the manual focus override functionality.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "But there is quite some focus variation whether the.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The focus ring is 33mm wide, has a rubberized surface, and moves smoothly.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+              "weight": 0.75,
+              "quote_excerpt": "As you pull focus, youâll notice a.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+              "weight": 0.75,
+              "quote_excerpt": "There&rsquo;s a focus ring and a customizable function.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+              "weight": 0.75,
+              "quote_excerpt": "Special Elements: 2 aspherical Image Stabilization: No Internal Focusing: Yes Control Rings: Focus, custom Function Button: No Switches: None Focus Motor: STM Minimum Focus Distance:.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.643,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 2,
+        "neu": 6,
+        "neg": 0,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The S-line lenses have grooved metal focus rings and a hybrid metal/plastic construction, while the 35mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Despite the plastic exterior, the 35mm f/1.4 is very tightly assembled and feels.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens has a metal lens mount and gasketed weather seals in its construction as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "other Z lenses, it gives the impression of high-quality plastic and feels sturdy to hold.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "I personally don&rsquo;t mind a plastic construction in today&rsquo;s lenses,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "As for the rest of the build quality features, the Nikon Z 35mm f/1.4 is weather sealed and includes a rubber gasket around the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "lens mount to guard against dust and moisture.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "The S-line lenses have grooved metal focus rings and a hybrid metal/plastic construction, while the 35mm.",
+        "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+        "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 4,
+        "neu": 33,
+        "neg": 2,
+        "total": 39,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "the brand new Nikon Nikkor Z 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "This is a unique lens in the Nikon lineup, bringing extra speed to the 35mm focal length,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikkor Z 35mm f/1.4 on the Nikon Z8 Before we begin, I want to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikkor Z 35mm f/1.4 with its included lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "hood The 35mm f/1.4 does come with a petal-shaped plastic lens hood which locks securely into place via a bayonet mount, and it easily reverses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": ", mirrorless , Nikkor , Nikon , Nikon Z , review Comments Leave a Reply Cancel reply Your email address will not be published.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma Glass &#8211; XQ 18mm &amp; 28mm August 17, 2026 Canon 5Ds R &#8211; A Special Camera August 14, 2026 The Future of Admiring Light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "I am new to Canon have an R6 with various&hellip; Thank you for.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 35mm f1.4 review | Cameralabs Summary Nikonâs Z 35mm f1.4 is an interesting entry into a third line of Z-mount prime Nikkors: much.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you value the benefits of the large f1.4 aperture and can live with these deficiencies I can still recommend.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "brings us their first f1.4 lens for Z-mount which only weighs a bit over 400g, is relatively compact, and at 729 EUR / 597 USD.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to their Z 35mm f1.8 S (for more details on that lens see my Nikon Z 35mm f1.8 S review ).",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Z 35mm f1.8 S achieves a maximum magnification of 1:4.8 with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "ring: The Z 35mm f1.4 has a slim multi-function control ring which can be assigned to operate the aperture (which is the default), exposure compensation,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Lens profile: All Z-Nikkors come with a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens profile which can be controlled from the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Both lenses cover full frame/FX or smaller sensors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] At a score of 0[-]/3[0]/10[+] the Nikon Z 35mm f1.4 turns.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Three 35mm lenses with Z-mount Above: Nikon Z 35mm f1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Lenses , Nikon lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon Laing Support Camera Labs Buy Gordon a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 35mm f/1.4 Review Home → Reviews → Cameras and Lenses Introduction This hands-on review covers everything you need to know about the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Z 35mm f/1.4, a budget prime lens for Nikon&rsquo;s Z mirrorless system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "After all, this isn&rsquo;t Nikon&rsquo;s first 35mm f/1.4 lens; there&rsquo;s also the Nikon AF-S 35mm f/1.4G, an F-mount optic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "On top of that, Nikon already has a Z 35mm f/1.8 S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "The rest of this review dives into my complete thoughts from testing the Nikon Z 35mm.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Here&rsquo;s what you need to know if you&rsquo;re considering buying this lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "35mm f/1.4 NIKON Z 7 + NIKKOR Z 35mm f/1.4 @ 35mm, ISO 64, 2 seconds, f/9.0 NIKON Z 7 + NIKKOR Z 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 35mm f/1.4 Unsurprisingly, the Nikon Z 35mm f/1.4 has a plastic construction rather than metal (apart from the lens mount).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 35mm f/1.4 @ 35mm, ISO 64,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "1/200, f/1.4 Handling The Nikon Z 35mm f/1.4 doesn&rsquo;t have much in the way of handling features.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon Z 35mm f/1.4 with lens hood Because of the bright maximum aperture, the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Z 35mm f/1.4 is a great lens to use in low light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 35mm f/1.4 @ 35mm, ISO 64, 1/200,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "f/11.0 Nikon Z 35mm f/1.4 Specifications Full Name: Nikon Z 35mm f/1.4 Mount Type: Nikon Z Mount Focal Length: 35mm prime Angle of View (Full.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Index Photo Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops Support Us Submit Content",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.41,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Nikon Z 35mm f/1.4 Review Home → Reviews → Cameras and Lenses Introduction This hands-on review covers everything you need to know about the Nikon.",
+        "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+        "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 2,
+        "neu": 5,
+        "neg": 2,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "and a higher price tag, yet is 2/3 of a stop slower in aperture.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikkor Z 35mm f1.4 at B&amp;H , Adorama.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "However, that lens was never cheap, selling in the range of $1550-1800 over the years.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "launched in June of 2024 for just $600 &ndash; a price low enough to give it more of a broad appeal.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "price increases, the new price jumped to $680.) Actually, when I first saw this price, I wondered if Nikon must have cut corners somewhere.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "the newer price of $680 is unusually cheap for a first-party 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Is there a reason for the cheaper price of the Nikon Z 35mm f/1.4 &ndash; and the lack of Nikon&rsquo;s high-end &ldquo;S&rdquo; designation?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "you the cliffhanger and let you know that there are some reasons for the lower price, but I&rsquo;m still impressed by the Nikon Z 35mm.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "If you enjoy our articles, this is the easiest way to support Photography Life at no extra cost to you.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.778,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Intro The Z 35mm f1.4 is not the lens everyone was expecting: Nikon&#8217;s last lens roadmap from October 2023.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 3,
+        "neu": 7,
+        "neg": 1,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Weight: 415g (14.7 oz.) plus 30g for the plastic lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "out to be well featured: The lens is pretty compact and lightweight, it has a large f1.4 focal ratio but is still less expensive than.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "@ 35mm, ISO 64, 1/400, f/1.4 Build Quality One of my first impressions holding the Nikon Z 35mm f/1.4 is that it&rsquo;s a surprisingly light.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "It isn&rsquo;t totally featherweight, but compared to most 35mm f/1.4 primes on the market, it&rsquo;s clearly lighter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon lists the weight of the Z.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "35mm f/1.4 as 415 grams, or 0.91 pounds.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "That&rsquo;s only a little heavier than the Nikon Z 35mm f/1.8 S (370 grams / 0.82 pounds).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "By comparison, the F-mount Nikon AF-S 35mm f/1.4G weighs 600 grams (1.32 pounds).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Sony&rsquo;s FE 35mm f/1.4 GM is 524 grams (1.16 pounds).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "handling this lens was, again, the size and weight &ndash; just much more portable than I&rsquo;m used to from 35mm f/1.4 lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "inches) Weight: 415 g (0.91 lbs) MSRP: $680 ( See current price and check used prices ) Here is the construction of the lens, courtesy.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.818,
+        "contested": false
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "I quess DXO won&#8217;t have a lens correction for these&#8230; Fun review and.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignette control offers the usual options of High, Normal, Low and Off.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens focuses from a closer distance or from infinity: coming from infinity netted the better results.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Strangly, this ring isn&#8217;t found on Nikon&#8217;s earlier f/1.8 S-line lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Filter-thread: Both lenses use 62mm filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "The filter thread is nice and small at 62mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "Frame): 63&deg; Angle of View (APS-C): 44&deg; Maximum Aperture: f/1.4 Minimum Aperture: f/16 Aperture Blades: 9 Filter Size: 62mm Lens Elements: 11 Lens Groups: 9.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 8,
+        "neg": 0,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "You&#8217;ll see that the actual length of this mini-review isn&#8217;t any different from.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is very compact for a 35mm f/1.4 autofocus lens, and is almost exactly the same size as the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "exactly the same size as the Nikkor Z 50mm f/1.8S The compact nature of this lens lends itself to daily carry, and the 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "showed an S-line 35mm lens expected to be large, heavy, expensive, and f1.2 as it was placed alongside their other f1.2 prime lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Size (diameter x length): 75 x 87mm (3.0 x 3.5in.), the lens hood adds 48mm (89mm diameter).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z 35mm f1.8 S is 73 x 86mm + 48mm lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "The lens hood is on the large size.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "27 cm (11 inches) Maximum Magnification: 0.18&times; (1:5.6) Mount Material: Metal Weather/Dust Sealing: Yes Dimensions (Length &times; Diameter): 87 x 75 mm (3.5 x 2.9.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.375,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "my normal lens reviews, but I didn&#8217;t get to put the lens through enough real-world shooting to feel comfortable in calling it a full review..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "There are two controls on the exterior of the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "comfortable than on the one-ringed Z 35mm f1.8 S.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "quiet and relatively quick, and the same is true for the 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the lens emits a faint hum in photo-mode or if you record video with the built-in microphone.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "35",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Nikon 35mm f1.4. AF for video draws the most discussion: 0 positive, 13 neutral, and 1 negative across 14 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 2,
+        "neu": 2,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Continue: Image Quality Pages: 1 2 3 Tags: 35mm , 35mm f/1.4 , lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "And the Z 35mm f1.4 shows good resolution across the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the test and Reikan FoCal did the chore of evaluating the sharpness of all shots.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 3,
+        "neu": 6,
+        "neg": 0,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Unlike most of my other Nikon lenses, though, I did occasionally have the 35mm f/1.4 miss focus every once in.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Overall, the focus is good,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "separate focus and control ring over the Z 35mm f1.8 S at a lower price.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 13,
+        "neg": 1,
+        "total": 14,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "First, there is the broad rubberized focus ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon has also added a control ring behind the focus ring, to allow for programmed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "including an AF/MF switch, so changing to manual focus must be done in the camera&#8217;s menus.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 2,
+        "neu": 6,
+        "neg": 0,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The S-line lenses have grooved metal focus rings and a hybrid metal/plastic construction, while the 35mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Despite the plastic exterior, the 35mm f/1.4 is very tightly assembled and feels.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens has a metal lens mount and gasketed weather seals in its construction as well.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "I quess DXO won&#8217;t have a lens correction for these&#8230; Fun review and.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignette control offers the usual options of High, Normal, Low and Off.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens focuses from a closer distance or from infinity: coming from infinity netted the better results.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "Strangly, this ring isn&#8217;t found on Nikon&#8217;s earlier f/1.8 S-line lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Filter-thread: Both lenses use 62mm filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+            "weight": 0.75,
+            "quote_excerpt": "The filter thread is nice and small at 62mm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 8,
+        "neg": 0,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "You&#8217;ll see that the actual length of this mini-review isn&#8217;t any different from.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is very compact for a 35mm f/1.4 autofocus lens, and is almost exactly the same size as the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "exactly the same size as the Nikkor Z 50mm f/1.8S The compact nature of this lens lends itself to daily carry, and the 35mm f/1.4.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "my normal lens reviews, but I didn&#8217;t get to put the lens through enough real-world shooting to feel comfortable in calling it a full review..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "There are two controls on the exterior of the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "comfortable than on the one-ringed Z 35mm f1.8 S.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+            "source_type": "reviewer_blog",
+            "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+            "weight": 0.75,
+            "quote_excerpt": "quiet and relatively quick, and the same is true for the 35mm f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the lens emits a faint hum in photo-mode or if you record video with the built-in microphone.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 115,
+      "evaluated": 29,
+      "non_evaluative": 86,
+      "non_evaluative_breakdown": {
+        "non_claim": 86
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "115 examined · 29 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 0,
+      "neu": 1,
+      "neg": 0,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+          "weight": 0.75,
+          "quote_excerpt": "Intro The Z 35mm f1.4 is not the lens everyone was expecting: Nikon&#8217;s last lens roadmap from October 2023.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "admiringlight-blog-mini-review-nikon-nikkor-z-35mm-f-1-4",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://admiringlight.com/blog/mini-review-nikon-nikkor-z-35mm-f-1-4/",
+      "title": "Mini-Review: Nikon Nikkor Z 35mm f/1.4 -",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:06:57.988776+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "cameralabs-nikon-z-35mm-f1-4-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/nikon-z-35mm-f1-4-review/",
+      "title": "Nikon Z 35mm f1.4 review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:06:57.988789+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-z-35mm-f-1-4",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-z-35mm-f-1-4",
+      "title": "Nikon Z 35mm f/1.4 Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T10:06:57.988793+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-35mm-f1-4/",
+    "reddit": "Nikon 35mm f1.4\n\nSynthesized from 3 reviewer sources for Nikon 35mm f1.4. AF for video draws the most discussion: 0 positive, 13 neutral, and 1 negative across 14 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-35mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon 35mm f1.4**\nSynthesized from 3 reviewer sources for Nikon 35mm f1.4. AF for video draws the most discussion: 0 positive, 13 neutral, and 1 negative across 14 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-35mm-f1-4/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon 35mm f1.4 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Nikon 35mm f1.4. AF for video draws the most discussion: 0 positive, 13 neutral, and 1 negative across 14 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-35mm-f1-4/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

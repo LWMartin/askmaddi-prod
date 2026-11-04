@@ -1,0 +1,3129 @@
+{
+  "card_version": "1.0",
+  "card_id": "gopro-hero9",
+  "vertical": "video",
+  "identity": {
+    "display_name": "GoPro hero9",
+    "brand": "GoPro",
+    "model": "hero9",
+    "sku_alt_names": [],
+    "category": "action_cam",
+    "subcategory": "action-camera",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/9S8AAeSwo5Fqj3j5/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 65.0,
+        "open_box": 189.99,
+        "refurbished": 210.49
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 28,
+      "price_updated_at": "2026-11-04T10:11:06.550823+00:00"
+    },
+    "price_updated_at": "2026-10-04T11:31:34.140342+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-10-04T11:31:34.133492+00:00",
+    "last_built": "2026-10-04T11:31:34.133492+00:00",
+    "last_checked": "2026-10-04T11:31:34.133492+00:00",
+    "source_count": 15,
+    "source_types": {
+      "pro": 15
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "medium",
+    "per_axis": {
+      "video_quality": "high",
+      "field_of_view": "high",
+      "stabilization": "high",
+      "audio_capture": "high",
+      "image_quality": "high",
+      "mounting_ecosystem": "high",
+      "ease_of_use": "medium",
+      "battery_runtime": "medium",
+      "waterproofing": "medium",
+      "dimensions": "low",
+      "generation_context": "low",
+      "mount_compat": "low",
+      "price": "low",
+      "build": "low",
+      "weight": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "video_quality",
+      "display_name": "Video Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 31,
+        "neu": 29,
+        "neg": 19,
+        "total": 79,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "with 5K video and 20MP photos.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "like battery life, displays/menus, changeable lenses/filters and image quality are answered with this release.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "Features (from GoPro press release): • New Image Sensor • Video: 5K30, 4K60, 2.7K120, 1440p120, 1080p240 and more • Photo: 20MP • New 1.4” front.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "• 1080p Live Streaming • 1080p Webcam mode • Power Tools: HindSight, LiveBurst, Scheduled Capture and Duration Capture • SuperPhoto + HDR Night lapse video.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "and video at original quality; enhanced live streaming to GoPro.com with fewer restrictions than other live streaming services; up to 50% on mounts and accessories.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "I shot this at 240fps (1080p) and edited it to play back at 30fps.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "the ability to shoot in 5K video, you can also get clear frame-grabs from your action footage to produce clear and crisp still images on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "Framerate Malpractice in cameras, video devices, software &amp; services Latest Production ProVideo Coalition’s Best in Show Winners from IBC 2026 Production PVC at IBC 2026:.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "this exciting new model offers more power more clarity and more stability it has a 23.6 megapixel sensor for ridiculous 5k video and gorgeous 20 megapixel photos it finally has a front screen display for live previews and easier framing for vlogging the rear lcd is somehow larger and uses touch…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "right well there's plenty let's start with video you can now shoot 5k video up to 30 frames per second this is pretty huge because having that extra resolution not only gives you crisp and sharp images but can also get more details when you scale down into 4k for your video deliverables you can…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "up to 60 frames per second along with 2.7 k video recording up to 120 frames per second each of these resolutions has a new maximum bit rate of 100 megabits per second for studio quality footage and yes this does include the 5k video recording as well now to help with the storage the 2.7 k video up…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "the 5k video resolutions use hevc high efficiency video coding to shrink the file sizes so they don't take up too much space on your micro sd card plus you can still shoot super slow motion video at 1080p resolution up to 240 frames per second for that super slo-mo effect hindsight is a cool new…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": ">> [music] >> That said, I [music] love using 5K for cinematic shots, B-roll, or vlog style clips.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "The 5K resolution gives noticeably higher quality, but it's limited to [music] 30 frames per second.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "If you want 60 frames [music] per second for slow motion, stick to 4K.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "[music] So, I recorded around 40 to 50 minutes of 4K footage, and when I checked that still had about 26 battery uh percentage left.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "Now one limitation that I've had with this front screen though is that the frames per second, in other words how smooth it looks, is pretty limited it doesn't affect the recording rate but when I get in 5K mode, 4k mode, etc it's just really slow looking",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "it's like three frames per second...five frames is what GoPro says, I think that's a bit optimistic.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "At lower resolutions like 1080p - no problems at all!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "Next up on the list is the new 5K resolution.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "In the past GoPro has always topped out at 4K, but now you've got up to 5K/30 here, in different modes as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "you need 5k and the answer is you probably don't but it's handy for cropping in so if you have something that's a little bit too wide you can crop in and you get quite a bit more pixels it's pretty substantial it's not just like a single digit four to five it's a multiplier when you go from 4k",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "to 5k and then one kind of neat tidbit here is that you can pull 14.7 megapixel stills from the 5k footage here's the still and then heroes are still both from 5k footage without even having to take straight photos but if you do want to take photos then the hero 9 has a new 23.6 megapixel photo mode",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "it comes in two ways the first way we'll talk about here is the resolutions and frame rates and supports it goes all the way up to 5k 30 and it supports all the versions so you can do boost in everything in the past there were some limitations though gopro got rid of a lot of those in last",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "platform which they say has the highest quality live streaming resolution experience out there in terms of bit rates and things like that i haven't had a chance yet to try that maybe i'll give it a whirl but you can go ahead now and add twitch to that natively straight from the camera which is…",
+            "witness": "reported"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "The footage you're about to see was shot without a gimbal and was shot in a mix of 5K at 24 and some slow-mo footage at lower resolutions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Keep in mind though, when filming in 5K or 4K, it only displays around five frames per second, so it will look super choppy, but it is good enough to check for framing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Now, the next biggest feature upgrade about the GoPro Hero 9 is the all-new 5K sensor and 23 megapixel stills.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "GoPro hasn't improved the resolution since the GoPro Hero 6, which is a big reason why I haven't felt a need to upgrade since the 6.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But with the 9, they've gone from 12 megapixel stills and 4K video resolution to a 23 megapixel still and 5K resolution, which ultimately just means cleaner, sharper images.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But most people aren't going to be able to see the difference in the 4K versus 5K images.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But since a lot of the modes like hyper zoom and linear both crop in on the image, if you shoot in 4K, you really end up with more like a 3K image after all the cropping.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So shooting in 5K allows you to have closer to an actual 4K image after the cropping of some of these modes.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Like for example, I'm filming at 148th shutter right now at 24 frames per second and I have an ND8 on my camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "The sensor is super small, which means the image is going to be highly compressed, especially in fastmoving situations, and just overall produces a lower quality image with a lot of noise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "DJI upgraded their drones to one-inch sensors, and it made a huge difference in the image compression and overall quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, by the time you're done stacking all of these effects, your 5K image is more like a 1080p image.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "A few other noteworthy features are the awesome slow-mo of 120 frames per second at 2.7K and 240 frames at 1080p.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "I personally think the 1080p is a little bit too low of quality, so I'd recommend only going up to 120 frames so you can have at least that 2.7K quality.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "first time the next feature that we really like is the image quality all together and this one can now get to 5k which we don't so much use it really doesn't fit into our tv screen or computer screen or anywhere else for that matter but with that said gopro continues having the best image quality…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "action camera and we are all about image quality so it is our action camera of choice in fact this gopro is the one with the highest resolution so you can now shoot i think 20 megapixel photos which is you know double the size of the previous versions so along with that 5k video you also get bigger…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "we do so we insist on always having the best tool for it however if you have the gopro seven or eight it depends yeah i would say if you have the seven then you might see a pretty big jump in quality at the very least from the seven because even though that did have hyper smooth and some",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "again this icon here shows how much recording time is left on your micro sd card at the current resolution so you can see here we're recording at the standard preset which is just 1080p so it's kind of low resolution now you've got a lot of storage and this is just on a 32 gigabyte card once you…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "second res fps and you'll see the resolutions up here on the top and the frames per second down on the bottom and then you can go into 5k or whatever resolution you want to use but i recommend saving those in different presets so you can just switch resolutions by changing presets instead of by…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "on-screen shortcuts so definitely check that out in my book this one here is slow motion with a little snail you can just use that to switch frame rates so depending on what resolution you're in it'll double the frame rate right now we're in 1080 at 60 frames per second so if you tap that slow…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "i've never been a huge fan of the slo-mo on action cams the only higher speed frame rate that i like on action cams is 60 frames per second so if i'm gonna actually do anything i would probably shoot 4k 60 so i would have the option of slowing something down if epicness happened or 4k 24 i've always",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "you've heard people say before sometimes lower resolution gives you a better resolution photo you may not have heard it said like that but that makes sense all in all using the hero9 straight out of the box in optimal conditions mind you it looked good there's still things about the gopro i don't…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "when you turn it on by holding the power button you get the gopro animation in the front the back lcd will light up where pretty much you can interact with it and turn on and off settings viewer viewfinder everything you need right there at the back it's capable of going up to 4k in 60 fps…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "on this that is the video quality the video on this however can go up to 5k at 30 fps which is insane but we're going to be showing you the 1080p footage because that's pretty much what i would be exporting it as you can see the quality and hdr color overall is really great this is the ungraded",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "footage that's the graded footage and i'm going to talk about this a little bit more if you want one of the best settings that we found these are the best settings to get the max quality out of your gopro without it looking cheap and pretty much this is what we use for every single shot on this and",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "bit unreliable at times and the touchscreen can be unresponsive you can find several reviews stating that the camera will even freeze completely from time to time so you have to remove the battery to restart it this will also not save any videos currently recording I personally did not experience…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "a common complaint with this camera I think I should mention it nonetheless the settings are very extensive and you can fine tune everything to your liking rather quickly from the white balance to the shutter speed the hero 9 can shoot videos up to 5K with 30 FPS or 4K with 60 FPS the frame rate…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "way up to 240 FPS as well but only in 1080P the camera can also shoot photos with 20 megapixels and in a pretty satisfactory image quality as well I'd say although the processing is a tad bit slow but photography is not the main focus of a GoPro anyway the hero 9 features hypersmooth 3.0 which is…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Cinematography wise, the Hero 9 can still deliver greatl looking 5K footage.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "The front screen, even though it can get laggy when filming in 5K, is super helpful for vlogging or framing selfie shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Even compared to newer models like the Hero 11, which run hotter and can drain faster with higher frame rates, the Hero 9 has proven to be more reliable for me.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "4K and 5K footage looks sharp, colorful, and vibrant.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Slow motion at 1080p 240 herz is solid.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "It's not quite as crisp as 4K slow-mo on newer models, but it's more than enough for fun shots or social media.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "to get through one day on one battery which is right on par with the hero8 oh and i also always had both the front and back screens on because why not okay the next bigger thing resolution this camera's 20 megapixel sensor can record in all right here we go 5k 3024 4k 60 30 24 2.7 k 120",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "[Music] wowie it's almost too many options like i just don't think i could possibly use all of those but i'm sure there is a use case for every single one now that 5k that that's new and it is crisp personally i dig the gopro color option that is super punchy in the saturation and keeps a high level",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "of contrast and pair those vibrant colors with the amazing in-camera stabilization and bingo bango you have some really nice looking footage that if you're outputting in 4k you can even punch in and re-frame a little bit with and speaking of stabilization there is even a bigger i guess more robust…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "like i'm in a music video good morning buds this video goes live in 24 hours and i just got the final firmware for the gopro hero 9.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "uh what you've been seeing from the hero 9 is pre-production firmware so let's go out and shoot [Music] so right on yeah gopro claims that this latest version of firmware has some crisper image quality it has improved exposure and then it also improved touch sensitivity i found those all to be true…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "cameras can shoot at 5k and then there's insta 360s 1r with that one inch sensor mod for 500 but that's 50 more expensive and i prefer the color that the gopro puts out add that all up and well the biggest baddest action camera in the game right now i think it's the gopro hero 9.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "when you get an adapter for this thing then you can't easily put it in your pocket again and when I think of a good vlogging camera I need one that has great stabilization good low light performance nice colors good audio quality and can fit in a pocket and it checks most of the boxes but…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "screen so you can get a better battery life and it also really depends on which modes you shoot in so for example in 1080P 25 FPS you should probably be able to get about 1 and 1/2 hours maybe even two but when you start to get into 4K or 5K it drains the battery quicker and when we",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "sharpness in 1080P also doesn't look nice compared to other cameras but when you switch to 4K or 5K then you can defitely see that the sharpness looks a lot nicer but I always had the issue that when I hit record the audio sounded pretty bad and then a few seconds after it turns back to normal…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "now we are at low sharpness 1080p at 25 FPS it also has a hyperlapse feature called Time Warp which works great and it also has some really nice slow motion options so 1080p at 240 FPS when you are shooting in slow motion with the sharpness on it looks like a cheap smartphone look so that's why I…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "all these cameras can shoot at 5.3 k at 30 frames and they can also go up to 60 frames with the exception of the GoPro 9 stuck at 5K at 30 frames the big difference is that you will not see 4K resolution with any of these GoPros anymore this is top of the top class of the best",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "GoPros on the market ready to roll in a four-way GoPro comparison the initial focus of my review was on the GoPro Hero 9's video quality a model that's been out for over three years the consistency in gopro's performance over time is actually truly noteworthy in the footage you're currently viewing…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "I very kindly let you know what the intro we have gotten to a point where pretty much everyone will be shooting with a minimum of 5K resolution if they own a newer GoPro notably the hero 9 is in my opinion very slightly warmer with a pinch of added saturation since the hero8 has been left out of the",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "less noise than the others with the nine lagging behind due to a slightly lower resolution even then you need to realize I'm trying to nitpick as hard as I can here because all of these are performing at a good level regardless of the differences in hardware and software ultimately your choice of…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "features that's for sure but these are especially fun to use Time Warp which is a sped up and stabilized video can be used in 4k on the hero 9 and the hero 10 while the upgrade came last year with the ability to shoot in the full 5.3 K resolution on the hero 11 and the 12.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "I don't see big differences in the video quality even with the resolution changing and this is a further Testament to GoPro maintaining a high standard throughout the generation of their newer releases I also like to use slow motion a lot this was probably the one thing that I always played around…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "growing up the resolution will come up on the screen along with the frame rate for our valuable viewers to have the best understanding on what is going on with each action cam that being said I really like the bright visuals of the 11 and the 12 here maybe slightly improved color reproduction…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "a bit dark and while shooting in 120 frames I still do prefer the brighter footage of the 11 and the 12 they just look more appealing we will be maxing out the frames in a bit though and this is often my favorite because I like footage that can be really slowed down 1080p for the 9 and 2.7",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "terms of longevity so I guess the most important question is which camera should you get well that always depends on what you want to do with it if it's just about video quality and you don't need 60 frames of 5.3 k then the 9 is just fine the only drawback of the 9 is that it has the",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "same chip as the GoPro 8 and is therefore sometimes very slow and has some lagging problems the 10 no longer has this problem which is why we would definitely recommend the 10 over the 9.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 14,
+        "polarity_agreement": 0.429,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.177,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "field_of_view",
+      "display_name": "Field of View",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 18,
+        "neu": 25,
+        "neg": 10,
+        "total": 53,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "30% more battery life, and a Max Lens Mod accessory that brings Max HyperSmooth video stabilization and Max SuperView ultra wide-angle photo and video.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "a super wide angle lens adapter that the HERO9 Black has a built-in setting that utilizes the GoPro MAX technology.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "The Max Lens Mod ($99.99).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "brings unbreakable Max HyperSmooth video stabilization and low-distortion, ultra-wide Max SuperView to HERO9 Black at up to 2.7K60 resolution.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "Max Lens Mod also allows for.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "My hope is that PolarPro and other 3rd-party manufacturers develop some Macro and Zoom lens covers and ND filters soon that.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "Max Lens Mod will be available globally starting October 2020.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "to 33ft (10m) • Compatible with Max Lens Mod, Light Mod, Display Mod and Media Mod for HERO9 Black Subscribing to GoPro.com The GoPro subscription.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "I can see where this could go with a good quality macro focus Lens Mod someday, but enjoy some splattering goodness.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "and with more Lens Mod attachments, hopefully get some closer focal range options in the near future.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "are expandable mods that you can purchase separately to expand the usage of the camera depending on your needs providing a more comprehensive workflow these include the max lens mod the light mod and mediamod between these mods you can achieve a horizontal locked footage led light illumination and…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+            "weight": 0.75,
+            "quote_excerpt": "my old gopro that still works because these things never die and now i have a cell phone that has a super wide angle lens on it it's sort of kind of waterproof and it takes like an okay enough video image and that existential question is kind of all i care about and all i'm going to focus on",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+            "weight": 0.75,
+            "quote_excerpt": "stand up so did they do it in a world where there's like a lot of good enough options do you need the best if this wide angle lens video camera on my cell phone is a cheeseburger do you need the steak if the old uh honda civic works uh works well enough to get you tuned from where",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "It's responsive enough for navigating settings and it has like a 970 nits of brightness, [music] so it stays viewable even under sunlight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "For example, in my POE preset, [music] I shoot in 4K because it supports super view which gives that super or ultra wide look for motorcycle shots.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "[music] If I switch to 5K, I only get the wide lens option, which can be a bit too tight for POB footage.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "So, if you scratch [music] or damage it, you can easily swap it or upgrade to the Max Lens Mod.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "I haven't tested it yet, but it offers a wider field of view.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Uh, using that kind of lens mod, it limits you to 2.7K [music] video resolution for the Hero 9.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "Linear is when you get rid of that GoPro 'view' if you will.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "has a lock system that locks in there like it goes around twice essentially and that has some interesting implications not only for me dropping on the ground but also for third-party lenses and even a first-party lens we'll talk about later on so the ability for you to swap out lenses uh if you…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "firmware update for the hero8 but now boost everything which is great whether it's wide or linear or super view it doesn't really matter it's all boost all the time uh to show you some comparisons here this is a whole bunch of footage i have from all over the place comparing against the hero8…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "a webcam and apps like skype or zoom or teams or you name it obs whatever it's available for both pc and mac it's been super useful for me i've been using a lot one because the quality on this is usually way better than most webcams and two i just like the wide perspective it gives more perspective…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "came out last year well they were announced last year then they were delayed and they've been delayed and still delayed actually but there's a new one to eventually delay which is the max lens mod essentially this allows you to take off this front display right here like this and put a super wide…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "kind of takes some of the functionality from the gopro max camera in terms of having a much wider lens they can crop in and do a bit more on the horizon leveling itself there and in particular there's something called horizon lock where you can turn the camera 360 degrees around and it'll actually…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "would expect that as they get better of course i also think it's pretty much the best action camera out there and the thing is that what gopro has nailed here is the incremental updates each year and they've also undone the things that really ticked off people last year like the unremovable uh…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "And I do recommend using the linear mode.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "I would love to see them increase the size of the sensor and allow me to adjust the aperture, which would then allow me to have more control over the exposure of my image and maybe even give me a little bit of shallow depth of field.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "And the fifth and final thing that I don't love about the GoPro is that there's too much digital zooming going on.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "In my opinion, the narrow lens option is a gimmick, the boost option on hypers smooth is kind of a gimmick, and the horizon leveling is kind of a gimmick.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "I think it's important for people to know that when you use the narrow lens, it's not actually a different focal length optically zooming like iPhones giving you their multiple lenses, but it's a digital zoom, which means it's just cropping in on the sensor, which reduces your 4K image to basically…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, there's really no reason to ever use the narrow lens option.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Just shoot wide mode, and then you can crop in post, and it will be the same thing as having shot in narrow mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Now, I do like the linear option that gets rid of the fisheye look, but that too digitally crops from the wide angle, taking your 5K image to probably closer around a 4K image.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, here's a sidebyside of my GoPro and the wide-angle lens on the iPhone.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But when you switch the iPhone to the regular or portrait lens versus the GoPro that can only digitally zoom, the iPhone has much better quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, I think that's the biggest pro of the iPhone is that it has three lenses versus the GoPro just has the one wide lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "in the industry right now nothing can actually get as stable as gopro footage so i mentioned this a couple times before but there is a new mod it's the max lens mod and that debuted along with that hero9 but if you use the maxlens mod you get the widest and most stable footage out of your gopro at",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "you go up to super view which is the widest field of view that you can get with your camera and then it goes down to wide which is the standard wide angle then you've got linear with less wide angle distortion it'll straighten that horizon line then you've got linear plus horizon leveling which…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "level as you move so that's really cool for handheld footage the last lens down at the bottom is called narrow which is basically a zoomed in view of linear and once you select your lens then you can just tap the screen for that option to go away and your lens will be set this over here is hyper",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "60fps wide view i'm using the flat profile with zero sharpness so overall it should look pretty good the screen in front is actually so much more useful um so much more beneficial than before so i can really see exactly what i'm looking at and frame my shots perfectly let's not ignore the image…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "stills out of this that's the super wide that is the white and then you have the narrow the quality is very comparable to smartphones the hdr control is very nice as well indoors it struggles a little bit but not as much here's a quick little behind the scenes shot as well now let's talk about the…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "you're setting it up and moving slightly further away if you don't want to use your smartphone having this is a huge plus to just look at settings to look at your field of view whatever you need on that front screen the second pro on this would be the build quality and overall design it is built so…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "is a no-brainer if you don't have an action camera get this one however the usability has changed over the years this isn't just for action cam anymore the way the microphone works and the sound quality on this the way the field of view can be changed to narrower to wide to get a nicer clearer…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "that we had in the 8 and it's still incredible i mean i am constantly impressed with hyper smooth and new this year is an in-camera horizontal leveling option when shooting the linear frame which is a bit cropped in from the wide frame to a point this keeps the horizon level on the screen straight…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "for the hero 8 which had a directional mic on it had hdmi port on it even had like a cold shoe mount on it which is really cool and they're going to have one of those for the hero 9 as well but for the first time ever they're releasing a lens mod and that's this max lens mod",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "2.7 k which is a bit of a downfall but if i'm being honest my favorite use case of this mod was putting it on the hero 9 and not telling the hero 9 that i put it on and then it created this like awesome circle image that looked like a you know og fisheye look oh i feel",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "responsive um and the images is of course hella crisp so uh yeah firmware looks good gopro so the hero9 wowie i mean they brought back the removable lenses and they're rolling out mods it's got a bigger battery larger sensor it does 5k video and most importantly they finally made the front screen…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "squeezes it into a 16x9 image then you have wide which is just the normal wide angle gpro look when you go to linear you will get lens correction Distortion so you won't get the fisheye effect but keep in mind that it definitely does crop in a bit there's also linear plus Horizon leveling so if you…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "keep the Horizon level it will do that but only up till a certain amount and then last up is narrow which does still give you a little bit of that GoPro look and because it's so zoomed in it isn't the sharp but at least it's nice that you have the option to quickly change between lenses in this",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "the 12 obviously has it as well there is a Max lens mod that you can buy for the 9 or the 10 if you would like to be able to do this but the 11 and the 12 had this feature out of the box giving you the ability to shoot the coolest Sun footage you can think of",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "could be a game changer for some content creators that often like to utilize these modes as for viewing angles GoPro has come a long way since the nine this is the widest angle on the hero 9 and it's called the wide view as most of you probably know when the hero 10 came out they got the ball",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "rolling with super view which is a bit wider than the previous version the 11 and the 12 though have what is called hyperview which is even wider as you are currently seeing on your screen with the lenses the sensors and their capabilities behind us time morph and time lapse are for sure two of my…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 12,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.208,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "stabilization",
+      "display_name": "Stabilization",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 28,
+        "neu": 7,
+        "neg": 7,
+        "total": 42,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "More stability with HyperSmooth 3.0 and Boost in all settings.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "of the digital lenses including wide linear and the brand new linear plus horizon leveling this is some jaw dropping stability from gopro this new innovation is doing the work of an external gimbal but all the magic is happening inside the hero9 camera while your camera is rotating or bouncing this…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "amount of instability of your rig this new digital lens mode is possible thanks to the new hypersmooth 3.0 which is their most advanced video stabilization ever and works pretty well on its own take a look on top of that if you need more stabilization there is hyper smooth 3.0 boost that will…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+            "weight": 0.75,
+            "quote_excerpt": "control car is to test out the image stabilization on this camera but i think you know gopro's smart and i think they know that tech reviewers like me we're just all big nerds and we're total suckers for remote control dune buggies nice one gopro [Music] all right so uh trying to pay attention how…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "[music] So I look for an alternative, something that costs under $200, but still delivers 5K video and great stabilization.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "It's enhancing [music] stabilization and there's a horizon lock feature, which is [music] pretty cool.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Even after all these years, the GoPro Hero 9 Black still [music] delivers great image quality and good stabilization.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "Clean with no fish eye look to it and the stabilization is still there as well so you can go all the way up to hyper smooth boost mode which is the highest possible stabilization gopro has and it looks pretty silky smooth you can see some of this footage right here now again if you want to see all",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Now, the first new feature on the GoPro Hero 9 that I love is the image stabilization.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "This honestly is the first camera I've used that I think you can actually get professionally smooth shots just using it handheld.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Even when I'm walking around or on a bumpy golf cart, the Hypers Smooth 3.0 software does an incredible job at smoothing out the footage.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "And with Hyperlapse 3.0 turned up to boost and their new horizon leveling turned on, the footage is freakishly smooth, almost too smooth in my opinion.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, I personally use the regular Hyperlapse 3.0 no stabilization, which only crops in about 10%.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But overall, super impressed with the image stabilization.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "I'd say this is the best image stabilization I've seen on the market.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "And many of you will often be using the hypers smooth mode as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "The fourth thing I don't like so much, and I hit on this already, is that I can't use the stabilization and ND filters at the same time without the stabilization freaking out and doing some weird blurry stuff.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, I'd love to see GoPro fix that and allow us to shoot at a lower shutter speed and also be able to use their stabilization.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But typically, I avoid using the boost mode or the horizon leveling mode as I think it just crops in too much, making my image start to look like trash.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Also, the stabilization on the GoPro makes it much better for vlogging over the iPhone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "that option available the next really good feature which we like is the horizon leveling i think the feature is actually underrated when you look at older model gopro the worst thing about it was that sometimes when you try to hold steady it goes like this a lot and just because your hand jitters…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "horizon leveling eliminates that motion and makes your footage so much more stable in fact there's also a enhancement of horizon leveling called horizon lock but you only get that when you're using the max lens mod and we have a separate video talking all about that mod if you want to learn more…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "the next great thing about the hero 9 is that it comes with hyper smooth 3.0 which is the very best version of in-camera stabilization that gopro has ever had so hyper smooth first debuted with the hero 7 and it's just been getting better and better with each release and in fact you can enhance…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "you use the max lens mod and that gives you even better stabilization and that's crazy because it was already so good we couldn't imagine it could get any better but it did and now it's just rock solid it's amazing it's so good you really don't need a gimbal anymore indeed and that is by far the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "smooth boost which just adds more stabilization to your hyper smooth which is a great for handheld shots it also zooms in a little bit i won't go fully into depth with that now but it's definitely great to check out and also this is touch zoom so depending on your resolution you can zoom in and out…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "friend who's a pro rider for the honda race team tanner ward clip it to his helmet and do a few laps around this motocross track it looks good [Music] one of the things that impresses me the most is the stabilization with this because it continues to get better and better we're talking about image…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "tiny camera that can rival someone riding a dirt bike on a track that's all rutted out it's rough we're getting air we're landing impacts turns stuff that's not necessarily easy for a camera to stabilize if you were hand holding that you would never reach this level of stabilization so the hero9…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "pause the screen write them down try them out for yourself so let's take a look at those settings now on an atv now before i talk about how good the stabilization is because it is ridiculous check this out watch the stabilization is good yes you're correct but you know what's also amazing…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "need to upgrade from a hero8 i would honestly say no if you have a hero 8 the stabilization in the 8 is still incredible the mounts on the bottom are still great you don't have the screen in the front you're not getting that horizon lock so you're missing out on that feature but for the most part…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "have different options with this now like the horizon control which is absolutely brilliant as you can see there it maintains the horizon no matter how you rotate the camera as you can see the back always stays straight no matter what angle i'm going at very cool stuff more on this later swiping…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "boosted it looks very cheap and toys in our opinion but if you don't really care about image quality it's pretty good i just think that you should disable at least the sharpness because it's way too over sharpened overall the image quality is really awesome now i can fake being more sports and…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "how much damage you actually put it through so that's a huge pro for me as well lastly one of the biggest pros i think on this is that stabilization and the horizon tilt control this was a huge win for me especially when you're shooting with something like a gopro where it gets to that fisheye…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "horizon can get really messed up the horizon control on this worked really well especially when i was skating and i was tilting the camera up and down to get a point of view of what's in front of me as well as what's below me i couldn't really necessarily think of a con on this i think one of",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "stabilization and to put it briefly it's phenomenal you can be in a full Sprint and have a steady image as if filmed with a gimbal on top of that the camera also features a ryzen leveling so you can tilt the camera without changing the frame this is perfect for all sorts of shaky activities which…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "supports the amazing stabilization so you can make time lapses while moving much easier all the null lights say that the hero 9 is a pretty good action cam in 2023 you do not necessarily have to make a jump to a newer model since the bread and butter of a decent action cam is all here and…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "You'll get some grain in darker scenes, and the stabilization can show minor jitters at night or indoors, but honestly, it's manageable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Hypers Smooth 3.0 Zero is honestly still one of my favorite features.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Whether I'm biking on rough trails, walking on uneven paths, or just jogging with a camera in hand, the footage stays smooth.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "It gives you that smooth motion lapse look without needing a fancy setup.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "compared to how they're being experimented on right now oh and by the way if you're enjoying this content we would really appreciate if you could like this video And subscribe to our Channel now back to the discussion at hand which just happens to be stabilization so basically here is what the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "on the nine looks pretty shaky the 10 looks pretty good and the 11 and 12 look very minimally better I think now normally we would turn on Boost after this which crops in the frame and gives you better stabilization the issue is the 12 only has Auto boost which is pretty self-explanatory this is…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "while keeping you steadily in the frame still though there is a very cool feature in the hero 12 and they've managed to win me back after the small annoyance I had with the stabilization options changing once again but enough negativity time for some positivity in terms of a small my quality…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 13,
+        "polarity_agreement": 0.846,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.286,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "It's enhancing stabilization and there's a horizon lock feature, which is pretty cool.",
+        "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+        "url": "https://www.youtube.com/watch?v=onqFZKuhjU8"
+      }
+    },
+    {
+      "axis_id": "audio_capture",
+      "display_name": "Audio Capture",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 10,
+        "neu": 16,
+        "neg": 7,
+        "total": 33,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "• RAW photos • Digital lenses • Voice control with 14 commands in 11 languages + 6 accents • 3 microphones with advanced wind-noise reduction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "• Stereo + RAW audio • Larger speaker for improved audio playback • Removable lens cover • Built-in folding mounting fingers • Rugged + waterproof.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "The improved built-in microphones are great at cancelling ambient noise and capturing your.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "voice &#8211; and with the new Media Mod, the additional mini shotgun mic with foam windscreen will give you an even better capture, or you.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "can add an external lav mic if you wish.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "it does have noise cancellation feature uh built into it let me know uh what it sounds like to you guys in the comments below i think it sounds pretty good the hero 9 also has a much louder speaker compared to hero hero8 so you can listen to playback much easier and make sure you capture that…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "For my setup, I'll just probably use the GoPro Hero 9 and the mic adapter [music] since I had a different mode vlogging setup.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Just note that if you use a cage, [music] you'll have to remove the side door to access the USBC port for mic adapter, which also means it loses waterproofing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "the way is that mod has no electronics in it uh in fact it's just a toggle in the menu to enable or disable it so that means third parties could probably do something similar to that down the road next on the list is improved water drain for the microphones now this may sound like something that's…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "minor which is probably why it's at the end of my video but it's useful so this little thing right there below the mode button looks like a weird door that you can't open up is actually designed to be able to drain water faster so let's try that out okay this is a test of the microphone audio…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "now and i'm gonna keep on talking and see how long it takes for the audio to clear and i'll keep on talking a little bit longer just to make this a little bit more awkward finally last but not least on the list is the fact that the gopro comes in its own case uh not like an exterior",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Now, the biggest drawback to using the GoPro for vlogging is that the audio quality isn't great.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But most cameras aren't usually going to need an external mic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "And that's the audio you've been hearing throughout this video compared to right now.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "I do recommend if you're vlogging with the GoPro and really with any camera that you have an external microphone to increase the audio quality",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "on the mode and then you see an indicator going back and forth and that's really key because so many times we have wasted so much footage due to a microphone failure and you don't have that feedback until you take it to your computer now we actually know and it's a really good thing the sound is…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "test for those media mod microphones on the hero 9 and the hero 8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "hero 9 is the front-facing microphone is activated and the hero9 also does have a foam windscreen which gives it a degree of protection against the window here's a really strong gust all right it is worth noting that you do have to buy an entirely different media mod for the hero 9 the older media…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "the camera back and forth which is really enabling creatively and you lose your ability to have a stereo mic you have to have priority forward or backward but you cannot have both in the same time and it really muffles your speech if you are to turn the camera during a segment that makes you have…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "the hero 9 we have it in back microphone because we don't have stereo as an option so flip the camera forward this is what it sounds like with the media mod microphones facing forward obviously not very fair for the hero 9 right now because we have it on back mic priority but i will switch it over…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "front mic in a second but on the hero8 should be able to hear me pretty well since it is on stereo mode so that limitation is the number one reason we have to use external microphones and cannot use the gopro media mod in its compact form that is much easier to carry around so it is a hassle",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "with that said there are some really great external microphones on the market we've done quite a few videos about some of them and have more to come so check the links in the description below to more of those microphones so for all of the bad things about gopro and you guys might have seen some of…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "audio is when water gets in and you don't realize so you end up shooting for 30 minutes you're talking to the camera you get back home and you're like why does it sound like i'm 20 feet under the water you're probably covering the mic or water or mud is in it just check the camera make sure it's",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "pretty good now let's test out the mic performance [Music] all right so now we're kind of just uh we're skating and we're using the electric skier board as you guys can see right here but while we're skating we're also testing out the sound quality on this alright so now i've switched over from…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "hdr and the sound together you can pretty much use this as a vlogging camera and the fact that it's weather sealed and everything just makes it so much more desirable because you can use it in pretty much any condition unlike other cameras so that's about it guys that is our review of the gopro…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "a surprise given that the GoPro has an action cam first and foremost the microphone of the heronion is pretty good have a listen and here we have a quick microphone test the quality itself is pretty decent especially when it's not in direct wind but unfortunately there is no way to attach a…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "Box you will have to use some proprietary GoPro gear which will cost you between 60 and 80 Euros in order to attach uh mic mics over the aux input when there is sufficient light the image quality is amazing when shooting video and if you want to reduce the lens Distortion which is typical for…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "As for audio, it's decent.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "The built-in mics pick up voice and background sound well, especially outdoors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "a look and of course this would not be an action cam comparison if we did not check out the mic quality in other terms the audio we will be looking at the audio quality of the GoPro Hero 9 the 10 the 11 and the 12 and there's actually a small surprise coming from the GoPro Hero 12 because",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "now you can connect your Bluetooth earbuds to this action cam using the microphone instead of buying a microphone or using the one embedded in the camera itself I think that you should definitely get a mic to use with these action cams but you might not always have it with you might forget it at…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "quality to the 10 but just a bit better noise canceling to drown out the sound of the wind the 12 and the 11 are pretty much the same I really couldn't hear a difference and I doubt anyone else can either now while we're at it we can also get the Bluetooth mic connection feature out of the way",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+            "weight": 0.75,
+            "quote_excerpt": "to connect the Jabra earbuds and use them as an external mic the full list of currently supported devices are the apple airpods and the pro the pixel Buds and the pro the Samsung Galaxy buds the Jabra Elite and the Bose quiet Comfort series not sure if this feature will be open to all buds in the…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 11,
+        "polarity_agreement": 0.636,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.212,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 7,
+        "neg": 14,
+        "total": 26,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "*Note that the HERO8 Black Media Mod and the Light Mod is currently available on GoPro.com as well as at select retailers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "color display with live preview and status modes • Larger 2.27” rear touch display with touch zoom • 30% more battery life than HERO8 Black.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "just so much more to explore with still image capture that I haven&#8217;t had a chance to try out yet on the improved 20MP sensor.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "I&#8217;m impressed with the improved dynamic range of still images from the new sensor in the HERO9 Black so far,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "Still Image capture &#8211; improved dynamic range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "But [music] of course, like every GoPro, it struggles in low light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Of [music] course, this is the night generation of GoPro, but it's still usable under tunnels, on city night rides, or anywhere with decent [music] lighting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "I mean, just use this if you have a good light source because once you go past ISO 800, [music] you'll start seeing a lot of noise, which makes the footage unusable.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "But if you need something that performs [music] better in low light, I think this video is good for you.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "The second thing I don't like so much is that the low light is terrible.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But if you look closely in some of the darker background areas, there is still some noise even with the ISO at 100.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "But again, I don't recommend relying on the GoPro for low light situations.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Overall, I think the image quality is pretty dang similar.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "it's sunny out you can use an amd filter instead of the original glass and it will solve it but by default you get a nasty blue blob on your footage going towards the sun the next thing is that even though the gopro has overall higher resolution it is still really terrible at shooting in low…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "don't think there's been any improvement in that sense like once the sun goes down the gopro is pretty much unusable in low lighting the only way to get around that is to use an external light and the gopro does have a light mod that you can buy or there are many different light mods on the market…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "can get and that is that enables you to shoot in darker situations yeah that is disappointing because they did make a new sensor supposedly for this gopro and yet that did not see any improvement and that's really the main thing that needs improvement on their sensors and some of the rivals do have…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "want to shoot on a flat color profile things that are going to give it more dynamic range make it look less fake and weird cameras always seem to want to over sharpen everything which just doesn't look good it just looks almost noisy because it's too sharp these are the settings that we've found…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "found works great and one of the biggest tips that i found when using an action cam is it always looks the best in the brightest sunlight the second you bring these things indoors they just don't look as good because the hero9 has a higher megapixel that means there's more megapixels more pixels…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "this is what majority of this period went like i was pretty much just sitting and playing games and testing different consoles and stuff at the same time so that's what i got out of the gopro so another thing to go on about i guess would be your indoors quality gopros generally struggled with low…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "change the lens setting to linear which crops the image slightly in the corners in low light the image becomes noticeably noisy and runs into the same problem as smartphones since both types of devices use small sensors but in a well-lit environment the quality is superb the camera also features…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "It improved clarity a bit and reduced wind noise, but for how I shoot, it didn't feel essential.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "the camera is constantly recording it's beautiful the photos from the 20 megapixel sensor are pretty good and i was a bit disappointed with the speed at which the hdr photos need to process and i was not overly impressed with how the shadows are brought up to a bit of extreme levels in hdr mode in…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "but with the hdr turned off the photos are punchy they're bright and they're crisp the next step would truly be adding an astrophotography mode to this thing hidden hint nudge gopro last but not least gopro is releasing some mods with the hero 9 and more specifically the max lens mod now last…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "for example the low light of this GoPro isn't good at all it doesn't even have to be low light but when it gets a little bit darker you can already see the go GoPro struggle a lot I think this is one of the worst low light cameras that I've used so for example here's a clip when it",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "was a cloudy day wellbeing in the forest and even though it wasn't low light you can still see some noise which is annoying and for the great stabilization it needs a lot of light because it's electronic image stabilization so when you get to lower light conditions then it will also really struggle…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "quality but in bright daylight it can capture some really nice images and do you already have a GoPro or are you planning on buying the hero 9 let me know in the comments down below and thank you so much for watching",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 10,
+        "polarity_agreement": 0.8,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.192,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Overall, I think the image quality is pretty dang similar.",
+        "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+        "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw"
+      }
+    },
+    {
+      "axis_id": "mounting_ecosystem",
+      "display_name": "Mounting Ecosystem",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 7,
+        "neu": 6,
+        "neg": 4,
+        "total": 17,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "to capture one frame every 2 seconds and used a GoPro power pack and grip to attach it to my display console in my Toyota.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "mounting buckle and thumb screw as well as the usbc cable for charging the battery in the camera there is a supercharger adapter ready that has the ability to charge 35 quicker compared to the usual 5 volt usb charger it is sold separately however also available is the dual battery external charger…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Now, one thing that I really hate about this one, it's something that annoys me, is the built-in folding mount.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "carrying case that you can use to put all your gopro stuff in there so if you like that awesome if not you can gift it to a friend or something like that okay so there you go a complete look at the gopro hero9 black uh there's no question this is the best gopro has ever made though you",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "accessory but anything that is form-fitting because this gopro is also the largest gopro that they've ever made and it also comes with a brand new battery so you have to get all new batteries and new cages and even new lens filters if you're using them previously so it's an extra expense along with…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "it'll lock your camera in that mount so the one adhesive mount that comes with your camera is a curved adhesive mount it's slightly curved on the bottom here and this one is often used for helmets or curved surfaces gopro also makes a flat adhesive mount and a surfboard adhesive mount there's other…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "with you and have your camera inside of it nice and protected figuring out where you can put your gopro to get the coolest shots is definitely one of the funnest parts of using a gopro in my book i've got all the mounts covered and also some creative ways to mount your camera now that you've got…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "that one they've both got the built-in mounts on the bottom so you don't have to have that extra piece which i love that's obviously one of the best new features of gopros the little pieces that come out so that you can put it in a mount real easy uh like this it's kind of like this jaws clamp",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "thing really strong spring that goes on your motocross helmet or whatever kind of face mask but it works great the best angle i've found for pov for any kind of action sports with an action cam is the chin the head is too high the chest mounts too weird and too low find this with the camera mounted…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "on ride do your thing stop it take it off that's amazing so links for this below if you want to check that out so good what are my thoughts with the gopro hero9 well i took it out two times and both times i took it out i was doing power sports so the first time i had my",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "clean it also came with this fun little clamp uh probably for a shirt or a hat uh that would work probably pretty well i just it looks like a little cartoon character hey guys go pro i'm five inside obviously you stoked on this you've got your sticky 3m mounts is that all they give you just one did",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+            "weight": 0.75,
+            "quote_excerpt": "i stick one somewhere already and it's a curved mount so this is one that would probably go on a helmet but i don't like sticking stuff to my helmets are expensive helmets look awesome i hate these things clipped all over i never end up liking any of the angles bam nothing stuck easy on off give it…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "present all in the same place at the bottom is probably my favorite thing about the design the way the mounting port comes out so you can attach it to different port options whether that's on a stick or a head mount it's very simple and it lies flush when you do close it so you can mount it anywhere",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "you want at any time without having to carry external cases with that bulkiness of the mount so it has a nice flat bottom speaking of the mounting ports we got the bundle pack for this which includes everything you would need the gopro itself is included obviously you also get the clamp mount which…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "everything is integrated into it and it works really well especially with those coming out mounts i know the previous generation had this but i don't know this to me was very cool the fact that you can mount it and it slides back in so you don't need that external case all the water sealing is done…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "If you already own a GoPro Hero 9 or any GoPro in general, do share your experience with it in the comments down below.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "it also has these foldable mounting fingers which I think is pretty nice to have so they aren't really in your way when you are using it but what is annoying is that they don't have a/ qu in 20 here which means that you can't mount it to normal camera tripods or you have to get an adapter but",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "high",
+      "convergence": {
+        "source_count": 10,
+        "polarity_agreement": 0.4,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.294,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "ease_of_use",
+      "display_name": "Ease of Use",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 7,
+        "neu": 6,
+        "neg": 3,
+        "total": 16,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "many of these new features is that GoPro is really taking customer feedback to heart.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "service delivers the best value and end-to-end experience to GoPro users.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "*NOTE: I&#8217;ll be showcasing all of the available GoPro Products in my next hands-on review soon to detail the features and.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "and then select the custom preset and the hero 9 is ready for the adventure it also comes with presets already programmed for you like standard activity cinematic and slow-mo you do still have voice control with over 14 voice commands that the gopro will understand gopro take a photo gopro turn on…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "I used the GoPro Hero 5 for a [music] long time and I honestly had a great experience with it.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "But honestly, the auto mode already does a great job [music] for most situations.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "As well as the back screen concurrently.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "nice to see them kind of backtrack some things that didn't really work out now of course the closest i think we got last year was the dji osmo action in terms of a gopro competitor they got pretty close their functionality and really prodded gopro to introduce this front screen that dji had…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "with the firmware updates but they kind of didn't and that is a laggy touch screen i think this is the worst touch screen we've ever seen on a gopro like you tap on it several times and it often still will not respond to you and again that was supposed to have been fixed and i think the first",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "for vlogging i still think gopro is the very best option on the market right now that's right it is really creatively enabling whatever you do it doesn't have to be extreme sport it can be as simple as telling a story about your day how you leave your house how you get into your car how you drive…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "live burst mode so you can kind of slightly go into the past and capture some photos in case you missed it first is an awesome photo mode that takes a speedy batch of photos you can take up to 25 photos in one second there's tons of cool things you can do with first photo but i talk about",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "control center where you can basically control all the different settings and connections like orientation lock etc you also have the mode switching if you swipe across the screen left to right from photo video to time lapse swiping up from the bottom releases your gallery where you can take a look…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "the things that annoyed me a little bit that was more of a user error than the gopro error was that when i was holding it out like this i could accidentally touch it with my finger the touchscreen at the back so that was a bit off a bummer not really a big con to be honest lastly let's",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "It's quick, reliable, and gets out of the way exactly what I need.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "Scheduled capture is a surprisingly useful feature.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "camera and what's also nice about the screens is that the brightness can go pretty bright you can change it in the settings so you can adjust it to what you like for battery life I've always turned the GPS and the app connection off so it doesn't have any wireless connections and sometimes I even…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 9,
+        "polarity_agreement": 0.556,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.188,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "battery_runtime",
+      "display_name": "Battery & Runtime",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 6,
+        "neg": 4,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "And, more battery life to power it all.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "with improved cold weather performance • Removable, rechargeable battery • HyperSmooth 3.0 with in-camera horizon leveling • TimeWarp 3.0 featuring Real Speed and Half Speed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Maybe because it's a third party battery and GoPro's [music] Virware is pretty strict on its power stability.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "But, you know, I haven't seen major issues with their batteries, but just make sure not to leave them charging to avoid bloated, you know, batteries.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "to waste a bunch of time now one caveat to that is keep in mind it does burn your battery life at the same rate as recording mode so you're not burning storage but you are burning your battery life at the same rate if you were actually just recording now the next power tool is schedule capture uh…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "GoPros are notoriously bad for battery life, always having to carry 10 batteries with you and switch out frequently.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "Here's a real world test done by DC Rain Maker showing how the battery life compares from the 8 to the 9.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+            "weight": 0.75,
+            "quote_excerpt": "So, I was pleasantly surprised with the new battery life.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "I don't use it often because of the battery drain, but it's nice to know it's there.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "there's also a new duration capture and a schedule capture mode for time lapses and also a hindsight mode which can save the last 15 or 30 seconds of video that happened before you hit the shutter button now the one kind of downside to this is that it does run the battery down just a bit more…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+            "weight": 0.75,
+            "quote_excerpt": "the same time will drain your battery quicker a good camera also has to be reliable and sadly that isn't always the case for the hero 9 according to people online I haven't had that many issues with it I only had an issue once where it didn't want to read my SD card and I had to turn it",
+            "witness": "reported"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 7,
+        "polarity_agreement": 0.571,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.273,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "waterproofing",
+      "display_name": "Waterproofing & Durability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 6,
+        "neu": 1,
+        "neg": 0,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "tough as nails allowing you to shoot in the harshest conditions and it's still waterproof down to 33 feet so what's in the box let's open it up you get the hero 9 camera obviously and a hard carrying case for traveling which is nice to have included the rechargeable battery is now larger lasting 30…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "But out of the box, it's waterproof up to 10 m or like 33 ft.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "It's great for pool dives or shooting in the rain.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "side door shut but if you are going deeper or if you're going to be in the mud or sand or a big shore break and you just want to protect your camera you can use this protective housing this is waterproof to 196 feet deep so if you're going diving for example you definitely want to take this housing",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+            "weight": 0.75,
+            "quote_excerpt": "which is always in my backpack for those shots and it required a case to put on top and with the previous generation of gopros you don't really need that case anymore it's weather sealed waterproof and damage proof i guess for every kind of circumstance and it works really well in terms of the…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+            "weight": 0.75,
+            "quote_excerpt": "the camera preview which comes in handy when vlogging with the camera the mount on the bottom of the camera Falls in when not in use and as expected feels very durable so does the rest of the camera in fact it is shock proof and waterproof for up to 10 meters and can be used in fresh and salt",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "After 4 years of almost reckless use, tossing it into bags without a case, strapping it to bikes, dunking it underwater, the Hero 9 has held up surprisingly well.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 6,
+        "polarity_agreement": 0.833,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.286,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "you&#8217;ll notice is the larger size over the HERO8 Black.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+            "weight": 0.75,
+            "quote_excerpt": "the front-facing screen gopro it's about time the girth is bigger definitely like taller and fatter and wider and it's heavier there's this like fetish with especially like cell phones and small cameras as well to get them as small as possible in fact remember when gopro launched that this like…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+            "weight": 0.75,
+            "quote_excerpt": "dentist this new gopro which is bigger i can still attach to a helicopter blade i can still put on my surfboard i can still attach my bike or my truck or whatever i want to do it's small enough but what you get in return for that increase in size which is negligible is you get like a much",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "previous models in soon when it&#8217;s safer.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Check back for updates and my full hands-on review of the entire.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+            "weight": 0.75,
+            "quote_excerpt": "powerful new feature set that includes hindsight plus it has a brand new hyper smooth 3.0 for better stability and a brand new battery that offers 30 percent more battery life when compared to the hero 8.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+            "weight": 0.75,
+            "quote_excerpt": "when we get into the mounting section this is the bigger battery with the hero9 black which means that you get more filming time out of a single battery which is great news and then this is the mounting buckle which you use to attach to certain mounts but i'll show you that when we talk about…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+            "weight": 0.75,
+            "quote_excerpt": "That level of reliability matters when the camera is mounted somewhere.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 2,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+            "weight": 0.75,
+            "quote_excerpt": "an additional cost it really is beautiful for capturing your environment and we have another review all about that mod so you can check that out in our channel and now for the not so good right uh the first thing to talk about is the fact that you have to replace a lot of your older accessories not…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+            "weight": 0.75,
+            "quote_excerpt": "improvements there is a bigger price tag it's available today starting at 449 or 349 on gopro's website when you also purchase a one-year subscription to gopro plus now in my mind 449 is still a reasonable price for bigger everything sure you can grab the hero8 black for 350 or dji's osmo action…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "an additional cost it really is beautiful for capturing your environment and we have another review all about that mod so you can check that out in our channel and now for the not so good right uh the first thing to talk about is the fact that you have to replace a lot of your older accessories not…",
+        "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+        "url": "https://www.youtube.com/watch?v=BnT__zJt1tc"
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+            "weight": 0.75,
+            "quote_excerpt": "Its rug build still holds up really well.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+            "weight": 0.75,
+            "quote_excerpt": "now of course that battery does weigh a lot more there's also a new battery as well so the hero9 battery is a new chunkier beefier battery which is a lot like the hero9 in general it's heavier and with that came with that heavier battery speaking of weights and stuff if you want to see a full…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {},
+    "provenance": {},
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Reviewers are most positive about stabilization (67% positive, 17% neutral, 16% negative across 42 claims). The most criticism lands on image quality: 19% positive, 27% neutral, 54% negative across 26 claims. Opinion is split on field of view (18 positive, 25 neutral, 10 negative claims).",
+    "aspect_breakdown": [
+      {
+        "aspect": "video_quality",
+        "pos": 31,
+        "neu": 29,
+        "neg": 19,
+        "total": 79
+      },
+      {
+        "aspect": "field_of_view",
+        "pos": 18,
+        "neu": 25,
+        "neg": 10,
+        "total": 53
+      },
+      {
+        "aspect": "stabilization",
+        "pos": 28,
+        "neu": 7,
+        "neg": 7,
+        "total": 42
+      },
+      {
+        "aspect": "audio_capture",
+        "pos": 10,
+        "neu": 16,
+        "neg": 7,
+        "total": 33
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 5,
+        "neu": 7,
+        "neg": 14,
+        "total": 26
+      },
+      {
+        "aspect": "mounting_ecosystem",
+        "pos": 7,
+        "neu": 6,
+        "neg": 4,
+        "total": 17
+      },
+      {
+        "aspect": "ease_of_use",
+        "pos": 7,
+        "neu": 6,
+        "neg": 3,
+        "total": 16
+      },
+      {
+        "aspect": "battery_runtime",
+        "pos": 1,
+        "neu": 6,
+        "neg": 4,
+        "total": 11
+      },
+      {
+        "aspect": "waterproofing",
+        "pos": 6,
+        "neu": 1,
+        "neg": 0,
+        "total": 7
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2
+      },
+      {
+        "aspect": "price",
+        "pos": 0,
+        "neu": 0,
+        "neg": 2,
+        "total": 2
+      },
+      {
+        "aspect": "build",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1
+      },
+      {
+        "aspect": "weight",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 296,
+      "evaluated": 200,
+      "non_evaluative": 96,
+      "non_evaluative_breakdown": {
+        "non_claim": 96
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "296 examined · 200 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "video_quality",
+    "highest_rated": "stabilization",
+    "lowest_rated": "image_quality"
+  },
+  "sources": [
+    {
+      "source_id": "provideocoalition-first-look-hands-on-with-the-gopro-hero9-black",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.provideocoalition.com/first-look-hands-on-with-the-gopro-hero9-black/",
+      "title": "First Look: Hands-On with the GoPro HERO9 Black by Jeff Foster - ProVideo Coalition",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138624+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-bh-photo-video-pro-audio-gopro-hero9-black-5k-action-camera-hands-on-review",
+      "source_type": "pro",
+      "reviewer": "B&H Photo Video Pro Audio",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=cnEV3rsSydk",
+      "title": "GoPro HERO9 Black: 5K Action Camera | Hands-on Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138638+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-caseyneistat-1-serious-question-about-the-gopro-hero9",
+      "source_type": "pro",
+      "reviewer": "CaseyNeistat",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=nk0aCRuU2qw",
+      "title": "1 serious question about the GoPro Hero9",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138642+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-daryl-padlan-gopro-hero-9-in-2026-review-go-5k",
+      "source_type": "pro",
+      "reviewer": "Daryl Padlan",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=onqFZKuhjU8",
+      "title": "GoPro Hero 9 in 2026 Review - Go 5K",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138645+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-dc-rainmaker-gopro-hero-9-black-review-19-things-to-know",
+      "source_type": "pro",
+      "reviewer": "DC Rainmaker",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=Q4Izp_WvV3E",
+      "title": "GoPro Hero 9 Black Review: 19 Things To Know!",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138648+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-full-time-filmmaker-gopro-hero9-black-cinematic-5k-footage-review",
+      "source_type": "pro",
+      "reviewer": "Full Time Filmmaker",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=BFYt6PtyDyw",
+      "title": "GoPro HERO9 Black Cinematic 5k Footage & Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138651+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-gemini-connect-gopro-hero-9-review-its-not-perfect-but-its-still-the-best",
+      "source_type": "pro",
+      "reviewer": "Gemini Connect",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=BnT__zJt1tc",
+      "title": "GoPro Hero 9 Review - It's NOT Perfect, BUT It's Still the Best",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138654+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-jordan-hetrick-gopro-hero-9-black-tutorial-how-to-get-started",
+      "source_type": "pro",
+      "reviewer": "JORDAN HETRICK",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=bkr2y5_d_0g",
+      "title": "GoPro HERO 9 BLACK Tutorial: How To Get Started",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138657+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-peter-mckinnon-gopro-hero-9-here-we-are-again",
+      "source_type": "pro",
+      "reviewer": "Peter McKinnon",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=X5K5SzzzCv4",
+      "title": "GoPro Hero 9 - Here we are.. AGAIN.",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138659+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-productnation-gopro-hero-9-black-review-the-only-camera-you-need",
+      "source_type": "pro",
+      "reviewer": "ProductNation",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=RwkTrQZe5Hk",
+      "title": "GoPro Hero 9 Black Review - The ONLY camera you need?! 🤯",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138662+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-review-rattlesnake-gopro-hero-9-black-review-worth-it-in-2023",
+      "source_type": "pro",
+      "reviewer": "Review Rattlesnake",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=uR-czMucl-E",
+      "title": "GoPro HERO 9 Black Review | Worth it in 2023?",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138665+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-techsquare-gopro-hero-9-review-why-i-still-use-the-hero-9",
+      "source_type": "pro",
+      "reviewer": "Techsquare",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=zB2KrHdjapg",
+      "title": "GoPro Hero 9 Review - Why I Still Use The Hero 9",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138668+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-the-verge-gopro-hero-9-review-5k-powerhouse-under-500",
+      "source_type": "pro",
+      "reviewer": "The Verge",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=IZIsnwgkDFY",
+      "title": "GoPro Hero 9 review: 5K powerhouse under $500",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138670+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-unboxio-gopro-hero-9-in-2026-review",
+      "source_type": "pro",
+      "reviewer": "Unboxio",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=vKwiwEfu1Vg",
+      "title": "GoPro Hero 9 In 2026 Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138673+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-versus-gopro-hero-12-vs-11-vs-10-vs-9-action-cam-comparison-versus",
+      "source_type": "pro",
+      "reviewer": "Versus",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=kwTw-DRK6Bs",
+      "title": "GoPro Hero 12 vs 11 vs 10 vs 9! Action Cam Comparison! | VERSUS",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T11:31:34.138675+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/gopro-hero9/",
+    "reddit": "GoPro hero9\n\nReviewers are most positive about stabilization (67% positive, 17% neutral, 16% negative across 42 claims). The most criticism lands on image quality: 19% positive, 27% neutral, 54% negative across 26 claims. Opinion is split on field of view (18 positive, 25 neutral, 10 negative claims).\n\nI pulled together all 15 reviews in one place: https://askmaddi.com/cards/gopro-hero9/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**GoPro hero9**\nReviewers are most positive about stabilization (67% positive, 17% neutral, 16% negative across 42 claims). The most criticism lands on image quality: 19% positive, 27% neutral, 54% negative across 26 claims. Opinion is split on field of view (18 positive, 25 neutral, 10 negative claims).\nAll 15 reviews in one place: https://askmaddi.com/cards/gopro-hero9/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "GoPro hero9 — Reviewed",
+      "description": "Reviewers are most positive about stabilization (67% positive, 17% neutral, 16% negative across 42 claims). The most criticism lands on image quality: 19% positive, 27% neutral, 54% negative across 26 claims. Opinion is split on field of view (18 positive, 25 neutral, 10 negative claims).",
+      "image": null,
+      "url": "https://askmaddi.com/cards/gopro-hero9/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

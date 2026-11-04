@@ -1,0 +1,2276 @@
+{
+  "card_version": "1.0",
+  "card_id": "leica-35mm-f2",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Leica 35mm f2",
+    "brand": "Leica",
+    "model": "35mm f2",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/uYEAAeSwyXpqoXwS/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 1248.42,
+        "pre_owned": 1090.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 11,
+      "price_updated_at": "2026-11-04T10:11:11.758474+00:00"
+    },
+    "price_updated_at": "2026-10-25T09:07:09.960172+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-10-25T09:07:09.943837+00:00",
+    "last_built": "2026-10-25T09:07:09.943837+00:00",
+    "last_checked": "2026-10-25T09:07:09.943837+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 13,
+        "neu": 7,
+        "neg": 8,
+        "total": 28,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality Image quality compared to competitors In-depth comparisons Sharpness Chromatic aberration Geometric distortion Vignetting The Leica APO-Summicron-SL 35mm F2 ASPH is a fast, moderately wide.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "optimized for superior image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nevertheless, it has high central sharpness from f/2 on and it performs well in retaining sharpness at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Peak sharpness is very good on the 47MP Panasonic Lumix DC-S1R, but it&rsquo;s still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a little behind the Sony Zeiss Distagon T* FE 35mm F1.4 ZA, which has very slightly higher peak sharpness when mounted on the Sony A7R.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "would expect that a Sony Zeiss/A7R IV combination to have even higher peak sharpness.) The Canon EF 35mm F1.4L II USM on the 50MP Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "EOS 5DS R is another combination with higher peak sharpness, thanks in part to that high-resolution sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "one of the best, but there are other combinations with comparable transmission and vignetting, and some with even slightly better, more homogenous sharpness out to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sharpness The Sony Zeiss Distagon T* FE.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and the Canon EF 35mm F1.4L II USM on the 50MP Canon EOS 5DS R offer superior peak sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the story: how lenses handle sharpness is probably more important to most photographers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": ") profiles, with a strong central core of sharpness and a gradual fall-off to the corners.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you look at the sharpness profiles for all three at f/2.8 and at f/4, you&rsquo;ll see that Leica APO/Panasonic system combination maintains that.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "high central sharpness of over 80% acutance, but away from that central zone, sharpness falls in comparison with the Canon and Sony Zeiss systems.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "systems show improved sharpness in the outer zones.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&rsquo;s here at f/4-5.6 that that Sony Zeiss shows its superior sharpness, especially at f/5.6, where its.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "sharpness is measured at 80% acutance from the center out to the corners.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(We can also praise the Canon combination for its high sharpness across.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the imaging field.) The Leica APO continues to match the two rivals in the center and improves in the outer zones, but sharpness never quite.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lower sharpness (acutance) in the outer zones that accounts for the Leica&rsquo;s rating against the other two strong rivals.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "least in testing&mdash;as a ring around the central zone of sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "be an alternative to the 50mm, and as a result, require models with similar or even better optical quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "construction, then, the Leica APO-Summicron-SL 35mm F2 ASPH has many attractive qualities, including good sharpness starting at f/2, low LCA, and almost no distortion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Performance The review lens delivered excellent performance in our Imatest tests, meeting expectations for resolution.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens to be sharpest at f/5 resolution remained high from f/2.5 through to f/8, where diffraction began to take effect.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The arrangement of the elements largely eliminates distortions and spherical aberrations throughout the focusing range to ensure a high degree of sharpness,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "a good performer that was capable of delivering high resolution in the centre of the frame across aperture settings from f/2 through to f/6.8, where.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Measurements taken roughly half-way between the centre and the edge of the frame showed softening at the widest apertures, which.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.821,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Nevertheless, it has high central sharpness from f/2 on and it performs well in retaining sharpness at.",
+        "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+        "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/"
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 7,
+        "neg": 0,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens is weather-sealed, and the focus ring has been especially designed to resist ingress by dust and moisture.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is well suited to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens also boasts extensive weather-resistant sealing, with special seals around the focus ring to keep.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "metal lens hood (shown above) plus a soft carrying pouch.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens cap is made from.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "lens is made almost entirely from metal; in the case of the review lens, chrome-coated brass..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "inherent quality of the lens design.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.429,
+        "contested": false
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite"
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 3,
+        "neu": 33,
+        "neg": 1,
+        "total": 37,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Leica APO-Summicron-SL 35mm F2 ASPH lens review - DXOMARK Skip to content Lenss &nbsp;>&nbsp; Leica APO-Summicron-SL 35mm F2 ASPH &nbsp;>&nbsp; Lens&nbsp;Test Results Overall lens image.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prime lens for Leica, Panasonic, and now Sigma L-mount cameras.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Key specifications: 13 lens elements in 11 groups.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When mounted on the high- resolution L-mount 47MP Panasonic Lumix DC-S1R, the Leica APO-Summicron-SL 35mm F2 ASPH achieves an overall.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "high-regarded Nikon Nikkor Z 35mm F1.8 S on the 45.7MP Nikon Z 7 falls just outside our Top Ten 35mm focal length lens/camera systems (in.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "You can see all the 35mm lens and various camera combinations using our interactive DxOMark lens ranking tool here .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Panasonic Lumix DC-S1R to the highly-regarded Canon EF 35mm F1.4L USM when mounted on a 50MP EOS 5DS R.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony Zeiss Distagon T* FE 35mm FI.4 ZA on the 42MP Sony A7R II.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "only recently published our review of the 61MP&nbsp; A7R IV, Sony &rsquo;s latest high-resolution, mirrorless body, so we did not use it for this lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "35mm F1.4 ZA is the leader in our database of 35mm focal length primes when mounted on the high-resolution Sony A7R II, but both it.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although a strong performer overall, the Sony Zeiss lens on the A7R.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When mounted on the Panasonic Lumix DC-S1R, the Leica APO-Summicron-SL 35mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "similar for the Sony Zeiss combination, with LCA low in the center and rising gently before peaking in the corners at wide apertures.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "review, we have compared the Leica APO-Summicron-SL 35mm F2 ASPH mounted on a Panasonic Lumix DC-S1R to its closest rivals from other brands.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lenses are intended to be used on different camera systems and mounts, so the comparisons are not strictly applicable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Leica APO-Summicron SL 35mm f/2 ASPH lens - Photo Review Uncategorized Nathan Beard wins 2026 National Photographic Portrait Prize Sony unveils FE 100-400mm f/5.6-8 OSS.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Reviews / Mirrorless Lenses / Full Frame Mirrorless Lenses / Leica APO-Summicron SL 35mm f/2 ASPH lens Leica APO-Summicron SL 35mm f/2 ASPH lens Leica.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "APO-Summicron SL 35mm f/2 ASPH lens Photo Review 8.9 In summary The APO-Summicron-SL 35 f/2 has a professional-level build quality and delivered excellent performance in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "APO-Summicron SL 35mm f/2 ASPH lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The L-mount means this lens can only be used on ‘full frame’ cameras from Leica, Panasonic and Sigma’s fp / fp L models.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "can also be used with L-mount APS-C cameras like the Leica CL and TL2, where it provides a 52.5mm equivalent focal length.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "lens fitted to a camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "sloping inwards for 5 mm to end in the lens mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Eleven gold-plated contacts inside the mount provide contact points for interfacing with electronic signals from the camera..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "A raised red dot on the outer barrel provides a reference point for fitting the lens to a camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is supplied with a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Picture angle : 63.4 degrees Minimum aperture : f/22 Lens construction :13 elements in 11 groups (including 3 aspherical elements) Lens mount : Leica L.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Standard Accessories : Front and rear caps, lens hood, lens bag Distributor : Leica Camera Australia , (03) 9248 4444.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Leica Summicron-M 35mm f/2 ASPH lens - Photo Review Uncategorized Nathan Beard wins 2026 National Photographic Portrait Prize Sony unveils FE 100-400mm f/5.6-8 OSS super-telephoto.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "/ Mirrorless Lenses / Full Frame Mirrorless Lenses / Leica Summicron-M 35mm f/2 ASPH lens Leica Summicron-M 35mm f/2 ASPH lens Leica Summicron-M 35mm f/2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "ASPH lens Photo Review 8.7 In summary The Summicron-M 35mm f/2 ASPH lens will only suit owners of Leica’s M-mount rangefinder cameras.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "(Source: Leica Camera.) Like many Leica lenses, this lens is available in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens will only suit owners of Leica’s M-mount rangefinder cameras, which means its target market is small.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "the most popular choices for these photographers, which is why Leica offers three choices for M-mount photographers: the fastest is the Summilux 35 f/1.4, while.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; SPECS Picture angle : 63 degrees diagonal Minimum aperture : f/16 Lens construction : 7.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "elements in 5 groups (including one aspherical element) Lens mounts : Leica M quick-change bayonet Diaphragm Blades :11 (rounded aperture) Weather resistance : Not specified.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Accessories : Front and end caps, lens hood Distributor : Leica Camera Australia , (03) 9248 4444 &nbsp; TESTS Based on JPEG files taken with.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.405,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "The L-mount means this lens can only be used on ‘full frame’ cameras from Leica, Panasonic and Sigma’s fp / fp L models.",
+        "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+        "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "photographers will end up trying to decide if the high price of the Leica APO is justifiable in terms of its optical performance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "is arguably the largest 35mm prime lens we’ve ever tested and one of the most expensive.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "35mm f/1.2 DG DN Art lens, which is a third of the Leica’s price, takes that prize.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "at its price point, the Summicron-M 35mm f/2 ASPH.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "at its price point, the Summicron-M 35mm f/2 ASPH.",
+        "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+        "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 1,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(We have not yet tested latest version of that camera, the 61MP Sony A7R IV, however, we.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Leica APO-Summicron-SL 35mm F2 ASPH is better-corrected than most of the f/1.4 models from its rivals, but they rarely put everything into the design.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "over the years to offer superior image quality, there remains a need for smaller, lighter lenses that offer similar image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to offer just that, and its smaller, lighter f/2 lenses are as well or better corrected than &ldquo;standard&rdquo; f/1.4 versions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "the Panasonic S series cameras should be comparable with the performance on the Leica SL2-S camera we used for this review.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "received to review with the Leica M11 camera was an earlier update released in 2016 when the company replaced the plastic, clip-on hood with a.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and weighing 750 grams (1.59 lbs), this lens is aimed squarely at high-end amateurs and professional users.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "thread Minimum focus distance : 0.27m (12&rdquo;) Weight: 750 grams (1.59 lb) Overall lens image quality Whereas the earlier Leica Summilux-SL 50mmm F1.4 was designed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "as a large, fast lens with very high image quality, the slower APO-Summicron-SL 35mm F2 ASPH is intended to be lighter and smaller, yet still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "As a result, it’s surprisingly heavy for its size, although very compact, particularly when the hood – which adds 25 mm to its length –.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 6,
+        "neg": 3,
+        "total": 12,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The APO-Summicron-SL 35mm F2 ASPH has very low levels of distortion .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "These corrections or adjustments are also applied in-camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When the profile isn&rsquo;t supported, it&rsquo;s possible that the distortion may be noticeable in certain images where strong linear elements are.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Further, along with high transmission, it also has very low distortion for this focal length&mdash;the same level as some f/1.8 lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a built-in correction profile which can&rsquo;t be turned off in-camera, unlike some models.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens&rsquo;s built-in lens correction profile includes geometric distortion correction, however; and as with lateral.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Leica APO-Summicron-SL 35mm F2.0 has virtually no distortion, measured at a maximum of just 0.1%.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This level of barrel distortion is unlikely to be noticed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Canon rival combination, which also has a correction profile, has the same maximum level of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "distortion as the Leica/Panasonic combination; however, the Sony Zeiss has higher levels that would be noticeable in images, though it, too, has a profile correction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "to landscape and architectural photography, largely because of its relatively low inherent distortions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The review lens introduced very slight pincushion distortion, which.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 9,
+        "neg": 4,
+        "total": 14,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is measured at &ndash;1.8EV in the extreme corners; it is visible at the initial aperture , but but is well-controlled, with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "corners, and the Canon is no different in this regard.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting (corner shading) For the Leica APO-Summicron-SL 35mm F2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "ASPH and Lumix S1R combination, vignetting measures up to &ndash;1.8 EV in the extreme corners at f/2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although this is a quite gradual effect, vignetting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is noticeable in the Sony Zeiss from the edge of the outer zone,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With all three lenses set to f/2 (shown below), the faster Canon and Sony Zeiss lenses have less vignetting, but that is to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The review lens showed very little vignetting and was almost distortion free, regardless of the file format.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Crop from the corner of the image at 100% magnification showing egde.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "corner of this section reduces how much the viewfinder interferes in the field of view when the optical viewfinder is utilised.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is automatically corrected in the latest M-series cameras, so we didn’t expect it to be problematic.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "darkening can be seen in test shots at f/2 but it had vanished by f/5.6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "– a problem that persisted when the lens is stopped down – but otherwise tonal transitions were reasonably smooth for a lens of this type..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; SAMPLES Vignetting at f/2.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 12,
+        "neg": 3,
+        "total": 17,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a result, the lens has a complex construction consisting of 13 elements, nine of which are anomalous partial dispersion (low-dispersion) glass to control fringing, while.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a further three are aspherical (two of which dual-aspherical) for monochromatic aberration correction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fringing is also corrected by this built-in profile, but this lens is very well corrected for.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Leica lens has good chromatic aberration control that is matched only by the L-series Canon, thanks to the latter&rsquo;s innovative Blue Spectrum Refractive (BR) optics..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Typically, APO correction in a lens means that longitudinal fringing is corrected, nevertheless, the 6-micron level of lateral chromatic aberration in this Leica lens is.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic aberration With nine low-dispersion glass.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "elements in its construction, the Leica APO-Summicron-SL lens is very highly corrected for color fringing .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lateral chromatic aberration (LCA) profile below shows the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "width of the colored aberration occurring in all three lenses across half the image frame.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "chromatic aberration, we&rsquo;ve measured the results without the correction so that you see the maximum variation for yourself.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "control fringing, while three are aspherical (two of them dual-surface aspherical) for reducing spherical aberrations to optimise sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Lateral chromatic aberration remained well down in the negligible band at all aperture settings and we found no evidence.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "of coloured fringing in any test shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh fringing, a common characteristic with faster lenses, was not detected.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Crop from the edge of the above image at 100% magnification showing traces of coloured fringing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Lateral chromatic aberration remained consistently within the negligible range, the upper edge of which is shown by the red.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "No coloured fringing was seen in any of our test shots.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.588,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "photographs Chasing the southern sky: Astrophotography in Australia PHOTO GUIDES Sports Photography Landscape Photography 2nd Edition PRODUCT REVIEWS Tamron 16-50mm f/2.8 A lens (Model B091).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "sky: Astrophotography in Australia PHOTO GUIDES Sports Photography Landscape Photography 2nd Edition PRODUCT REVIEWS Tamron 16-50mm f/2.8 A lens (Model B091) OM System PEN camera.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh was very smooth and attractive for a 35mm prime lens and we found no instances of outlined highlights,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh was much as you’d expect for a wide angle lens with limited close-focusing capabilities.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "It is supplied with the usual front and rear caps, a lightweight metal lens hood with a rectangular front and a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is normally supplied with front and end caps plus a relatively large, screw-on metal lens hood as well as a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "screw-in protector ring to protect the filter thread when the hood is not in use.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The front of the lens has internal threading for 39 mm diameter filters, along with external threading for the supplied lens hood.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 13,
+        "neg": 0,
+        "total": 13,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusion Many professionals and high-end amateurs consider the 35mm focal length to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "However, as lens sizes have increased.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The 35mm focal length provides very modest wide-angle coverage that is often preferred by photographers over the ‘standard’ 50mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens barrel continues for s further 30 mm before.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "cm Maximum m a gnification : 0.2x Filter size : 67 mm Dimensions (Diameter x L) : 73 x 102 mm Weight : 750 grams.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The 35mm focal length is one of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Its small size makes it usable for street photography as well as.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "A millimetre or so behind the aperture ring is the focusing ring, which carries a distance scale.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "and provides a minimum focusing distance of 70 cm with a maximum magnification ratio of 1:17.5.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "ring roughly 50 mm beyond the infinity mark to facilitate manual focusing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "A depth of field scale is located between the focusing ring and the lens mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "the rear element of the lens, which extends several millimetres from its base, protruding a little into the camera body.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Dimensions (Diameter x L) : 53 x 35.7 mm (without lens hood) Weight : 252 grams (black version); 340 grams (silver version, as reviewed) Standard.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.615,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Build and Ergonomics As expected from a lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "With a tighter focusing ring, the concept is excellent since it ensures your finger will always be in the.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "internal and features quiet and swift autofocus using what Leica call DSD (Dual Synchro Drive), a system composed of two stepping motors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "But it’s quiet enough to use while recording video clips.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "35",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/2",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Leica 35mm f2. Optical performance draws the most discussion: 13 positive, 7 neutral, and 8 negative across 28 sentiment markers. Coverage of chromatic aberration is mostly neutral: 12% positive, 70% neutral, 18% negative across 17 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 13,
+        "neu": 7,
+        "neg": 8,
+        "total": 28,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality Image quality compared to competitors In-depth comparisons Sharpness Chromatic aberration Geometric distortion Vignetting The Leica APO-Summicron-SL 35mm F2 ASPH is a fast, moderately wide.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "optimized for superior image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nevertheless, it has high central sharpness from f/2 on and it performs well in retaining sharpness at.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 0,
+        "neu": 4,
+        "neg": 2,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "fast as phase detection AF because Leica and Panasonic cameras rely on contrast AF with depth detection, which require several contrast measurements at various positions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Manual focusing is achieved by turning a ring that uses a magnetic field sensor to provide fast and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Autofocusing was very fast, although.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 9,
+        "neg": 1,
+        "total": 10,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "small actuators to independently control two focusing elements allows it to travel the entire focus throw in 250ms.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "(Source: Leica Camera.) The AF system is based on two lightweight focusing lenses and uses a Dual Syncro Drive stepping motor with two actuators.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "to independently control the two focusing elements.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 7,
+        "neg": 0,
+        "total": 7,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens is weather-sealed, and the focus ring has been especially designed to resist ingress by dust and moisture.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is well suited to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens also boasts extensive weather-resistant sealing, with special seals around the focus ring to keep.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 3,
+        "neu": 6,
+        "neg": 3,
+        "total": 12,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The APO-Summicron-SL 35mm F2 ASPH has very low levels of distortion .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "These corrections or adjustments are also applied in-camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When the profile isn&rsquo;t supported, it&rsquo;s possible that the distortion may be noticeable in certain images where strong linear elements are.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 1,
+        "neu": 9,
+        "neg": 4,
+        "total": 14,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting is measured at &ndash;1.8EV in the extreme corners; it is visible at the initial aperture , but but is well-controlled, with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "corners, and the Canon is no different in this regard.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting (corner shading) For the Leica APO-Summicron-SL 35mm F2.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 2,
+        "neu": 12,
+        "neg": 3,
+        "total": 17,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a result, the lens has a complex construction consisting of 13 elements, nine of which are anomalous partial dispersion (low-dispersion) glass to control fringing, while.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a further three are aspherical (two of which dual-aspherical) for monochromatic aberration correction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fringing is also corrected by this built-in profile, but this lens is very well corrected for.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "photographs Chasing the southern sky: Astrophotography in Australia PHOTO GUIDES Sports Photography Landscape Photography 2nd Edition PRODUCT REVIEWS Tamron 16-50mm f/2.8 A lens (Model B091).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "sky: Astrophotography in Australia PHOTO GUIDES Sports Photography Landscape Photography 2nd Edition PRODUCT REVIEWS Tamron 16-50mm f/2.8 A lens (Model B091) OM System PEN camera.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh was very smooth and attractive for a 35mm prime lens and we found no instances of outlined highlights,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh was much as you’d expect for a wide angle lens with limited close-focusing capabilities.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "It is supplied with the usual front and rear caps, a lightweight metal lens hood with a rectangular front and a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is normally supplied with front and end caps plus a relatively large, screw-on metal lens hood as well as a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "screw-in protector ring to protect the filter thread when the hood is not in use.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 13,
+        "neg": 0,
+        "total": 13,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Conclusion Many professionals and high-end amateurs consider the 35mm focal length to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "However, as lens sizes have increased.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "The 35mm focal length provides very modest wide-angle coverage that is often preferred by photographers over the ‘standard’ 50mm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "Build and Ergonomics As expected from a lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "With a tighter focusing ring, the concept is excellent since it ensures your finger will always be in the.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "internal and features quiet and swift autofocus using what Leica call DSD (Dual Synchro Drive), a system composed of two stepping motors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+            "weight": 0.75,
+            "quote_excerpt": "But it’s quiet enough to use while recording video clips.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 170,
+      "evaluated": 66,
+      "non_evaluative": 104,
+      "non_evaluative_breakdown": {
+        "non_claim": 104
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "170 examined · 66 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 1,
+      "neu": 4,
+      "neg": 1,
+      "total": 6,
+      "sources": [
+        {
+          "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+          "weight": 0.75,
+          "quote_excerpt": "(We have not yet tested latest version of that camera, the 61MP Sony A7R IV, however, we.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+          "weight": 0.75,
+          "quote_excerpt": "The Leica APO-Summicron-SL 35mm F2 ASPH is better-corrected than most of the f/1.4 models from its rivals, but they rarely put everything into the design.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+          "weight": 0.75,
+          "quote_excerpt": "over the years to offer superior image quality, there remains a need for smaller, lighter lenses that offer similar image quality.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+          "weight": 0.75,
+          "quote_excerpt": "to offer just that, and its smaller, lighter f/2 lenses are as well or better corrected than &ldquo;standard&rdquo; f/1.4 versions.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+          "source_type": "reviewer_blog",
+          "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+          "weight": 0.75,
+          "quote_excerpt": "the Panasonic S series cameras should be comparable with the performance on the Leica SL2-S camera we used for this review.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+          "source_type": "reviewer_blog",
+          "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+          "weight": 0.75,
+          "quote_excerpt": "received to review with the Leica M11 camera was an earlier update released in 2016 when the company replaced the plastic, clip-on hood with a.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": "optical_performance",
+    "lowest_rated": "chromatic_aberration"
+  },
+  "sources": [
+    {
+      "source_id": "dxomark-leica-apo-summicron-sl-35mm-f2-asph-lens-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.dxomark.com/leica-apo-summicron-sl-35mm-f2-asph-lens-review/",
+      "title": "Leica APO-Summicron-SL 35mm F2 ASPH lens review - DXOMARK",
+      "publication_date": "",
+      "ingested_at": "2026-10-25T09:07:09.947833+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-apo-sum",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-apo-summicron-sl-35mm-f-2-asph-lens/",
+      "title": "Leica APO-Summicron SL 35mm f/2 ASPH lens - Photo Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-25T09:07:09.947841+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-leica-summicr",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/leica-summicron-m-35mm-f-2-asph-lens/",
+      "title": "Leica Summicron-M 35mm f/2 ASPH lens - Photo Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-25T09:07:09.947846+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/leica-35mm-f2/",
+    "reddit": "Leica 35mm f2\n\nSynthesized from 3 reviewer sources for Leica 35mm f2. Optical performance draws the most discussion: 13 positive, 7 neutral, and 8 negative across 28 sentiment markers. Coverage of chromatic aberration is mostly neutral: 12% positive, 70% neutral, 18% negative across 17 claims.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/leica-35mm-f2/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Leica 35mm f2**\nSynthesized from 3 reviewer sources for Leica 35mm f2. Optical performance draws the most discussion: 13 positive, 7 neutral, and 8 negative across 28 sentiment markers. Coverage of chromatic aberration is mostly neutral: 12% positive, 70% neutral, 18% negative across 17 claims.\nAll 3 reviews in one place: https://askmaddi.com/cards/leica-35mm-f2/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Leica 35mm f2 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Leica 35mm f2. Optical performance draws the most discussion: 13 positive, 7 neutral, and 8 negative across 28 sentiment markers. Coverage of chromatic aberration is mostly neutral: 12% positive, 70% neutral, 18% negative across 17 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/leica-35mm-f2/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

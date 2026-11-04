@@ -1,0 +1,2399 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-20mm-f1-8",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon 20mm f1.8",
+    "brand": "Nikon",
+    "model": "20mm f1.8",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/rjoAAeSwN0tqkD~N/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 369.99,
+        "refurbished": 199.83
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 10,
+      "price_updated_at": "2026-11-04T10:11:33.293714+00:00"
+    },
+    "price_updated_at": "2026-10-15T18:25:27.779770+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-10-15T18:25:27.772207+00:00",
+    "last_built": "2026-10-15T18:25:27.772207+00:00",
+    "last_checked": "2026-10-15T18:25:27.772207+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 2,
+        "neg": 2,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But it's a bit soft in the FX corners especially at longer distances like landscape.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It has the benefit of a 2.1x zoom range covering a wide range of very useful focal lengths starting at an ultra-wide 14mm offering.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens demonstrates exceptional sharpness that substantially exceeds its F-mount predecessor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At maximum aperture (f/1.8), center-frame sharpness surpasses what the older 20mm f/1.8G achieved stopped down to f/4 — a dramatic improvement.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Peak sharpness across the entire frame is achieved at f/4, beyond which diffraction begins degrading image quality; aperture beyond f/4 should be used to control depth of field or light, not to increase sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon did a phenomenal job designing this lightweight, budget-friendly, and yet extremely sharp lens, making it a very popular choice among.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma has been making great lenses lately, but its obsession with sharpness.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.375,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "The lens demonstrates exceptional sharpness that substantially exceeds its F-mount predecessor.",
+        "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+        "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 3,
+          "neu": 10,
+          "neg": 4,
+          "total": 17,
+          "sources": [
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "distances and it focuses very fast and reliably.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "autofocus you can get at the time of writing, giving a 10 degrees broader angle-of-view than&nbsp;Nikon&#8217;s Z 24mm f1.8 S.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "[+] Closest focus distance is 0.19m (0.6ft.) in manual.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "focusing with a magnification of 1:4.6 and a working distance of only 7cm (3in.).",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The F Nikkor achieves a slightly better magnification of 1:4 in manual focus, the Sigma 1:6.5.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "and is manual focus only.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "no focus variation whether the lens focuses from a closer distance or from infinity.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "the focus from infinity to 0.29m on the new Z Nikkor,&nbsp;I measured a small 3% decrease in magnification.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+              "source_type": "reviewer_blog",
+              "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Electronic focus adjustment operates smoothly but is a bit too sensitive for ultimate precision.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "amazingly accurate focusing system on Nikon Z cameras).",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Those who like to manually focus their lenses might be.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "not bothered by it as much after using the Z system so much, but I would still prefer Nikon to allow fine-tuning the focus ring.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "As we have previously reported in our Nikon Z7 review , autofocus precision has improved dramatically compared to DSLR cameras, especially.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "about focus accuracy and manual focus adjustments when using native Z-mount lenses.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Unfortunately, focus accuracy with Nikon F lenses and FTZ adapter isn&rsquo;t on the.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "In comparison, Nikon Z lenses do not have to be adjusted for focus accuracy, since focusing takes place on the.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "1/15, f/4.0 One other contender worth looking at is the Nikon AF 20mm f/2.8D manual focus lens, which Nikon still makes and sells today.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 0.667,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.471,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 2,
+          "neu": 11,
+          "neg": 3,
+          "total": 16,
+          "sources": [
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "focus: Yes, with built-in AF drive.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The focus ring has a variable gearing that allows for very precise manual focus when turned slowly.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "linear gearing which makes smooth focus pulling for videographers almost impossible.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "AF-drive with linear gearing and a focus ring does only that: focusing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "It automatically falls back to its customary focus control.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "when the lens is switched to manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The lens is not entirely free of focus breathing: when&nbsp;I adjusted.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+              "source_type": "reviewer_blog",
+              "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The lens features internal autofocus with an STM stepping motor plus manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+              "source_type": "reviewer_blog",
+              "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The rotatable control ring can be configured for manual focus, aperture, ISO, or exposure compensation.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+              "source_type": "reviewer_blog",
+              "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The reviewer relies on autofocus, using manual focus only during video to prevent focus hunting.Build quality, weather sealing, handling.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Since all Nikon Z lenses use focus-by-wire stepping motors, the focus ring is.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Autofocus Performance Thanks to the &ldquo;focus-by-wire&rdquo; stepping motor, focusing on the Nikon Z 20mm f/1.8 S is fully electronic, which has its advantages and disadvantages..",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "The key advantage is that focus is acquired extremely quickly and is very reliable when compared to focusing on DSLR cameras.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Nikon&rsquo;s current implementation of focus-by-wire, which basically resets the focus every time you turn the camera off and on.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "Waking up the camera by half-pressing the shutter release brings everything back and focus stays exactly where it was.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "disappointed with the different feel of manual focus operation and a slight lag they might experience when manually rotating the focusing ring.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 3,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.438,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 5,
+        "neu": 4,
+        "neg": 1,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z lenses are&nbsp; disappointing: the material is flimsy and the pouch has no strings to pull it close.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Sealing: yes,&nbsp;a rubber grommet at the lens-mount plus further.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "multi-purpose control ring and is sealed against the weather like Nikon&#8217;s pro lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "And as an &ldquo;S-Line&rdquo; weather-sealed lens, it is built to last, even in the harshest.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Lens Handling and Build Quality As expected from a modern high-quality Nikon lens, the Z 20mm f/1.8 S has a solid.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "It has a tough plastic shell, metal focus ring, and fully weather-sealed construction, so you can expect the lens to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Having previously used both metal and plastic lenses, I personally favor plastic lenses, since they are lighter and are easier to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "In fact, after seeing the rubber ring deteriorate and come off over time on some Nikon F.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "On top of that, as I have already pointed out, the lens is fully sealed in a number of different areas in order to keep.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Having used the Nikon Z 20mm f/1.8 S in different environments, including rainy weather, it fared quite well and I have.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.7,
+        "contested": true
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "Lens Handling and Build Quality As expected from a modern high-quality Nikon lens, the Z 20mm f/1.8 S has a solid.",
+        "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+        "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 3,
+        "neu": 58,
+        "neg": 3,
+        "total": 64,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 20mm f1.8 S review | Cameralabs Summary The Nikon Z 20mm f1.8 S is a unique proposition for owners of Nikon's full-frame mirrorless.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "cameras: It is the widest large aperture lens with autofocus designed specifically for the short flange distance of the Nikon Z system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "older DSLR designs which can be used via FTZ adapter but do not produce the same image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This makes the Z Nikkor miss out on our top award but the Nikon Z 20mm f1.8 S.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Intro The Nikon Z 20mm f1.8 S is an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "ultra wide-angle prime lens for Nikonâs Z-series mirrorless cameras of DX or FX format: on a cropped body like the Z50 the lens is equivalent.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "On a full-frame body the Z 20mm f1.8 S is the widest Z-mount prime lens with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But thanks to Nikon&#8217;s FTZ adapter, existing F-mount lenses can alternatively be easily used on the new Z bodies..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So the new Z 20mm f1.8 S faces competition from a host of other wide angle lenses with the F-mount, most notably Nikon&#8217;s own AF-S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "To find out whether&nbsp; the new Nikon Z 20mm f1.8 S rightfully carries the &#8220;S&#8221; moniker I tested its optical qualities on the 45MP.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z7 body against its F-mount sibling, which got a recommendation in my the Nikon AF-S 20mm f1.8G ED review and also compared it to the.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "PS â if youâre interested in the other Z lenses in Nikonâs line-up&nbsp;check out our in-depth.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f1.8 S review /&nbsp; Nikon Z 35mm f1.8 S review &nbsp;/&nbsp; Nikon Z 50mm f1.8 S review &nbsp;/&nbsp; Nikon Z 58mm f0.95 S Noct review.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "/&nbsp; Nikon Z 85mm f1.8 S review .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 20mm f1.8 S first.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the Z-Nikkor when using it via the FTZ adapter on a Nikon Z camera &#8211; see image below.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Adding another 133g (4.7 oz.) for the FTZ adapter to use it on a Nikon Z camera the F Nikkor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The new Nikon Z 20mm f1.8 S uses Nikon&#8217;s Nano-Coating to reduce flare, glare and ghosting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But the Nikon Z6 and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The F Nikkor and the Sigma don&#8217;t have an aperture control ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "than the Nikon mirrorless combo.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Have a look at the following comparison: Two 20mm f1.8 lensess for mirrorless cameras Above: Sony FE 20mm f1.8 G.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "other manufacturer offers&nbsp;a 20mm lens for Nikon&#8217;s Z-mount so far.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So for alternatives we have to look at F-mount lenses which can be used via.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon&#8217;s FTZ adapter &#8211; adding another 31mm in length and 133g in weight: Nikon has the AF-S 20mm f1.8G ED from 2014 for 730 EUR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For more information see my Nikon 20mm f1.8G review &nbsp;where it got a recommendation.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a Nikon Z camera Above: Nikon AF-S 20mm f1.8G (left, on FTZ-adapter), Nikon Z 20mm f1.8 S (right) If you&#8217;re flexibel regarding the focal length.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "there are two other ultra-wide angle lenses with Z mount so far: The Laowa 15mm f2.0 Zero-D has a 16 degrees wider angle of view.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "came Highly Recommended in my Nikon Z 24mm f1.8 S review .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Finally you might also consider the Nikon Z 14-30mm f4.0 S as an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Lenses , Nikon lenses Tagged under:.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "7-14mm f2.8-3.5L Fisheye review Canon RF 14mm f1.4L VCM review Nikon Z 24-105mm f4-7.1 review so far Fujifilm instax mini EVO Cinema review Sony A7.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Featured Reviews Canon EF 50mm f1.8 STM review.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon Laing Support Camera Labs Buy Gordon a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It is recommended as essential for landscape photographers and astrophotography specialists using Nikon Z cameras, though the 20mm focal length may be unnecessarily extreme for general users.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 20mm f/1.8 S Review Home → Reviews → Cameras and Lenses The Nikon Z 20mm f/1.8 S is a professional-grade ultra-wide-angle lens designed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "F 20mm f/1.8G, Nikon Z 14-30mm f/4 S, and Nikon Z 24mm f/1.8 S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "So when I first heard about Nikon&rsquo;s plans to design a 20mm f/1.8 lens for the Z mount, I.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Copyright Spencer Cox NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @ 20mm, ISO 3200, 15 sec, f/1.8 The Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "However, keep in mind that despite having similar characteristics, the older 20mm f/1.8G is an enthusiast-grade lens like the rest of its f/1.8 F-mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "F-mount version, the closest competitor to the Nikon Z 20mm f/1.8 S is the Sigma 20mm f/1.4 Art , which retails for $899.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "point out that Z-mount lenses such as the Nikon Z 20mm f/1.8 S are only designed to be used on Nikon&rsquo;s Z-series cameras that have.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "industry&rsquo;s shortest flange distance of 16.0mm, which means that they cannot be adapted to any other camera system on the market today (see lens mounts.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "All Nikon Z mount lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @ 20mm, ISO 64, 1/320, f/8.0 The Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 20mm f/1.8 S has a rubber gasket on the mount to prevent dust and other debris from getting into the lens and the camera..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Just like its 24mm f/1.8 S brother, the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "It attaches, locks and unlocks easily, and if you want to reduce the footprint of the lens when storing it in your.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @ 20mm, ISO 64, 1/80, f/5.6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @ 20mm, ISO 64, 1/30, f/5.6 Copyright Spencer Cox This is.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "same level, as Nikon wanted AF performance of F-mount lenses to be very similar to DSLR cameras (this is why the Nikon Z cameras still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Here is the optical construction of the lens: You can find detailed specifications of the lens on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "our Nikon NIKKOR Z 20mm f/1.8S page from our lens database.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The Sigma 20mm f/1.4 Art has different specs, with 15 elements in 11 groups (two FLD,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm f/1.8 S @ 20mm, ISO 64,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "it cannot be directly compared to the Z-mount and F-mount versions due to its f/2.8 aperture, it is still a great little lens that sells.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "above-mentioned lenses: Lens Feature Nikon Z 20mm f/1.8 S Nikon 20mm f/1.8G Nikon 20mm f/2.8D Sigma 20mm f/1.4 Art Camera Mount Nikon Z Nikon F.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon F 5 Mounts Elements / Groups 14 / 11 13 / 11 12 / 9 15 / 11 Special Elements 3 ASPH, 3 ED.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 20mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops Support Us Submit Content",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.578,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Nikon Z 20mm f1.8 S review | Cameralabs Summary The Nikon Z 20mm f1.8 S is a unique proposition for owners of Nikon's full-frame mirrorless.",
+        "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+        "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 1,
+        "neu": 7,
+        "neg": 2,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikon Z 20mm f1.8 S at B&amp;H, &nbsp; Adorama or WEX .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Price: The lens is pretty expensive at a list price of 1200 EUR (incl.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikon Z 20mm f1.8 S at B&amp;H, &nbsp; Adorama or WEX .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "20mm , f1.8 , lens , Nikon , review , Z permalink Nikon Z 20mm f1.8 S Check prices at B&amp;H Recent Posts Canon RF.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 20mm f1.8 S Check prices at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "WEX Nikon Z 20mm f1.8 S Check prices at Adorama Like my reviews?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 20mm f1.8 S Check prices at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At $1,045, the lens costs only $50 more than the Nikkor Z 24mm f/1.8 S while offering wider coverage, and is far cheaper than zoom options like the 14-30mm f/4 S ($1,350) or 14-24mm f/2.8 S ($2,500).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 20mm f/1.8 S is not a cheap lens at $1150, especially when compared to the Nikon 20mm f/1.8G that often goes on sale below.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "If you enjoy our articles, this is the easiest way to support Photography Life at no extra cost to you.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.7,
+        "contested": true
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "compared to f2.8 or f4.0 zooms.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "V review Canon EOS R6 Mark III review Nikon Z 24-70mm f2.8 S II review Tamron 16-30mm f2.8 Di III G2 review Zeiss Otus ML.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "was very excited, because I knew that Nikon would deliver something better than its predecessor &ndash; this has been the case with every Nikon Z.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "In addition, the older F-mount version has a noticeably smaller footprint, and 7 rounded aperture blades vs 9, and other than the.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": true
+      }
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Weight: 503g (17.7 oz.) plus 27g for the lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is still slightly lighter than the new Z Nikkor and the Sigma is almost 1.1 kg (38 oz.).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So the lens has a mixed feature set: It&#8217;s neither very small nor very light but it offers the nifty feature of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lighter than the Z 20mm f1.8 S, it is so far the only 14mm full-frame lens which can use standard filters, and it offers very.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Barrel distortion measures approximately 2%, a lot compared to the older F-mount version, though easily repaired in post.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting occurs significantly wide open but is readily correctable digitally.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 0,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens shows excellent flare and ghosting resistance, with no bright blasts of light or significant veiling flare when shooting into sunlight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Based on limited evidence (the reviewer lost test images to a card failure), the lens demonstrates incredible coma performance, pending full future evaluation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "a chance to briefly test the Sigma 20mm f/1.4 Art in the field for astrophotography needs and ended up returning it, because it suffered from.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "capture more of architecture or landscapes while the bright aperture lets you shoot longer under diminishing light and better isolates closer subjects from the background.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh is limited by the wide focal length rather than optical design — this is not a lens bought to blur the background like a 50mm f/1.2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Combined with the close minimum focus distance, it can achieve decent subject isolation, though backgrounds may appear busy.Astrophotography and coma.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens renders very contrasty images and lets you shoot confidently under adverse contra-light situations which is.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 2,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "77mm same as the F Nikkor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens offers a 94-degree angle of view on full-frame, f/1.8 to f/16 aperture range, and accepts 77mm filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "its F mount version, the filter thread is able to take 77mm filters, which is great.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "9 (Rounded) Filter Size 77mm 77mm 62mm N/A Weight 505g 355g 270g 950g Price $1149 $799 $622 $899 Note one very important difference in the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "above table &ndash; the Sigma 20mm f/1.4 Art has a pretty bulbous front element and therefore cannot take any filters, while all other lenses can..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "This alone is the reason why I personally wouldn&rsquo;t buy it, as I use filters in the field quite a bit.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "about the inability to use standard filters as much as I do, so just keep this in mind.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.714,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 7,
+        "neg": 0,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focal ratio which influences size and weight of that lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Size (diameter x length):&nbsp;84 x&nbsp;109mm (3.3 x 4.3in.) plus 34mm for the lens hood which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Which makes it the largest f1.8 Z Nikkor so far, even larger than the Z 85mm f1.8 S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is smaller at 82 x 80mm + 35mm lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "in this comparison at 91 x 130mm including the non-detachable lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you add these 30.5mm (1.2in.) to the F-Nikkor it has practically the same length as.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "distance of 13cm with lens hood attached.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "you can built an optically very good 20mm f1.8 which is much more compact: Their mirrorless system with the Sony 20mm lens is 34mm shorter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The plastic HB-72 bayonet hood is quite wide and does a good job of blocking sun rays from reaching the front lens element when the.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.889,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 2,
+        "neg": 2,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although the lens control ring has not the same benefit as having a focus ring plus a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dedicated aperture ring on the lens it gives you more flexibility to control one of the more important shooting parameters directly from a nice ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But the ring now covers a dominant portion of the lens&#8217;s surface &#8211; as compared to the 30mm wide focus ring of the Sigma.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This increases the risk of inadvertently turning the ring and changing focus, exposure compensation or.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Despite its size and weight, it balances beautifully on the compact Nikon Z5 full-frame body.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The metal focus ring is not an issue for me personally as I rarely ever use it (thanks to the.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 0,
+        "neg": 3,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF-operation of the lens is&nbsp;barely audible from the outside.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the AF-drive still produces a slight buzz.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens is clearly not as quiet as the Nikon Z 24-70mm f4S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "ring on the lens to change the aperture this works smoothly and without noise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "20mm, ISO 64, 1.3 seconds, f/8.0 Copyright Spencer Cox Overall, the focus-by-wire stepping motor (STM) has many advantages over the traditional silent-wave motor (SWM).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "addition to being able to customize the focus ring behavior, it provides extremely quiet AF operation, fast focusing speed thanks to more powerful focus actuators,.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "20",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Nikon 20mm f1.8. AF for stills draws the most discussion: 3 positive, 10 neutral, and 4 negative across 17 sentiment markers. Coverage of AF for video is mostly neutral: 12% positive, 69% neutral, 19% negative across 16 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 4,
+        "neu": 2,
+        "neg": 2,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But it's a bit soft in the FX corners especially at longer distances like landscape.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It has the benefit of a 2.1x zoom range covering a wide range of very useful focal lengths starting at an ultra-wide 14mm offering.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 3,
+        "neu": 10,
+        "neg": 4,
+        "total": 17,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "distances and it focuses very fast and reliably.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "autofocus you can get at the time of writing, giving a 10 degrees broader angle-of-view than&nbsp;Nikon&#8217;s Z 24mm f1.8 S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Closest focus distance is 0.19m (0.6ft.) in manual.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 2,
+        "neu": 11,
+        "neg": 3,
+        "total": 16,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focus: Yes, with built-in AF drive.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The focus ring has a variable gearing that allows for very precise manual focus when turned slowly.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "linear gearing which makes smooth focus pulling for videographers almost impossible.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 5,
+        "neu": 4,
+        "neg": 1,
+        "total": 10,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z lenses are&nbsp; disappointing: the material is flimsy and the pouch has no strings to pull it close.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Sealing: yes,&nbsp;a rubber grommet at the lens-mount plus further.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "multi-purpose control ring and is sealed against the weather like Nikon&#8217;s pro lenses.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Barrel distortion measures approximately 2%, a lot compared to the older F-mount version, though easily repaired in post.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting occurs significantly wide open but is readily correctable digitally.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 2,
+        "neu": 0,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens shows excellent flare and ghosting resistance, with no bright blasts of light or significant veiling flare when shooting into sunlight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Based on limited evidence (the reviewer lost test images to a card failure), the lens demonstrates incredible coma performance, pending full future evaluation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "a chance to briefly test the Sigma 20mm f/1.4 Art in the field for astrophotography needs and ended up returning it, because it suffered from.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 0,
+        "neu": 1,
+        "neg": 2,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "capture more of architecture or landscapes while the bright aperture lets you shoot longer under diminishing light and better isolates closer subjects from the background.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh is limited by the wide focal length rather than optical design — this is not a lens bought to blur the background like a 50mm f/1.2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Combined with the close minimum focus distance, it can achieve decent subject isolation, though backgrounds may appear busy.Astrophotography and coma.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens renders very contrasty images and lets you shoot confidently under adverse contra-light situations which is.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 1,
+        "neu": 4,
+        "neg": 2,
+        "total": 7,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "77mm same as the F Nikkor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+            "source_type": "reviewer_blog",
+            "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens offers a 94-degree angle of view on full-frame, f/1.8 to f/16 aperture range, and accepts 77mm filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "its F mount version, the filter thread is able to take 77mm filters, which is great.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 2,
+        "neu": 7,
+        "neg": 0,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focal ratio which influences size and weight of that lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Size (diameter x length):&nbsp;84 x&nbsp;109mm (3.3 x 4.3in.) plus 34mm for the lens hood which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Which makes it the largest f1.8 Z Nikkor so far, even larger than the Z 85mm f1.8 S.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 2,
+        "neu": 2,
+        "neg": 2,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Although the lens control ring has not the same benefit as having a focus ring plus a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "dedicated aperture ring on the lens it gives you more flexibility to control one of the more important shooting parameters directly from a nice ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But the ring now covers a dominant portion of the lens&#8217;s surface &#8211; as compared to the 30mm wide focus ring of the Sigma.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 3,
+        "neu": 0,
+        "neg": 3,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF-operation of the lens is&nbsp;barely audible from the outside.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the AF-drive still produces a slight buzz.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This lens is clearly not as quiet as the Nikon Z 24-70mm f4S.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 170,
+      "evaluated": 72,
+      "non_evaluative": 98,
+      "non_evaluative_breakdown": {
+        "non_claim": 98
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "170 examined · 72 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 1,
+      "neu": 2,
+      "neg": 1,
+      "total": 4,
+      "sources": [
+        {
+          "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+          "weight": 0.75,
+          "quote_excerpt": "compared to f2.8 or f4.0 zooms.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+          "weight": 0.75,
+          "quote_excerpt": "V review Canon EOS R6 Mark III review Nikon Z 24-70mm f2.8 S II review Tamron 16-30mm f2.8 Di III G2 review Zeiss Otus ML.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+          "source_type": "reviewer_blog",
+          "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+          "weight": 0.75,
+          "quote_excerpt": "was very excited, because I knew that Nikon would deliver something better than its predecessor &ndash; this has been the case with every Nikon Z.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+          "source_type": "reviewer_blog",
+          "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+          "weight": 0.75,
+          "quote_excerpt": "In addition, the older F-mount version has a noticeably smaller footprint, and 7 rounded aperture blades vs 9, and other than the.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-nikon-z-20mm-f1-8-s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/nikon-z-20mm-f1-8-s-review/",
+      "title": "Nikon Z 20mm f1.8 S review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:25:27.776108+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "casualphotophile-com-2022-08-30-nikon-nikkor-z-20mm-f-1-8-s-lens-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://casualphotophile.com/2022/08/30/nikon-nikkor-z-20mm-f-1-8-s-lens-review/",
+      "title": "Nikon Nikkor Z 20mm f/1.8 S Lens Review (Casual Photophile)",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:25:27.776117+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-z-20mm-f1-8-s",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-z-20mm-f1-8-s",
+      "title": "Nikon Z 20mm f/1.8 S Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:25:27.776121+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-20mm-f1-8/",
+    "reddit": "Nikon 20mm f1.8\n\nSynthesized from 3 reviewer sources for Nikon 20mm f1.8. AF for stills draws the most discussion: 3 positive, 10 neutral, and 4 negative across 17 sentiment markers. Coverage of AF for video is mostly neutral: 12% positive, 69% neutral, 19% negative across 16 claims.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-20mm-f1-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon 20mm f1.8**\nSynthesized from 3 reviewer sources for Nikon 20mm f1.8. AF for stills draws the most discussion: 3 positive, 10 neutral, and 4 negative across 17 sentiment markers. Coverage of AF for video is mostly neutral: 12% positive, 69% neutral, 19% negative across 16 claims.\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-20mm-f1-8/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon 20mm f1.8 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Nikon 20mm f1.8. AF for stills draws the most discussion: 3 positive, 10 neutral, and 4 negative across 17 sentiment markers. Coverage of AF for video is mostly neutral: 12% positive, 69% neutral, 19% negative across 16 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-20mm-f1-8/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

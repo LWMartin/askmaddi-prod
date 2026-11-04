@@ -1,0 +1,1833 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-600mm-f4",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon 600mm f4",
+    "brand": "Nikon",
+    "model": "600mm f4",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/N9kAAOSw7PljcNvJ/s-l640.png",
+    "image_source": "ebay_catalog"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 1766.32,
+        "pre_owned": 950.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 8,
+      "price_updated_at": "2026-11-04T10:11:40.168859+00:00"
+    },
+    "price_updated_at": "2026-10-15T18:08:20.402271+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-10-15T18:08:20.395106+00:00",
+    "last_built": "2026-10-15T18:08:20.395106+00:00",
+    "last_checked": "2026-10-15T18:08:20.395106+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 1,
+        "neg": 4,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens also produces very sharp images with virtually no field-curvature or colour aberrations.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is critical to consistently produce sharp shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of confusion from the 150mm wide entrance pupil.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "but the rest was clearly better than the average sharpness at 1/640 sec with VR=off.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "Per the MTF analysis, the lens delivers excellent sharpness from corner to corner even at open aperture (f/4).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "When the built-in 1.4x teleconverter is engaged, center sharpness remains excellent, though corner sharpness decreases slightly while remaining very good.Image stabilization and flare control.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "that do not detract from the quality of the lens as a whole.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "It demonstrates that the lens&rsquo;s image quality is still acceptable at 1680mm despite stacking the internal 1.4x and external 2.0x.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Per the MTF analysis, the lens delivers excellent sharpness from corner to corner even at open aperture (f/4).",
+        "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+        "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/"
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "All lenses in this comparison have a rubber grommet at the lens-mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "S @ 600mm, ISO 110, 1/800, f/4.0 &copy; Massimo Vignoli I want to note a couple of things about the build quality that are not.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "S @ 600mm, ISO 110, 1/800, f/4.0 &copy; Massimo Vignoli I want to note a couple of things about the build quality that are not.",
+        "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+        "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 5,
+        "neu": 44,
+        "neg": 3,
+        "total": 52,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 600mm f4 TC VR S review | Cameralabs Summary Nikon has another winner in its line-up of long telephoto optics.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f4 TC VR S is an excellent lens with one extremely compelling feature over rival systems: It has a built-in 1.4x teleconverter which changes it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "TC VR S is Nikon&#8217;s fourth long telephoto prime lens for Z-mount aimed at professional sports and wild-life photographers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens into an 840mm f5.6 lens &#8211; a feature that neither Sony nor Canon offer for their respective super-telephoto mirrorless primes to date.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or Nikon Z 800/6.3 VR S review .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "short) to the Nikon AF-S 600mm f4E FL ED VR (&#8220;F-Nikkor&#8221;), Nikon Z 400mm f2.8 TC VR S (&#8220;Z 400 TC&#8221;), and Nikon Z 800mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Add 30mm for the FTZ adapter to use it on a Nikon Z camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Sony is 3040g, the Canon RF is 3090g &#8211; both without lens hood or teleconverter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "only on a Nikon Z9.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Display: No, the Nikon Z 600mm f4 TC VR S (just like the other Z-Nikkors in this comparison) does not feature an.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The control ring can be assigned to operate the aperture (which is the default), exposure compensation, or ISO sensitivity â or simply switched off..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The F-Nikkor has no dedicated aperture ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Lens profile: All four Nikkor lenses come with a lens profile which can be controlled from the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "All lenses in this comparison cover full frame/FX or smaller sensors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But all three Z-Nikkors in this comparison can also be used with Nikon&#8217;s teleconverters for Z-mount: The Z TC-1.4x for 549 EUR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "protection for lens and is the same for the Z 400 TC and Z 800.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens to be stowed away with camera attached (see below).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Unfortunately Nikon missed out (again) to make the foot Arca-Swiss compatible.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] At a score of 0[-]/5[0]/14[+] the Nikon Z 600mm f4 TC VR S turns out to be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a very well featured lens with its preeminent and unique feature of a built-in 1.4x teleconverter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Coverage With its built-in 1.4x teleconverter and the ability to use Nikon&#8217;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z TC-1.4x and 2.0x teleconverters the Nikon Z 600mm f4 TC VR S can cover a 2.8x range of 600mm (f4.0), 840mm (f5.6), 1200mm (f8.0),.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Lenses , Nikon lenses permalink Recent Posts Nikon Z 24-105mm f4-7.1 review so far.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon 600mm f4 (Nikon Z 600mm f/4 TC VR S) is a premium super-telephoto for sports, nature, and wildlife photography, with a built-in 1.4x teleconverter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The tripod mount lacks Arca-Swiss compatibility, requiring a coupling plate adapter.Compatibility.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is compatible with Nikon Z-mount 1.4x and 2x external teleconverters, enabling focal lengths of 1,176mm and 1,680mm respectively, with an additional 1-2 stops of brightness loss per converter.Price and target user.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 600mm f/4 TC VR S Review Home → Reviews → Cameras and Lenses Introduction The Nikon Z 600mm f/4 TC VR S is.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "To be specific, the Nikon Z 600mm f/4 TC VR S has the ability to engage an internal 1.4x teleconverter via a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "The lens also works with Nikon&rsquo;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "And are there alternative lenses that you should be considering?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon Z 600mm f/4 TC VR S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR S @ 600mm, ISO 125, 1/640, f/4.0 &copy; Massimo Vignoli Build Quality Of course, this.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "&ndash; NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR S @ 600mm, ISO 360, 1/1000, f/4.0 &copy; Massimo Vignoli That said, it&rsquo;s still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "However, neither of these lenses offers a built-in teleconverter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "By that standard, the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Also, it&rsquo;s not out of character for a Nikon supertelephoto,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR S @ 840mm, ISO 450, 1/1250, f/5.6 &copy; Massimo Vignoli Of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR S @ 840mm, ISO 1100, 1/1000, f/5.6 &copy; Libor Vaicenbacher Are there any.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "first thing I&rsquo;d do upon buying the lens is replace it with one that&rsquo;s Arca-Swiss compatible .",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "This is the case for all Nikon lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Perhaps one day Nikon will move to an Arca-Swiss standard, like we have seen on lenses.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Built-in 1.4x Teleconverter Supertelephoto prime lenses are pretty niche tools.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 9 + NIKKOR Z 600mm f/4 TC VR S @ 840mm, ISO 16000, 1/640, f/5.6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "&copy; Libor Vaicenbacher If you need even more reach, the lens is also compatible with Nikon&rsquo;s two external teleconverters, namely the TC-1.4x and TC-2.0x (see.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "our review of the Nikon Z teleconverters here ).",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 600mm f/4 TC VR S Specifications Full Name: Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKKOR Z 600mm f/4 TC VR S Mount Type: Nikon Z Mount Focal Length: 600mm (840mm with built-in 1.4x teleconverter) Angle of View (FX): 4&deg;10&prime;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": ") Here is the construction of the lens, courtesy of Nikon: The next page of this review covers the optical characteristics of the Nikon Z.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Nikon Z 600mm f4 TC VR S review | Cameralabs Summary Nikon has another winner in its line-up of long telephoto optics.",
+        "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+        "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 5,
+        "neu": 5,
+        "neg": 0,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prices on the Nikon Z 600mm f4 TC VR S at B&amp;H , Adorama , WEX UK or Calumet.de .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This seems like an extraordinarily high price, but Sony&#8217;s and Canon&#8217;s own versions are also all in five-figures.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Nikon Z 600mm f4 TC VR S at B&amp;H , Adorama , WEX.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens carries a retail price around €17,249 ($16,200), significantly more than Sony FE 600mm f/4 GM OSS and Canon RF 600mm f/4L options and more than double Nikon's Z 800mm f/6.3 VR S — but competitors lack the integrated teleconverter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The review states the lens is not for everyone but promises to be one of the best 600mm telephoto lenses on the market and a superior telephoto lens for those able to afford it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Few lenses command such a high price, but then again, few lenses are this impressive.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon&rsquo;s previous 600mm f/4 DSLR lenses already approached optical perfection, and today they sell for surprisingly low prices on the used market.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "an expensive and specialized lens, the possibilities it offers are unmatched for those who require it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "It is no surprise that such an expensive lens performs at the upper.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "way to support Photography Life at no extra cost to you.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Apart from the usual features like optical image stabilization, focus limiter, programmable function buttons, and control ring, the new lens offers the same.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens by over 0.5kg over its predecessor, the Nikon AF-S 600mm f4E FL ED VR, which was introduced in 2015 and still can be used.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "previous generation Nikon 600mm f/4E FL for comparison.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 5,
+        "neu": 9,
+        "neg": 0,
+        "total": 14,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon also managed to reduce the weight of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[0] Weight: 3260g (7.2 lb.) including tripod foot plus 248g for the carbon fiber lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the camera to carry such a heavy load.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the price and weight of one: a 600mm f4 and an 840mm f5.6.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "Weighing 3,260 grams, the lens is lighter than Nikon's 2015 AF-S 600mm f/4 (3,810g) despite the teleconverter, thanks to fluorite glass.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "The scales top out at 3260 grams / 7.19 pounds with this lens &ndash; not bad for what it offers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "When that lens was released in 2015, photographers praised it for how much lighter it was compared.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Add Nikon&rsquo;s TC-14E III teleconverter and the FTZ II adapter, and you&rsquo;re up to 4125 grams / 9.09 pounds, making the new lens meaningfully easier.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "weight toward the body of the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "a hefty lens, and it&rsquo;s not the lightest lens in its class.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 600mm f/4 TC VR S&rsquo;s weight of 3260g / 7.2 pounds is quite reasonable.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "If you want a really light 600mm lens, however, it&rsquo;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "best to go with Nikon&rsquo;s 600mm f/6.3 VR S &nbsp;&ndash; an optically excellent lens that weighs a mere 1245 grams (2.74 pounds).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "save a bit of weight, without sacrificing the &ldquo;exotic&rdquo; nature of the lens, by picking the Nikon Z 400mm f/2.8 TC VR S instead, at.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.643,
+        "contested": false
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "pitch and yaw correction from the lens&#8217;s VR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Diffraction compensation and Auto distortion control can be activated or deactivated.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When you lock the lens hood in place it bends slightly out of shape.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Here is the angle of view of the different options (Auto distortion control activated) shot from the same viewpoint as.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignette control offers the usual options of High, Normal, Low and Off.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Its Bokeh is very nice and the optical image stabilization of over.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The optical design incorporates Nikon's Meso Amorphous Coat anti-reflective coating, which prevents ghost and flare effects and maintains good color and contrast when shooting backlit or toward bright light.Autofocus.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 6,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "additional features as Nikon&#8217;s Z 400mm f2.8 TC VR S: There&#8217;s an integrated filter slot to drop in standard 46mm filters, a memory-set button to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Filter-thread: The Z 600 TC has an integrated slot for 46mm standard filters and Nikon offers a slip-in circular polarizing filter as an additional accessory.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The F-Nikkor has a slot for 40.5mm filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reverse) is the only way to attach the slip-on front lens cover.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "It uses a 46mm insert-filter holder (screw-in front filters are not compatible).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "(3&deg; with TC) Maximum Aperture: f/4 (f/5.6 with TC) Minimum Aperture: f/32 (f/45 with TC) Aperture Blades: 9, rounded Filter Size: 46mm drop-in Lens Elements:.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 6,
+        "neg": 1,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Z 800 is 140 x 385mm + 126mm lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Minimum object distance is 4.12m (13.5ft.) in manual focus with a working distance of around 3.7m and a maximum magnification of 1:6.6 which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and 1680mm (f11) focal length.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Z 600mm f4 TC VR S on a Nikon Z9 camera body, I did a series of 140 test-shots hand-held at 600mm focal length with.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "but the lens hood on the Z 600mm f/4 is conspicuously large.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon Z 600mm f/4 TC VR S and its large lens hood But what.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "As it is, the Z 600mm f/4 ships with a large bag-like cover that goes around the front of the lens or lens hood.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.571,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Aperture ring: The lens has the usual slim multi-function control ring which on all three Z-Nikkors is located in front of the focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Not to mention that the Nikon Z 600mm f/4 TC VR S is also better balanced, with more of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Handling The Nikon Z 600mm f/4 TC VR S isn&rsquo;t just well-built; it also handles like a charm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "negatives to the handling of the Nikon Z 600mm f/4 TC VR S?",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens is practically silent be it in photo-mode or if you record video with the built-in microphone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Voice Coil Motor Minimum Focus Distance: 4.3 meters (14.1 feet) Maximum Magnification: 0.14x (1:7.1); 0.2&times; (1:5) with built-in 1.4x teleconverter Mount Material: Metal Weather/Dust Sealing:.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "600",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Nikon 600mm f4. AF for video draws the most discussion: 0 positive, 15 neutral, and 3 negative across 18 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 3,
+        "neu": 1,
+        "neg": 4,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens also produces very sharp images with virtually no field-curvature or colour aberrations.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is critical to consistently produce sharp shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of confusion from the 150mm wide entrance pupil.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 2,
+        "neu": 9,
+        "neg": 0,
+        "total": 11,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It also offers a function (Fn) ring to recall the last-saved focus position, plus it has Nikon&#8217;s newest &#8220;meso amorphous&#8221; anti-reflex coating in addition to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "front (L-Fn2) and an additional L-Fn button behind the focus ring on the lens which can be assigned different functions like AE/AF lock.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses in this comparison also sport a focus-limiter which in case of the Z 600 TC prevents the lens to search focus closer than 10m.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 15,
+        "neg": 3,
+        "total": 18,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "save focus distances, and the focus ring can be switched from non-linear to linear response with a choice of different rotation angles (on a Z9)..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Autofocus: Yes, with built-in AF drive which uses a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Manual-focus override is by simply turning the dedicated focus ring at the middle of the lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "All lenses in this comparison have a rubber grommet at the lens-mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "S @ 600mm, ISO 110, 1/800, f/4.0 &copy; Massimo Vignoli I want to note a couple of things about the build quality that are not.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 3,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "pitch and yaw correction from the lens&#8217;s VR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Diffraction compensation and Auto distortion control can be activated or deactivated.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When you lock the lens hood in place it bends slightly out of shape.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Vignette control offers the usual options of High, Normal, Low and Off.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Its Bokeh is very nice and the optical image stabilization of over.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+            "weight": 0.75,
+            "quote_excerpt": "The optical design incorporates Nikon's Meso Amorphous Coat anti-reflective coating, which prevents ghost and flare effects and maintains good color and contrast when shooting backlit or toward bright light.Autofocus.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 6,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "additional features as Nikon&#8217;s Z 400mm f2.8 TC VR S: There&#8217;s an integrated filter slot to drop in standard 46mm filters, a memory-set button to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Filter-thread: The Z 600 TC has an integrated slot for 46mm standard filters and Nikon offers a slip-in circular polarizing filter as an additional accessory.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The F-Nikkor has a slot for 40.5mm filters.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 6,
+        "neg": 1,
+        "total": 7,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Z 800 is 140 x 385mm + 126mm lens hood.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Minimum object distance is 4.12m (13.5ft.) in manual focus with a working distance of around 3.7m and a maximum magnification of 1:6.6 which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and 1680mm (f11) focal length.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "[+] Aperture ring: The lens has the usual slim multi-function control ring which on all three Z-Nikkors is located in front of the focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Not to mention that the Nikon Z 600mm f/4 TC VR S is also better balanced, with more of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Handling The Nikon Z 600mm f/4 TC VR S isn&rsquo;t just well-built; it also handles like a charm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the lens is practically silent be it in photo-mode or if you record video with the built-in microphone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+            "weight": 0.75,
+            "quote_excerpt": "Voice Coil Motor Minimum Focus Distance: 4.3 meters (14.1 feet) Maximum Magnification: 0.14x (1:7.1); 0.2&times; (1:5) with built-in 1.4x teleconverter Mount Material: Metal Weather/Dust Sealing:.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 144,
+      "evaluated": 43,
+      "non_evaluative": 101,
+      "non_evaluative_breakdown": {
+        "non_claim": 101
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "144 examined · 43 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 0,
+      "neu": 3,
+      "neg": 0,
+      "total": 3,
+      "sources": [
+        {
+          "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+          "weight": 0.75,
+          "quote_excerpt": "Apart from the usual features like optical image stabilization, focus limiter, programmable function buttons, and control ring, the new lens offers the same.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+          "weight": 0.75,
+          "quote_excerpt": "lens by over 0.5kg over its predecessor, the Nikon AF-S 600mm f4E FL ED VR, which was introduced in 2015 and still can be used.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+          "source_type": "reviewer_blog",
+          "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+          "weight": 0.75,
+          "quote_excerpt": "previous generation Nikon 600mm f/4E FL for comparison.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-nikon-z-600mm-f4-tc-vr-s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/nikon-z-600mm-f4-tc-vr-s-review/",
+      "title": "Nikon Z 600mm f4 TC VR S review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:08:20.398533+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "focus-review-com-en-nikkor-nikon-z-600mm-f4-tc-vr-s",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://focus-review.com/en/nikkor-nikon-z-600mm-f4-tc-vr-s/",
+      "title": "Nikkor Nikon Z 600mm f/4 TC VR S Review (Focus Review)",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:08:20.398542+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-z-600mm-f-4-tc-vr-s",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-z-600mm-f-4-tc-vr-s",
+      "title": "Nikon Z 600mm f/4 TC VR S Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-15T18:08:20.398546+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-600mm-f4/",
+    "reddit": "Nikon 600mm f4\n\nSynthesized from 3 reviewer sources for Nikon 600mm f4. AF for video draws the most discussion: 0 positive, 15 neutral, and 3 negative across 18 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-600mm-f4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon 600mm f4**\nSynthesized from 3 reviewer sources for Nikon 600mm f4. AF for video draws the most discussion: 0 positive, 15 neutral, and 3 negative across 18 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-600mm-f4/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon 600mm f4 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Nikon 600mm f4. AF for video draws the most discussion: 0 positive, 15 neutral, and 3 negative across 18 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-600mm-f4/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

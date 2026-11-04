@@ -1,0 +1,1582 @@
+{
+  "card_version": "1.0",
+  "card_id": "dji-mavic-2-zoom",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "DJI Mavic 2 Zoom",
+    "brand": "DJI",
+    "model": "Mavic 2 Zoom",
+    "sku_alt_names": [],
+    "category": "drone",
+    "subcategory": "drone",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/6VEAAeSwRvdqkU5h/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {},
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null
+    },
+    "price_updated_at": "2026-09-26T13:06:41.510680+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-26T13:06:41.504332+00:00",
+    "last_built": "2026-09-26T13:06:41.504332+00:00",
+    "last_checked": "2026-09-26T13:06:41.504332+00:00",
+    "source_count": 7,
+    "source_types": {
+      "pro": 7
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "vignetting": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 7,
+        "neu": 7,
+        "neg": 4,
+        "total": 18,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "notable example (more of which later) available on both Mavic 2s and which really does wow.Â Others include a 48MP Super Resolution Photo (Zoom model.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The other issue is that, when at full zoom, vibrations and sharp turns are.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you&#8217;re going to have a zoom, an optical rather than a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the original Mavic on quality grounds and almost as sharp at 48mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality of the 20-Megapixel 1-inch camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "cut in resolution (often jarringly processed), or step away from the Mavic series.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lower resolutions, like 1080p video, look good straight from the drone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "native resolution and aspect ratio in my opinion.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Image Quality Stepping up from a 1/2.3&rdquo; sensor on the Mavic Air.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "better image quality for shooting both stills and video as a result of larger light gathering surface.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Reply will the mavic two pro with the hassellblad provide sufficient image quality to print the photos a3+ size with a decent sharpness?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "could you possibly upload a unedited straight from the camera file so i could analyse the quality please?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "in detail already, but the image sharpness of the camera falls off due to diffusion beyond f5.6 considerably.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "basically did 90% of all still-life shots at f2.8-4.0 with shutter priority, since beyond f5.6 the images are getting notably softer.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Coming from a Mavic Pro Platinum, I&#8217;m very impressed with the 2 Pro&#8217;s sensor, color rendering, and the sharpness of.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "In terms of the lens, because it has heavy barrel distortion automatically corrected in software, I do find it a little soft in.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "I&#8217;ve found it&#8217;s a little sharper than both the RX100.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "definitely better in picture quality but not by much though (from my opinion).",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.611,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Reply will the mavic two pro with the hassellblad provide sufficient image quality to print the photos a3+ size with a decent sharpness?",
+        "source_id": "photographylife-reviews-dji-mavic-2-pro",
+        "url": "https://photographylife.com/reviews/dji-mavic-2-pro"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": null,
+        "confidence": "low",
+        "convergence": null,
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 8,
+          "neu": 14,
+          "neg": 6,
+          "total": 28,
+          "sources": [
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "its two front collision cameras to assist its improved object tracking function, keeping your subject in shot, in focus and even predicting its movement during.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "to and getting back from position(s), and hovering while changing camera settings, which is why the main disappointment with the Mavic Air was the 21-minute.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The Mavic 2 Zoom shoots 4k video at 100Mbps at 24/25/30fps (not, sadly 60fps â a notable omission).",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "&nbsp; Above: This video is captured at 60fps 2.7k mode using the Zoom at 24mm.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "There is one video software trick that is only available on the Zoom model, the.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The 28mm EFL camera is still an excellent choice for video nonetheless, featuring as it.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "you&#8217;ve disabled the continuous autofocus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "You can set focus and exposure with a tap on the screen, and focus peaking is available for both models.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Timelapse videos look great, and it&#8217;s brilliant to have the software that is both patient enough to control the aircraft steadily from shot.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "in one test did seem a little exaggerated compared to normal video, but this does suit the medium.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+              "weight": 0.75,
+              "quote_excerpt": "video â the Zoom is an amazingly practical tool that you can take anywhere and get still-stunning imagery with few problems.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-air-2-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+              "weight": 0.75,
+              "quote_excerpt": "accelerated video, I imagine they&#8217;re saying the processing has improved, which is great, but I couldn&#8217;t detect a massive improvement.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "cameralabs-dji-mavic-air-2-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+              "weight": 0.75,
+              "quote_excerpt": "gimbal doesn&#8217;t have to make any sudden corrections and, in this good light, the video (4K 60fps) is crystal clear.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronedj-2019-03-13-dji-mavic-2-pro-review-antartica",
+              "source_type": "reviewer_blog",
+              "url": "https://dronedj.com/2019/03/13/dji-mavic-2-pro-review-antartica/",
+              "weight": 0.75,
+              "quote_excerpt": "the battery life, tracking system, the crystal clear and lag-free video feed, improved range, and the adjustable aperture.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronedj-2020-05-06-dji-mavic-air-2-reviews-must-watch",
+              "source_type": "reviewer_blog",
+              "url": "https://dronedj.com/2020/05/06/dji-mavic-air-2-reviews-must-watch/",
+              "weight": 0.75,
+              "quote_excerpt": "drone over to its video director for an in-depth look.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronedj-2020-05-06-dji-mavic-air-2-reviews-must-watch",
+              "source_type": "reviewer_blog",
+              "url": "https://dronedj.com/2020/05/06/dji-mavic-air-2-reviews-must-watch/",
+              "weight": 0.75,
+              "quote_excerpt": "He goes into OcuSync 2.0, the new controller, video and camera modes with test footage, ActiveTrack 3.0, and the smart flight modes..",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronedj-2020-05-06-dji-mavic-air-2-reviews-must-watch",
+              "source_type": "reviewer_blog",
+              "url": "https://dronedj.com/2020/05/06/dji-mavic-air-2-reviews-must-watch/",
+              "weight": 0.75,
+              "quote_excerpt": "the video, Seth discusses some of its new features, compares the Mavic Air 2 to other DJI drones, and shows off a few test videos..",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "Often times, I was too focused on flying the drone and would forget to change my exposure and other.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "Still, despite all these issues, I came back with some beautiful footage that I can use for my portfolio,.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "shutter speed and exposure compensation: While the drone does a good job at properly exposing video, I have seen a number of cases where the.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "drone would slowly change exposure, resulting in inconsistently exposed videos (and I have certainly made a number of mistakes when using the drone in Aperture.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "and videos, especially when shooting in less than ideal lighting conditions.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "While with the Mavic Air you are basically limited to capturing images and video.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "You will find a lot more latitude in dealing with video footage from.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "Overall, I am very happy with the video performance of.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "is a truly versatile drone that can take stunning images and videos.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "to grab quick footage of a subject during the day, I would not hesitate to use the Mavic Air.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "photographylife-reviews-dji-mavic-2-pro",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+              "weight": 0.75,
+              "quote_excerpt": "the time with the Pro gimbal, but the Zoom is helpful to have on hand for some video applications.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 5,
+          "polarity_agreement": 0.8,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.393,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": null,
+      "confidence": "low",
+      "convergence": null,
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite"
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 15,
+        "neg": 0,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a 2x optical zoom lens coupled to a smaller 1/2.3-inch sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "weren&#8217;t looking at the camera mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This works if you begin with the camera at its widest (24mm effective) to line up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with the Phantom 4 Pro, which also has a fixed lens and a 20-Megapixel 1-inch sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Micro-Four-Thirds camera and zoom lens).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses 2023 Best Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s a Sony IMX586 sensor with a quad-bayer arrangement, so.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon Laing Support Camera Labs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera reviews Panasonic camera reviews Sony camera reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Lens f/2.8-f/11, 28mm FF equivalent, 77&deg; FOV f/2.8 max aperture, 24mm equivalent, 85&deg; FOV Still Photography Modes Single Shot, HDR, Burst Shooting (3/5 frames), AEB,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "system / range, maximum flight time / battery life, lens quality and video features.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Site Menu About Us Beginner Photography Lens Database Lens Index Photo Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.533,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+        "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+        "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 2,
+        "neu": 6,
+        "neg": 1,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Mavic 2s, though, undoubtedly do offer more for that significantly higher price than either the Air or Anafi.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "drone , Mavic , Pro , review , zoom permalink DJI Mavic 2 Zoom Check prices at B&amp;H Recent Posts Nikon Z 24-105mm f4-7.1 review.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DJI Mavic 2 Zoom Check prices at Wex DJI Mavic 2 Zoom Check.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prices at Amazon Like my reviews?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DJI Mavic 2 Zoom Check prices at Amazon More Camera Labs Blog Camera reviews Lenses Cameralabs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "here and here Casey favors the Mavic 2 Zoom : here Mavic 2 Zoom offers the best value for money of any DJI drone currently.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "buy it at its steep $649 price, but it looks like it would be a good option for those who do not want to bother.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Photography Life at no extra cost to you.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.333,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "face_quote": {
+        "quote_excerpt": "here and here Casey favors the Mavic 2 Zoom : here Mavic 2 Zoom offers the best value for money of any DJI drone currently.",
+        "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+        "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and Pro versions are impressive, the 1-inch sensor on the Pro is everything a photographer could hope for while the Zoom offers excellent 4K video.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Mark III review Nikon Z 24-70mm f2.8 S II review Tamron 16-30mm f2.8 Di III G2 review Zeiss Otus ML 50mm f1.4 review Canon PowerShot.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2019-03-13-dji-mavic-2-pro-review-antartica",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2019/03/13/dji-mavic-2-pro-review-antartica/",
+            "weight": 0.75,
+            "quote_excerpt": "the image quality of the 20MP DJI Mavic 2 Pro camera versus the 12MP one on the original DJI Mavic Pro.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 2,
+        "neu": 0,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "Very stable and very good flight capabilities Weight and dimensions: here Mavic 2 Pro camera specs: here Example.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "an amazing drone for someone like me who likes to pack light when traveling, I did struggle with it when shooting in low-light conditions.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "significantly lighter, cheaper and smaller compared to the Mavic 2 Pro, so it is perfectly suitable for doing more localized aerial work.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.667,
+        "contested": true
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 4,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Certainly in video mode dim evening light coupled with motion leads to blurring, which is to be expected.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "accordingly depending on what you are shooting and the type of ambient light you are dealing with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "there wasn&rsquo;t much light left to expose the scene correctly.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "The camera delivered even during morning and early evening shots directly against the sun still plenty of detail in the shadows.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Can these modes save even better the details from the shadows or from the lights?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "the corners, but otherwise find it impressively good optically, and better than the original Pro.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Colour Solution (HNCS) technology, which is, of course, really just a matter of taste; it seems to like images a little warmer and generally they.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Reply Comment Policy: Although our team at Photography Life encourages all readers to actively participate in discussions,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "* Name * Email * &#916; Learn Beginner Photography Landscape Photography Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lead to some pleasing results, though I wasn&#8217;t able to test DJI&#8217;s ND filters, so looking straight into the sun and exposing for sunset.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "Such as, can you fit ND filters on the Mavic 2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "You CAN get ND filters for your Mavic 2 Pro.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "20-megapixel camera with 1-inch sensor which is undoubtedly in a class above other drones of this size.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When you shoot, the camera automatically zooms in and turns to capture 9-images, before stitching them to produce a 48-Megapixel still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera on a drone really does seem to compete with a decent compact.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "an equivalent focal length of 24mm, with an Æ/2.8 aperture and 1m to infinity focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "battery size: here Flying the drone: here Shows the zoom feature after almost crashing the Mavic 2 Zoom: here Dolly Zoom: here Slow-mo at 120fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "size of a 70-200mm f/2.8 lens, so it easily fits most standard camera bags.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 4,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 2,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is still some noise, even in good light, as you&#8217;d expect from a sensor which is only a little larger in surface area than the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reviewing stills, pixel peeping will reveal plenty of noise, yet when you&#8217;re taking in the whole scene, all those extra pixels can come in handy,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "Still noisy: here Mavic Pro vs.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "shoot at higher ISOs without adding too much noise to my images, which was great.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 905,
+        "high": 905,
+        "anchor": 905,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q111632125",
+        "fetched_at": "2026-09-26T13:06:39.610985+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 6 reviewer sources for DJI Mavic 2 Zoom. AF for video draws the most discussion: 8 positive, 14 neutral, and 6 negative across 28 sentiment markers. The most criticism lands on optical performance: 39% positive, 39% neutral, 22% negative across 18 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 7,
+        "neu": 7,
+        "neg": 4,
+        "total": 18,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "notable example (more of which later) available on both Mavic 2s and which really does wow.Â Others include a 48MP Super Resolution Photo (Zoom model.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The other issue is that, when at full zoom, vibrations and sharp turns are.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you&#8217;re going to have a zoom, an optical rather than a.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 8,
+        "neu": 14,
+        "neg": 6,
+        "total": 28,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "its two front collision cameras to assist its improved object tracking function, keeping your subject in shot, in focus and even predicting its movement during.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to and getting back from position(s), and hovering while changing camera settings, which is why the main disappointment with the Mavic Air was the 21-minute.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Mavic 2 Zoom shoots 4k video at 100Mbps at 24/25/30fps (not, sadly 60fps â a notable omission).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 2,
+        "neu": 4,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Certainly in video mode dim evening light coupled with motion leads to blurring, which is to be expected.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "accordingly depending on what you are shooting and the type of ambient light you are dealing with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "there wasn&rsquo;t much light left to expose the scene correctly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Colour Solution (HNCS) technology, which is, of course, really just a matter of taste; it seems to like images a little warmer and generally they.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "Reply Comment Policy: Although our team at Photography Life encourages all readers to actively participate in discussions,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-mavic-2-pro",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+            "weight": 0.75,
+            "quote_excerpt": "* Name * Email * &#916; Learn Beginner Photography Landscape Photography Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lead to some pleasing results, though I wasn&#8217;t able to test DJI&#8217;s ND filters, so looking straight into the sun and exposing for sunset.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "Such as, can you fit ND filters on the Mavic 2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "You CAN get ND filters for your Mavic 2 Pro.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "20-megapixel camera with 1-inch sensor which is undoubtedly in a class above other drones of this size.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When you shoot, the camera automatically zooms in and turns to capture 9-images, before stitching them to produce a 48-Megapixel still.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera on a drone really does seem to compete with a decent compact.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 1,
+        "neg": 2,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is still some noise, even in good light, as you&#8217;d expect from a sensor which is only a little larger in surface area than the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-dji-mavic-air-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reviewing stills, pixel peeping will reveal plenty of noise, yet when you&#8217;re taking in the whole scene, all those extra pixels can come in handy,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+            "source_type": "reviewer_blog",
+            "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+            "weight": 0.75,
+            "quote_excerpt": "Still noisy: here Mavic Pro vs.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 98,
+      "evaluated": 47,
+      "non_evaluative": 51,
+      "non_evaluative_breakdown": {
+        "non_claim": 51
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "98 examined · 47 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 1,
+      "neu": 2,
+      "neg": 0,
+      "total": 3,
+      "sources": [
+        {
+          "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+          "weight": 0.75,
+          "quote_excerpt": "and Pro versions are impressive, the 1-inch sensor on the Pro is everything a photographer could hope for while the Zoom offers excellent 4K video.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "cameralabs-dji-mavic-air-2-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+          "weight": 0.75,
+          "quote_excerpt": "Mark III review Nikon Z 24-70mm f2.8 S II review Tamron 16-30mm f2.8 Di III G2 review Zeiss Otus ML 50mm f1.4 review Canon PowerShot.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "dronedj-2019-03-13-dji-mavic-2-pro-review-antartica",
+          "source_type": "reviewer_blog",
+          "url": "https://dronedj.com/2019/03/13/dji-mavic-2-pro-review-antartica/",
+          "weight": 0.75,
+          "quote_excerpt": "the image quality of the 20MP DJI Mavic 2 Pro camera versus the 12MP one on the original DJI Mavic Pro.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "optical_performance",
+    "highest_rated": "mount_compat",
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-dji-mavic-2-pro-zoom-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/dji-mavic-2-pro-zoom-review/",
+      "title": "DJI Mavic 2 Pro / Zoom review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506868+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "cameralabs-dji-mavic-air-2-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/dji-mavic-air-2-review/",
+      "title": "DJI Mavic Air 2 Review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506876+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronedj-2018-08-24-the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-w",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronedj.com/2018/08/24/the-best-youtube-reviews-of-the-dji-mavic-2-pro-and-zoom-we-watched-them-all-so-you-dont-have-to/",
+      "title": "The best YouTube reviews of the DJI Mavic 2 Pro and Zoom. We watched them all so you don&#039;t have to!",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506880+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronedj-2019-03-13-dji-mavic-2-pro-review-antartica",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronedj.com/2019/03/13/dji-mavic-2-pro-review-antartica/",
+      "title": "DJI Mavic 2 Pro review in Antartica [video]",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506883+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronedj-2020-05-06-dji-mavic-air-2-reviews-must-watch",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronedj.com/2020/05/06/dji-mavic-air-2-reviews-must-watch/",
+      "title": "5 must-watch DJI Mavic Air 2 reviews",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506886+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronedj-2020-07-16-dji-mavic-air-2-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronedj.com/2020/07/16/dji-mavic-air-2-review/",
+      "title": "Can&#039;t wait to start on an in-depth review of the DJI Mavic Air 2",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506889+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-dji-mavic-2-pro",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/dji-mavic-2-pro",
+      "title": "DJI Mavic 2 Pro Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-26T13:06:41.506892+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/dji-mavic-2-zoom/",
+    "reddit": "DJI Mavic 2 Zoom\n\nSynthesized from 6 reviewer sources for DJI Mavic 2 Zoom. AF for video draws the most discussion: 8 positive, 14 neutral, and 6 negative across 28 sentiment markers. The most criticism lands on optical performance: 39% positive, 39% neutral, 22% negative across 18 claims.\n\nI pulled together all 7 reviews in one place: https://askmaddi.com/cards/dji-mavic-2-zoom/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**DJI Mavic 2 Zoom**\nSynthesized from 6 reviewer sources for DJI Mavic 2 Zoom. AF for video draws the most discussion: 8 positive, 14 neutral, and 6 negative across 28 sentiment markers. The most criticism lands on optical performance: 39% positive, 39% neutral, 22% negative across 18 claims.\nAll 7 reviews in one place: https://askmaddi.com/cards/dji-mavic-2-zoom/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "DJI Mavic 2 Zoom — Reviewed",
+      "description": "Synthesized from 6 reviewer sources for DJI Mavic 2 Zoom. AF for video draws the most discussion: 8 positive, 14 neutral, and 6 negative across 28 sentiment markers. The most criticism lands on optical performance: 39% positive, 39% neutral, 22% negative across 18 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/dji-mavic-2-zoom/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

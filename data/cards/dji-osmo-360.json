@@ -1,0 +1,1822 @@
+{
+  "card_version": "1.0",
+  "card_id": "dji-osmo-360",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "DJI osmo 360",
+    "brand": "DJI",
+    "model": "osmo 360",
+    "sku_alt_names": [],
+    "category": "action_cam",
+    "subcategory": "action-camera",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/wvQAAeSwNRJqheHe/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "open_box": 299.0,
+        "pre_owned": 250.0,
+        "refurbished": 384.3
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 20,
+      "price_updated_at": "2026-11-04T10:10:45.281448+00:00"
+    },
+    "price_updated_at": "2026-09-24T06:51:36.320402+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T06:51:36.316113+00:00",
+    "last_built": "2026-09-24T06:51:36.316113+00:00",
+    "last_checked": "2026-09-24T06:51:36.316113+00:00",
+    "source_count": 10,
+    "source_types": {
+      "pro": 10
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "video_capability": "medium",
+      "image_quality": "medium",
+      "mount_compat": "low",
+      "stabilization": "medium",
+      "handling": "medium",
+      "sensor_performance": "medium",
+      "battery_life": "medium",
+      "evf_lcd": "medium",
+      "price": "low",
+      "generation_context": "medium",
+      "autofocus_body": "medium",
+      "connectivity": "medium",
+      "burst_buffer": "low",
+      "build": "low",
+      "dimensions": "low",
+      "weight": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "video_capability",
+      "display_name": "Video Capability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 8,
+        "neu": 31,
+        "neg": 2,
+        "total": 41,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The primary 360 mode records everything.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Single lens mode functions like a traditional action camera, using front or rear lens with seamless switching during recording, up to 5K at 60fps..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "170+ degree field of view, reaching 4K at 120fps for slow-motion.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "But, there is at least one thing dedicated ILCs don&rsquo;t do well: capturing video in intense environments where the camera could be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "It can use either camera separately for up to 5K video, or both in conjunction to make 8K 360&ordm; videos and very wide panoramic photos..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Image Quality Here&rsquo;s a frame grab from 4K footage:.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "The contrast of the video is still a bit high, but there&rsquo;s a Log option if you want to fix that.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "case, the video is 10-bit.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Still Capabilities Although the DJI Osmo 360 is an action camera meant for video, it can take stills in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "DJI claims it can record in 8K for 4.5h.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "100MB and has code for a custom focus limiter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "would be nice to have some more control over the overall look of the video without resorting to Log format.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "As someone who likes to record vlogs outdoors, I&rsquo;m going to use the DJI Osmo 360 a lot.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Since those original videos, the camera firmware has.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Each of these modes has several resolution and frame rate combinations to choose from, topping out at 8K 50fps in 360° video mode, 5K 60fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "in single lens video mode, or 120MP (a colossal 15520x7760px) for 360° stills.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "a limited pixel budget across a wider field of view than regular cameras do, but this camera has better specs than anything else near its.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Click for the full size 120MP JPEG,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "RS 1-inch 360 edition on the left in RAW, Osmo 360 on the right in JPEG, both set to 120° FOV in a 4K timeline.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "use this camera are for 360° stills and single-lens regular video, but I’m probably not a typical user.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "While all the 360° video modes require a pass through DJI Studio, the 360° stills don’t, and the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "0 for 360° video, that’s totally fine, and up to you.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "to shoot at higher frame rates, but 50fps at 8K hits a sweet spot for most, enabling some slow motion without compromising image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Regular Video mode offers higher resolutions (up to 5K) with lower frame rates (up to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "A sample frame from 5K 16:9 video, with the D-Log M LUT applied and nothing else (click for full size) Note that the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Interestingly, the 5K 16:9 mode has a higher bit rate (5120&#215;2880 @.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "I’ve shot a lot of footage with the Osmo 360, spanning many different modes, aspect ratios and frame rates, and I’ve been pleasantly surprised.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "All the single-lens options are very good for an action camera, where 10-bit Log is far from common, and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "A 5K 4:3 sample frame, with the D-Log M LUT applied and nothing else (click for full size) Now that.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "closer, and 5K gives you room to zoom even when delivering 4K.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "video devices, software &amp; services Latest Post Production Oppo Find X10 Pro Max: triple 200MP camera cluster and 8K video Adobe Insights Tool Tip Tuesday.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "‘For high-speed action shots, the camera’s large 2.4 μm pixels and a high-performance chip enable epic shots from every angle in 8K/60fps 360° video – keeping every frame sharp and free of motion blur,’ DJI added.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dc-rainmaker-insta360-x6-in-depth-review-worth-the-upgrade-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dcrainmaker.com/2026/08/insta360-x6-360-cam-in-depth-review.html",
+            "weight": 0.75,
+            "quote_excerpt": "﻿ I’ve just published my full Insta360 X6 In-Depth Review up on YouTube; this is after almost two months of usage with the camera, across all sorts of different scenarios.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-dc-rainmaker-insta360-x6-in-depth-review-worth-the-upgrade-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dcrainmaker.com/2026/08/insta360-x6-360-cam-in-depth-review.html",
+            "weight": 0.75,
+            "quote_excerpt": "here are all the chapters for the video (which link to each section): 0:00 Quick Overview 0:32 Smaller Size 0:48 Size Comparisons vs GoPro & DJI 0:58 Button Changes 1:28 Magnetic Charging Mount 1:46 Replaceable Lens Changes 2:35 Improved Sensor Size 2:49 Image Quality Comparisons 4:31 10-Bit…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dc-rainmaker-insta360-x6-in-depth-review-worth-the-upgrade-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dcrainmaker.com/2026/08/insta360-x6-360-cam-in-depth-review.html",
+            "weight": 0.75,
+            "quote_excerpt": "11:32 New 120MP Photo Mode 11:44 New Photo AI Reframing Feature Explained 12:21 8K vs Real 8K Explained 13:06 Tap to Connect NFC & Bluetooth Changes 13:32 WiFi & Wired Speed Increases 13:54 Pricing Overview 14:05 Compared to GoPro & DJI 14:36 Final Thoughts & Recommendations As always",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "In theory DJI is still playing catch up – the X6 represented a 10th anniversary – but this camera has specs which could turn the eye of any 360-degree creator, not least the 10-bit recording across all modes and 1-inch image sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "Bringing the same 8K resolution for video as most other 360-degree cameras, there are a few boosts – including a 16K timelapse mode and, excitingly for many, 8K60fps (beating the Insta360 X6's maximum 8K50fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "There is also some AI introduced in the software, with DJI Studio now including frame interpolation which can create up to 8K/480fps, or 64x slow motion in post, and on-camera AI boosting the night mode to a 'SuperNight 2.0'.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "In both cases, the presence of a 10-bit recording mode means that 360-degree video can be used more freely with other professionally graded content, and that should mean 360-degree video can be part of something It's also pleasing to see that DJI has stuck to the goal of keeping the camera robust",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/",
+            "weight": 0.75,
+            "quote_excerpt": "It can capture 360 video at up to 8K/60, and features a pair of square Type 1/1.1 (92mm²) sensors that, when stitched together, add up to roughly the same area as a 4:3 Type-1 (128mm²) sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "It records native 8K panoramic video at 60 frames per second and swaps its lenses by hand, in a 183-gram body with 105GB of storage.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 8,
+        "polarity_agreement": 0.875,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.439,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "It can use either camera separately for up to 5K video, or both in conjunction to make 8K 360&ordm; videos and very wide panoramic photos..",
+        "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+        "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera"
+      }
+    },
+    {
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 6,
+        "neu": 7,
+        "neg": 2,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Recording in 10-bit color surpasses the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The reviewer notes during a comparison, “with more pixels, this essentially means better image quality, with more detail, as.",
+            "witness": "reported"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "extreme crop of the two again in very low light: The colors are good.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "both JPEG and DNG Raw.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "I just used the JPEGs, because darktable could not handle the built-in corrections.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "but I think it would also be nice to have an option to reduce the contrast of the video in normal color mode.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Its image quality may not be perfect, but for its intended purpose, it&rsquo;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "updated the review just now to clarify: DNG Raw files are only availale in single-camera mode, not 360º mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "higher your image quality will be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "general, the image is clean and pleasant.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "if you’re fussy about image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "able to capture a good image that can take a bit of manipulation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "equivalent to cropped 8K/480fps 8K/120fps Vortex: turn exciting moments into smooth high-definition wraparound slow motion with a simple swing 10-bit & D-Log M1 Color Profile: every video format now supports 10-bit color depth",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "This quick selfie taken with the 360 II shows good detail across the image, and the shading is excellent – with aspects of the black traffic lights and the cloud texture visible.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "I am just as confident about its ability in low light as I am with the Insta360 X6, and I can see that the color science is going to need further examination.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.6,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.4,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "higher your image quality will be.",
+        "source_id": "provideocoalition-review-dji-osmo-360",
+        "url": "https://www.provideocoalition.com/review-dji-osmo-360/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 11,
+        "neg": 2,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "DJI Osmo 360 Action Camera Review Home → Reviews → Cameras and Lenses Modern cameras are amazing, and it&rsquo;s rare to go out with one.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is fixed at f/1.9, and its.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "14mm f/4, which is a decent full-frame lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "with more detail, but thanks to its pretty large 1&Prime;-type sensor, the DJI Osmo 360 is not too far behind.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "360 to the Nikon Z6 and the Audio Tecnica AT875 short shotgun microphone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "confirmed from several reviews and it is a drawback in comparison with insta X5 ( as well as with bracketing capabilities ).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Us Beginner Photography Lens Database Lens Index Photo Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "a 2.5m Extended Carbon Fiber Selfie Stick with the tilting magnetic adapter The basics Rather than the tall form factor that most Insta360 cameras use,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "To use the Osmo 360 as an action camera, you’ll want the tilting mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Osmo 360 with the Battery Extension Rod Through electronic connections on the mount which interface with the camera, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "possible to add a tripod below with the built-in 1/4-20 socket.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "battery or a tilting adapter, but its huge reach does let you put the camera in otherwise unreachable places.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "To tempt you further, if you’re already in the DJI ecosystem, the batteries are compatible with other DJI cameras, the magnetic tilting mounts are compatible.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "The Osmo 360, on the Battery Extension Rod, ready for single lens recording The Osmo 360.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "If you absolutely need instantly replaceable lenses, consider the Insta360 X5 or the upcoming GoPro Max 2.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.533,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "stabilization",
+      "display_name": "Stabilization",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 10,
+        "neg": 1,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "to provide additional stabilization, and it can be combined with the rear lens to make 360&ordm; videos.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Stabilization The true strength of the DJI Osmo 360 is its smooth stabilization.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "It&rsquo;s got two stabilization modes: Rock Steady and Horizon Steady.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Like the video mode, you can switch to manual and control ISO, shutter speed, and white balance.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "dedicated tripod socket, relatively large sensor, and excellent stabilization.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "modes, including timelapse, still image, video, and slow motion, while the single-lens modes include still images (at a lower resolution), Video, and a wide-angle Boost.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "I would love to see a Timelapse/Hyperlapse mode added to the single-lens side of things, as well as a high-resolution single-lens still option..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "between 360° or single lens modes this way.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Both Boost Video and Video modes give you control over stabilization, but you’ll want it on unless you’re.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "You’ll notice a slightly increased field of view if you turn stabilization off.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "the stabilization is great too.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Quality in single lens mode is very good, stability is great, and I can.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "lens mode for stable 5K video from a low or high perspective.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "‘(It) maintains the same 360° image field as a traditional 1-inch rectangular sensor,’ DJI explained.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "using Clouds mode to condense interesting skies 64x Pano Slow Motion: unlock up to 64x of slow motion in post-production with DJI Studio’s AI frame interpolation",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.533,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 7,
+        "neg": 0,
+        "total": 12,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Versatile Shooting Modes for Creators The DJI Osmo 360 caters to varied needs through multiple modes.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "doors means that the Osmo 360 can withstand harsh environments It&rsquo;s also got just three buttons: on/off, record/stop, and camera switch.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "great place to grip the camera otherwise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "This camera gets a lot right, and gives you many great ways to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "didn’t expect to like the single-lens modes as much as I do.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "0° and 68°; release the camera by pressing both side latches Importantly, if selfie mode is your main focus, you should consider the Battery Extension.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "buttons can start and stop recording or take stills, switch between different modes, and switch between the two lenses in single lens mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "can’t switch from front to back lenses seamlessly, and you also can’t record a dewarped image with both lenses at the same time.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Still, with dedicated hardware buttons to swap lenses and to start or stop recording.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "Related reading: DJI Osmo Pocket 4P review – the ultimate vlogging camera is now twice as powerful DJI Lito X1 review – this drone SLAPS for photography and video Do you want to win some great prizes for your photography?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "There is a bigger microphone guard on the 'front' (the side without the display) of the camera, and the case appears to be screwed together.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "What I can say is that the camera produces surprisingly good results, and feels as robust as I needed in my hands.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.8,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 6,
+        "neg": 0,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sensor Technology and Image Quality Advances At the heart of the DJI Osmo 360 lies a 1/1.1-inch CMOS sensor tailored for 360 videos, yielding.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "well as better low light performance.” In low-light tests using Super Night mode at 8K 25fps against the X5 ’s Pure Video mode, the DJI.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "In practice, I was impressed by the low-light video performance of.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "The DJI Osmo 360 frequency response to pink noise against the Nikon Z6 and AT875R..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "I prefer the look with Texture at -1 or -2, and Noise Reduction at.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "noise reduction, but this camera allows you to turn all those options down.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "with triple 200MP sensors, the Oppo Find X10 Pro Max takes a step further the...",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "DJI claims the Osmo 360 II’s advanced square HDR image sensor increases sensor utilisation by 25%, reducing power consumption while delivering low-noise shots when the light fails.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "Image quality – never really an issue on the previous model – is better here, and it was possible for me to detect evidence of the claimed 14.5-stop dynamic range, especially where light was mixed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "DJI’s headline claim is a 1-inch square HDR sensor it calls an industry first, rated by DJI’s own lab at 14.5 stops of dynamic range against 13.5 on the first Osmo 360.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 6,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.3,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Image quality – never really an issue on the previous model – is better here, and it was possible for me to detect evidence of the claimed 14.5-stop dynamic range, especially where light was mixed.",
+        "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+        "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review"
+      }
+    },
+    {
+      "axis_id": "battery_life",
+      "display_name": "Battery Life",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 7,
+        "neg": 0,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Battery life reaches 100 minutes of 8K 30fps panoramic video at 25°C (77°F), aided by high thermal conductivity.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Not to mention swappable batteries for all-day recording.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "part of the Adventure Bundle, showing quickly which batteries are fully charged and which one needs a charge A simple switch below the camera on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "Here&#8217;s a 360° shot I took with this monster selfie stick: Battery life in the camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "alone is good, but if you want to be able to film all day, I&#8217;d recommend grab the Adventure Combo or the Battery Extension Rod..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "(on the camera and the Battery Extension Rod) that’s a compromise I can live with.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "with a Battery Extension Rod is my new favorite travel camera.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "The handle doesn't just contain a battery, but remote controls for the camera too.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "The battery figure did not move: DJI still quotes 100 minutes of continuous 8K30 recording, the same number the original carried, with a 22-minute charge to 80 percent.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.556,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Battery life reaches 100 minutes of 8K 30fps panoramic video at 25°C (77°F), aided by high thermal conductivity.",
+        "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+        "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/"
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 6,
+        "neg": 0,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "DJI Osmo 360 II: Price The Osmo 360 II launches in a Standard Combo for £509 / AU$929, and an \"Adventure Combo\" for £639 / AU$1,099.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "DJI’s launch release names no American price, no American date, and no American market, for a camera that holds a valid FCC equipment authorization.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "That is £99 above the first Osmo 360’s £409.99 UK launch price from July 2025, a 24 percent rise in thirteen months.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "(The original Osmo 360’s UK price has since fallen as low as £292.50 at Amazon, which is where a lot of British buyers will land.) The comparison DJI wants you to make is a different one.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "The Berlin Launch Adds Care Refresh And A Lens Price, Not New Hardware The IFA release restates the Chinese spec sheet with two additions: DJI Care Refresh now covers the camera, and replacement lenses sell as a kit at £35 in the UK and €39 in the eurozone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens kit matters more than its price suggests.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+            "weight": 0.75,
+            "quote_excerpt": "One is that DJI is holding the US launch for a separate date, the way the first Osmo 360 eventually got its $549.99 American price after launching without one.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.857,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "DJI’s launch release names no American price, no American date, and no American market, for a camera that holds a valid FCC equipment authorization.",
+        "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+        "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 1,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "updates — firmware and DJI Studio have both been updated more than once since releaase — I’m pretty hopeful.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-dc-rainmaker-insta360-x6-in-depth-review-worth-the-upgrade-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dcrainmaker.com/2026/08/insta360-x6-360-cam-in-depth-review.html",
+            "weight": 0.75,
+            "quote_excerpt": "Increased to 8K/505:32 Increased Single Lens Resolution 5:51 Increased Single Lens Slow-Mo Mode 5:56 Big changes with Instaframe 2.0 6:45 New on-device AI editing 7:14 Low Light Changes & Comparison Footage 8:35 New Underwater Invisible Dive Case Pro & Footage 9:51 Improved underwater rating 10:08…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "Like its predecessors, the camera has replaceable lenses, which should boost its appeal to action camera users.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/",
+            "weight": 0.75,
+            "quote_excerpt": "Mitchell Clark Earlier this month, DJI announced the Osmo 360 II , a second-generation version of its camera designed to capture everything around it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/",
+            "weight": 0.75,
+            "quote_excerpt": "It’s a relatively minor upgrade from its predecessor, with one of the most major updates being its user-replaceable lenses for greatly improved repairability.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-fstoppers-dji-osmo-360-ii-brings-new-360-imaging-capabilities-built-on-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://fstoppers.com/gear/dji-osmo-360-ii-brings-new-360-imaging-capabilities-built-12-years-innovation-903948?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+            "weight": 0.75,
+            "quote_excerpt": "Building on more than 12 years of imaging expertise, the Osmo 360 II delivers new capabilities rooted in a shared lineage from previous generations of DJI's creative camera technology, from the Osmo 360 to the Avata 360.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.8,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "It’s a relatively minor upgrade from its predecessor, with one of the most major updates being its user-replaceable lenses for greatly improved repairability.",
+        "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+        "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/"
+      }
+    },
+    {
+      "axis_id": "autofocus_body",
+      "display_name": "Autofocus",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "In various modes, it is cropped to get a bit closer or.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "since single-lens mode is so capable, this camera can get the job done even when you do know where to point it, and because it’s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+            "weight": 0.75,
+            "quote_excerpt": "Headline features include a 1-Inch 8K/60fps sensor, tough replaceable lenses and new AI algorithms to help keep noise down when shooting in low light or at night.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/",
+            "weight": 0.75,
+            "quote_excerpt": "Of course, unless you’re mainly shooting for the few people who still watch immersive video in a headset, you won’t be using that whole area (or even the majority of it) in most of its modes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 4,
+        "polarity_agreement": 0.75,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.25,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "connectivity",
+      "display_name": "Connectivity",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+            "weight": 0.75,
+            "quote_excerpt": "transmitters connects directly, allowing remote recording control and on-screen levels, plus ambient backup.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "For video, you can use the DJI Mimo mobile app to control the camera,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "provideocoalition-review-dji-osmo-360",
+            "source_type": "reviewer_blog",
+            "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+            "weight": 0.75,
+            "quote_excerpt": "control the camera using a connected Apple Watch, but the other options have been good enough.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "I must admit that, in my testing (which, admittedly, was in different locations – York for this camera and New York for the X6), I felt that the Insta360 X6's microphone setup had the advantage when it came to operation without a worn wireless mic.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "The Osmo 360 feels solid, and it&rsquo;s waterproof to the point of being submergible in fresh water.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "Audio Quality On most cameras, the audio from the built-in microphone is unusuable junk.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+            "weight": 0.75,
+            "quote_excerpt": "the upshot is that they deliver as much size as a traditional rectangular sensor would in the same circumstances (and, until recently, that is how 360-degree cameras were made – simply losing a significant percentage of the chip's surface area because the optics resulted in their being disused).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+            "weight": 0.75,
+            "quote_excerpt": "fan of lightweight equipment this little camera looks perfect for taking around on trips and vlogging.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {},
+    "provenance": {},
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Reviewers are most positive about image quality (40% positive, 47% neutral, 13% negative across 15 claims). Coverage of mount compatibility is mostly neutral: 14% positive, 73% neutral, 13% negative across 15 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "video_capability",
+        "pos": 8,
+        "neu": 31,
+        "neg": 2,
+        "total": 41
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 6,
+        "neu": 7,
+        "neg": 2,
+        "total": 15
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 2,
+        "neu": 11,
+        "neg": 2,
+        "total": 15
+      },
+      {
+        "aspect": "stabilization",
+        "pos": 4,
+        "neu": 10,
+        "neg": 1,
+        "total": 15
+      },
+      {
+        "aspect": "handling",
+        "pos": 5,
+        "neu": 7,
+        "neg": 0,
+        "total": 12
+      },
+      {
+        "aspect": "sensor_performance",
+        "pos": 4,
+        "neu": 6,
+        "neg": 0,
+        "total": 10
+      },
+      {
+        "aspect": "battery_life",
+        "pos": 2,
+        "neu": 7,
+        "neg": 0,
+        "total": 9
+      },
+      {
+        "aspect": "price",
+        "pos": 1,
+        "neu": 6,
+        "neg": 0,
+        "total": 7
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 1,
+        "neu": 4,
+        "neg": 1,
+        "total": 6
+      },
+      {
+        "aspect": "autofocus_body",
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4
+      },
+      {
+        "aspect": "connectivity",
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4
+      },
+      {
+        "aspect": "build",
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
+      },
+      {
+        "aspect": "weight",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 153,
+      "evaluated": 57,
+      "non_evaluative": 96,
+      "non_evaluative_breakdown": {
+        "non_claim": 96
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "153 examined · 57 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "video_capability",
+    "highest_rated": "image_quality",
+    "lowest_rated": "mount_compat"
+  },
+  "sources": [
+    {
+      "source_id": "dronexl-2025-07-24-dji-osmo-360-pre-release-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronexl.co/2025/07/24/dji-osmo-360-pre-release-review/",
+      "title": "DJI Osmo 360 Pre-Release Review: Sponsored Video Offers First Look at Enhanced 360 Camera",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319290+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-dji-osmo-360-action-camera",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/dji-osmo-360-action-camera",
+      "title": "DJI Osmo 360 Action Camera Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319301+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "provideocoalition-review-dji-osmo-360",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.provideocoalition.com/review-dji-osmo-360/",
+      "title": "Review: DJI Osmo 360 by Iain Anderson - ProVideo Coalition",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319305+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-amateur-photographer-tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-2026",
+      "source_type": "pro",
+      "reviewer": "Amateur Photographer",
+      "platform": "web",
+      "url": "https://amateurphotographer.com/latest/photo-news/tough-new-dji-osmo-360-ii-camera-can-be-frozen-dunked-ridden-hard-and-more/",
+      "title": "Tough new DJI Osmo 360 II camera can be frozen, dunked, ridden hard and more",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319309+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-dc-rainmaker-insta360-x6-in-depth-review-worth-the-upgrade-2026",
+      "source_type": "pro",
+      "reviewer": "DC Rainmaker",
+      "platform": "web",
+      "url": "https://www.dcrainmaker.com/2026/08/insta360-x6-360-cam-in-depth-review.html",
+      "title": "Insta360 X6 In-Depth Review: Worth The Upgrade?",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319328+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-digital-camera-world-dji-osmo-360-ii-review-hands-on-with-the-latest-360-camera-t-2026",
+      "source_type": "pro",
+      "reviewer": "Digital Camera World",
+      "platform": "web",
+      "url": "https://www.digitalcameraworld.com/cameras/360-cameras/dji-osmo-360-ii-review",
+      "title": "DJI Osmo 360 II review –hands on with the latest 360° camera to enter the battle",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319332+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-dpreview-gps-media-unboxing-the-dji-osmo-360-ii-and-answering-your-questions-2026",
+      "source_type": "pro",
+      "reviewer": "DPReview (GPS Media)",
+      "platform": "web",
+      "url": "https://www.dpreview.com/news/unboxing-the-dji-osmo-360-ii-and-answering-your-questions/",
+      "title": "Unboxing the DJI Osmo 360 II, and answering your questions",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319335+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-dronexl-dji-osmo-360-ii-goes-global-at-ifa-skips-america-a-second-ti-2026",
+      "source_type": "pro",
+      "reviewer": "DroneXL",
+      "platform": "web",
+      "url": "https://dronexl.co/2026/09/03/dji-osmo-360-ii-global-launch-ifa-no-us-price/",
+      "title": "DJI Osmo 360 II Goes Global at IFA, Skips America a Second Time",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319338+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-fstoppers-dji-osmo-360-ii-brings-new-360-imaging-capabilities-built-on-2026",
+      "source_type": "pro",
+      "reviewer": "Fstoppers",
+      "platform": "web",
+      "url": "https://fstoppers.com/gear/dji-osmo-360-ii-brings-new-360-imaging-capabilities-built-12-years-innovation-903948?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+      "title": "DJI Osmo 360 II Brings New 360 Imaging Capabilities, Built on 12 Years of Innovation",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319342+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-petapixel-dji-osmo-360-ii-action-cam-has-a-new-square-sensor-and-repla-2026",
+      "source_type": "pro",
+      "reviewer": "PetaPixel",
+      "platform": "web",
+      "url": "https://petapixel.com/2026/09/03/dji-osmo-360-ii-action-cam-has-a-new-square-sensor-and-replaceable-lenses/",
+      "title": "DJI Osmo 360 II Action Cam Has a New Square Sensor and Replaceable Lenses",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T06:51:36.319345+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/dji-osmo-360/",
+    "reddit": "DJI osmo 360\n\nReviewers are most positive about image quality (40% positive, 47% neutral, 13% negative across 15 claims). Coverage of mount compatibility is mostly neutral: 14% positive, 73% neutral, 13% negative across 15 claims.\n\nI pulled together all 10 reviews in one place: https://askmaddi.com/cards/dji-osmo-360/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**DJI osmo 360**\nReviewers are most positive about image quality (40% positive, 47% neutral, 13% negative across 15 claims). Coverage of mount compatibility is mostly neutral: 14% positive, 73% neutral, 13% negative across 15 claims.\nAll 10 reviews in one place: https://askmaddi.com/cards/dji-osmo-360/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "DJI osmo 360 — Reviewed",
+      "description": "Reviewers are most positive about image quality (40% positive, 47% neutral, 13% negative across 15 claims). Coverage of mount compatibility is mostly neutral: 14% positive, 73% neutral, 13% negative across 15 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/dji-osmo-360/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

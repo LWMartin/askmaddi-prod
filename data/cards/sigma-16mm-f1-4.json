@@ -1,0 +1,1630 @@
+{
+  "card_version": "1.0",
+  "card_id": "sigma-16mm-f1-4",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Sigma 16mm f1.4",
+    "brand": "Sigma",
+    "model": "16mm f1.4",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/v4oAAOSwoLhifP80/s-l640.jpg",
+    "image_source": "ebay_catalog"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 283.64,
+        "pre_owned": 259.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 4,
+      "price_updated_at": "2026-11-04T10:12:15.476234+00:00"
+    },
+    "price_updated_at": "2026-09-24T01:48:16.404096+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T01:48:16.391618+00:00",
+    "last_built": "2026-09-24T01:48:16.391618+00:00",
+    "last_checked": "2026-09-24T01:48:16.391618+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 4,
+        "neg": 2,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF (resolution) The resolution of the Sigma 16mm f/1.4 DC DN Contemporary varies quite about across the aperture range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "good at f/1.4 already but there&#8217;s a rather steep drop in quality in the outer image field.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality is pretty impressive at medium aperture settings though.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The corners have fully recovered at f/2.8 and images are very sharp across the frame.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "peak performance is reached at f/4 although the quality plateau is very broad from f2/8 all the way up to f/8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "chart shows line widths per picture height (LW/PH) which can be taken as a measure for sharpness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At maximum aperture, the center resolution is very decent but the corner quality falls apart.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "sharp corners at f/1.4 are really important is a question of application.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Stopping down to f/2 helps a lot in the image corners and the results are sharp across the image field from f/2.8 onward until.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "For the best results, I'd probably still use the center focusing point and stop down a bit.The Sigma 16mm f1.4 DC DN Contemporary's absolute strongest point is the image quality.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It's sharp, has nice bokeh, contrast, manageable fringing, and autofocuses at a fair speed.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.818,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "MTF (resolution) The resolution of the Sigma 16mm f/1.4 DC DN Contemporary varies quite about across the aperture range.",
+        "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+        "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 1,
+          "neu": 1,
+          "neg": 2,
+          "total": 4,
+          "sources": [
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Considering the huge focus ring, you may expect that.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "that we tested so far &#8211; and that&#8217;s not a small number &#8211; this is the one with the worst manual focus mechanism to date..",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "should better stick to autofocusing which is reasonably accurate.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+              "source_type": "reviewer_blog",
+              "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+              "weight": 0.75,
+              "quote_excerpt": "When you're shooting stills, the Sigma 16mm f1.4 DC DN Contemporary will be capable of grabbing the focus for sure.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 0.5,
+          "dominant_polarity": "neg",
+          "max_source_share": 0.75,
+          "contested": true
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 1,
+          "neu": 2,
+          "neg": 1,
+          "total": 4,
+          "sources": [
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "extend during focusing so that&#8217;s certainly positive when it comes to surviving in harsher environments.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The focus &#8220;steps&#8221; are way too coarse which is a pain at short to medium focus distances.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+              "source_type": "reviewer_blog",
+              "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+              "weight": 0.75,
+              "quote_excerpt": "objects in the focus transition zones.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+              "source_type": "reviewer_blog",
+              "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+              "weight": 0.75,
+              "quote_excerpt": "However, the lens and camera both continued to work.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 0.5,
+          "dominant_polarity": "pos",
+          "max_source_share": 0.75,
+          "contested": true
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens body is made of metal.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens body is made of metal and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "That is to say, it is not quite the level of construction we see in the Art series, but still built well and should hold up in a photographer's bag.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "That is to say, it is not quite the level of construction we see in the Art series, but still built well and should hold up in a photographer's bag.",
+        "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+        "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 2,
+        "neu": 18,
+        "neg": 3,
+        "total": 23,
+        "sources": [
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma 16mm f1.4 DC DN review | Cameralabs Summary The Sigma 16mm f1.4 DC DN is a wide angle lens designed for mirrorless cameras with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma offers it in Sony E and Canon EF-M mounts, as well as for the smaller Micro Four Thirds format and can.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DC DN triplet of f1.4 prime lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DC DN is a wide angle lens designed for mirrorless cameras with &#8216;cropped&#8217; APSC sensors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma offers it in Sony E and Canon EF-M mounts,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "as well as for the smaller Micro Four Thirds format and can convert the mount at a later date for a fee if desired.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "sample images Below are a selection of JPEG images taken with the Sigma 16mm f1.4 DC DN on a Canon EOS M6 II body.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses , Lenses , Micro Four Thirds lenses , Sigma lenses , Sony lenses Tagged under: 16mm , DC , DN , lens , mirrorless.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "R OIS WR ( Fujifilm ) Review Nikkor Z 40mm f/2 Review Sigma 105mm f/1.4 DG HSM ART (Nikon F) Review Nikkor Z 24-50mm f/4-6.3.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "R WR ( Fujifilm ) Review Facebook X (Twitter) Instagram Sony E (APS-C) Sigma 16mm f/1.4 DC DN Contemporary Review E-mount By Klaus February 3,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a small set of three very fast prime lenses dedicated to APS-C and Micro-Four-Thirds mirrorless cameras &#8211; a 30mm f/1.4, a 56mm f/1.4 and the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "They are referring to a sealed lens mount but this leaves a question mark regarding the focus ring at least.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Among all the mirrorless lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At over 1.8EV (f-stops) at f/1.4, it&#8217;s rather massive for an APS-C format lens &#8211;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sample Images Competition There isn&#8217;t really any APS-C format lens that competes directly with the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If we include full format lenses there may be two alternatives that come into mind..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "% 60% While there are numerous fast, full format E-mount lenses available, they are very expensive and simply oversized when mounted on APS-C cameras.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Performance 9.5 if (typeof olid !== 'undefined') { var eb=\"/active/eb.php?olid=\"+olid; document.write(\" \"); w3IncludeHTML(); } E-mount Prime Wide Related Posts Nikkor Z 40mm f/2 Review 5.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "When testing the Sigma 16mm f1.4 DC DN Contemporary lens, I realized that in many ways it's a perfect lens for photographers who use Sony APS-C mirrorless cameras.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "The f1.4 aperture gives it the ability to shoot in very low light and also get beautiful bokeh when photographing people or things.In terms of ergonomics, the Sigma 16mm F1.4 DC DN fits really well in the hand and is the perfect size to be a companion lens to your A6000 series body including the…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.478,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Sigma offers it in Sony E and Canon EF-M mounts, as well as for the smaller Micro Four Thirds format and can.",
+        "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+        "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 1,
+        "neu": 5,
+        "neg": 1,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Sigma 16mm f1.4 DC DN at Amazon , B&amp;H , Adorama.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": ", review , Sigma permalink Sigma 16mm f1.4 DC DN Check prices at B&amp;H Recent Posts Nikon Z 24-105mm f4-7.1 review so far Fujifilm instax.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma 16mm f1.4 DC DN Check prices at WEX Sigma 16mm f1.4 DC DN Check prices at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sigma 16mm f1.4 DC DN Check prices at Amazon More Camera Labs Blog Camera reviews Lenses Cameralabs Photography Podcast Buyers&#8217;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So mirrorless lenses can be affordable after all..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "running into a cost trap especially considering the rather wide-angle of view - equivalent to a \"24mm\" full format lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Quality 6 Build Quality 7.5 Price /.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.571,
+        "contested": true
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The original characteristic of the Sigma 16mm f/1.4 DC DN Contemporary isn&#8217;t quite as.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": null,
+      "convergence": null
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "EF-M, Micro-Four-Thirds Distortion The Sigma lens can take advantage of Sony&#8217;s auto-correction algorithms and if you choose to activate it, there&#8217;s little to worry about.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "glorious with a fairly heavy barrel distortion of about 2.8%.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 2,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Corrected RAW Vignetting We can see a similar pattern when it comes to vignetting.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "activated image autocorrection, you can spot just a little bit of light falloff (0.7EV / f-stops) at f/1.4 and f/2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "about the original vignetting despite the very large front element.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Stopping down to f/2 boosts the quality across the frame with an excellent center, very good borders and good corners.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The native vignetting characteristic could be better and image distortions are on the high-side.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF50 figures you may check out the corresponding Imatest Explanations Chromatic Aberrations (CAs) Lateral CAs (color shadows at contrast transitions) are very low peaking at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "an average CA pixel width of less that 0.5px at f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "And I also highly doubt anyone would be able to tell the difference unless perhaps they were pixel peeping between this and a full frame rendition.The Sigma 16mm f1.4 DC DN Contemporary suffers from purple fringing in the most extreme areas, but it isn't anywhere as much as something like Sigma's…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For astrophotography, it's clearly not ideal whereas for shallow depth-of-field scenes, it's hardly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 3,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The ginormous, rubberized focus ring is super smooth..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "word referring to the way, out of focus blur is rendered.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The background blur is decently smooth but the contrast suffers somewhat (shown to the left below).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The foreground blur (to the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The quality of the bokeh is a bit of mixed bag with very nice out-of-focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "highlights but also with a fairly smeary general bokeh rendition.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There are two main aspects &#8211; out-of-focus (background) highlights and the rendition of contrasty.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "I feel like this lens gives us a less contrasty and less saturated rendition than Sony's own lenses do.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s almost too big when trying to get a handle on the lens for mounting/unmounting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focal length (full-format) &#8220;24mm&#8221; (in terms of field-of-view) Equiv.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "magnification 1:9.9) Dimensions 72.2×92.3mm Weight 405g Filter size 67mm Hood petal-shaped (bayonet mount, supplied) Other features &#8211; Mounts Sony E (APS-C), Canon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It's around a 24mm f1.8 field of view when shooting wide open, and can suit the needs of many photographers due to its versatility.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.75,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the huge, rubberized focus ring is both smooth as well as very grippy.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "When holding the lens with a Sony A6300 we found the lens to balance well with that camera body.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It is maybe a little on the long side, but in terms of weight and comfort, holding the Sigma 16mm felt great in our hands.The build of the Sigma lens is about what we have come to expect from Sigma out of their contemporary lenses in the last several years.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It isn't distracting but at the same time it doesn't feel as if it's designed to make the subject pop as much as we see with Sigma's full frame lenses.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "16",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Sigma 16mm f1.4. Optical performance draws the most discussion: 5 positive, 4 neutral, and 2 negative across 11 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 5,
+        "neu": 4,
+        "neg": 2,
+        "total": 11,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF (resolution) The resolution of the Sigma 16mm f/1.4 DC DN Contemporary varies quite about across the aperture range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "good at f/1.4 already but there&#8217;s a rather steep drop in quality in the outer image field.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality is pretty impressive at medium aperture settings though.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 1,
+        "neu": 1,
+        "neg": 2,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Considering the huge focus ring, you may expect that.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "that we tested so far &#8211; and that&#8217;s not a small number &#8211; this is the one with the worst manual focus mechanism to date..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "should better stick to autofocusing which is reasonably accurate.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "extend during focusing so that&#8217;s certainly positive when it comes to surviving in harsher environments.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The focus &#8220;steps&#8221; are way too coarse which is a pain at short to medium focus distances.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "objects in the focus transition zones.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens body is made of metal.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens body is made of metal and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "That is to say, it is not quite the level of construction we see in the Art series, but still built well and should hold up in a photographer's bag.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "EF-M, Micro-Four-Thirds Distortion The Sigma lens can take advantage of Sony&#8217;s auto-correction algorithms and if you choose to activate it, there&#8217;s little to worry about.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "glorious with a fairly heavy barrel distortion of about 2.8%.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 1,
+        "neu": 2,
+        "neg": 2,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Corrected RAW Vignetting We can see a similar pattern when it comes to vignetting.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "activated image autocorrection, you can spot just a little bit of light falloff (0.7EV / f-stops) at f/1.4 and f/2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "about the original vignetting despite the very large front element.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "MTF50 figures you may check out the corresponding Imatest Explanations Chromatic Aberrations (CAs) Lateral CAs (color shadows at contrast transitions) are very low peaking at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "an average CA pixel width of less that 0.5px at f/1.4.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "And I also highly doubt anyone would be able to tell the difference unless perhaps they were pixel peeping between this and a full frame rendition.The Sigma 16mm f1.4 DC DN Contemporary suffers from purple fringing in the most extreme areas, but it isn't anywhere as much as something like Sigma's…",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For astrophotography, it's clearly not ideal whereas for shallow depth-of-field scenes, it's hardly.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 1,
+        "neu": 2,
+        "neg": 3,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The ginormous, rubberized focus ring is super smooth..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "word referring to the way, out of focus blur is rendered.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The background blur is decently smooth but the contrast suffers somewhat (shown to the left below).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "There are two main aspects &#8211; out-of-focus (background) highlights and the rendition of contrasty.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "I feel like this lens gives us a less contrasty and less saturated rendition than Sony's own lenses do.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 1,
+        "neu": 2,
+        "neg": 1,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s almost too big when trying to get a handle on the lens for mounting/unmounting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "focal length (full-format) &#8220;24mm&#8221; (in terms of field-of-view) Equiv.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "magnification 1:9.9) Dimensions 72.2×92.3mm Weight 405g Filter size 67mm Hood petal-shaped (bayonet mount, supplied) Other features &#8211; Mounts Sony E (APS-C), Canon.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+            "source_type": "reviewer_blog",
+            "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the huge, rubberized focus ring is both smooth as well as very grippy.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "When holding the lens with a Sony A6300 we found the lens to balance well with that camera body.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It is maybe a little on the long side, but in terms of weight and comfort, holding the Sigma 16mm felt great in our hands.The build of the Sigma lens is about what we have come to expect from Sigma out of their contemporary lenses in the last several years.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+            "source_type": "reviewer_blog",
+            "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+            "weight": 0.75,
+            "quote_excerpt": "It isn't distracting but at the same time it doesn't feel as if it's designed to make the subject pop as much as we see with Sigma's full frame lenses.",
+            "witness": "firsthand"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 80,
+      "evaluated": 40,
+      "non_evaluative": 40,
+      "non_evaluative_breakdown": {
+        "non_claim": 40
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "80 examined · 40 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 0,
+      "neu": 0,
+      "neg": 1,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+          "source_type": "reviewer_blog",
+          "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+          "weight": 0.75,
+          "quote_excerpt": "The original characteristic of the Sigma 16mm f/1.4 DC DN Contemporary isn&#8217;t quite as.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-sigma-16mm-f1-4-dc-dn-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/sigma-16mm-f1-4-dc-dn-review/",
+      "title": "Sigma 16mm f1.4 DC DN review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T01:48:16.394425+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "opticallimits-sony-sigma-16mm-f-1-4-dc-dn-contemporary-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://opticallimits.com/sony/sigma-16mm-f-1-4-dc-dn-contemporary-review/",
+      "title": "Sigma 16mm f/1.4 DC DN Contemporary Review - OpticalLimits",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T01:48:16.394435+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "thephoblographer-com-2018-01-22-review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.thephoblographer.com/2018/01/22/review-sigma-16mm-f1-4-dc-dn-contemporary-sony-e-mount/",
+      "title": "Review: Sigma 16mm f1.4 DC DN Contemporary (Sony E) | The Phoblographer",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T01:48:16.394439+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sigma-16mm-f1-4/",
+    "reddit": "Sigma 16mm f1.4\n\nSynthesized from 3 reviewer sources for Sigma 16mm f1.4. Optical performance draws the most discussion: 5 positive, 4 neutral, and 2 negative across 11 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sigma-16mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sigma 16mm f1.4**\nSynthesized from 3 reviewer sources for Sigma 16mm f1.4. Optical performance draws the most discussion: 5 positive, 4 neutral, and 2 negative across 11 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/sigma-16mm-f1-4/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sigma 16mm f1.4 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Sigma 16mm f1.4. Optical performance draws the most discussion: 5 positive, 4 neutral, and 2 negative across 11 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sigma-16mm-f1-4/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

@@ -22,14 +22,14 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 19.99,
-        "open_box": 19.99
+        "pre_owned": 17.99,
+        "open_box": 75.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 35,
-      "price_updated_at": "2026-09-15T10:10:29.746694+00:00"
+      "sample_size": 25,
+      "price_updated_at": "2026-11-04T10:11:29.409865+00:00"
     },
     "price_updated_at": "2026-08-24T02:47:38.759483+00:00"
   },
@@ -2998,7 +2998,16 @@
   "facts": {
     "specs": {},
     "provenance": {},
-    "conflicts": []
+    "conflicts": [
+      {
+        "field": "identity.image_thumb",
+        "canonical": "https://i.ebayimg.com/images/g/jkkAAMXQEgpTF6Z5/s-l640.jpg",
+        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/20170108_Minolta_Dynax_7000i_Front_stacked_850_9418.jpg",
+        "canonical_source": "card",
+        "divergent_source": "wikidata",
+        "note": "fetched identity differs from curated card value; kept card"
+      }
+    ]
   },
   "synthesis": {
     "consensus_paragraph": "Reviewers are most positive about build quality (61% positive, 28% neutral, 11% negative across 18 claims).",

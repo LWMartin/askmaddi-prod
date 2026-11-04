@@ -1,0 +1,1396 @@
+{
+  "card_version": "1.0",
+  "card_id": "nikon-35mm-f1-8",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Nikon 35mm f1.8",
+    "brand": "Nikon",
+    "model": "35mm f1.8",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/g44AAeSwp-ZqpI3P/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 94.51,
+        "pre_owned": 59.99
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 12,
+      "price_updated_at": "2026-11-04T10:11:35.932972+00:00"
+    },
+    "price_updated_at": "2026-09-25T03:08:24.416855+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-25T03:08:24.410749+00:00",
+    "last_built": "2026-09-25T03:08:24.410749+00:00",
+    "last_checked": "2026-09-25T03:08:24.410749+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "At f/1.8, the lens delivers good sharpness for portraits and available light work.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Does the optical quality of the Nikon Z 35mm f/1.8 S justify.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "At f/1.8, the lens delivers good sharpness for portraits and available light work.",
+        "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+        "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review"
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 4,
+        "neu": 4,
+        "neg": 1,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Weather SealingThe lens features rubber grommet sealing at the lens mount plus additional weather-sealing throughout construction, comparable to professional Nikon lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Beneath the simple exterior is a high-performance lens with impressive build quality and optics..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "build quality and handling characteristics, and compare it head-to-head against alternative lenses that you may be considering.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Although some photographers prefer all-metal lenses for their long-term durability, I personally favor plastic over metal.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Second, the use of plastic significantly reduces the weight of lenses, which makes a huge difference when traveling.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "lens mount of the Nikon Z 35mm f/1.8 S is made of metal, with a total of four locking ears for a very secure and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "To prevent dust and other debris from getting into the lens and the camera, Nikon incorporated a rubber gasket on the part of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "I have used the Nikon Z 35mm f/1.8 S in hot, sandy, freezing, and rainy weather conditions, and I.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 35mm f/1.8 S is plastic.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.889,
+        "contested": true
+      },
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "Weather SealingThe lens features rubber grommet sealing at the lens mount plus additional weather-sealing throughout construction, comparable to professional Nikon lenses.",
+        "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+        "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 4,
+        "neu": 14,
+        "neg": 0,
+        "total": 18,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The aperture range spans f/1.8 to f/16 in 1/3 EV increments with nine rounded diaphragm blades for bokeh control.Build & Weather Sealing\n\nThe lens incorporates a small rubber ring around the metal mount that seals against the camera body.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 35mm f/1.8 S Review Home → Reviews → Cameras and Lenses Introduction This review covers everything that you need to know about the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Z 35mm f/1.8 S, an advanced prime lens for Nikon&rsquo;s full-frame mirrorless Z System .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 50mm f/1.8 S was announced at the same time but had a slight delay in shipping.) Thus, alongside the Nikon Z 24-70mm f/4 S.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "f/1.8 S being one of the very first Nikon Z lenses, it continues to offer an impressive balance of weight, price, and optical performance by.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Z 35mm f/1.8 S is an extremely versatile lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Below, we will take a look at how this lens performs on Nikon Z cameras, discuss its.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 6 + NIKKOR Z 35mm f/1.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "S @ 35mm, ISO 100, 1/250, f/5.6 Build Quality Similar to high-end Nikon F primes, the Nikon Z 35mm f/1.8 S is built very well,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 6 + NIKKOR Z 35mm f/1.8 S @ 35mm, ISO 100, 1/1600, f/2.8 Of course, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "the mount that touches the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 35mm f/1.8 S @.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "It attaches, locks and unlocks very easily, and if you want to reduce the footprint of the lens when storing it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z 35mm f/1.8 S @ 35mm, ISO 1400, 1/40,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "the Nikon Z 28mm f/2.8 or the Nikon Z 40mm f/2 .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "NIKON Z 7 + NIKKOR Z.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "35mm f/1.8 S @ 35mm, ISO 64, 1/200, f/2.0 Specifications Full Name: Nikon NIKKOR Z 35mm f/1.8 S Mount Type: Nikon Z Mount Focal Length:.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Spots Search Forum Reviews Reviews Archive Camera Reviews Lens Reviews Other Gear Reviews More Contact Us Workshops Support Us Submit Content",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.944,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Nikon Z 35mm f/1.8 S Review Home → Reviews → Cameras and Lenses Introduction This review covers everything that you need to know about the.",
+        "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+        "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "(0.82 lbs) MSRP: $900 Lowest Sale Seen: $700 ( check current price ) Here is the construction of the lens, courtesy of Nikon : The.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "If you enjoy our articles, this is the easiest way to support Photography Life at no extra cost to you.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "S lens has remained so popular over the years.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "f/5.6 Then we have the lens&rsquo;s size and weight.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "By comparison, the previous-generation Nikon AF-S 35mm f/1.8G weighs 305 grams (0.67 pounds) and measures 71 millimeters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Likewise, the Canon RF 35mm f/1.8 Macro also weighs just 305 grams, and it&rsquo;s the shortest of all three of these lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "That&rsquo;s not to say the Nikon Z 35mm f/1.8 S is a large and heavy lens by any.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting reaches approximately 1EV at f/1.8, improving markedly by f/2.0 and becoming negligible by f/4.Bokeh Characteristics\n\nOut-of-focus highlights exhibit onion ring and orange peel texture artifacts depending on aperture and bokeh ball size.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Stopping to f/5 renders the lens sharp across the frame.Aberrations & Distortion\n\nLateral chromatic aberration and distortion receive automatic in-camera correction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "However, longitudinal chromatic aberration appears as noticeable green rings around bokeh at wide apertures — a notable weakness compared to the Z 50mm f/1.8 S.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Point light sources remain circular at f/1.8 center-frame but deform to cat-eye shapes at the frame edges.Overall Assessment\n\nThe review assigns an 85% overall score, rating it highly recommended for Nikon Z users as a sharp, versatile, well-made lens — though it cannot match the Z 50mm f/1.8 S's…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Key Optical Limitations\n\nThe review identified relatively strong LoCA visible when used wide open and distracting bokeh in farther background areas as notable drawbacks.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Click the menu below to go to &ldquo;Optical Performance&rdquo;: Table of Contents About Nasim Mansurov Nasim Mansurov is the author and founder of Photography Life,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "writing content for Photography Life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an independent website with no third-party ads!",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Construction & Physical Specs\n\nThe Nikon Z 35mm f/1.8 S lens features 11 elements arranged in 9 groups with a 62mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "35mm, ISO 64, 1/30, f/10.0 Similar to other Z-series lenses (including the pro-grade Nikon Z 24-70mm f/2.8 S ), the filter thread of the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "makes it easy to use such filters as polarizing and variable ND filters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Speaking of filters, the Nikon Z 35mm f/1.8 S has a 62mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "If you decide to also purchase the excellent Nikon Z 50mm f/1.8 S, you will be able to share filters between the two,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "as both use identical filter size.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 1,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens hood is 48mm deep, 89mm diameter, and reversible for transport.Close Focus Performance\n\nMinimum focus distance is 0.25m (9.8 inches) with magnification of 1:5.3 in autofocus, achievable to 1:4.8 with manual focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The 35mm focal length is famously useful for travel photography, street photography, and event photography.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "large side for a modern 35mm f/1.8 lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "However, it might not fit in your jacket pocket as well as other 35mm f/1.8 lenses could &ndash; or especially a pancake lens like.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Maximum Magnification: 0.19&times; (1:5.3) Mount Material: Metal Weather/Dust Sealing: Yes Dimensions (Length &times; Diameter): 86 &times; 73 mm (3.4 &times; 2.9 inches) Weight: 370 grams.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.8,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The lens has an internal-focusing design, and there are a total of six separate rubber rings within the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "I wish that Nikon had at least added a custom function button and an additional customizable ring to the lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "On the bright side, Nikon decided to go with a very large focusing ring, which is great for handling.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens produces a gentle whirring that remains inaudible outdoors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Vibration Reduction: No Internal Focusing: Yes Control Rings: One (focus ring) Function Button: None Focus Motor: Stepping motor Minimum Focus Distance: 25 cm (9.8 inches).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "35",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.8",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Nikon 35mm f1.8. Build draws the most discussion: 4 positive, 4 neutral, and 1 negative across 9 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 1,
+        "neu": 0,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "At f/1.8, the lens delivers good sharpness for portraits and available light work.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Does the optical quality of the Nikon Z 35mm f/1.8 S justify.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "At 0.42m, magnification reaches 1:10 with 0.27m working distance including lens hood.Autofocus Behavior\n\nFocus speed measures approximately 0.5 seconds from infinity to 0.42m.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Testing revealed very good repeatability at 98.5% accuracy over 40 shots with no focus variation from near to infinity distances.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Dust and moisture resistance is integrated at multiple points, with internal focus preventing dust ingestion during focusing.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "And as expected from a modern lens, the front section of the lens does not rotate when focusing, which.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "There&rsquo;s an autofocus/manual focus switch, and there&rsquo;s the focusing ring.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "have benefited from a vibration reduction switch (even though it would only control the camera&rsquo;s in-body image stabilization system) and perhaps a focus limiter switch..",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 4,
+        "neu": 4,
+        "neg": 1,
+        "total": 9,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Weather SealingThe lens features rubber grommet sealing at the lens mount plus additional weather-sealing throughout construction, comparable to professional Nikon lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Beneath the simple exterior is a high-performance lens with impressive build quality and optics..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "build quality and handling characteristics, and compare it head-to-head against alternative lenses that you may be considering.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting reaches approximately 1EV at f/1.8, improving markedly by f/2.0 and becoming negligible by f/4.Bokeh Characteristics\n\nOut-of-focus highlights exhibit onion ring and orange peel texture artifacts depending on aperture and bokeh ball size.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Stopping to f/5 renders the lens sharp across the frame.Aberrations & Distortion\n\nLateral chromatic aberration and distortion receive automatic in-camera correction.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "However, longitudinal chromatic aberration appears as noticeable green rings around bokeh at wide apertures — a notable weakness compared to the Z 50mm f/1.8 S.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Point light sources remain circular at f/1.8 center-frame but deform to cat-eye shapes at the frame edges.Overall Assessment\n\nThe review assigns an 85% overall score, rating it highly recommended for Nikon Z users as a sharp, versatile, well-made lens — though it cannot match the Z 50mm f/1.8 S's…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Key Optical Limitations\n\nThe review identified relatively strong LoCA visible when used wide open and distracting bokeh in farther background areas as notable drawbacks.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Click the menu below to go to &ldquo;Optical Performance&rdquo;: Table of Contents About Nasim Mansurov Nasim Mansurov is the author and founder of Photography Life,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "writing content for Photography Life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Wildlife Photography Portraiture Post-Processing Advanced Tutorials Start Your Shopping Here Photography Life is an independent website with no third-party ads!",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Construction & Physical Specs\n\nThe Nikon Z 35mm f/1.8 S lens features 11 elements arranged in 9 groups with a 62mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "35mm, ISO 64, 1/30, f/10.0 Similar to other Z-series lenses (including the pro-grade Nikon Z 24-70mm f/2.8 S ), the filter thread of the Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "makes it easy to use such filters as polarizing and variable ND filters.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 4,
+        "neg": 1,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens hood is 48mm deep, 89mm diameter, and reversible for transport.Close Focus Performance\n\nMinimum focus distance is 0.25m (9.8 inches) with magnification of 1:5.3 in autofocus, achievable to 1:4.8 with manual focus.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The 35mm focal length is famously useful for travel photography, street photography, and event photography.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "large side for a modern 35mm f/1.8 lens.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "The lens has an internal-focusing design, and there are a total of six separate rubber rings within the lens.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "I wish that Nikon had at least added a custom function button and an additional customizable ring to the lens.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "On the bright side, Nikon decided to go with a very large focusing ring, which is great for handling.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens produces a gentle whirring that remains inaudible outdoors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+            "weight": 0.75,
+            "quote_excerpt": "Vibration Reduction: No Internal Focusing: Yes Control Rings: One (focus ring) Function Button: None Focus Motor: Stepping motor Minimum Focus Distance: 25 cm (9.8 inches).",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 67,
+      "evaluated": 22,
+      "non_evaluative": 45,
+      "non_evaluative_breakdown": {
+        "non_claim": 45
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "67 examined · 22 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 1,
+      "neu": 0,
+      "neg": 0,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+          "source_type": "reviewer_blog",
+          "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+          "weight": 0.75,
+          "quote_excerpt": "S lens has remained so popular over the years.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+      "title": "Nikon Z 35mm f1.8S review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T03:08:24.413116+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+      "title": "Nikon Z 35mm F1.8 S Review | DPReview",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T03:08:24.413124+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+      "title": "Nikon Z 35mm f/1.8 S Review",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T03:08:24.413128+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/nikon-35mm-f1-8/",
+    "reddit": "Nikon 35mm f1.8\n\nSynthesized from 3 reviewer sources for Nikon 35mm f1.8. Build draws the most discussion: 4 positive, 4 neutral, and 1 negative across 9 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/nikon-35mm-f1-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon 35mm f1.8**\nSynthesized from 3 reviewer sources for Nikon 35mm f1.8. Build draws the most discussion: 4 positive, 4 neutral, and 1 negative across 9 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/nikon-35mm-f1-8/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Nikon 35mm f1.8 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Nikon 35mm f1.8. Build draws the most discussion: 4 positive, 4 neutral, and 1 negative across 9 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/nikon-35mm-f1-8/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

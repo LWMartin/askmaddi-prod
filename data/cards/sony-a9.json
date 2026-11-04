@@ -1,0 +1,3373 @@
+{
+  "card_version": "1.0",
+  "card_id": "sony-a9",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Sony a9",
+    "brand": "Sony",
+    "model": "a9",
+    "sku_alt_names": [],
+    "category": "body",
+    "subcategory": "mirrorless",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/00/s/ODkwWDExOTE=/z/msEAAOSwyt9Z5LwP/$_57.JPG?set_id=89040003C1",
+    "image_source": "ebay_catalog"
+  },
+  "pricing": {
+    "msrp_usd": null,
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 813.0,
+        "refurbished": 1150.25,
+        "open_box": 1799.0
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 33,
+      "price_updated_at": "2026-11-04T10:12:46.507937+00:00"
+    },
+    "price_updated_at": "2026-09-24T04:14:24.535009+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-24T04:14:24.518277+00:00",
+    "last_built": "2026-09-24T04:14:24.518277+00:00",
+    "last_checked": "2026-09-24T04:14:24.518277+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "classifier-v1",
+    "build_version": "stage6-v0.2"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "burst_buffer": "low",
+      "autofocus_body": "low",
+      "mount_compat": "medium",
+      "evf_lcd": "low",
+      "video_capability": "low",
+      "generation_context": "low",
+      "connectivity": "low",
+      "battery_life": "low",
+      "sensor_performance": "low",
+      "handling": "low",
+      "image_quality": "low",
+      "dimensions": "low",
+      "stabilization": "low",
+      "build": "medium",
+      "price": "low",
+      "weight": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "burst_buffer",
+      "display_name": "Burst & Buffer",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 9,
+        "neu": 63,
+        "neg": 6,
+        "total": 78,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It'll accurately focus almost anywhere on the frame and shoots long bursts of 24 Megapixel images at up to 20fps in complete silence,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "employs a fully electronic shutter to allow fast, silent and vibration-free shooting, shutter speeds up to 1/32000, and electronic composition with no blackout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "speeds allow the A9 to deploy an anti-distortion shutter which claims to eliminate rolling shutter artefacts which have previously plagued electronic shutters.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "close to the A7 Mark II bodies with a lockable mode dial (albeit now lacking frivolities like panorama or scene presets), a shutter release with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "hold it, but these can include the exposure, AF and drive mode, even specific shutter, aperture or AF area settings.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "rival DSLRs which can&#8217;t help but present momentary blackout between frames.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "issues with electronic shutters and artificial lighting, so perhaps Sony&#8217;s just being cautious.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with the electronic shutter, but in the meantime there&#8217;s the traditional mechanical shutter option for use with artificial and flash lighting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "contrast, if you shoot with an EOS 1Dx Mark II with C.Fast or a Nikon D5 with XQD, you&#8217;ll be clearing even full buffers in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For professional shooters who need a camera that remains fully responsive and accessible at all times, even after shooting a hundred.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "During a solid day&#8217;s shooting with the A9, I fired-off a large number of 20fps bursts with the.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "electronic shutter, along with several minutes of 4k video, some Wifi and Bluetooth connectivity, a handful of mechanical shutter images and a great deal of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to continuous autofocus and burst shooting around, exploiting the benefits of an electronic shutter system more than any other company to date.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "shutter allows the A9 to shoot long bursts of 24 Megapixel images at up to 20fps in complete silence, without any vibrations, at shutter speeds.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A handful of other recent cameras have also exploited electronic shutters for fast burst shooting, most.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 4000 ISO &nbsp; Electronic shutters have always been able to shoot in silence at high shutter speeds and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "is what allows it to minimize the traditional risks of skewing from a rolling-shutter while also delivering a live image while shooting with no blackout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony also reckons its banished previous limitations on dynamic range when shooting electronically, although I should note it does limit the.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Sony A9 shooting remotely at 20fps with FE 16-35mm &nbsp; &nbsp; &nbsp; The ability.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to shoot silently at fast speeds with effective continuous autofocus allows you to capture shots at times that were literally out-of-bounds for traditional mechanical shuttered.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Traditionally, a photographer would have to wait for contact with the ball before they could start shooting, but now with the A9&#8217;s silent electronic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "shutter they can start shooting at the top of the back-swing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Of course many mirrorless cameras have offered silent electronic shutters before, but the difference here is the additional benefit of fast bursts,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "shutter option (sensibly deployed with an electronic first-curtain only by the way), it&#8217;s mainly reserved for compatibility with flash and other artificial lights, or to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you choose to shoot continuously with the shutter manually set to mechanical, you&#8217;re looking at the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Set the shutter type to Auto and the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s clear Sony is sufficiently confident about the performance of the electronic shutter on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the A9 that it&#8217;s effectively the default for burst shooting unless you go out of your way to circumvent it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 1600&nbsp;ISO &nbsp; Whichever shutter you select on the A9, you&#8217;ll be using.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So specifications out the way, how does the autofocus and burst shooting come together on the A9 in practice?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; &nbsp; I almost exclusively shot with the electronic shutter and the Continuous High burst speed of.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "initial tests, but I was more sceptical over the electronic shutter experience.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I also found the Shoot Timing Display option useful, which indicated the buffer remaining.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "an electronic shutter sound, although of course if you&#8217;re at a discreet event like a wedding or presentation, it&#8217;s really nice to shoot silently.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; If you&#8217;re familiar with electronic shutters you&#8217;ll already know about the silence, lack of vibration and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "super-fast shutter speeds (up to 1/32000 on the A9), but you&#8217;ll also know about their limitations so far.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reduced dynamic range, some restrictions involving artificial lighting and worst of all, the risk of rolling shutter skewing artefacts.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "will make or break the whole concept of shooting electronically.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "First things first: when set to the electronic shutter the A9 will limit the maximum.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "sensitivity to 25600 ISO (versus 204800 ISO on the mechanical shutter) and also appears to disable any kind of flash sync whether via the hotshoe.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In terms of my initial tests, I didn&#8217;t personally notice any compromise in dynamic range or noise compared to the mechanical shutter,.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As far as the rolling shutter is concerned, I tried making some very fast.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "pans with the A9 at a variety of shutter speeds from 1/2000 up to 1/32000 and found evidence of skewing on vertical lines, like fencing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: examples of rolling shutter when panning very quickly &nbsp; To test the A9&#8217;s continuous shooting in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In each case I used a shutter speed of 1/500, a sensitivity.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "drive speeds with autofocus for each of the two shutter types: 20, 10 and 5fps with the electronic shutter or 5, 5 and 2.5fps with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Note if you&#8217;re using adapted A-mount lenses with the LA-EA3 adapter, the fastest burst speed with autofocus on the electronic shutter falls.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Also note the fastest speed of 20fps is not.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to be shooting at a shutter speed of 1/125 or faster.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Starting with the electronic shutter with the quality set to JPEG Fine and the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "drive set to High, I fired-off 363 frames in 18.19 seconds for a speed of 19.95fps.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "10.2 seconds for a speed of 12fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "seconds for a rate of 19.95fps, again confirming the A9&#8217;s top-speed as quoted.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I&#8217;ll also add that when switching to the mechanical shutter, the A9&#8217;s buffer clears in real-time for.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "JPEG or RAW, effectively allowing you to shoot for as long as you like &#8211; albeit at the much slower speed of 5fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Meanwhile the S&amp;Q mode lets you set a video capture frame rate and an output frame rate for playback,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The Alpha A9 offers the choice of two shutter types: a traditional.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "mechanical shutter (with an electronic first-curtain) or a fully electronic shutter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "As noted earlier, you can either manually select the desired shutter type, or let.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the camera work it out in Auto mode; if the shutter type is set to Auto, the A9 will select the mechanical shutter for single.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "drive and the electronic shutter for all continuous drive modes.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The electronic shutter is required if you want to shoot in silence, without vibration and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s available with shutter speeds between 30 seconds and 1/32000 and at sensitivities.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The mechanical shutter is available for greater compatibility with flashes and artificial lighting, but reduces the burst speed to 5fps with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s available at shutter speeds between 30 seconds and 1/8000, but also supports Bulb exposures and a flash sync.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you&#8217;re shooting in three or five frames, you can choose 0.3 to 3EV increments, and when shooting nine frames,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "also focal-length aware, so as you mount &#8211; or zoom to &#8211; longer focal lengths, the minimum shutter speed is automatically raised.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "fitted the FE 24-70mm f2.8 zoom and with the standard Auto ISO setting found it selecting a minimum shutter of 1/30 at the 24mm end.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "You can also set the minimum shutter speed the system&#8217;s allowed to use from 1/16000 down to 30 seconds, or use an automatic.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Slow or Slower, allowing it to deploy slower shutters in order to enjoy lower ISOs and better quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "three images at the desired interval and combines them in-camera into a single JPEG file, and you can trigger it with a single shutter press.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "tap through menus to offer silent adjustments while filming like Panasonic does.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Once you&#8217;re remote-controlling your camera, you&#8217;ll be able to see what it sees, adjust the shutter speed and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "This too has to be unlocked using a button on the left side.The top right dial still allows you to change exposure mode like earlier models, with the addition of a slow motion S&Q video option and now 3 customizable modes so you can quickly switch to your favorite settings for different shooting…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "I would advise using one of these to easily change the shutter from electronic to mechanical.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "And in real-life shooting, you can often get even more shutter actions out of it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Thanks to the RAM on the back of the sensor, this camera can autofocus blazingly fast even in low light with a rating of -3EV with a f/2 lens.The fast 20fps burst rate is only available if you shoot JPEG and RAW compressed and while using the electronic shutter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "With the mechanical shutter, you're down to 5fps but thanks to the LSI buffer, at least you'll be able to shoot until infinity without waiting for the camera to write to the SD card.The autofocus uses 693 on-sensor PDAF points covering a massive 93% of the sensor as well as 25 contrast detection…",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.936,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "It&#8217;s clear Sony is sufficiently confident about the performance of the electronic shutter on.",
+        "source_id": "cameralabs-sony-alpha-a9-review",
+        "url": "https://www.cameralabs.com/sony-alpha-a9-review/"
+      }
+    },
+    {
+      "axis_id": "autofocus_body",
+      "display_name": "Autofocus",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 16,
+        "neu": 32,
+        "neg": 6,
+        "total": 54,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF system features 693 AF points spread across 93% of the frame, and operates at 60fps; Sony describes the AF speed as 25% faster than.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the viewfinder hump which previously lay empty on all A7 bodies is now home to new dedicated dials for the drive and autofocus modes..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Finally you can directly dial between single AF, continuous AF or manual focus (as well as DMF), or between single drive, self-timer, bracketing or the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "just underneath: a new joystick for positioning the AF area.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to find it here as it makes positioning the AF area so much easier than clicking through the menus of previous models &#8211; and there&#8217;s.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I frequently find myself switching between groups of settings &#8211; for example going from Wide Area AF with Continuous AF to Flexible Spot with Single.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF system, but the detail remains high and importantly when shooting with the electronic shutter, there&#8217;s no lag or blackout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "On the Alpha A9 you can now tap to reposition the AF area if desired, tap to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "facility either (although to be fair when composing through the viewfinder, the AF joystick is a more preferable way to adjust the AF area).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "it with Sony&#8217;s best autofocus system to date, embedding a whopping 693 phase-detect AF points across 93% of the full sensor area.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the previous A7r Mark II which embedded 399 phase-detect AF points across 45% of its sensor area and it&#8217;s clear how far Sony&#8217;s progressed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the A9 can deploy the confidence and speed of phase-detect autofocus across almost the entire sensor, giving it the kind of frame coverage enjoyed by.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "array of AF points sounds overwhelming compared to the competition with Nikon&#8217;s D5 employing 153 AF points and Canon&#8217;s EOS 1Dx Mark II offering a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But as always it&#8217;s important to understand not all AF points are created equal: a large number of the AF points on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "stuck with the simplest type of AF point, sensitive to a single axis only; interestingly Olympus is the only current mirrorless manufacturer to deploy cross-type.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "by the A9 is autofocus coverage.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "When shooting through their optical viewfinders, DSLRs employ separate phase-detect AF modules which concentrate their AF points into lozenge.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In contrast, the A9&#8217;s phase-detect coverage occupies 93% of the frame, allowing it to autofocus quickly and confidently track subjects even as they approach.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Dual Pixel CMOS AF allows the 1Dx Mark II to autofocus in Live View across a similar area of the frame to the A9, it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Face Detection AF, Above: full images, below: 100% crops.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Face Detection AF, Above: full images, below: 100% crops.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Face Detection AF, Above: full images,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony also quotes the new AF system as working at light levels down to -3EV with an f2 lens, beating.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "autofocus as this was previously an area where it trailed behind the competition.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 6400&nbsp;ISO &nbsp; The A9&#8217;s phase-detect system is complemented by Sony&#8217;s usual 25 contrast-detect AF areas for alternative confirmation.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like most recent Alpha bodies, the A9 employs phase-detect AF to get close in Single AF modes before zeroing-in with a contrast-based wobble,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "while in Continuous AF it relies completely on the phase-detect AF system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In terms of AF areas, the A9 gives you the choice of Wide.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(which chooses for you across the entire array), Zone (which allows you to concentrate the AF on one of nine smaller areas), Center, Flexible Spot.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "(which lets you manually position a single AF point of three sizes), and Expand Flexible Spot (which works like Flexible Spot set to the Small.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If AF-C is enabled, you can also choose Lock-on AF which tracks a subject based on.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Lock-on AF is available with Wide, Zone, Center, Flexible Spot (small, medium or large), or Expand Flexible Spot.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If Face Detection is enabled, it over-rides any of the AF area modes and focuses on the nearest human face.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "instead, wherever it is on the frame, and in AF-C mode it&#8217;ll do a good job at tracking people across the frame.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The AF performance was tremendous, the burst speed impressive and the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "On previous Sony mirrorless bodies, you were forced to enter menus to adjust the drive mode, AF mode and AF area;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "repositioning an AF area was also frequently convoluted.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF area or zone with ease.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "AF to a centre point with single AF and single drive.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 5000 ISO &nbsp; In terms of AF areas, I generally found myself sticking with Expand Flexible Spot or Zone for approaching subjects.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Meanwhile Lock-on AF worked well with the single area modes, allowing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "you to positively identify the desired subject before then letting the camera track it from that point onwards.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I was also very impressed with face detection which successfully identified and tracked human subjects even when they were tiny on the frame, and often.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 2500&nbsp;ISO &nbsp; Whatever AF area I used, I was struck by the expanded coverage of the system..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "know it will fall within the best-performing section of the AF system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like the A6500, spot-metering can also now be linked to the active AF area if desired.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "photographers, particularly birders, who frequently use spot-metering to expose for a potentially small and dark subject against an overcast sky or dim background.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "majority of cameras, spot metering may provide the exposure birders desire, but it&#8217;s generally locked to the center of the frame, which may rarely match.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "What you really want is the spot metering to follow the active AF area as it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "was the first mirrorless company I&#8217;ve come across to include spot metering linked to the AF point on the PEN F and OMD EM1 Mark.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "fast burst shooting, will make the A9 very attractive to bird photographers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "improves continuous AF tracking on moving subjects and when zooming, and improves the general stability of the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony's 4D focus works amazingly well, but unless you're used to all the different focus modes and particular uses for each mode, there is quite a learning curve.The Sony A9 sensor has not only been tweaked for sports performance, it has been built for it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The showstopper is the new 4D autofocus system with 693 AF points covering 93% of the sensor that can track subjects as well as exposure reading at 60 frames per second and fast, up to 20fps shooting with zero EVF blackout.But these are all minor annoyances.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.963,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "The showstopper is the new 4D autofocus system with 693 AF points covering 93% of the sensor that can track subjects as well as exposure reading at 60 frames per second and fast, up to 20fps shooting with zero EVF blackout.But these are all minor annoyances.",
+        "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+        "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 44,
+        "neg": 0,
+        "total": 46,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the Sony Alpha a9 at Amazon , B&H , Adorama , or Wex .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "See my Sony A7r III review , Sony A7.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the grip), as well as employing six rather than four screws on the lens mount to better-handle large lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon EOS 1Dx Mark II and Nikon D5 as its peer group.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But while Sony hasn&#8217;t mucked about too much with the build and design of its full-frame mirrorless, it has made a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "from your phone as you shoot &#8211; I&#8217;ll detail these wireless capabilities later, but should point out neither the Canon EOS 1Dx Mark II nor.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "SD card slots and like Fujifilm&#8217;s XT2 and the Olympus OMD EM1 Mark II, only one of them will exploit the extra speed of UHS-II.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "their pro bodies, Canon and Nikon offer various combinations of Compact Flash, C.Fast or XQD card slots, and the latter pair in particular are extremely.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "approach the 1210 quoted by Canon for the EOS 1Dx Mark II.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The adapter also features tripod threads, allowing it to be mounted on a video cage, making it a handy accessory.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Sony A9 with FE 70-200mm f2.8 GM at 200mm..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Sony A9 and FE 100-400mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Sony A9 with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 200mm f2.8..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 200mm f2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 200mm f2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 200mm f2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Sony A9 with FE 70-200mm f2.8 GM at 200mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A9 with FE 70-200mm f2.8 GM at 200mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "1/2000, f2.8, 5000 ISO &nbsp; Like other recent Sony bodies, there&#8217;s also Eye.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 70mm f2.8..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM at 70mm f2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In terms of lenses I mostly shot with the Sony FE 70-200mmm f2.8 GM, but also tried the new 100-400mm GM as well as.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "pro workhorse and a viable alternative to Canon and Nikon.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Sony A9 with FE 70-200mm f2.8 GM at 200mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Sony A9 with FE 70-200mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Sony A9 at 20fps with FE 70-200mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony A9 at 20fps with FE 70-200mm f2.8 GM.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or Nikon D5 when they&#8217;re fitted with their respective fastest card technologies.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I feel there&#8217;s an opportunity here for Sony to develop an accessory for.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like all Sony cameras, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "at B&amp;H Recent Posts Canon RF 14mm f1.4L VCM review Nikon Z 24-105mm f4-7.1 review so far Fujifilm instax mini EVO Cinema review Sony A7.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "TT-224 mini tripod review Sony RX100 VII review Like my reviews?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Best Canon Lenses Best Fujifilm lenses 2023 Best Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon Laing Support Camera Labs Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera reviews Fujifilm camera reviews Nikon camera reviews Olympus camera reviews Panasonic camera reviews Sony camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reviews All Camera reviews Lens reviews Canon lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera Best Camera Gifts and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Accessories Best lenses Best Canon Lenses Best Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "I recently upgraded my equipment, as I had been shooting on my own Canon 750D (which I used until it broke) and borrowing equipment from my university.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "My new equipment consists of a Sony A7 V and a 70-200mm F4 Macro II.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "My dream set up would be to have a collection of lenses, such as a 400mm f2.8 and a 50-150mm f2, with either a Sony A9 iii or A1 ii body.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens mount also has two extra screws added, I can count six now, probably because Sony figures that a sports camera will use larger and heavier lenses.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.913,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "evf_lcd",
+      "display_name": "EVF & LCD",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 6,
+        "neu": 20,
+        "neg": 3,
+        "total": 29,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "without any vibrations, and with no viewfinder blackout either.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "button, Ethernet port and a higher resolution quad-VGA (1280&#215;960 pixel / 3686k dot) OLED electronic viewfinder with a 60 or 120fps refresh and again no.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "electronic viewfinder delivers the same 100% coverage with a large 0.78x magnification as the A7r Mark II, but the OLED panel now features &#8216;Quad VGA&#8217;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "distant grill patterns, and you&#8217;ll notice the A9&#8217;s viewfinder is crisper and better avoids any kind of moire, fuzziness or other electronic artefacts.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "deal for the A9 as previous mirrorless cameras often suffered from lag between frames, but now both it and any blackout between frames has been.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "should also mention screen brightness.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Previous Sony cameras really benefitted from boosting the screen brightness for outdoor use with the Sunny Weather option, but this.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony quotes approximately 480 shots with the viewfinder or 650 with the screen under CIPA conditions, which is a big improvement over the NP-FW50.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "in the A7r Mark II which only offered 290 shots with the viewfinder or 340 shots with the screen.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "you can achieve with a pro DSLR using its optical viewfinder &#8211; especially when you consider the hefty batteries accommodated by the built-in portrait grips.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "up to 1/32000, and with no viewfinder blackout either.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A7r Mark II&#8217;s fairly leisurely rate of 5fps with the usual viewfinder blackout and lag between frames.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "these are delivered with no lag or blackout in the viewfinder.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the A6300 and A6500, but with a much larger full-frame sensor area and the added benefits of zero blackout and 20fps bursts.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "blackout-free viewfinder while slightly odd at first, quickly proved addictive.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or viewfinder blackout; indeed if you don&#8217;t have any of the shooting aids enabled, you can find yourself accidentally shooting a bunch of frames without.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "viewfinder that shows a constant live image without any blackout or lag.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I filmed the following burst though the A9&#8217;s viewfinder to indicate what the absence.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Notice the absence of viewfinder blackout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "enjoy both the top shooting speed of 20fps without the viewfinder blackout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "viewfinder blackout and lag between frames.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "on the touchless shutter capability of earlier models which let you use the viewfinder sensor as a hands-free Bulb trigger.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "from the A6500, Entire Screen Average and Highlight.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or high frame rate 1080p, making the A9 much more usable than earlier Alpha mirrorless bodies which disabled it, making it hard to the view.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "support for the maximum screen brightness when filming 4k, and the convenience of focus-pulling by touch.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The biggest surprise is the addition of a joystick, that can be used for both navigating the menu system and to move AF points when you're in an appropriate Focus Area setting.Both EVF and screen have received upgrades, and the latter now has a sort of touch screen functionality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The screen can hinge downward 45 degrees and upward 90 degrees, and tilting it now deactivates the EVF sensor.The electronic viewfinder now has a resolution of 1,280 x 960 px where the ILCE-7RM2 had 1,024 x 768 px.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The refresh rate is at 120fps if you turn live view off, if you leave it on, it halves to 60fps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "The magnification is still of 0.78x allowing for a clear view of the scene with no blackout frames if you use the electronic shutter.The Sony A9 has two slots, one in UHS-II format, the other conforming to the old UHS-I standard.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.862,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "video_capability",
+      "display_name": "Video Capability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 21,
+        "neg": 1,
+        "total": 25,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the full-frame or Super 35 frames, or 1080p at up to 120fps.&nbsp;For my in-depth review, I tested the A9 at multiple events over a period.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "was greyed-out when filming 4k or 1080 at high frame rates.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "available when shooting 4k or high frame rate 1080p &#8211; a very important improvement.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Switching to compressed RAW (which should support the full 20fps speed), I fired-off 220 RAW frames in 11.03.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; As with earlier models you can start recording.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "allowing the A9 to interpret footage in-camera &#8211; for example, capturing 1080p at the highest 120fps, but interpreting it for playback at 24fps for a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "S-Log, but I am pleased to see Sony addressing some of the needs of its pro sports shooters sooner rather than later and look forward.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;ll shoot 4k UHD with full-frame or Super-35 coverage at 24, 25 or 30p (and in either 60 or 100Mbit/s), 1080p at up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "to 120fps for slow motion, it sports headphone and microphone jacks, has twin card slots for security, outputs clean 8-bit video over HDMI, has a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and therefore limited opportunity to capture flat footage for subsequent matching and grading.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But while both cameras offer the option to film 4k in full-frame or cropped Super-35 formats, the A9 does the former in a superior way..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Previously the A7r II performed some basic line-skipping to turn its huge 42 Megapixel frames into 4k resolution when filming with the full-frame, with the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "result that footage looked nowhere near as good as the cropped Super-35 mode; so on the A7r II, you&#8217;d shoot 4k in the crop mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a crop format is also a benefit the A9 and A7r II enjoy over the A7s II which can only film 4k in the full-frame.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I should also mention that the Sunny Weather option (which brightens the screen) is now available when filming in 4k.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sample movie filmed with a Sony Alpha A9 in 4k full-frame in 30p.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "switch the A9 to 1080 / Full HD, to access frame rates up to 120p (or 100p for PAL regions).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "frame rates for footage that&#8217;s interpreted in-camera (albeit without sound recorded).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Here&#8217;s a clip filmed in 120p and slowed to 24p in-camera using S&amp;Q.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Alpha A9 in the 1080p slow motion, using S&amp;Q mode to capture footage at 120fps and interpret it to 24fps in-camera; there&#8217;s no audio here..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "no frame rates higher than 120p here, even if you accept a lower resolution.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Cinema 4k on its &#8216;consumer&#8217; cameras, perhaps a limitation of the XAVCS codec or a feature differentiation with the broadcast line.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of having the choice of 4k in cropped or full-frame formats with no compromise in quality, the security of twin card slots, the bigger battery,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sample movie filmed with a Sony Alpha A9 in 4k full-frame in 24p at.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sample movie filmed with a Sony Alpha A9 in 4k full-frame.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 9,
+        "neu": 5,
+        "neg": 4,
+        "total": 18,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony also used the A9 to debut better controls and a much improved battery that banishes issues with.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of one year to see what it could deliver in practice, and crucially see how it compares to its established pro rivals from Canon and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "version III) delivers the highest resolution images for the best photo quality; the A7s (currently in version II) is designed for the best quality video,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "But thankfully Sony has responded to criticisms and feedback over those models, enhancing.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "pitching the A9 against the EM1 Mark II; with an asking price of over twice the Olympus and professional aspirations to boot, it sees the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a serious upgrade in usability, albeit one that should have always been there on the A7 series.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "improvement over the A7 bodies.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "appears superficially similar to previous A7 Mark II bodies, but there&#8217;s two important upgrades: the viewfinder is now higher resolution and the screen is now.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In a surprise upgrade though, the A9&#8217;s screen becomes the first full-frame mirrorless camera from Sony to be touch-sensitive &#8211; hallelujah!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Both are standard features on the 1Dx Mark II and D5, so necessary additions.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "So it&#8217;s out with the old NP-FW50 which powered so many older Sony bodies, and in with the new NP-FZ100 which sports over double the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "UHS-II or USB-2, Sony has made a significant number of improvements to the A9 over the A7 Mark II series: you&#8217;re getting a much bigger.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "They add up to a hugely improved camera over its predecessors, but again most of the improvements were necessary to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Alpha A9 shooting modes Sony&#8217;s Alpha A9 may look a lot like the earlier A7r Mark II, but a number of subtle design and control.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "updates make it quite a more serious camera in practice.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "It&#8217;s worth remembering its pro rival, the Canon EOS 1Dx Mark II as well as the Lumix GH5 at less.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "same as most of the competition, but in a critical upgrade over earlier Sony bodies, you no longer need to sign into PlayMemories and update.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Where other manufacturers seem content with basically upgrading the sensor and a few minor cosmetic changes, Sony seems to be able to pull a totally new sensor with unique capabilities out of their hat with each new generation.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.944,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "connectivity",
+      "display_name": "Connectivity",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 14,
+        "neg": 2,
+        "total": 16,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "at 120fps, and effective Wifi with Bluetooth.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sadly though Sony&#8217;s not taken the opportunity to upgrade the USB port speed from 2 to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; In a first for a Sony mirrorless though, the A9 features a third flap, behind which you&#8217;ll find a PC Sync port.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and also supports secure FTP connections; LAN ports have also become a common way for pro sports photographers to quickly deliver images from events, so.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like earlier Alpha mirrorless bodies the A9 is equipped with Wifi.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sync port for connecting to external lighting, but both were disabled on my test sample when using the electronic shutter.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DSLRs do not support USB charging.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "2 in response to feedback from pros, adding the ability to input ITPC data and the camera serial number to images, display the wired LAN.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony Alpha A9 Wifi, NFC and Bluetooth The Sony Alpha.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "A9 has built-in Wifi with NFC to aid negotiation with compatible devices, and in a feature first seen on the A6500, now also includes Bluetooth.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "transfer JPEG images onto an iOS or Android smartphone using a free app, and also remote control the camera with your phone or tablet.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "sign-up for a PlayMemories account, connect the camera itself to the internet and update its internal apps just to access the full remote control facilities..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Full sized 24 Megapixel JPEGs take a few seconds to copy over; like most Wifi camera apps, you can&#8217;t transfer.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "You simply pair the camera and phone like any other Bluetooth accessories, after which they maintain a low-power link, requesting and embedding.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "camera and phone, by enabling Bluetooth on the former and searching for it on the latter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "NFC phones automatically fire-up remote control or image transfer depending on whether the camera&#8217;s in record or playback when touched against the handset.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "battery_life",
+      "display_name": "Battery Life",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 11,
+        "neg": 2,
+        "total": 15,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "battery with 2.2x the life of W batteries, an AF joystick and touchscreen, along with dedicated drive mode and focus mode dials, an AF ON.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like the A7r Mark II you can not only charge the camera over USB, but also power it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "poor battery life compared to shooting with the optical viewfinder on a DSLR.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The result has been most mirrorless shooters carrying multiple batteries.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with both Olympus and Panasonic developing larger capacity batteries for their flagship bodies and now at last Sony has done the same for the A9..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "One battery ended up lasting me the entire day with the final shutter count reading just over 8000 images &#8211; see photo.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; &nbsp; Sony provides the A9 with an external AC charger (taking about 1.5hrs to fully.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "charge) but it can also still charge the battery internally over USB if preferred (taking 2.5 hours for a full charge).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "cameras, the A9 can additionally exploit USB as a power source when shooting, whereas all others limit it to charging only.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "While the A9&#8217;s expanded battery is impressive for a mirrorless camera, its figures of course pale to the numbers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "VG-C3EM grip accessory for the A9 which allows it to use two batteries, doubling the total life to around 1000 shots which actually begins to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "can accommodate up to four NP-FZ100 packs, while transferring power to the camera via either a stalk that fits into the A9&#8217;s battery compartment, or.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I shot over 8000 frames with the camera (on a single battery charge too, see photo below) and.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: the final frame count after a day&#8217;s shooting on a single battery charge: over 8000 photos.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "You can select if you want to use the second slot as a backup for the first, if you want to save RAW and Jpeg to separate cards, or photo/video to separate cards.The new NP-FZ100 battery of 16.4 Wh is now capable of between 400 and 600 shots, quite an improvement on the older batteries on paper.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.933,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 8,
+        "neg": 3,
+        "total": 11,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Announced in April 2017, it features the first full-frame stacked CMOS sensor which includes integrated memory and 20 times faster data readout compared to.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The speed of the sensor coupled with the front-side LSI also allows Sony to claim impressive buffer depths of 241.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of 400 ISO and recorded onto a fast Sony UHS-II card fitted in the slot which exploits the full speed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "speed of 1/250, along with an extended sensitivity range up to 204800 ISO.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and misses out on the scene presets and panorama modes of the other models in the range.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "with a slightly cropped frame with 1.6x the data.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Fast action requires fast shutter speeds and hence higher ISO levels, so the Sony engineers have customized the sensor to perform better at high ISO with less noise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "This customization for better performance at high ISO comes at the expense of dynamic range and higher noise levels at lower ISO.I would say that at base ISO, you'll get the same sensor performance as the original A7.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "As usual, above ISO 100, you'll gradually see noise increasing but interestingly, it dips down again above ISO 600.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "In fact, ISO 800 appears to have just a bit less noise than ISO 200.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Another thing you might notice is that there is less color shift at mid to high ISO than you'd expect.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.545,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 4,
+        "neg": 1,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The handling is so assured, it's easy to forget the A9 additionally sports built-in stabilisation, decent 4k video, 1080p.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I&#8217;m over the days of lugging around a heavy pro DSLR and much prefer operating with a more nimble system, but equally I know many.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "number of necessary and very welcome changes to the controls and day-to-day handling of the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "More importantly the C3 custom button now joins the Menu button on the left side to make room for a repositioned movie record button.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like other cameras with twin card slots, you can configure the camera to seamlessly overflow from one to another when the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the positive side, at least a Sony mirrorless camera now has twin card slots &#8211; that&#8217;s still progress.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "battery, twin card slots, a more detailed viewfinder, touchscreen, AF joystick, AF-ON button, drive and AF mode dials, LAN and PC Sync ports, and Bluetooth,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I still hate having to hold a button down to enable it; surely it&#8217;s better to go with a system like Olympus where you can.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "These controls and customisation literally transform the user experience over older Sony bodies that.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Every aspect of the body has been improved upon, from extra dial to change focusing and shooting modes to a new joystick controller to change AF points and new customizable buttons.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.9,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 6,
+        "neg": 2,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "RAW images in a burst, this could be a deal-breaker.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "RAW files or 362 JPEG images when using UHS-II cards.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "To be fair, it&#8217;ll take over ten seconds to fill the A9&#8217;S buffer with compressed RAW images at the top speed of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "a JPEG and keep a RAW as backup.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Set the A9 to JPEG only though and you can apply Toy Camera, Pop Colour, Posterisation Colour,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "aperture (depending on which exposure mode the camera&#8217;s in), tweak the exposure compensation, the sensitivity, white balance and drive mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "my results, sample images and final verdict!",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "I used to think that the reason my images were bad was because I was using an old Canon 750D, but once I took the time to learn the basics properly I saw a massive improvement in my work.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.875,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 6,
+        "neg": 0,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Measuring 127x96x63mm and weighing 673g including battery, it&#8217;s extremely close in size.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "their heft reassuring, especially when coupled with larger lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "I realize the A9&#8217;s body size rules out the larger formats.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "especially Sony ones &#8211; to maintain a compact body size.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "size, but also considers a small area around it).",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "its shape and colour, surrounding it with an elastic frame that changes shape and size depending on where it is in relation to the camera..",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and 1/80 for the 70mm end, which roughly corresponds to accepted wisdom for minimum hand-holdable shutters when the focal length is taken into account.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "stabilization",
+      "display_name": "Stabilization",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Meanwhile there&#8217;s built-in 5-axis stabilisation with five stops of compensation that works with any lens you attach, along with 4k video using.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This makes it easy to follow action even as it moves erratically and also gives the A9 an advantage over the mechanical shutters of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and let the subject approach the edges or corners of the frame, confident the camera will continue to track it effectively.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Like the A6500, the latter can also be adjusted from Standard to Slow, Slower, Fast or Faster, to encourage it to reduce or bump-up.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "For example when shooting static scenes with stabilized lenses (or with the body-based stabilisation), I often set the Auto ISO to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony claims that the 5 Axes stabilization features have also improved from older models.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 3,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony&#8217;s upgraded the build quality a little with greater use of magnesium alloy (now also in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the A9 as being dust and moisture resistant, although wouldn&#8217;t be drawn over specifics or whether it was superior to the A7 Mark II series.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "where possible for the best quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "Firstly, focus on learning your craft and developing the basic skills, as having a nice new camera is all well and good but if you are unable to properly take advantage of your equipment then you will see very little to no improvement in your photography.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+            "source_type": "reviewer_blog",
+            "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony again claims that it is resistant to dust and moisture, though probably not more so than previous models.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.6,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "than half the price both offer 4k at 60p and in the wider Cinema 4k formats too if desired.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices on the Sony Alpha a9 at Amazon , B&H , Adorama , or Wex .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony cameras Tagged under: A9 , Alpha , camera , mirrorless , photography , review , Sony , sports permalink Sony Alpha a9 Check prices.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Check prices at Wex Sony Alpha a9 Check prices at Amazon Like my reviews?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Sony Alpha a9 Check prices at Amazon More Camera Labs.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-sony-alpha-a9-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+            "weight": 0.75,
+            "quote_excerpt": "additional weight and depth is almost entirely down to the new battery and the grip which accommodates it, more about which later.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+            "weight": 0.75,
+            "quote_excerpt": "The post Find inspiration all around you – a Red Bull film and love of extreme sport made me realise photography was my calling.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 588,
+        "high": 588,
+        "anchor": 588,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      },
+      "mount": {
+        "value": "Sony E-mount",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "material": {
+        "value": "magnesium alloy",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29513438",
+        "fetched_at": "2026-09-24T04:14:22.079589+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.mount": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29513438",
+        "fetched_at": "2026-09-24T04:14:22.079589+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      },
+      "specs.material": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q29513438",
+        "fetched_at": "2026-09-24T04:14:22.079589+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Reviewers are most positive about autofocus (30% positive, 59% neutral, 11% negative across 54 claims). Coverage of mount compatibility is mostly neutral: 4% positive, 96% neutral, 0% negative across 46 claims.",
+    "aspect_breakdown": [
+      {
+        "aspect": "burst_buffer",
+        "pos": 9,
+        "neu": 63,
+        "neg": 6,
+        "total": 78
+      },
+      {
+        "aspect": "autofocus_body",
+        "pos": 16,
+        "neu": 32,
+        "neg": 6,
+        "total": 54
+      },
+      {
+        "aspect": "mount_compat",
+        "pos": 2,
+        "neu": 44,
+        "neg": 0,
+        "total": 46
+      },
+      {
+        "aspect": "evf_lcd",
+        "pos": 6,
+        "neu": 20,
+        "neg": 3,
+        "total": 29
+      },
+      {
+        "aspect": "video_capability",
+        "pos": 3,
+        "neu": 21,
+        "neg": 1,
+        "total": 25
+      },
+      {
+        "aspect": "generation_context",
+        "pos": 9,
+        "neu": 5,
+        "neg": 4,
+        "total": 18
+      },
+      {
+        "aspect": "connectivity",
+        "pos": 0,
+        "neu": 14,
+        "neg": 2,
+        "total": 16
+      },
+      {
+        "aspect": "battery_life",
+        "pos": 2,
+        "neu": 11,
+        "neg": 2,
+        "total": 15
+      },
+      {
+        "aspect": "sensor_performance",
+        "pos": 0,
+        "neu": 8,
+        "neg": 3,
+        "total": 11
+      },
+      {
+        "aspect": "handling",
+        "pos": 5,
+        "neu": 4,
+        "neg": 1,
+        "total": 10
+      },
+      {
+        "aspect": "image_quality",
+        "pos": 0,
+        "neu": 6,
+        "neg": 2,
+        "total": 8
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 1,
+        "neu": 6,
+        "neg": 0,
+        "total": 7
+      },
+      {
+        "aspect": "stabilization",
+        "pos": 1,
+        "neu": 5,
+        "neg": 0,
+        "total": 6
+      },
+      {
+        "aspect": "build",
+        "pos": 2,
+        "neu": 3,
+        "neg": 0,
+        "total": 5
+      },
+      {
+        "aspect": "price",
+        "pos": 0,
+        "neu": 5,
+        "neg": 0,
+        "total": 5
+      },
+      {
+        "aspect": "weight",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 335,
+      "evaluated": 100,
+      "non_evaluative": 235,
+      "non_evaluative_breakdown": {
+        "non_claim": 235
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "335 examined · 100 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {}
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "burst_buffer",
+    "highest_rated": "autofocus_body",
+    "lowest_rated": "connectivity"
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-sony-alpha-a9-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/sony-alpha-a9-review/",
+      "title": "Sony A9 review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T04:14:24.523768+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-amateur-photographer-find-inspiration-all-around-you-a-red-bull-film-and-love-of-2026",
+      "source_type": "pro",
+      "reviewer": "Amateur Photographer",
+      "platform": "web",
+      "url": "https://amateurphotographer.com/technique/interviews/find-inspiration-all-around-you-a-red-bull-film-and-love-of-extreme-sport-made-me-realise-photography-was-my-calling-heres-how/",
+      "title": "Find inspiration all around you – a Red Bull film and love of extreme sport made me realise photography was my calling. Here’s how",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T04:14:24.523779+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "wimarys-com-sony-a9-review-step-backward-move-forward",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.wimarys.com/sony-a9-review-step-backward-move-forward/",
+      "title": "Sony A9 Review: A Step Backward To Move Forward | Wim Arys",
+      "publication_date": "",
+      "ingested_at": "2026-09-24T04:14:24.523783+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/sony-a9/",
+    "reddit": "Sony a9\n\nReviewers are most positive about autofocus (30% positive, 59% neutral, 11% negative across 54 claims). Coverage of mount compatibility is mostly neutral: 4% positive, 96% neutral, 0% negative across 46 claims.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sony-a9/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sony a9**\nReviewers are most positive about autofocus (30% positive, 59% neutral, 11% negative across 54 claims). Coverage of mount compatibility is mostly neutral: 4% positive, 96% neutral, 0% negative across 46 claims.\nAll 3 reviews in one place: https://askmaddi.com/cards/sony-a9/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Sony a9 — Reviewed",
+      "description": "Reviewers are most positive about autofocus (30% positive, 59% neutral, 11% negative across 54 claims). Coverage of mount compatibility is mostly neutral: 4% positive, 96% neutral, 0% negative across 46 claims.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/sony-a9/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

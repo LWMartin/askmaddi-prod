@@ -1,0 +1,1409 @@
+{
+  "card_version": "1.0",
+  "card_id": "canon-32mm-f1-4",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "Canon 32mm f1.4",
+    "brand": "Canon",
+    "model": "32mm f1.4",
+    "sku_alt_names": [],
+    "category": "lens",
+    "subcategory": "prime",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/458AAOSwiMBeUm1H/s-l640.jpg",
+    "image_source": "ebay_catalog"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "pre_owned": 488.95,
+        "refurbished": 392.13
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 11,
+      "price_updated_at": "2026-11-04T10:10:16.672057+00:00"
+    },
+    "price_updated_at": "2026-09-25T04:37:50.160761+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-09-25T04:37:50.142156+00:00",
+    "last_built": "2026-09-25T04:37:50.142156+00:00",
+    "last_checked": "2026-09-25T04:37:50.142156+00:00",
+    "source_count": 3,
+    "source_types": {
+      "pro": 3
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "distortion": "low",
+      "vignetting": "low",
+      "chromatic_aberration": "low",
+      "bokeh": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prime is a great general-purpose lens thatâs sharp even at larger apertures, and also ideal for portraits, low light or still-life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and compare the quality with the EF-M 15-45mm kit zoom.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "between them is their maximum aperture, which in turn has a big impact on the quality in low light and the potential for a shallow.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 1,
+          "neu": 3,
+          "neg": 0,
+          "total": 4,
+          "sources": [
+            {
+              "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "system, delivering 51mm equivalent coverage coupled with a fast focal ratio thatâs ideal for shallow depth-of-field effects.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "This so-called standard field-of-view is ideal for general-purpose use, and thanks to the fast f1.4 focal ratio and.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "seven aperture blades and has a closest focusing distance of 23cm.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+              "weight": 0.75,
+              "quote_excerpt": "Manual focus ring without hard stops.Close Focusing & Macro Performance\n\nMinimum focus distance: 0.23 meters.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.75,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 1,
+          "neg": 1,
+          "total": 2,
+          "sources": [
+            {
+              "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "this time with the subject at the closest focusing distance to maximise the effect.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+              "weight": 0.75,
+              "quote_excerpt": "mentioned earlier, thereâs no optical stabilisation and at the time I made this video, no EOS M bodies with sensor-stabilisation either, so youâll need to.",
+              "witness": "firsthand"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": null,
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "how about the build quality of both lenses?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the 15-45mm kit zoom, although none of the EF-M lenses to date go as far as having weather sealing.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite",
+      "face_quote": {
+        "quote_excerpt": "how about the build quality of both lenses?",
+        "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+        "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/"
+      }
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 5,
+        "neu": 15,
+        "neg": 0,
+        "total": 20,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon EF-M 32mm f1.4 STM review | Cameralabs Summary The Canon EF-M 32mm f1.4 STM is a standard prime lens for the EOS M mirrorless.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This eighth native EF-M lens is only the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "third prime in the system so far and has the brightest aperture of them all - suffice it to say itâs a lens the EOS.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "faster than the EF 35mm f2 IS USM, and while it lacks IS, it's smaller, lighter and cheaper especially when an adapter is factored-in.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the Canon EF-M 32mm f1.4 at Amazon , B&H , Adorama or WEX .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "In depth The Canon EF-M 32mm f1.4 STM is a standard.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prime lens for the EOS M mirrorless system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Announced in September 2018 but not widely until early 2019, it delivers 51mm equivalent coverage when mounted.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the eighth native EF-M lens, and only the third prime / fixed focal length model in the system to date; itâs also the fastest.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "itâs possible to adapt one of Canonâs many EF lenses to EOS M bodies, such as the EF 35mm f2 IS USM, the native EF-M.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "f1.4, chances are you already own one of the native kit zooms, like the EF-M 15-45mm on the right.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "or brightest aperture of all the native EF-M lenses.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Hereâs a portrait example, on the left with the 15-45mm at 32mm f5 &#8211;.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the smallest apertures of f11 and now f16, although choosing these will also reveal any marks on the lens or sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "They look fairly similar from the outside, both sharing the same 61mm diameter of all EF-M lenses,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Pages: 1 2 3 4 Published in: Canon lenses , Lenses Tagged under: 32mm , camera , Canon , EF-M , f1.4 , mirrorless.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Best Nikon Lenses Best Micro Four Thirds Lenses 2023 Best Sony lenses 2023 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lenses Fujifilm lenses Nikon lenses Olympus lenses Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon Lenses Best Fujifilm lenses Best Micro Four Thirds Lenses Best Sony lenses All Lens reviews Blog Shopping Buy Gordon a coffee!",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "The lens uses a metal mount and includes a 7-bladed diaphragm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.95,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "The lens uses a metal mount and includes a 7-bladed diaphragm.",
+        "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+        "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 0,
+        "neu": 6,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Check prices on the Canon EF-M 32mm f1.4 at Amazon , B&H , Adorama or WEX.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": ", review permalink Canon EF-M 32mm f1.4 STM Check prices at B&amp;H Recent Posts Nikon Z 24-105mm f4-7.1 review so far Fujifilm instax mini EVO.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon EF-M 32mm f1.4 STM Check prices at WEX Canon EF-M 32mm f1.4 STM Check prices at Amazon Like.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon EF-M 32mm f1.4 STM Check prices at Amazon More Camera Labs Blog Camera reviews Lenses Cameralabs Photography Podcast.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "DSLR Best point and shoot Best vlogging camera Best superzoom camera Best waterproof camera Best Camera Gifts and Accessories Best lenses Best Canon Lenses Best.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Retail Price\n\nApproximately £500 at review publication (March 2019).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "Retail Price Approximately £500 at review publication (March 2019).",
+        "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+        "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "version is a stop faster, not to mention a little smaller, lighter and cheaper, especially when you factor-in the EF adapter (albeit missing out on.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": null
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Both are very light, but the zoom is almost half the weight and inevitably feels more.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "It employs Super Spectra lens coatings to minimize optical aberrations.Physical Specifications\n\nWeight: 235 grams.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.5,
+        "contested": true
+      }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "distortion",
+      "display_name": "Distortion",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion kept to minimum levels expected for this focal length.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This is fairly normal for large aperture lenses and can be mitigated by closing the aperture down a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Next a quick look at diffraction on bright sources of light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting\n\nVignetting is noticeable at the widest apertures but greatly reduced by f/2.8 and practically gone by f/4.Distortion\n\nVery slight barrel distortion, primarily noticeable only in architectural photography.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting: slight at f/1.4 on white subjects, reduced by f/1.8, nearly eliminated by f/2.0.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "chromatic_aberration",
+      "display_name": "Chromatic Aberration",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberration\n\nLateral CA is effectively processed out of JPEGs.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 3,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reasonably close focusing distance, it can also deliver shallow depth-of-field effects making it a great choice for portraits or still-life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you like those nice blurred backgrounds, a lens with a large aperture &#8211; indicated by small f-number.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Hereâs the lens wide-open at f1.4 where the bokeh blobs are.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Longitudinal chromatic aberration appears in high-contrast situations, particularly visible in tree branches against bright skies.Bokeh\n\nBokeh takes a cat's-eye shape at the widest apertures and improves to diaphragm shape by f/3.5.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Bokeh Quality\n\nThe wide f/1.4 aperture produces shallow depth-of-field with smooth, well-rendered out-of-focus areas.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.6,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Above: Here it is at 72mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Construction & Specifications\n\nThe Canon EF-M 32mm f/1.4 STM lens features 14 elements in 8 groups with a 43mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Filter thread diameter: 60.9mm (matching other EF-M lenses).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 8,
+        "neg": 0,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Weighing 235g, measuring 57mm in length and sharing the standard EF-M barrel diameter of 60.9mm, itâs a compact lens with a 43mm filter thread,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the 32mm focal length, what exactly are the benefits of each lens?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Beyond focal length, the major difference.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "specs, it measures 61mm in diameter, 57mm long, weighs 235g, has a 43mm filter thread and sports a metal lens mount, unlike the plastic mount.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "14 elements in eight groups, 7 diaphragm blades and a closest focusing distance of 23cm, similar to the 25cm of the 15-45mm zoom.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "On APS-C bodies, the 32mm focal length provides a 51mm equivalent field of view with an aperture equivalent to f/2.2 in full-frame terms.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Minimum focus distance is 0.23m with maximum magnification of 0.25x.Physical Specifications\n\nWeight totals 235g (8.3oz) with dimensions of approximately 56.5 x 60.9mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Focal Length & Sensor CoverageFixed 32mm focal length.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.625,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "metal mount and an STM focusing motor thatâs smooth and quiet for video work.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "use quick enough shutter speeds to avoid shake.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Video autofocus produces an audible low-frequency hum that is easily quashed by ambient noise.Sharpness\n\nSharpness is excellent, even wide open at f/1.4, with details remaining crisp through f/5.6 before diffraction effects become apparent at f/8.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "focal_length_mm": {
+        "value": "32",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": "mm"
+      },
+      "max_aperture": {
+        "value": "f/1.4",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      }
+    },
+    "provenance": {
+      "specs.focal_length_mm": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      },
+      "specs.max_aperture": {
+        "source": "designation",
+        "url": "",
+        "fetched_at": "",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "model",
+          "section": [],
+          "via": "designation"
+        }
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Canon 32mm f1.4. Dimensions draws the most discussion: 0 positive, 8 neutral, and 0 negative across 8 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "prime is a great general-purpose lens thatâs sharp even at larger apertures, and also ideal for portraits, low light or still-life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "and compare the quality with the EF-M 15-45mm kit zoom.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "between them is their maximum aperture, which in turn has a big impact on the quality in low light and the potential for a shallow.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 1,
+        "neu": 3,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "system, delivering 51mm equivalent coverage coupled with a fast focal ratio thatâs ideal for shallow depth-of-field effects.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This so-called standard field-of-view is ideal for general-purpose use, and thanks to the fast f1.4 focal ratio and.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "seven aperture blades and has a closest focusing distance of 23cm.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "this time with the subject at the closest focusing distance to maximise the effect.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "mentioned earlier, thereâs no optical stabilisation and at the time I made this video, no EOS M bodies with sensor-stabilisation either, so youâll need to.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 2,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "how about the build quality of both lenses?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "of the 15-45mm kit zoom, although none of the EF-M lenses to date go as far as having weather sealing.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "distortion",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Distortion kept to minimum levels expected for this focal length.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 4,
+        "neg": 0,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "This is fairly normal for large aperture lenses and can be mitigated by closing the aperture down a.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Next a quick look at diffraction on bright sources of light.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Vignetting\n\nVignetting is noticeable at the widest apertures but greatly reduced by f/2.8 and practically gone by f/4.Distortion\n\nVery slight barrel distortion, primarily noticeable only in architectural photography.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "chromatic_aberration",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Chromatic Aberration\n\nLateral CA is effectively processed out of JPEGs.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 2,
+        "neu": 3,
+        "neg": 0,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "reasonably close focusing distance, it can also deliver shallow depth-of-field effects making it a great choice for portraits or still-life.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you like those nice blurred backgrounds, a lens with a large aperture &#8211; indicated by small f-number.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Hereâs the lens wide-open at f1.4 where the bokeh blobs are.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Above: Here it is at 72mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Optical Construction & Specifications\n\nThe Canon EF-M 32mm f/1.4 STM lens features 14 elements in 8 groups with a 43mm filter thread.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+            "weight": 0.75,
+            "quote_excerpt": "Filter thread diameter: 60.9mm (matching other EF-M lenses).",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 0,
+        "neu": 8,
+        "neg": 0,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Weighing 235g, measuring 57mm in length and sharing the standard EF-M barrel diameter of 60.9mm, itâs a compact lens with a 43mm filter thread,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "the 32mm focal length, what exactly are the benefits of each lens?",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "&nbsp; Above: Beyond focal length, the major difference.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "metal mount and an STM focusing motor thatâs smooth and quiet for video work.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+            "weight": 0.75,
+            "quote_excerpt": "use quick enough shutter speeds to avoid shake.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+            "weight": 0.75,
+            "quote_excerpt": "Video autofocus produces an audible low-frequency hum that is easily quashed by ambient noise.Sharpness\n\nSharpness is excellent, even wide open at f/1.4, with details remaining crisp through f/5.6 before diffraction effects become apparent at f/8.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 65,
+      "evaluated": 18,
+      "non_evaluative": 47,
+      "non_evaluative_breakdown": {
+        "non_claim": 47
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "65 examined · 18 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 1,
+      "neu": 0,
+      "neg": 0,
+      "total": 1,
+      "sources": [
+        {
+          "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+          "source_type": "reviewer_blog",
+          "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+          "weight": 0.75,
+          "quote_excerpt": "version is a stop faster, not to mention a little smaller, lighter and cheaper, especially when you factor-in the EF adapter (albeit missing out on.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": "mount_compat",
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "cameralabs-canon-ef-m-32mm-f1-4-stm-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.cameralabs.com/canon-ef-m-32mm-f1-4-stm-review/",
+      "title": "Canon EF-M 32mm f1.4 STM review | Cameralabs",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T04:37:50.144383+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dpreview-com-reviews-canon-ef-m-32mm-f1-4-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.dpreview.com/reviews/canon-ef-m-32mm-f1-4-review",
+      "title": "Canon EF-M 32mm F1.4 review | DPReview",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T04:37:50.144391+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographyblog-com-reviews-canon-ef-m-32mm-f1-4-stm-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.photographyblog.com/reviews/canon_ef_m_32mm_f1_4_stm_review",
+      "title": "Canon EF-M 32mm F/1.4 STM Review | Photography Blog",
+      "publication_date": "",
+      "ingested_at": "2026-09-25T04:37:50.144395+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/canon-32mm-f1-4/",
+    "reddit": "Canon 32mm f1.4\n\nSynthesized from 3 reviewer sources for Canon 32mm f1.4. Dimensions draws the most discussion: 0 positive, 8 neutral, and 0 negative across 8 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/canon-32mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon 32mm f1.4**\nSynthesized from 3 reviewer sources for Canon 32mm f1.4. Dimensions draws the most discussion: 0 positive, 8 neutral, and 0 negative across 8 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/canon-32mm-f1-4/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "Canon 32mm f1.4 — Reviewed",
+      "description": "Synthesized from 3 reviewer sources for Canon 32mm f1.4. Dimensions draws the most discussion: 0 positive, 8 neutral, and 0 negative across 8 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/canon-32mm-f1-4/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}

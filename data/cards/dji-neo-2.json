@@ -1,0 +1,2042 @@
+{
+  "card_version": "1.0",
+  "card_id": "dji-neo-2",
+  "vertical": "photography",
+  "identity": {
+    "display_name": "DJI Neo 2",
+    "brand": "DJI",
+    "model": "Neo 2",
+    "sku_alt_names": [],
+    "category": "drone",
+    "subcategory": "drone",
+    "year_introduced": null,
+    "image_thumb": "https://i.ebayimg.com/images/g/9vAAAeSwTVFplhmn/s-l1600.jpg",
+    "image_source": "ebay_listing"
+  },
+  "pricing": {
+    "msrp_usd": 0.0,
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
+    "used_market": {
+      "source": "ebay",
+      "bands": {
+        "refurbished": 195.0,
+        "pre_owned": 170.0,
+        "open_box": 142.99
+      },
+      "sold_last_90d": 0,
+      "search_url": null,
+      "affiliate_url": null,
+      "sample_size": 19,
+      "price_updated_at": "2026-11-04T10:10:43.699993+00:00"
+    },
+    "price_updated_at": "2026-10-04T13:32:59.856467+00:00"
+  },
+  "freshness": {
+    "created_at": "2026-10-04T13:32:59.849446+00:00",
+    "last_built": "2026-10-04T13:32:59.849446+00:00",
+    "last_checked": "2026-10-04T13:32:59.849446+00:00",
+    "source_count": 23,
+    "source_types": {
+      "pro": 23
+    },
+    "build_model": "claude-sonnet-4-5-20250929",
+    "build_version": "stage6-v0.1"
+  },
+  "confidence": {
+    "overall": "low",
+    "per_axis": {
+      "optical_performance": "low",
+      "build": "low",
+      "vignetting": "low",
+      "coma": "low",
+      "bokeh": "low",
+      "color_rendition": "low",
+      "filter_thread": "low",
+      "dimensions": "low",
+      "handling": "low",
+      "af_noise": "low"
+    }
+  },
+  "tier": {
+    "tier": 1,
+    "tier_2_status": "not_queued",
+    "encoded_at": null,
+    "trust_weight_mean": null,
+    "similarity_available": false
+  },
+  "lead_axes": [
+    {
+      "axis_id": "optical_performance",
+      "display_name": "Optical Performance",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 4,
+        "neg": 1,
+        "total": 7,
+        "sources": [
+          {
+            "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+            "weight": 0.75,
+            "quote_excerpt": "First and foremost, let's talk image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-christian-eggbauer-dji-neo-2-after-100-days-real-world-review-would-i-buy-it-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=tyIuWwDSJvA",
+            "weight": 0.75,
+            "quote_excerpt": "And if you really zoom in and pixel peep, image quality is not flagship-level.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "When you're flying with a normal controller or FPV, [music] you can lower the sharpness to minus two, which I definitely recommend to get a bit more of a pleasing image.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+            "weight": 0.75,
+            "quote_excerpt": "Talking about picture quality specifically, I've shown you what I've been able to get with this drone like shots where I think the lighting's good and I'm actually trying.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+            "weight": 0.75,
+            "quote_excerpt": "To illustrate this with the bigger drones, here's a chart of the image quality you can get.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "No cropping and no quality loss.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "In simple terms, when you have a big sensor with plenty of pixels, you can crop into the center of the image and still end up with a sharp result because you started with more detail than you needed.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.4,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.286,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "When you're flying with a normal controller or FPV, you can lower the sharpness to minus two, which I definitely recommend to get a bit more of a pleasing image.",
+        "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+        "url": "https://www.youtube.com/watch?v=ue05XMKIkps"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "af_performance",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 1,
+          "neg": 0,
+          "total": 1,
+          "sources": [
+            {
+              "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+              "weight": 0.75,
+              "quote_excerpt": "So, if I select this button now, I'm going to try and keep me out of focus.",
+              "witness": "firsthand"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": null,
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 10,
+          "neu": 27,
+          "neg": 3,
+          "total": 40,
+          "sources": [
+            {
+              "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+              "weight": 0.75,
+              "quote_excerpt": "Screenshots from left to right: The tutorial, the manual control video settings adjustments, and the various flying options laid out.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+              "weight": 0.75,
+              "quote_excerpt": "As a practical video or camera drone for serious creators, it.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2025-09-10-dji-neo-long-term-review-2",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2025/09/10/dji-neo-long-term-review-2/",
+              "weight": 0.75,
+              "quote_excerpt": "Tips and tricks that will help you capture beautiful cinematic drone videos as well as stunning time-lapses.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+              "weight": 0.75,
+              "quote_excerpt": "This enables safe operation of advanced tracking modes like reverse follow and orbit shots.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+              "weight": 0.75,
+              "quote_excerpt": "“After adding the roll axis, the image stability during flight has greatly improved,” Huaiba explains.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+              "weight": 0.75,
+              "quote_excerpt": "“The tracking effect for filming bicycles is really very.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+              "weight": 0.75,
+              "quote_excerpt": "the Flip attempted to bridge autonomous flight and quality imaging with its larger sensor and built-in propeller guards, it struggled with autonomous tracking performance and.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Photo credit: Air Photography For a more traditional tracking experience, connect.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+              "weight": 0.75,
+              "quote_excerpt": "The build and the size give you worry-free tracking shots.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+              "weight": 0.75,
+              "quote_excerpt": "This article is based on a video from Air Photography ’s YouTube channel.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Photography DJI Neo Reviews Video Shawn Air Photography Contributor · Air Photography Hi my name is Shawn and I love filming and capturing this beautiful.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+              "source_type": "reviewer_blog",
+              "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+              "weight": 0.75,
+              "quote_excerpt": "and tricks that will help you capture beautiful cinematic drone videos as well as stunning time-lapses.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+              "weight": 0.75,
+              "quote_excerpt": "Now, over the past year I've made several videos about the Mavic Air 2.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+              "weight": 0.75,
+              "quote_excerpt": "We got a new focus slow motion mode and a close-up helix mode, and they've also fine-tuned it and added some other features as well.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+              "weight": 0.75,
+              "quote_excerpt": "If you're interested in leveling up any type of footage from Sony cameras to drone shots, Osmo Pockets, even these Neo2 videos, consider having a look at my Da Vinci Resolve course.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+              "weight": 0.75,
+              "quote_excerpt": "So, I will grab this camera and uh focus on it.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+              "weight": 0.75,
+              "quote_excerpt": "And once again, if you want to watch me fly in the Neo2 with FPV goggles and the motion controller and showing you if it's any good with FPV, then go watch this video.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-christian-eggbauer-dji-neo-2-after-100-days-real-world-review-would-i-buy-it-again",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=tyIuWwDSJvA",
+              "weight": 0.75,
+              "quote_excerpt": "But for monitoring where the drone is during follow shots on the bike or while skiing, it's absolutely useful and gives you an extra layer of confidence without adding much complexity, yeah.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-christian-eggbauer-dji-neo-2-controller-flying-test-real-world-performance",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=ef2gyX6zgWA",
+              "weight": 0.75,
+              "quote_excerpt": "You can choose between photo, video and quick shots.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-christian-eggbauer-dji-neo-2-controller-flying-test-real-world-performance",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=ef2gyX6zgWA",
+              "weight": 0.75,
+              "quote_excerpt": "If you have not seen the quick shots, you can check them out in my other videos.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+              "weight": 0.75,
+              "quote_excerpt": "So, I wanted to create a video with a long-term review just so you can get a little bit of an insight into what it's like after extended periods of use.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+              "weight": 0.75,
+              "quote_excerpt": "I've done FPV video, I've done tips and settings videos, I've done the Apple Watch, I've done all sorts of different videos with the Neo 2, even the gesture controls.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+              "weight": 0.75,
+              "quote_excerpt": "Both of them, the Neo and the Neo 2, capture relatively smooth footage.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+              "weight": 0.75,
+              "quote_excerpt": "Granted, it's the same size sensor, so low light isn't going to be fantastic, but we can see now that this footage is much better, but also you can record in both horizontal and vertical.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+              "weight": 0.75,
+              "quote_excerpt": "And I use this when I'm tracking for say tracking me on a bike or I might be out for a walk and I just want to get these shots.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+              "weight": 0.75,
+              "quote_excerpt": "And then in a follow-up video coming really soon, I'm going to show you what that experience was like using the FPV goggles and the controller to fly this.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-dustin-dunnill-dji-neo-2-in-depth-review-part-1-unbox-updating-flight-tracking-crash-pho",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=QmseNHR2t7A",
+              "weight": 0.75,
+              "quote_excerpt": "20-ft circle flat taking video.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+              "weight": 0.75,
+              "quote_excerpt": "Next, we have the dolly zoom, which is kind of cool, but in my opinion, it's just a bit of a gimmick because it has to crop in so much, the video just doesn't look great.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+              "weight": 0.75,
+              "quote_excerpt": "The two drones actually have the same sensor, so I think the reason we're getting such an improvement in video quality is because the Neo 2 now has a two-axis gimbal, which means that it's able to crop in way less when it's stabilizing the footage.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+              "weight": 0.75,
+              "quote_excerpt": "At least the stabilized footage does come out pretty good and this looks like quite a nice smooth shot.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-mark-mcgee-photos-dji-neo-2-the-best-beginner-drone-ever",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=rN4hGxTE2hg",
+              "weight": 0.75,
+              "quote_excerpt": "Finally, with upgrades in frame rates, active track, and shot selection like selfie mode.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-mark-mcgee-photos-dji-neo-2-the-best-beginner-drone-ever",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=rN4hGxTE2hg",
+              "weight": 0.75,
+              "quote_excerpt": "Included in these upgrades is better active track for smoother and faster follow shots even during sharp turns.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+              "weight": 0.75,
+              "quote_excerpt": "As long as you stay in this drone's tracking and don't push it too hard, it honestly does a very good job.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+              "weight": 0.75,
+              "quote_excerpt": "And I have plenty of examples using the tracking to make a nice orbit movement around a point of interest.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+              "weight": 0.75,
+              "quote_excerpt": "Anyway, all these videos were filmed using automatic flight modes, and [music] here you can see a few examples using orbit shots, which is one of my favorite flight modes that can be used with the Neo 2.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+              "weight": 0.75,
+              "quote_excerpt": "[music] Now, looking back at some of those videos, I realized that the stabilization is pretty solid.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+              "weight": 0.75,
+              "quote_excerpt": "And besides that, it does have an electronic stabilization system that helps to smooth out your final video.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+              "weight": 0.75,
+              "quote_excerpt": "High-speed active track and automatic camera movement.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+              "weight": 0.75,
+              "quote_excerpt": "The drone does more of the work so you can focus on whatever you're doing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+              "weight": 0.75,
+              "quote_excerpt": "A 1.1 in square sensor, true vertical shooting, two times lossless zoom, faster tracking, smarter sensing, and a tiny controller.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 17,
+          "polarity_agreement": 0.765,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.125,
+          "contested": false
+        },
+        "notes": []
+      }
+    },
+    {
+      "axis_id": "build",
+      "display_name": "Build Quality",
+      "axis_type": "lead",
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Photo credit: Air Photography The small, sturdy build makes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": [],
+      "weather_sealing": false,
+      "materials": "composite",
+      "mount_construction": "composite"
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "lead",
+      "native": [],
+      "adapters": [],
+      "crop_factor_implications": "",
+      "current_body_compatibility": [],
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 0,
+        "total": 5,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "Samyang AF 60-180mm f/2.8 review: this telephoto lens completes the Schneider-Kreuznach &lsquo;trinity&rsquo; of f/2.8 zooms for mirrorless cameras &nbsp; &nbsp; Lenses OM System M.Zuiko 14-42mm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "review: a high-flying all-in-one superzoom lens that aims to be your travel solution &nbsp; &nbsp; Lenses Tamron 16-30mm f/2.8 Di III VXD G2 review: this.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "Trending now DJI Osmo 360 II Review: 1-Inch Sensors, 8K60 and User-Replaceable Lenses Put to the Test Wingcopter.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-kai-w-dji-neo-2-their-best-beginner-drone-yet",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=p53LelMSJxw",
+            "weight": 0.75,
+            "quote_excerpt": "You can use it with the RC 2, and you can use it with FPV goggles as well.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+            "weight": 0.75,
+            "quote_excerpt": "The spec list is cool from the perspective of the accomplishment of having an extremely light drone with a half-inch sensor.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 4,
+        "polarity_agreement": 0.75,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.4,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "msrp": {
+        "value": 0.0,
+        "year": 2012,
+        "currency": "USD"
+      },
+      "current_new": {
+        "value": 0.0,
+        "currency": "USD",
+        "retailer_refs": [],
+        "availability": "in_stock"
+      },
+      "used_ebay": {
+        "bands": {
+          "bgn": null,
+          "ex": null,
+          "ex_plus": null,
+          "ln": null
+        },
+        "sold_last_90d": 0,
+        "sample_size": 0
+      },
+      "sentiment": {
+        "pos": 3,
+        "neu": 5,
+        "neg": 1,
+        "total": 9,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "View Deal DJI Neo 2: Price Comparison voucher gift $229 View No price information Check Amazon We check over 250 million products every day for.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "dronexl-2025-09-10-dji-neo-long-term-review-2",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/09/10/dji-neo-long-term-review-2/",
+            "weight": 0.75,
+            "quote_excerpt": "Sometimes drones can get a little pricey, but $200 is a price many are comfortable spending, especially as a beginner.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "you need to be more careful when flying.” His summary: “I think the NEO 2 , in such a small body at such an affordable.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+            "weight": 0.75,
+            "quote_excerpt": "Now, I think this review gets better and better because let's talk about the price of this drone.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+            "weight": 0.75,
+            "quote_excerpt": "All in all, a really good little drone for the price.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "So, this drone, I 100% reckon it's worth the money cuz it's honestly not that expensive, either.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-roos-reviews-dji-neo-2-review-a-leap-ahead-of-everything-else",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eHJLPAQuxz8",
+            "weight": 0.75,
+            "quote_excerpt": "With this being such a big upgrade from the Neo1 and now having more costly components like the upgraded gimbal, better camera, the addition of two fisheye cameras in the rear, the front proximity sensor, and the new display, I was expecting the Flymore combo to launch at around $450 to $500.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-roos-reviews-dji-neo-2-review-a-leap-ahead-of-everything-else",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eHJLPAQuxz8",
+            "weight": 0.75,
+            "quote_excerpt": "When you consider that the closest competition starts at $500, doesn't do as much, and you only get the drone for that price.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "If the price climbs too far, the accessible entry-level drone identity gets blurry.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 8,
+        "polarity_agreement": 0.625,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.222,
+        "contested": false
+      },
+      "face_quote": {
+        "quote_excerpt": "View Deal DJI Neo 2: Price Comparison voucher gift $229 View No price information Check Amazon We check over 250 million products every day for.",
+        "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+        "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review"
+      }
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "lead",
+      "predecessor": null,
+      "successor": null,
+      "siblings": [],
+      "sentiment": {
+        "pos": 7,
+        "neu": 6,
+        "neg": 0,
+        "total": 13,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "Photo credit: Huaiba Crazy Tech Dramatically Improved Image Quality and Video Capabilities Huaiba details the camera improvements: aperture widened from f/2.8 to f/2.2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-11-17-dji-neo-2-drone-first-look",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/11/17/dji-neo-2-drone-first-look/",
+            "weight": 0.75,
+            "quote_excerpt": "Photo credit: Jake Sloan Improved Tracking and Video Quality While there’s definitely some improvement.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+            "weight": 0.75,
+            "quote_excerpt": "If you want to know everything about the Neo 2, my original review covers all.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "If you want to know everything about the Mavic Air 2, I will post a link to my original review down in the description of this video.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "And the new generation also gives us a visual preview so we know exactly what the parameters are set to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+            "weight": 0.75,
+            "quote_excerpt": "The new camera is a 12 megapixel/2 in sensor which can film at a resolution of 4K 100 frames per second.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+            "weight": 0.75,
+            "quote_excerpt": "We did see a nice improvement over the original Neo when it comes to camera quality.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+            "weight": 0.75,
+            "quote_excerpt": "The flight performance, the video quality, the modes, the obstacle avoidance, all of the different features, it's just a significant improvement here that is well worth the upgrade over the original Neo.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "At first, the shot from the Neo 1 doesn't look too bad, but when you switch over to the Neo 2, you just realize how much better it looks.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "Of course, with the improved camera, the final footage from the Avata 2 is going to look a lot better as well as being a much easier and more fun drone to fly around in full manual mode.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "There are just so many improvements across the board except for the battery life that make this a really good upgrade if you already have the Neo1 or if you're looking for a new drone.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "The second is a flying camera operator that makes creative choices.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "Prediction one, the camera will be the headline and it'll genuinely look better than the previous generation, especially in low light.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "convergence": {
+        "source_count": 8,
+        "polarity_agreement": 0.625,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.231,
+        "contested": false
+      }
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "lead",
+      "grams": 0,
+      "category_baseline": {
+        "value": 750.0,
+        "n_lenses": 12,
+        "category_label": "35mm f/1.4 full-frame primes"
+      },
+      "delta_from_baseline_pct": 0.0,
+      "sentiment": null,
+      "convergence": null
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "vignetting",
+      "display_name": "Vignetting",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "Note the quality, though &ndash; and some of these were taken as the light was getting past its best.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "mode, “the light status changes back to off, and I know it has finished shooting.” Photo credit: Huaiba Crazy Tech He demonstrates sliding zoom mode,.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "coma",
+      "display_name": "Coma",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-11-17-dji-neo-2-drone-first-look",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/11/17/dji-neo-2-drone-first-look/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Put to the Test Wingcopter 262: Delivery Drone Maker Launches 6-Hour Recon Drone DJI Neo 3 Box Leaks With an RC Mini the FCC.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "bokeh",
+      "display_name": "Bokeh",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "it is able to get smoother results without having to resort to digital image stabilization.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "color_rendition",
+      "display_name": "Color Rendition",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 6,
+        "neg": 3,
+        "total": 14,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "Mini 5 Pro ’s color science.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "“The straight-out-of-camera footage without color grading performs better and is more pleasing.” Even in challenging evening light conditions, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "NEO 2 produces good colors.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "in the frame and uses algorithms to optimize skin tone and lighting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+            "weight": 0.75,
+            "quote_excerpt": "And more importantly, color grade fast.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+            "weight": 0.75,
+            "quote_excerpt": "I am really pleasant to say that one of the first tests I did on this, it was in really harsh environments in a cool location, but high noon, so not the best conditions, but the video quality coming from this Neo2 is much better.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+            "weight": 0.75,
+            "quote_excerpt": "And the first one back to the camera is to do with the color profiles.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+            "weight": 0.75,
+            "quote_excerpt": "So, we've only got the normal color profile on this, which means that your footage in normal just like all the other drones, it is overly sharp and a bit too saturated that DJI use for the normal color profile.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "The reason the colors do look slightly different is because the sun did go behind a cloud when I was shooting with the Neo 2, so just keep that in mind.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+            "weight": 0.75,
+            "quote_excerpt": "Now, being an entry-level drone, the Neo 2 only has a normal color profile.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+            "weight": 0.75,
+            "quote_excerpt": "Partly because I don't know what's going on profile in auto, but the color, the exposure balancing, I just don't like when it's trying to help me out here.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+            "weight": 0.75,
+            "quote_excerpt": "Everything I shot in manual though, I have really liked and I've been able to adjust the color a little bit, especially the white balance.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "The sheet lists two times lossless zoom and something it calls vibrant portraits.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+            "weight": 0.75,
+            "quote_excerpt": "As for vibrant portraits, the name suggests some kind of color and skin tone processing tuned for people.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 7,
+        "polarity_agreement": 0.429,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.286,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "Mini 5 Pro ’s color science.",
+        "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+        "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/"
+      }
+    },
+    {
+      "axis_id": "filter_thread",
+      "display_name": "Filter Thread",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "I'm sure DJI will release ND filters for this thing, but there'll be other third-party stuff.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "I use ND filters on my Mini 5 Pro, and yeah, it makes a hell of a difference.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "So, this thing looks good already, but [snorts] ND filters for bright sunny days will make a massive difference.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "sources": [
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "Again, just due to its robust build, its small size, it's just going to give you nice worry-free tracking shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-mark-mcgee-photos-dji-neo-2-the-best-beginner-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=rN4hGxTE2hg",
+            "weight": 0.75,
+            "quote_excerpt": "So, this is going with a shot size of full, which is 8.1 m from the subject.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.5,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "I was hoping in a low wind scenario it'd be better, but even with the live view stabilization turned on for the Neo, it still didn't feel strong enough for me and I just did not enjoy flying in manual mode.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "af_noise",
+      "display_name": "AF Noise",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 4,
+        "neg": 3,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "2 features redesigned propellers that make flight “more quiet and less shrill,” according to Huaiba.",
+            "witness": "reported"
+          },
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "I don't really have too many complaints in that aspect, but it is only a half-inch sensor, so the quality of video is limited.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+            "weight": 0.75,
+            "quote_excerpt": "It's pretty quiet the Neo2.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+            "weight": 0.75,
+            "quote_excerpt": "It doesn't make a lot of noise.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-dunnill-dji-neo-2-in-depth-review-part-1-unbox-updating-flight-tracking-crash-pho",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QmseNHR2t7A",
+            "weight": 0.75,
+            "quote_excerpt": "And also, guys, this is how the noise canceling sounds on the propellers.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-dustin-dunnill-dji-neo-2-in-depth-review-part-1-unbox-updating-flight-tracking-crash-pho",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QmseNHR2t7A",
+            "weight": 0.75,
+            "quote_excerpt": "It'll be interesting to see what the camera does on the drone when it has those jolts of power that I'm hearing.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dustin-dunnill-dji-neo-2-in-depth-review-part-1-unbox-updating-flight-tracking-crash-pho",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=QmseNHR2t7A",
+            "weight": 0.75,
+            "quote_excerpt": "I'm not seeing my camera, but I hear it there.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-roos-reviews-dji-neo-2-review-a-leap-ahead-of-everything-else",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=eHJLPAQuxz8",
+            "weight": 0.75,
+            "quote_excerpt": "As for how the drone itself sounds, it's a lot quieter than the Neo1.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.4,
+        "dominant_polarity": "neg",
+        "max_source_share": 0.375,
+        "contested": true
+      },
+      "notes": []
+    }
+  ],
+  "facts": {
+    "specs": {
+      "weight": {
+        "value": null,
+        "low": 151,
+        "high": 151,
+        "anchor": 151,
+        "anchor_source": "wikidata",
+        "unit": "g"
+      }
+    },
+    "provenance": {
+      "specs.weight": {
+        "source": "wikidata",
+        "url": "https://www.wikidata.org/wiki/Q137169117",
+        "fetched_at": "2026-10-04T13:32:57.923130+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": null
+      }
+    },
+    "conflicts": []
+  },
+  "synthesis": {
+    "consensus_paragraph": "Synthesized from 21 reviewer sources for DJI Neo 2. AF for video draws the most discussion: 10 positive, 27 neutral, and 3 negative across 40 sentiment markers.",
+    "aspect_breakdown": [
+      {
+        "aspect": "optical_performance",
+        "pos": 2,
+        "neu": 4,
+        "neg": 1,
+        "total": 7,
+        "top_quote_refs": [
+          {
+            "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+            "weight": 0.75,
+            "quote_excerpt": "First and foremost, let's talk image quality.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-christian-eggbauer-dji-neo-2-after-100-days-real-world-review-would-i-buy-it-again",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=tyIuWwDSJvA",
+            "weight": 0.75,
+            "quote_excerpt": "And if you really zoom in and pixel peep, image quality is not flagship-level.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "When you're flying with a normal controller or FPV, [music] you can lower the sharpness to minus two, which I definitely recommend to get a bit more of a pleasing image.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.stills",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+            "weight": 0.75,
+            "quote_excerpt": "So, if I select this button now, I'm going to try and keep me out of focus.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 10,
+        "neu": 27,
+        "neg": 3,
+        "total": 40,
+        "top_quote_refs": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "Screenshots from left to right: The tutorial, the manual control video settings adjustments, and the various flying options laid out.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "As a practical video or camera drone for serious creators, it.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-09-10-dji-neo-long-term-review-2",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/09/10/dji-neo-long-term-review-2/",
+            "weight": 0.75,
+            "quote_excerpt": "Tips and tricks that will help you capture beautiful cinematic drone videos as well as stunning time-lapses.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Photo credit: Air Photography The small, sturdy build makes.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "vignetting",
+        "pos": 0,
+        "neu": 1,
+        "neg": 1,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "Note the quality, though &ndash; and some of these were taken as the light was getting past its best.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "mode, “the light status changes back to off, and I know it has finished shooting.” Photo credit: Huaiba Crazy Tech He demonstrates sliding zoom mode,.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "coma",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "dronexl-2025-11-17-dji-neo-2-drone-first-look",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/11/17/dji-neo-2-drone-first-look/",
+            "weight": 0.75,
+            "quote_excerpt": "Lenses Put to the Test Wingcopter 262: Delivery Drone Maker Launches 6-Hour Recon Drone DJI Neo 3 Box Leaks With an RC Mini the FCC.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "bokeh",
+        "pos": 1,
+        "neu": 0,
+        "neg": 0,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+            "weight": 0.75,
+            "quote_excerpt": "it is able to get smoother results without having to resort to digital image stabilization.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "color_rendition",
+        "pos": 5,
+        "neu": 6,
+        "neg": 3,
+        "total": 14,
+        "top_quote_refs": [
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "Mini 5 Pro ’s color science.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "“The straight-out-of-camera footage without color grading performs better and is more pleasing.” Even in challenging evening light conditions, the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "NEO 2 produces good colors.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "filter_thread",
+        "pos": 1,
+        "neu": 1,
+        "neg": 1,
+        "total": 3,
+        "top_quote_refs": [
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "I'm sure DJI will release ND filters for this thing, but there'll be other third-party stuff.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "I use ND filters on my Mini 5 Pro, and yeah, it makes a hell of a difference.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+            "weight": 0.75,
+            "quote_excerpt": "So, this thing looks good already, but [snorts] ND filters for bright sunny days will make a massive difference.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "dimensions",
+        "pos": 1,
+        "neu": 1,
+        "neg": 0,
+        "total": 2,
+        "top_quote_refs": [
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "Again, just due to its robust build, its small size, it's just going to give you nice worry-free tracking shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-mark-mcgee-photos-dji-neo-2-the-best-beginner-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=rN4hGxTE2hg",
+            "weight": 0.75,
+            "quote_excerpt": "So, this is going with a shot size of full, which is 8.1 m from the subject.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "handling",
+        "pos": 0,
+        "neu": 0,
+        "neg": 1,
+        "total": 1,
+        "top_quote_refs": [
+          {
+            "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+            "weight": 0.75,
+            "quote_excerpt": "I was hoping in a low wind scenario it'd be better, but even with the live view stabilization turned on for the Neo, it still didn't feel strong enough for me and I just did not enjoy flying in manual mode.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "af_noise",
+        "pos": 1,
+        "neu": 4,
+        "neg": 3,
+        "total": 8,
+        "top_quote_refs": [
+          {
+            "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+            "source_type": "reviewer_blog",
+            "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+            "weight": 0.75,
+            "quote_excerpt": "2 features redesigned propellers that make flight “more quiet and less shrill,” according to Huaiba.",
+            "witness": "reported"
+          },
+          {
+            "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+            "weight": 0.75,
+            "quote_excerpt": "I don't really have too many complaints in that aspect, but it is only a half-inch sensor, so the quality of video is limited.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+            "weight": 0.75,
+            "quote_excerpt": "It's pretty quiet the Neo2.",
+            "witness": "unattested"
+          }
+        ]
+      }
+    ],
+    "issue_clusters": [],
+    "attestation": {
+      "examined": 108,
+      "evaluated": 55,
+      "non_evaluative": 53,
+      "non_evaluative_breakdown": {
+        "non_claim": 53
+      },
+      "off_axis": 0,
+      "ruleset": {
+        "name": "askmaddi-polarity",
+        "version": "",
+        "ref": ""
+      },
+      "receipt_line": "108 examined · 55 evaluated under askmaddi-polarity",
+      "off_axis_line": ""
+    }
+  },
+  "generation_context": {
+    "predecessor": null,
+    "successor": null,
+    "siblings": [],
+    "sentiment": {
+      "pos": 7,
+      "neu": 6,
+      "neg": 0,
+      "total": 13,
+      "sources": [
+        {
+          "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+          "source_type": "reviewer_blog",
+          "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+          "weight": 0.75,
+          "quote_excerpt": "Photo credit: Huaiba Crazy Tech Dramatically Improved Image Quality and Video Capabilities Huaiba details the camera improvements: aperture widened from f/2.8 to f/2.2.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "dronexl-2025-11-17-dji-neo-2-drone-first-look",
+          "source_type": "reviewer_blog",
+          "url": "https://dronexl.co/2025/11/17/dji-neo-2-drone-first-look/",
+          "weight": 0.75,
+          "quote_excerpt": "Photo credit: Jake Sloan Improved Tracking and Video Quality While there’s definitely some improvement.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+          "source_type": "reviewer_blog",
+          "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+          "weight": 0.75,
+          "quote_excerpt": "If you want to know everything about the Neo 2, my original review covers all.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+          "weight": 0.75,
+          "quote_excerpt": "If you want to know everything about the Mavic Air 2, I will post a link to my original review down in the description of this video.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+          "weight": 0.75,
+          "quote_excerpt": "And the new generation also gives us a visual preview so we know exactly what the parameters are set to.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+          "weight": 0.75,
+          "quote_excerpt": "The new camera is a 12 megapixel/2 in sensor which can film at a resolution of 4K 100 frames per second.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+          "weight": 0.75,
+          "quote_excerpt": "We did see a nice improvement over the original Neo when it comes to camera quality.",
+          "witness": "firsthand"
+        },
+        {
+          "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+          "weight": 0.75,
+          "quote_excerpt": "The flight performance, the video quality, the modes, the obstacle avoidance, all of the different features, it's just a significant improvement here that is well worth the upgrade over the original Neo.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+          "weight": 0.75,
+          "quote_excerpt": "At first, the shot from the Neo 1 doesn't look too bad, but when you switch over to the Neo 2, you just realize how much better it looks.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+          "weight": 0.75,
+          "quote_excerpt": "Of course, with the improved camera, the final footage from the Avata 2 is going to look a lot better as well as being a much easier and more fun drone to fly around in full manual mode.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+          "weight": 0.75,
+          "quote_excerpt": "There are just so many improvements across the board except for the battery life that make this a really good upgrade if you already have the Neo1 or if you're looking for a new drone.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+          "weight": 0.75,
+          "quote_excerpt": "The second is a flying camera operator that makes creative choices.",
+          "witness": "unattested"
+        },
+        {
+          "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+          "source_type": "youtube",
+          "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+          "weight": 0.75,
+          "quote_excerpt": "Prediction one, the camera will be the headline and it'll genuinely look better than the previous generation, especially in low light.",
+          "witness": "unattested"
+        }
+      ]
+    }
+  },
+  "axis_roles": {
+    "computed_by": "axis_roles@1",
+    "most_discussed": null,
+    "highest_rated": null,
+    "lowest_rated": null
+  },
+  "sources": [
+    {
+      "source_id": "digitalcameraworld-drones-dji-neo-2-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.digitalcameraworld.com/drones/dji-neo-2-review",
+      "title": "DJI Neo 2 review &ndash; The only drone everyone will NEED now? | Digital Camera World",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852218+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronexl-2025-09-10-dji-neo-long-term-review-2",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronexl.co/2025/09/10/dji-neo-long-term-review-2/",
+      "title": "DJI Neo Long Term Review after ONE year of flying — DroneXL",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852228+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronexl-2025-10-30-dji-neo-2-hands-on-chinese-reviewer-drone",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronexl.co/2025/10/30/dji-neo-2-hands-on-chinese-reviewer-drone/",
+      "title": "DJI NEO 2 Hands-On: Chinese Reviewer Shows Omnidirectional Obstacle Avoidance and Dual-Axis Gimbal in Action",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852232+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronexl-2025-11-17-dji-neo-2-drone-first-look",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronexl.co/2025/11/17/dji-neo-2-drone-first-look/",
+      "title": "DJI NEO 2 Drone – An Unsponsored First Look — DroneXL",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852235+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "dronexl-2026-09-07-dji-neo-2-one-year-later-review",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://dronexl.co/2026/09/07/dji-neo-2-one-year-later-review/",
+      "title": "DJI Neo 2 After One Year: The Drone I Fly More Than Any Other",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852238+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-air-photography-one-year-later-dji-neo-2-review",
+      "source_type": "pro",
+      "reviewer": "Air Photography",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=TnI24POEodw",
+      "title": "One Year Later - DJI Neo 2 Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852240+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-andyescapes-dji-neo-2-review-how-is-a-200-drone-this-good",
+      "source_type": "pro",
+      "reviewer": "andyescapes",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=DP7bg80f7bo",
+      "title": "DJI NEO 2 Review – How Is a $200 Drone This Good?!",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852243+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-captain-drone-dji-neo-2-the-review-part-1",
+      "source_type": "pro",
+      "reviewer": "CAPTAIN DRONE",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=2Gfxyt-4GuY",
+      "title": "DJI NEO 2 - The Review - Part 1",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852245+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-christian-eggbauer-dji-neo-2-after-100-days-real-world-review-would-i-buy-it-again",
+      "source_type": "pro",
+      "reviewer": "Christian Eggbauer",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=tyIuWwDSJvA",
+      "title": "DJI Neo 2 After 100 Days – Real World Review | Would I Buy It Again?",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852248+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-christian-eggbauer-dji-neo-2-controller-flying-test-real-world-performance",
+      "source_type": "pro",
+      "reviewer": "Christian Eggbauer",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=ef2gyX6zgWA",
+      "title": "DJI Neo 2 Controller Flying Test – Real World Performance",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852250+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-danstubetv-dji-neo-2-after-1-year-long-term-review",
+      "source_type": "pro",
+      "reviewer": "DansTube.TV",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=2103uQONWjU",
+      "title": "DJI Neo 2 After 1 Year - Long-Term Review",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852253+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-dji-meet-dji-neo-2-follow-me-camera-drone",
+      "source_type": "pro",
+      "reviewer": "DJI",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=1mXwci-_uWc",
+      "title": "Meet DJI Neo 2 - Follow Me Camera Drone",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852255+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-dm-productions-dji-neo-2-review-watch-before-you-buy",
+      "source_type": "pro",
+      "reviewer": "DM Productions",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=7tXFJ-SJQIA",
+      "title": "DJI NEO 2 REVIEW - Watch Before You Buy!",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852258+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-drone-wilder-dji-neo-2-range-test-how-far-can-it-really-fly",
+      "source_type": "pro",
+      "reviewer": "Drone Wilder",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=GTwbCZ7mtuQ",
+      "title": "DJI Neo 2 Range Test – How Far Can It REALLY Fly?",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852260+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-dustin-dunnill-dji-neo-2-in-depth-review-part-1-unbox-updating-flight-tracking-crash-pho",
+      "source_type": "pro",
+      "reviewer": "Dustin Dunnill",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=QmseNHR2t7A",
+      "title": "DJI Neo 2 In-Depth Review - Part 1 - Unbox, Updating, Flight, Tracking, CRASH & Phone Range Testing",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852262+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-kai-w-dji-neo-2-their-best-beginner-drone-yet",
+      "source_type": "pro",
+      "reviewer": "Kai W",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=p53LelMSJxw",
+      "title": "DJI NEO 2 // Their Best Beginner Drone Yet",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852265+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-luke-maximo-bell-dji-neo-2-review-avata-2-comparison-best-dji-drone-ever",
+      "source_type": "pro",
+      "reviewer": "Luke Maximo Bell",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=ue05XMKIkps",
+      "title": "DJI Neo 2 REVIEW & Avata 2 Comparison - Best DJI Drone Ever?",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852267+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-mark-mcgee-photos-dji-neo-2-the-best-beginner-drone-ever",
+      "source_type": "pro",
+      "reviewer": "Mark McGee Photos",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=rN4hGxTE2hg",
+      "title": "DJI NEO 2 - The Best Beginner Drone EVER!",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852270+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-moto-matt-is-this-drone-made-for-motovloggers-dji-neo-2-review-non-sponsored",
+      "source_type": "pro",
+      "reviewer": "Moto Matt",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=yJIq87Ju-mc",
+      "title": "Is This Drone Made For MOTOVLOGGERS?! | DJI Neo 2 Review (Non-Sponsored)",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852273+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-otto-julian-dji-neo-2-3-months-later-review-should-you-buy-it-in-2026-non-sponsored",
+      "source_type": "pro",
+      "reviewer": "Otto Julian",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=x03U2-N-w0I",
+      "title": "DJI Neo 2 - 3 Months Later Review, Should you Buy it in 2026? Non Sponsored",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852275+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-quickasstutorials-dji-neo-2-review-insane-value-some-weird-quirks",
+      "source_type": "pro",
+      "reviewer": "QuickAssTutorials",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=eOxE7MbTyV0",
+      "title": "DJI Neo 2 Review - Insane Value, some weird Quirks",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852277+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-roos-reviews-dji-neo-2-review-a-leap-ahead-of-everything-else",
+      "source_type": "pro",
+      "reviewer": "Roo's Reviews",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=eHJLPAQuxz8",
+      "title": "DJI Neo 2 Review - A Leap Ahead Of Everything Else",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852280+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-the-tech-side-dji-neo-3-is-almost-perfect-square-sensor-more-interesting",
+      "source_type": "pro",
+      "reviewer": "The Tech Side",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=-1qp4V8o8pU",
+      "title": "DJI Neo 3 is ALMOST Perfect! SQUARE SENSOR More Interesting!",
+      "publication_date": "",
+      "ingested_at": "2026-10-04T13:32:59.852282+00:00",
+      "weight": 0.75
+    }
+  ],
+  "export": {
+    "permalink": "https://askmaddi.com/cards/dji-neo-2/",
+    "reddit": "DJI Neo 2\n\nSynthesized from 21 reviewer sources for DJI Neo 2. AF for video draws the most discussion: 10 positive, 27 neutral, and 3 negative across 40 sentiment markers.\n\nI pulled together all 23 reviews in one place: https://askmaddi.com/cards/dji-neo-2/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**DJI Neo 2**\nSynthesized from 21 reviewer sources for DJI Neo 2. AF for video draws the most discussion: 10 positive, 27 neutral, and 3 negative across 40 sentiment markers.\nAll 23 reviews in one place: https://askmaddi.com/cards/dji-neo-2/\n_(disclosure: I built this)_",
+    "og": {
+      "title": "DJI Neo 2 — Reviewed",
+      "description": "Synthesized from 21 reviewer sources for DJI Neo 2. AF for video draws the most discussion: 10 positive, 27 neutral, and 3 negative across 40 sentiment markers.",
+      "image": null,
+      "url": "https://askmaddi.com/cards/dji-neo-2/"
+    }
+  },
+  "_build_provenance": {
+    "driver": "build_card.py",
+    "enrich_client": "forced_choice",
+    "facts": {
+      "stage": "ran",
+      "artifact": "fresh"
+    },
+    "blockers": [],
+    "warnings": [],
+    "shippable": true,
+    "note": "Real gemma enrichment via flask shim."
+  }
+}
