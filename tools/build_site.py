@@ -706,6 +706,35 @@ def new_cta(card):
     return label, url
 
 
+def new_offer(card):
+    """schema.org Offer for the priced 'buy new' rung, or None.
+
+    Emitted ONLY for a feed-sourced Adorama price (pricing.current_new_source ==
+    'adorama_feed'): the nightly writeback keeps such a price only while the
+    card's pinned product is New and in stock in the same-day feed, and
+    withdraws it otherwise (price_writeback EVIDENCE RULE) — which is what
+    makes `InStock` an honest claim. Never MSRP (a list price is not an offer),
+    never a hand-set price, never Amazon (no licence to display its pricing).
+
+    Price and url come from new_cta(), the visible button, so the markup can
+    never disagree with what the page shows — a mismatch is what Google
+    penalises. Price is the same whole-dollar number the label renders."""
+    pricing = card.get("pricing", {}) or {}
+    price = pricing.get("current_new_usd")
+    if pricing.get("current_new_source") != "adorama_feed" or not price or price <= 0:
+        return None
+    _, url = new_cta(card)
+    return {
+        "@type": "Offer",
+        "price": f"{int(price)}.00",
+        "priceCurrency": "USD",
+        "itemCondition": "https://schema.org/NewCondition",
+        "availability": "https://schema.org/InStock",
+        "url": url,
+        "seller": {"@type": "Organization", "name": "Adorama"},
+    }
+
+
 def used_cta(card):
     """Return (label, url) for the 'used' CTA, honest about missing price."""
     pricing = card.get("pricing", {})
@@ -1211,6 +1240,12 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
         if isinstance(sample, int) and sample > 0:
             offer["offerCount"] = sample
         obj["offers"] = offer
+
+    # Priced New rung (Adorama feed) — see new_offer(). One offer stays a plain
+    # object (unchanged shape for used-only cards); new + used becomes a list.
+    new = new_offer(card)
+    if new:
+        obj["offers"] = [new, obj["offers"]] if "offers" in obj else new
 
     # Rich-result eligibility tripwire (GSC: "Either offers, review, or
     # aggregateRating should be specified"). We never emit aggregateRating —
