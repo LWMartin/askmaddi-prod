@@ -97,6 +97,70 @@ def plan(sheet: dict, cards_dir: Path, include_flagged: bool = False, exclude=No
     return changes, held, skipped
 
 
+# ─── Withdrawal of stale feed prices (2026-11-04) ─────────────────────────────
+# plan() only ever ADDS or MOVES a price, so a product that went out of stock or
+# left the feed kept its last price on the card indefinitely — a "$N new" claim
+# (and, once emitted, an InStock Offer) that was no longer true. Withdrawal
+# clears ONLY current_new_usd on cards whose price came from the feed; the
+# exact-product affiliate link and current_new_source stay, so the CTA reads
+# "Check price at Adorama" on the product page, and the very next night the
+# item reappears in stock, plan() restores the price with no special path.
+# A card changes only when its stock state changes — never a nightly heartbeat.
+WITHDRAW_MAX_FRACTION = 0.20   # above this share in ONE run = a feed fault, not the market
+
+
+def plan_withdrawals(sheet: dict, cards_dir: Path, exclude=None,
+                     max_fraction: float = WITHDRAW_MAX_FRACTION):
+    """Return (withdrawals, withheld_reason) without touching disk.
+
+    A withdrawal is a sheet proposal with has_card and new=None (no in-stock New
+    match in today's feed) for a card that currently shows a feed-sourced price.
+    If withdrawals exceed `max_fraction` of the feed-priced cards, ALL are
+    withheld and a reason is returned: a truncated or failed feed download looks
+    exactly like the whole catalog going out of stock, and wiping prices on a bad
+    download is worse than one more day of a possibly-stale price."""
+    exclude = set(exclude or ())
+    feed_priced = 0
+    for path in cards_dir.glob("*.json"):
+        try:
+            p = (json.loads(path.read_text(encoding="utf-8")) or {}).get("pricing") or {}
+        except ValueError:
+            continue
+        if p.get("current_new_source") == CARD_SOURCE and p.get("current_new_usd"):
+            feed_priced += 1
+
+    withdrawals, seen = [], set()
+    for prop in sheet.get("proposals", []):
+        slug = prop.get("slug")
+        if prop.get("new") or not prop.get("has_card") or slug in exclude or slug in seen:
+            continue
+        card_path = cards_dir / f"{slug}.json"
+        if not card_path.exists():
+            continue
+        pricing = json.loads(card_path.read_text(encoding="utf-8")).get("pricing") or {}
+        if pricing.get("current_new_source") != CARD_SOURCE or not pricing.get("current_new_usd"):
+            continue  # not a feed price (hand-set, or already withdrawn) — not ours to clear
+        seen.add(slug)
+        withdrawals.append({"slug": slug, "old": pricing["current_new_usd"],
+                            "url": pricing.get("affiliate_url") or pricing.get("current_new_url")})
+
+    if withdrawals and feed_priced and len(withdrawals) / feed_priced > max_fraction:
+        return [], (f"{len(withdrawals)} of {feed_priced} feed-priced cards would lose their "
+                    f"price (> {max_fraction:.0%}) — looks like a feed fault; ALL withheld")
+    return withdrawals, None
+
+
+def apply_withdrawals(withdrawals, cards_dir: Path) -> list:
+    done = []
+    for row in withdrawals:
+        card_path = cards_dir / f"{row['slug']}.json"
+        card = json.loads(card_path.read_text(encoding="utf-8"))
+        card.setdefault("pricing", {})["current_new_usd"] = None
+        _write_card_atomic(card_path, card)
+        done.append(row["slug"])
+    return done
+
+
 def apply_changes(changes, cards_dir: Path) -> list:
     applied = []
     for row in changes:
@@ -168,6 +232,11 @@ def main(argv=None):
     ap.add_argument("--changed-out", default=None, help="write changed slugs, one per line")
     ap.add_argument("--manifest", default=None,
                     help="cards-manifest.json to surgically patch (new_price/new_url on changed slugs only)")
+    ap.add_argument("--no-withdraw", action="store_true",
+                    help="do not clear feed prices that have no in-stock match today")
+    ap.add_argument("--max-withdraw-fraction", type=float, default=WITHDRAW_MAX_FRACTION,
+                    help="withhold ALL withdrawals if more than this share of feed-priced "
+                         f"cards would lose their price in one run (default {WITHDRAW_MAX_FRACTION})")
     args = ap.parse_args(argv)
 
     sheet = json.loads(Path(args.sheet).read_text(encoding="utf-8"))
@@ -176,20 +245,36 @@ def main(argv=None):
     changes, held, skipped = plan(sheet, cards_dir, include_flagged=args.include_flagged,
                                   exclude=exclude)
 
+    withdrawals, withheld = [], None
+    if not args.no_withdraw:
+        priced_now = {r["slug"] for r in changes} | {r["slug"] for r in held}
+        withdrawals, withheld = plan_withdrawals(sheet, cards_dir, exclude=exclude | priced_now,
+                                                 max_fraction=args.max_withdraw_fraction)
+
     _print_table("New price — will apply", changes)
     _print_table("New price — HELD for review (needs eyes)", held)
+    if withdrawals:
+        print(f"\nNew price — WITHDRAW (no in-stock feed match today) ({len(withdrawals)}):")
+        for w in withdrawals:
+            print(f"  {w['slug'][:32]:32}  ${int(w['old'])} -> (no price)")
+    if withheld:
+        print(f"\nWARN withdrawals WITHHELD: {withheld}")
     if skipped:
         print(f"\nskipped ({len(skipped)}): " + ", ".join(f"{s['slug']}({s['reason']})" for s in skipped))
 
-    print(f"\nsummary: {len(changes)} to apply · {len(held)} held · {len(skipped)} skipped")
+    print(f"\nsummary: {len(changes)} to apply · {len(withdrawals)} to withdraw · "
+          f"{len(held)} held · {len(skipped)} skipped")
     if not args.apply:
         print("DRY RUN — nothing written. Re-run with --apply to write, then rebuild those cards + manifest.")
         return 0
 
     applied = apply_changes(changes, cards_dir)
-    print(f"APPLIED {len(applied)} cards.")
+    withdrawn = apply_withdrawals(withdrawals, cards_dir)
+    print(f"APPLIED {len(applied)} cards · WITHDREW {len(withdrawn)}.")
+    applied = applied + withdrawn
     if args.manifest:
-        res = patch_manifest(Path(args.manifest), changes)
+        res = patch_manifest(Path(args.manifest), changes
+                             + [{"slug": w["slug"], "new": None, "url": w["url"]} for w in withdrawals])
         print(f"manifest patched: {len(res['patched'])} teaser entries"
               + (f" · {len(res['absent'])} changed slugs not on grid: {', '.join(res['absent'])}"
                  if res['absent'] else ""))
