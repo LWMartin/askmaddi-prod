@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-04",
+  "as_of": "2026-11-05",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -42929,11 +42929,38 @@
         },
         "market_title": "Skydio 2 + Drone with accessories",
         "image": "https://i.ebayimg.com/images/g/68AAAeSw-hpq6m~F/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/Jo8AAOSwKfZePBHe/s-l640.jpg",
         "price_seen": {
           "value": "1200.00",
           "currency": "USD",
           "as_of": "2026-11-04T04:45:30Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-05T04:49:48Z",
+          "query": "Skydio 2",
+          "winner": {
+            "item_id": "v1|800822679157|0",
+            "epid": "19034602427",
+            "title": "Skydio 2 Camera Drone. Complete upgrade package included."
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|227501713436|0",
+              "epid": "4042207126",
+              "title": "Skydio 2 Camera Drone - Comes with case",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|800822679157|0",
+              "epid": "19034602427",
+              "title": "Skydio 2 Camera Drone. Complete upgrade package included.",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -42985,6 +43012,350 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-04T04:46:28Z"
+    },
+    "gopro-wireless-mic-complete": {
+      "contamination_key": "gopro-wireless-mic-complete",
+      "vendor": "GoPro",
+      "model": "wireless mic complete",
+      "gtin": "00810116385119",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206352204630",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "122654"
+      },
+      "identity": {
+        "brand": "GoPro",
+        "mpn": "AWMIC-010",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "810116385119",
+              "gtin14": "00810116385119",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "GoPro - Wireless Mic Complete Kit - Black",
+        "image": "https://i.ebayimg.com/images/g/iyIAAeSwJU5q5vfA/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "159.99",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:01:03Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206352204630?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:01:03Z"
+    },
+    "canon-eos-20d": {
+      "contamination_key": "canon-eos-20d",
+      "vendor": "Canon",
+      "model": "eos 20d",
+      "gtin": "00013803044430",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "840042127232",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "9442A002",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803044430",
+              "gtin14": "00013803044430",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "EXC+ Canon EOS 20D DSLR Camera (Body Only) #417",
+        "image": "https://i.ebayimg.com/images/g/HswAAeSwNUZq18Hz/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "50.00",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:02:11Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/840042127232?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BSDK5yxQxU5qyUh3wgqC1tB7XdqDUUCPbQ0TYswFBa1OANX64tL1n9g2NByV%2FuSLHuWMvJtQF5RtqgPb7kMgPhvN3v%2BZVGQGDp%2BhtPwUohnuv7uy9LaXiP31WMI26%2FLGd7GhYRoq8xtRwJX5S78xzryQw%2BW7jY6nR5OyzquPgL%2BaZoAbNyFh1VgBb%2BmX3Q6sU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:02:11Z"
+    },
+    "insta360-go-action-128gb-black": {
+      "contamination_key": "insta360-go-action-128gb-black",
+      "vendor": "Insta360",
+      "model": "go action 128gb black",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377607411179",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "Insta360",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Insta360 GO 3s Action Camera - 128GB - Black - barely used - in original box",
+        "image": "https://i.ebayimg.com/images/g/FIUAAeSw1MJqwIVV/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "239.99",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:02:33Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377607411179?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:02:33Z"
+    },
+    "neewer-q6-ghz-ttl-flash": {
+      "contamination_key": "neewer-q6-ghz-ttl-flash",
+      "vendor": "Neewer",
+      "model": "q6 ghz ttl flash",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "128072258198",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Neewer",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "NEEWER Q6 600W 2.4GHz 1/8000S HSS TTL Outdoor Flash Light Strobe Speedlite APP",
+        "image": "https://i.ebayimg.com/images/g/POYAAeSwqn9qjq1W/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "499.00",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:02:54Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/128072258198?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FsmzEniqho3VXp6%2BkCdtreI72GZLlTWNajAFOx42U9XH%2F4CdpbaBfzWNATlGDd8Q3%2Bnkq6oQDSVKduTtD0UQCClocdSyYtWO5f20Ub48dkT%2Fqs3DL0FEeY0zgSXwzlEgxZ8uP5V0AZnKXb2gnxRQH3%2BsXiEDXpNMoR4CKM4h8oLOoLi9zh9oIMUfPM6DbQP0I%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:02:54Z"
+    },
+    "nikon-300mm-f4": {
+      "contamination_key": "nikon-300mm-f4",
+      "vendor": "Nikon",
+      "model": "300mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147652790557",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon Nikkor AF-S 300mm f4 D ED IF Light Gray Lens #398",
+        "image": "https://i.ebayimg.com/images/g/QeYAAeSw4y9q33tk/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "326.89",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:04:12Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147652790557?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:04:12Z"
+    },
+    "autel-best-autel-evo-1-you-could-find": {
+      "contamination_key": "autel-best-autel-evo-1-you-could-find",
+      "vendor": "Autel",
+      "model": "Best Autel Evo 1 you could find.",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "900066252879",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Autel Robotics",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Best used Autel Evo 1 you could find.",
+        "image": "https://i.ebayimg.com/images/g/3~cAAeSw~~tq68Ox/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "350.00",
+          "currency": "USD",
+          "as_of": "2026-11-05T04:45:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/900066252879?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T04:45:52Z"
+    },
+    "nikon-d500": {
+      "contamination_key": "nikon-d500",
+      "vendor": "Nikon",
+      "model": "d500",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820315121849",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "NIKON D500 BODY",
+        "image": "https://i.ebayimg.com/images/g/V74AAeSw6l9q6zKt/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "859.95",
+          "currency": "USD",
+          "as_of": "2026-11-05T06:00:59Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820315121849?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T06:00:59Z"
+    },
+    "viltrox-35-50mm-f1-4": {
+      "contamination_key": "viltrox-35-50mm-f1-4",
+      "vendor": "Viltrox",
+      "model": "35 50mm f1.4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "940058887463",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "3319"
+      },
+      "identity": {
+        "brand": "VILTROX",
+        "mpn": "XHJX-JYC-03533",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "VILTROX 50mm F1.4 Pro FE Sony E-Mount Lens A7IV A7C A7III A7RII A7RIII A9 A1 FX3",
+        "image": "https://i.ebayimg.com/images/g/NxsAAeSwNhhq6A0x/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "922.32",
+          "currency": "USD",
+          "as_of": "2026-11-05T06:01:20Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/940058887463?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F0hNFJWfaQUKHsNI9TRPAzMOTAV3r9NcIAZBtU8I7mXAy3M9UWLa3QCSYizfw%2BwfW8nk%2BxF7fbmg5EwFDkklcGOWhk%2FpdN8JTO1yPI5BV%2F2VXKRh0YoEUtKneP%2F%2BGnHyNjiFkS0O%2BiQJKT3z1f%2FG%2FiurdASGq9TLmU2OhZTwEtEKWO2pp49ocN7rleDNT3Dj0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-05T06:01:20Z"
     }
   },
   "substrate": [

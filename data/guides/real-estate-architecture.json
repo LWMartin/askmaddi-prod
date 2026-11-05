@@ -1992,6 +1992,13 @@
       ]
     },
     {
+      "card_id": "canon-eos-250d",
+      "display_name": "Canon eos 250d",
+      "unknowns": [
+        "resolution_mp: resolution_mp not present on card"
+      ]
+    },
+    {
       "card_id": "canon-eos-550d",
       "display_name": "Canon eos 550d",
       "unknowns": [
@@ -2001,6 +2008,13 @@
     {
       "card_id": "canon-eos-5d",
       "display_name": "Canon eos 5d",
+      "unknowns": [
+        "resolution_mp: resolution_mp not present on card"
+      ]
+    },
+    {
+      "card_id": "canon-eos-r1",
+      "display_name": "Canon eos r1",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2609,9 +2623,9 @@
     }
   ],
   "counts": {
-    "in_scope": 105,
+    "in_scope": 107,
     "ranked": 14,
     "excluded": 2,
-    "pending_backfill": 89
+    "pending_backfill": 91
   }
 }
