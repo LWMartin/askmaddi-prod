@@ -544,3 +544,87 @@ def test_find_by_product_identity_matches_epid_when_mpn_absent():
     assert reg.find_by_product_identity(epid='EP-555',
                                         registry=_reg_with(entries)) == ['skydio-2']
     assert reg.find_by_product_identity(epid='', registry=_reg_with(entries)) == []
+
+
+# ── authored identity anchors survive a machine replace (2026-11-05) ──────────
+_FEED_PROV = {'method': 'feed-verified-correction', 'source': 'adorama-feed-2026-09-02'}
+
+
+def _resell(p, slug, **kw):
+    """Re-resolve the slug from a DIFFERENT eBay listing (the old one sold):
+    upsert takes the 'updated' replace path through _merge_enrichment."""
+    kw.setdefault('legacy', '999999999999')
+    return reg.upsert(slug, _entry(**kw), path=p)
+
+
+def test_reconstructs_2026_09_15_canon_r6_revert(tmp_path):
+    """09-02: canon-r6's contaminated 5666C002 (the R6 Mark II's part number) was
+    corrected to 4082C002. 09-15: the eBay listing sold, resolve re-stamped
+    5666C002 from a new listing, and the replace dropped the correction — the R6
+    card then carried the Mark II's price. The authored anchor must survive."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('canon-r6', _entry(mpn='5666C002'), path=p)
+    assert reg.correct_mpn('canon-r6', '4082C002', _FEED_PROV, expect_mpn='5666C002', path=p) == 'corrected'
+    assert _resell(p, 'canon-r6', mpn='5666C002') == 'updated'
+    ident = json.loads(p.read_text())['skus']['canon-r6']['identity']
+    assert ident['mpn'] == '4082C002'
+    assert ident['mpn_provenance']['corrected_from'] == '5666C002'
+    assert ident['mpn_provenance']['superseded']['mpn'] == '5666C002'
+
+
+def test_set_mpn_stamp_survives_listing_rotation_with_empty_mpn(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(mpn=''), path=p)
+    assert reg.set_mpn('sony-a7iv', 'ILCE-7M4/B', _PROV, path=p) == 'written'
+    _resell(p, 'sony-a7iv', mpn='')
+    ident = json.loads(p.read_text())['skus']['sony-a7iv']['identity']
+    assert ident['mpn'] == 'ILCE-7M4/B'
+    assert ident['mpn_provenance'] == _PROV            # no superseded: incoming had nothing
+
+
+def test_authored_empty_mpn_stays_cleared(tmp_path):
+    """canon-eos-550d: the contaminated 2727C002 (Rebel T7 kit) was cleared to ''
+    on purpose; a re-resolve carrying it again must not bring it back."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(mpn='2727C002'), path=p)
+    assert reg.correct_mpn('sony-a7iv', '', _FEED_PROV, expect_mpn='2727C002', path=p) == 'corrected'
+    _resell(p, 'sony-a7iv', mpn='2727C002')
+    ident = json.loads(p.read_text())['skus']['sony-a7iv']['identity']
+    assert ident['mpn'] == ''
+    assert ident['mpn_provenance']['superseded']['mpn'] == '2727C002'
+
+
+def test_unauthored_mpn_still_follows_the_new_listing(tmp_path):
+    """No receipt = not authored: existing replace behaviour is unchanged."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(mpn='ILCE-7M4'), path=p)
+    _resell(p, 'sony-a7iv', mpn='ILCE-7M4K')
+    ident = json.loads(p.read_text())['skus']['sony-a7iv']['identity']
+    assert ident['mpn'] == 'ILCE-7M4K'
+    assert 'mpn_provenance' not in ident
+
+
+def test_correct_brand_swaps_and_survives_rotation(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)              # eBay brand 'Sony'
+    assert reg.correct_brand('sony-a7iv', 'TTArtisan', _PROV, expect_brand='Sony', path=p) == 'corrected'
+    ident = json.loads(p.read_text())['skus']['sony-a7iv']['identity']
+    assert ident['brand'] == 'TTArtisan' and ident['brand_provenance']['corrected_from'] == 'Sony'
+    _resell(p, 'sony-a7iv')                                # resolve stamps 'Sony' again
+    ident = json.loads(p.read_text())['skus']['sony-a7iv']['identity']
+    assert ident['brand'] == 'TTArtisan'
+    assert ident['brand_provenance']['superseded']['brand'] == 'Sony'
+
+
+def test_correct_brand_is_compare_and_swap_case_sensitive(tmp_path):
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-a7iv', _entry(), path=p)
+    assert reg.correct_brand('sony-a7iv', 'Canon', _PROV, expect_brand='SONY', path=p) == 'stale-expect'
+    assert json.loads(p.read_text())['skus']['sony-a7iv']['identity']['brand'] == 'Sony'
+    assert reg.correct_brand('sony-a7iv', 'Sony', _PROV, expect_brand='Sony', path=p) == 'no-op'
+    assert reg.correct_brand('ghost', 'X', _PROV, expect_brand='Y', path=p) == 'missing-slug'
+    try:
+        reg.correct_brand('sony-a7iv', '  ', _PROV, expect_brand='Sony', path=p)
+        raise AssertionError('empty brand must be refused')
+    except ValueError:
+        pass

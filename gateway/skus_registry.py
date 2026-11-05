@@ -418,6 +418,22 @@ def _merge_enrichment(existing, entry):
     - unspsc                Gemma-mapper backfill (Axis B): build_entry always
                             emits null; a non-null existing classification
                             carries forward.
+    - mpn + mpn_provenance  set_mpn / correct_mpn doctrine (AUTHORED anchor):
+      brand + brand_provenance  correct_brand doctrine. A receipt is written
+                            ONLY by those surgical doors, so its presence marks
+                            the value as authored — verified against the feed
+                            or ruled by a human. An authored value is terminal
+                            against a machine pass, INCLUDING an authored empty
+                            MPN (a contaminated anchor deliberately cleared):
+                            the existing value + receipt survive the replace.
+                            An incoming value that DIFFERS is not silently
+                            dropped either — it is kept under
+                            <field>_provenance.superseded for /admin, the same
+                            disagreement-is-visible rule as gtin. Found live
+                            2026-11-05: canon-r6's 09-02 MPN correction was
+                            undone by a 09-15 listing rotation (the eBay item
+                            sold), which re-stamped the R6 Mark II's part
+                            number and put the Mark II's price on the R6 card.
     - spec_surface          AUTHORED curation (R10, maddi-naming-register):
                             the per-SKU URL fragments that fill the brand
                             table's template. resolve never writes it, so an
@@ -490,6 +506,25 @@ def _merge_enrichment(existing, entry):
     # Axis B classification
     if entry.get('unspsc') is None and existing.get('unspsc') is not None:
         entry['unspsc'] = existing['unspsc']
+
+    # AUTHORED identity anchors (set_mpn / correct_mpn / correct_brand): the
+    # receipt marks the value as authored; it survives a machine replace.
+    for field, norm in (('mpn', _norm_join_mpn), ('brand', lambda v: str(v or '').strip())):
+        prov_key = field + '_provenance'
+        old_prov = old_identity.get(prov_key)
+        if not isinstance(old_prov, dict):
+            continue
+        old_val = old_identity.get(field)
+        incoming = identity.get(field)
+        kept = dict(old_prov)
+        if field == 'mpn':
+            differs = _is_real_mpn(incoming) and norm(incoming) != norm(old_val)
+        else:
+            differs = bool(norm(incoming)) and norm(incoming) != norm(old_val)
+        if differs:
+            kept['superseded'] = {field: incoming, 'resolved_at': entry.get('resolved_at')}
+        identity[field] = old_val
+        identity[prov_key] = kept
 
     entry['needs_review'] = entry.get('gtin') is None or entry.get('unspsc') is None
     return entry
@@ -704,6 +739,51 @@ def correct_mpn(slug, new_mpn, provenance, expect_mpn, path=SKUS_PATH):
     prov.setdefault('corrected_from', current)
     identity['mpn'] = new_mpn
     identity['mpn_provenance'] = prov
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'corrected'
+
+
+def correct_brand(slug, new_brand, provenance, expect_brand, path=SKUS_PATH):
+    """Overwrite a WRONG identity.brand with a verified correction.
+
+    identity.brand is load-bearing twice: the Adorama matcher's MPN fallback
+    requires it to EQUAL the feed row's brand (the guard that stopped canon-r5
+    shipping a Manfrotto spigot's price), and spine_identity() renders it as the
+    card's brand — the hero descriptor, the "More <brand>" link, and the JSON-LD
+    Product.brand. eBay resolve stamps whatever the seller typed: 'Sony' on a
+    TTArtisan lens, 'Unbranded' on a Canon PowerShot, a product name
+    ('INSTA360 GO3') as the brand. This is the correction door for that class.
+
+    COMPARE-AND-SWAP like correct_mpn: the write lands only if the current brand
+    equals `expect_brand` EXACTLY (stripped; case kept — brand is rendered text,
+    so 'OLYMPUS' and 'Olympus' are different values). If it has since changed,
+    returns 'stale-expect'. Records the receipt to identity.brand_provenance with
+    corrected_from; _merge_enrichment treats that receipt as an authored anchor
+    and carries it through a machine replace.
+
+    Returns 'corrected' | 'stale-expect' | 'no-op' | 'missing-slug'. Atomic.
+    """
+    new_brand = str(new_brand or '').strip()
+    if not new_brand:
+        raise ValueError('correct_brand requires a non-empty brand')
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+
+    identity = entry.setdefault('identity', {})
+    current = str(identity.get('brand') or '').strip()
+    if current != str(expect_brand or '').strip():
+        return 'stale-expect'
+    if current == new_brand:
+        return 'no-op'
+
+    prov = dict(provenance or {})
+    prov.setdefault('corrected_from', identity.get('brand'))
+    identity['brand'] = new_brand
+    identity['brand_provenance'] = prov
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'corrected'
