@@ -2600,6 +2600,56 @@ def load_guides(guides_dir):
     return out
 
 
+def prune_guides_to_cards(guides, card_ids):
+    """Each guide's `ranked` list, cut to cards that exist; ranks renumbered 1..n.
+
+    A guide artifact (data/guides/*.json) is generated from the corpus at some
+    point and names its ranked cards by id. When a card is later DELISTED
+    (tools/delist_card.py — a phantom product, a duplicate, an off-brand mint),
+    the guide data still names it, and every surface that reads `ranked` (the
+    guide page, its price-band pages, the card's use-case-fit page, the guides
+    index count, the llms/sitemap guide lists) would keep showing that product:
+    rank, name, rationale and reviewer quotes — for a page that no longer
+    exists. Found 2026-11-05: delisting the 'Nikon 35mm f5' (a Nikon F5 film
+    body minted as a lens) would have left it ranked in all 10 camera guides.
+
+    Pruned ONCE at load, on whole-corpus builds, so every reader sees the same
+    list and none can drift. Returns new guide dicts; the data files are not
+    touched (the next guide generation drops the id at the source).
+    """
+    out = []
+    for g in guides:
+        # EVERY card list the guide carries (ranked / excluded / pending_backfill
+        # today): any list of entries with a card_id. The "didn't qualify" list
+        # names products too — found when the first version pruned only `ranked`.
+        lists = [k for k, v in g.items()
+                 if isinstance(v, list) and v and all(isinstance(e, dict) and "card_id" in e for e in v)]
+        gone, new = set(), {}
+        for k in lists:
+            kept = [e for e in g[k] if e.get("card_id") in card_ids]
+            if len(kept) != len(g[k]):
+                gone |= {e.get("card_id") for e in g[k]} - set(card_ids)
+                if k == "ranked":
+                    kept = [dict(r, rank=i + 1) if "rank" in r else r for i, r in enumerate(kept)]
+                new[k] = kept
+        if new:
+            print(f"  guide {g.get('id')}: dropped card(s) with no card: {', '.join(sorted(map(str, gone)))}")
+            g = dict(g, **new)
+            counts = g.get("counts")
+            if isinstance(counts, dict):
+                # Artifact invariant (all 17 guides, 2026-11-05): each count is its
+                # list's length and in_scope is their sum — kept exact after pruning.
+                counts = dict(counts)
+                for k in lists:
+                    if k in counts:
+                        counts[k] = len(g[k])
+                if "in_scope" in counts:
+                    counts["in_scope"] = sum(len(g[k]) for k in lists if k in counts)
+                g["counts"] = counts
+        out.append(g)
+    return out
+
+
 # ─── Brand landing pages (browse-by-brand IA) ───────────────────────────────
 # Derived, whole-corpus artifacts like the sitemap/manifest: one page per brand
 # at /brands/<slug>/ plus a /brands/ index, grouped by category. Pure derivation
@@ -3286,6 +3336,10 @@ def main():
     # sitemap. Single --card publish: stays empty; card gets the links at the next
     # nightly whole-corpus rebuild. Additive \u2014 never rewrites a card page.
     guides = load_guides(args.guides_dir) if args.guides_dir else []
+    if args.cards_dir:
+        # Whole-corpus only: a single --card build holds one card, and pruning
+        # against it would empty every guide.
+        guides = prune_guides_to_cards(guides, {c["card_id"] for c in cards})
     surface_urls = []
     surface_map = {}
     guide_bands = {}

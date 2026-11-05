@@ -19,6 +19,11 @@ THE SURFACES (and why they split into two modes)
     - browser/images/heroes/<slug>.jpg  the self-hosted hero, if any
     - data/selfhost_images.json         the hero-overlay entry, if any
     - data/hero_images.json             the clean-hero entry, if any
+    - browser/<surface>/<slug>/          every derived per-card page (fit, specs,
+                                        where-they-split, aspect/<axis>, …) —
+                                        swept generically (2026-11-05)
+    - browser/vs/<slug>-vs-*/, */*-vs-<slug>/   pair pages naming the card
+    - browser/brands/<brand>/            only when this was the brand's last card
   live-authoritative on the box, reconciled on its own path   --spine-only
     - data/skus.json                    the identity spine (skus_registry.delist)
 
@@ -55,6 +60,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'gateway'))
 import skus_registry  # noqa: E402
 import work_queue  # noqa: E402
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import build_site  # noqa: E402  (brand_slug: the brand page's own naming rule)
 
 
 def _remove_image_registry_entry(reg_path, slug, apply):
@@ -85,6 +92,12 @@ def delist(slug, *, repo, skus_path, do_files, do_spine, apply):
 
     if do_files:
         card_json = repo / 'data' / 'cards' / f'{slug}.json'
+        card_brand = None
+        if card_json.exists():
+            try:
+                card_brand = (json.loads(card_json.read_text(encoding='utf-8')).get('identity') or {}).get('brand')
+            except (ValueError, OSError):
+                card_brand = None
         if card_json.exists():
             if apply:
                 card_json.unlink()
@@ -107,6 +120,50 @@ def delist(slug, *, repo, skus_path, do_files, do_spine, apply):
             report.append(('hero-jpg', 'removed', str(hero)))
         else:
             report.append(('hero-jpg', 'absent', str(hero)))
+
+        # Derived per-card pages (2026-11-05). The site grew surfaces after this
+        # tool was written — /fit/, /specs/, /where-they-split/, /aspect/<slug>/<axis>/
+        # — and the build is additive (it never deletes), so a delisted card left
+        # them live, still describing the wrong product and linking a dead card.
+        # Swept GENERICALLY: any browser/<surface>/<slug>/ directory, so a
+        # surface added later is retired too. Guide/brand indexes are derived and
+        # rebuild without the card; a guide's ranked list is pruned at build time
+        # (build_site.prune_guides_to_cards).
+        browser = repo / 'browser'
+        for top in sorted(p for p in browser.iterdir() if p.is_dir() and p.name != 'cards') if browser.is_dir() else []:
+            sat = top / slug
+            if sat.is_dir():
+                if apply:
+                    shutil.rmtree(sat)
+                report.append((f'page:{top.name}', 'removed', str(sat)))
+        vs_dir = browser / 'vs'
+        for pair in sorted(vs_dir.iterdir()) if vs_dir.is_dir() else []:
+            if pair.is_dir() and (pair.name.startswith(f'{slug}-vs-') or pair.name.endswith(f'-vs-{slug}')):
+                if apply:
+                    shutil.rmtree(pair)
+                report.append(('page:vs', 'removed', str(pair)))
+        # A brand page whose LAST card this was: nothing rebuilds it, so it would
+        # stay live listing a card that no longer exists.
+        if card_brand:
+            bslug = build_site.brand_slug(card_brand)
+            others = False
+            for p in (repo / 'data' / 'cards').glob('*.json'):
+                if p.stem == slug:
+                    continue
+                try:
+                    b = (json.loads(p.read_text(encoding='utf-8')).get('identity') or {}).get('brand')
+                except (ValueError, OSError):
+                    continue
+                if build_site.brand_slug(b) == bslug:
+                    others = True
+                    break
+            bdir = browser / 'brands' / bslug
+            if not others and bdir.is_dir():
+                if apply:
+                    shutil.rmtree(bdir)
+                report.append(('brand-page', 'removed (last card of brand)', str(bdir)))
+            else:
+                report.append(('brand-page', 'kept (brand has other cards)' if others else 'absent', str(bdir)))
 
         report.append(('selfhost-reg',
                        _remove_image_registry_entry(repo / 'data' / 'selfhost_images.json', slug, apply),

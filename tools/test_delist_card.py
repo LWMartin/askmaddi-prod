@@ -215,3 +215,59 @@ def test_requires_at_least_one_slug(tmp_path):
     repo = _repo(tmp_path, 'panasonic-s5-mirrorless')
     with pytest.raises(SystemExit):
         dc.main(['--repo', str(repo), '--files-only'])  # neither --slug nor --slugs-file
+
+
+# ── derived per-card pages, pair pages, last-card brand page (2026-11-05) ─────
+def _derived(tmp_path, slug, brand='Panasonic'):
+    for top in ('fit', 'specs', 'where-they-split'):
+        (tmp_path / 'browser' / top / slug).mkdir(parents=True)
+        (tmp_path / 'browser' / top / slug / 'index.html').write_text('x')
+    (tmp_path / 'browser' / 'aspect' / slug / 'video_specs').mkdir(parents=True)
+    (tmp_path / 'browser' / 'aspect' / slug / 'video_specs' / 'index.html').write_text('x')
+    (tmp_path / 'data' / 'cards' / f'{slug}.json').write_text(
+        json.dumps({'card_id': slug, 'identity': {'brand': brand}}))
+
+
+def test_sweeps_every_derived_page_and_pair_page_but_nothing_else(tmp_path):
+    slug = 'sony-a7'
+    repo = _repo(tmp_path, slug)
+    _derived(repo, slug, brand='Sony')
+    _derived(repo, 'sony-a7c', brand='Sony')               # prefix neighbour must survive
+    for pair in (f'{slug}-vs-canon-r5', f'nikon-z5-vs-{slug}', 'sony-a7c-vs-canon-r5'):
+        (repo / 'browser' / 'vs' / pair).mkdir(parents=True)
+    report = dc.delist(slug, repo=repo, skus_path=repo / 'data' / 'skus.json',
+                       do_files=True, do_spine=False, apply=True)
+    for top in ('fit', 'specs', 'where-they-split', 'aspect'):
+        assert not (repo / 'browser' / top / slug).exists(), top
+        assert (repo / 'browser' / top / 'sony-a7c').exists(), f'{top}: neighbour removed'
+    assert not (repo / 'browser' / 'vs' / f'{slug}-vs-canon-r5').exists()
+    assert not (repo / 'browser' / 'vs' / f'nikon-z5-vs-{slug}').exists()
+    assert (repo / 'browser' / 'vs' / 'sony-a7c-vs-canon-r5').exists()
+    removed = {s for s, a, _ in report if a == 'removed'}
+    assert {'page:fit', 'page:specs', 'page:where-they-split', 'page:aspect', 'page:vs'} <= removed
+
+
+def test_brand_page_removed_only_with_its_last_card(tmp_path):
+    slug = 'dji-droneer-x501'
+    repo = _repo(tmp_path, slug)
+    _derived(repo, slug, brand='Droneer')
+    _derived(repo, 'fujifilm-x-t5', brand='FUJIFILM')
+    _derived(repo, 'fujifilm-x100vi', brand='Fujifilm')   # same brand slug, other casing
+    for b in ('droneer', 'fujifilm'):
+        (repo / 'browser' / 'brands' / b).mkdir(parents=True)
+    dc.delist(slug, repo=repo, skus_path=repo / 'data' / 'skus.json', do_files=True, do_spine=False, apply=True)
+    assert not (repo / 'browser' / 'brands' / 'droneer').exists()
+    rep = dc.delist('fujifilm-x-t5', repo=repo, skus_path=repo / 'data' / 'skus.json',
+                    do_files=True, do_spine=False, apply=True)
+    assert (repo / 'browser' / 'brands' / 'fujifilm').exists()
+    assert ('brand-page', 'kept (brand has other cards)') in {(s, a) for s, a, _ in rep}
+
+
+def test_dry_run_leaves_derived_pages(tmp_path):
+    slug = 'sony-a7'
+    repo = _repo(tmp_path, slug)
+    _derived(repo, slug, brand='Sony')
+    (repo / 'browser' / 'brands' / 'sony').mkdir(parents=True)
+    dc.delist(slug, repo=repo, skus_path=repo / 'data' / 'skus.json', do_files=True, do_spine=False, apply=False)
+    for top in ('fit', 'specs', 'where-they-split', 'aspect', 'brands'):
+        assert any((repo / 'browser' / top).iterdir()), top
