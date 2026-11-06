@@ -841,7 +841,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "5666C002",
+        "mpn": "4082C002",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -862,6 +862,13 @@
           "value": "900.00",
           "currency": "USD",
           "as_of": "2026-08-27T04:18:51Z"
+        },
+        "mpn_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "verdict": "CONTAMINATED-MPN-CORRECTED",
+          "note": "re-applies the 2026-09-02 correction, reverted by a 2026-09-15 re-resolve (authored MPN not carried by _merge_enrichment); 5666C002 is the EOS R6 Mark II's part number",
+          "corrected_from": "5666C002"
         }
       },
       "affiliate": {
@@ -1551,7 +1558,7 @@
       },
       "identity": {
         "brand": "Leica",
-        "mpn": "",
+        "mpn": "11826",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -1564,6 +1571,23 @@
           "value": "887.47",
           "currency": "USD",
           "as_of": "2026-08-17T04:18:27Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "11826",
+              "product_code": "lc502mu",
+              "feed_gtin": "022243118267",
+              "feed_brand": "Leica",
+              "title": "Leica 50mm f/2 Summicron-M Lens for M System, Black",
+              "snapshot": "2026-11-05",
+              "rule": "code lc502mu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -2975,7 +2999,7 @@
       },
       "identity": {
         "brand": "Panasonic",
-        "mpn": "",
+        "mpn": "S-R70200",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -3037,6 +3061,23 @@
               "accepted": true
             }
           ]
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "S-R70200",
+              "product_code": "pcs70200",
+              "feed_gtin": "885170357815",
+              "feed_brand": "Panasonic",
+              "title": "Panasonic LUMIX S PRO 70-200mm f/4 Lens for L Mount",
+              "snapshot": "2026-11-05",
+              "rule": "code pcs70200",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -3065,7 +3106,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "",
+        "mpn": "348965",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -3086,6 +3127,20 @@
           "value": "362.00",
           "currency": "USD",
           "as_of": "2026-10-25T04:03:39Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "348965",
+              "product_code": "sg2314soe",
+              "feed_gtin": "198983348650",
+              "snapshot": "2026-11-05",
+              "note": "spine GTIN is the legacy 085126 UPC; feed lists 198983 UPC for the same pinned product"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -3731,7 +3786,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "ILCZV-E10/W",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -3744,6 +3799,23 @@
           "value": "426.00",
           "currency": "USD",
           "as_of": "2026-08-23T04:26:18Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "ILCZV-E10/W",
+              "product_code": "isozve10w",
+              "feed_gtin": "027242922112",
+              "feed_brand": "Sony",
+              "title": "Sony ZV-E10 Mirrorless Camera, White",
+              "snapshot": "2026-11-05",
+              "rule": "code isozve10w",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -5439,7 +5511,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "ILMEFX6V",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -5452,6 +5524,23 @@
           "value": "5899.00",
           "currency": "USD",
           "as_of": "2026-08-27T04:29:24Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "ILMEFX6V",
+              "product_code": "sofx6",
+              "feed_gtin": "027242921252",
+              "feed_brand": "Sony",
+              "title": "Sony FX6 Full-Frame Cinema Camera",
+              "snapshot": "2026-11-05",
+              "rule": "code sofx6",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -6459,7 +6548,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "2515A003",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -6472,6 +6561,23 @@
           "value": "124.95",
           "currency": "USD",
           "as_of": "2026-08-27T23:00:43Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "2515A003",
+              "product_code": "ca5014afu",
+              "feed_gtin": "082966213014",
+              "feed_brand": "Canon",
+              "title": "Canon EF 50mm f/1.4 USM Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ca5014afu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -8358,7 +8464,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "1737",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -8371,6 +8477,23 @@
           "value": "429.99",
           "currency": "USD",
           "as_of": "2026-08-27T23:21:28Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "1737",
+              "product_code": "nkz30",
+              "feed_gtin": "018208017379",
+              "feed_brand": "Nikon",
+              "title": "Nikon Z 30 DX-Format Mirrorless Camera",
+              "snapshot": "2026-11-05",
+              "rule": "code nkz30",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -8385,52 +8508,6 @@
         "wikipedia_title": "Nikon_Z30",
         "wikipedia_title_resolved": "Nikon Z30",
         "wikipedia_stamped_at": "2026-08-28T02:33:27Z"
-      }
-    },
-    "nikon-35mm-f5": {
-      "contamination_key": "nikon-35mm-f5",
-      "vendor": "Nikon",
-      "model": "35mm f5",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "178436839269",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "body",
-      "marketplace_categories": {
-        "ebay_category_id": "15230"
-      },
-      "identity": {
-        "brand": "Nikon",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Nikon F5",
-        "image": "https://i.ebayimg.com/images/g/JKwAAeSwyTVqjGo9/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "439.00",
-          "currency": "USD",
-          "as_of": "2026-08-27T23:22:02Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/178436839269?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FDsCyAHrSOUs475KG9RCFEfgF4cxfYNVYLUPQEXd8ebF20QTQQ6A88PgCqLLyTr0rL7xBBuojAOlomAYGkDeLuJ8GNIJW8P5EVmgQlUNaQt%2BT5vOj%2FcjQazJobcshV0D6JlNx%2FGQf2QUp4YCW1s7pBYxzEaN1gah7UqTrGCh4b6pIzFqe5IM94HP%2FxT9Zn%2B7s%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:22:02Z",
-      "spec_surface": {
-        "wikipedia_title": "Nikon_F5",
-        "wikipedia_title_resolved": "Nikon F5",
-        "wikipedia_stamped_at": "2026-08-28T02:33:30Z"
       }
     },
     "sony-fx3": {
@@ -8643,7 +8720,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "5176B013",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -8656,6 +8733,23 @@
           "value": "4499.95",
           "currency": "USD",
           "as_of": "2026-08-27T23:23:50Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "5176B013",
+              "product_code": "ca2004004",
+              "feed_gtin": "013803378528",
+              "feed_brand": "Canon",
+              "title": "Canon EF 200-400mm f/4L IS USM Extender 1.4x Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ca2004004",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -10295,7 +10389,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "SEL1625G",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -10308,6 +10402,23 @@
           "value": "986.17",
           "currency": "USD",
           "as_of": "2026-09-03T20:00:29Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "SEL1625G",
+              "product_code": "iso1625g",
+              "feed_gtin": "027242928749",
+              "feed_brand": "Sony",
+              "title": "Sony FE 16-25mm f/2.8 G Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code iso1625g",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -10336,7 +10447,7 @@
       },
       "identity": {
         "brand": "PANASONIC",
-        "mpn": "",
+        "mpn": "S-S35",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -10349,6 +10460,23 @@
           "value": "456.21",
           "currency": "USD",
           "as_of": "2026-09-03T19:20:18Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "S-S35",
+              "product_code": "pcs3518",
+              "feed_gtin": "885170385306",
+              "feed_brand": "Panasonic",
+              "title": "Panasonic LUMIX S 35mm f/1.8 Lens for L Mount",
+              "snapshot": "2026-11-05",
+              "rule": "code pcs3518",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -12835,7 +12963,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "Dose not apply",
+        "mpn": "SEL35F28Z",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -12856,6 +12984,23 @@
           "value": "297.00",
           "currency": "USD",
           "as_of": "2026-08-27T23:00:24Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "SEL35F28Z",
+              "product_code": "iso3528",
+              "feed_gtin": "002724286814",
+              "feed_brand": "Sony",
+              "title": "Sony Sonnar T* FE 35mm F2.8 ZA Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "rule": "code iso3528",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -13981,7 +14126,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "NA",
+        "mpn": "206969",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -14020,6 +14165,23 @@
               "title": "Sigma Lens USB Dock UD-01NA for Nikon Mount Made in Japan New Open Box!",
               "had_catalog": true,
               "accepted": true
+            }
+          ]
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "206969",
+              "product_code": "sg1628l",
+              "feed_gtin": "198983206691",
+              "feed_brand": "Sigma",
+              "title": "Sigma 16-28mm f/2.8 DG DN Contemporary Lens for L Mount",
+              "snapshot": "2026-11-05",
+              "rule": "code sg1628l",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
             }
           ]
         }
@@ -14996,7 +15158,7 @@
       },
       "identity": {
         "brand": "Fujifilm",
-        "mpn": "",
+        "mpn": "16953924",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -15009,6 +15171,22 @@
           "value": "1842.00",
           "currency": "USD",
           "as_of": "2026-09-04T22:01:47Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "16953924",
+              "product_code": "ifjx1006b",
+              "feed_gtin": "074101212471",
+              "feed_brand": "Fujifilm",
+              "title": "Fujifilm X100VI Digital Camera",
+              "snapshot": "2026-11-05",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -16404,7 +16582,7 @@
         "ebay_category_id": "3323"
       },
       "identity": {
-        "brand": "Zhongyi",
+        "brand": "Sigma",
         "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
@@ -16447,6 +16625,11 @@
           "value": "504.67",
           "currency": "USD",
           "as_of": "2026-09-22T16:03:41Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "note": "identity came from a Zhongyi Mitakon 85mm F1.2 eBay listing; the card and its page are the Sigma; approved by Lee 2026-11-05 (contamination review)",
+          "corrected_from": "Zhongyi"
         }
       },
       "affiliate": {
@@ -17153,7 +17336,7 @@
       },
       "identity": {
         "brand": "OLYMPUS",
-        "mpn": "",
+        "mpn": "V311100BU000",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -17174,6 +17357,23 @@
           "value": "1258.56",
           "currency": "USD",
           "as_of": "2026-09-06T16:31:19Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "V311100BU000",
+              "product_code": "iom1712",
+              "feed_gtin": "050332191808",
+              "feed_brand": "Olympus",
+              "title": "Olympus M.Zuiko Digital ED 17mm f/1.2 Pro Lens for Micro Four Thirds, Black",
+              "snapshot": "2026-11-05",
+              "rule": "code iom1712",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -17202,7 +17402,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "SEL28F20",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -17215,6 +17415,23 @@
           "value": "199.95",
           "currency": "USD",
           "as_of": "2026-09-06T16:31:38Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "SEL28F20",
+              "product_code": "iso282",
+              "feed_gtin": "027242888807",
+              "feed_brand": "Sony",
+              "title": "Sony FE 28mm f/2 Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "rule": "code iso282",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -18367,7 +18584,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "2727C002",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -18400,6 +18617,13 @@
               "accepted": true
             }
           ]
+        },
+        "mpn_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "verdict": "CONTAMINATED-MPN-CORRECTED",
+          "note": "2727C002 is the EOS Rebel T7/2000D kit's part number; the 550D's own part number is not established, so the contaminated anchor is cleared rather than replaced",
+          "corrected_from": "2727C002"
         }
       },
       "affiliate": {
@@ -21938,7 +22162,7 @@
       },
       "identity": {
         "brand": "Fujifilm",
-        "mpn": "",
+        "mpn": "600018250",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -21959,6 +22183,23 @@
           "value": "799.00",
           "currency": "USD",
           "as_of": "2026-09-10T06:01:18Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "600018250",
+              "product_code": "ifjgf6328",
+              "feed_gtin": "10074101033240",
+              "feed_brand": "Fujifilm",
+              "title": "Fujifilm GF 63mm f/2.8 R WR Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ifjgf6328",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -24161,7 +24402,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "2215",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -24174,6 +24415,23 @@
           "value": "330.23",
           "currency": "USD",
           "as_of": "2026-09-14T16:03:20Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "2215",
+              "product_code": "nk3518edu",
+              "feed_gtin": "018208022151",
+              "feed_brand": "Nikon",
+              "title": "Nikon 35mm f/1.8G AF-S ED NIKKOR Lens for DSLR Cameras",
+              "snapshot": "2026-11-05",
+              "rule": "code nk3518edu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -25301,7 +25559,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "",
+        "mpn": "351965",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -25343,6 +25601,20 @@
           "value": "299.00",
           "currency": "USD",
           "as_of": "2026-10-09T08:00:24Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "351965",
+              "product_code": "sg5614soe",
+              "feed_gtin": "198983351650",
+              "snapshot": "2026-11-05",
+              "note": "spine GTIN is the legacy 085126 UPC; feed lists 198983 UPC for the same pinned product"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -25706,7 +25978,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "2137",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -25719,6 +25991,23 @@
           "value": "59.99",
           "currency": "USD",
           "as_of": "2026-09-15T04:03:03Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "2137",
+              "product_code": "nk5018afdu",
+              "feed_gtin": "018208021376",
+              "feed_brand": "Nikon",
+              "title": "Nikon 50mm f/1.8D AF NIKKOR Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code nk5018afdu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -27043,67 +27332,6 @@
       "minted_needs_review": false,
       "resolved_at": "2026-09-15T14:12:25Z"
     },
-    "fujifilm-400mm-f4-5": {
-      "contamination_key": "fujifilm-400mm-f4-5",
-      "vendor": "Fujifilm",
-      "model": "400mm f4.5",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "206536562279",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "lens",
-      "marketplace_categories": {
-        "ebay_category_id": "3323"
-      },
-      "identity": {
-        "brand": "Fujifilm",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Fujifilm XF 100-400mm f4.5-5.6 R LM OIS WR Lens #538",
-        "image": "https://i.ebayimg.com/images/g/baoAAeSwU~lqm1uo/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/wBQAAOSwCQNfklIG/s-l640.jpg",
-        "price_seen": {
-          "value": "976.21",
-          "currency": "USD",
-          "as_of": "2026-09-22T16:02:51Z"
-        },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-09-16T04:36:50Z",
-          "query": "Fujifilm 16501109",
-          "winner": {
-            "item_id": "v1|358605857792|0",
-            "epid": "1154579958",
-            "title": "FUJIFILM XF 100-400mm f/4.5-5.6 R LM OIS WR Lens 16501109"
-          },
-          "epid_match": false,
-          "inspected": [
-            {
-              "item_id": "v1|358605857792|0",
-              "epid": "1154579958",
-              "title": "FUJIFILM XF 100-400mm f/4.5-5.6 R LM OIS WR Lens 16501109",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/206536562279?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BTHKt0LY23%2Bc0sY7e7C6Z7%2F1SlwdsDnY08OynAOBama%2FhuqJLqdAE%2BSH0OP2%2F2m7pmHx3imGR2pPGB%2FAsFAFIQdDJLqVSyijgCUJnawTS%2Bry1iEG4YrXAo8x71bOaZfOtlOFt6KnWljy5UC71zMuiwn1z2n4FRvN5gE5qYte2Ciq%2FEqhzYcbUKlmQGClek1EU%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-09-22T16:02:51Z"
-    },
     "canon-powershot-sx720": {
       "contamination_key": "canon-powershot-sx720",
       "vendor": "Canon",
@@ -27338,8 +27566,8 @@
         "ebay_category_id": "31388"
       },
       "identity": {
-        "brand": "Olympus",
-        "mpn": "",
+        "brand": "OM SYSTEM",
+        "mpn": "V210050SW000",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -27352,6 +27580,29 @@
           "value": "1195.29",
           "currency": "USD",
           "as_of": "2026-09-16T04:01:48Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "feed_brand": "OM SYSTEM",
+          "note": "eBay-stamped brand differed from the Adorama feed brand; approved by Lee 2026-11-05 (B1)",
+          "corrected_from": "Olympus"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "V210050SW000",
+              "product_code": "iomom3",
+              "feed_gtin": "050332195653",
+              "feed_brand": "OM SYSTEM",
+              "title": "OM SYSTEM OM-3 Mirrorless Camera",
+              "snapshot": "2026-11-05",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -28504,7 +28755,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-19T04:00:44Z"
+      "resolved_at": "2026-09-19T04:00:44Z",
+      "overrides": {
+        "display_name": "DJI Osmo Action 5 Pro"
+      }
     },
     "sirui-75mm": {
       "contamination_key": "sirui-75mm",
@@ -28851,7 +29105,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "1649",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -28864,6 +29118,23 @@
           "value": "707.08",
           "currency": "USD",
           "as_of": "2026-09-20T04:00:51Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "1649",
+              "product_code": "nkz5",
+              "feed_gtin": "018208016495",
+              "feed_brand": "Nikon",
+              "title": "Nikon Z5 Full Frame Mirrorless Camera",
+              "snapshot": "2026-11-05",
+              "rule": "code nkz5",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -29107,7 +29378,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "SEL814G",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -29120,6 +29391,23 @@
           "value": "1588.00",
           "currency": "USD",
           "as_of": "2026-09-22T16:03:06Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "SEL814G",
+              "product_code": "iso81435g",
+              "feed_gtin": "027242932883",
+              "feed_brand": "Sony",
+              "title": "Sony FE 8-14mm f/3.5 Fisheye G Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code iso81435g",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -29389,7 +29677,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "20051",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -29402,6 +29690,23 @@
           "value": "300.65",
           "currency": "USD",
           "as_of": "2026-09-23T08:00:29Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "20051",
+              "product_code": "nk2018u",
+              "feed_gtin": "018208200511",
+              "feed_brand": "Nikon",
+              "title": "Nikon 20mm f/1.8G ED AF-S NIKKOR Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code nk2018u",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -30904,47 +31209,6 @@
       "minted_needs_review": true,
       "resolved_at": "2026-09-25T04:45:43Z"
     },
-    "dji-droneer-c2501-o4-pro-2-5-compatible-dji": {
-      "contamination_key": "dji-droneer-c2501-o4-pro-2-5-compatible-dji",
-      "vendor": "DJI",
-      "model": "Droneer C2501 O4 Pro 2.5\" Compatible DJI",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "227534492048",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Droneer",
-        "mpn": "Droneer C2501 O4 Pro 2.5\" FPV Drone",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Droneer C2501 2.5\" FPV Drone 4K HD Camera Compatible with DJI O4 Pro",
-        "image": "https://i.ebayimg.com/images/g/fYMAAeSwfMJqsr48/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "419.00",
-          "currency": "USD",
-          "as_of": "2026-09-25T04:46:37Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/227534492048?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde88Wnc%2BA1CJj%2Fxr2aDk7nt8Z6I0objDNCc2tWeaZFVLT6HyINUq1uxPzOw7mrSFrKWXl9pYN3%2Bh4B7H%2F2uKC6IYwyXTKU8SiBF8nQg2IBb3ed8Pjnl30mUUsugzgjg%2FWQqOI%2BW1qP2PYCCi%2F4oqsvxHFfmDzXJ%2FL7xMoRX393hPa9EpCKjcCrG246wtVL5Mv54%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-09-25T04:46:37Z"
-    },
     "profoto-d2-500ws-airttl-monolight": {
       "contamination_key": "profoto-d2-500ws-airttl-monolight",
       "vendor": "Profoto",
@@ -31003,7 +31267,7 @@
       },
       "identity": {
         "brand": "Olympus",
-        "mpn": "",
+        "mpn": "V207130BU000",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -31016,6 +31280,23 @@
           "value": "325.01",
           "currency": "USD",
           "as_of": "2026-09-25T06:01:32Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "V207130BU000",
+              "product_code": "iomem104b",
+              "feed_gtin": "050332192904",
+              "feed_brand": "Olympus",
+              "title": "Olympus OM-D E-M10 Mark IV Camera, Black",
+              "snapshot": "2026-11-05",
+              "rule": "code iomem104b",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -31759,7 +32040,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "",
+        "mpn": "666965",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -31772,6 +32053,23 @@
           "value": "1100.00",
           "currency": "USD",
           "as_of": "2026-09-30T04:00:23Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "666965",
+              "product_code": "sg2060soe",
+              "feed_gtin": "198983666655",
+              "feed_brand": "Sigma",
+              "title": "Sigma 20-60mm f/2.8-4 DG Contemporary Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "rule": "code sg2060soe",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -31868,7 +32166,7 @@
         "ebay_category_id": "31388"
       },
       "identity": {
-        "brand": "Unbranded",
+        "brand": "Canon",
         "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
@@ -31882,6 +32180,13 @@
           "value": "299.25",
           "currency": "USD",
           "as_of": "2026-09-30T04:02:27Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "feed_brand": "Canon",
+          "note": "eBay-stamped brand differed from the Adorama feed brand; approved by Lee 2026-11-05 (B1)",
+          "corrected_from": "Unbranded"
         }
       },
       "affiliate": {
@@ -31933,47 +32238,6 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-09-30T06:00:47Z"
-    },
-    "dji-2-dji-inspire-1-pro-upgrade": {
-      "contamination_key": "dji-2-dji-inspire-1-pro-upgrade",
-      "vendor": "DJI",
-      "model": "2 DJI Inspire 1 Pro upgrade",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "128104114597",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "DJI",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "2 DJI Inspire 1 Pro with camera upgrade",
-        "image": "https://i.ebayimg.com/images/g/WNMAAeSwxclquwjV/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "2000.00",
-          "currency": "USD",
-          "as_of": "2026-09-30T04:46:03Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/128104114597?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8Uas81PTzAZ7OMwAVVk4D39k%2BFXk4drpRlAL9YLalT9QjWYgaWXAWxlB1PV6gxFYboaGG%2F9%2FwBuYgpWWvoZVYHPxCR5fR9iGmG4fqHGuQHJEr1IK50%2F%2Bk%2BKfqv020HijSnQuBVP4dKK8w4Uf%2FM0pJ%2FGesPGVQBqt0rbxZ9pkh4c0wFqxdo%2FfBRhwQybzYA05E%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-09-30T04:46:03Z"
     },
     "hoverair-x1-pro-max-cycling": {
       "contamination_key": "hoverair-x1-pro-max-cycling",
@@ -32906,8 +33170,8 @@
         "ebay_category_id": "3323"
       },
       "identity": {
-        "brand": "Olympus",
-        "mpn": "",
+        "brand": "OM SYSTEM",
+        "mpn": "V335230BW000",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -32928,6 +33192,29 @@
           "value": "530.80",
           "currency": "USD",
           "as_of": "2026-10-04T04:01:02Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "feed_brand": "OM SYSTEM",
+          "note": "eBay-stamped brand differed from the Adorama feed brand; approved by Lee 2026-11-05 (B1)",
+          "corrected_from": "Olympus"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "V335230BW000",
+              "product_code": "om7518mb",
+              "feed_gtin": "050332193635",
+              "feed_brand": "OM SYSTEM",
+              "title": "OM SYSTEM M.Zuiko Digital ED 75mm f/1.8 Lens for Micro Four Thirds, Black",
+              "snapshot": "2026-11-05",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -32979,47 +33266,6 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-10-04T04:45:29Z"
-    },
-    "dji-droneer-x501-o4-pro-5-freestyle-bnf-compatible-dji-digit": {
-      "contamination_key": "dji-droneer-x501-o4-pro-5-freestyle-bnf-compatible-dji-digit",
-      "vendor": "DJI",
-      "model": "Droneer X501 O4 Pro 5\" Freestyle BNF Compatible DJI Digital",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "227550961221",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Droneer",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Droneer X501 O4 Pro 5\" Freestyle FPV Drone BNF Compatible with DJI Digital HD",
-        "image": "https://i.ebayimg.com/images/g/ZvgAAeSwHr5qwaC7/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "519.00",
-          "currency": "USD",
-          "as_of": "2026-10-04T04:45:45Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/227550961221?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-10-04T04:45:45Z"
     },
     "zhiyun-weebill-handheld-gimbal-stabilizer": {
       "contamination_key": "zhiyun-weebill-handheld-gimbal-stabilizer",
@@ -33138,7 +33384,7 @@
       },
       "identity": {
         "brand": "OM System",
-        "mpn": "",
+        "mpn": "V335290BW000",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -33159,6 +33405,23 @@
           "value": "778.00",
           "currency": "USD",
           "as_of": "2026-10-06T06:00:25Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "V335290BW000",
+              "product_code": "om4512",
+              "feed_gtin": "050332193680",
+              "feed_brand": "OM SYSTEM",
+              "title": "OM SYSTEM M.Zuiko Digital ED 45mm f/1.2 PRO Lens for Micro Four Thirds, Black",
+              "snapshot": "2026-11-05",
+              "rule": "code om4512",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -33338,8 +33601,8 @@
         "ebay_category_id": "11724"
       },
       "identity": {
-        "brand": "INSTA360 GO3",
-        "mpn": "",
+        "brand": "Insta360",
+        "mpn": "CINSAATA_GO3S13",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -33360,6 +33623,29 @@
           "value": "253.99",
           "currency": "USD",
           "as_of": "2026-10-07T06:00:23Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "feed_brand": "Insta360",
+          "note": "eBay-stamped brand differed from the Adorama feed brand; approved by Lee 2026-11-05 (B1)",
+          "corrected_from": "INSTA360 GO3"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "CINSAATA_GO3S13",
+              "product_code": "insgo3smb128",
+              "feed_gtin": "842126106989",
+              "feed_brand": "Insta360",
+              "title": "Insta360 GO 3S 4K Standard Edition Action Camera",
+              "snapshot": "2026-11-05",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -33451,7 +33737,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-07T04:01:41Z"
+      "resolved_at": "2026-10-07T04:01:41Z",
+      "overrides": {
+        "display_name": "GoPro MAX 2"
+      }
     },
     "smallrig-fill-light-action": {
       "contamination_key": "smallrig-fill-light-action",
@@ -33658,47 +33947,6 @@
       "minted_needs_review": true,
       "resolved_at": "2026-10-07T04:45:21Z"
     },
-    "dji-droneer-x501-o4-pro-bnf-5-freestyle-long-range-compatibl": {
-      "contamination_key": "dji-droneer-x501-o4-pro-bnf-5-freestyle-long-range-compatibl",
-      "vendor": "DJI",
-      "model": "Droneer X501 O4 Pro BNF 5\" Freestyle Long Range Compatible DJI",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "227556053751",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Droneer",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Droneer X501 O4 Pro FPV BNF Drone 5\" Freestyle Long Range Compatible with DJI",
-        "image": "https://i.ebayimg.com/images/g/oUMAAeSwsYBqxZNe/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "519.00",
-          "currency": "USD",
-          "as_of": "2026-10-07T04:46:01Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/227556053751?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-10-07T04:46:01Z"
-    },
     "broncolor-om-80": {
       "contamination_key": "broncolor-om-80",
       "vendor": "Broncolor",
@@ -33836,7 +34084,7 @@
       },
       "identity": {
         "brand": "TTArtisan",
-        "mpn": "",
+        "mpn": "AF8518NEO-E-B",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -33849,6 +34097,23 @@
           "value": "99.00",
           "currency": "USD",
           "as_of": "2026-10-08T06:00:24Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "AF8518NEO-E-B",
+              "product_code": "tta85f18nsoe",
+              "feed_gtin": "6973251733178",
+              "feed_brand": "TTArtisan",
+              "title": "TTArtisan AF 85mm f/1.8 Neo STM Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "rule": "code tta85f18nsoe",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -34375,7 +34640,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "1257B002",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -34388,6 +34653,23 @@
           "value": "457.42",
           "currency": "USD",
           "as_of": "2026-10-09T06:00:44Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "1257B002",
+              "product_code": "ca5012afu",
+              "feed_gtin": "013803064551",
+              "feed_brand": "Canon",
+              "title": "Canon EF 50mm f/1.2L USM Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ca5012afu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -34868,7 +35150,7 @@
       },
       "identity": {
         "brand": "Viltrox",
-        "mpn": "",
+        "mpn": "AF 14/4.0 FE",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -34881,6 +35163,23 @@
           "value": "164.00",
           "currency": "USD",
           "as_of": "2026-10-10T04:00:49Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "AF 14/4.0 FE",
+              "product_code": "vt14f40soe",
+              "feed_gtin": "6953400308600",
+              "feed_brand": "Viltrox",
+              "title": "Viltrox AF 14mm f/4 Air Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "rule": "code vt14f40soe",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -35790,7 +36089,7 @@
       },
       "identity": {
         "brand": "Fujifilm",
-        "mpn": "",
+        "mpn": "16443060",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -35803,6 +36102,23 @@
           "value": "1120.00",
           "currency": "USD",
           "as_of": "2026-10-14T12:01:01Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "16443060",
+              "product_code": "ifj50140xf",
+              "feed_gtin": "074101025712",
+              "feed_brand": "Fujifilm",
+              "title": "Fujifilm XF 50-140mm f/2.8 R LM OIS WR Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ifj50140xf",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -35831,7 +36147,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "SEL1655G",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -35844,6 +36160,23 @@
           "value": "902.01",
           "currency": "USD",
           "as_of": "2026-10-14T10:11:03Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "SEL1655G",
+              "product_code": "iso1655e",
+              "feed_gtin": "027242916081",
+              "feed_brand": "Sony",
+              "title": "Sony E 16-55mm f/2.8 G Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code iso1655e",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -36017,8 +36350,8 @@
         "ebay_category_id": "3323"
       },
       "identity": {
-        "brand": "Sony",
-        "mpn": "",
+        "brand": "TTArtisan",
+        "mpn": "AF2438MINI-E-B",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -36031,6 +36364,29 @@
           "value": "79.00",
           "currency": "USD",
           "as_of": "2026-10-14T12:01:48Z"
+        },
+        "brand_provenance": {
+          "method": "feed-verified-correction",
+          "source": "adorama-feed-2026-11-05",
+          "feed_brand": "TTArtisan",
+          "note": "eBay-stamped brand differed from the Adorama feed brand; approved by Lee 2026-11-05 (B1)",
+          "corrected_from": "Sony"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "AF2438MINI-E-B",
+              "product_code": "tta2438soe",
+              "feed_gtin": "6973251733161",
+              "feed_brand": "TTArtisan",
+              "title": "TTArtisan AF 24mm f/3.8 Mini Lens for Sony E",
+              "snapshot": "2026-11-05",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -41074,47 +41430,6 @@
       "minted_needs_review": true,
       "resolved_at": "2026-10-30T06:01:50Z"
     },
-    "canon-120-300mm-f2-8": {
-      "contamination_key": "canon-120-300mm-f2-8",
-      "vendor": "Canon",
-      "model": "120 300mm f2.8",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "840073214387",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "lens",
-      "marketplace_categories": {
-        "ebay_category_id": "3323"
-      },
-      "identity": {
-        "brand": "Canon",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "【MINT- IN TRUNK】Canon EF 300mm f/2.8 L Ultrasonic Lens",
-        "image": "https://i.ebayimg.com/images/g/fDkAAeSwDCdq4VGb/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "1529.99",
-          "currency": "USD",
-          "as_of": "2026-10-30T06:03:17Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/840073214387?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9rbK3OOK7It2CrVBxbZK%2FhovLT4RkC1ehwS36FxXHJRXZ4RazQTIPxW9EkQ4OzMyrmbWXlveAp5yRT%2FaKIh9scQxGSIKj%2FR1DbmLxAkON5IeXJw5otWr%2FOVsaALuZuQDRO%2FUK2srMQvenIncAfDz43457u%2B%2BqqdfbY%2BLBVR%2FqJ3aZyAFs1r%2B6C9itSn%2BiwEC0%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-10-30T06:03:17Z"
-    },
     "nikon-120-300mm-f2-8": {
       "contamination_key": "nikon-120-300mm-f2-8",
       "vendor": "Nikon",
@@ -41717,47 +42032,6 @@
       "minted_needs_review": true,
       "resolved_at": "2026-10-31T04:47:38Z"
     },
-    "sony-35mm-f3": {
-      "contamination_key": "sony-35mm-f3",
-      "vendor": "Sony",
-      "model": "35mm f3",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "168534551706",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "body",
-      "marketplace_categories": {
-        "ebay_category_id": "31388"
-      },
-      "identity": {
-        "brand": "Sony",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Sony NEX-F3 16.1MP Mirroless Digital Camera Body W/ 35mm f/1.6 MF Lens white",
-        "image": "https://i.ebayimg.com/images/g/2SwAAeSwNKlqVeL1/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "199.36",
-          "currency": "USD",
-          "as_of": "2026-10-31T06:01:16Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/168534551706?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BQT2EhrWltgzaOJA1nAmdlLphejUQ%2FirCsN9uWxZllwWZnVOPzjF59PUIidB%2BCdegDcRiAHLxoQoH6AgFugC2yquoEFOvavGWyxlkhoyB68c4FZz%2BQQ8C%2FZ65ECkmk6HLUR2LVxKLw1ttT%2BVENWrz1gwsWFcj8b6OQ7KlfWG9lvlD5Z2gRmB7s0sBsm4kr8ls%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-10-31T06:01:16Z"
-    },
     "canon-100mm-f2": {
       "contamination_key": "canon-100mm-f2",
       "vendor": "Canon",
@@ -42037,7 +42311,7 @@
       },
       "identity": {
         "brand": "PENTAX",
-        "mpn": "",
+        "mpn": "21230",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -42050,6 +42324,23 @@
           "value": "723.17",
           "currency": "USD",
           "as_of": "2026-11-01T06:00:26Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "21230",
+              "product_code": "px1118",
+              "feed_gtin": "027075299733",
+              "feed_brand": "Pentax",
+              "title": "Pentax HD Pentax-DA 11-18mm f/2.8 ED DC AW Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code px1118",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
         }
       },
       "affiliate": {
@@ -42972,47 +43263,6 @@
       "minted_needs_review": true,
       "resolved_at": "2026-11-04T04:45:30Z"
     },
-    "dji-droneer-c2501-2-5-inch-dji-o4-pro-bnf-cinewhoop-under-24": {
-      "contamination_key": "dji-droneer-c2501-2-5-inch-dji-o4-pro-bnf-cinewhoop-under-24",
-      "vendor": "DJI",
-      "model": "Droneer C2501 2.5 Inch DJI O4 Pro BNF Cinewhoop Under 249g",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "800873924204",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "drone",
-      "marketplace_categories": {
-        "ebay_category_id": "179697"
-      },
-      "identity": {
-        "brand": "Droneer",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Droneer C2501 2.5 Inch FPV Drone DJI O4 Pro BNF Cinewhoop Under 249g",
-        "image": "https://i.ebayimg.com/images/g/kRMAAeSwwahq6qKV/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "379.00",
-          "currency": "USD",
-          "as_of": "2026-11-04T04:46:28Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800873924204?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-11-04T04:46:28Z"
-    },
     "gopro-wireless-mic-complete": {
       "contamination_key": "gopro-wireless-mic-complete",
       "vendor": "GoPro",
@@ -43314,7 +43564,12 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-05T06:00:59Z"
+      "resolved_at": "2026-11-05T06:00:59Z",
+      "spec_surface": {
+        "wikipedia_title": "Nikon_D500",
+        "wikipedia_title_resolved": "Nikon D500",
+        "wikipedia_stamped_at": "2026-11-06T02:43:48Z"
+      }
     },
     "viltrox-35-50mm-f1-4": {
       "contamination_key": "viltrox-35-50mm-f1-4",
