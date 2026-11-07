@@ -40,6 +40,9 @@ import sys
 import urllib.parse
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from pin_identity import card_model, check_pin  # noqa: E402
+
 
 CARD_SOURCE = "adorama_feed"
 
@@ -77,7 +80,8 @@ def plan(sheet: dict, cards_dir: Path, include_flagged: bool = False, exclude=No
         if not card_path.exists():
             skipped.append({"slug": p["slug"], "reason": "card file missing"})
             continue
-        pricing = json.loads(card_path.read_text(encoding="utf-8")).get("pricing", {}) or {}
+        card = json.loads(card_path.read_text(encoding="utf-8")) or {}
+        pricing = card.get("pricing", {}) or {}
         row = {
             "slug": p["slug"],
             "old": pricing.get("current_new_usd") or 0,
@@ -88,7 +92,14 @@ def plan(sheet: dict, cards_dir: Path, include_flagged: bool = False, exclude=No
             "ambiguous": new.get("ambiguous"),
             "url": new.get("affiliate_url") or "",
         }
-        if p["slug"] in exclude:
+        # IDENTITY GATE (2026-11-06): the pinned product must carry the card's own
+        # model and generation and must not be used — see tools/pin_identity.py.
+        # Held unconditionally: --include-flagged does not release it.
+        why = check_pin(card_model(card), row["url"], new.get("title"))
+        if why:
+            row["identity"] = why
+            held.append(row)
+        elif p["slug"] in exclude:
             row["excluded"] = True
             held.append(row)
         elif p.get("needs_eyes") and not include_flagged:
@@ -214,6 +225,45 @@ def plan_withdrawals(sheet: dict, cards_dir: Path, exclude=None,
     return withdrawals, None, misses
 
 
+def plan_identity_withdrawals(cards_dir: Path, keep=None,
+                              max_fraction: float = WITHDRAW_MAX_FRACTION):
+    """Return (withdrawals, withheld_reason): feed-priced cards whose EXISTING pin
+    fails the identity gate (tools/pin_identity.py).
+
+    Holding a failing proposal is not enough: when the sheet re-proposes the same
+    wrong product every night, the card keeps yesterday's wrong price forever
+    (2026-11-06: panasonic-gh5 priced as the GH5 II, canon-eos-r8-ii as the R8).
+    A pin that is demonstrably not the card's product is positive evidence about
+    the pinned product itself — the same evidence standard as the stock
+    withdrawal — so its price is cleared (link + source kept; CTA reads "Check
+    price at Adorama"). `keep` = slugs getting a passing price tonight. The same
+    safety wall applies: if more than `max_fraction` of feed-priced cards would
+    fail at once, that is a rule fault, not the catalog — ALL are withheld."""
+    keep = set(keep or ())
+    feed_priced, out = 0, []
+    for path in sorted(cards_dir.glob("*.json")):
+        try:
+            card = json.loads(path.read_text(encoding="utf-8")) or {}
+        except ValueError:
+            continue
+        p = card.get("pricing") or {}
+        if p.get("current_new_source") != CARD_SOURCE or not p.get("current_new_usd"):
+            continue
+        feed_priced += 1
+        slug = path.stem
+        if slug in keep:
+            continue
+        url = p.get("current_new_url") or p.get("affiliate_url")
+        why = check_pin(card_model(card), url)
+        if why:
+            out.append({"slug": slug, "old": p["current_new_usd"], "url": url,
+                        "evidence": "identity: " + " | ".join(why)})
+    if out and feed_priced and len(out) / feed_priced > max_fraction:
+        return [], (f"{len(out)} of {feed_priced} feed-priced cards fail the identity "
+                    f"gate (> {max_fraction:.0%}) — looks like a rule fault; ALL withheld")
+    return out, None
+
+
 def apply_withdrawals(withdrawals, cards_dir: Path) -> list:
     done = []
     for row in withdrawals:
@@ -319,10 +369,23 @@ def main(argv=None):
             sheet, cards_dir, exclude=exclude | priced_now,
             max_fraction=args.max_withdraw_fraction, snapshot_dir=args.snapshot_dir)
 
+    # Identity gate on EXISTING pins — always on; no flag turns it off.
+    id_withdrawals, id_withheld = plan_identity_withdrawals(
+        cards_dir, keep={r["slug"] for r in changes}, max_fraction=args.max_withdraw_fraction)
+    have = {w["slug"] for w in withdrawals}
+    withdrawals = withdrawals + [w for w in id_withdrawals if w["slug"] not in have]
+
     _print_table("New price — will apply", changes)
-    _print_table("New price — HELD for review (needs eyes)", held)
+    _print_table("New price — HELD for review (needs eyes)", [r for r in held if not r.get("identity")])
+    id_held = [r for r in held if r.get("identity")]
+    if id_held:
+        print(f"\nNew price — HELD by identity gate (pinned product is not this card's) ({len(id_held)}):")
+        for r in id_held:
+            print(f"  {r['slug'][:32]:32}  ${r['new']}  {r['host']}  [{' | '.join(r['identity'])}]")
+    if id_withheld:
+        print(f"\nWARN identity withdrawals WITHHELD: {id_withheld}")
     if withdrawals:
-        print(f"\nNew price — WITHDRAW (no in-stock feed match today) ({len(withdrawals)}):")
+        print(f"\nNew price — WITHDRAW (evidence per row) ({len(withdrawals)}):")
         for w in withdrawals:
             print(f"  {w['slug'][:32]:32}  ${int(w['old'])} -> (no price)  [{w['evidence']}]")
     if withheld:

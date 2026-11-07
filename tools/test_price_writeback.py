@@ -141,8 +141,14 @@ DAY = "2026-11-04"
 
 
 def _aff(n):
+    # Production-shaped pin (every real pin is adorama.com/<slug>/p/<code>), naming
+    # the fixture card's product (display_name "Canon EOS R5"). Before the identity
+    # gate (2026-11-06) this was `prod{n}.html`, which names no product: the gate
+    # then rightly refuses it, and the end-to-end test only stayed green because
+    # ALL fixture pins failed at once and the 20% safety wall withheld them —
+    # a pass for the wrong reason. Unique per n, so snapshot matching is unchanged.
     return ("https://adorama.prf.hn/click/camref:x/destination:"
-            f"https%3A%2F%2Fwww.adorama.com%2Fprod{n}.html")
+            f"https%3A%2F%2Fwww.adorama.com%2Fcanon-eos-r5-mirrorless-camera-body%2Fp%2Fcar5b{n}")
 
 
 def _feed_card(n=0, price=1999.0):
@@ -288,3 +294,80 @@ def test_main_without_snapshot_withdraws_nothing(tmp_path, capsys):
     price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply"])
     assert _load(d, "c0")["pricing"]["current_new_usd"] == 1999.0
     assert "none withdrawn" in capsys.readouterr().out
+
+
+# ─── identity gate (2026-11-06) — tools/pin_identity.py wired into the seat ───
+# Real pins, copied from the cards (e92ea7d1): the GH5 card pinned to the GH5 II.
+GH5_II = ("https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com"
+          "%2Fpanasonic-lumix-gh5ii-mirrorless-camera-body-dc-gh5ii-4k-6k%2Fp%2Fipcdcgh5m2")
+GH5 = ("https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com"
+       "%2Fpanasonic-lumix-gh5-mirrorless-camera-body%2Fp%2Fipcdcgh5")
+
+
+def _gh5_card(url=GH5_II, price=998.0):
+    c = _card({"current_new_usd": price, "current_new_source": "adorama_feed",
+               "current_new_url": url, "affiliate_url": url})
+    c["identity"] = {"display_name": "Panasonic gh5", "model": "gh5"}
+    return c
+
+
+def _propose(slug, url, price=998.0, needs_eyes=False):
+    return {"slug": slug, "has_card": True, "needs_eyes": needs_eyes,
+            "new": {"matched_by": "mpn", "price_usd": price, "affiliate_url": url,
+                    "title": None}}
+
+
+def test_identity_failure_is_held_even_with_include_flagged(tmp_path):
+    d = _cards(tmp_path, n=0, extra={"panasonic-gh5": _gh5_card(price=None)})
+    changes, held, _ = price_writeback.plan(_sheet(_propose("panasonic-gh5", GH5_II)), d,
+                                            include_flagged=True)
+    assert changes == []
+    assert held[0]["identity"] == ["generation: product is II, card is not"]
+
+
+def test_passing_pin_still_applies(tmp_path):
+    d = _cards(tmp_path, n=0, extra={"panasonic-gh5": _gh5_card(price=None)})
+    changes, held, _ = price_writeback.plan(_sheet(_propose("panasonic-gh5", GH5)), d)
+    assert [r["slug"] for r in changes] == ["panasonic-gh5"] and held == []
+
+
+def test_existing_wrong_pin_is_withdrawn_not_frozen(tmp_path, capsys):
+    """The trap a hold alone falls into: the sheet re-proposes the SAME wrong product
+    every night, so 'held' would keep yesterday's wrong price on the card forever.
+    End to end through main(): the price is cleared, link + source kept."""
+    d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card()})   # 1 of 10 = 10%
+    sheet = tmp_path / "sheet.json"
+    sheet.write_text(json.dumps(_sheet(_propose("panasonic-gh5", GH5_II))))
+    out = tmp_path / "changed.txt"
+    price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply",
+                          "--changed-out", str(out)])
+    text = capsys.readouterr().out
+    p = _load(d, "panasonic-gh5")["pricing"]
+    assert p["current_new_usd"] is None
+    assert p["current_new_url"] == GH5_II and p["current_new_source"] == "adorama_feed"
+    assert "HELD by identity gate" in text and "identity: generation" in text
+    assert out.read_text().split() == ["panasonic-gh5"]
+    assert all(_load(d, f"c{i}")["pricing"]["current_new_usd"] == 1999.0 for i in range(9))
+
+
+def test_identity_withdrawal_skips_cards_getting_a_good_price_tonight(tmp_path):
+    d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card()})
+    w, why = price_writeback.plan_identity_withdrawals(d, keep={"panasonic-gh5"})
+    assert (w, why) == ([], None)
+
+
+def test_identity_withdrawal_ignores_hand_set_and_unpriced(tmp_path):
+    hand = _gh5_card()
+    hand["pricing"]["current_new_source"] = "manual"
+    d = _cards(tmp_path, n=0, extra={"hand": hand, "unpriced": _gh5_card(price=None)})
+    assert price_writeback.plan_identity_withdrawals(d) == ([], None)
+
+
+def test_identity_withdrawal_safety_wall(tmp_path):
+    """A rule fault that fails many pins at once withholds ALL (1/5 = 20% ok; 2/6 = 33% not)."""
+    d = _cards(tmp_path, n=4, extra={"g1": _gh5_card()})
+    w, why = price_writeback.plan_identity_withdrawals(d)
+    assert [r["slug"] for r in w] == ["g1"] and why is None
+    (d / "g2.json").write_text(json.dumps(_gh5_card(), indent=2), encoding="utf-8")
+    w, why = price_writeback.plan_identity_withdrawals(d)
+    assert w == [] and "rule fault" in why
