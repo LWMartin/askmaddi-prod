@@ -19350,129 +19350,6 @@
       "rank": 77
     },
     {
-      "card_id": "nikon-35mm-f5",
-      "display_name": "Nikon 35mm f5",
-      "rankable": true,
-      "score": 1.582,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "build",
-          "weight": 2,
-          "s": 0.625,
-          "pos": 12,
-          "neg": 2,
-          "total": 16,
-          "confidence": "high",
-          "contested": false,
-          "thin": false,
-          "contribution": 1.25,
-          "top_sources": [
-            {
-              "source_id": "youtube-grainydays-nikon-f5",
-              "url": "https://www.youtube.com/watch?v=MIkUNIh8Ik4",
-              "witness": "firsthand",
-              "quote": "menu there's a little bracket button cool the camera body itself isn't water sealed but it is rain and dust resistant but it's not girl resistant so you'll have to fend off all the ladies trying to swarm you in camera ad…"
-            },
-            {
-              "source_id": "youtube-hamer-reviews-a-quick-look-at-the-nikon-f5-a-film-legend-even-today",
-              "url": "https://www.youtube.com/watch?v=B3f8x31w0q8",
-              "witness": "firsthand",
-              "quote": "of film put through it and the rubber is still in good condition too so i think that does actually mean that if you pick one up that wasn't heavily used you're actually still going to get a lot of life out of it without …"
-            },
-            {
-              "source_id": "youtube-matt-osborne-why-struggle-with-classic-cameras-nikon-f5-review-photos-reasons-to-buy",
-              "url": "https://www.youtube.com/watch?v=wIMx-_FwZY0",
-              "witness": "firsthand",
-              "quote": "the durability of this camera yes it's plastic but it is so well made it is just it just fits your hand like it was so well made by nikon i really like this camera despite it not being made in 1950 1960 and looking more …"
-            }
-          ],
-          "axis_display": "Build Quality"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.1892,
-          "pos": 12,
-          "neg": 5,
-          "total": 37,
-          "confidence": "high",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.1892,
-          "top_sources": [
-            {
-              "source_id": "youtube-4th-dimension-pictures-this-is-the-best-35mm-film-camera",
-              "url": "https://www.youtube.com/watch?v=GCo1SSx38Lg",
-              "witness": "firsthand",
-              "quote": "see what I did right or wrong so I can learn from the next role previously you had to write that down in a notebook so you could remember what you did if you're familiar with modern Nikon dslrs like the d850 you'll pick …"
-            },
-            {
-              "source_id": "youtube-analog-insights-nikon-f5-review",
-              "url": "https://www.youtube.com/watch?v=eVFmPr_Xuio",
-              "witness": "firsthand",
-              "quote": "clicks into place yet the major downsides of this camera is its weight even without a lens and any of the ace double A batteries it requires it already weighs 1210 gram is there an alternative to the f5 you might already…"
-            },
-            {
-              "source_id": "youtube-grainydays-nikon-f5",
-              "url": "https://www.youtube.com/watch?v=MIkUNIh8Ik4",
-              "witness": "firsthand",
-              "quote": "the button on the inside I don't know if you can see that but there is a button go ahead and hit that cool and then up here press the button and lift the lever and it will start rewinding [Music] something else worth men…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "battery_life",
-          "weight": 1,
-          "s": 0.1429,
-          "pos": 3,
-          "neg": 2,
-          "total": 7,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1429,
-          "top_sources": [
-            {
-              "source_id": "youtube-carmine-taverna-nikon-f5-should-be-your-first-35mm-film-camera-photography-class-185",
-              "url": "https://www.youtube.com/watch?v=7l6bRwisVE8",
-              "witness": "firsthand",
-              "quote": "emails about what should be my first 35 millimeter film camera all right now I'm holding up a professional film camera this is the Nikon F5 now I am going to recommend this professional 35 millimeter film camera to you g…"
-            },
-            {
-              "source_id": "youtube-grainydays-nikon-f5",
-              "url": "https://www.youtube.com/watch?v=MIkUNIh8Ik4",
-              "witness": "firsthand",
-              "quote": "this camera heavy are the eight double-a batteries that go into the bottom of this thing but in all fairness these batteries do last a long time in this camera so yeah I'm gonna slide that back in cool another con of thi…"
-            },
-            {
-              "source_id": "youtube-hamer-reviews-a-quick-look-at-the-nikon-f5-a-film-legend-even-today",
-              "url": "https://www.youtube.com/watch?v=B3f8x31w0q8",
-              "witness": "firsthand",
-              "quote": "the only one that had it fully integrated and you had no choice in the matter powering this camera we have eight double a batteries um which is quite something really um you're going to get a good amount of film through …"
-            }
-          ],
-          "axis_display": "Battery Life"
-        }
-      ],
-      "missing_axes": [
-        "autofocus_body",
-        "burst_buffer",
-        "sensor_performance",
-        "stabilization",
-        "evf_lcd"
-      ],
-      "thin_axes": [
-        "battery_life"
-      ],
-      "flags": [
-        "missing weighted axes: autofocus_body, burst_buffer, sensor_performance, stabilization, evf_lcd",
-        "thin (< 15 claims): battery_life"
-      ],
-      "rank": 78
-    },
-    {
       "card_id": "olympus-17mm-f1-2",
       "display_name": "Olympus 17mm f1.2",
       "rankable": true,
@@ -19571,7 +19448,7 @@
         "missing weighted axes: burst_buffer, stabilization, handling, evf_lcd, battery_life",
         "thin (< 15 claims): autofocus_body, sensor_performance, build"
       ],
-      "rank": 79
+      "rank": 78
     },
     {
       "card_id": "canon-powershot-v1",
@@ -19787,7 +19664,7 @@
       "flags": [
         "missing weighted axes: burst_buffer, evf_lcd"
       ],
-      "rank": 80
+      "rank": 79
     },
     {
       "card_id": "panasonic-lumix-gh6",
@@ -20068,7 +19945,7 @@
       "flags": [
         "thin (< 15 claims): build"
       ],
-      "rank": 81
+      "rank": 80
     },
     {
       "card_id": "hasselblad-500-cm",
@@ -20156,7 +20033,7 @@
       "flags": [
         "missing weighted axes: autofocus_body, burst_buffer, sensor_performance, stabilization, evf_lcd, battery_life"
       ],
-      "rank": 82
+      "rank": 81
     },
     {
       "card_id": "canon-eos-r8-ii",
@@ -20377,7 +20254,7 @@
       "flags": [
         "thin (< 15 claims): build"
       ],
-      "rank": 83
+      "rank": 82
     },
     {
       "card_id": "sony-a6000",
@@ -20642,7 +20519,7 @@
       "flags": [
         "thin (< 15 claims): build, stabilization, battery_life"
       ],
-      "rank": 84
+      "rank": 83
     },
     {
       "card_id": "canon-eos-r7",
@@ -20924,7 +20801,7 @@
       "flags": [
         "thin (< 15 claims): build, battery_life"
       ],
-      "rank": 85
+      "rank": 84
     },
     {
       "card_id": "kodak-ektar",
@@ -21012,7 +20889,7 @@
       "flags": [
         "missing weighted axes: autofocus_body, burst_buffer, sensor_performance, stabilization, evf_lcd, battery_life"
       ],
-      "rank": 86
+      "rank": 85
     },
     {
       "card_id": "canon-powershot-s95",
@@ -21228,7 +21105,7 @@
         "missing weighted axes: burst_buffer, evf_lcd",
         "thin (< 15 claims): autofocus_body, build, stabilization, battery_life"
       ],
-      "rank": 87
+      "rank": 86
     },
     {
       "card_id": "fujifilm-x-e3",
@@ -21511,7 +21388,7 @@
       "flags": [
         "thin (< 15 claims): build, stabilization, battery_life"
       ],
-      "rank": 88
+      "rank": 87
     },
     {
       "card_id": "sony-zv-1",
@@ -21762,126 +21639,7 @@
         "missing weighted axes: burst_buffer",
         "thin (< 15 claims): build"
       ],
-      "rank": 89
-    },
-    {
-      "card_id": "sony-35mm-f3",
-      "display_name": "Sony 35mm f3",
-      "rankable": true,
-      "score": 1.044,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "build",
-          "weight": 2,
-          "s": 0.2143,
-          "pos": 7,
-          "neg": 4,
-          "total": 14,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4286,
-          "top_sources": [
-            {
-              "source_id": "youtube-adrien-sanguinetti-sigma-35mm-f2-review-the-forgotten-35mm-prime-lens-for-sony",
-              "url": "https://www.youtube.com/watch?v=kJKzZ9Bvfco",
-              "witness": "firsthand",
-              "quote": "lens is absolutely crazy in my opinion it is from their contemporary line which is supposedly less premium than the art lenses but I prefer the look and feel of this 35 mm F2 over the f1.4 it is built like a tank fully m…"
-            },
-            {
-              "source_id": "youtube-henry-c-is-this-sonys-best-classic-pancake-lens-sony-zeiss-sonnar-t-35mm-f28",
-              "url": "https://www.youtube.com/watch?v=aaknurH4EOw",
-              "witness": "firsthand",
-              "quote": "this lens is a nogo there's some color fringing and flaring though mostly well controlled in my experience it's not fully withth a sealed like I've said I've shot with this in rain and snow but it's not advisable especia…"
-            },
-            {
-              "source_id": "youtube-jason-vong-sony-35mm-14-g-master-perfection",
-              "url": "https://www.youtube.com/watch?v=GzNt2r-igdM",
-              "witness": "firsthand",
-              "quote": "to bring you guys the best and most unique image and video samples whenever we talk about cameras and lenses and oftentimes we have high production costs to make this all happen it's sponsors like squarespace that help f…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.6154,
-          "pos": 9,
-          "neg": 1,
-          "total": 13,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.6154,
-          "top_sources": [
-            {
-              "source_id": "youtube-adrien-sanguinetti-a-35mm-prime-lens-is-the-only-thing-you-need-for-travel",
-              "url": "https://www.youtube.com/watch?v=imn6-K2fJak",
-              "witness": "firsthand",
-              "quote": "This plus the fact that I brought a very minimal setup made it easy mentally speaking, no analysis paralysis, not questioning whether I should go out or not and what lens to shoot with."
-            },
-            {
-              "source_id": "youtube-dslr-video-shooter-this-800-cinema-camera-is-fantastic",
-              "url": "https://www.youtube.com/watch?v=6zjCv_vXZDg",
-              "witness": "firsthand",
-              "quote": "we'll get into video quality here in a little bit but let's back up and talk about the body of the camera first the f3 sports an old-school eng style top handle and no it doesn't come with this awesome leather wrap my ru…"
-            },
-            {
-              "source_id": "youtube-henry-c-is-this-sonys-best-classic-pancake-lens-sony-zeiss-sonnar-t-35mm-f28",
-              "url": "https://www.youtube.com/watch?v=aaknurH4EOw",
-              "witness": "firsthand",
-              "quote": "camera body for Street and travel the versatility the compactness and the ease of use makes it a perfect everyday carry piece of gear despite the f2.8 aperture which isn't the fastest I find myself returning to this comb…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "battery_life",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 1,
-          "neg": 1,
-          "total": 3,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-full-compass-sony-pmw-f3-super-35mm-xdcam-camcorder-overview-full-compass",
-              "url": "https://www.youtube.com/watch?v=oNezu3yuz-A",
-              "witness": "unattested",
-              "quote": "So, where the real power lies in this camera though is on the back."
-            },
-            {
-              "source_id": "youtube-jason-bagherian-old-sony-pmw-f3-review-2020",
-              "url": "https://www.youtube.com/watch?v=1mHvzTjdg-4",
-              "witness": "unattested",
-              "quote": "sony bpu batteries just like the x1 or x3 however it is easy to adapt v-mount batteries to the f3 if needed this is a fully manual camera with no auto anything which is great for learning digital cinematography so how is…"
-            }
-          ],
-          "axis_display": "Battery Life"
-        }
-      ],
-      "missing_axes": [
-        "autofocus_body",
-        "burst_buffer",
-        "sensor_performance",
-        "stabilization",
-        "evf_lcd"
-      ],
-      "thin_axes": [
-        "build",
-        "handling",
-        "battery_life"
-      ],
-      "flags": [
-        "missing weighted axes: autofocus_body, burst_buffer, sensor_performance, stabilization, evf_lcd",
-        "thin (< 15 claims): build, handling, battery_life"
-      ],
-      "rank": 90
+      "rank": 88
     },
     {
       "card_id": "canon-powershot-sx30",
@@ -22079,7 +21837,7 @@
         "missing weighted axes: burst_buffer, evf_lcd",
         "thin (< 15 claims): autofocus_body, build, stabilization, battery_life"
       ],
-      "rank": 91
+      "rank": 89
     },
     {
       "card_id": "fujifilm-x-t1",
@@ -22296,7 +22054,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): autofocus_body, build, battery_life"
       ],
-      "rank": 92
+      "rank": 90
     },
     {
       "card_id": "panasonic-gh2",
@@ -22516,7 +22274,7 @@
         "missing weighted axes: burst_buffer, stabilization",
         "thin (< 15 claims): build, battery_life"
       ],
-      "rank": 93
+      "rank": 91
     },
     {
       "card_id": "om-system-om-3",
@@ -22766,7 +22524,7 @@
         "missing weighted axes: build",
         "thin (< 15 claims): autofocus_body, sensor_performance, stabilization, handling, evf_lcd, battery_life"
       ],
-      "rank": 94
+      "rank": 92
     },
     {
       "card_id": "panasonic-gh3",
@@ -23028,7 +22786,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, burst_buffer, sensor_performance, build, stabilization, battery_life"
       ],
-      "rank": 95
+      "rank": 93
     },
     {
       "card_id": "nikon-d3300",
@@ -23279,7 +23037,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): battery_life"
       ],
-      "rank": 96
+      "rank": 94
     },
     {
       "card_id": "nikon-z50",
@@ -23530,7 +23288,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, burst_buffer, sensor_performance, build, stabilization, handling, battery_life"
       ],
-      "rank": 97
+      "rank": 95
     },
     {
       "card_id": "sony-rx100-ii",
@@ -23760,7 +23518,7 @@
         "missing weighted axes: burst_buffer",
         "thin (< 15 claims): autofocus_body, build, stabilization, battery_life"
       ],
-      "rank": 98
+      "rank": 96
     },
     {
       "card_id": "canon-eos-r10",
@@ -23984,7 +23742,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, build, stabilization, handling"
       ],
-      "rank": 99
+      "rank": 97
     },
     {
       "card_id": "fujifilm-x-t200",
@@ -24261,7 +24019,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 100
+      "rank": 98
     },
     {
       "card_id": "sony-rx100-iii",
@@ -24429,7 +24187,7 @@
         "missing weighted axes: build, battery_life",
         "thin (< 15 claims): autofocus_body, burst_buffer, stabilization, handling"
       ],
-      "rank": 101
+      "rank": 99
     },
     {
       "card_id": "nikon-d5600",
@@ -24578,7 +24336,7 @@
         "missing weighted axes: build, stabilization, handling",
         "thin (< 15 claims): autofocus_body, burst_buffer, sensor_performance, evf_lcd, battery_life"
       ],
-      "rank": 102
+      "rank": 100
     },
     {
       "card_id": "panasonic-s1h",
@@ -24801,7 +24559,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, build, battery_life"
       ],
-      "rank": 103
+      "rank": 101
     },
     {
       "card_id": "nikon-z5",
@@ -24980,7 +24738,7 @@
         "missing weighted axes: build",
         "thin (< 15 claims): autofocus_body, burst_buffer, sensor_performance, stabilization, handling, evf_lcd, battery_life"
       ],
-      "rank": 104
+      "rank": 102
     },
     {
       "card_id": "sony-rx100-iv",
@@ -25241,7 +24999,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, build, stabilization, handling, battery_life"
       ],
-      "rank": 105
+      "rank": 103
     },
     {
       "card_id": "hasselblad-x1d",
@@ -25460,7 +25218,7 @@
         "missing weighted axes: burst_buffer, stabilization",
         "thin (< 15 claims): build"
       ],
-      "rank": 106
+      "rank": 104
     },
     {
       "card_id": "fujifilm-x-t30-iii",
@@ -25718,14 +25476,14 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, burst_buffer, sensor_performance, build, stabilization, handling, evf_lcd, battery_life"
       ],
-      "rank": 107
+      "rank": 105
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 107,
-    "ranked": 107,
+    "in_scope": 105,
+    "ranked": 105,
     "excluded": 0,
     "pending_backfill": 0
   }

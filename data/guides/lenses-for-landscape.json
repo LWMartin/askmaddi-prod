@@ -9793,13 +9793,6 @@
       ]
     },
     {
-      "card_id": "canon-120-300mm-f2-8",
-      "display_name": "Canon 120 300mm f2.8",
-      "reasons": [
-        "require focal_length_mm <= 35: got 300"
-      ]
-    },
-    {
       "card_id": "canon-135mm-f2-0",
       "display_name": "Canon 135mm f2.0",
       "reasons": [
@@ -9930,13 +9923,6 @@
       "display_name": "Fujifilm 16 55mm f2.8",
       "reasons": [
         "require focal_length_mm <= 35: got 55"
-      ]
-    },
-    {
-      "card_id": "fujifilm-400mm-f4-5",
-      "display_name": "Fujifilm 400mm f4.5",
-      "reasons": [
-        "require focal_length_mm <= 35: got 400"
       ]
     },
     {
@@ -10321,9 +10307,9 @@
     }
   ],
   "counts": {
-    "in_scope": 129,
+    "in_scope": 127,
     "ranked": 51,
-    "excluded": 77,
+    "excluded": 75,
     "pending_backfill": 1
   }
 }
