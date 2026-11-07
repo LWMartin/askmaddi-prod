@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-06",
+  "as_of": "2026-11-07",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -19320,7 +19320,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "5803C002",
+        "mpn": "7503C002",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -19362,6 +19362,21 @@
           "value": "1199.95",
           "currency": "USD",
           "as_of": "2026-09-09T04:03:12Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "7503C002",
+              "product_code": "car8m2",
+              "feed_gtin": "013803391312",
+              "snapshot": "2026-11-06",
+              "note": "spine carried the original R8's 5803C002 (contaminated); feed body-only New row for EOS R8 Mark II, $1899; real matcher simulated first"
+            }
+          ],
+          "corrected_from": "5803C002"
         }
       },
       "affiliate": {
@@ -23943,7 +23958,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-12T06:00:23Z"
+      "resolved_at": "2026-09-12T06:00:23Z",
+      "overrides": {
+        "display_name": "Sony FE 70-200mm f/2.8 GM OSS II"
+      }
     },
     "nikon-10-20mm-f4-5": {
       "contamination_key": "nikon-10-20mm-f4-5",
