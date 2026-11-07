@@ -98,12 +98,15 @@ def _generations(us: List[str]) -> set:
 
 
 def card_model(card: dict) -> str:
-    """The name to check a pin against: identity.model, else identity.display_name
-    (what the reader sees). Brand words carry no digit/roman unit, so a
-    display_name's brand adds no atoms. Never identity.mpn — on 2026-11-06 the
-    canon-r6 card's mpn read 'Canon EOS R6 Mark III' (an eBay title), a third model."""
+    """The name to check a pin against: identity.display_name — what the reader
+    sees, and where hand corrections land (spine `overrides.display_name`; the
+    11-05 renames "GoPro MAX 2" / "DJI Osmo Action 5 Pro" changed ONLY that, their
+    `model` still reads "max 8k 360 action" / "osmo action 5"). identity.model is
+    the fallback. Brand words carry no digit/roman unit, so the brand prefix adds
+    no atoms. Never identity.mpn — on 2026-11-06 the canon-r6 card's mpn read
+    'Canon EOS R6 Mark III' (an eBay title), a third model."""
     ident = (card or {}).get("identity") or {}
-    return (ident.get("model") or ident.get("display_name") or "").strip()
+    return (ident.get("display_name") or ident.get("model") or "").strip()
 
 
 def check_pin(model: str, url: Optional[str], title: Optional[str] = None) -> List[str]:

@@ -135,9 +135,13 @@ def test_units_split_runs_drop_filler_fold_alpha():
     assert units("Sony Alpha A7 Mark IV f/2.8") == ["sony", "a", "a", "7", "iv", "f", "2", "8"]
 
 
-def test_card_model_prefers_model_then_display_name_never_mpn():
+def test_card_model_prefers_display_name_then_model_never_mpn():
+    # real: canon-r6 card (mpn is an eBay title naming a third model)
     assert card_model({"identity": {"model": "R6", "display_name": "Canon R6",
-                                    "mpn": "Canon EOS R6 Mark III"}}) == "R6"
-    assert card_model({"identity": {"display_name": "Canon EOS R5"}}) == "Canon EOS R5"
+                                    "mpn": "Canon EOS R6 Mark III"}}) == "Canon R6"
+    # real: 11-05 rename landed on display_name only; model is stale
+    assert card_model({"identity": {"model": "max 8k 360 action",
+                                    "display_name": "GoPro MAX 2"}}) == "GoPro MAX 2"
+    assert card_model({"identity": {"model": "R5"}}) == "R5"
     assert card_model({}) == ""
     assert check_pin("", R8) == ["model: card has no identity.model to check against"]
