@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-07",
+  "as_of": "2026-11-08",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -44421,11 +44421,31 @@
         },
         "market_title": "Skydio 2 SDRC2V1 Black Blue 4K 60fps HDR Autonomous Quadcopter Drone Camera",
         "image": "https://i.ebayimg.com/images/g/fJ8AAeSwpbJq7O~C/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/Jo8AAOSwKfZePBHe/s-l640.jpg",
         "price_seen": {
           "value": "999.99",
           "currency": "USD",
           "as_of": "2026-11-07T04:46:06Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-08T04:50:19Z",
+          "query": "Skydio SDRC2V1",
+          "winner": {
+            "item_id": "v1|116997618004|0",
+            "epid": "19034602427",
+            "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|116997618004|0",
+              "epid": "19034602427",
+              "title": "Skydio 2 Drone SDRC2V1 Black – Replacement Aircraft Only - Minor Scuff",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -44444,7 +44464,7 @@
       "gtin": "06970658170360",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "206591722310",
+        "ebay_legacy_item_id": "840101489616",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -44468,23 +44488,23 @@
             }
           ]
         },
-        "market_title": "HOVERAir X1 Smart Self-Flying Drone 2.7K HDR AI Tracking Gimbal 99g 32GB Black",
-        "image": "https://i.ebayimg.com/images/g/swcAAeSw1FNqvJW3/s-l1600.jpg",
+        "market_title": "HOVERAir X1 Selfie Drone 2.7K HDR Video, Smart APP, 11 Min, 125g",
+        "image": "https://i.ebayimg.com/images/g/mMsAAeSwo1hq7j7V/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "591.69",
+          "value": "160.00",
           "currency": "USD",
-          "as_of": "2026-11-07T04:46:26Z"
+          "as_of": "2026-11-08T04:45:27Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/206591722310?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8POoNuA3H535iNAcBrsrbfhym%2BBHIoWvzl0tSLUyfLxk4j1auXJtZ%2Fzwl5%2Bod3mS7M%2FaSn9cYF1xfBzc4qmK1h52WpKZKbRY0qdrzaH9k7ESFvqUmgMznCj67R7KtaiB4ZJ31%2BNyQFTrhx6NCJra1QsQwj%2B%2FB%2B21hRJGepM%2F8SRLPC4MyuzrsZ5YJcJurhc7o%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/840101489616?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9FXgA1cV6j1Us76eIj9BS%2Bflcrxm3WWQ1eLu3peY6HeYKp4hBrklGaQ4DS9TTTGEHPjeZk2VkGjV9q3rzMtMeMr%2FNGiOjxuDofOqFsJvYHd8lcrKY9ha4JDip%2FZplKNB1It%2FOCu4Dnv9zuD1KkxsC2fgIvKGulLdpUROIJv69YBDRh6petN3tHe7s7HLfWld4%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-11-07T04:46:26Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-08T04:45:27Z"
     },
     "panasonic-lumix-s-40mm": {
       "contamination_key": "panasonic-lumix-s-40mm",
@@ -44567,6 +44587,236 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-07T06:02:43Z"
+    },
+    "elinchrom-rx-4": {
+      "contamination_key": "elinchrom-rx-4",
+      "vendor": "Elinchrom",
+      "model": "rx 4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "167767215020",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Elinchrom",
+        "mpn": "EL20487.1",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Elinchrom D-Lite RX 4 400ws AC Powered Studio Flash Monolight-(EL20487.1)",
+        "image": "https://i.ebayimg.com/images/g/9o0AAeSwb95ouS-v/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "311.00",
+          "currency": "USD",
+          "as_of": "2026-11-08T04:01:14Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/167767215020?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9SNjW39bmRQ%2B4vB4USf07q5BaH0uy%2BAYKJj5bp4u%2B%2BaQxkbSUTcYqr3M%2BuS0PuI94Cmz9bgMuvHyJiyIAi9%2BMZjtJ7M5PKNMc0EWh107vjVxPJ%2B0Kfp39QBTyzacu8ega4Ur%2BCgxzTXylfsKUfzNwpxcO6Gi3JZjDmDKlxUfecwWkqkYB9TzHg8eUXNBJIYLE%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-08T04:01:14Z"
+    },
+    "zhiyun-smooth-q3-axis-handheld": {
+      "contamination_key": "zhiyun-smooth-q3-axis-handheld",
+      "vendor": "Zhiyun",
+      "model": "smooth q3 axis handheld",
+      "gtin": "00191493000193",
+      "marketplace_ids": {
+        "ebay_epid": "7030526311",
+        "ebay_legacy_item_id": "147642992875",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "Zhiyun",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0191493000193",
+              "gtin14": "00191493000193",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0191493000193",
+              "gtin14": "00191493000193",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0191493000193",
+              "gtin14": "00191493000193",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0191493000193",
+              "gtin14": "00191493000193",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "ZHIYUN Smooth-Q 3-Axis Handheld Smartphone Gimbal Stabilizer - Black",
+        "image": "https://i.ebayimg.com/images/g/P3sAAeSwyMBq1lro/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/p1EAAOSw~tpf6c5M/s-l640.jpg",
+        "price_seen": {
+          "value": "17.49",
+          "currency": "USD",
+          "as_of": "2026-11-08T04:02:23Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147642992875?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9TbBSWT1CGM3O45b2rU8Nui4RtyQ3pfo%2BDe5Gd0Pd%2BL632Zw4%2F2%2F3XdamcGxkn0bNXK2odxPzQ64mjDprUuXqp0i7TBMoH5q9yqnyDqB7fPTI5xgsCbrVWi84JMWHmUsKVorxbWFAcu4BZop885bJD%2Fn6aASF7htexTGoYIcxDMo0KFHIAwiLBver%2BqIwrOqA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-08T04:02:23Z"
+    },
+    "fujifilm-14mm-f2-8": {
+      "contamination_key": "fujifilm-14mm-f2-8",
+      "vendor": "Fujifilm",
+      "model": "14mm f2.8",
+      "gtin": "00074101017335",
+      "marketplace_ids": {
+        "ebay_epid": "115801452",
+        "ebay_legacy_item_id": "128181458845",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "16276481",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0074101017335",
+              "gtin14": "00074101017335",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0074101017335",
+              "gtin14": "00074101017335",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0074101017335",
+              "gtin14": "00074101017335",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0074101017335",
+              "gtin14": "00074101017335",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Fujifilm XF 14mm f/2.8 R Lens with hood",
+        "image": "https://i.ebayimg.com/images/g/kXUAAeSwbehq72XS/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/KUMAAMXQVhFSBg5T/s-l640.jpg",
+        "price_seen": {
+          "value": "227.50",
+          "currency": "USD",
+          "as_of": "2026-11-08T06:00:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/128181458845?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-08T06:00:24Z"
+    },
+    "dji-part-41-grip-ronin": {
+      "contamination_key": "dji-part-41-grip-ronin",
+      "vendor": "DJI",
+      "model": "part 41 grip ronin",
+      "gtin": "00190021010222",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "267325295508",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0190021010222",
+              "gtin14": "00190021010222",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "DJI RONIN-M\\MX Grip Part 41",
+        "image": "https://i.ebayimg.com/images/g/oNAAAeSwqwZnr8yY/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "289.00",
+          "currency": "USD",
+          "as_of": "2026-11-08T04:03:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/267325295508?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-08T04:03:52Z"
     }
   },
   "substrate": [
