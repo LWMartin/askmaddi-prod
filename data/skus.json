@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-10",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -6650,7 +6650,7 @@
         },
         "market_title": "Sony FX6 Full-Frame Cinema Video Camera Body  New USA Open Box",
         "image": "https://i.ebayimg.com/images/g/KQQAAeSw~oRqJzyH/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/k-sAAOSw7tBgS2Y8/s-l640.jpg",
         "price_seen": {
           "value": "5899.00",
           "currency": "USD",
@@ -6670,6 +6670,33 @@
               "snapshot": "2026-11-05",
               "rule": "code sofx6",
               "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-10T04:31:22Z",
+          "query": "Sony ILMEFX6V",
+          "winner": {
+            "item_id": "v1|237173049224|0",
+            "epid": "23044031932",
+            "title": "Sony ILME-FX6V Cinema Line Camera (Operation Time:180h) [Top Mint] #9849C"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|860126585514|0",
+              "epid": "17032610525",
+              "title": "Sony 1-912-358-11  USB Cable ILMEFX6V ILMEFX3 ILMEFX30",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|237173049224|0",
+              "epid": "23044031932",
+              "title": "Sony ILME-FX6V Cinema Line Camera (Operation Time:180h) [Top Mint] #9849C",
+              "had_catalog": true,
+              "accepted": true
             }
           ]
         }
@@ -62348,6 +62375,137 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-08T04:03:52Z"
+    },
+    "fujifilm-x-t100": {
+      "contamination_key": "fujifilm-x-t100",
+      "vendor": "Fujifilm",
+      "model": "x t100",
+      "gtin": "00074101037562",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "860098414143",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "074101037562",
+              "gtin14": "00074101037562",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "New Fujifilm X-T100 24.2MP X-Mount Mirrorless Camera",
+        "image": "https://i.ebayimg.com/images/g/--0AAeSwFBtq5NZz/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "599.99",
+          "currency": "USD",
+          "as_of": "2026-11-10T04:01:30Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/860098414143?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-10T04:01:30Z"
+    },
+    "om-system-150-600mm-f5-0": {
+      "contamination_key": "om-system-150-600mm-f5-0",
+      "vendor": "OM SYSTEM",
+      "model": "150 600mm f5.0",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "257810447311",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Olympus",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "OM SYSTEM M.Zuiko Digital ED 150-600mm F5.0-6.3 IS Olympus",
+        "image": "https://i.ebayimg.com/images/g/zKcAAeSwe5Nq2TA4/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1799.00",
+          "currency": "USD",
+          "as_of": "2026-11-10T10:00:53Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/257810447311?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-10T10:00:53Z"
+    },
+    "canon-17mm-f4": {
+      "contamination_key": "canon-17mm-f4",
+      "vendor": "Canon",
+      "model": "17mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "366797604460",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "Dose not apply",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "[Top MINT] Canon FD 17mm f/4 SSC S.S.C. Ultra Wide Angle MF Lens From JAPAN　",
+        "image": "https://i.ebayimg.com/images/g/4wUAAeSwLV9q8j4r/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "349.99",
+          "currency": "USD",
+          "as_of": "2026-11-10T10:01:51Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/366797604460?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9Dgqh7GePC6zvNnolWETL9pl%2Bs8rc3NVM9R5OkYJsgVMNVbhpD%2BqmQKFwYWac2QLSFfKWb%2Fpd%2FH0jPixEjG1n5wLf04mMDKLdEBclZeM%2BiaNdKE5YiwB5YWKJa8TGHPFldVPLJGshTPRqH0VoQZxxulERLKc0FgaJBG8SP0B7xuKdLk2jHZNB%2BCZCFmyiAsOk%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-10T10:01:51Z"
     }
   },
   "substrate": [
