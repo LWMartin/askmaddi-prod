@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-10",
+  "as_of": "2026-11-11",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -14079,39 +14079,39 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "298658167899",
+        "ebay_legacy_item_id": "287638733567",
         "amazon_asin": null
       },
       "unspsc": null,
       "facet": "drone",
       "marketplace_categories": {
-        "ebay_category_id": "179697"
+        "ebay_category_id": "69528"
       },
       "identity": {
-        "brand": "HOVERAir",
+        "brand": "",
         "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "HOVERAir AQUA Waterproof AI Drone IP67 4K HDR Auto Follow Water Landing Set",
-        "image": "https://i.ebayimg.com/images/g/gTcAAeSwtM1qoPIo/s-l1600.jpg",
+        "market_title": "HOVERAir AQUA Drone with 4K HDR Camera IP67 Fully Waterproof (Basic Set) Japan",
+        "image": "https://i.ebayimg.com/images/g/KlwAAeSw-X5qybqv/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "1756.55",
+          "value": "1571.99",
           "currency": "USD",
-          "as_of": "2026-10-10T04:45:38Z"
+          "as_of": "2026-11-11T04:45:25Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/298658167899?var=595409302837&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BgsEUIHwVHTOb5v05peJCVHTHaXAJ7tlqnAgtM9MHFV4tYiOch3C2s%2BNZW27kq%2B0kHE8ejrpfcvuBQqOlUmLB%2FzJjtZVqIQKePBTmHYbZpaC%2F4f1DWV6ZCpHGpgP8rBZAX646osVxKt0csm%2BCcLMYdFfoQHM6kSOE1WrB1Ibs8YM%2BJ9YiAuIAD6EL%2Bzbzoh44%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/287638733567?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Ffbd5njXI4wBQtQihKvUkxP8c1Ar3wIY%2Fwu2V%2FzguZcnyP%2Fh%2FCHJp57%2BldFEpZZ223uWtT6HS1LiFQWQ33EIRPdTOE%2B6RhWAxq3tPAuVj2T0YqikoITrBJcST0yPyY0%2FjNkO%2FqOeqZJlmmdm1vAWTXCchyMFZVzbT2P3gCYcG7t9XS8%2FGnwh%2BHThRM0SC0adU%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-10T04:45:38Z"
+      "resolved_at": "2026-11-11T04:45:25Z"
     },
     "autel-max-4t-v-2-commercial-thermal": {
       "contamination_key": "autel-max-4t-v-2-commercial-thermal",
@@ -62519,6 +62519,325 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-10T10:01:51Z"
+    },
+    "viltrox-40mm-f2-5": {
+      "contamination_key": "viltrox-40mm-f2-5",
+      "vendor": "Viltrox",
+      "model": "40mm f2.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377138387106",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Viltrox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "VILTROX AF 40mm f/2.5 FE STM ASPH Lens For Sony E-Mount Full Frame Cameras",
+        "image": "https://i.ebayimg.com/images/g/XAIAAeSwvPRp61Zt/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "127.99",
+          "currency": "USD",
+          "as_of": "2026-11-11T04:00:30Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377138387106?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-11T04:00:30Z"
+    },
+    "dji-osmo-action-camera": {
+      "contamination_key": "dji-osmo-action-camera",
+      "vendor": "DJI",
+      "model": "osmo action camera",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377589506744",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Osmo Action 5 Pro Essential Combo, Waterproof Action Camera 4K/120fps",
+        "image": "https://i.ebayimg.com/images/g/aB4AAeSwELRq2d0M/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "216.00",
+          "currency": "USD",
+          "as_of": "2026-11-11T04:01:14Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377589506744?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9uqSFlz82CVwc%2FJVNOkIjXwfiI2L6t5rPJcRjQ3A2JG1Ff8tpDmMrmusFYJVmi1tsWKNp%2BpCIbawYds79u8GN3M6Jz%2BujRo4hu%2FZy1LV456hDJRpOppU3RBsbzvZhoe8yuH5sjOzl6GC5lfEYro6vFjTz%2F9EOB%2FdP9L6Aj3klz%2BEkc7Pp39ay6YZDoRIASORs%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-11T04:01:14Z"
+    },
+    "nikon-35-70mm-f3-3": {
+      "contamination_key": "nikon-35-70mm-f3-3",
+      "vendor": "Nikon",
+      "model": "35 70mm f3.3",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "237175141027",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon AF NIKKOR 35-70mm f/3.3-4.5 Zoom Lens Nikon F Mount 52mm",
+        "image": "https://i.ebayimg.com/images/g/umAAAeSwE~pq8xdv/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "29.99",
+          "currency": "USD",
+          "as_of": "2026-11-11T06:00:48Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/237175141027?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8uFJav1eHZ8ABmu7awpT1iIRSec90qifq7FtR%2FNQUnfSAR1xLY%2BT7Rog%2Fu6yPIKumsGDZQ1qC3YIqBTwWvf3dsquu8tmeFPD1SsKPMbOt79ulq%2BtDpNG4RQUfXysEJ3EqQoCobZaY0HPLYJKzn6D8wjiXAEnRNv9dZzWWapoJfNlURCBTclzptAicT0egG6e4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-11T06:00:48Z"
+    },
+    "panasonic-85mm-f1-8": {
+      "contamination_key": "panasonic-85mm-f1-8",
+      "vendor": "Panasonic",
+      "model": "85mm f1.8",
+      "gtin": "00885170376526",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820340609236",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "S-S85",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0885170376526",
+              "gtin14": "00885170376526",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0885170376526",
+              "gtin14": "00885170376526",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0885170376526",
+              "gtin14": "00885170376526",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0885170376526",
+              "gtin14": "00885170376526",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Panasonic Lumix S 85mm f/1.8 Lens - NEW IN BOX",
+        "image": "https://i.ebayimg.com/images/g/yOsAAeSw5WNq887E/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/di8AAOSwZLJkbe8j/s-l1600.jpg",
+        "price_seen": {
+          "value": "425.00",
+          "currency": "USD",
+          "as_of": "2026-11-11T06:01:09Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820340609236?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-11T06:01:09Z"
+    },
+    "fujifilm-x100-ii": {
+      "contamination_key": "fujifilm-x100-ii",
+      "vendor": "Fujifilm",
+      "model": "x100 ii",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307219151283",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "Dose not apply",
+              "gtin14": null,
+              "valid": false
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "EAN",
+              "raw": "Dose not apply",
+              "gtin14": null,
+              "valid": false
+            }
+          ]
+        },
+        "market_title": "Fujifilm X100S Silver 16MP APS C XTrans II 23mm F2 Fast AF 0.08s 6fps HD",
+        "image": "https://i.ebayimg.com/images/g/vdgAAeSwzr5qxidV/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "398.90",
+          "currency": "USD",
+          "as_of": "2026-11-11T06:01:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307219151283?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8zVnpV1nIcdMVpS%2BMYB8KEcWGiyOfQcrlaN9NZukYTlU%2Bo9OXts%2FmCjPYqCYi2cY59ESdiiN2kz3REcflrkSzcatiDmRUySLzY2NDWjt59WqEi6CJzcLn%2BX1%2BjbwfMnfDtogOaeNuxu4JZZHxCpIWERhwpGzscqSeCs0%2B1r6pSlwtt8BUX7qGl0N5%2BDEoY0Pw%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-11T06:01:35Z"
+    },
+    "canon-17-55mm-f2-8": {
+      "contamination_key": "canon-17-55mm-f2-8",
+      "vendor": "Canon",
+      "model": "17 55mm f2.8",
+      "gtin": "00013803064445",
+      "marketplace_ids": {
+        "ebay_epid": "99694079",
+        "ebay_legacy_item_id": "840106350352",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "1242B002",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0013803064445",
+              "gtin14": "00013803064445",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0013803064445",
+              "gtin14": "00013803064445",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0013803064445",
+              "gtin14": "00013803064445",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803064445",
+              "gtin14": "00013803064445",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "EXCELLENT Canon EF-S 17-55mm f/2.8 IS USM Lens #326",
+        "image": "https://i.ebayimg.com/images/g/SnsAAeSwKkpq8Bmy/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/pboAAAzykWJSrarQ/s-l640.jpg",
+        "price_seen": {
+          "value": "420.00",
+          "currency": "USD",
+          "as_of": "2026-11-11T08:00:28Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/840106350352?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FHCCy9ve1cpHnQbL%2Fl4%2FR9YYP12Qc0KlP35cZFWWQzSA%2BD%2FFpIja30IEwaM8fg90X35sB19sVxw1LTnzz8eO2HvPJTMiUYUT8HJeBeZ4UAbFkCSzDX%2FqUnNBCrg%2BhpaKVRhaTunTvzkWJ%2F0TvfK9jEI13UXkaWaljLGsgpovMNLxNOnkR5OYdgygT7T%2BqZ5%2FU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-11T08:00:28Z"
     }
   },
   "substrate": [
