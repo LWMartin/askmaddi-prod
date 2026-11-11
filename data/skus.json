@@ -62423,16 +62423,21 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-10T04:01:30Z"
+      "resolved_at": "2026-11-10T04:01:30Z",
+      "spec_surface": {
+        "wikipedia_title": "Fujifilm_X-T100",
+        "wikipedia_title_resolved": "Fujifilm X-T100",
+        "wikipedia_stamped_at": "2026-11-11T02:43:05Z"
+      }
     },
     "om-system-150-600mm-f5-0": {
       "contamination_key": "om-system-150-600mm-f5-0",
       "vendor": "OM SYSTEM",
       "model": "150 600mm f5.0",
-      "gtin": null,
+      "gtin": "00050332195462",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "257810447311",
+        "ebay_legacy_item_id": "395222945952",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -62441,30 +62446,38 @@
         "ebay_category_id": "3323"
       },
       "identity": {
-        "brand": "Olympus",
-        "mpn": "",
+        "brand": "OM SYSTEM",
+        "mpn": "V335930BW000",
         "gtin_provenance": {
-          "chosen_source": null,
+          "chosen_source": "aspect",
           "conflict": false,
-          "observations": []
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "050332195462",
+              "gtin14": "00050332195462",
+              "valid": true
+            }
+          ]
         },
-        "market_title": "OM SYSTEM M.Zuiko Digital ED 150-600mm F5.0-6.3 IS Olympus",
-        "image": "https://i.ebayimg.com/images/g/zKcAAeSwe5Nq2TA4/s-l1600.jpg",
+        "market_title": "OM SYSTEM M.Zuiko Digital ED 150-600mm f/5.0-6.3 IS Lens #V335930BW000",
+        "image": "https://i.ebayimg.com/images/g/lvgAAeSw7wlotqYU/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "1799.00",
+          "value": "2399.99",
           "currency": "USD",
-          "as_of": "2026-11-10T10:00:53Z"
+          "as_of": "2026-11-10T12:00:31Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/257810447311?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/395222945952?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9lUN54ubf7%2FH%2F7MHY8qeSORiPcPGGC1x74MzJoh5NEw8dWyip1%2BUYN8Qm3a8AO57J7i%2BHHsSwAoR8vEl9Y9YJ8Ci%2FfuDlwvuzzsq9pV3CoJgtB3EDTCAenST4%2Fc9Q3sPa3RcAp8WB2acNjkfFsfZTFMyJeUXetrsVwfxXB3kRTjIf0PmDuhw5SLdN6LaO7%2Bms%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-11-10T10:00:53Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-10T12:00:31Z"
     },
     "canon-17mm-f4": {
       "contamination_key": "canon-17mm-f4",
