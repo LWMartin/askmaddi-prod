@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-11",
+  "as_of": "2026-11-12",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -2484,8 +2484,8 @@
       "model": "lumix s5 ii",
       "gtin": "00885170392595",
       "marketplace_ids": {
-        "ebay_epid": "25060030683",
-        "ebay_legacy_item_id": "287378750452",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206565630214",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2495,7 +2495,7 @@
       },
       "identity": {
         "brand": "Panasonic",
-        "mpn": "DCS5M2BODY",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -2530,23 +2530,23 @@
             }
           ]
         },
-        "market_title": "Panasonic LUMIX S5II Mirrorless Camera, 24.2MP Full Frame Body Only New!!!",
-        "image": "https://i.ebayimg.com/images/g/k8AAAeSwjOxpzHCb/s-l1600.jpg",
+        "market_title": "Panasonic Lumix DC-S5 II 24.2MP Mirrorless Digital L-Mount Camera Body S5II #156",
+        "image": "https://i.ebayimg.com/images/g/8ZoAAeSw96JqrWpI/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/KqoAAOSwYY5kuskE/s-l1600.jpg",
         "price_seen": {
-          "value": "1599.99",
+          "value": "1346.42",
           "currency": "USD",
-          "as_of": "2026-08-22T14:42:09Z"
+          "as_of": "2026-11-12T06:00:44Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/287378750452?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BOzsyyxih5ahGXSvJGjPSsjeBvt5NPVWLQWjiYSL%2BLuFoS8K166Kbs0i9DBiAvSPztZ8E%2Brzc04RIB%2Fz9XH3oKNIr8yikUHGNc4nIbq%2Fy4vG5s64xNC1Q5yl9RHrWhEHLvbIZV4EIqR5NyLj1q2Pj32QNpIbRCdgoIt9ETSkFvSd9%2BTOmg%2FQ1C1kP31xuA1qk%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/206565630214?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fwc5KpTtrUreob%2BHtjNbfigjt7krL9Oes0vFBvnyegPe4YJlYeIlTCb1%2BdBldxWCIJhD4Nga2%2FXwqJuEa3jyf5AynVmi1YYdaC9HpfBcIqleSneE%2B98t9P%2BWI1xGsqJJf8%2FLCPBbj0PvhuB903CpVjEQMVO5fzxJx8RtvVoI5XTMWRKXhLqpsnbKeO7j6G92I%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-08-22T14:42:09Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-12T06:00:44Z"
     },
     "minolta-maxxum-5000": {
       "contamination_key": "minolta-maxxum-5000",
@@ -62838,6 +62838,204 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-11-11T08:00:28Z"
+    },
+    "godox-v1mid-ttl-round-head": {
+      "contamination_key": "godox-v1mid-ttl-round-head",
+      "vendor": "Godox",
+      "model": "v1mid ttl round head",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198756841746",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Godox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Godox V1 MID C 55Ws TTL 1/8000s Round Head Speedlite Flash Touchscree for Canon",
+        "image": "https://i.ebayimg.com/images/g/rZoAAeSwqppqIRno/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "159.00",
+          "currency": "USD",
+          "as_of": "2026-11-12T04:02:41Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198756841746?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde92hg9NPO35C%2BuSv2d08cAySumGrPuEf4P0sbR9sGmvhC6zM%2B%2BVnS90pIf3I7AZBsW%2FI%2FpyHqFpKnvOcj47lAozW0B7mFuEX7yDJT0DTykUuBhC%2B24NoHna%2FKhHY%2FgGgkGDvf9NSWrftmb6AH6vwot9yCG%2BzW6gY0ruGX9%2BxxW3s%2FOq8mJtAhfshi8VHVJvv2Q%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-12T04:02:41Z"
+    },
+    "olympus-38mm-f1-8": {
+      "contamination_key": "olympus-38mm-f1-8",
+      "vendor": "Olympus",
+      "model": "38mm f1.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "137891793151",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Olympus",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "OLYMPUS F.ZUIKO Auto-S 38mm F1.8 Black Standard Prime Lens Manual Focus",
+        "image": "https://i.ebayimg.com/images/g/~uoAAeSwEWlqw852/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "103.00",
+          "currency": "USD",
+          "as_of": "2026-11-12T04:03:06Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/137891793151?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8mFdR0DiC0BWvNMXQfA997ETE6y3pUjaw9oKm92Wfs8OlTWW%2BXGw8cXVEI3AMI9hr2ot130iwep3crnd6VWdfooPvKhAMbL1d%2F5GzxaoW5M%2BTqZXmWn2UI8m0Bppn4OhWUPkVbCgZc2a3443R%2BDNenkHuxiiQnhMnUgqn9FoGLBBXXvbZy98NXKpvisr6iKC4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-12T04:03:06Z"
+    },
+    "panasonic-lumix-s-24": {
+      "contamination_key": "panasonic-lumix-s-24",
+      "vendor": "Panasonic",
+      "model": "lumix s 24",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "227608450019",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic LUMIX S1II S1M2 Mirrorless Body 24MP + 128gb CFexpress Type B MINT",
+        "image": "https://i.ebayimg.com/images/g/luMAAeSwObBq85lz/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2600.00",
+          "currency": "USD",
+          "as_of": "2026-11-12T04:03:28Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/227608450019?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-12T04:03:28Z"
+    },
+    "panasonic-100-400mm-f4": {
+      "contamination_key": "panasonic-100-400mm-f4",
+      "vendor": "Panasonic",
+      "model": "100 400mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "168705513343",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "H-RS100400",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic Lumix 100-400mm F4-6.3 Leica DG Vario Elmar ASPH OIS Lens H-RS100400",
+        "image": "https://i.ebayimg.com/images/g/-IIAAeSwShxqsYoa/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/AeIAAOSwoZBf6c5b/s-l640.jpg",
+        "price_seen": {
+          "value": "801.95",
+          "currency": "USD",
+          "as_of": "2026-11-12T04:03:53Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-12T04:51:09Z",
+          "query": "Panasonic H-RS100400",
+          "winner": {
+            "item_id": "v1|237119924305|0",
+            "epid": "219453661",
+            "title": "Panasonic LEICA DG VARIO-ELMAR 100-400mm F4-6.3 H-RS100400 [Top Mint] #9516LJ"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|307194573910|0",
+              "epid": "219453661",
+              "title": "Panasonic Lumix 100-400mm F4-6.3 Leica DG Leica OIS H-RS100400 US STOCK #12370",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|168705513343|0",
+              "epid": "219453661",
+              "title": "Panasonic Lumix 100-400mm F4-6.3 Leica DG Vario Elmar ASPH OIS Lens H-RS100400",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|237119924305|0",
+              "epid": "219453661",
+              "title": "Panasonic LEICA DG VARIO-ELMAR 100-400mm F4-6.3 H-RS100400 [Top Mint] #9516LJ",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/168705513343?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-12T04:03:53Z"
     }
   },
   "substrate": [

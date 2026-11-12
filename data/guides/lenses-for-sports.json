@@ -5972,6 +5972,13 @@
       ]
     },
     {
+      "card_id": "canon-17-55mm-f2-8",
+      "display_name": "Canon 17 55mm f2.8",
+      "reasons": [
+        "require focal_length_mm >= 70: got 55"
+      ]
+    },
+    {
       "card_id": "canon-20mm-f2-8",
       "display_name": "Canon 20mm f2.8",
       "reasons": [
@@ -6514,9 +6521,9 @@
     }
   ],
   "counts": {
-    "in_scope": 127,
+    "in_scope": 128,
     "ranked": 43,
-    "excluded": 83,
+    "excluded": 84,
     "pending_backfill": 1
   }
 }

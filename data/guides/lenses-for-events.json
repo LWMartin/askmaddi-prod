@@ -5027,6 +5027,134 @@
       "rank": 31
     },
     {
+      "card_id": "canon-17-55mm-f2-8",
+      "display_name": "Canon 17 55mm f2.8",
+      "rankable": true,
+      "score": 2.1745,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.3158,
+          "pos": 18,
+          "neg": 6,
+          "total": 38,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.6316,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-dslr-lenses-dslr-lenses-aps-c-canon-ef-s-17-55mm-f-2-8-is-us",
+              "url": "https://www.photoreview.com.au/reviews/dslr-lenses/dslr-lenses-aps-c/canon-ef-s-17-55mm-f-2-8-is-usm-lens/",
+              "witness": "unattested",
+              "quote": "simultaneously with the JPEGs, resolution comfortably exceeded expectations for the review camera&#8217;s sensor."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 2,
+          "s": 0.2222,
+          "pos": 4,
+          "neg": 2,
+          "total": 9,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4444,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-dslr-lenses-dslr-lenses-aps-c-canon-ef-s-17-55mm-f-2-8-is-us",
+              "url": "https://www.photoreview.com.au/reviews/dslr-lenses/dslr-lenses-aps-c/canon-ef-s-17-55mm-f-2-8-is-usm-lens/",
+              "witness": "unattested",
+              "quote": "A rounded seven-blade diaphragm contributes to a pleasing bokeh in shots with a shallow depth."
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "af_noise",
+          "weight": 1,
+          "s": 0.75,
+          "pos": 6,
+          "neg": 0,
+          "total": 8,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.75,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-dslr-lenses-dslr-lenses-aps-c-canon-ef-s-17-55mm-f-2-8-is-us",
+              "url": "https://www.photoreview.com.au/reviews/dslr-lenses/dslr-lenses-aps-c/canon-ef-s-17-55mm-f-2-8-is-usm-lens/",
+              "witness": "unattested",
+              "quote": "The extremely fast and near silent AF drive."
+            }
+          ],
+          "axis_display": "AF Noise"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 1,
+          "s": 0.1667,
+          "pos": 2,
+          "neg": 1,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.1667,
+          "top_sources": [
+            {
+              "source_id": "web-web-20060307113632id_-http-wwwthe-digital-picturecom80-reviews-canon-ef-s-17",
+              "url": "https://web.archive.org/web/20060307113632id_/http://www.the-digital-picture.com:80/Reviews/Canon-EF-S-17-55mm-f-2.8-IS-USM-Lens-Review.aspx",
+              "witness": "firsthand",
+              "quote": "reflections off lens element surfaces to deliver crisp, undistorted images with natural colour balance.\" &nbsp; I expect the Canon EF-S 17-55mm f/2.8 IS USM Lens'."
+            }
+          ],
+          "axis_display": "Color Rendition"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.1818,
+          "pos": 2,
+          "neg": 0,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.1818,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-dslr-lenses-dslr-lenses-aps-c-canon-ef-s-17-55mm-f-2-8-is-us",
+              "url": "https://www.photoreview.com.au/reviews/dslr-lenses/dslr-lenses-aps-c/canon-ef-s-17-55mm-f-2-8-is-usm-lens/",
+              "witness": "unattested",
+              "quote": "Lateral chromatic aberration remained entirely within the ‘low’ band, which is unusual for a modern lens since."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "bokeh",
+        "af_noise",
+        "color_rendition",
+        "chromatic_aberration"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
+      ],
+      "rank": 32
+    },
+    {
       "card_id": "sigma-19mm-f2-8",
       "display_name": "Sigma 19mm f2.8",
       "rankable": true,
@@ -5200,7 +5328,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 32
+      "rank": 33
     },
     {
       "card_id": "sigma-50mm-f1-4",
@@ -5376,7 +5504,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 33
+      "rank": 34
     },
     {
       "card_id": "olympus-45mm-f1-2",
@@ -5551,7 +5679,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 34
+      "rank": 35
     },
     {
       "card_id": "fujifilm-27mm-f2-8",
@@ -5686,7 +5814,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 35
+      "rank": 36
     },
     {
       "card_id": "sony-35mm-f2-8",
@@ -5856,7 +5984,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 36
+      "rank": 37
     },
     {
       "card_id": "canon-135mm-f2-0",
@@ -5975,7 +6103,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 37
+      "rank": 38
     },
     {
       "card_id": "sigma-14-24mm-f2-8",
@@ -6163,7 +6291,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 38
+      "rank": 39
     },
     {
       "card_id": "fujifilm-63mm-f2-8",
@@ -6339,7 +6467,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 39
+      "rank": 40
     },
     {
       "card_id": "canon-50mm-f2-5",
@@ -6479,7 +6607,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 40
+      "rank": 41
     },
     {
       "card_id": "fujifilm-23mm-f1-4",
@@ -6616,7 +6744,7 @@
         "missing weighted axes: af_performance, chromatic_aberration",
         "thin (< 15 claims): bokeh, af_noise, color_rendition"
       ],
-      "rank": 41
+      "rank": 42
     },
     {
       "card_id": "sigma-15mm-f1-4",
@@ -6802,7 +6930,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 42
+      "rank": 43
     },
     {
       "card_id": "sony-50mm-f1-4",
@@ -6956,7 +7084,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 43
+      "rank": 44
     },
     {
       "card_id": "canon-32mm-f1-4",
@@ -7082,7 +7210,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, chromatic_aberration"
       ],
-      "rank": 44
+      "rank": 45
     },
     {
       "card_id": "sigma-17-40mm-f1-8",
@@ -7268,7 +7396,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 45
+      "rank": 46
     },
     {
       "card_id": "sony-16mm-f1-8",
@@ -7412,7 +7540,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, chromatic_aberration"
       ],
-      "rank": 46
+      "rank": 47
     },
     {
       "card_id": "sigma-23mm-f1-4",
@@ -7598,7 +7726,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 47
+      "rank": 48
     },
     {
       "card_id": "canon-45mm-f1-2",
@@ -7783,7 +7911,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 48
+      "rank": 49
     },
     {
       "card_id": "canon-24mm-f2-8",
@@ -7970,7 +8098,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 49
+      "rank": 50
     },
     {
       "card_id": "leica-50mm-f1-4",
@@ -8138,7 +8266,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 50
+      "rank": 51
     },
     {
       "card_id": "sigma-35mm-f1-4",
@@ -8324,7 +8452,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 51
+      "rank": 52
     },
     {
       "card_id": "canon-50mm-f1-2",
@@ -8471,7 +8599,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 52
+      "rank": 53
     },
     {
       "card_id": "canon-100mm-f2-8",
@@ -8646,7 +8774,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 53
+      "rank": 54
     },
     {
       "card_id": "leica-100mm-f2-8",
@@ -8821,7 +8949,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 54
+      "rank": 55
     },
     {
       "card_id": "canon-85mm-f1-4",
@@ -9006,7 +9134,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 55
+      "rank": 56
     },
     {
       "card_id": "sigma-28-70mm-f2-8",
@@ -9182,7 +9310,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 56
+      "rank": 57
     },
     {
       "card_id": "nikon-105mm-f2-8",
@@ -9287,7 +9415,7 @@
         "missing weighted axes: af_performance, color_rendition, chromatic_aberration",
         "thin (< 15 claims): optical_performance, bokeh, af_noise"
       ],
-      "rank": 57
+      "rank": 58
     },
     {
       "card_id": "sony-12-24mm-f2-8",
@@ -9463,7 +9591,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 58
+      "rank": 59
     },
     {
       "card_id": "sigma-60mm-f2-8",
@@ -9583,7 +9711,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, chromatic_aberration"
       ],
-      "rank": 59
+      "rank": 60
     },
     {
       "card_id": "canon-22mm-f2",
@@ -9771,7 +9899,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 60
+      "rank": 61
     },
     {
       "card_id": "canon-14mm-f2-8",
@@ -9952,7 +10080,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 61
+      "rank": 62
     },
     {
       "card_id": "sony-85mm-f1-4",
@@ -10138,7 +10266,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 62
+      "rank": 63
     },
     {
       "card_id": "canon-85mm-f2",
@@ -10269,7 +10397,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): bokeh, af_noise, chromatic_aberration"
       ],
-      "rank": 63
+      "rank": 64
     },
     {
       "card_id": "nikon-58mm-f1-2",
@@ -10387,7 +10515,7 @@
         "missing weighted axes: af_performance, af_noise",
         "thin (< 15 claims): color_rendition, chromatic_aberration"
       ],
-      "rank": 64
+      "rank": 65
     },
     {
       "card_id": "pentax-11-18mm-f2-8",
@@ -10533,7 +10661,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 65
+      "rank": 66
     },
     {
       "card_id": "canon-20mm-f2-8",
@@ -10702,7 +10830,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 66
+      "rank": 67
     },
     {
       "card_id": "sony-28mm-f2",
@@ -10854,7 +10982,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 67
+      "rank": 68
     },
     {
       "card_id": "sigma-20-60mm-f2-8",
@@ -11034,7 +11162,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 68
+      "rank": 69
     },
     {
       "card_id": "fujifilm-16mm-f2-8",
@@ -11183,7 +11311,7 @@
         "missing weighted axes: af_performance, chromatic_aberration",
         "thin (< 15 claims): bokeh, af_noise, color_rendition"
       ],
-      "rank": 69
+      "rank": 70
     },
     {
       "card_id": "sigma-45mm-f2-8",
@@ -11364,7 +11492,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 70
+      "rank": 71
     },
     {
       "card_id": "nikon-24mm-f1-8",
@@ -11505,7 +11633,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 71
+      "rank": 72
     },
     {
       "card_id": "nikon-50mm-f1-8",
@@ -11690,7 +11818,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise"
       ],
-      "rank": 72
+      "rank": 73
     },
     {
       "card_id": "zeiss-35mm-f1-4",
@@ -11864,7 +11992,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 73
+      "rank": 74
     },
     {
       "card_id": "pentax-135mm-f2-5",
@@ -12014,7 +12142,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 74
+      "rank": 75
     },
     {
       "card_id": "canon-16mm-f2-8",
@@ -12168,7 +12296,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): bokeh, chromatic_aberration"
       ],
-      "rank": 75
+      "rank": 76
     },
     {
       "card_id": "sony-70-200mm-f2-8",
@@ -12278,7 +12406,7 @@
         "missing weighted axes: af_performance, af_noise, color_rendition",
         "thin (< 15 claims): bokeh, chromatic_aberration"
       ],
-      "rank": 76
+      "rank": 77
     },
     {
       "card_id": "nikon-50mm-f2",
@@ -12440,7 +12568,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 77
+      "rank": 78
     },
     {
       "card_id": "leica-35mm-f2",
@@ -12552,7 +12680,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): bokeh, af_noise"
       ],
-      "rank": 78
+      "rank": 79
     },
     {
       "card_id": "panasonic-25mm-f1-7",
@@ -12738,7 +12866,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition"
       ],
-      "rank": 79
+      "rank": 80
     },
     {
       "card_id": "sigma-30mm-f1-4",
@@ -12875,7 +13003,7 @@
         "missing weighted axes: af_performance, color_rendition",
         "thin (< 15 claims): bokeh, af_noise, chromatic_aberration"
       ],
-      "rank": 80
+      "rank": 81
     },
     {
       "card_id": "canon-100mm-f2",
@@ -13050,7 +13178,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 81
+      "rank": 82
     },
     {
       "card_id": "ttartisan-85mm-f1-8",
@@ -13182,7 +13310,7 @@
         "missing weighted axes: af_performance, af_noise",
         "thin (< 15 claims): optical_performance, bokeh, color_rendition, chromatic_aberration"
       ],
-      "rank": 82
+      "rank": 83
     },
     {
       "card_id": "nikon-20mm-f1-8",
@@ -13314,7 +13442,7 @@
         "missing weighted axes: af_performance, chromatic_aberration",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition"
       ],
-      "rank": 83
+      "rank": 84
     },
     {
       "card_id": "sony-50mm-f2-8",
@@ -13501,7 +13629,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 84
+      "rank": 85
     },
     {
       "card_id": "nikon-85mm-f1-8",
@@ -13672,7 +13800,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 85
+      "rank": 86
     },
     {
       "card_id": "canon-28-70mm-f2-8",
@@ -13837,7 +13965,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 86
+      "rank": 87
     },
     {
       "card_id": "nikon-35mm-f2-8",
@@ -13980,7 +14108,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise"
       ],
-      "rank": 87
+      "rank": 88
     },
     {
       "card_id": "canon-16-28mm-f2-8",
@@ -14090,7 +14218,7 @@
         "missing weighted axes: af_performance, af_noise, color_rendition",
         "thin (< 15 claims): bokeh, chromatic_aberration"
       ],
-      "rank": 88
+      "rank": 89
     },
     {
       "card_id": "olympus-7-14mm-f2-8",
@@ -14216,7 +14344,7 @@
         "missing weighted axes: af_performance, af_noise",
         "thin (< 15 claims): optical_performance, bokeh, color_rendition, chromatic_aberration"
       ],
-      "rank": 89
+      "rank": 90
     },
     {
       "card_id": "panasonic-70-200mm-f2-8",
@@ -14314,7 +14442,7 @@
         "missing weighted axes: af_performance, bokeh, color_rendition",
         "thin (< 15 claims): af_noise, chromatic_aberration"
       ],
-      "rank": 90
+      "rank": 91
     },
     {
       "card_id": "canon-50mm-f1-4",
@@ -14501,7 +14629,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 91
+      "rank": 92
     },
     {
       "card_id": "canon-50mm-f1-8",
@@ -14688,7 +14816,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 92
+      "rank": 93
     },
     {
       "card_id": "sigma-16mm-f1-4",
@@ -14835,7 +14963,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 93
+      "rank": 94
     },
     {
       "card_id": "nikon-35mm-f1-8",
@@ -14976,7 +15104,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, bokeh, af_noise, color_rendition, chromatic_aberration"
       ],
-      "rank": 94
+      "rank": 95
     }
   ],
   "excluded": [
@@ -15215,8 +15343,8 @@
     }
   ],
   "counts": {
-    "in_scope": 127,
-    "ranked": 94,
+    "in_scope": 128,
+    "ranked": 95,
     "excluded": 29,
     "pending_backfill": 4
   }
