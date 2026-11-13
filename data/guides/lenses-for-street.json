@@ -7017,6 +7017,121 @@
       "rank": 51
     },
     {
+      "card_id": "sigma-20mm-f1-4",
+      "display_name": "Sigma 20mm f1.4",
+      "rankable": true,
+      "score": 0.9049,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.2683,
+          "pos": 21,
+          "neg": 10,
+          "total": 41,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.8049,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "produce shots with image quality that were impossible at a wide open aperture of f1.4 not long ago."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "handling",
+          "weight": 2,
+          "s": -0.25,
+          "pos": 1,
+          "neg": 2,
+          "total": 4,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.5,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "soft pouch and its lens hood has no lock.[+] Aperture ring: Yes, all three lenses in this comparison have a dedicated aperture ring with 1/3."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "find lenses with a less optimal manual override mechanism or even with manual focus only (like from Samyang)."
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 1,
+          "s": 0.6,
+          "pos": 3,
+          "neg": 0,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.6,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "The lens offers quite a nice Bokeh for an ultra-wide and."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "&#8211; although don&#8217;t expect wonders regarding background blur."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Sigma HSM autofocus motor should ensure snappy AF performance, and the 9-rounded aperture blades will help render beautiful background bokeh ."
+            }
+          ],
+          "axis_display": "Bokeh"
+        }
+      ],
+      "missing_axes": [
+        "color_rendition",
+        "af_performance"
+      ],
+      "thin_axes": [
+        "handling",
+        "bokeh"
+      ],
+      "flags": [
+        "missing weighted axes: color_rendition, af_performance",
+        "thin (< 15 claims): handling, bokeh"
+      ],
+      "rank": 52
+    },
+    {
       "card_id": "olympus-25mm-f1-8",
       "display_name": "Olympus 25mm f1.8",
       "rankable": true,
@@ -7139,7 +7254,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 52
+      "rank": 53
     },
     {
       "card_id": "canon-50mm-f1-2",
@@ -7264,7 +7379,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 53
+      "rank": 54
     },
     {
       "card_id": "canon-16mm-f2-8",
@@ -7384,7 +7499,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): bokeh"
       ],
-      "rank": 54
+      "rank": 55
     },
     {
       "card_id": "sony-50mm-f2-8",
@@ -7536,7 +7651,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 55
+      "rank": 56
     },
     {
       "card_id": "sigma-16mm-f1-4",
@@ -7661,7 +7776,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 56
+      "rank": 57
     },
     {
       "card_id": "nikon-35mm-f2-8",
@@ -7780,7 +7895,7 @@
       "flags": [
         "missing weighted axes: af_performance"
       ],
-      "rank": 57
+      "rank": 58
     },
     {
       "card_id": "canon-50mm-f1-8",
@@ -7932,7 +8047,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 58
+      "rank": 59
     },
     {
       "card_id": "panasonic-25mm-f1-7",
@@ -8085,7 +8200,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, color_rendition"
       ],
-      "rank": 59
+      "rank": 60
     },
     {
       "card_id": "canon-50mm-f1-4",
@@ -8237,7 +8352,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 60
+      "rank": 61
     },
     {
       "card_id": "olympus-7-14mm-f2-8",
@@ -8356,7 +8471,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 61
+      "rank": 62
     },
     {
       "card_id": "nikon-24mm-f1-8",
@@ -8481,7 +8596,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 62
+      "rank": 63
     },
     {
       "card_id": "sony-16mm-f1-8",
@@ -8597,7 +8712,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh"
       ],
-      "rank": 63
+      "rank": 64
     },
     {
       "card_id": "nikon-35mm-f1-8",
@@ -8710,7 +8825,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 64
+      "rank": 65
     }
   ],
   "excluded": [
@@ -9187,8 +9302,8 @@
     }
   ],
   "counts": {
-    "in_scope": 128,
-    "ranked": 64,
+    "in_scope": 129,
+    "ranked": 65,
     "excluded": 61,
     "pending_backfill": 3
   }

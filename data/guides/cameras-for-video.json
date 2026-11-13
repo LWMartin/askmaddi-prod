@@ -15065,6 +15065,159 @@
       "rank": 78
     },
     {
+      "card_id": "nikon-d500",
+      "display_name": "Nikon d500",
+      "rankable": true,
+      "score": 0.8376,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.2391,
+          "pos": 29,
+          "neg": 7,
+          "total": 92,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.4783,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-nikon-d500-review",
+              "url": "https://www.cameralabs.com/nikon-d500-review/",
+              "witness": "firsthand",
+              "quote": "In my tests the D500 effortlessly tracked any subject I pointed it at, rattling-off bursts of focused images with eerie precision."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-preview-dx-sensor-fx-performance",
+              "url": "https://www.dxomark.com/nikon-d500-preview-dx-sensor-fx-performance/",
+              "witness": "unattested",
+              "quote": "This, combined with autofocus sensitivity down to &ndash;4 EV in the center and &ndash;3 EV in the outer field, should result."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-sensor-review-performance-redefined",
+              "url": "https://www.dxomark.com/nikon-d500-sensor-review-performance-redefined/",
+              "witness": "unattested",
+              "quote": "In addition, the&nbsp; D500 has a 153-point AF system with 55 selectable points that almost covers the entire width of the."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "evf_lcd",
+          "weight": 1,
+          "s": 0.0189,
+          "pos": 8,
+          "neg": 7,
+          "total": 53,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.0189,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-nikon-d500-review",
+              "url": "https://www.cameralabs.com/nikon-d500-review/",
+              "witness": "unattested",
+              "quote": "large optical viewfinder, feels capable of handling pretty much anything you throw at it."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-preview-dx-sensor-fx-performance",
+              "url": "https://www.dxomark.com/nikon-d500-preview-dx-sensor-fx-performance/",
+              "witness": "unattested",
+              "quote": "The viewfinder offers 100% frame coverage, too, offering 1.0x magnification when composing your images in the."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-sensor-review-performance-redefined",
+              "url": "https://www.dxomark.com/nikon-d500-sensor-review-performance-redefined/",
+              "witness": "unattested",
+              "quote": "At the rear, the&nbsp; D500 has a 3.2-inch 2.54m-dot tilting touchscreen LCD monitor that&rsquo;s useful for both stills and video."
+            }
+          ],
+          "axis_display": "EVF & LCD"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 14,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-nikon-d500-review",
+              "url": "https://www.cameralabs.com/nikon-d500-review/",
+              "witness": "firsthand",
+              "quote": "I should know too as I almost always use Wifi to transfer images from other."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-preview-dx-sensor-fx-performance",
+              "url": "https://www.dxomark.com/nikon-d500-preview-dx-sensor-fx-performance/",
+              "witness": "firsthand",
+              "quote": "Sensors Camera Lenses Wireless Speakers Laptops Articles Test results Best of Tech articles Insights About us Our company Our Label Smart Choice Label Our Partners."
+            },
+            {
+              "source_id": "dxomark-nikon-d500-sensor-review-performance-redefined",
+              "url": "https://www.dxomark.com/nikon-d500-sensor-review-performance-redefined/",
+              "witness": "firsthand",
+              "quote": "Laptops Reviews Smartphones Camera Sensors Camera Lenses Wireless Speakers Laptops Articles Test results Best of Tech articles Insights About us Our company Our Label Smart."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3404,
+          "pos": 19,
+          "neg": 3,
+          "total": 47,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.3404,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-nikon-d500-review",
+              "url": "https://www.cameralabs.com/nikon-d500-review/",
+              "witness": "unattested",
+              "quote": "On top of that you're getting a large viewfinder, twin memory card slots, tough build quality, and backlit buttons which make it easy."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d500",
+              "url": "https://photographylife.com/reviews/nikon-d500",
+              "witness": "unattested",
+              "quote": "to its excellent image quality, proven ergonomics and a superb autofocus system with a huge buffer, the Nikon D500 is a sports and wildlife photographers&rsquo;."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-pro-nikon-d500",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/pro/nikon-d500/",
+              "witness": "unattested",
+              "quote": "Most of the key controls are in the same places in both cameras, making allowance for."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "video_capability",
+        "stabilization"
+      ],
+      "thin_axes": [
+        "connectivity"
+      ],
+      "flags": [
+        "missing weighted axes: video_capability, stabilization",
+        "thin (< 15 claims): connectivity"
+      ],
+      "rank": 79
+    },
+    {
       "card_id": "sony-a6300",
       "display_name": "Sony a6300",
       "rankable": true,
@@ -15273,7 +15426,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 79
+      "rank": 80
     },
     {
       "card_id": "fujifilm-x-t200",
@@ -15484,7 +15637,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 80
+      "rank": 81
     },
     {
       "card_id": "fujifilm-x100s",
@@ -15625,7 +15778,7 @@
         "missing weighted axes: video_capability, stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 81
+      "rank": 82
     },
     {
       "card_id": "kodak-ektar",
@@ -15679,7 +15832,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 82
+      "rank": 83
     },
     {
       "card_id": "minolta-maxxum-7000",
@@ -15884,7 +16037,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, connectivity"
       ],
-      "rank": 83
+      "rank": 84
     },
     {
       "card_id": "sony-rx100-ii",
@@ -16071,7 +16224,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 84
+      "rank": 85
     },
     {
       "card_id": "nikon-d7500",
@@ -16256,7 +16409,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 85
+      "rank": 86
     },
     {
       "card_id": "canon-eos-550d",
@@ -16441,7 +16594,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 86
+      "rank": 87
     },
     {
       "card_id": "fujifilm-x-pro2",
@@ -16639,7 +16792,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization"
       ],
-      "rank": 87
+      "rank": 88
     },
     {
       "card_id": "nikon-fe2",
@@ -16693,7 +16846,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 88
+      "rank": 89
     },
     {
       "card_id": "olympus-17mm-f1-2",
@@ -16744,7 +16897,7 @@
         "missing weighted axes: video_capability, stabilization, evf_lcd, connectivity, handling",
         "thin (< 15 claims): autofocus_body"
       ],
-      "rank": 89
+      "rank": 90
     },
     {
       "card_id": "canon-powershot-s95",
@@ -16931,7 +17084,7 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 90
+      "rank": 91
     },
     {
       "card_id": "nikon-d3300",
@@ -17081,7 +17234,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization"
       ],
-      "rank": 91
+      "rank": 92
     },
     {
       "card_id": "fujifilm-x-t3",
@@ -17253,7 +17406,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 92
+      "rank": 93
     },
     {
       "card_id": "hasselblad-500-cm",
@@ -17307,7 +17460,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 93
+      "rank": 94
     },
     {
       "card_id": "panasonic-s1h",
@@ -17475,7 +17628,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, connectivity"
       ],
-      "rank": 94
+      "rank": 95
     },
     {
       "card_id": "panasonic-gh2",
@@ -17660,7 +17813,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 95
+      "rank": 96
     },
     {
       "card_id": "canon-eos-r5-c",
@@ -17864,7 +18017,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity"
       ],
-      "rank": 96
+      "rank": 97
     },
     {
       "card_id": "nikon-z50",
@@ -18047,7 +18200,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 97
+      "rank": 98
     },
     {
       "card_id": "nikon-d5600",
@@ -18152,7 +18305,7 @@
         "missing weighted axes: video_capability, stabilization, handling",
         "thin (< 15 claims): autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 98
+      "rank": 99
     },
     {
       "card_id": "nikon-z8",
@@ -18330,7 +18483,172 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 99
+      "rank": 100
+    },
+    {
+      "card_id": "fujifilm-x-e1",
+      "display_name": "Fujifilm x e1",
+      "rankable": true,
+      "score": -0.3508,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "video_capability",
+          "weight": 3,
+          "s": -0.1,
+          "pos": 0,
+          "neg": 1,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.3,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "The buffer memory is very limited for a camera of this calibre and frame."
+            }
+          ],
+          "axis_display": "Video Capability"
+        },
+        {
+          "axis": "stabilization",
+          "weight": 2,
+          "s": -0.3333,
+          "pos": 0,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.6667,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "Auto ISO via the menu, you can&#8217;t set a minimum shutter speed to minimise camera shake (this ability was provided on the X100)."
+            }
+          ],
+          "axis_display": "Stabilization"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.2143,
+          "pos": 3,
+          "neg": 0,
+          "total": 14,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4286,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x-e1",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "By default, this is set to control focus area selection.."
+            },
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "with AF frame selection for EVF/LCD; 49 areas with 7&#215;7; OVF; 25 areas with 5&#215;5; Multi (adjustable AF frame with 5 sizes) Focus modes: Single."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "evf_lcd",
+          "weight": 1,
+          "s": -0.027,
+          "pos": 7,
+          "neg": 8,
+          "total": 37,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.027,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x-e1",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "Last year, they introduced the X-Pro 1, a relatively large body with a hybrid optical and electronic viewfinder, along."
+            },
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "Don&#8217;t buy this camera if: &#8211; You require an optical viewfinder.."
+            }
+          ],
+          "axis_display": "EVF & LCD"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "Unlike the X-Pro1, there&#8217;s no PC flash sync port."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.2143,
+          "pos": 3,
+          "neg": 0,
+          "total": 14,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2143,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x-e1",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "Body and Ergonomics The rear of the Fujifilm X-E1 The Fujifilm X-E1 follows the rest of Fuji&#8217;s recent offerings with a distinctly retro."
+            },
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-interchangeable-lens-fujifilm-x-e1",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/interchangeable-lens/fujifilm-x-e1/",
+              "witness": "unattested",
+              "quote": "(Source: Fujifilm.) Ergonomics If you liked the X-Pro 1, you&#8217;ll probably."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "video_capability",
+        "stabilization",
+        "autofocus_body",
+        "connectivity",
+        "handling"
+      ],
+      "flags": [
+        "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
+      ],
+      "rank": 101
     },
     {
       "card_id": "sony-rx100-iv",
@@ -18536,7 +18854,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 100
+      "rank": 102
     },
     {
       "card_id": "sony-a6000",
@@ -18747,7 +19065,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, connectivity"
       ],
-      "rank": 101
+      "rank": 103
     },
     {
       "card_id": "canon-eos-250d",
@@ -18928,7 +19246,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 102
+      "rank": 104
     },
     {
       "card_id": "nikon-z5",
@@ -19063,7 +19381,7 @@
         "missing weighted axes: connectivity",
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, handling"
       ],
-      "rank": 103
+      "rank": 105
     },
     {
       "card_id": "hasselblad-x1d",
@@ -19216,7 +19534,7 @@
         "missing weighted axes: video_capability, stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 104
+      "rank": 106
     },
     {
       "card_id": "fujifilm-x-t30-iii",
@@ -19406,14 +19724,14 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 105
+      "rank": 107
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 105,
-    "ranked": 105,
+    "in_scope": 107,
+    "ranked": 107,
     "excluded": 0,
     "pending_backfill": 0
   }

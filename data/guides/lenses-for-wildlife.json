@@ -2780,6 +2780,13 @@
       ]
     },
     {
+      "card_id": "sigma-20mm-f1-4",
+      "display_name": "Sigma 20mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 300: got 20"
+      ]
+    },
+    {
       "card_id": "sigma-23mm-f1-4",
       "display_name": "Sigma 23mm f1.4",
       "reasons": [
@@ -3042,9 +3049,9 @@
     }
   ],
   "counts": {
-    "in_scope": 128,
+    "in_scope": 129,
     "ranked": 11,
-    "excluded": 116,
+    "excluded": 117,
     "pending_backfill": 1
   }
 }

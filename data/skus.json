@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-12",
+  "as_of": "2026-11-13",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -63135,42 +63135,50 @@
       "contamination_key": "easyrig-vario-support-bar",
       "vendor": "Easyrig",
       "model": "vario support bar",
-      "gtin": null,
+      "gtin": "00097652783405",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "267814845887",
+        "ebay_legacy_item_id": "336885015048",
         "amazon_asin": null
       },
       "unspsc": null,
-      "facet": "",
+      "facet": "support",
       "marketplace_categories": {
-        "ebay_category_id": "15216"
+        "ebay_category_id": "30097"
       },
       "identity": {
         "brand": "Easyrig",
-        "mpn": "ERIG-VARIO5-GR",
+        "mpn": "ERIG-V-SE",
         "gtin_provenance": {
-          "chosen_source": null,
+          "chosen_source": "aspect",
           "conflict": false,
-          "observations": []
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "097652783405",
+              "gtin14": "00097652783405",
+              "valid": true
+            }
+          ]
         },
-        "market_title": "Easyrig Vario 5 with Gimbal Rig Vest and Standard Arm, MFR #ERIG-VARIO5-GR",
-        "image": "https://i.ebayimg.com/images/g/T-QAAOSwlodkPpyG/s-l1600.jpg",
+        "market_title": "Easyrig Vario 5 Support Bar with Standard Arm and Flowcine Serene Stabilizer",
+        "image": "https://i.ebayimg.com/images/g/zg8AAeSwN4xq7uvk/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "5500.00",
+          "value": "4399.00",
           "currency": "USD",
-          "as_of": "2026-11-05T06:00:38Z"
+          "as_of": "2026-11-13T06:02:02Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/267814845887?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/336885015048?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-12T20:57:06Z"
+      "resolved_at": "2026-11-13T06:02:02Z"
     },
     "canon-eos-r6-iii": {
       "contamination_key": "canon-eos-r6-iii",
@@ -63349,7 +63357,28 @@
         "mpn": "2162",
         "brand": "Nikon",
         "market_title": "Nikon 18-135mm f/3.5-5.6G ED-IF AF-S DX Autofocus Zoom Lens",
-        "image": "https://www.adorama.com/images/Large/NK18135DXU.JPG"
+        "image": "https://www.adorama.com/images/Large/NK18135DXU.JPG",
+        "image_catalog": "https://i.ebayimg.com/images/g/dN4AAMXQySpRJUiy/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:50:41Z",
+          "query": "Nikon 2162",
+          "winner": {
+            "item_id": "v1|189053675806|0",
+            "epid": "99689432",
+            "title": "Nikon 18-135mm f/3.5-5.6 ED-IF AF-S DX Lens #083"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|189053675806|0",
+              "epid": "99689432",
+              "title": "Nikon 18-135mm f/3.5-5.6 ED-IF AF-S DX Lens #083",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-nikon-18-135mm-f-35-56g-ed-if-af-s-dx-autofocus-zoom-lens%2Fp%2Fus2121729",
@@ -63568,7 +63597,28 @@
         "mpn": "V315040BU000",
         "brand": "Olympus",
         "market_title": "Olympus M. Zuiko Digital ED 75-300mm F4.8-6.7 II Lens for Micro 4/3 Systems",
-        "image": "https://www.adorama.com/images/Large/IOM753002.jpg"
+        "image": "https://www.adorama.com/images/Large/IOM753002.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/zD8AAOxyjNlRyh5s/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:50:49Z",
+          "query": "Olympus V315040BU000",
+          "winner": {
+            "item_id": "v1|206697235528|0",
+            "epid": "144375148",
+            "title": "Olympus M.ZUIKO DIGITAL ED 75-300mm F4.8-6.7 II Zoom Lens [Near Mint] #8490"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|206697235528|0",
+              "epid": "144375148",
+              "title": "Olympus M.ZUIKO DIGITAL ED 75-300mm F4.8-6.7 II Zoom Lens [Near Mint] #8490",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-olympus-m-zuiko-digital-ed-75-300mm-f48-67-ii-lens-for-micro-4-3-systems%2Fp%2Fus2119401",
@@ -63598,7 +63648,35 @@
         "mpn": "16101",
         "brand": "Nikon",
         "market_title": "Nikon Monarch Fieldscope 82mm ED-A 20-60x Zoom - Angled Viewing - Weatherproof",
-        "image": "https://www.adorama.com/images/Large/NKFSM82AN.jpg"
+        "image": "https://www.adorama.com/images/Large/NKFSM82AN.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/IEgAAOSwJMxfgDTD/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:50:51Z",
+          "query": "Nikon 16101",
+          "winner": {
+            "item_id": "v1|256752669701|0",
+            "epid": "535719265",
+            "title": "NIKON Monarch 20-60x82mm ED Angled Body Spotting Scope 16101"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|157834136012|0",
+              "epid": "535719265",
+              "title": "Nikon MONARCH 20-60x82mm ED Angled Body Spotting Scope 16101: NEW, Free Ship",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|256752669701|0",
+              "epid": "535719265",
+              "title": "NIKON Monarch 20-60x82mm ED Angled Body Spotting Scope 16101",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-nikon-monarch-fieldscope-82mm-ed-a-20-60x-zoom-angled-viewing-weatherproof%2Fp%2Fus2123615",
@@ -63737,7 +63815,49 @@
         "mpn": "1913",
         "brand": "Nikon",
         "market_title": "Nikon 20mm f/2.8 AF-D Super Wide Angle Auto Focus Lens",
-        "image": "https://www.adorama.com/images/Large/NK2028AFDU.jpg"
+        "image": "https://www.adorama.com/images/Large/NK2028AFDU.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/KCwAAOSwJQdW~T0r/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:50:59Z",
+          "query": "Nikon 1913",
+          "winner": {
+            "item_id": "v1|336890228735|0",
+            "epid": "219575914",
+            "title": "Nikon AF Nikkor 20mm F/2.8 D (Nikon F-Mount) [Exc+2] US Stock"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|377638979617|0",
+              "epid": "219575914",
+              "title": "Nikon AF NIKKOR 20mm F/2.8D (Nikon F mount) #198",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|327450935809|0",
+              "epid": "219575914",
+              "title": "Nikon AF NIKKOR 20mm F/2.8D (Nikon F mount) #218",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|820236711046|0",
+              "epid": "219575914",
+              "title": "Nikon AF Nikkor 20mm f/2.8D Wide Angle Sharp Autofocus Nr Mint From Japan #6194",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|336890228735|0",
+              "epid": "219575914",
+              "title": "Nikon AF Nikkor 20mm F/2.8 D (Nikon F-Mount) [Exc+2] US Stock",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-nikon-20mm-f-28-af-d-super-wide-angle-auto-focus-lens%2Fp%2Fus2120237",
@@ -63939,7 +64059,28 @@
         "mpn": "S-S24",
         "brand": "Panasonic",
         "market_title": "Panasonic LUMIX S 24mm f/1.8 Lens for L Mount",
-        "image": "https://www.adorama.com/images/Large/PCS2418.jpg"
+        "image": "https://www.adorama.com/images/Large/PCS2418.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/8KIAAOSwrxNj0oE6/s-l1600.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:51:04Z",
+          "query": "Panasonic S-S24",
+          "winner": {
+            "item_id": "v1|117404658233|0",
+            "epid": "18050714594",
+            "title": "Panasonic Lumix S 24mm f/1.8 Lens S-S24 - 7PC Accessory Bundle"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|117404658233|0",
+              "epid": "18050714594",
+              "title": "Panasonic Lumix S 24mm f/1.8 Lens S-S24 - 7PC Accessory Bundle",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fpanasonic-lumix-s-24-mm-f-1-8-lens-l-mount%2Fp%2Fpcs2418",
@@ -63999,7 +64140,28 @@
         "mpn": "H-FS100300",
         "brand": "Panasonic",
         "market_title": "Panasonic Lumix G Vario 100-300mm f/4.0-5.6 MEGA O.I.S. Zoom Lens for Micro Four Thirds Lens Mount Systems",
-        "image": "https://www.adorama.com/images/Large/IPCV100300G.jpg"
+        "image": "https://www.adorama.com/images/Large/IPCV100300G.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/TjMAAMXQltxQ8YJu/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-13T04:51:05Z",
+          "query": "Panasonic H-FS100300",
+          "winner": {
+            "item_id": "v1|900056071151|0",
+            "epid": "99711336",
+            "title": "Panasonic LUMIX G VARIO 100-300mm F4-5.6 H-FS100300 Micro Four Thirds Exc+++"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|900056071151|0",
+              "epid": "99711336",
+              "title": "Panasonic LUMIX G VARIO 100-300mm F4-5.6 H-FS100300 Micro Four Thirds Exc+++",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-panasonic-lumix-g-vario-100-300mm-f-40-56-mega-ois-zoom-lens-for-micro-four-thirds-lens-mount-systems%2Fp%2Fus2120876",
@@ -64039,6 +64201,371 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-11-12T21:03:38Z"
+    },
+    "panasonic-24-105mm-f4": {
+      "contamination_key": "panasonic-24-105mm-f4",
+      "vendor": "Panasonic",
+      "model": "24 105mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407345811356",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic Lumix S 24-105mm f4 Macro O.I.S. Lens L-Mount S-R24105",
+        "image": "https://i.ebayimg.com/images/g/ATUAAeSwgztq7oir/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "675.00",
+          "currency": "USD",
+          "as_of": "2026-11-13T04:02:03Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407345811356?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T04:02:03Z"
+    },
+    "godox-lux-elf-retro-flash": {
+      "contamination_key": "godox-lux-elf-retro-flash",
+      "vendor": "Godox",
+      "model": "lux elf retro flash",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "168662736102",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Godox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "GODOX Lux Elf Retro Camera Flash GN6 6000K±200K CCT for Canon Nikon Sony Fuji",
+        "image": "https://i.ebayimg.com/images/g/tysAAeSwlXFpuRJ-/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "31.60",
+          "currency": "USD",
+          "as_of": "2026-11-13T04:03:11Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/168662736102?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2B%2FFeDXQnjzwK0PFmWGg2r6ueCFr0lhYdBy2FhmuxSfJfiww4jqfhAZr7l3uwODKtK6yfnObDbYD%2BLpoP08alxlv4%2F5JdgLna3zSJUOMp34Xkhn5rkgCIg4C%2FAZVW5ewEMkCr5qmaeBa0FbGKC90Agy16hceFdpdhiC%2FIE8GmCltN9g7JDAOLR5q8LWuXbV%2BXU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T04:03:11Z"
+    },
+    "moza-aircross-axis-handheld-gimbal": {
+      "contamination_key": "moza-aircross-axis-handheld-gimbal",
+      "vendor": "Moza",
+      "model": "aircross axis handheld gimbal",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "127983503397",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "MOZA",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "MOZA Aircross 3-Axis Gimbal Stabilizer for Mirrorless Camera",
+        "image": "https://i.ebayimg.com/images/g/0pEAAeSwdhFqXRDh/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "99.99",
+          "currency": "USD",
+          "as_of": "2026-11-13T04:03:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/127983503397?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8%2BeS%2BpJHWxcwGFmqNo6YlEhrmVQtJb8q%2Flv%2BVXpiLQ0uzDZdi0CWZjel7TABmPStVzwgvyyf1BTNsotE8XLLGT--%2BiOgnZqaAqSy4zIhDiSCTwW0yexQ1C%2FfvCcG4rgKXs4a8TC0pu8n7jNpAaRH3%2FUYFFIcGLPWd4bBiP1p%2F0nJ54TEbdEfULSYkzkawRTcQ%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T04:03:52Z"
+    },
+    "fujifilm-x-h1": {
+      "contamination_key": "fujifilm-x-h1",
+      "vendor": "Fujifilm",
+      "model": "x h1",
+      "gtin": "00074101036084",
+      "marketplace_ids": {
+        "ebay_epid": "9029948246",
+        "ebay_legacy_item_id": "307277522093",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Fujifilm",
+        "mpn": "16568731",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0074101036084",
+              "gtin14": "00074101036084",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0074101036084",
+              "gtin14": "00074101036084",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0074101036084",
+              "gtin14": "00074101036084",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0074101036084",
+              "gtin14": "00074101036084",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Fujifilm X-H1 Mirrorless Digital Camera Body Only - Black Near Mint 82W50887",
+        "image": "https://i.ebayimg.com/images/g/tTkAAeSw21hq8zLA/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/ULEAAOSw4-Rf6c8O/s-l640.jpg",
+        "price_seen": {
+          "value": "679.00",
+          "currency": "USD",
+          "as_of": "2026-11-13T06:00:45Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307277522093?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T06:00:45Z"
+    },
+    "canon-speedlite-430ex-ii-flash": {
+      "contamination_key": "canon-speedlite-430ex-ii-flash",
+      "vendor": "Canon",
+      "model": "speedlite 430ex ii flash",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147678035648",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon Speedlite 430EX II Shoe Mount Flash",
+        "image": "https://i.ebayimg.com/images/g/7A0AAeSwv-xq9jhn/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "39.99",
+          "currency": "USD",
+          "as_of": "2026-11-13T06:01:44Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147678035648?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T06:01:44Z"
+    },
+    "insta360-go-64gb": {
+      "contamination_key": "insta360-go-64gb",
+      "vendor": "Insta360",
+      "model": "go 64gb",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "137885323130",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "Insta360",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Insta360 GO 3S Standalone Camera 64GB withe",
+        "image": "https://i.ebayimg.com/images/g/Y98AAeSwSiVq49GU/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "139.99",
+          "currency": "USD",
+          "as_of": "2026-11-13T06:02:23Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/137885323130?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fw%2BoMRa%2B9Su4%2BRnyaOxNXwzE%2B%2BXpjtusWl9nXGEjTfvA%2FteHoAU%2BkPgJ3zujUj1Jd0LT8OXnkgOIg3F9R1IJlCvNxSIQ09%2FeT9j3Wzp2FGKtOAIaXQ0CPAkKpH8oCey%2BNip5%2Byh7N7v0i5k7G4NOvWIrggNBGZsULO0p9zwFhkqmZ5YvxdOae%2FqRF6Dd7qDb4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T06:02:23Z"
+    },
+    "sigma-80-400mm-f4-5": {
+      "contamination_key": "sigma-80-400mm-f4-5",
+      "vendor": "Sigma",
+      "model": "80 400mm f4.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "128164756620",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sigma",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "NA",
+              "gtin14": null,
+              "valid": false
+            }
+          ]
+        },
+        "market_title": "Sigma 80-400mm F/4.5-5.6 APO DG EX OS Autofocus Lens For Nikon (AF INOP)",
+        "image": "https://i.ebayimg.com/images/g/xUsAAeSwbxNq5NGW/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "135.00",
+          "currency": "USD",
+          "as_of": "2026-11-13T08:00:50Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/128164756620?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FXi4pH6YAOcPceKx70cAx7CAjjXa8olU36ugnRzdEapw%2BXebvMx97w%2FsvH%2Bp9nXQg0vL%2F1bSrUmhdp%2BL1Meb1FzD8BIlGyHfMkrXIP%2Fgw%2Bb04k3XXUnH7Zk7ZT3L15anBUwQnfbfmDe2fEqvWjXFXGrXA7%2FONoG4nR1HmGuMI1AcEnfK4GCU6WzxvLAHGHrPY%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-13T08:00:50Z"
+    },
+    "bowens-gemini-400rx-monolight-250w": {
+      "contamination_key": "bowens-gemini-400rx-monolight-250w",
+      "vendor": "Bowens",
+      "model": "gemini 400rx monolight 250w",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "960019452593",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "124850"
+      },
+      "identity": {
+        "brand": "Bowens",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Bowens Gemini GM400RX Monolight Studio Strobe Flash 400Ws BW-3985 Untested",
+        "image": "https://i.ebayimg.com/images/g/JrkAAeSw1INqjg0U/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "39.99",
+          "currency": "USD",
+          "as_of": "2026-11-13T06:03:07Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/960019452593?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Ft1yoVP85f0PaiSxIWTcBSKbg3f5WQRPO%2BxiwBmJ%2BnFZsjIJXN%2BowZHpgoV%2BtMb38QbuFIAJJs9P88DiaKRWNVAGmE3KkwlSzmboGLE5PqS0Z7eFA8Oi5RigTZyrSeKOZXen17uEMofT889tW9ifTXDPUJAZU0YFkbxqqS%2FYx6pxGqPwWb5uZWqHqQmiscG9M%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-13T06:03:07Z"
     }
   },
   "substrate": [

@@ -2139,6 +2139,13 @@
       ]
     },
     {
+      "card_id": "fujifilm-x-e1",
+      "display_name": "Fujifilm x e1",
+      "unknowns": [
+        "resolution_mp: resolution_mp not present on card"
+      ]
+    },
+    {
       "card_id": "fujifilm-x-e3",
       "display_name": "Fujifilm x e3",
       "unknowns": [
@@ -2330,6 +2337,13 @@
     {
       "card_id": "nikon-d3400",
       "display_name": "Nikon d3400",
+      "unknowns": [
+        "resolution_mp: resolution_mp not present on card"
+      ]
+    },
+    {
+      "card_id": "nikon-d500",
+      "display_name": "Nikon d500",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2609,9 +2623,9 @@
     }
   ],
   "counts": {
-    "in_scope": 105,
+    "in_scope": 107,
     "ranked": 14,
     "excluded": 2,
-    "pending_backfill": 89
+    "pending_backfill": 91
   }
 }

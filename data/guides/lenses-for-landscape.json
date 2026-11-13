@@ -5316,20 +5316,7 @@
           "contested": false,
           "thin": true,
           "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-20mm-f14-l-vcm-lens-review",
-              "url": "https://www.youtube.com/watch?v=xeedRABnxSU",
-              "witness": "unattested",
-              "quote": "And finally, related to bog comes longitudinal chromatic aberration."
-            },
-            {
-              "source_id": "youtube-wilkinson-cameras-review-canon-rf-20mm-f14l-vcm-the-ultimate-wide-angle-lens-for-astro-u",
-              "url": "https://www.youtube.com/watch?v=MsjHDj4OZe4",
-              "witness": "unattested",
-              "quote": "This is achieved by combining aspheric elements and super ED and UD lenses with super spectra and ASC coatings to ensure sharp images with minimal flare and ghosting and good control over aberrations like the RF 24mm VCM…"
-            }
-          ],
+          "top_sources": [],
           "axis_display": "Chromatic Aberration"
         },
         {
@@ -6956,6 +6943,201 @@
       "rank": 36
     },
     {
+      "card_id": "sigma-20mm-f1-4",
+      "display_name": "Sigma 20mm f1.4",
+      "rankable": true,
+      "score": -0.1832,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.2683,
+          "pos": 21,
+          "neg": 10,
+          "total": 41,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.8049,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "produce shots with image quality that were impossible at a wide open aperture of f1.4 not long ago."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 1,
+          "total": 2,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Their longer focal length results in less distortion,."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+              "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+              "witness": "unattested",
+              "quote": "It has slightly higher than expected barrel distortion , but it&rsquo;s simple."
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.3333,
+          "pos": 1,
+          "neg": 4,
+          "total": 9,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.6667,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "the front which might lead to vignetting."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "It has relatively little vignetting for such."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "the center, dropping to 65% in the outer field at f/1.4, with the edges continuing to improve as the aperture is closed down."
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.25,
+          "pos": 1,
+          "neg": 0,
+          "total": 4,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.25,
+          "top_sources": [
+            {
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Chromatic aberrations are also very well-controlled, with only tiny edge fringing in the very far corners visible at wider apertures."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+              "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+              "witness": "unattested",
+              "quote": "Control of axial (longitudinal) chromatic aberration was also a high priority with this model, and the company explains that."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": 0.1429,
+          "pos": 1,
+          "neg": 0,
+          "total": 7,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.1429,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "a de-clickable aperture ring, and it can take filters at the front and rear."
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.2857,
+          "pos": 3,
+          "neg": 1,
+          "total": 7,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2857,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+              "witness": "unattested",
+              "quote": "Sealing: Yes, all three lenses have a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction."
+            },
+            {
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "Plus its resistance against flare and glare is pretty good which is quite."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+              "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+              "witness": "unattested",
+              "quote": "a Thermally Stable Composite (TSC) material in the construction, and appears to be on par with Canon L-series lenses in terms of build quality."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "chromatic_aberration",
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
+      ],
+      "rank": 37
+    },
+    {
       "card_id": "canon-14mm-f2-8",
       "display_name": "Canon 14mm f2.8",
       "rankable": true,
@@ -7169,7 +7351,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, build"
       ],
-      "rank": 37
+      "rank": 38
     },
     {
       "card_id": "canon-16-28mm-f2-8",
@@ -7364,7 +7546,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 38
+      "rank": 39
     },
     {
       "card_id": "sony-16-25mm-f2-8",
@@ -7576,7 +7758,7 @@
       "flags": [
         "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 39
+      "rank": 40
     },
     {
       "card_id": "canon-22mm-f2",
@@ -7794,7 +7976,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 40
+      "rank": 41
     },
     {
       "card_id": "nikon-35mm-f2-8",
@@ -7943,7 +8125,7 @@
       "flags": [
         "thin (< 15 claims): filter_thread"
       ],
-      "rank": 41
+      "rank": 42
     },
     {
       "card_id": "nikon-20mm-f1-8",
@@ -8102,7 +8284,7 @@
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): optical_performance, distortion, vignetting, filter_thread, build"
       ],
-      "rank": 42
+      "rank": 43
     },
     {
       "card_id": "ttartisan-24mm-f3-8",
@@ -8248,7 +8430,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 43
+      "rank": 44
     },
     {
       "card_id": "sigma-16mm-f1-4",
@@ -8395,7 +8577,7 @@
         "missing weighted axes: filter_thread",
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 44
+      "rank": 45
     },
     {
       "card_id": "sony-16mm-f1-8",
@@ -8597,7 +8779,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 45
+      "rank": 46
     },
     {
       "card_id": "olympus-7-14mm-f2-8",
@@ -8799,7 +8981,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 46
+      "rank": 47
     },
     {
       "card_id": "panasonic-25mm-f1-7",
@@ -9016,7 +9198,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, filter_thread"
       ],
-      "rank": 47
+      "rank": 48
     },
     {
       "card_id": "canon-28mm-f3-5",
@@ -9179,7 +9361,7 @@
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): distortion, filter_thread, build"
       ],
-      "rank": 48
+      "rank": 49
     },
     {
       "card_id": "olympus-25mm-f1-8",
@@ -9350,7 +9532,7 @@
         "missing weighted axes: filter_thread",
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 49
+      "rank": 50
     },
     {
       "card_id": "sigma-30mm-f1-4",
@@ -9550,7 +9732,7 @@
       "flags": [
         "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 50
+      "rank": 51
     },
     {
       "card_id": "canon-16mm-f2-8",
@@ -9767,7 +9949,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, filter_thread, build"
       ],
-      "rank": 51
+      "rank": 52
     }
   ],
   "excluded": [
@@ -10314,8 +10496,8 @@
     }
   ],
   "counts": {
-    "in_scope": 128,
-    "ranked": 51,
+    "in_scope": 129,
+    "ranked": 52,
     "excluded": 76,
     "pending_backfill": 1
   }
