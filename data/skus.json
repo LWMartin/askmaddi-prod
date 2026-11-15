@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-14",
+  "as_of": "2026-11-15",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -50911,8 +50911,8 @@
       "model": "58mm f1.4",
       "gtin": "04960759028037",
       "marketplace_ids": {
-        "ebay_epid": "175204921",
-        "ebay_legacy_item_id": "287590668791",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "327452184951",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -50922,7 +50922,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "AFSNIKKOR58MMF14G",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": true,
@@ -50962,25 +50962,38 @@
               "gtin14": "00018208022106",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "aspect",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "0018208022106",
+                "gtin14": "00018208022106",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "Nikon NIKKOR AF-S 58mm F/1.4G Lens",
-        "image": "https://i.ebayimg.com/images/g/eskAAeSwxl5qqu0o/s-l1600.jpg",
+        "market_title": "Nikon AF-S NIKKOR 58mm F/1.4G (Nikon F mount) #224",
+        "image": "https://i.ebayimg.com/images/g/a~kAAeSwH6Vq9V6p/s-l1600.jpg",
         "image_catalog": "https://i.ebayimg.com/images/g/GMkAAOSw11tkjbta/s-l640.jpg",
         "price_seen": {
-          "value": "800.00",
+          "value": "973.75",
           "currency": "USD",
-          "as_of": "2026-10-14T10:08:18Z"
+          "as_of": "2026-11-15T04:03:18Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/287590668791?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/327452184951?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FSwRUbeg4B5EhnAH8pUmDvW%2BhmZWaksYbxqP%2FxBTvFRusVUwwjTHNho9L45F3kvSR3BrtBWOS0LYyMaF%2BQ4LWKzFeZJXvN3UkdLBI9EbyD9Xu2154C5c0zn0RHSbKQUm1WxlwuEOosN9H4eyXsJTAxCF%2Bd5uC6qYYLUdbGx9Ep40HpryYS4QmS5CVYoV26mok%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-15T20:17:13Z"
+      "resolved_at": "2026-11-15T04:03:18Z"
     },
     "tamron-150-500mm-f5": {
       "contamination_key": "tamron-150-500mm-f5",
@@ -65084,6 +65097,324 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-14T06:00:48Z"
+    },
+    "sony-11mm-f1-8": {
+      "contamination_key": "sony-11mm-f1-8",
+      "vendor": "Sony",
+      "model": "11mm f1.8",
+      "gtin": "00027242923034",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "287729846044",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "SEL11F18",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "027242923034",
+              "gtin14": "00027242923034",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sony E 11mm f/1.8 E-Mount Ultra Wide Angle Prime Lens SEL11F18",
+        "image": "https://i.ebayimg.com/images/g/GlEAAeSw4VFq-LvP/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/J1MAAOSwOzNkr6Tk/s-l1200.jpg",
+        "price_seen": {
+          "value": "379.99",
+          "currency": "USD",
+          "as_of": "2026-11-15T06:00:25Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-15T04:50:26Z",
+          "query": "Sony SEL11F18",
+          "winner": {
+            "item_id": "v1|267819850091|0",
+            "epid": "19054819895",
+            "title": "SONY E 11MM f/1.8 LENS (SEL11F18) FREE SHIPPING!"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|287729846044|0",
+              "epid": "19054819895",
+              "title": "Sony E 11mm f/1.8 E-Mount Ultra Wide Angle Prime Lens SEL11F18",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|287632676169|0",
+              "epid": "19054819895",
+              "title": "Sony E 11mm f/1.8 E-Mount Ultra Wide-Angle Prime SEL11F18 Auto & Manual Lens",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|168805432122|0",
+              "epid": "19054819895",
+              "title": "Sony 11mm f/1.8 E E-Mount Wide Angle Prime Lens SEL11F18 Auto & Manual Lens",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|267819850091|0",
+              "epid": "19054819895",
+              "title": "SONY E 11MM f/1.8 LENS (SEL11F18) FREE SHIPPING!",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/287729846044?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-15T06:00:25Z"
+    },
+    "teris-ts-1675t-tripod": {
+      "contamination_key": "teris-ts-1675t-tripod",
+      "vendor": "Teris",
+      "model": "ts 1675t tripod",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336843902818",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "support",
+      "marketplace_categories": {
+        "ebay_category_id": "30093"
+      },
+      "identity": {
+        "brand": "Teris",
+        "mpn": "VDTTS1675TTP",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Teris TS-1675T Tripod - SKU#1960929",
+        "image": "https://i.ebayimg.com/images/g/KK4AAeSwPHRq92Gu/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "305.00",
+          "currency": "USD",
+          "as_of": "2026-11-15T04:02:14Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336843902818?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-15T04:02:14Z"
+    },
+    "hohem-isteady-pro-axis-action": {
+      "contamination_key": "hohem-isteady-pro-axis-action",
+      "vendor": "Hohem",
+      "model": "isteady pro axis action",
+      "gtin": "00195221000066",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "167714739731",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "Hohem",
+        "mpn": "None",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "195221000066",
+              "gtin14": "00195221000066",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "NEW Hohem iSteady Pro 3 3-Axis Handheld Gimbal Stabilizer For Action Camera",
+        "image": "https://i.ebayimg.com/images/g/FEEAAeSwRKJonOyH/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "45.00",
+          "currency": "USD",
+          "as_of": "2026-11-15T04:02:38Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/167714739731?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8mVbv4Y0ZpqP8ICamwy%2BcoGfCkhYieaArRhNg%2FPtjp%2BR9LAFzLigzOaDkjJC8wk8gwVgyI59KrOPVQk1wUB60bzjrhQKaE5hX35LsKJKPyK8PZXKqOmDqxTX5%2BBEz35qCYtL0x0jffo%2F5HWVPIo%2Bjn7zw0XbA1oWIqoY4TLBdH3Ph7C2F1rpCSe5rB4p%2Fhh%2Fk%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-15T04:02:38Z"
+    },
+    "nikon-60-180mm-f4": {
+      "contamination_key": "nikon-60-180mm-f4",
+      "vendor": "Nikon",
+      "model": "60 180mm f4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "317513689943",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon IX-Nikkor 60-180mm f/4-5.6 Telephoto Zoom Lens For Nikon SLR Cameras",
+        "image": "https://i.ebayimg.com/images/g/1yoAAeSwpj9pBpgR/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "15.00",
+          "currency": "USD",
+          "as_of": "2026-11-15T04:03:55Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/317513689943?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-15T04:03:55Z"
+    },
+    "panasonic-12-35mm-f2-8": {
+      "contamination_key": "panasonic-12-35mm-f2-8",
+      "vendor": "Panasonic",
+      "model": "12 35mm f2.8",
+      "gtin": "04984824964693",
+      "marketplace_ids": {
+        "ebay_epid": "1270309862",
+        "ebay_legacy_item_id": "206688411898",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "H-HS12035",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "4984824964693",
+              "gtin14": "04984824964693",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "4984824964693",
+              "gtin14": "04984824964693",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Panasonic LUMIX G XVARIO 12-35mm F2.8 Standard Zoom Lens",
+        "image": "https://i.ebayimg.com/images/g/ajAAAeSwWutq8nwK/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/xvwAAOSwpkpf6c4s/s-l640.jpg",
+        "price_seen": {
+          "value": "329.00",
+          "currency": "USD",
+          "as_of": "2026-11-15T06:01:10Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206688411898?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-15T06:01:10Z"
+    },
+    "elinchrom-style-bx-250-ri": {
+      "contamination_key": "elinchrom-style-bx-250-ri",
+      "vendor": "Elinchrom",
+      "model": "style bx 250 ri",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "188862971558",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "124850"
+      },
+      "identity": {
+        "brand": "Elinchrom",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Elinchrom BX 500Ri/BX 250Ri",
+        "image": "https://i.ebayimg.com/images/g/CJgAAeSwCqtqlHzc/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "300.00",
+          "currency": "USD",
+          "as_of": "2026-11-15T06:01:24Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/188862971558?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-15T06:01:24Z"
     }
   },
   "substrate": [
