@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-15",
+  "as_of": "2026-11-16",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -63631,7 +63631,22 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-12T20:58:54Z"
+      "resolved_at": "2026-11-12T20:58:54Z",
+      "rebind_rejected": {
+        "ts": "2026-11-16T04:00:51Z",
+        "item_id": "227606927642",
+        "title": "Sony FE 35mm F1.4 GM G Master Full Frame E-Mount Prime Lens SEL35F14GM",
+        "price_seen": {
+          "value": "849.00",
+          "currency": "USD",
+          "as_of": "2026-11-16T04:00:51Z"
+        },
+        "signals": [
+          "mpn_wiped",
+          "category_flip"
+        ],
+        "hard": false
+      }
     },
     "olympus-75-300mm-f4.8": {
       "contamination_key": "olympus-75-300mm-f4.8",
