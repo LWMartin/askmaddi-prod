@@ -32,6 +32,8 @@ import urllib.parse
 from datetime import datetime, timezone
 from pathlib import Path
 
+from product_aliases import catalog_aliases, key as alias_key, visible_aliases
+
 
 # ─── Affiliate tags (match the live frontend / cards-manifest) ──────────────
 # 2026-07-27: Associates REINSTATED after the no-traffic suspension; Lee
@@ -1194,6 +1196,14 @@ def schema_org_jsonld(card, canonical_url, img_url, description):
     }
     if ident.get("brand"):
         obj["brand"] = {"@type": "Brand", "name": ident["brand"]}
+    # Other names readers search for (apply_spine_aliases). Brand-prefixed so
+    # each stands alone as a product name.
+    aliases = card.get("_page_aliases") or []
+    if aliases:
+        b = ident.get("brand", "")
+        obj["alternateName"] = [f"{b} {a}".strip() for a in aliases]
+    if card.get("_page_mpn"):
+        obj["mpn"] = card["_page_mpn"]
     if img_url:
         obj["image"] = abs_url(img_url)
     if description:
@@ -1291,6 +1301,11 @@ def render_page(card, image_url=None, surface_map=None):
     cat = (ident.get("category") or "").title()
     year = ident.get("year_introduced") or ""
     descriptor = " · ".join([x for x in [brand, f"{subcat} {cat}".strip(), str(year)] if x])
+    # "Also known as" — one readable spelling per other name, none the title
+    # already shows (apply_spine_aliases; absent on single-card builds).
+    _aka = visible_aliases(name, card.get("_page_aliases") or [], brand)
+    aka_html = (f'\n          <p class="hero-aka">Also known as: {esc(" · ".join(_aka))}</p>'
+                if _aka else "")
     # Topical internal link to the card's brand hub (browse-by-brand IA).
     _bslug = brand_slug(brand)
     brand_footer_link = (
@@ -1536,7 +1551,7 @@ def render_page(card, image_url=None, surface_map=None):
       <section class="card-hero">
         <div class="hero-media">{img_html}</div>
         <div class="hero-body">
-          <h1 class="hero-title">{esc(name)}</h1>
+          <h1 class="hero-title">{esc(name)}</h1>{aka_html}
           <p class="hero-descriptor">{esc(descriptor)}</p>
           {on_sale_html}
           <div class="hero-actions">
@@ -1905,6 +1920,44 @@ def apply_spine_gtins(cards):
             pricing = card.setdefault("pricing", {})
             if not pricing.get("gtin"):
                 pricing["gtin"] = g
+    return cards
+
+
+def apply_spine_aliases(cards, whole_corpus):
+    """Attach the page's alias names (tools/product_aliases.py) to each card,
+    in memory only — never written back. The names a reader actually types
+    ("a7 4", "a7 m4" for the A7 IV; GSC 2026-11-17) go on the page as a small
+    visible "Also known as" line and as schema.org alternateName.
+
+    Page-only by design: identity.sku_alt_names drives the review gather and
+    the backfill scorer (2026-11-05: a wrong alias there pulled a sibling's
+    reviews), so derived spellings must not be written into it.
+
+    Whole-corpus builds only: the collision guard needs every card in view, so
+    a single --card publish carries no aliases until the next nightly rebuild
+    (same pattern as the surfaces precompute). The MPN is emitted to Product
+    JSON-LD only where the display name already shows it — the spine carries
+    known-wrong part numbers (sony-a7-v holds the A7R V's), so a spine MPN is
+    not yet a claim the page can make on its own."""
+    if not whole_corpus:
+        return cards
+    try:
+        skus = json.loads(SKUS_SPINE_PATH.read_text(encoding="utf-8")).get("skus", {})
+    except (OSError, ValueError):
+        skus = {}
+    mpns = {}
+    for card in cards:
+        mpn = ((skus.get(card.get("card_id")) or {}).get("identity") or {}).get("mpn")
+        if mpn:
+            mpns[card.get("card_id")] = mpn
+    per_card = catalog_aliases(cards, mpns)
+    for card in cards:
+        cid = card.get("card_id")
+        card["_page_aliases"] = per_card.get(cid, [])
+        mpn = mpns.get(cid)
+        shown = re.findall(r"\(([^)]*)\)", (card.get("identity") or {}).get("display_name", ""))
+        if mpn and alias_key(mpn) in {alias_key(p) for p in shown}:
+            card["_page_mpn"] = mpn
     return cards
 
 
@@ -3323,6 +3376,7 @@ def main():
     apply_asin_registry(cards)
     apply_ebay_epid_registry(cards)
     apply_spine_gtins(cards)
+    apply_spine_aliases(cards, whole_corpus=bool(args.cards_dir))
     apply_hero_registry(cards)
     apply_selfhost_registry(cards)   # de-eBay floor; clean hero above already won
     apply_on_sale_registry(cards)

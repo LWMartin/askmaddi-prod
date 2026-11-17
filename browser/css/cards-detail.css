@@ -56,6 +56,13 @@
     font-size: 14px;
     margin: 0 0 var(--space-md);
 }
+/* Other names readers search for (product_aliases). Quiet, spec-like:
+   sits between title and descriptor, one line, never louder than either. */
+.hero-aka {
+    color: var(--color-text-muted);
+    font-size: 13px;
+    margin: 0 0 var(--space-xs);
+}
 /* On-sale price-drop badge (W3: maddi-feed-price-drop-signals). Human-approved
    overlay; renders only a genuine drop. Reuses the confidence-pill visual language. */
 .on-sale-badge {
