@@ -1,0 +1,1124 @@
+{
+ "_description": "Card display-name corrections, 2026-11-17. Each name derived from the card's own evidence (listing title, Adorama link, spine MPN, review titles) and checked: every token in evidence, no model number lost, no live price pin broken. Reviewed and approved by Lee in the 'AskMaddi card names — review' sheet (Decision = Rename or Rename + rebuild). Apply with tools/rename_cards.py.",
+ "reviewed_by": "Lee",
+ "reviewed_on": "2026-11-17",
+ "renames": [
+  {
+   "slug": "canon-100-400mm-f5-6",
+   "old": "Canon 100 400mm f5.6",
+   "new": "Canon RF 100-400mm f/5.6-8 IS USM"
+  },
+  {
+   "slug": "canon-100mm-f2",
+   "old": "Canon 100mm f2",
+   "new": "Canon EF 100mm f/2 USM"
+  },
+  {
+   "slug": "canon-100mm-f2-8",
+   "old": "Canon 100mm f2.8",
+   "new": "Canon EF 100mm f/2.8 Macro USM"
+  },
+  {
+   "slug": "canon-11-24mm-f4",
+   "old": "Canon 11 24mm f4",
+   "new": "Canon EF 11-24mm f/4L USM"
+  },
+  {
+   "slug": "canon-135mm-f2-0",
+   "old": "Canon 135mm f2.0",
+   "new": "Canon EF 135mm f/2L USM"
+  },
+  {
+   "slug": "canon-15-45mm-f3-5",
+   "old": "Canon 15 45mm f3.5",
+   "new": "Canon EF-M 15-45mm f/3.5-6.3 IS STM"
+  },
+  {
+   "slug": "canon-15mm-f2-8",
+   "old": "Canon 15mm f2.8",
+   "new": "Canon EF 15mm f/2.8 Fisheye"
+  },
+  {
+   "slug": "canon-16-35mm-f2-8",
+   "old": "Canon 16 35mm f2.8",
+   "new": "Canon EF 16-35mm f/2.8L USM"
+  },
+  {
+   "slug": "canon-18-200mm-f3-5",
+   "old": "Canon 18 200mm f3.5",
+   "new": "Canon EF-S 18-200mm f/3.5-5.6 IS"
+  },
+  {
+   "slug": "canon-45mm-f1-2",
+   "old": "Canon 45mm f1.2",
+   "new": "Canon RF 45mm f/1.2 STM"
+  },
+  {
+   "slug": "canon-50mm-f1-4",
+   "old": "Canon 50mm f1.4",
+   "new": "Canon EF 50mm f/1.4 USM"
+  },
+  {
+   "slug": "canon-50mm-f1-8",
+   "old": "Canon 50mm f1.8",
+   "new": "Canon EF 50mm f/1.8 STM"
+  },
+  {
+   "slug": "canon-50mm-f2-5",
+   "old": "Canon 50mm f2.5",
+   "new": "Canon EF 50mm f/2.5 Compact Macro"
+  },
+  {
+   "slug": "canon-70-200mm-f4",
+   "old": "Canon 70 200mm f4",
+   "new": "Canon EF 70-200mm f/4L USM"
+  },
+  {
+   "slug": "canon-85mm-f1-4",
+   "old": "Canon 85mm f1.4",
+   "new": "Canon EF 85mm f/1.4L IS USM"
+  },
+  {
+   "slug": "canon-eos-1d-ii",
+   "old": "Canon eos 1d ii",
+   "new": "Canon EOS-1D Mark II"
+  },
+  {
+   "slug": "canon-eos-r1",
+   "old": "Canon eos r1",
+   "new": "Canon EOS R1"
+  },
+  {
+   "slug": "canon-eos-r6-ii",
+   "old": "Canon eos r6 ii",
+   "new": "Canon EOS R6 Mark II"
+  },
+  {
+   "slug": "canon-eos-r8-ii",
+   "old": "Canon eos r8 ii",
+   "new": "Canon EOS R8 Mark II"
+  },
+  {
+   "slug": "fujifilm-16-55mm-f2-8",
+   "old": "Fujifilm 16 55mm f2.8",
+   "new": "Fujifilm XF 16-55mm f/2.8 R LM WR"
+  },
+  {
+   "slug": "fujifilm-50-140mm-f2-8",
+   "old": "Fujifilm 50 140mm f2.8",
+   "new": "Fujifilm XF 50-140mm f/2.8 R LM OIS WR"
+  },
+  {
+   "slug": "fujifilm-x-e4",
+   "old": "Fujifilm x e4",
+   "new": "Fujifilm X-E4"
+  },
+  {
+   "slug": "fujifilm-x-pro3",
+   "old": "Fujifilm x pro3",
+   "new": "Fujifilm X-Pro3"
+  },
+  {
+   "slug": "fujifilm-x-s20",
+   "old": "Fujifilm x s20",
+   "new": "Fujifilm X-S20"
+  },
+  {
+   "slug": "fujifilm-x-t20",
+   "old": "Fujifilm x t20",
+   "new": "Fujifilm X-T20"
+  },
+  {
+   "slug": "fujifilm-x-t30",
+   "old": "Fujifilm x t30",
+   "new": "Fujifilm X-T30"
+  },
+  {
+   "slug": "fujifilm-x-t50",
+   "old": "Fujifilm x t50",
+   "new": "Fujifilm X-T50"
+  },
+  {
+   "slug": "fujifilm-x100s",
+   "old": "Fujifilm x100s",
+   "new": "Fujifilm X100S"
+  },
+  {
+   "slug": "fujifilm-x100vi",
+   "old": "Fujifilm x100vi",
+   "new": "Fujifilm X100VI"
+  },
+  {
+   "slug": "hasselblad-21mm-f4",
+   "old": "Hasselblad 21mm f4",
+   "new": "Hasselblad XCD 21mm f/4"
+  },
+  {
+   "slug": "hasselblad-500-cm",
+   "old": "Hasselblad 500 cm",
+   "new": "Hasselblad 500C/M"
+  },
+  {
+   "slug": "hasselblad-x1d",
+   "old": "Hasselblad x1d",
+   "new": "Hasselblad X1D-50c"
+  },
+  {
+   "slug": "kodak-ektar",
+   "old": "Kodak ektar",
+   "new": "Kodak Ektar H35"
+  },
+  {
+   "slug": "leica-50mm-f1-4",
+   "old": "Leica 50mm f1.4",
+   "new": "Leica Summilux-M 50mm f/1.4 ASPH"
+  },
+  {
+   "slug": "nikon-16-50mm-f2-8",
+   "old": "Nikon 16 50mm f2.8",
+   "new": "Nikon NIKKOR Z DX 16-50mm f/2.8 VR"
+  },
+  {
+   "slug": "nikon-200mm-f4",
+   "old": "Nikon 200mm f4",
+   "new": "Nikon Nikkor 200mm f/4"
+  },
+  {
+   "slug": "nikon-58mm-f1-2",
+   "old": "Nikon 58mm f1.2",
+   "new": "Nikon Noct-Nikkor 58mm f/1.2"
+  },
+  {
+   "slug": "nikon-85mm-f1-8",
+   "old": "Nikon 85mm f1.8",
+   "new": "Nikon AF Nikkor 85mm f/1.8D"
+  },
+  {
+   "slug": "nikon-d7500",
+   "old": "Nikon d7500",
+   "new": "Nikon D7500"
+  },
+  {
+   "slug": "nikon-d780",
+   "old": "Nikon d780",
+   "new": "Nikon D780"
+  },
+  {
+   "slug": "nikon-d810",
+   "old": "Nikon d810",
+   "new": "Nikon D810"
+  },
+  {
+   "slug": "nikon-z50-ii",
+   "old": "Nikon z50 ii",
+   "new": "Nikon Z50 II"
+  },
+  {
+   "slug": "olympus-e-m10-iv",
+   "old": "Olympus e m10 iv",
+   "new": "Olympus OM-D E-M10 Mark IV"
+  },
+  {
+   "slug": "om-system-12-40mm-f2-8",
+   "old": "OM SYSTEM 12 40mm f2.8",
+   "new": "OM SYSTEM M.Zuiko Digital ED 12-40mm f/2.8 PRO II"
+  },
+  {
+   "slug": "panasonic-25mm-f1-7",
+   "old": "Panasonic 25mm f1.7",
+   "new": "Panasonic Lumix G 25mm f/1.7 ASPH"
+  },
+  {
+   "slug": "panasonic-70-200mm-f4",
+   "old": "Panasonic 70 200mm f4",
+   "new": "Panasonic Lumix S PRO 70-200mm f/4 O.I.S."
+  },
+  {
+   "slug": "panasonic-gh2",
+   "old": "Panasonic gh2",
+   "new": "Panasonic Lumix DMC-GH2"
+  },
+  {
+   "slug": "panasonic-gh5",
+   "old": "Panasonic gh5",
+   "new": "Panasonic Lumix DC-GH5"
+  },
+  {
+   "slug": "panasonic-lumix-gh6",
+   "old": "Panasonic lumix gh6",
+   "new": "Panasonic Lumix GH6"
+  },
+  {
+   "slug": "panasonic-lumix-s-35mm",
+   "old": "Panasonic lumix s 35mm",
+   "new": "Panasonic Lumix S 35mm f/1.8"
+  },
+  {
+   "slug": "panasonic-lumix-s1ii",
+   "old": "Panasonic lumix s1ii",
+   "new": "Panasonic Lumix S1II"
+  },
+  {
+   "slug": "panasonic-lumix-s5-ii",
+   "old": "Panasonic lumix s5 ii",
+   "new": "Panasonic Lumix S5 II"
+  },
+  {
+   "slug": "pentax-200mm-f4",
+   "old": "Pentax 200mm f4",
+   "new": "Pentax SMC Takumar 200mm f/4"
+  },
+  {
+   "slug": "rokinon-35mm",
+   "old": "Rokinon 35mm",
+   "new": "Rokinon 35mm T1.5 Cine DS"
+  },
+  {
+   "slug": "sigma-14-24mm-f2-8",
+   "old": "Sigma 14 24mm f2.8",
+   "new": "Sigma 14-24mm f/2.8 DG HSM Art"
+  },
+  {
+   "slug": "sigma-15mm-f1-4",
+   "old": "Sigma 15mm f1.4",
+   "new": "Sigma 15mm f/1.4 DC Contemporary"
+  },
+  {
+   "slug": "sigma-19mm-f2-8",
+   "old": "Sigma 19mm f2.8",
+   "new": "Sigma 19mm f/2.8 DN Art"
+  },
+  {
+   "slug": "sigma-20mm-f1-4",
+   "old": "Sigma 20mm f1.4",
+   "new": "Sigma 20mm f/1.4 DG HSM Art"
+  },
+  {
+   "slug": "sigma-23mm-f1-4",
+   "old": "Sigma 23mm f1.4",
+   "new": "Sigma 23mm f/1.4 DC DN Contemporary"
+  },
+  {
+   "slug": "sigma-35mm-f1-2-dg-dn-art",
+   "old": "Sigma 35mm F1.2 DG DN Art",
+   "new": "Sigma 35mm f/1.2 DG DN Art"
+  },
+  {
+   "slug": "sigma-35mm-f1-4",
+   "old": "Sigma 35mm f1.4",
+   "new": "Sigma 35mm f/1.4 DG HSM Art"
+  },
+  {
+   "slug": "sigma-45mm-f2-8",
+   "old": "Sigma 45mm f2.8",
+   "new": "Sigma 45mm f/2.8 DG DN Contemporary"
+  },
+  {
+   "slug": "sigma-50mm-f1-4",
+   "old": "Sigma 50mm f1.4",
+   "new": "Sigma 50mm f/1.4 DG HSM Art"
+  },
+  {
+   "slug": "sony-100-400mm-f4-5",
+   "old": "Sony 100 400mm f4.5",
+   "new": "Sony FE 100-400mm f/4.5 GM OSS"
+  },
+  {
+   "slug": "sony-16-70mm-f4",
+   "old": "Sony 16 70mm f4",
+   "new": "Sony Vario-Tessar T* E 16-70mm f/4 ZA OSS"
+  },
+  {
+   "slug": "sony-28-70mm-f3-5",
+   "old": "Sony 28 70mm f3.5",
+   "new": "Sony FE 28-70mm f/3.5-5.6 OSS"
+  },
+  {
+   "slug": "sony-50mm-f2-8",
+   "old": "Sony 50mm f2.8",
+   "new": "Sony 50mm f/2.8 Macro (A-mount)"
+  },
+  {
+   "slug": "sony-85mm-f1-4",
+   "old": "Sony 85mm f1.4",
+   "new": "Sony FE 85mm f/1.4 GM"
+  },
+  {
+   "slug": "sony-a7",
+   "old": "Sony a7",
+   "new": "Sony A7"
+  },
+  {
+   "slug": "sony-a7r-vi",
+   "old": "Sony a7r vi",
+   "new": "Sony A7R VI"
+  },
+  {
+   "slug": "sony-a9-ii",
+   "old": "Sony a9 ii",
+   "new": "Sony A9 II"
+  },
+  {
+   "slug": "sony-fx2",
+   "old": "Sony fx2",
+   "new": "Sony FX2"
+  },
+  {
+   "slug": "sony-rx100-ii",
+   "old": "Sony rx100 ii",
+   "new": "Sony RX100 II"
+  },
+  {
+   "slug": "viltrox-14mm-f4",
+   "old": "Viltrox 14mm f4",
+   "new": "Viltrox AF 14mm f/4 Air"
+  },
+  {
+   "slug": "canon-16-28mm-f2-8",
+   "old": "Canon 16 28mm f2.8",
+   "new": "Canon RF 16-28mm f/2.8 IS STM"
+  },
+  {
+   "slug": "canon-16mm-f2-8",
+   "old": "Canon 16mm f2.8",
+   "new": "Canon RF 16mm f/2.8 STM"
+  },
+  {
+   "slug": "canon-17-55mm-f2-8",
+   "old": "Canon 17 55mm f2.8",
+   "new": "Canon EF-S 17-55mm f/2.8 IS USM"
+  },
+  {
+   "slug": "canon-22mm-f2",
+   "old": "Canon 22mm f2",
+   "new": "Canon EF-M 22mm f/2 STM"
+  },
+  {
+   "slug": "canon-24mm-f2-8",
+   "old": "Canon 24mm f2.8",
+   "new": "Canon EF-S 24mm f/2.8 STM"
+  },
+  {
+   "slug": "canon-24mm-f3-5",
+   "old": "Canon 24mm f3.5",
+   "new": "Canon TS-E 24mm f/3.5L"
+  },
+  {
+   "slug": "canon-32mm-f1-4",
+   "old": "Canon 32mm f1.4",
+   "new": "Canon EF-M 32mm f/1.4 STM"
+  },
+  {
+   "slug": "canon-40mm-f2-8",
+   "old": "Canon 40mm f2.8",
+   "new": "Canon EF 40mm f/2.8 STM"
+  },
+  {
+   "slug": "canon-600mm-f11",
+   "old": "Canon 600mm f11",
+   "new": "Canon RF 600mm f/11 IS STM"
+  },
+  {
+   "slug": "canon-85mm-f2",
+   "old": "Canon 85mm f2",
+   "new": "Canon RF 85mm f/2 Macro IS STM"
+  },
+  {
+   "slug": "canon-eos-250d",
+   "old": "Canon eos 250d",
+   "new": "Canon EOS 250D (Rebel SL3)"
+  },
+  {
+   "slug": "canon-eos-550d",
+   "old": "Canon eos 550d",
+   "new": "Canon EOS 550D (Rebel T2i)"
+  },
+  {
+   "slug": "canon-eos-r10",
+   "old": "Canon eos r10",
+   "new": "Canon EOS R10"
+  },
+  {
+   "slug": "canon-eos-r5-c",
+   "old": "Canon eos r5 c",
+   "new": "Canon EOS R5 C"
+  },
+  {
+   "slug": "canon-eos-r50",
+   "old": "Canon eos r50",
+   "new": "Canon EOS R50"
+  },
+  {
+   "slug": "canon-eos-r7",
+   "old": "Canon eos r7",
+   "new": "Canon EOS R7"
+  },
+  {
+   "slug": "canon-powershot-s95",
+   "old": "Canon powershot s95",
+   "new": "Canon PowerShot S95"
+  },
+  {
+   "slug": "canon-powershot-sd800",
+   "old": "Canon powershot sd800",
+   "new": "Canon PowerShot SD800 IS"
+  },
+  {
+   "slug": "canon-powershot-sx1",
+   "old": "Canon powershot sx1",
+   "new": "Canon PowerShot SX1 IS"
+  },
+  {
+   "slug": "canon-powershot-sx30",
+   "old": "Canon powershot sx30",
+   "new": "Canon PowerShot SX30 IS"
+  },
+  {
+   "slug": "canon-powershot-sx540",
+   "old": "Canon powershot sx540",
+   "new": "Canon PowerShot SX540 HS"
+  },
+  {
+   "slug": "canon-powershot-sx620",
+   "old": "Canon powershot sx620",
+   "new": "Canon PowerShot SX620 HS"
+  },
+  {
+   "slug": "canon-powershot-sx70",
+   "old": "Canon powershot sx70",
+   "new": "Canon PowerShot SX70 HS"
+  },
+  {
+   "slug": "canon-powershot-v1",
+   "old": "Canon powershot v1",
+   "new": "Canon PowerShot V1"
+  },
+  {
+   "slug": "canon-r5",
+   "old": "Canon R5",
+   "new": "Canon EOS R5"
+  },
+  {
+   "slug": "canon-r6",
+   "old": "Canon R6",
+   "new": "Canon EOS R6"
+  },
+  {
+   "slug": "dji-osmo-360",
+   "old": "DJI osmo 360",
+   "new": "DJI Osmo 360"
+  },
+  {
+   "slug": "dji-osmo-action-4",
+   "old": "DJI osmo action 4",
+   "new": "DJI Osmo Action 4"
+  },
+  {
+   "slug": "dji-osmo-action-6",
+   "old": "DJI osmo action 6",
+   "new": "DJI Osmo Action 6"
+  },
+  {
+   "slug": "dji-pocket-2",
+   "old": "DJI pocket 2",
+   "new": "DJI Pocket 2"
+  },
+  {
+   "slug": "fujifilm-16mm-f2-8",
+   "old": "Fujifilm 16mm f2.8",
+   "new": "Fujifilm XF 16mm f/2.8 R WR"
+  },
+  {
+   "slug": "fujifilm-23mm-f1-4",
+   "old": "Fujifilm 23mm f1.4",
+   "new": "Fujifilm XF 23mm f/1.4 R"
+  },
+  {
+   "slug": "fujifilm-27mm-f2-8",
+   "old": "Fujifilm 27mm f2.8",
+   "new": "Fujifilm XF 27mm f/2.8"
+  },
+  {
+   "slug": "fujifilm-63mm-f2-8",
+   "old": "Fujifilm 63mm f2.8",
+   "new": "Fujifilm GF 63mm f/2.8 R WR"
+  },
+  {
+   "slug": "fujifilm-x-e1",
+   "old": "Fujifilm x e1",
+   "new": "Fujifilm X-E1"
+  },
+  {
+   "slug": "fujifilm-x-e3",
+   "old": "Fujifilm x e3",
+   "new": "Fujifilm X-E3"
+  },
+  {
+   "slug": "fujifilm-x-e5",
+   "old": "Fujifilm x e5",
+   "new": "Fujifilm X-E5"
+  },
+  {
+   "slug": "fujifilm-x-pro2",
+   "old": "Fujifilm x pro2",
+   "new": "Fujifilm X-Pro2"
+  },
+  {
+   "slug": "fujifilm-x-t1",
+   "old": "Fujifilm x t1",
+   "new": "Fujifilm X-T1"
+  },
+  {
+   "slug": "fujifilm-x-t10",
+   "old": "Fujifilm x t10",
+   "new": "Fujifilm X-T10"
+  },
+  {
+   "slug": "fujifilm-x-t2",
+   "old": "Fujifilm x t2",
+   "new": "Fujifilm X-T2"
+  },
+  {
+   "slug": "fujifilm-x-t200",
+   "old": "Fujifilm x t200",
+   "new": "Fujifilm X-T200"
+  },
+  {
+   "slug": "fujifilm-x-t3",
+   "old": "Fujifilm x t3",
+   "new": "Fujifilm X-T3"
+  },
+  {
+   "slug": "fujifilm-x-t30-iii",
+   "old": "Fujifilm x t30 iii",
+   "new": "Fujifilm X-T30 III"
+  },
+  {
+   "slug": "fujifilm-x-t4",
+   "old": "Fujifilm x t4",
+   "new": "Fujifilm X-T4"
+  },
+  {
+   "slug": "fujifilm-x100f",
+   "old": "Fujifilm x100f",
+   "new": "Fujifilm X100F"
+  },
+  {
+   "slug": "gopro-hero10",
+   "old": "GoPro hero10",
+   "new": "GoPro HERO10 Black"
+  },
+  {
+   "slug": "gopro-hero6",
+   "old": "GoPro hero6",
+   "new": "GoPro HERO6 Black"
+  },
+  {
+   "slug": "gopro-hero7",
+   "old": "GoPro hero7",
+   "new": "GoPro HERO7 Black"
+  },
+  {
+   "slug": "gopro-hero9",
+   "old": "GoPro hero9",
+   "new": "GoPro HERO9 Black"
+  },
+  {
+   "slug": "insta360-go-3s-4k",
+   "old": "Insta360 go 3s 4k",
+   "new": "Insta360 GO 3S"
+  },
+  {
+   "slug": "insta360-go-ultra-4k-action",
+   "old": "Insta360 go ultra 4k action",
+   "new": "Insta360 GO Ultra"
+  },
+  {
+   "slug": "manfrotto-befree",
+   "old": "Manfrotto Befree",
+   "new": "Manfrotto Befree 3-Way Live Advanced Tripod"
+  },
+  {
+   "slug": "minolta-maxxum-5000",
+   "old": "Minolta maxxum 5000",
+   "new": "Minolta Maxxum 5000"
+  },
+  {
+   "slug": "minolta-maxxum-70",
+   "old": "Minolta maxxum 70",
+   "new": "Minolta Maxxum 70"
+  },
+  {
+   "slug": "minolta-maxxum-7000",
+   "old": "Minolta maxxum 7000",
+   "new": "Minolta Maxxum 7000"
+  },
+  {
+   "slug": "nikon-d3300",
+   "old": "Nikon d3300",
+   "new": "Nikon D3300"
+  },
+  {
+   "slug": "nikon-d3400",
+   "old": "Nikon d3400",
+   "new": "Nikon D3400"
+  },
+  {
+   "slug": "nikon-d500",
+   "old": "Nikon d500",
+   "new": "Nikon D500"
+  },
+  {
+   "slug": "nikon-d5600",
+   "old": "Nikon d5600",
+   "new": "Nikon D5600"
+  },
+  {
+   "slug": "nikon-d800",
+   "old": "Nikon d800",
+   "new": "Nikon D800"
+  },
+  {
+   "slug": "nikon-fe2",
+   "old": "Nikon fe2",
+   "new": "Nikon FE2"
+  },
+  {
+   "slug": "nikon-z-20",
+   "old": "Nikon z 20",
+   "new": "Nikon NIKKOR Z 20mm f/1.8 S"
+  },
+  {
+   "slug": "nikon-z-30",
+   "old": "Nikon z 30",
+   "new": "Nikon Z30"
+  },
+  {
+   "slug": "nikon-z5",
+   "old": "Nikon z5",
+   "new": "Nikon Z5"
+  },
+  {
+   "slug": "nikon-z5-ii",
+   "old": "Nikon z5 ii",
+   "new": "Nikon Z5 II"
+  },
+  {
+   "slug": "nikon-z50",
+   "old": "Nikon z50",
+   "new": "Nikon Z50"
+  },
+  {
+   "slug": "nikon-z6-iii",
+   "old": "Nikon z6 iii",
+   "new": "Nikon Z6 III"
+  },
+  {
+   "slug": "nikon-z7",
+   "old": "Nikon z7",
+   "new": "Nikon Z7"
+  },
+  {
+   "slug": "olympus-17mm-f1-2",
+   "old": "Olympus 17mm f1.2",
+   "new": "Olympus M.Zuiko Digital ED 17mm f/1.2 PRO"
+  },
+  {
+   "slug": "olympus-25mm-f1-8",
+   "old": "Olympus 25mm f1.8",
+   "new": "Olympus M.Zuiko Digital 25mm f/1.8"
+  },
+  {
+   "slug": "olympus-45mm-f1-2",
+   "old": "Olympus 45mm f1.2",
+   "new": "Olympus M.Zuiko Digital ED 45mm f/1.2 PRO"
+  },
+  {
+   "slug": "olympus-45mm-f1-8",
+   "old": "Olympus 45mm f1.8",
+   "new": "Olympus M.Zuiko Digital 45mm f/1.8"
+  },
+  {
+   "slug": "olympus-50mm-f1-8",
+   "old": "Olympus 50mm f1.8",
+   "new": "Olympus Zuiko 50mm f/1.8 (OM)"
+  },
+  {
+   "slug": "olympus-60mm-f2-8",
+   "old": "Olympus 60mm f2.8",
+   "new": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro"
+  },
+  {
+   "slug": "olympus-7-14mm-f2-8",
+   "old": "Olympus 7 14mm f2.8",
+   "new": "Olympus M.Zuiko Digital ED 7-14mm f/2.8 PRO"
+  },
+  {
+   "slug": "olympus-75mm-f1-8",
+   "old": "Olympus 75mm f1.8",
+   "new": "Olympus M.Zuiko Digital ED 75mm f/1.8"
+  },
+  {
+   "slug": "om-system-14-42mm-f3-5",
+   "old": "OM SYSTEM 14 42mm f3.5",
+   "new": "OM SYSTEM M.Zuiko Digital ED 14-42mm f/3.5-5.6 EZ"
+  },
+  {
+   "slug": "om-system-om-3",
+   "old": "OM SYSTEM om 3",
+   "new": "OM SYSTEM OM-3"
+  },
+  {
+   "slug": "om-system-om-5",
+   "old": "OM SYSTEM om 5",
+   "new": "OM SYSTEM OM-5"
+  },
+  {
+   "slug": "panasonic-70-200mm-f2-8",
+   "old": "Panasonic 70 200mm f2.8",
+   "new": "Panasonic Lumix S PRO 70-200mm f/2.8 O.I.S."
+  },
+  {
+   "slug": "panasonic-gh3",
+   "old": "Panasonic gh3",
+   "new": "Panasonic Lumix DMC-GH3"
+  },
+  {
+   "slug": "panasonic-lumix-gh5-ii",
+   "old": "Panasonic lumix gh5 ii",
+   "new": "Panasonic Lumix GH5 II"
+  },
+  {
+   "slug": "panasonic-lumix-l10",
+   "old": "Panasonic lumix l10",
+   "new": "Panasonic Lumix L10"
+  },
+  {
+   "slug": "panasonic-s1-mirrorless",
+   "old": "Panasonic s1 mirrorless",
+   "new": "Panasonic Lumix DC-S1"
+  },
+  {
+   "slug": "panasonic-s1h",
+   "old": "Panasonic s1h",
+   "new": "Panasonic Lumix DC-S1H"
+  },
+  {
+   "slug": "panasonic-s1r",
+   "old": "Panasonic s1r",
+   "new": "Panasonic Lumix DC-S1R"
+  },
+  {
+   "slug": "pentax-11-18mm-f2-8",
+   "old": "Pentax 11 18mm f2.8",
+   "new": "Pentax HD DA* 11-18mm f/2.8 ED DC AW"
+  },
+  {
+   "slug": "pentax-135mm-f2-5",
+   "old": "Pentax 135mm f2.5",
+   "new": "Pentax SMC Pentax 135mm f/2.5"
+  },
+  {
+   "slug": "sigma-16-28mm-f2-8",
+   "old": "Sigma 16 28mm f2.8",
+   "new": "Sigma 16-28mm f/2.8 DG DN Contemporary"
+  },
+  {
+   "slug": "sigma-16-300mm-f3-5",
+   "old": "Sigma 16 300mm f3.5",
+   "new": "Sigma 16-300mm f/3.5-6.7 DC OS Contemporary"
+  },
+  {
+   "slug": "sigma-16mm-f1-4",
+   "old": "Sigma 16mm f1.4",
+   "new": "Sigma 16mm f/1.4 DC DN Contemporary"
+  },
+  {
+   "slug": "sigma-17-40mm-f1-8",
+   "old": "Sigma 17 40mm f1.8",
+   "new": "Sigma 17-40mm f/1.8 DC Art"
+  },
+  {
+   "slug": "sigma-20-60mm-f2-8",
+   "old": "Sigma 20 60mm f2.8",
+   "new": "Sigma 20-60mm f/2.8-4 DG Contemporary"
+  },
+  {
+   "slug": "sigma-28-45mm-f1-8",
+   "old": "Sigma 28 45mm f1.8",
+   "new": "Sigma 28-45mm f/1.8 DG DN Art"
+  },
+  {
+   "slug": "sigma-28-70mm-f2-8",
+   "old": "Sigma 28 70mm f2.8",
+   "new": "Sigma 28-70mm f/2.8 DG DN Contemporary"
+  },
+  {
+   "slug": "sigma-30mm-f1-4",
+   "old": "Sigma 30mm f1.4",
+   "new": "Sigma 30mm f/1.4 DC DN Contemporary"
+  },
+  {
+   "slug": "sigma-56mm-f1-4",
+   "old": "Sigma 56mm f1.4",
+   "new": "Sigma 56mm f/1.4 DC DN Contemporary"
+  },
+  {
+   "slug": "sigma-60mm-f2-8",
+   "old": "Sigma 60mm f2.8",
+   "new": "Sigma 60mm f/2.8 DN Art"
+  },
+  {
+   "slug": "sony-12-24mm-f2-8",
+   "old": "Sony 12 24mm f2.8",
+   "new": "Sony FE 12-24mm f/2.8 GM"
+  },
+  {
+   "slug": "sony-16-25mm-f2-8",
+   "old": "Sony 16 25mm f2.8",
+   "new": "Sony FE 16-25mm f/2.8 G"
+  },
+  {
+   "slug": "sony-16-55mm-f2-8",
+   "old": "Sony 16 55mm f2.8",
+   "new": "Sony E 16-55mm f/2.8 G"
+  },
+  {
+   "slug": "sony-16mm-f1-8",
+   "old": "Sony 16mm f1.8",
+   "new": "Sony FE 16mm f/1.8 G"
+  },
+  {
+   "slug": "sony-18-200mm-f3-5",
+   "old": "Sony 18 200mm f3.5",
+   "new": "Sony E 18-200mm f/3.5-6.3 OSS"
+  },
+  {
+   "slug": "sony-20-70mm-f4",
+   "old": "Sony 20 70mm f4",
+   "new": "Sony FE 20-70mm f/4 G"
+  },
+  {
+   "slug": "sony-28mm-f2",
+   "old": "Sony 28mm f2",
+   "new": "Sony FE 28mm f/2"
+  },
+  {
+   "slug": "sony-35mm-f2-8",
+   "old": "Sony 35mm f2.8",
+   "new": "Sony Sonnar T* FE 35mm f/2.8 ZA"
+  },
+  {
+   "slug": "sony-400mm-f4-5",
+   "old": "Sony 400mm f4.5",
+   "new": "Sony FE 400mm f/4.5 GM OSS"
+  },
+  {
+   "slug": "sony-50mm-f1-2",
+   "old": "Sony 50mm f1.2",
+   "new": "Sony FE 50mm f/1.2 GM"
+  },
+  {
+   "slug": "sony-600mm-f6-3",
+   "old": "Sony 600mm f6.3",
+   "new": "Sony FE 600mm f/6.3 GM OSS"
+  },
+  {
+   "slug": "sony-70-350mm-f4-5",
+   "old": "Sony 70 350mm f4.5",
+   "new": "Sony E 70-350mm f/4.5-6.3 G OSS"
+  },
+  {
+   "slug": "sony-8-14mm-f3-5",
+   "old": "Sony 8 14mm f3.5",
+   "new": "Sony FE 8-14mm f/3.5 Fisheye G"
+  },
+  {
+   "slug": "sony-a6000",
+   "old": "Sony a6000",
+   "new": "Sony A6000"
+  },
+  {
+   "slug": "sony-a6300",
+   "old": "Sony a6300",
+   "new": "Sony A6300"
+  },
+  {
+   "slug": "sony-a6600",
+   "old": "Sony a6600",
+   "new": "Sony A6600"
+  },
+  {
+   "slug": "sony-a9",
+   "old": "Sony a9",
+   "new": "Sony A9"
+  },
+  {
+   "slug": "sony-fe-35mm-f1-4-gm",
+   "old": "Sony FE 35mm F1.4 GM",
+   "new": "Sony FE 35mm f/1.4 GM"
+  },
+  {
+   "slug": "sony-fx3",
+   "old": "Sony fx3",
+   "new": "Sony FX3"
+  },
+  {
+   "slug": "sony-fx6",
+   "old": "Sony fx6",
+   "new": "Sony FX6"
+  },
+  {
+   "slug": "sony-rx100-iii",
+   "old": "Sony rx100 iii",
+   "new": "Sony RX100 III"
+  },
+  {
+   "slug": "sony-rx100-iv",
+   "old": "Sony rx100 iv",
+   "new": "Sony RX100 IV"
+  },
+  {
+   "slug": "sony-zv-1",
+   "old": "Sony zv 1",
+   "new": "Sony ZV-1"
+  },
+  {
+   "slug": "sony-zv-e10",
+   "old": "Sony zv e10",
+   "new": "Sony ZV-E10"
+  },
+  {
+   "slug": "tamron-12-20mm-f2-8",
+   "old": "Tamron 12 20mm f2.8",
+   "new": "Tamron 12-20mm f/2.8"
+  },
+  {
+   "slug": "ttartisan-85mm-f1-8",
+   "old": "TTArtisan 85mm f1.8",
+   "new": "TTArtisan AF 85mm f/1.8 Neo"
+  },
+  {
+   "slug": "ulanzi-f38-zero",
+   "old": "Ulanzi F38 / Zero",
+   "new": "Ulanzi Zero F38 Travel Tripod"
+  }
+ ],
+ "rebuild_queue": [
+  "canon-100-400mm-f5-6",
+  "canon-100mm-f2",
+  "canon-100mm-f2-8",
+  "canon-11-24mm-f4",
+  "canon-135mm-f2-0",
+  "canon-15-45mm-f3-5",
+  "canon-15mm-f2-8",
+  "canon-16-35mm-f2-8",
+  "canon-18-200mm-f3-5",
+  "canon-45mm-f1-2",
+  "canon-50mm-f1-4",
+  "canon-50mm-f1-8",
+  "canon-50mm-f2-5",
+  "canon-70-200mm-f4",
+  "canon-85mm-f1-4",
+  "canon-eos-1d-ii",
+  "canon-eos-r1",
+  "canon-eos-r6-ii",
+  "canon-eos-r8-ii",
+  "fujifilm-16-55mm-f2-8",
+  "fujifilm-50-140mm-f2-8",
+  "fujifilm-x-e4",
+  "fujifilm-x-pro3",
+  "fujifilm-x-s20",
+  "fujifilm-x-t20",
+  "fujifilm-x-t30",
+  "fujifilm-x-t50",
+  "fujifilm-x100s",
+  "fujifilm-x100vi",
+  "hasselblad-21mm-f4",
+  "hasselblad-500-cm",
+  "hasselblad-x1d",
+  "kodak-ektar",
+  "leica-50mm-f1-4",
+  "nikon-16-50mm-f2-8",
+  "nikon-200mm-f4",
+  "nikon-58mm-f1-2",
+  "nikon-85mm-f1-8",
+  "nikon-d7500",
+  "nikon-d780",
+  "nikon-d810",
+  "nikon-z50-ii",
+  "olympus-e-m10-iv",
+  "om-system-12-40mm-f2-8",
+  "panasonic-25mm-f1-7",
+  "panasonic-70-200mm-f4",
+  "panasonic-gh2",
+  "panasonic-gh5",
+  "panasonic-lumix-gh6",
+  "panasonic-lumix-s-35mm",
+  "panasonic-lumix-s1ii",
+  "panasonic-lumix-s5-ii",
+  "pentax-200mm-f4",
+  "rokinon-35mm",
+  "sigma-14-24mm-f2-8",
+  "sigma-15mm-f1-4",
+  "sigma-19mm-f2-8",
+  "sigma-20mm-f1-4",
+  "sigma-23mm-f1-4",
+  "sigma-35mm-f1-2-dg-dn-art",
+  "sigma-35mm-f1-4",
+  "sigma-45mm-f2-8",
+  "sigma-50mm-f1-4",
+  "sony-100-400mm-f4-5",
+  "sony-16-70mm-f4",
+  "sony-28-70mm-f3-5",
+  "sony-50mm-f2-8",
+  "sony-85mm-f1-4",
+  "sony-a7",
+  "sony-a7r-vi",
+  "sony-a9-ii",
+  "sony-fx2",
+  "sony-rx100-ii",
+  "viltrox-14mm-f4"
+ ],
+ "held_identity": [
+  "canon-14mm-f2-8",
+  "canon-200-400mm-f4",
+  "canon-20mm-f2-8",
+  "canon-28-105mm-f3-5",
+  "canon-28-70mm-f2-8",
+  "canon-28mm-f3-5",
+  "canon-35mm-f1-4",
+  "canon-50mm-f1-2",
+  "canon-70-200mm-f2-8",
+  "canon-85mm-f1-2",
+  "canon-eos-5d",
+  "canon-powershot-s3",
+  "dji-original-dji-goggles-v2-digital-flight-goggles-powers-on",
+  "fujifilm-x100v",
+  "leica-100mm-f2-8",
+  "leica-35mm-f2",
+  "leica-50mm-f2",
+  "nikon-105mm-f2-8",
+  "nikon-120-300mm-f2-8",
+  "nikon-20mm-f1-8",
+  "nikon-24mm-f1-8",
+  "nikon-28mm-f2-8",
+  "nikon-35mm-f1-4",
+  "nikon-35mm-f1-8",
+  "nikon-35mm-f2-8",
+  "nikon-50mm-f1-8",
+  "nikon-50mm-f2",
+  "nikon-600mm-f4",
+  "nikon-800mm-f5-6",
+  "nikon-z8",
+  "sigma-85mm-f1-2",
+  "sony-100mm-f2-8",
+  "sony-50mm-f1-4",
+  "sony-a7s",
+  "sony-rx100-v",
+  "tamron-28-80mm",
+  "ttartisan-24mm-f3-8",
+  "yongnuo-yn600ex-rtii-speedlite-flash",
+  "zeiss-35mm-f1-4"
+ ]
+}
