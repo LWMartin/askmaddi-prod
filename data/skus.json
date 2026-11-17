@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-16",
+  "as_of": "2026-11-17",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -65458,7 +65458,42 @@
         "mpn": "SEL1224G",
         "brand": "Sony",
         "market_title": "Sony FE 12-24mm f/4 G Lens for Sony E",
-        "image": "https://www.adorama.com/images/Large/ISO1224E.jpg"
+        "image": "https://www.adorama.com/images/Large/ISO1224E.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/ukkAAOSwCtJZ9e4x/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-17T04:52:02Z",
+          "query": "Sony SEL1224G",
+          "winner": {
+            "item_id": "v1|336818096906|0",
+            "epid": "237935613",
+            "title": "Sony 12-24mm F4 G (SEL1224G) for Sony FE mount"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|407297490845|0",
+              "epid": "237935613",
+              "title": "Sony FE 12-24mm f/4 G Lens SEL1224G E-Mount Full Frame Ultra Wide Zoom Lens Only",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|336893649779|0",
+              "epid": "237935613",
+              "title": "Sony SEL1224G FE 12-24mm F4 G Lens [Excellent+ Cond.]",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|336818096906|0",
+              "epid": "237935613",
+              "title": "Sony 12-24mm F4 G (SEL1224G) for Sony FE mount",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-fe-12-24-mm-f-4-g-lens%2Fp%2Fiso1224e",
@@ -65488,7 +65523,35 @@
         "mpn": "DMC-ZS100K",
         "brand": "Panasonic",
         "market_title": "Panasonic Lumix DMC-ZS100 Digital Camera, 20.1MP, 25-250mm F/2.8-5.9 LEICA DC Lens Zoom, WiFi and Electronic Viewfinder, Black",
-        "image": "https://www.adorama.com/images/Large/IPCDMCZS100B.JPG"
+        "image": "https://www.adorama.com/images/Large/IPCDMCZS100B.JPG",
+        "image_catalog": "https://i.ebayimg.com/images/g/vXwAAOSwiDFYLa3H/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-17T04:52:04Z",
+          "query": "Panasonic DMC-ZS100K",
+          "winner": {
+            "item_id": "v1|366783188971|0",
+            "epid": "223873271",
+            "title": "Panasonic LUMIX ZS100 20.0MP Compact Digital Camera - Black, Very Good Condition"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|940093044642|0",
+              "epid": "223873271",
+              "title": "Panasonic LUMIX DMC-ZS100 20.1MP 4K Digital Camera 10x Leica Zoom Black",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|366783188971|0",
+              "epid": "223873271",
+              "title": "Panasonic LUMIX ZS100 20.0MP Compact Digital Camera - Black, Very Good Condition",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-panasonic-lumix-dmc-zs100-digital-camera-201mp-25-250mm-f-28-59-leica-dc-lens-zoom-wifi-and-electronic-viewfinder-black%2Fp%2Fus2116973",
@@ -65605,6 +65668,129 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-11-16T21:25:06Z"
+    },
+    "viltrox-35mm-f1-4": {
+      "contamination_key": "viltrox-35mm-f1-4",
+      "vendor": "Viltrox",
+      "model": "35mm f1.4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198751867564",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Viltrox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Viltrox AF 35mm F1.4 Pro Full Frame AutoFocus Prime Lens For Sony E-mount Camera",
+        "image": "https://i.ebayimg.com/images/g/eXwAAeSwevJq4cgx/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "662.00",
+          "currency": "USD",
+          "as_of": "2026-11-17T06:00:22Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198751867564?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FGjPyQ4%2FFR2YWhtc8P7oXjrjcNEJvDhKH414V1B3DJ%2FP9%2BUQlHAh%2FUqtZPHA9wnjJ5uBDo0XOb2Cqrc9MZXihRulb%2BciUzJC6cEFsJFA7JJF3Af13b17SvHV89X6Quys6KhmjxwQyEl5vi4ixGurfi1GYJg7JPkppverrecXVkbe3lAMN5nJ8JVIbyj3eapW4%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-17T06:00:22Z"
+    },
+    "panasonic-s1h-ii": {
+      "contamination_key": "panasonic-s1h-ii",
+      "vendor": "Panasonic",
+      "model": "s1h ii",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "800590777650",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic Lumix S1H 24MP Full Frame 6K 24p 4K 60 10bit V-Log Body Only WiFi",
+        "image": "https://i.ebayimg.com/images/g/pGkAAeSwhZ9qZH43/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "968.00",
+          "currency": "USD",
+          "as_of": "2026-11-17T04:08:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/800590777650?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8eHvk8fT22OI8eR3%2BJCa2B0PyiW70yc%2BD0aWFDM5FRZzQUC3vLCBPLA5k9JeZ9cPZca%2FQeCP8TGbPCgXFRKY1QfQSlHEcWl0cRSO4bYfH32NWYq4xjw5e1WpUreUFe8mQOVPtpX6cM2zRElKj%2FllDzq7sw7ZUJQoAD2FDpFptmtxcLOqWrGTSw8em6KANnYJ8%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-17T04:08:42Z"
+    },
+    "dji-freestyle-mario5": {
+      "contamination_key": "dji-freestyle-mario5",
+      "vendor": "DJI",
+      "model": "Freestyle .Mario5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307285645627",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Speedybee",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Freestyle FPV drone .Mario5, DJI 03, ELRS 2.4 , 4s-6s.",
+        "image": "https://i.ebayimg.com/images/g/O~IAAeSwjq5q-zxG/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "499.00",
+          "currency": "USD",
+          "as_of": "2026-11-17T04:45:22Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307285645627?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Bio32WkuGBIOWYHSpdJDVQFFe%2BED10dxG5nkJ6XYWSmpR3smmvjap6CkOppSxxoZKKYsQLOVmgNfXcN8DZ78oEND7Iu9LtYw4Zrsacit6s3mwHLYVfMVJsLCkxpKWlsjva8ABIh29sQqVA9bQZskKVNvGlYRwWwO3f7PJ3JDsGgj%2Bo%2FASMJE3Vda%2FN4a%2FFvYg%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-17T04:45:22Z"
     }
   },
   "substrate": [
