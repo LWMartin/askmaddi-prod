@@ -1,0 +1,187 @@
+{
+ "_description": "Cards to re-extract after contamination registry v1.10.0 (phantom-ops 41188dd6194). Each card's review pool held a same-line sibling's reviews (EF vs RF, DG HSM vs DG DN, gen I vs II/III) because it had no registry entry and the source gate fell back to brand-level relevance. Re-extracting from the CACHED triples (requeue_rebuild, resume_stage=extract, zero fetch) re-reads the same evidence through a gate that can now name the siblings. sim_keep_after = sources the live gate keeps in a title-only simulation (a real transcript can only keep more). Every drop lands in the relevance sidecar for review at /admin/publish.",
+ "registry": "phantom-ops 41188dd6194 (contamination.json v1.10.0)",
+ "as_of": "2026-11-17",
+ "slugs": [
+  "canon-100-400mm-f5-6",
+  "canon-100mm-f2-8",
+  "canon-100mm-f2",
+  "canon-11-24mm-f4",
+  "canon-135mm-f2-0",
+  "canon-15-45mm-f3-5",
+  "canon-15mm-f2-8",
+  "canon-16-35mm-f2-8",
+  "canon-18-200mm-f3-5",
+  "canon-50mm-f1-4",
+  "canon-50mm-f1-8",
+  "canon-50mm-f2-5",
+  "canon-70-200mm-f4",
+  "canon-85mm-f1-4",
+  "canon-eos-1d-ii",
+  "fujifilm-16-55mm-f2-8",
+  "fujifilm-x-t30",
+  "hasselblad-21mm-f4",
+  "hasselblad-x1d",
+  "leica-50mm-f1-4",
+  "nikon-200mm-f4",
+  "nikon-58mm-f1-2",
+  "rokinon-35mm",
+  "sigma-14-24mm-f2-8",
+  "sigma-15mm-f1-4",
+  "sigma-19mm-f2-8",
+  "sigma-20mm-f1-4",
+  "sigma-35mm-f1-4",
+  "sigma-50mm-f1-4"
+ ],
+ "detail": [
+  {
+   "slug": "canon-100-400mm-f5-6",
+   "sim_keep_after": 17,
+   "sources": 20
+  },
+  {
+   "slug": "canon-100mm-f2-8",
+   "sim_keep_after": 5,
+   "sources": 15
+  },
+  {
+   "slug": "canon-100mm-f2",
+   "sim_keep_after": 6,
+   "sources": 19
+  },
+  {
+   "slug": "canon-11-24mm-f4",
+   "sim_keep_after": 15,
+   "sources": 16
+  },
+  {
+   "slug": "canon-135mm-f2-0",
+   "sim_keep_after": 15,
+   "sources": 17
+  },
+  {
+   "slug": "canon-15-45mm-f3-5",
+   "sim_keep_after": 15,
+   "sources": 18
+  },
+  {
+   "slug": "canon-15mm-f2-8",
+   "sim_keep_after": 6,
+   "sources": 13
+  },
+  {
+   "slug": "canon-16-35mm-f2-8",
+   "sim_keep_after": 5,
+   "sources": 20
+  },
+  {
+   "slug": "canon-18-200mm-f3-5",
+   "sim_keep_after": 11,
+   "sources": 17
+  },
+  {
+   "slug": "canon-50mm-f1-4",
+   "sim_keep_after": 9,
+   "sources": 20
+  },
+  {
+   "slug": "canon-50mm-f1-8",
+   "sim_keep_after": 8,
+   "sources": 18
+  },
+  {
+   "slug": "canon-50mm-f2-5",
+   "sim_keep_after": 6,
+   "sources": 10
+  },
+  {
+   "slug": "canon-70-200mm-f4",
+   "sim_keep_after": 4,
+   "sources": 17
+  },
+  {
+   "slug": "canon-85mm-f1-4",
+   "sim_keep_after": 15,
+   "sources": 20
+  },
+  {
+   "slug": "canon-eos-1d-ii",
+   "sim_keep_after": 6,
+   "sources": 18
+  },
+  {
+   "slug": "fujifilm-16-55mm-f2-8",
+   "sim_keep_after": 10,
+   "sources": 20
+  },
+  {
+   "slug": "fujifilm-x-t30",
+   "sim_keep_after": 12,
+   "sources": 20
+  },
+  {
+   "slug": "hasselblad-21mm-f4",
+   "sim_keep_after": 6,
+   "sources": 17
+  },
+  {
+   "slug": "hasselblad-x1d",
+   "sim_keep_after": 12,
+   "sources": 20
+  },
+  {
+   "slug": "leica-50mm-f1-4",
+   "sim_keep_after": 13,
+   "sources": 19
+  },
+  {
+   "slug": "nikon-200mm-f4",
+   "sim_keep_after": 11,
+   "sources": 20
+  },
+  {
+   "slug": "nikon-58mm-f1-2",
+   "sim_keep_after": 6,
+   "sources": 18
+  },
+  {
+   "slug": "rokinon-35mm",
+   "sim_keep_after": 5,
+   "sources": 18
+  },
+  {
+   "slug": "sigma-14-24mm-f2-8",
+   "sim_keep_after": 9,
+   "sources": 12
+  },
+  {
+   "slug": "sigma-15mm-f1-4",
+   "sim_keep_after": 11,
+   "sources": 20
+  },
+  {
+   "slug": "sigma-19mm-f2-8",
+   "sim_keep_after": 17,
+   "sources": 20
+  },
+  {
+   "slug": "sigma-20mm-f1-4",
+   "sim_keep_after": 3,
+   "sources": 4
+  },
+  {
+   "slug": "sigma-35mm-f1-4",
+   "sim_keep_after": 6,
+   "sources": 14
+  },
+  {
+   "slug": "sigma-50mm-f1-4",
+   "sim_keep_after": 3,
+   "sources": 10
+  }
+ ],
+ "excluded": {
+  "sony-fx3": "registry entry only (resolved a dangling reference); no contamination",
+  "nikon-85mm-f1-8": "3 of 5 reviews are the 85mm f/1.8G: gated rebuild leaves 2, under the factory floor (3) - identity question, held"
+ }
+}
