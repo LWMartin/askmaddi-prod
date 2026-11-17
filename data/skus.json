@@ -42760,7 +42760,15 @@
                 "token_match": false
               }
             ]
-          }
+          },
+          "adjudications": [
+            {
+              "action": "dismiss",
+              "actor": "admin",
+              "at": "2026-11-16T21:26:23Z",
+              "reason": "variant_ambiguous"
+            }
+          ]
         },
         "market_title": "Autel EVO II Plus 8K MDCS Quadcopter Camera Drone - VERY GOOD condition",
         "image": "https://i.ebayimg.com/images/g/f5oAAeSwcxxqs2TR/s-l1600.jpg",
@@ -65430,6 +65438,173 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-15T06:01:24Z"
+    },
+    "sony-12-24mm-f4": {
+      "contamination_key": "sony-12-24mm-f4",
+      "vendor": "Sony",
+      "model": "12 24mm f4",
+      "gtin": "027242906112",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": ""
+      },
+      "identity": {
+        "mpn": "SEL1224G",
+        "brand": "Sony",
+        "market_title": "Sony FE 12-24mm f/4 G Lens for Sony E",
+        "image": "https://www.adorama.com/images/Large/ISO1224E.jpg"
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fsony-fe-12-24-mm-f-4-g-lens%2Fp%2Fiso1224e",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-16T21:24:00Z"
+    },
+    "panasonic-25-250mm-f2.8": {
+      "contamination_key": "panasonic-25-250mm-f2.8",
+      "vendor": "Panasonic",
+      "model": "25 250mm f2.8",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": ""
+      },
+      "identity": {
+        "mpn": "DMC-ZS100K",
+        "brand": "Panasonic",
+        "market_title": "Panasonic Lumix DMC-ZS100 Digital Camera, 20.1MP, 25-250mm F/2.8-5.9 LEICA DC Lens Zoom, WiFi and Electronic Viewfinder, Black",
+        "image": "https://www.adorama.com/images/Large/IPCDMCZS100B.JPG"
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fused-panasonic-lumix-dmc-zs100-digital-camera-201mp-25-250mm-f-28-59-leica-dc-lens-zoom-wifi-and-electronic-viewfinder-black%2Fp%2Fus2116973",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-16T21:24:11Z"
+    },
+    "barska-20-60x60-blackhawk-bak": {
+      "contamination_key": "barska-20-60x60-blackhawk-bak",
+      "vendor": "Barska",
+      "model": "20 60x60 blackhawk bak",
+      "gtin": "790272980987",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": ""
+      },
+      "identity": {
+        "mpn": "AD11284",
+        "brand": "Barska",
+        "market_title": "Barska 20-60x60 Blackhawk Angled Spotting Scope with Tripod, Green",
+        "image": "https://www.adorama.com/images/Large/BA206060ABH_1.jpg"
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fbarska-20-60-x-60-blackhawk-waterproof-spotting-scope%2Fp%2Fba206060abh",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-16T21:24:32Z"
+    },
+    "canon-eos-5d-iv": {
+      "contamination_key": "canon-eos-5d-iv",
+      "vendor": "Canon",
+      "model": "eos 5d iv",
+      "gtin": "04549292075748",
+      "marketplace_ids": {
+        "ebay_epid": "230154655",
+        "ebay_legacy_item_id": "820351277006",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "1483C002",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": true,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "4549292075748",
+              "gtin14": "04549292075748",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0013803281347",
+              "gtin14": "00013803281347",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0013803281347",
+              "gtin14": "00013803281347",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "4549292075748",
+              "gtin14": "04549292075748",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0013803281347",
+              "gtin14": "00013803281347",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Canon EOS 5D Mark IV 30.4MP Digital SLR Camera - Black (Body Only)",
+        "image": "https://i.ebayimg.com/images/g/xkIAAeSwIEpq91VQ/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/WucAAOSwsCZjd2Gg/s-l640.jpg",
+        "price_seen": {
+          "value": "599.00",
+          "currency": "USD",
+          "as_of": "2026-11-16T04:01:57Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820351277006?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-16T21:25:06Z"
     }
   },
   "substrate": [
