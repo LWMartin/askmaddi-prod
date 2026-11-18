@@ -292,3 +292,75 @@ def test_sweep_names_the_listing_a_photo_came_from(tmp_path):
     lines = []
     sweep.run(slug='needs-one', ebay=ebay, registry_path=p, sleep_s=0, out=lines.append)
     assert any('from: Sony A7C II ILCE-7CM2' in ln for ln in lines)
+
+
+# ─── 2026-11-18: epid dedupe + name fallback ─────────────────────────────────
+class QueryEbay(FakeEbay):
+    """Candidates depend on the query string."""
+    def __init__(self, by_query, resolves=None):
+        super().__init__(resolves=resolves)
+        self.by_query = by_query
+
+    def search_candidates(self, query, limit=10):
+        self.search_calls.append(query)
+        return self.by_query.get(query, [])
+
+
+def test_epid_without_photo_is_not_reread():
+    # Live Z 24mm case: five listings of one catalog product, none with a photo.
+    cands = [_cand(f'v1|{i}|0', f'Nikon Z 24mm f/1.8 S #{i}', epid='e3035') for i in range(5)]
+    cands.append(_cand('v1|other|0', 'Nikon Z 24mm f/1.8 S lens', epid='e4000'))
+    ebay = FakeEbay(candidates=cands,
+                    resolves={'v1|other|0': {'image_catalog': CAT_URL, 'mpn': '20080'}})
+    res = isp.rescue_catalog_image('s', _entry(brand='Nikon', mpn='20080'), ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.RESCUED
+    assert ebay.resolve_calls == ['v1|0|0', 'v1|other|0']
+
+
+def test_firewall_rejected_epid_is_still_retried():
+    # A photo that failed the part-number check says nothing about the next
+    # listing of the same product, which may carry the number.
+    ebay = FakeEbay(
+        candidates=[_cand('v1|a|0', 'Nikon Z 24mm lens', epid='e1'),
+                    _cand('v1|b|0', 'Nikon Z 24mm lens boxed', epid='e1')],
+        resolves={'v1|a|0': {'image_catalog': CAT_URL, 'mpn': ''},
+                  'v1|b|0': {'image_catalog': CAT_URL, 'mpn': '20080'}})
+    res = isp.rescue_catalog_image('s', _entry(brand='Nikon', mpn='20080'), ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.RESCUED
+    assert res['image_provenance']['winner']['item_id'] == 'v1|b|0'
+
+
+def test_name_fallback_when_part_number_finds_nothing():
+    entry = _entry(brand='Nikon', mpn='20135')
+    entry['overrides'] = {'display_name': 'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S'}
+    ebay = QueryEbay(
+        {'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S': [
+            _cand('v1|z|0', 'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S', epid='e9')]},
+        resolves={'v1|z|0': {'image_catalog': CAT_URL, 'mpn': '20135'}})
+    res = isp.rescue_catalog_image('nikon-120-300mm-f2-8', entry, ebay=ebay, sleep_s=0)
+    assert ebay.search_calls == ['Nikon 20135', 'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S']
+    assert res['verdict'] == isp.RESCUED
+    assert res['query'] == 'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S'
+
+
+def test_name_fallback_keeps_the_part_number_firewall():
+    # The name search finds the F-mount sibling; its getItem mpn is not ours.
+    entry = _entry(brand='Nikon', mpn='20135')
+    entry['overrides'] = {'display_name': 'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S'}
+    ebay = QueryEbay(
+        {'Nikon NIKKOR Z 120-300mm f/2.8 TC VR S': [
+            _cand('v1|f|0', 'Nikon AF-S 120-300mm f/2.8E FL ED SR VR', epid='e8')]},
+        resolves={'v1|f|0': {'image_catalog': CAT_URL, 'mpn': '20073'}})
+    res = isp.rescue_catalog_image('nikon-120-300mm-f2-8', entry, ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.NO_CATALOG_FOUND
+    assert res['inspected'][0]['rejected'] == 'identity-firewall'
+
+
+def test_no_name_fallback_when_part_number_search_had_candidates():
+    ebay = QueryEbay({'Sony SEL50M28': [_cand('v1|s|0', 'Sony SEL50M28', epid='e1')]},
+                     resolves={'v1|s|0': {}})
+    entry = _entry(brand='Sony', mpn='SEL50M28')
+    entry['overrides'] = {'display_name': 'Sony FE 50mm f/2.8 Macro'}
+    res = isp.rescue_catalog_image('s', entry, ebay=ebay, sleep_s=0)
+    assert res['verdict'] == isp.NO_CATALOG_FOUND
+    assert ebay.search_calls == ['Sony SEL50M28']

@@ -71,6 +71,13 @@ def _entry_epid(entry):
     return ((entry or {}).get('marketplace_ids', {}) or {}).get('ebay_epid', '')
 
 
+def _display_name(entry):
+    """The product's display name: the /admin override (rename_cards writes
+    it), else the spine label. Empty when neither is set."""
+    ov = ((entry or {}).get('overrides', {}) or {}).get('display_name') or ''
+    return (ov or (entry or {}).get('label') or '').strip()
+
+
 def needs_rescue(entry):
     """True if this entry is missing a catalog image AND is machine-writable.
 
@@ -143,6 +150,24 @@ def rescue_catalog_image(slug, entry, *, ebay=None,
 
     # Catalog images live on catalog-associated listings only.
     assoc = [c for c in cands if c.get('epid')]
+
+    # Name fallback (2026-11-18): sellers often leave a numeric part number out
+    # of the title ('Nikon 20135' finds no catalog-linked listing for the Z
+    # 120-300mm), so when the part-number search finds nothing, search once by
+    # the product's display name. The firewall below is unchanged: a candidate
+    # is still accepted only on epid equality or the part number, so a looser
+    # query can widen what is LOOKED AT, never what is ACCEPTED.
+    if not assoc and brand and mpn:
+        name = _display_name(entry)
+        if name and name.lower() != query.lower():
+            try:
+                cands = ebay.search_candidates(name, limit=10)
+            except Exception as e:
+                return {'image_catalog': None, 'image_provenance': None,
+                        'verdict': f'{SEARCH_FAILED}: {e}', 'query': name}
+            assoc = [c for c in cands if c.get('epid')]
+            query = name
+
     if not assoc:
         return {'image_catalog': None, 'image_provenance': None,
                 'verdict': NO_CANDIDATES, 'query': query}
@@ -169,9 +194,18 @@ def rescue_catalog_image(slug, entry, *, ebay=None,
     resolves_spent = 0
     winner = None
     win_url = ''
+    # A catalog photo belongs to the catalog PRODUCT (epid), not the listing:
+    # once one listing shows its epid carries no photo, every other listing of
+    # that epid will too. Live 2026-11-18: the Z 24mm sweep spent all 5
+    # resolves re-reading epid 3035245934. Skip those; an epid whose photo was
+    # REJECTED by the firewall is still retried (another listing of it may
+    # carry the part number in its title or getItem mpn).
+    no_photo_epids = set()
     for c in assoc:
         if resolves_spent >= max_resolves:
             break
+        if c.get('epid') in no_photo_epids:
+            continue
         if resolves_spent and sleep_s:
             time.sleep(sleep_s)
         resolves_spent += 1
@@ -186,6 +220,8 @@ def rescue_catalog_image(slug, entry, *, ebay=None,
         r_ident = (r.get('identity', {}) or {})
         url = (r_ident.get('image_catalog') or '').strip()
         note['had_catalog'] = bool(url)
+        if not url:
+            no_photo_epids.add(c.get('epid'))
 
         # Acceptance firewall (post-resolve, full evidence in hand). Either:
         #   (a) epid equality with the entry's own epid — identity-strongest;
