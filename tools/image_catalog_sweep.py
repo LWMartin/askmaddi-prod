@@ -102,6 +102,10 @@ def run(*, slug=None, commit=False, limit=None, max_resolves=5,
         if verdict == isp.RESCUED:
             summary['rescued'] += 1
             line += f"  {res['image_catalog']}"
+            # Name the listing the photo came from, so a dry run can be judged
+            # by eye (an A7S II catalog shot looks like the A7S's).
+            win = ((res.get('image_provenance') or {}).get('winner') or {})
+            line += f"\n      from: {win.get('title', '')[:90]}"
             if commit:
                 status = skus_registry.set_image_catalog(
                     s, res['image_catalog'], res['image_provenance'],

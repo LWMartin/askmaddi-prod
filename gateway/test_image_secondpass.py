@@ -281,3 +281,14 @@ def test_sweep_single_slug_and_missing_slug(tmp_path):
     assert s['per_slug'] == {'needs-one': isp.RESCUED}
     s = sweep.run(slug='ghost', ebay=ebay, registry_path=p, out=lambda *_: None)
     assert s.get('error') == 'missing-slug'
+
+
+def test_sweep_names_the_listing_a_photo_came_from(tmp_path):
+    """A dry run must be judgeable by eye: the URL alone cannot tell an A7S
+    catalog shot from an A7S II one, the listing title can (2026-11-18)."""
+    p = _sweep_registry(tmp_path)
+    ebay = FakeEbay(candidates=[_cand('v1|1|0', 'Sony A7C II ILCE-7CM2')],
+                    resolves={'v1|1|0': {'image_catalog': CAT_URL}})
+    lines = []
+    sweep.run(slug='needs-one', ebay=ebay, registry_path=p, sleep_s=0, out=lines.append)
+    assert any('from: Sony A7C II ILCE-7CM2' in ln for ln in lines)
