@@ -535,6 +535,14 @@ def _merge_enrichment(existing, entry):
         entry['unbound_listings'] = list(entry.get('unbound_listings') or []) + [
             r for r in prior_unbound if r.get('item_id') not in seen]
 
+    # BOUND listings (bind_listing doctrine): receipts of listings bound by a
+    # verified part-number match. Audit trail only; carried like unbound.
+    prior_bound = existing.get('bound_listings')
+    if prior_bound:
+        seen_b = {r.get('item_id') for r in (entry.get('bound_listings') or [])}
+        entry['bound_listings'] = list(entry.get('bound_listings') or []) + [
+            r for r in prior_bound if r.get('item_id') not in seen_b]
+
     entry['needs_review'] = entry.get('gtin') is None or entry.get('unspsc') is None
     return entry
 
@@ -823,6 +831,74 @@ def unbind_listing(slug, expect_item_id, provenance, path=SKUS_PATH):
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'unbound'
+
+
+def bind_listing(slug, resolved, provenance, path=SKUS_PATH):
+    """Bind a verified eBay listing onto an UNBOUND spine entry. The inverse of
+    unbind_listing, and as narrow.
+
+    Why (2026-11-18): unbind_listing took 16 wrong-product listings off re-
+    pointed cards, and nothing ever bound a right one back - resolve_pass only
+    resolves new proposals, no cron revisits an existing entry, and a rebuild
+    reads the spine's image without re-resolving. Those cards had no eBay link,
+    seller photo or used price. The caller (tools/bind_listing.py) judges the
+    listing; this writes it.
+
+    COMPARE-AND-SWAP on "unbound": refuses an entry that has a listing now
+    ('already-bound'), so a concurrent resolve is never overwritten. Refuses a
+    listing that is on the entry's unbound_listings ('previously-unbound') - the
+    same rule the rebind firewall enforces, held here too so the writer cannot
+    be the hole.
+
+    Writes exactly the fields unbind_listing clears, from `resolved` (an
+    ebay_api.resolve() result): identity.{market_title, image, price_seen},
+    marketplace_ids.{ebay_legacy_item_id, ebay_epid}, affiliate.ebay_epn_url;
+    identity.image_catalog only when the entry has none (set_image_catalog
+    doctrine: a capture on the spine is never clobbered). Never touches brand,
+    mpn, gtin, facet, overrides or any receipt. Appends a receipt to
+    `bound_listings`.
+
+    Returns 'bound' | 'already-bound' | 'previously-unbound' | 'no-listing-id'
+    | 'missing-slug'. Atomic.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+    if str(get_marketplace_id(entry, 'ebay_legacy_item_id') or '').strip():
+        return 'already-bound'
+    r_ident = dict((resolved or {}).get('identity') or {})
+    item_id = str(r_ident.get('legacy_item_id') or '').strip()
+    if not item_id:
+        return 'no-listing-id'
+    if item_id in {str(r.get('item_id') or '').strip()
+                   for r in (entry.get('unbound_listings') or [])}:
+        return 'previously-unbound'
+
+    identity = entry.setdefault('identity', {})
+    ids = entry.setdefault('marketplace_ids', {})
+    affiliate = entry.setdefault('affiliate', {})
+    for field in ('market_title', 'image', 'price_seen'):
+        if r_ident.get(field):
+            identity[field] = r_ident[field]
+    if not (identity.get('image_catalog') or '').strip() and r_ident.get('image_catalog'):
+        identity['image_catalog'] = r_ident['image_catalog']
+    ids['ebay_legacy_item_id'] = item_id
+    ids['ebay_epid'] = str(r_ident.get('epid') or '')
+    affiliate['ebay_epn_url'] = (resolved or {}).get('affiliate_url', '') or ''
+    receipt = {
+        'item_id': item_id,
+        'epid': ids['ebay_epid'],
+        'title': r_ident.get('market_title', ''),
+        'listing_mpn': r_ident.get('mpn', ''),
+        'bound_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    }
+    receipt.update(dict(provenance or {}))
+    entry.setdefault('bound_listings', []).append(receipt)
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'bound'
 
 
 def correct_brand(slug, new_brand, provenance, expect_brand, path=SKUS_PATH):
