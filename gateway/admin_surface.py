@@ -423,6 +423,12 @@ def _reason_badge(record):
         # if a true dup, reject the junior as `duplicate`; if a mis-stamp, fix
         # the wrong slug's identity. collision_with names the sibling slug.
         return ('duplicate identity', record.get('collision_with') or '?')
+    if reason == 'brand_mismatch':
+        # The listing names another maker (often the MOUNT: 'Sony' on a
+        # TTArtisan lens) or a placeholder ('Unbranded'). Promote with the right
+        # brand, or reject if the listing is aftermarket ('compatible with DJI').
+        listing = ((record.get('identity') or {}).get('brand')) or 'none'
+        return ('brand mismatch', f"listing says {listing!r}")
     return ('needs review', '')
 
 

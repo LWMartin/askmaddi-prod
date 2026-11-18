@@ -543,6 +543,46 @@ def _model_family_agrees(brand_a, model_a, brand_b, model_b):
     return not ((large - small) & _VARIANT_MARKERS)
 
 
+# ── Mint brand guard (2026-11-18; queued 11-05) ───────────────────────────────
+# A mint takes its rendered brand from the listing (identity.brand). On 11-05
+# six live cards carried a seller's wrong brand - 'Sony' on a TTArtisan lens
+# (the MOUNT, not the maker), 'Unbranded' on a Canon PowerShot - and three
+# 'compatible with DJI' aftermarket builds minted as DJI products. correct_brand
+# repaired the data; this stops the class at mint: a listing whose brand does
+# not agree with the proposal's vendor goes to review, never straight to spine.
+_BRAND_PLACEHOLDERS = frozenset({
+    'unbranded', 'generic', 'doesnotapply', 'dosenotapply', 'na', 'none',
+    'unknown', 'notapplicable', 'nobrand', 'oem'})
+# Renames / trading names of ONE maker: either side may use any form.
+_BRAND_SAME = (frozenset({'fujifilm', 'fuji'}),
+               frozenset({'olympus', 'omsystem', 'omdigital', 'omdigitalsolutions'}))
+
+
+def _brand_words(b):
+    return set(re.findall(r'[a-z0-9]+', str(b or '').lower()))
+
+
+def _mint_brand_agrees(vendor, listing_brand):
+    """True when the listing's brand can stand for the vendor. An EMPTY brand is
+    no evidence (the extractor found none; the card falls back to the vendor) and
+    passes; an explicit placeholder ('Unbranded', 'Does not apply') does NOT -
+    it is what rendered as the PowerShot's brand. Agreement is word-level ('Paul
+    C Buff' / 'Paul C. Buff'; 'INSTA360 GO3' / 'Insta360') or a known rename."""
+    b = str(listing_brand or '').strip()
+    if not b:
+        return True
+    nb = re.sub(r'[^a-z0-9]', '', b.lower())
+    if nb in _BRAND_PLACEHOLDERS:
+        return False
+    nv = re.sub(r'[^a-z0-9]', '', str(vendor or '').lower())
+    if not nv:
+        return True
+    if any(nv in g and nb in g for g in _BRAND_SAME):
+        return True
+    wv, wb = _brand_words(vendor), _brand_words(b)
+    return wv <= wb or wb <= wv
+
+
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
                      vendor=None, model=None,
                      gtin=None, mpn=None, product_url=None,
@@ -729,6 +769,22 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
     # the Autel EVO II Pro / Skydio 2 dups found live. Only a MINT can create a
     # NEW dup slug (an enrich reuses the canonical slug), so the gate is
     # mint-only; a placeholder MPN is never a join key (skus_registry strips it).
+    if minted and not _mint_brand_agrees(
+            target['vendor'], resolved.get('identity', {}).get('brand')):
+        resolution = _FactoryResolution(slug=slug, input_text=target['label'])
+        eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+        record = review_queue.enqueue(
+            resolution, resolved, target['vendor'], target['model'], category,
+            contamination_key=target['contamination_key'],
+            reason_override='brand_mismatch',
+            candidates=verdict['ranked'], **eq_kwargs)
+        return {
+            'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+            'reason': 'brand_mismatch',
+            'listing_brand': resolved.get('identity', {}).get('brand'),
+            'source': target['source'],
+        }
+
     if minted:
         _rid = resolved.get('identity', {})
         dup_slugs = skus_registry.find_by_product_identity(

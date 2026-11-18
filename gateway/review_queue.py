@@ -73,7 +73,10 @@ ENQUEUE_REASONS = ('collision', 'needs_review', 'low_resolve_confidence',
                    # Cross-slug product-identity dedup gate (mint guard):
                    'duplicate_identity_contradiction',  # shared id, DIFFERENT product (mis-stamp)
                    # Contamination-join gate (mint structural guard, 2026-08-27):
-                   'no_contamination_entry')   # new slug has no resolvable contamination_key
+                   'no_contamination_entry',   # new slug has no resolvable contamination_key
+                   # Mint brand guard (2026-11-18): listing brand is another maker's,
+                   # or a placeholder ('Unbranded'), so it cannot stand for the vendor.
+                   'brand_mismatch')
 
 # Structured reject reasons — a reject is a pipeline-bug signal, so the reason is
 # a controlled vocab the upstream-fix workflow can key on, not freetext.

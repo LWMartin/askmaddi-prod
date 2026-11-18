@@ -607,13 +607,27 @@ def _contam_file(tmp_path, keys):
     return p
 
 
+def _canon_r100_ebay():
+    """The contamination-join tests mint canon-eos-r100: the pick must be a Canon
+    listing, or the mint brand guard (2026-11-18) rightly stops it first."""
+    return MockEbay(
+        candidates=[{'item_id': 'v1|700|0', 'title': 'Canon EOS R100 Body', 'price': '479',
+                     'currency': 'USD', 'condition': 'New', 'epid': '', 'brand': 'Canon'}],
+        resolve_map={'v1|700|0': {
+            'identity': {'epid': '', 'legacy_item_id': 'v1|700|0', 'ebay_category_id': '625',
+                         'brand': 'Canon', 'mpn': '6052C002',
+                         'market_title': 'Canon EOS R100 Body', 'image': 'https://img/r100.jpg',
+                         'price_seen': {'value': '479', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': 'https://ebay/itm/v1|700|0'}})
+
+
 def test_mint_unresolved_contamination_routes_to_review(
         skus_path, queue_path, demand_path, tmp_path, monkeypatch):
     # A NEW slug whose contamination_key resolves to NOTHING (no specific, no
     # canon-generic) must NOT enter the spine silently-broken — it routes to review.
     monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
                        str(_contam_file(tmp_path, ['sony-generic'])))
-    ebay = MockEbay(candidates=CANDS)
+    ebay = _canon_r100_ebay()
     out = resolve_sku.resolve_proposal(
         'canon-eos-r100', vendor='Canon', model='EOS R100',
         ebay=ebay, gemma=_gemma(0, 0.95),
@@ -632,7 +646,7 @@ def test_mint_resolves_to_brand_generic_and_records_tier(
     # key + a coverage-debt tier, instead of the dangling self-name.
     monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
                        str(_contam_file(tmp_path, ['canon-generic'])))
-    ebay = MockEbay(candidates=CANDS)
+    ebay = _canon_r100_ebay()
     out = resolve_sku.resolve_proposal(
         'canon-eos-r100', vendor='Canon', model='EOS R100',
         ebay=ebay, gemma=_gemma(0, 0.95),
@@ -651,7 +665,7 @@ def test_mint_specific_entry_stores_slug_no_tier(
     # verbatim and no coverage-debt tier is recorded.
     monkeypatch.setenv('ASKMADDI_CONTAMINATION_JSON',
                        str(_contam_file(tmp_path, ['canon-eos-r100'])))
-    ebay = MockEbay(candidates=CANDS)
+    ebay = _canon_r100_ebay()
     out = resolve_sku.resolve_proposal(
         'canon-eos-r100', vendor='Canon', model='EOS R100',
         ebay=ebay, gemma=_gemma(0, 0.95),
@@ -791,3 +805,58 @@ def test_model_family_agrees_distinguishes_dups_from_variants():
     assert not f('DJI', 'Avata 2', 'DJI', 'Avata 3')           # different model number
     assert not f('Sony', 'a7R', 'Sony', 'a7 V')               # not contained
     assert not f('DJI', 'Avata 2', 'Autel', 'Avata 2')        # cross-brand
+
+
+# ── mint brand guard (2026-11-18) ─────────────────────────────────────────────
+def _brand_mint(tmp_path, queue_path, demand_path, listing_brand, vendor='TTArtisan',
+                slug='ttartisan-af-27mm'):
+    skus = _mint_seed(tmp_path)
+    ebay = MockEbay(
+        candidates=[{'item_id': 'v1|901|0', 'title': 'TTArtisan AF 27mm f/2.8 for Sony E',
+                     'price': '159', 'currency': 'USD', 'condition': 'New',
+                     'epid': '', 'brand': listing_brand}],
+        resolve_map={'v1|901|0': {
+            'identity': {'epid': '', 'legacy_item_id': 'v1|901|0',
+                         'ebay_category_id': '3323', 'brand': listing_brand,
+                         'mpn': '', 'market_title': 'TTArtisan AF 27mm f/2.8 for Sony E',
+                         'image': 'https://img/tt.jpg',
+                         'price_seen': {'value': '159', 'currency': 'USD', 'as_of': 'now'}},
+            'affiliate_url': 'https://ebay/itm/v1|901|0'}})
+    out = resolve_sku.resolve_proposal(
+        slug, ebay=ebay, gemma=_gemma(0, 0.95), vendor=vendor, model='AF 27mm f/2.8',
+        demand_log=__import__('demand_log'), review_queue=review_queue,
+        floor=0.70, skus_path=skus, review_queue_path=queue_path, demand_log_path=demand_path)
+    return out, skus_registry.load_registry(skus)['skus']
+
+
+def test_mint_with_another_makers_brand_goes_to_review(tmp_path, queue_path, demand_path):
+    # 11-05 live: 'Sony' (the mount) stamped as the brand of a TTArtisan lens.
+    out, spine = _brand_mint(tmp_path, queue_path, demand_path, 'Sony')
+    assert out['outcome'] == 'queued' and out['reason'] == 'brand_mismatch'
+    assert not any(k.startswith('ttartisan-af-27mm') for k in spine)
+    assert review_queue.load_pending(queue_path)[0]['reason'] == 'brand_mismatch'
+
+
+def test_mint_with_a_placeholder_brand_goes_to_review(tmp_path, queue_path, demand_path):
+    # 11-05 live: 'Unbranded' rendered as a Canon PowerShot's brand.
+    out, spine = _brand_mint(tmp_path, queue_path, demand_path, 'Unbranded')
+    assert out['reason'] == 'brand_mismatch'
+    assert not any(k.startswith('ttartisan-af-27mm') for k in spine)
+
+
+def test_mint_with_agreeing_or_absent_brand_still_mints(tmp_path, queue_path, demand_path):
+    out, spine = _brand_mint(tmp_path, queue_path, demand_path, 'TTARTISAN')
+    assert out['outcome'] == 'resolved'
+    assert any(k.startswith('ttartisan-af-27mm') for k in spine)
+    (tmp_path / 'b').mkdir()
+    out2, _ = _brand_mint(tmp_path / 'b', queue_path, demand_path, '')
+    assert out2['outcome'] == 'resolved'
+
+
+def test_brand_agreement_rules():
+    ok = resolve_sku._mint_brand_agrees
+    assert ok('Insta360', 'INSTA360 GO3') and ok('Paul C. Buff', 'Paul C Buff')
+    assert ok('Fujifilm', 'Fuji') and ok('Olympus', 'OM SYSTEM')
+    assert ok('Canon', '')                       # no evidence: falls back to vendor
+    assert not ok('DJI', 'Droneer') and not ok('Canon', 'Does not apply')
+    assert not ok('Fujifilm', 'Olympus')
