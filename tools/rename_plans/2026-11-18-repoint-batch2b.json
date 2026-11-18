@@ -1,0 +1,39 @@
+{
+ "_description": "Held-identity batch 2b re-points (2026-11-18): the cards whose reviews name a different product than the listing, under the same rule as 2026-11-18-repoint.json (unanimous, or a majority of at least 6, consistent with the slug; listing stands where another card covers the product). Part numbers verified against retailer and manufacturer pages: Canon 2045B002 (B&H, Adorama), Canon 1362C002 (B&H, Adorama), Nikon 20101 (Nikon Canada; the SE edition is 20110, same optic), Sony SEL50M28. Applied with tools/fix_wrong_listing.py --plan (correct_mpn, then unbind the old listing).",
+ "reviewed_by": "Lee",
+ "reviewed_on": "2026-11-18",
+ "repoints": [
+  {
+   "slug": "canon-14mm-f2-8",
+   "expect_item": "267771333141",
+   "expect_mpn": "",
+   "mpn": "2045B002",
+   "new_name": "Canon EF 14mm f/2.8L II USM",
+   "reason": "reviews naming a version are 4/4 the EF 14mm f/2.8L II USM (RF 14mm f/1.4 excluded: not f/2.8); listing was the gen-I EF 14mm f/2.8L USM"
+  },
+  {
+   "slug": "canon-28mm-f3-5",
+   "expect_item": "336761366373",
+   "expect_mpn": "",
+   "mpn": "1362C002",
+   "new_name": "Canon EF-M 28mm f/3.5 Macro IS STM",
+   "reason": "reviews 9 of 11 naming a version are the EF-M 28mm f/3.5 Macro IS STM (FL 2, FD 0); listing was a used FD 28mm f/3.5"
+  },
+  {
+   "slug": "nikon-28mm-f2-8",
+   "expect_item": "168349678077",
+   "expect_mpn": "NA",
+   "mpn": "20101",
+   "new_name": "Nikon NIKKOR Z 28mm f/2.8",
+   "reason": "reviews 12 of about 17 naming a version are the Z 28mm f/2.8 (incl. SE); listing was a used Ai 28mm f/2.8. nikon-z-28 is an unbuilt mint listed as the Z 28-400, so no card covers it"
+  },
+  {
+   "slug": "sony-50mm-f2-8",
+   "expect_item": "227500838396",
+   "expect_mpn": "SAL50M28",
+   "mpn": "SEL50M28",
+   "new_name": "Sony FE 50mm f/2.8 Macro",
+   "reason": "reviews 3/3 naming a 50mm f/2.8 are the FE 50mm f/2.8 Macro SEL50M28; listing was the A-mount SAL50M28"
+  }
+ ]
+}
