@@ -11,6 +11,14 @@ For each work_queue record in state review_ready it prints, in one block:
   - whether the slug is on a rebuild roster in tools/rename_plans/ (so a card
     that arrived through the ordinary drip is labelled as such).
 
+After the review_ready blocks it lists every DELIBERATELY RE-OPENED record
+(requeued_at set) that parked `corpus_thin` or `failed` instead. A regather that
+parks thin found too few reviews of its own product; the 2026-11-18 ruling is
+to delist it rather than keep serving the old card, so those slugs are printed
+as one delist_card dry-run line. `failed` is listed for diagnosis only: a crash
+says nothing about the product. Records that parked thin without ever being
+re-opened are old mints, never cards, and are not this digest's business.
+
 It writes nothing. It exists so a batch of rebuilds can be reviewed from one
 paste instead of one command per card, and so the dropped titles can be held
 against the gate simulation that predicted them (2026-11-17 registry v1.10.0).
@@ -64,6 +72,37 @@ def sidecar_lines(card_path, width):
     return out
 
 
+def parked_regathers(q):
+    """(thin, failed): re-opened records whose rebuild parked instead of
+    reaching review. Sorted slugs; each item is (slug, record)."""
+    thin, failed = [], []
+    for slug in sorted(q):
+        rec = q[slug]
+        if not rec.get('requeued_at'):
+            continue
+        if rec.get('state') == 'corpus_thin':
+            thin.append((slug, rec))
+        elif rec.get('state') == 'failed':
+            failed.append((slug, rec))
+    return thin, failed
+
+
+def parked_lines(q, cards_dir, width):
+    thin, failed = parked_regathers(q)
+    out = [f'{len(thin)} re-opened card(s) parked corpus_thin, '
+           f'{len(failed)} failed']
+    for label, rows in (('thin', thin), ('failed', failed)):
+        for slug, rec in rows:
+            live = 'live card up' if (Path(cards_dir) / f'{slug}.json').is_file() else 'no live card'
+            out.append(f'  {label:6} {slug}  [{live}]  '
+                       f'{(rec.get("last_error") or "")[:width]}')
+    if thin:
+        out.append('  delist (dry run; add --apply to write): '
+                   'sudo -u askmaddi python3 tools/delist_card.py '
+                   + ' '.join(f'--slug {s}' for s, _ in thin))
+    return out
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--queue', default='data/work_queue.json')
@@ -94,6 +133,9 @@ def main(argv=None):
             print(ln)
         print()
     print(f'summary: {tally[0]} safe, {tally[1]} do not approve, {tally[2]} could not check')
+    print()
+    for ln in parked_lines(q, args.cards_dir, args.width):
+        print(ln)
     return 0
 
 
