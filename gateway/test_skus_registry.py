@@ -628,3 +628,81 @@ def test_correct_brand_is_compare_and_swap_case_sensitive(tmp_path):
         raise AssertionError('empty brand must be refused')
     except ValueError:
         pass
+
+
+# ── unbind_listing: a wrong-product listing comes off, and stays off (2026-11-18) ──
+_UNBIND_PROV = {'method': 'unbind-wrong-product', 'reason': 'listing is the A7S II',
+                'actor': 'lee'}
+
+
+def _a7s(p):
+    """sony-a7s as it stood: an A7S II listing bound on 2026-09-15."""
+    reg.upsert('sony-a7s', reg.build_entry(
+        slug='sony-a7s', vendor='Sony', model='a7s', facet='body',
+        contamination_key='sony-a7s', resolved=_resolved(
+            epid='', legacy='358393938452', mpn='ILCE7SM2/B', price='440.99',
+            title='Sony Alpha A7S II ILCE-7SM2 Digital Camera 12.2MP 4K E-mount Camera Body only')),
+        path=p)
+    data = json.loads(p.read_text())
+    data['skus']['sony-a7s']['identity']['image_catalog'] = 'https://i.ebayimg.com/a7s2.jpg'
+    data['skus']['sony-a7s']['identity']['image_provenance'] = {'query': 'Sony ILCE7SM2/B'}
+    p.write_text(json.dumps(data))
+
+
+def test_unbind_clears_listing_fields_and_keeps_a_receipt(tmp_path):
+    p = tmp_path / 'skus.json'
+    _a7s(p)
+    assert reg.correct_mpn('sony-a7s', 'ILCE7S/B', _FEED_PROV, expect_mpn='ILCE7SM2/B', path=p) == 'corrected'
+    assert reg.unbind_listing('sony-a7s', '358393938452', _UNBIND_PROV, path=p) == 'unbound'
+    e = json.loads(p.read_text())['skus']['sony-a7s']
+    ident = e['identity']
+    for gone in ('market_title', 'image', 'image_catalog', 'image_provenance', 'price_seen'):
+        assert gone not in ident
+    assert e['marketplace_ids']['ebay_legacy_item_id'] == ''
+    assert e['affiliate']['ebay_epn_url'] == ''
+    # product-level identity untouched
+    assert ident['mpn'] == 'ILCE7S/B' and ident['brand'] == 'Sony'
+    assert e['facet'] == 'body' and e['contamination_key'] == 'sony-a7s'
+    [r] = e['unbound_listings']
+    assert r['item_id'] == '358393938452'
+    assert r['market_title'].startswith('Sony Alpha A7S II')
+    assert r['image_catalog'] == 'https://i.ebayimg.com/a7s2.jpg'
+    assert r['reason'] == 'listing is the A7S II'
+
+
+def test_unbind_is_compare_and_swap(tmp_path):
+    p = tmp_path / 'skus.json'
+    _a7s(p)
+    before = p.read_text()
+    assert reg.unbind_listing('sony-a7s', '111', _UNBIND_PROV, path=p) == 'stale-expect'
+    assert reg.unbind_listing('sony-a7s', '', _UNBIND_PROV, path=p) == 'stale-expect'
+    assert p.read_text() == before
+    assert reg.unbind_listing('ghost', '358393938452', _UNBIND_PROV, path=p) == 'missing-slug'
+    assert reg.unbind_listing('sony-a7s', '358393938452', _UNBIND_PROV, path=p) == 'unbound'
+    assert reg.unbind_listing('sony-a7s', '358393938452', _UNBIND_PROV, path=p) == 'no-listing'
+
+
+def test_unbound_entry_is_selected_by_the_image_sweep(tmp_path):
+    """With the A7S II catalog photo gone the sweep picks the entry up again,
+    and it searches by brand + the corrected mpn."""
+    import image_secondpass
+    p = tmp_path / 'skus.json'
+    _a7s(p)
+    e = json.loads(p.read_text())['skus']['sony-a7s']
+    assert image_secondpass.needs_rescue(e) is False
+    reg.correct_mpn('sony-a7s', 'ILCE7S/B', _FEED_PROV, expect_mpn='ILCE7SM2/B', path=p)
+    reg.unbind_listing('sony-a7s', '358393938452', _UNBIND_PROV, path=p)
+    assert image_secondpass.needs_rescue(json.loads(p.read_text())['skus']['sony-a7s']) is True
+
+
+def test_unbound_receipts_survive_a_rebind(tmp_path):
+    """A lawful rebind to a different listing replaces the entry wholesale; the
+    receipt must ride along or the firewall forgets what was taken off."""
+    p = tmp_path / 'skus.json'
+    _a7s(p)
+    reg.correct_mpn('sony-a7s', 'ILCE7S/B', _FEED_PROV, expect_mpn='ILCE7SM2/B', path=p)
+    reg.unbind_listing('sony-a7s', '358393938452', _UNBIND_PROV, path=p)
+    _resell(p, 'sony-a7s', legacy='222', mpn='ILCE7S/B', title='Sony a7S body ILCE7S/B')
+    e = json.loads(p.read_text())['skus']['sony-a7s']
+    assert e['marketplace_ids']['ebay_legacy_item_id'] == '222'
+    assert [r['item_id'] for r in e['unbound_listings']] == ['358393938452']

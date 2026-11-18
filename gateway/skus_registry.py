@@ -526,6 +526,15 @@ def _merge_enrichment(existing, entry):
         identity[field] = old_val
         identity[prov_key] = kept
 
+    # UNBOUND listings (unbind_listing doctrine): receipts of listings a human
+    # took OFF this entry as the wrong product. resolve never writes them; they
+    # survive every replace so the firewall can refuse the same listing again.
+    prior_unbound = existing.get('unbound_listings')
+    if prior_unbound:
+        seen = {r.get('item_id') for r in (entry.get('unbound_listings') or [])}
+        entry['unbound_listings'] = list(entry.get('unbound_listings') or []) + [
+            r for r in prior_unbound if r.get('item_id') not in seen]
+
     entry['needs_review'] = entry.get('gtin') is None or entry.get('unspsc') is None
     return entry
 
@@ -742,6 +751,78 @@ def correct_mpn(slug, new_mpn, provenance, expect_mpn, path=SKUS_PATH):
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'corrected'
+
+
+# Listing-bound fields: what an eBay resolve stamps from the ONE listing it
+# bound. Product-level fields (brand, mpn, gtin, facet, category) are not here;
+# they have their own doors.
+_LISTING_IDENTITY_FIELDS = ('market_title', 'image', 'image_catalog',
+                            'image_provenance', 'price_seen')
+
+
+def unbind_listing(slug, expect_item_id, provenance, path=SKUS_PATH):
+    """Take a WRONG-PRODUCT eBay listing off a spine entry, keeping a receipt.
+
+    An eBay resolve binds one listing and stamps everything it carries onto
+    the entry: title, photo, catalog image, price, item id, affiliate link.
+    When that listing is another product (sony-a7s bound to an A7S II listing
+    on 2026-09-15; fujifilm-x100v to an X100VI; sigma-85mm-f1-2 to a Zhongyi
+    Mitakon), correct_mpn fixes the part number but the A7S II's title, photo
+    and link stay — and image_catalog_sweep deliberately never replaces an
+    existing catalog image. This is the door that removes them.
+
+    COMPARE-AND-SWAP on the bound listing: the write lands only if the entry's
+    current ebay_legacy_item_id equals `expect_item_id` (the listing the caller
+    verified is wrong). A rotated listing returns 'stale-expect' rather than
+    clearing something nobody looked at.
+
+    What is cleared: identity.{market_title, image, image_catalog,
+    image_provenance, price_seen}, marketplace_ids.{ebay_legacy_item_id,
+    ebay_epid}, affiliate.ebay_epn_url. What stays: brand, mpn, gtin, facet,
+    categories, overrides — product-level, each with its own door.
+
+    The receipt lands on `unbound_listings` (a list; a top-level key so it is
+    outside the identity the card renders). _merge_enrichment carries it across
+    every replace, and rebind_firewall rejects a rebind to any listed item —
+    otherwise the next resolve could bind the same wrong listing straight back.
+    With the listing gone, image_catalog_sweep selects the entry again and
+    searches by brand + mpn, so correct the mpn FIRST.
+
+    Returns 'unbound' | 'stale-expect' | 'no-listing' | 'missing-slug'. Atomic.
+    """
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+    current = str(get_marketplace_id(entry, 'ebay_legacy_item_id') or '').strip()
+    if not current:
+        return 'no-listing'
+    if current != str(expect_item_id or '').strip():
+        return 'stale-expect'
+
+    identity = entry.setdefault('identity', {})
+    ids = entry.setdefault('marketplace_ids', {})
+    affiliate = entry.setdefault('affiliate', {})
+    receipt = {
+        'item_id': current,
+        'epid': get_marketplace_id(entry, 'ebay_epid') or '',
+        'affiliate_url': affiliate.get('ebay_epn_url', ''),
+        'unbound_at': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
+    }
+    for field in _LISTING_IDENTITY_FIELDS:
+        if field in identity:
+            receipt[field] = identity.pop(field)
+    receipt.update(dict(provenance or {}))
+    for old_key in ('legacy_item_id', 'epid'):  # old-shape shadows
+        identity.pop(old_key, None)
+    ids['ebay_legacy_item_id'] = ''
+    ids['ebay_epid'] = ''
+    affiliate['ebay_epn_url'] = ''
+    entry.setdefault('unbound_listings', []).append(receipt)
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'unbound'
 
 
 def correct_brand(slug, new_brand, provenance, expect_brand, path=SKUS_PATH):

@@ -165,6 +165,33 @@ def _category(entry):
     return (cat or '').strip()
 
 
+def _core_mpn(v):
+    """A part number with its slash suffix dropped, then normalized.
+
+    Manufacturers append a colour/body code after a slash (Sony "ILCE7S/B",
+    "/S"); sellers often drop it ("ILCE-7S"). That suffix is the ONLY variance
+    allowed — everything before it must match exactly, so "ILCE7SM2/B" (the
+    A7S II) never reads as "ILCE-7S" (the A7S) in either direction."""
+    v = re.sub(r'/[A-Za-z]{1,2}\s*$', '', str(v or '').strip())
+    return re.sub(r'[^a-z0-9]', '', v.lower())
+
+
+def _authored_mpn_contradicted(existing, entry):
+    """True when the standing mpn is authored (it carries a correct_mpn/set_mpn
+    receipt) and the fresh listing carries a different real part number."""
+    old_ident = existing.get('identity') or {}
+    if not isinstance(old_ident.get('mpn_provenance'), dict):
+        return False
+    old_raw = old_ident.get('mpn')
+    new_raw = (entry.get('identity') or {}).get('mpn')
+    # skus_registry is the single arbiter of placeholder MPNs.
+    from skus_registry import _is_placeholder_mpn
+    if _is_placeholder_mpn(old_raw) or _is_placeholder_mpn(new_raw):
+        return False
+    old_m, new_m = _core_mpn(old_raw), _core_mpn(new_raw)
+    return bool(old_m and new_m) and old_m != new_m
+
+
 def assess(existing, entry):
     """Judge a rebind. Returns {'verdict': 'pass'|'reject',
     'hard': bool, 'signals': [str, ...]}.
@@ -183,6 +210,25 @@ def assess(existing, entry):
         hard = True
     if is_relational_reject(title, _anchor_phrases(existing)):
         signals.append('relational_for')
+        hard = True
+
+    # A listing a human took off this entry as the wrong product
+    # (skus_registry.unbind_listing) must not come straight back.
+    fresh_item = str(((entry.get('marketplace_ids') or {}).get('ebay_legacy_item_id')
+                      or (entry.get('identity') or {}).get('legacy_item_id') or '')).strip()
+    unbound = {str(r.get('item_id') or '').strip()
+               for r in (existing.get('unbound_listings') or [])}
+    if fresh_item and fresh_item in unbound:
+        signals.append('unbound_listing')
+        hard = True
+
+    # An AUTHORED part number (correct_mpn/set_mpn receipt) names the product.
+    # A fresh listing carrying a different real part number is another
+    # product, whatever its price: canon-r6 2026-09-15 rebound to an R6 Mark II
+    # listing (5666C002 vs authored 4082C002); _merge_enrichment kept the mpn
+    # but the Mark II's title, photo and price landed on the R6 card.
+    if _authored_mpn_contradicted(existing, entry):
+        signals.append('mpn_contradicts_authored')
         hard = True
 
     old_p, new_p = _price(existing), _price(entry)

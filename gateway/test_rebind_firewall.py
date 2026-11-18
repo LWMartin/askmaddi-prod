@@ -423,3 +423,48 @@ CORPUS = [
 def test_corpus_hard_gate(anchors, title, expect):
     got = fw.is_junk_title(title) or fw.is_relational_reject(title, anchors)
     assert got is expect, f'hard-gate flip on: {title!r}'
+
+
+# ── unbound listings and authored part numbers (2026-11-18) ──────────────────
+
+def _authored(mpn='4082C002', **kw):
+    e = _entry(mpn=mpn, **kw)
+    e['identity']['mpn_provenance'] = {'method': 'feed-verified-correction'}
+    return e
+
+
+def test_reconstructs_canon_r6_rebind_to_the_mark_ii():
+    """2026-09-15: the authored R6 part number 4082C002 stood; resolve offered
+    an R6 Mark II listing (5666C002) at a normal price. Every soft signal was
+    quiet, so it passed and the Mark II's title, photo and price landed."""
+    old = _authored('4082C002', title='Canon EOS R6 Body', price='1200')
+    new = _entry(mpn='5666C002', title='Canon EOS R6 Mark II Body', price='1500', legacy='777')
+    out = fw.assess(old, new)
+    assert out['verdict'] == 'reject' and 'mpn_contradicts_authored' in out['signals']
+
+
+def test_part_number_format_variants_are_not_a_contradiction():
+    old = _authored('ILCE7S/B')
+    for seller in ('ILCE-7S', 'ilce7s/b', 'ILCE-7S/B'):
+        assert 'mpn_contradicts_authored' not in fw.assess(old, _entry(mpn=seller, legacy='9'))['signals']
+    assert 'mpn_contradicts_authored' in fw.assess(old, _entry(mpn='ILCE7SM2/B', legacy='9'))['signals']
+    # the loose direction: an authored number without its suffix must still
+    # tell the A7S II apart (a prefix rule would have let it through)
+    bare = _authored('ILCE-7S')
+    assert 'mpn_contradicts_authored' in fw.assess(bare, _entry(mpn='ILCE7SM2/B', legacy='9'))['signals']
+
+
+def test_unauthored_or_placeholder_part_numbers_do_not_fire():
+    assert 'mpn_contradicts_authored' not in fw.assess(_entry(mpn='4082C002'),
+                                                       _entry(mpn='5666C002', legacy='9'))['signals']
+    for junk in ('Does Not Apply', 'N/A', ''):
+        assert 'mpn_contradicts_authored' not in fw.assess(_authored('4082C002'),
+                                                           _entry(mpn=junk, legacy='9'))['signals']
+
+
+def test_a_listing_taken_off_cannot_come_straight_back():
+    old = _entry(legacy='')
+    old['unbound_listings'] = [{'item_id': '358393938452'}]
+    out = fw.assess(old, _entry(legacy='358393938452'))
+    assert out['verdict'] == 'reject' and 'unbound_listing' in out['signals']
+    assert fw.assess(old, _entry(legacy='123'))['verdict'] == 'pass'
