@@ -14,10 +14,13 @@ listing whose part number CONTRADICTS the authored one - a used F-mount AF-S
 24mm f/1.8G listing that omits its part number passes, and would bind the wrong
 lens back onto a Z card.
 
-THE RULE: a listing is bound only on POSITIVE evidence. Its own getItem part
-number must equal the entry's authored one (the slash colour suffix aside, the
-rebind firewall's _core_mpn). A listing with no part number is never accepted,
-however good its title. Every accepted listing also passes
+THE RULE: a listing is bound only on POSITIVE evidence - the listing must STATE
+the authored part number. Its getItem part number equals it (the slash colour
+suffix aside, the rebind firewall's _core_mpn); or, only when that field is
+empty, its title names it as a whole token (live 2026-11-18: every SEL100M28GM
+listing had the number in its title and an empty field). A listing whose field
+holds a different number is refused whatever its title says; one that states
+no number at all is never accepted, however good its title. Every accepted listing also passes
 rebind_firewall.assess (junk title, "for <product>" accessory, previously
 unbound, authored-mpn contradiction), and the writer refuses any entry that is
 bound by then and any listing on its unbound_listings.
@@ -38,6 +41,7 @@ cards a human took a wrong listing off. An entry that never had a listing is a
 different story (resolve_pass's), and is only touched by an explicit --slug.
 """
 import argparse
+import re
 import sys
 import time
 from pathlib import Path
@@ -73,25 +77,55 @@ def selected(skus, slugs=None, all_unbound=False):
     return out, []
 
 
+def _title_names(title, mpn):
+    """Does the title state this part number as a WHOLE token? Separator-
+    tolerant ('SEL-100M28GM'), boundary-anchored on both sides, slash colour
+    suffix dropped first: 'MBJ20100' does not name 20100, 'ILCE-7SM2' does not
+    name ILCE-7S/B. Containment (gtin_secondpass._token_matches) is fine for
+    RANKING candidates; it is never used to accept one."""
+    core = rebind_firewall._core_mpn(mpn)
+    if len(core) < 4:
+        return False
+    sep = r"[\s\-_./]*"
+    body = sep.join(re.escape(ch) for ch in core)
+    return re.search(rf"(?<![a-z0-9]){body}(?![a-z0-9])", (title or '').lower()) is not None
+
+
+def _brand_agrees(a, b):
+    """Word-level: 'Sigma International' agrees with 'Sigma'; 'Viltrox' with
+    'Nikon' does not. Either side's words contained in the other's."""
+    wa = set(re.findall(r'[a-z0-9]+', str(a or '').lower()))
+    wb = set(re.findall(r'[a-z0-9]+', str(b or '').lower()))
+    return not wa or not wb or wa <= wb or wb <= wa
+
+
 def judge(entry, resolved):
-    """(accepted, reason) for one resolved candidate against a standing entry."""
+    """(accepted, reason) for one resolved candidate against a standing entry.
+
+    The part number must be STATED by the listing: its getItem part number
+    equals the authored one, or - only when that field is empty - its title
+    names the authored one as a whole token. A listing whose field holds a
+    DIFFERENT number is refused whatever its title says."""
     ident = entry.get('identity') or {}
     r = (resolved or {}).get('identity') or {}
     authored = ident.get('mpn', '')
     r_mpn = r.get('mpn', '')
-    if not r_mpn or skus_registry._is_placeholder_mpn(r_mpn):
+    if r_mpn and not skus_registry._is_placeholder_mpn(r_mpn):
+        if rebind_firewall._core_mpn(r_mpn) != rebind_firewall._core_mpn(authored):
+            return False, f'part number {r_mpn!r} is not {authored!r}'
+        how = 'part number matches'
+    elif _title_names(r.get('market_title', ''), authored):
+        how = 'title states the part number'
+    else:
         return False, 'listing has no part number'
-    if rebind_firewall._core_mpn(r_mpn) != rebind_firewall._core_mpn(authored):
-        return False, f'part number {r_mpn!r} is not {authored!r}'
-    brand, r_brand = _norm(ident.get('brand')), _norm(r.get('brand'))
-    if brand and r_brand and brand != r_brand:
+    if not _brand_agrees(ident.get('brand'), r.get('brand')):
         return False, f'brand {r.get("brand")!r} is not {ident.get("brand")!r}'
     candidate = {'identity': dict(r),
                  'marketplace_ids': {'ebay_legacy_item_id': r.get('legacy_item_id', '')}}
     fw = rebind_firewall.assess(entry, candidate)
     if fw['verdict'] == 'reject':
         return False, 'firewall: ' + ','.join(fw['signals'])
-    return True, 'part number matches'
+    return True, how
 
 
 def find(slug, entry, *, ebay, max_resolves=5, sleep_s=0.5):

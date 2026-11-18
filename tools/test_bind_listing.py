@@ -177,3 +177,40 @@ def test_a_failed_search_is_not_reported_as_no_listing(tmp_path):
     r = bl.find('nikon-24mm-f1-8', sr.load_registry(p)['skus']['nikon-24mm-f1-8'],
                 ebay=Down({}, {}), sleep_s=0)
     assert r['verdict'] == 'SEARCH-FAILED'
+
+
+def _sony_spine(tmp_path, mpn='SEL100M28GM', brand='Sony'):
+    entry = {'identity': {'brand': brand, 'mpn': mpn}, 'model': 'x',
+             'marketplace_ids': {'ebay_legacy_item_id': ''},
+             'overrides': {'display_name': 'Sony FE 100mm f/2.8 Macro GM OSS'},
+             'unbound_listings': [{'item_id': '1'}]}
+    p = tmp_path / 'skus.json'
+    p.write_text(json.dumps({'skus': {'s': entry}}))
+    return sr.load_registry(p)['skus']['s']
+
+
+def test_title_may_state_the_part_number_when_the_field_is_empty(tmp_path):
+    e = _sony_spine(tmp_path)
+    ok, why = bl.judge(e, _item('5', 'SONY FE 100mm F2.8 Macro GM OSS SEL100M28GM (Sony E mount)', '', brand='Sony'))
+    assert ok and why == 'title states the part number'
+
+
+def test_title_token_must_be_whole():
+    assert not bl._title_names('Nikon MBJ20100 CFWN 10X Microscope Eyepiece', '20100')
+    assert not bl._title_names('Sony Alpha A7S II ILCE-7SM2 body', 'ILCE7S/B')
+    assert bl._title_names('Sony A7S ILCE-7S body', 'ILCE7S/B')
+    assert bl._title_names('Sony SEL-100M28GM lens', 'SEL100M28GM')
+
+
+def test_a_different_field_number_beats_a_matching_title(tmp_path):
+    e = _sony_spine(tmp_path)
+    ok, why = bl.judge(e, _item('6', 'Sony SEL100M28GM vs SEL90M28G', 'SEL90M28G', brand='Sony'))
+    assert not ok and 'is not' in why
+
+
+def test_brand_is_compared_by_word(tmp_path):
+    e = _sony_spine(tmp_path, mpn='323965', brand='Sigma')
+    ok, _ = bl.judge(e, _item('7', 'Sigma 85mm f/1.2 DG Art (Sony E)', '323965', brand='Sigma International'))
+    assert ok
+    ok, why = bl.judge(e, _item('8', 'Sigma 85mm f/1.2 DG Art', '323965', brand='Viltrox'))
+    assert not ok and 'brand' in why
