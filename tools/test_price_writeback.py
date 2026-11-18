@@ -318,6 +318,15 @@ def _propose(slug, url, price=998.0, needs_eyes=False):
                     "title": None}}
 
 
+def _titled(url, brand, model, stock="In Stock"):
+    """A snapshot row for a pinned product, carrying the feed's own name."""
+    return {"product_url": urllib.parse.unquote(url).split("destination:", 1)[-1],
+            "brand": brand, "model": model, "stock_status": stock, "condition": "N", "price": 1}
+
+
+GH5_II_ROW = ("Panasonic", "Lumix GH5 II Mirrorless Camera Body")
+
+
 def test_identity_failure_is_held_even_with_include_flagged(tmp_path):
     d = _cards(tmp_path, n=0, extra={"panasonic-gh5": _gh5_card(price=None)})
     changes, held, _ = price_writeback.plan(_sheet(_propose("panasonic-gh5", GH5_II)), d,
@@ -338,11 +347,12 @@ def test_existing_wrong_pin_is_withdrawn_not_frozen(tmp_path, capsys):
     End to end through main(): price, link and source are all cleared — keeping
     the link (the 11-06 behaviour) left the GH5 button opening the GH5 II page."""
     d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card()})   # 1 of 10 = 10%
+    sd = _snap(tmp_path, [_titled(GH5_II, *GH5_II_ROW)] + [_row(i) for i in range(9)])
     sheet = tmp_path / "sheet.json"
-    sheet.write_text(json.dumps(_sheet(_propose("panasonic-gh5", GH5_II))))
+    sheet.write_text(json.dumps(dict(_sheet(_propose("panasonic-gh5", GH5_II)), snapshot_date=DAY)))
     out = tmp_path / "changed.txt"
     price_writeback.main([str(sheet), "--cards-dir", str(d), "--apply",
-                          "--changed-out", str(out)])
+                          "--snapshot-dir", str(sd), "--changed-out", str(out)])
     text = capsys.readouterr().out
     p = _load(d, "panasonic-gh5")["pricing"]
     assert p["current_new_usd"] is None
@@ -357,8 +367,9 @@ def test_existing_wrong_pin_is_withdrawn_not_frozen(tmp_path, capsys):
 
 def test_identity_withdrawal_skips_cards_getting_a_good_price_tonight(tmp_path):
     d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card()})
-    w, why = price_writeback.plan_identity_withdrawals(d, keep={"panasonic-gh5"})
-    assert (w, why) == ([], None)
+    sd = _snap(tmp_path, [_titled(GH5_II, *GH5_II_ROW)])
+    assert price_writeback.plan_identity_withdrawals(
+        d, keep={"panasonic-gh5"}, snapshot_dir=sd, snapshot_date=DAY) == ([], None, [])
 
 
 def test_identity_withdrawal_ignores_hand_set_and_linkless(tmp_path):
@@ -366,7 +377,9 @@ def test_identity_withdrawal_ignores_hand_set_and_linkless(tmp_path):
     hand["pricing"]["current_new_source"] = "manual"
     bare = _gh5_card(url=None, price=None)
     d = _cards(tmp_path, n=0, extra={"hand": hand, "bare": bare})
-    assert price_writeback.plan_identity_withdrawals(d) == ([], None)
+    sd = _snap(tmp_path, [_titled(GH5_II, *GH5_II_ROW)])
+    assert price_writeback.plan_identity_withdrawals(
+        d, snapshot_dir=sd, snapshot_date=DAY) == ([], None, [])
 
 
 def test_reconstructs_gh5_unpriced_but_still_linked(tmp_path):
@@ -374,7 +387,8 @@ def test_reconstructs_gh5_unpriced_but_still_linked(tmp_path):
     the GH5 II link, and with no price the card was never checked again. An
     unpriced feed link is still a pin and must face the gate."""
     d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card(price=None)})
-    w, why = price_writeback.plan_identity_withdrawals(d)
+    sd = _snap(tmp_path, [_titled(GH5_II, *GH5_II_ROW)])
+    w, why, _ = price_writeback.plan_identity_withdrawals(d, snapshot_dir=sd, snapshot_date=DAY)
     assert why is None and [r["slug"] for r in w] == ["panasonic-gh5"]
     price_writeback.apply_withdrawals(w, d)
     p = _load(d, "panasonic-gh5")["pricing"]
@@ -404,8 +418,69 @@ def test_cleared_pin_renders_a_search_by_the_cards_own_name():
 def test_identity_withdrawal_safety_wall(tmp_path):
     """A rule fault that fails many pins at once withholds ALL (1/5 = 20% ok; 2/6 = 33% not)."""
     d = _cards(tmp_path, n=4, extra={"g1": _gh5_card()})
-    w, why = price_writeback.plan_identity_withdrawals(d)
+    sd = _snap(tmp_path, [_titled(GH5_II, *GH5_II_ROW)])
+    w, why, _ = price_writeback.plan_identity_withdrawals(d, snapshot_dir=sd, snapshot_date=DAY)
     assert [r["slug"] for r in w] == ["g1"] and why is None
     (d / "g2.json").write_text(json.dumps(_gh5_card(), indent=2), encoding="utf-8")
-    w, why = price_writeback.plan_identity_withdrawals(d)
+    w, why, _ = price_writeback.plan_identity_withdrawals(d, snapshot_dir=sd, snapshot_date=DAY)
     assert w == [] and "rule fault" in why
+
+
+# ── the slug screens, the feed title decides (2026-11-18) ────────────────────
+SIGMA_II = ("https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com"
+            "%2Fsigma-35mm-f14-dg-dn-art-lens-sony-e-mount%2Fp%2Fsg3514dg2soe")
+SONY_GM2 = ("https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com"
+            "%2Fsony-100-400-gm2-lens%2Fp%2Fiso100400gm2")
+R8 = ("https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com"
+      "%2Fcanon-eos-r8-mirrorless-camera-body-full-frame-24mp%2Fp%2Fcar8")
+
+
+def _named(display, url, price):
+    c = _card({"current_new_usd": price, "current_new_source": "adorama_feed",
+               "current_new_url": url, "affiliate_url": url})
+    c["identity"] = {"display_name": display}
+    return c
+
+
+def _live_four(tmp_path):
+    """The four pins the 2026-11-18 box scan flagged, with the products' real
+    feed titles: two right products (Sigma DG II, Sony 100-400 F4.5) whose slugs
+    under-describe them, two wrong products (R8 for the R8 II, GH5 II for the GH5)."""
+    d = _cards(tmp_path, n=16, extra={
+        "sigma-35-art-dg-dn-ii": _named("Sigma 35mm f/1.4 DG DN Art II", SIGMA_II, 1059.0),
+        "sony-100-400mm-f4-5": _named("Sony FE 100-400mm f/4.5 GM OSS", SONY_GM2, 4298.0),
+        "canon-eos-r8-ii": _named("Canon EOS R8 Mark II", R8, None),
+        "panasonic-gh5": _gh5_card(price=None)})
+    sd = _snap(tmp_path, [
+        _titled(SIGMA_II, "Sigma", "35mm f/1.4 DG II Art Lens for Sony E"),
+        _titled(SONY_GM2, "Sony", "FE 100-400mm f/4.5 GM OSS Lens"),
+        _titled(R8, "Canon", "EOS R8 Mirrorless Camera Body"),
+        _titled(GH5_II, *GH5_II_ROW)] + [_row(i) for i in range(16)])
+    return d, sd
+
+
+def test_reconstructs_the_2026_11_18_scan_right_pins_kept_wrong_pins_withdrawn(tmp_path):
+    d, sd = _live_four(tmp_path)
+    for slug in ("sigma-35-art-dg-dn-ii", "sony-100-400mm-f4-5", "canon-eos-r8-ii", "panasonic-gh5"):
+        card = _load(d, slug)
+        assert price_writeback.check_pin(price_writeback.card_model(card),
+                                         card["pricing"]["current_new_url"]), slug  # all fail the slug
+    w, why, unconfirmed = price_writeback.plan_identity_withdrawals(
+        d, snapshot_dir=sd, snapshot_date=DAY)
+    assert why is None and unconfirmed == []
+    assert sorted(r["slug"] for r in w) == ["canon-eos-r8-ii", "panasonic-gh5"]
+
+
+def test_no_snapshot_withdraws_nothing(tmp_path):
+    d, _ = _live_four(tmp_path)
+    for kw in ({}, {"snapshot_dir": tmp_path / "snap"}, {"snapshot_date": DAY}):
+        w, why, _ = price_writeback.plan_identity_withdrawals(d, **kw)
+        assert w == [] and "none withdrawn" in why
+
+
+def test_a_pin_missing_from_the_snapshot_is_unconfirmed_not_withdrawn(tmp_path):
+    d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card(price=None)})
+    sd = _snap(tmp_path, [_row(i) for i in range(9)])
+    w, why, unconfirmed = price_writeback.plan_identity_withdrawals(
+        d, snapshot_dir=sd, snapshot_date=DAY)
+    assert w == [] and why is None and unconfirmed == ["panasonic-gh5"]

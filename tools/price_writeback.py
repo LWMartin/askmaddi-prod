@@ -227,21 +227,34 @@ def plan_withdrawals(sheet: dict, cards_dir: Path, exclude=None,
 
 
 def plan_identity_withdrawals(cards_dir: Path, keep=None,
-                              max_fraction: float = WITHDRAW_MAX_FRACTION):
-    """Return (withdrawals, withheld_reason): feed-priced cards whose EXISTING pin
-    fails the identity gate (tools/pin_identity.py).
+                              max_fraction: float = WITHDRAW_MAX_FRACTION,
+                              snapshot_dir=None, snapshot_date=None):
+    """Return (withdrawals, withheld_reason, unconfirmed): feed-pinned cards whose
+    EXISTING pin is demonstrably not the card's product.
 
     Holding a failing proposal is not enough: when the sheet re-proposes the same
     wrong product every night, the card keeps yesterday's wrong price forever
     (2026-11-06: panasonic-gh5 priced as the GH5 II, canon-eos-r8-ii as the R8).
-    A pin that is demonstrably not the card's product is positive evidence about
-    the pinned product itself — the same evidence standard as the stock
-    withdrawal — so its price is cleared (link + source kept; CTA reads "Check
-    price at Adorama"). `keep` = slugs getting a passing price tonight. The same
-    safety wall applies: if more than `max_fraction` of feed-priced cards would
-    fail at once, that is a rule fault, not the catalog — ALL are withheld."""
+
+    EVIDENCE (2026-11-18, same rule as the stock withdrawal): the URL slug alone
+    is a screen, not proof. Adorama slugs drop what a name carries — the
+    sigma-35-art-dg-dn-ii pin 'sigma-35mm-f14-dg-dn-art-lens-sony-e-mount'
+    (product code ...dg2..., the DG II, $1059) writes f/1.4 as 'f14' and omits
+    'II'; the sony-100-400mm-f4-5 pin 'sony-100-400-gm2-lens' (the 2026 FE
+    100-400mm F4.5 GM OSS, $4298) carries no aperture. Both failed the slug and
+    both were right. A slug failure is therefore confirmed against the pinned
+    product's OWN title in the same-day snapshot; withdrawn only if the title
+    fails too. No snapshot / no snapshot_date -> nothing withdrawn (fail closed).
+    A pin absent from the snapshot has no title to read: reported as
+    unconfirmed, never withdrawn (absence from the feed is the stock
+    withdrawal's evidence, not this one's).
+
+    A feed link with NO price is still a pin (the 11-06 run cleared the GH5's
+    price but kept the GH5 II link). `keep` = slugs getting a passing price
+    tonight. Safety wall: if more than `max_fraction` of feed-pinned cards would
+    be withdrawn at once, that is a rule fault — ALL are withheld."""
     keep = set(keep or ())
-    feed_priced, out = 0, []
+    feed_pinned, screened = 0, []
     for path in sorted(cards_dir.glob("*.json")):
         try:
             card = json.loads(path.read_text(encoding="utf-8")) or {}
@@ -249,23 +262,38 @@ def plan_identity_withdrawals(cards_dir: Path, keep=None,
             continue
         p = card.get("pricing") or {}
         url = p.get("current_new_url") or p.get("affiliate_url")
-        # A feed link with NO price is still a pin: an earlier withdrawal cleared
-        # only the price (panasonic-gh5, 11-06), and the button kept opening the
-        # pinned product. Such a card must still face the identity gate.
         if p.get("current_new_source") != CARD_SOURCE or not (p.get("current_new_usd") or url):
             continue
-        feed_priced += 1
+        feed_pinned += 1
         slug = path.stem
-        if slug in keep:
+        if slug in keep or not url:
             continue
-        why = check_pin(card_model(card), url)
-        if why:
-            out.append({"slug": slug, "old": p.get("current_new_usd"), "url": url,
-                        "evidence": "identity: " + " | ".join(why)})
-    if out and feed_priced and len(out) / feed_priced > max_fraction:
-        return [], (f"{len(out)} of {feed_priced} feed-priced cards fail the identity "
-                    f"gate (> {max_fraction:.0%}) — looks like a rule fault; ALL withheld")
-    return out, None
+        if check_pin(card_model(card), url):
+            screened.append({"slug": slug, "old": p.get("current_new_usd"), "url": url,
+                             "model": card_model(card)})
+    if not screened:
+        return [], None, []
+
+    pinned, why = _load_pinned_rows(snapshot_dir, snapshot_date,
+                                    {_dest(r["url"]) for r in screened})
+    if why:
+        return [], (f"{len(screened)} pin(s) fail the slug screen, none withdrawn — {why}"), []
+
+    out, unconfirmed = [], []
+    for r in screened:
+        rows = pinned.get(_dest(r["url"]), [])
+        if not rows:
+            unconfirmed.append(r["slug"])
+            continue
+        title = f"{rows[0].get('brand') or ''} {rows[0].get('model') or ''}".strip()
+        reasons = check_pin(r["model"], r["url"], title)
+        if reasons:
+            out.append({"slug": r["slug"], "old": r["old"], "url": r["url"],
+                        "evidence": "identity: " + " | ".join(reasons) + f" (feed title: {title})"})
+    if out and feed_pinned and len(out) / feed_pinned > max_fraction:
+        return [], (f"{len(out)} of {feed_pinned} feed-pinned cards fail the identity "
+                    f"gate (> {max_fraction:.0%}) — looks like a rule fault; ALL withheld"), unconfirmed
+    return out, None, unconfirmed
 
 
 def clear_new_pin(card: dict, evidence: str, when: str = "") -> dict:
@@ -405,8 +433,9 @@ def main(argv=None):
             max_fraction=args.max_withdraw_fraction, snapshot_dir=args.snapshot_dir)
 
     # Identity gate on EXISTING pins — always on; no flag turns it off.
-    id_withdrawals, id_withheld = plan_identity_withdrawals(
-        cards_dir, keep={r["slug"] for r in changes}, max_fraction=args.max_withdraw_fraction)
+    id_withdrawals, id_withheld, id_unconfirmed = plan_identity_withdrawals(
+        cards_dir, keep={r["slug"] for r in changes}, max_fraction=args.max_withdraw_fraction,
+        snapshot_dir=args.snapshot_dir, snapshot_date=sheet.get("snapshot_date"))
     have = {w["slug"] for w in withdrawals}
     withdrawals = withdrawals + [w for w in id_withdrawals if w["slug"] not in have]
 
@@ -419,6 +448,9 @@ def main(argv=None):
             print(f"  {r['slug'][:32]:32}  ${r['new']}  {r['host']}  [{' | '.join(r['identity'])}]")
     if id_withheld:
         print(f"\nWARN identity withdrawals WITHHELD: {id_withheld}")
+    if id_unconfirmed:
+        print(f"\nidentity: slug fails but pinned product not in today's snapshot — "
+              f"unconfirmed, kept ({len(id_unconfirmed)}): " + ", ".join(id_unconfirmed))
     if withdrawals:
         print(f"\nNew price — WITHDRAW (evidence per row) ({len(withdrawals)}):")
         for w in withdrawals:
