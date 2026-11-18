@@ -126,6 +126,33 @@ def test_new_categories_need_no_edit_to_this_tool():
         del AXES['drone'], LABELS['drone']
 
 
+def test_the_parent_of_a_dotted_axis_is_a_card_axis():
+    """af_performance over af_performance.stills/.video: the card carries the
+    parent as a lead axis. Derived from the dotted ids, so it is allowed on
+    the category that declares them and nowhere else (2026-11-18)."""
+    AXES['lens/prime']['af_performance.stills'] = []
+    LABELS['lens/prime']['af_performance'] = {'display': 'Autofocus'}
+    try:
+        card = _card('lens/prime', ('optical_performance', 'af_performance'))
+        assert run(card)[0] == []
+        body = _card(axes=('sensor_performance', 'af_performance'),
+                     labels={'af_performance': 'Autofocus'})
+        assert any('foreign to body' in f for f in run(body)[0])
+    finally:
+        del AXES['lens/prime']['af_performance.stills']
+        del LABELS['lens/prime']['af_performance']
+
+
+def test_a_parent_alone_is_not_exclusivity_proof():
+    AXES['lens/prime']['af_performance.stills'] = []
+    try:
+        card = _card('lens/prime', ('af_performance', 'price'),
+                     labels={'af_performance': 'Autofocus'})
+        assert any('exclusive to lens/prime' in f for f in run(card)[0])
+    finally:
+        del AXES['lens/prime']['af_performance.stills']
+
+
 # ── Labels ───────────────────────────────────────────────────────────────
 
 def test_dotted_axis_id_as_a_label_fails():

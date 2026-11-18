@@ -242,3 +242,71 @@ def test_missing_dictionary_exits_2(tmp_path, capsys):
                  '--dict-root', '/nonexistent/phantom-ops'])
     assert rc == 2
     assert 'CANNOT CHECK' in capsys.readouterr().out
+
+
+# ── Composite axes (2026-11-18) ──────────────────────────────────────────
+
+def _with_lens_af():
+    AXES['lens/prime']['af_performance.stills'] = []
+    LABELS['lens/prime']['af_performance'] = {'display': 'Autofocus'}
+
+
+def _lens_card():
+    card = _card('lens/prime', axes=[('optical_performance', 'Optical Performance'),
+                                     ('af_performance', 'af_performance')])
+    card['confidence']['per_axis'] = {'optical_performance': 'high'}
+    return card
+
+
+def _drop_lens_af():
+    del AXES['lens/prime']['af_performance.stills']
+    del LABELS['lens/prime']['af_performance']
+
+
+def test_the_lens_composite_axis_gets_its_authored_label():
+    """af_performance is the parent of a dotted lens axis: a card axis, not a
+    foreign one. 106 lens cards stored the raw id as its heading."""
+    _with_lens_af()
+    try:
+        card = _lens_card()
+        changes, blocked = r.relabel(card, load_axes, load_labels)
+        assert blocked == []
+        assert changes == [('af_performance', 'af_performance', 'Autofocus')]
+    finally:
+        _drop_lens_af()
+
+
+def test_a_composite_on_the_wrong_category_is_still_blocked():
+    """A body carrying af_performance has no dotted parent for it in the body
+    dictionary — that is mis-extraction, and still says so."""
+    _with_lens_af()
+    try:
+        card = _card(axes=[('evf_lcd', 'EVF & LCD'), ('af_performance', 'af_performance')])
+        _, blocked = r.relabel(card, load_axes, load_labels)
+        assert blocked and 'foreign to body' in blocked[0]
+    finally:
+        _drop_lens_af()
+
+
+def test_queue_adds_the_cards_waiting_at_publish(tmp_path, monkeypatch, capsys):
+    _with_lens_af()
+    try:
+        spool = tmp_path / 'spool' / 'some-lens'
+        spool.mkdir(parents=True)
+        (spool / 'card.json').write_text(json.dumps(_lens_card(), indent=2))
+        q = tmp_path / 'q.json'
+        q.write_text(json.dumps({'queue': {
+            'some-lens': {'state': 'review_ready', 'card_path': str(spool / 'card.json')},
+            'done-lens': {'state': 'promoted', 'card_path': str(tmp_path / 'nope.json')}}}))
+        (tmp_path / 'cards').mkdir()
+        rc = _patched_main(monkeypatch, ['--queue', str(q), '--apply',
+                                         '--cards-dir', str(tmp_path / 'cards')])
+        assert rc == 0
+        out = capsys.readouterr().out
+        assert 'some-lens: relabelled af_performance: "af_performance" -> "Autofocus"' in out
+        assert 'done-lens' not in out
+        card = json.loads((spool / 'card.json').read_text(encoding='utf-8'))
+        assert card['lead_axes'][1]['display_name'] == 'Autofocus'
+        assert card['freshness']['last_built'] == '2026-07-20T18:06:23+00:00'
+    finally:
+        _drop_lens_af()

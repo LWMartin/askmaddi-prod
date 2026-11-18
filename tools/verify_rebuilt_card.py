@@ -93,6 +93,17 @@ def load_dictionary(dict_root):
     return load_axes, load_labels, available_categories
 
 
+def with_composites(axes):
+    """Axes a CARD may carry: the dictionary's axes plus the parents of its
+    dotted ones. A dotted id names a parent axis and a sub-facet, and the card
+    carries the parent as an axis of its own (af_performance over
+    af_performance.stills/.video). Same derivation as phantom-ops
+    dictionaries.composite_axes, kept local so this check does not depend on
+    how current the box's checkout is (2026-11-18)."""
+    axes = set(axes)
+    return axes | {a.split('.', 1)[0] for a in axes if '.' in a}
+
+
 def universal_axes(load_axes, categories):
     """Axes shared by every category — the ones that prove nothing.
 
@@ -170,6 +181,8 @@ def check(card, published=None, dict_root=DEFAULT_DICT_ROOT, loader=None):
 
     shared = universal_axes(load_axes, categories)
     exclusive = expected - shared
+    # Parents widen what is allowed; they never count as exclusivity proof.
+    expected = with_composites(expected)
 
     # 1. vocabulary
     axes = card_axes(card)

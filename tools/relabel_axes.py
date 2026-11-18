@@ -27,12 +27,19 @@ from a card that was already correct. Those cards get named and pointed at
 tools/requeue_rebuild.py instead.
 
 An axis with no authored label is likewise left alone rather than blanked.
-sigma-35-art-dg-dn-ii carries a bare `af_performance` that is no longer a
-dictionary axis at all; a relabel cannot invent a name for it.
+
+2026-11-18: the bare `af_performance` once called "no longer a dictionary
+axis" is the lens card's composite axis over af_performance.stills/.video. It
+is allowed as the parent of those dotted axes (verify_rebuilt_card
+with_composites) and phantom-ops now authors its label, "Autofocus" — 106 of
+129 lens cards stored the raw id and five lens guides put it in their meta
+description. `--queue` extends the run to the assembled cards waiting at
+/admin/publish, so a rebuild is fixed before approval rather than after.
 
     python3 tools/relabel_axes.py --slug sony-a7iv
     python3 tools/relabel_axes.py --slug sony-a7iv --apply
     python3 tools/relabel_axes.py --all
+    python3 tools/relabel_axes.py --all --queue data/work_queue.json [--apply]
 
 Dry run is the default. After --apply, rebuild the site: display_name reaches
 both the card page and cards-manifest.json, and data/cards is not the deploy.
@@ -48,7 +55,8 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from verify_rebuilt_card import (DictionaryUnavailable, DEFAULT_DICT_ROOT,  # noqa: E402
-                                 card_axes, card_category, load_dictionary)
+                                 card_axes, card_category, load_dictionary,
+                                 with_composites)
 
 CARDS_DIR = Path(__file__).resolve().parent.parent / 'data' / 'cards'
 
@@ -69,7 +77,7 @@ def relabel(card, load_axes, load_labels):
     if not category:
         raise DictionaryUnavailable('card has no identity.category')
     try:
-        expected = set(load_axes(category))
+        expected = with_composites(load_axes(category))
         authored = {a: r.get('display') if isinstance(r, dict) else r
                     for a, r in load_labels(category).items()}
     except Exception as exc:
@@ -132,6 +140,8 @@ def main(argv=None):
     ap.add_argument('--all', action='store_true', help='every card in data/cards')
     ap.add_argument('--apply', action='store_true',
                     help='write the changes (default is a dry run)')
+    ap.add_argument('--queue', help='work_queue.json: also the review_ready '
+                                    'cards waiting at /admin/publish')
     ap.add_argument('--cards-dir', default=str(CARDS_DIR))
     ap.add_argument('--dict-root', default=DEFAULT_DICT_ROOT)
     args = ap.parse_args(argv)
@@ -141,8 +151,14 @@ def main(argv=None):
         paths = sorted(cards_dir.glob('*.json'))
     elif args.slug:
         paths = [cards_dir / f'{s}.json' for s in args.slug]
+    elif not args.queue:
+        ap.error('pass --slug, --all or --queue')
     else:
-        ap.error('pass --slug or --all')
+        paths = []
+    if args.queue:
+        queue = json.loads(Path(args.queue).read_text(encoding='utf-8')).get('queue', {})
+        paths += [Path(r['card_path']) for _, r in sorted(queue.items())
+                  if r.get('state') == 'review_ready' and r.get('card_path')]
 
     try:
         load_axes, load_labels, _ = load_dictionary(args.dict_root)
@@ -152,25 +168,26 @@ def main(argv=None):
 
     total, needs_rebuild = 0, []
     for path in paths:
+        name = path.parent.name if path.name == 'card.json' else path.stem
         if not path.exists():
-            print(f'{path.stem}: no such card')
+            print(f'{name}: no such card')
             return 2
         try:
             changes, blocked = process(path, load_axes, load_labels, args.apply)
         except DictionaryUnavailable as exc:
-            print(f'{path.stem}: CANNOT CHECK — {exc}')
+            print(f'{name}: CANNOT CHECK — {exc}')
             return 2
         if blocked:
             needs_rebuild.append(path.stem)
             for reason in blocked:
-                print(f'{path.stem}: BLOCKED — {reason}')
+                print(f'{name}: BLOCKED — {reason}')
         elif changes:
             total += len(changes)
             verb = 'relabelled' if args.apply else 'would relabel'
             for axis_id, was, now in changes:
-                print(f'{path.stem}: {verb} {axis_id}: "{was}" -> "{now}"')
+                print(f'{name}: {verb} {axis_id}: "{was}" -> "{now}"')
         else:
-            print(f'{path.stem}: labels already match the dictionary')
+            print(f'{name}: labels already match the dictionary')
 
     print()
     if args.apply and total:
