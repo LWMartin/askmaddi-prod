@@ -1,0 +1,13 @@
+{
+  "_description": "Held-identity cards re-pointed to the product their reviews describe (Lee, 2026-11-18: 'go with what is most logical'). Rule: the reviews decide only when unanimous, or when one product holds a majority of at least the 6-source on-target floor, and it must match the slug's focal length and aperture; where another card already covers that product, the listing stands. Model numbers verified against retailer and manufacturer pages. Applied with tools/fix_wrong_listing.py --plan (correct_mpn, then unbind the old listing). Cards with a live Adorama product pin (canon-50mm-f1-2, nikon-35mm-f1-8, sony-100mm-f2-8) are NOT here: an identity change must clear the old new-price link first.",
+  "reviewed_by": "Lee",
+  "reviewed_on": "2026-11-18",
+  "repoints": [
+    {"slug": "canon-28-70mm-f2-8", "expect_item": "198637924274", "expect_mpn": "", "mpn": "6535C002", "new_name": "Canon RF 28-70mm f/2.8 IS STM", "reason": "reviews 3/3 are the RF 28-70mm f/2.8 IS STM; listing was a used EF 28-70mm f/2.8L"},
+    {"slug": "nikon-105mm-f2-8", "expect_item": "206529026675", "expect_mpn": "", "mpn": "20100", "new_name": "Nikon NIKKOR Z MC 105mm f/2.8 VR S", "reason": "reviews 3/3 are the Z MC 105mm f/2.8 VR S; listing was a used AF 105mm f/2.8 Micro"},
+    {"slug": "nikon-120-300mm-f2-8", "expect_item": "336850398277", "expect_mpn": "201287", "mpn": "20135", "new_name": "Nikon NIKKOR Z 120-300mm f/2.8 TC VR S", "reason": "reviews 20/20 are the Z 120-300mm f/2.8 TC VR S; listing was the F-mount AF-S 120-300mm f/2.8E"},
+    {"slug": "nikon-24mm-f1-8", "expect_item": "800609844773", "expect_mpn": "", "mpn": "20080", "new_name": "Nikon NIKKOR Z 24mm f/1.8 S", "reason": "reviews 3/3 are the Z 24mm f/1.8 S; listing was a used AF-S 24mm f/1.8G"},
+    {"slug": "nikon-35mm-f1-4", "expect_item": "147542980969", "expect_mpn": "", "mpn": "20126", "new_name": "Nikon NIKKOR Z 35mm f/1.4", "reason": "reviews 3/3 are the Z 35mm f/1.4; listing was a used AI-S 35mm f/1.4"},
+    {"slug": "nikon-600mm-f4", "expect_item": "198635288018", "expect_mpn": "NA", "mpn": "20113", "new_name": "Nikon NIKKOR Z 600mm f/4 TC VR S", "reason": "reviews 3/3 are the Z 600mm f/4 TC VR S; listing was a used AF-I 600mm f/4D"}
+  ]
+}

@@ -55,3 +55,26 @@ def test_refuses_a_different_listing_or_mpn(tmp_path):
 def test_missing_slug(tmp_path):
     p = _spine(tmp_path)
     assert f.run(path=p, **dict(ARGS, slug='ghost')) == 2
+
+
+def test_plan_mode_runs_every_row_and_reports_the_worst(tmp_path):
+    p = _spine(tmp_path)
+    plan = tmp_path / 'plan.json'
+    plan.write_text(json.dumps({'repoints': [
+        dict(ARGS),
+        dict(ARGS, slug='ghost')]}))
+    before = p.read_text()
+    assert f.run_plan(plan, path=p) == 2          # ghost: missing slug
+    assert p.read_text() == before                # dry run
+    assert f.run_plan(plan, apply=True, path=p) == 2
+    e = json.loads(p.read_text())['skus']['sony-a7s']
+    assert e['identity']['mpn'] == 'ILCE7S/B'     # the good row still applied
+
+
+def test_real_repoint_plan_rows_are_well_formed():
+    plan = Path(__file__).resolve().parent / 'rename_plans' / '2026-11-18-repoint.json'
+    rows = json.loads(plan.read_text())['repoints']
+    spine = json.loads(REAL.read_text())['skus']
+    for r in rows:
+        assert {'slug', 'expect_item', 'expect_mpn', 'mpn', 'reason', 'new_name'} <= set(r)
+        assert r['slug'] in spine

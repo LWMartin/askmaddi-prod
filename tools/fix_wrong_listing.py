@@ -28,6 +28,8 @@ MUST RUN ON THE BOX AS askmaddi (the spine's only writer):
       --reason "listing is the A7S II"
   ... --apply
 
+  sudo -u askmaddi python3 tools/fix_wrong_listing.py --plan tools/rename_plans/<plan>.json [--apply]
+
 Exit 0 = done (or would be). Exit 1 = refused (spine does not hold what you
 named). Exit 2 = slug missing.
 """
@@ -97,17 +99,38 @@ def run(slug, expect_item, reason, mpn=None, expect_mpn=None, apply=False,
     return 0 if r == 'unbound' else 1
 
 
+def run_plan(plan_path, apply=False, path=skus_registry.SKUS_PATH, out=sys.stdout):
+    """Every row of a plan file's `repoints` list, in order. Each row is checked
+    and written on its own (compare-and-swap per row), so one refused row does
+    not stop the rest; the exit code is the worst row's."""
+    rows = json.loads(Path(plan_path).read_text(encoding='utf-8'))['repoints']
+    worst = 0
+    for row in rows:
+        print(f"── {row['slug']}", file=out)
+        rc = run(row['slug'], row['expect_item'], row['reason'], row.get('mpn'),
+                 row.get('expect_mpn'), apply, path=path, out=out)
+        worst = max(worst, rc)
+    print(f"\n{len(rows)} row(s); worst exit {worst}", file=out)
+    return worst
+
+
 def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    ap.add_argument('--slug', required=True)
-    ap.add_argument('--expect-item', required=True,
+    ap.add_argument('--plan', help='a JSON file with a `repoints` list of rows '
+                                   '{slug, expect_item, reason, mpn, expect_mpn}')
+    ap.add_argument('--slug')
+    ap.add_argument('--expect-item',
                     help='the wrong listing\'s eBay item id, as on the spine now')
-    ap.add_argument('--reason', required=True)
+    ap.add_argument('--reason')
     ap.add_argument('--mpn', help='the correct part number (optional)')
     ap.add_argument('--expect-mpn', help='the wrong part number on the spine now')
     ap.add_argument('--apply', action='store_true')
     ap.add_argument('--path', default=str(skus_registry.SKUS_PATH))
     args = ap.parse_args(argv)
+    if args.plan:
+        return run_plan(args.plan, args.apply, path=args.path)
+    if not (args.slug and args.expect_item and args.reason):
+        ap.error('--slug, --expect-item and --reason are required without --plan')
     if (args.mpn is None) != (args.expect_mpn is None):
         ap.error('--mpn and --expect-mpn go together')
     return run(args.slug, args.expect_item, args.reason, args.mpn, args.expect_mpn,
