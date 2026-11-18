@@ -215,7 +215,8 @@ def main(argv=None):
     elif how == 'requeue':
         work_queue.requeue(args.slug, path=path)
 
-    status = work_queue.set_aliases(args.slug, aliases, label=label, path=path)
+    status = work_queue.set_aliases(args.slug, aliases, label=label,
+                                    restart_at_fetch=True, path=path)
     if status != 'set':
         print(f'REFUSED: set_aliases returned {status!r} — the record was '
               f're-opened but NOT relabelled, so a build now would re-fetch '

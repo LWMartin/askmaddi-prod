@@ -289,7 +289,7 @@ def set_seed_urls(slug, seed_urls_path, *, path=WORK_QUEUE_PATH):
     return 'set'
 
 
-def set_aliases(slug, aliases, *, label=None, path=WORK_QUEUE_PATH):
+def set_aliases(slug, aliases, *, label=None, restart_at_fetch=False, path=WORK_QUEUE_PATH):
     """Attach (or replace) fetch aliases on a record STILL AT `resolved`.
 
     Sibling to set_seed_urls — the second surgical writer on the sourcing
@@ -310,6 +310,13 @@ def set_aliases(slug, aliases, *, label=None, path=WORK_QUEUE_PATH):
     Refuses an empty alias list (a clear must be deliberate, not a typo'd
     positional). Fail-closed with a status, never a partial write.
 
+    restart_at_fetch: drop any resume_stage so the next build starts at fetch.
+    New aliases only matter to fetch; on a record already re-opened for a
+    zero-fetch rebuild (resume_stage='extract', requeue_rebuild) they would be
+    written and never used — the build re-reads the cached corpus. Found
+    2026-11-18: tools/regather_card.py printed "full re-gather (start at
+    fetch)" for such records while leaving resume_stage='extract' in place.
+
     Returns: 'set' | 'missing-slug' | 'not-resolved' | 'empty-aliases'.
     """
     aliases = [str(a).strip() for a in (aliases or []) if str(a).strip()]
@@ -324,6 +331,8 @@ def set_aliases(slug, aliases, *, label=None, path=WORK_QUEUE_PATH):
     record['aliases'] = aliases
     if label is not None and str(label).strip():
         record['label'] = str(label).strip()
+    if restart_at_fetch:
+        record.pop('resume_stage', None)
     record['aliases_set_at'] = _now()
     queue['as_of'] = _today()
     _atomic_write(queue, path)

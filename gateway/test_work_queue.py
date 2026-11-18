@@ -611,3 +611,16 @@ def test_claim_next_demandless_backlog_is_pure_fifo(tmp_path):
     p = _path(tmp_path)
     _enroll_three(p)   # all demand default 0
     assert wq.claim_next(path=p)['slug'] == 'sony-a7iv'
+
+
+
+def test_set_aliases_restart_at_fetch_drops_resume_stage(tmp_path):
+    """Only on request: plain set_aliases keeps a resume_stage (back-compat)."""
+    path = _seedable_queue(tmp_path)
+    q = wq.load_queue(path)
+    q['queue']['sony-a7s-iii']['resume_stage'] = 'extract'
+    wq._atomic_write(q, path)
+    wq.set_aliases('sony-a7s-iii', ['a'], path=path)
+    assert wq.load_queue(path)['queue']['sony-a7s-iii']['resume_stage'] == 'extract'
+    wq.set_aliases('sony-a7s-iii', ['b'], restart_at_fetch=True, path=path)
+    assert 'resume_stage' not in wq.load_queue(path)['queue']['sony-a7s-iii']

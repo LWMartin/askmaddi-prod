@@ -147,6 +147,17 @@ def test_promoted_reopens_as_a_full_regather_not_a_re_extract(agg, queue):
     assert 'resume_stage' not in _record(q)
 
 
+def test_an_already_open_rebuild_becomes_a_real_regather(agg, queue):
+    """2026-11-18: a record re-opened by requeue_rebuild sits at `resolved` with
+    resume_stage='extract'. Writing new aliases alone left that stage in place,
+    so the 'full re-gather' this tool printed re-read the cached corpus and
+    fetched nothing. The stage must go with the relabel."""
+    q = queue('resolved', resume_stage='extract')
+    assert _run(agg, q, '--apply') == 0
+    rec = _record(q)
+    assert 'resume_stage' not in rec and rec['label'] == 'Sony A7R II'
+
+
 def test_attempt_budget_is_reset_on_reopen(agg, queue):
     """A record re-opened with 2 of 3 attempts spent would get one shot at a
     build it has never actually attempted under the corrected inputs."""
