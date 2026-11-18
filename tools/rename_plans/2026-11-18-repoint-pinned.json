@@ -1,0 +1,10 @@
+{
+  "_description": "The three held-identity re-points whose cards carry a live Adorama product pin matched by the OLD part number. Same rule and verification as 2026-11-18-repoint.json; each row also names the exact pinned Adorama product, which fix_wrong_listing clears (price, link, source; receipt under pricing.withdrawn_pin) after re-pointing the spine — refused if the card is pinned anywhere else. The next price_writeback run can re-pin through the corrected part number.",
+  "reviewed_by": "Lee",
+  "reviewed_on": "2026-11-18",
+  "repoints": [
+    {"slug": "canon-50mm-f1-2", "expect_item": "407274669438", "expect_mpn": "1257B002", "mpn": "2959C002", "new_name": "Canon RF 50mm f/1.2L USM", "expect_new_pin": "https://www.adorama.com/canon-ef-50-mm-f-1-2l-usm-lens/p/ca5012afu", "reason": "reviews 3/3 are the RF 50mm f/1.2L USM; listing and new-price pin were the EF 50mm f/1.2L USM"},
+    {"slug": "nikon-35mm-f1-8", "expect_item": "147567082129", "expect_mpn": "2215", "mpn": "20081", "new_name": "Nikon NIKKOR Z 35mm f/1.8 S", "expect_new_pin": "https://www.adorama.com/nikon-35-mm-f-1-8g-af-s-ed-nikkor-lens/p/nk3518edu", "reason": "reviews 3/3 are the Z 35mm f/1.8 S; listing and new-price pin were the AF-S 35mm f/1.8G ED"},
+    {"slug": "sony-100mm-f2-8", "expect_item": "206517553059", "expect_mpn": "", "mpn": "SEL100M28GM", "new_name": "Sony FE 100mm f/2.8 Macro GM OSS", "expect_new_pin": "https://www.adorama.com/sony-fe-100-mm-f-2-8-stf-gm-oss-lens/p/iso10028", "reason": "reviews 13/14 are the FE 100mm f/2.8 Macro GM OSS; listing and new-price link were the FE 100mm f/2.8 STF GM OSS"}
+  ]
+}

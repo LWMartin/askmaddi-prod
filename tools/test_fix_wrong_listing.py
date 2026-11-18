@@ -78,3 +78,59 @@ def test_real_repoint_plan_rows_are_well_formed():
     for r in rows:
         assert {'slug', 'expect_item', 'expect_mpn', 'mpn', 'reason', 'new_name'} <= set(r)
         assert r['slug'] in spine
+
+
+# ── re-point clears the old new-price pin (2026-11-18) ───────────────────────
+EF50 = ('https://adorama.prf.hn/click/camref:x/destination:https%3A%2F%2Fwww.adorama.com'
+        '%2Fcanon-ef-50-mm-f-1-2l-usm-lens%2Fp%2Fca5012afu')
+EF50_DEST = 'https://www.adorama.com/canon-ef-50-mm-f-1-2l-usm-lens/p/ca5012afu'
+
+
+def _c50(tmp_path, pin=EF50):
+    entry = json.loads(REAL.read_text())['skus']['canon-50mm-f1-2']
+    p = tmp_path / 'skus.json'
+    p.write_text(json.dumps({'version': '0.1.0', 'skus': {'canon-50mm-f1-2': entry}}))
+    cards = tmp_path / 'cards'
+    cards.mkdir()
+    card = {'identity': {'display_name': 'Canon RF 50mm f/1.2L USM', 'model': '50mm f1.2'},
+            'pricing': {'current_new_usd': 1349.0, 'current_new_url': pin, 'affiliate_url': pin,
+                        'current_new_source': 'adorama_feed', 'used_market': {'bands': {'A': 1}}},
+            'freshness': {'last_built': 'x'}}
+    (cards / 'canon-50mm-f1-2.json').write_text(json.dumps(card, indent=2))
+    item = entry['marketplace_ids']['ebay_legacy_item_id']
+    args = dict(slug='canon-50mm-f1-2', expect_item=item, reason='reviews are the RF 50mm f/1.2L',
+                mpn='2959C002', expect_mpn=entry['identity']['mpn'], expect_new_pin=EF50_DEST,
+                cards_dir=cards)
+    return p, cards / 'canon-50mm-f1-2.json', args
+
+
+def test_repoint_clears_the_old_pin_and_nothing_else_on_the_card(tmp_path):
+    p, cp, args = _c50(tmp_path)
+    assert f.run(path=p, apply=True, **args) == 0
+    pr = json.loads(cp.read_text())['pricing']
+    assert pr['current_new_usd'] is None and pr['current_new_url'] is None
+    assert pr['affiliate_url'] is None and pr['current_new_source'] is None
+    assert pr['withdrawn_pin']['url'] == EF50 and pr['withdrawn_pin']['price'] == 1349.0
+    assert pr['used_market'] == {'bands': {'A': 1}}
+    assert json.loads(cp.read_text())['freshness'] == {'last_built': 'x'}
+    assert json.loads(p.read_text())['skus']['canon-50mm-f1-2']['identity']['mpn'] == '2959C002'
+
+
+def test_repoint_refuses_when_pinned_elsewhere_and_writes_nothing(tmp_path):
+    other = EF50.replace('ca5012afu', 'ca5012zzz')
+    p, cp, args = _c50(tmp_path, pin=other)
+    spine0, card0 = p.read_text(), cp.read_text()
+    assert f.run(path=p, apply=True, **args) == 1
+    assert p.read_text() == spine0 and cp.read_text() == card0
+
+
+def test_repoint_dry_run_names_the_pin_and_writes_nothing(tmp_path):
+    p, cp, args = _c50(tmp_path)
+    spine0, card0 = p.read_text(), cp.read_text()
+    lines = []
+
+    class W:
+        def write(self, s): lines.append(s)
+    assert f.run(path=p, out=W(), **args) == 0
+    assert "would clear the card's new-price pin" in ''.join(lines)
+    assert p.read_text() == spine0 and cp.read_text() == card0

@@ -6,6 +6,7 @@ result is what build_site.new_cta reads back as a live '$N new' CTA."""
 
 import json
 import sys
+import urllib.parse
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -334,7 +335,8 @@ def test_passing_pin_still_applies(tmp_path):
 def test_existing_wrong_pin_is_withdrawn_not_frozen(tmp_path, capsys):
     """The trap a hold alone falls into: the sheet re-proposes the SAME wrong product
     every night, so 'held' would keep yesterday's wrong price on the card forever.
-    End to end through main(): the price is cleared, link + source kept."""
+    End to end through main(): price, link and source are all cleared — keeping
+    the link (the 11-06 behaviour) left the GH5 button opening the GH5 II page."""
     d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card()})   # 1 of 10 = 10%
     sheet = tmp_path / "sheet.json"
     sheet.write_text(json.dumps(_sheet(_propose("panasonic-gh5", GH5_II))))
@@ -344,7 +346,10 @@ def test_existing_wrong_pin_is_withdrawn_not_frozen(tmp_path, capsys):
     text = capsys.readouterr().out
     p = _load(d, "panasonic-gh5")["pricing"]
     assert p["current_new_usd"] is None
-    assert p["current_new_url"] == GH5_II and p["current_new_source"] == "adorama_feed"
+    assert p["current_new_url"] is None and p["affiliate_url"] is None
+    assert p["current_new_source"] is None
+    assert p["withdrawn_pin"]["url"] == GH5_II
+    assert p["withdrawn_pin"]["evidence"].startswith("identity: generation")
     assert "HELD by identity gate" in text and "identity: generation" in text
     assert out.read_text().split() == ["panasonic-gh5"]
     assert all(_load(d, f"c{i}")["pricing"]["current_new_usd"] == 1999.0 for i in range(9))
@@ -356,11 +361,44 @@ def test_identity_withdrawal_skips_cards_getting_a_good_price_tonight(tmp_path):
     assert (w, why) == ([], None)
 
 
-def test_identity_withdrawal_ignores_hand_set_and_unpriced(tmp_path):
+def test_identity_withdrawal_ignores_hand_set_and_linkless(tmp_path):
     hand = _gh5_card()
     hand["pricing"]["current_new_source"] = "manual"
-    d = _cards(tmp_path, n=0, extra={"hand": hand, "unpriced": _gh5_card(price=None)})
+    bare = _gh5_card(url=None, price=None)
+    d = _cards(tmp_path, n=0, extra={"hand": hand, "bare": bare})
     assert price_writeback.plan_identity_withdrawals(d) == ([], None)
+
+
+def test_reconstructs_gh5_unpriced_but_still_linked(tmp_path):
+    """The live 2026-11-18 state: the 11-06 run cleared the GH5's price but kept
+    the GH5 II link, and with no price the card was never checked again. An
+    unpriced feed link is still a pin and must face the gate."""
+    d = _cards(tmp_path, n=9, extra={"panasonic-gh5": _gh5_card(price=None)})
+    w, why = price_writeback.plan_identity_withdrawals(d)
+    assert why is None and [r["slug"] for r in w] == ["panasonic-gh5"]
+    price_writeback.apply_withdrawals(w, d)
+    p = _load(d, "panasonic-gh5")["pricing"]
+    assert p["current_new_url"] is None and p["affiliate_url"] is None
+
+
+def test_stock_withdrawal_still_keeps_the_link(tmp_path):
+    """Out of stock is the SAME product: the link stays (the 11-04 design)."""
+    d = _cards(tmp_path, n=0, extra={"panasonic-gh5": _gh5_card(url=GH5)})
+    price_writeback.apply_withdrawals(
+        [{"slug": "panasonic-gh5", "url": GH5, "evidence": "out of stock / not New"}], d)
+    p = _load(d, "panasonic-gh5")["pricing"]
+    assert p["current_new_usd"] is None and p["current_new_url"] == GH5
+
+
+def test_cleared_pin_renders_a_search_by_the_cards_own_name():
+    """With the link gone the button is a product-scoped Adorama search for the
+    card's name (Partnerize-wrapped), never the withdrawn product page."""
+    import build_site
+    card = _gh5_card()
+    price_writeback.clear_new_pin(card, "identity: test")
+    label, url = build_site.new_cta(card)
+    assert label == "Check price at Adorama"
+    assert "ipcdcgh5m2" not in url and "searchinfo" in urllib.parse.unquote(url)
 
 
 def test_identity_withdrawal_safety_wall(tmp_path):

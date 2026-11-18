@@ -40,6 +40,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT / 'gateway'))
+sys.path.insert(0, str(ROOT / 'tools'))
 
 import skus_registry  # noqa: E402
 
@@ -55,8 +56,29 @@ def _show(entry):
     }
 
 
+CARDS_DIR = ROOT / 'data' / 'cards'
+
+
+def _card_pin(cards_dir, slug):
+    """(card_path, card, pinned destination) — destination '' when no feed pin."""
+    import price_writeback
+    card_path = Path(cards_dir) / f'{slug}.json'
+    if not card_path.is_file():
+        return card_path, None, ''
+    card = json.loads(card_path.read_text(encoding='utf-8'))
+    p = card.get('pricing') or {}
+    pin = p.get('current_new_url') or p.get('affiliate_url') or ''
+    return card_path, card, price_writeback._dest(pin) if pin else ''
+
+
 def run(slug, expect_item, reason, mpn=None, expect_mpn=None, apply=False,
-        path=skus_registry.SKUS_PATH, out=sys.stdout):
+        path=skus_registry.SKUS_PATH, out=sys.stdout, expect_new_pin=None,
+        cards_dir=CARDS_DIR):
+    """expect_new_pin: the Adorama destination (e.g. 'https://www.adorama.com/
+    canon-ef-50-mm-f-1-2l-usm-lens/p/ca5012afu') the card is pinned to now. A pin
+    matched by the OLD part number is void once the part number is corrected,
+    so it is cleared with price_writeback.clear_new_pin — compare-and-swap like
+    the spine writes: refused if the card is pinned anywhere else."""
     entry = skus_registry.load_registry(path).get('skus', {}).get(slug)
     if entry is None:
         print(f'{slug}: not on the spine', file=out)
@@ -71,6 +93,14 @@ def run(slug, expect_item, reason, mpn=None, expect_mpn=None, apply=False,
         problems.append(f'bound listing is {bound!r}, not {expect_item!r}')
     if mpn is not None and norm(ident.get('mpn')) not in (norm(expect_mpn), norm(mpn)):
         problems.append(f'mpn is {ident.get("mpn")!r}, not {expect_mpn!r}')
+    if expect_new_pin is not None:
+        import price_writeback
+        _, card, pinned = _card_pin(cards_dir, slug)
+        want = price_writeback._dest(expect_new_pin)
+        if card is None:
+            problems.append(f'no card file for {slug} in {cards_dir}')
+        elif pinned != want:
+            problems.append(f'card is pinned to {pinned or "nothing"!r}, not {want!r}')
     if problems:
         for p in problems:
             print(f'REFUSED: {p}', file=out)
@@ -84,6 +114,8 @@ def run(slug, expect_item, reason, mpn=None, expect_mpn=None, apply=False,
         if mpn is not None:
             print(f'would correct mpn {ident.get("mpn")!r} -> {mpn!r}', file=out)
         print(f'would unbind listing {expect_item} ("{ident.get("market_title")}")', file=out)
+        if expect_new_pin is not None:
+            print(f'would clear the card\'s new-price pin {expect_new_pin}', file=out)
         print('DRY RUN — re-run with --apply', file=out)
         return 0
 
@@ -96,10 +128,22 @@ def run(slug, expect_item, reason, mpn=None, expect_mpn=None, apply=False,
     print(f'unbind_listing: {r}', file=out)
     after = skus_registry.load_registry(path)['skus'][slug]
     print(f'{slug} after: {json.dumps(_show(after), ensure_ascii=False)}', file=out)
-    return 0 if r == 'unbound' else 1
+    if r != 'unbound':
+        return 1
+    if expect_new_pin is not None:
+        import time
+        import price_writeback
+        card_path, card, _ = _card_pin(cards_dir, slug)
+        receipt = price_writeback.clear_new_pin(
+            card, f'identity re-pointed: {reason}',
+            time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()))
+        price_writeback._write_card_atomic(card_path, card)
+        print(f'cleared new-price pin: {receipt["url"]} (was ${receipt["price"]})', file=out)
+    return 0
 
 
-def run_plan(plan_path, apply=False, path=skus_registry.SKUS_PATH, out=sys.stdout):
+def run_plan(plan_path, apply=False, path=skus_registry.SKUS_PATH, out=sys.stdout,
+             cards_dir=CARDS_DIR):
     """Every row of a plan file's `repoints` list, in order. Each row is checked
     and written on its own (compare-and-swap per row), so one refused row does
     not stop the rest; the exit code is the worst row's."""
@@ -108,7 +152,8 @@ def run_plan(plan_path, apply=False, path=skus_registry.SKUS_PATH, out=sys.stdou
     for row in rows:
         print(f"── {row['slug']}", file=out)
         rc = run(row['slug'], row['expect_item'], row['reason'], row.get('mpn'),
-                 row.get('expect_mpn'), apply, path=path, out=out)
+                 row.get('expect_mpn'), apply, path=path, out=out,
+                 expect_new_pin=row.get('expect_new_pin'), cards_dir=cards_dir)
         worst = max(worst, rc)
     print(f"\n{len(rows)} row(s); worst exit {worst}", file=out)
     return worst
@@ -126,9 +171,10 @@ def main(argv=None):
     ap.add_argument('--expect-mpn', help='the wrong part number on the spine now')
     ap.add_argument('--apply', action='store_true')
     ap.add_argument('--path', default=str(skus_registry.SKUS_PATH))
+    ap.add_argument('--cards-dir', default=str(CARDS_DIR))
     args = ap.parse_args(argv)
     if args.plan:
-        return run_plan(args.plan, args.apply, path=args.path)
+        return run_plan(args.plan, args.apply, path=args.path, cards_dir=args.cards_dir)
     if not (args.slug and args.expect_item and args.reason):
         ap.error('--slug, --expect-item and --reason are required without --plan')
     if (args.mpn is None) != (args.expect_mpn is None):

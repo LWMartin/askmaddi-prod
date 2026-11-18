@@ -37,6 +37,7 @@ import argparse
 import json
 import os
 import sys
+import time
 import urllib.parse
 from pathlib import Path
 
@@ -247,16 +248,19 @@ def plan_identity_withdrawals(cards_dir: Path, keep=None,
         except ValueError:
             continue
         p = card.get("pricing") or {}
-        if p.get("current_new_source") != CARD_SOURCE or not p.get("current_new_usd"):
+        url = p.get("current_new_url") or p.get("affiliate_url")
+        # A feed link with NO price is still a pin: an earlier withdrawal cleared
+        # only the price (panasonic-gh5, 11-06), and the button kept opening the
+        # pinned product. Such a card must still face the identity gate.
+        if p.get("current_new_source") != CARD_SOURCE or not (p.get("current_new_usd") or url):
             continue
         feed_priced += 1
         slug = path.stem
         if slug in keep:
             continue
-        url = p.get("current_new_url") or p.get("affiliate_url")
         why = check_pin(card_model(card), url)
         if why:
-            out.append({"slug": slug, "old": p["current_new_usd"], "url": url,
+            out.append({"slug": slug, "old": p.get("current_new_usd"), "url": url,
                         "evidence": "identity: " + " | ".join(why)})
     if out and feed_priced and len(out) / feed_priced > max_fraction:
         return [], (f"{len(out)} of {feed_priced} feed-priced cards fail the identity "
@@ -264,12 +268,43 @@ def plan_identity_withdrawals(cards_dir: Path, keep=None,
     return out, None
 
 
+def clear_new_pin(card: dict, evidence: str, when: str = "") -> dict:
+    """Remove a feed pin that is NOT this card's product: price, product link and
+    source together, keeping a receipt under pricing.withdrawn_pin.
+
+    A STOCK withdrawal keeps the link (same product, just unavailable today; the
+    button honestly reads "Check price at Adorama" on the right page). An
+    IDENTITY withdrawal must not: the link itself is another product's page
+    (2026-11-18: panasonic-gh5's button still opened the GH5 II after its price
+    was withdrawn on 11-06). With the link gone, build_site.new_cta falls back
+    to a product-scoped Adorama search by the card's own name. Used by the
+    identity gate here and by tools/fix_wrong_listing.py when a card's identity
+    is re-pointed (a pin matched by the old part number is void by construction).
+    Returns the receipt."""
+    pricing = card.setdefault("pricing", {})
+    pin = pricing.get("current_new_url") or pricing.get("affiliate_url")
+    receipt = {"url": pin, "price": pricing.get("current_new_usd"),
+               "evidence": evidence, "withdrawn_at": when}
+    for key in ("current_new_usd", "current_new_url", "affiliate_url", "current_new_source"):
+        pricing[key] = None
+    if pin and pricing.get("adorama_url") and _dest(pricing["adorama_url"]) == _dest(pin):
+        pricing["adorama_url"] = None
+    pricing["withdrawn_pin"] = receipt
+    return receipt
+
+
 def apply_withdrawals(withdrawals, cards_dir: Path) -> list:
+    """Stock withdrawals clear the price only; identity withdrawals (rows whose
+    evidence starts 'identity:') clear the price AND the link — clear_new_pin."""
     done = []
+    when = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     for row in withdrawals:
         card_path = cards_dir / f"{row['slug']}.json"
         card = json.loads(card_path.read_text(encoding="utf-8"))
-        card.setdefault("pricing", {})["current_new_usd"] = None
+        if str(row.get("evidence", "")).startswith("identity:"):
+            clear_new_pin(card, row["evidence"], when)
+        else:
+            card.setdefault("pricing", {})["current_new_usd"] = None
         _write_card_atomic(card_path, card)
         done.append(row["slug"])
     return done
@@ -408,7 +443,9 @@ def main(argv=None):
     applied = applied + withdrawn
     if args.manifest:
         res = patch_manifest(Path(args.manifest), changes
-                             + [{"slug": w["slug"], "new": None, "url": w["url"]} for w in withdrawals])
+                             + [{"slug": w["slug"], "new": None,
+                                 "url": None if str(w.get("evidence", "")).startswith("identity:")
+                                 else w["url"]} for w in withdrawals])
         print(f"manifest patched: {len(res['patched'])} teaser entries"
               + (f" · {len(res['absent'])} changed slugs not on grid: {', '.join(res['absent'])}"
                  if res['absent'] else ""))
