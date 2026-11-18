@@ -881,6 +881,9 @@
       "resolved_at": "2026-09-15T14:04:18Z",
       "spec_surface": {
         "manual_code": "C004"
+      },
+      "overrides": {
+        "display_name": "Canon EOS R6"
       }
     },
     "manfrotto-befree": {
@@ -951,7 +954,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:33:58Z"
+      "resolved_at": "2026-08-27T22:33:58Z",
+      "overrides": {
+        "display_name": "Manfrotto Befree 3-Way Live Advanced Tripod"
+      }
     },
     "sigma-35mm-f1-2-dg-dn-art": {
       "contamination_key": "sigma-35-f12-dg-dn",
@@ -1005,6 +1011,9 @@
         "product_code": "a019_35_12",
         "observed": "https://www.sigma-global.com/en/lenses/a019_35_12/",
         "curated_at": "2026-07-29"
+      },
+      "overrides": {
+        "display_name": "Sigma 35mm f/1.2 DG DN Art"
       }
     },
     "canon-r5": {
@@ -1099,6 +1108,9 @@
       "resolved_at": "2026-08-27T04:23:03Z",
       "spec_surface": {
         "manual_code": "C003"
+      },
+      "overrides": {
+        "display_name": "Canon EOS R5"
       }
     },
     "sony-a7r": {
@@ -1266,7 +1278,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-07-17T04:09:14Z"
+      "resolved_at": "2026-07-17T04:09:14Z",
+      "overrides": {
+        "display_name": "Ulanzi Zero F38 Travel Tripod"
+      }
     },
     "sony-100-400mm-f4-5": {
       "contamination_key": "sony-100-400mm-f4-5",
@@ -1370,7 +1385,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-11T06:02:24Z"
+      "resolved_at": "2026-09-11T06:02:24Z",
+      "overrides": {
+        "display_name": "Sony FE 100-400mm f/4.5 GM OSS"
+      }
     },
     "panasonic-lumix-l10": {
       "contamination_key": "panasonic-lumix-l10",
@@ -1419,7 +1437,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-04T21:12:08Z"
+      "resolved_at": "2026-08-04T21:12:08Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix L10"
+      }
     },
     "nikon-z5-ii": {
       "contamination_key": "nikon-z5-ii",
@@ -1493,6 +1514,9 @@
         "wikipedia_title": "Nikon_Z5II",
         "wikipedia_title_resolved": "Nikon Z5II",
         "wikipedia_stamped_at": "2026-08-24T21:44:20Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z5 II"
       }
     },
     "fujifilm-x-e5": {
@@ -1539,6 +1563,9 @@
         "wikipedia_title": "Fujifilm_X-E5",
         "wikipedia_title_resolved": "Fujifilm X-E5",
         "wikipedia_stamped_at": "2026-08-24T21:44:23Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-E5"
       }
     },
     "leica-50mm-f2": {
@@ -1761,7 +1788,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-05T00:01:56Z"
+      "resolved_at": "2026-09-05T00:01:56Z",
+      "overrides": {
+        "display_name": "Hasselblad 500C/M"
+      }
     },
     "gopro-hero10": {
       "contamination_key": "gopro-hero10",
@@ -1807,6 +1837,9 @@
         "page_path": "hero10-black/CHDHX-101-master",
         "observed": "https://gopro.com/en/us/shop/cameras/hero10-black/CHDHX-101-master.html",
         "curated_at": "2026-08-21"
+      },
+      "overrides": {
+        "display_name": "GoPro HERO10 Black"
       }
     },
     "nikon-fe2": {
@@ -1853,6 +1886,9 @@
         "wikipedia_title": "Nikon_FE2",
         "wikipedia_title_resolved": "Nikon FE2",
         "wikipedia_stamped_at": "2026-08-24T21:44:30Z"
+      },
+      "overrides": {
+        "display_name": "Nikon FE2"
       }
     },
     "kodak-ektar": {
@@ -2024,7 +2060,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-17T04:22:40Z"
+      "resolved_at": "2026-08-17T04:22:40Z",
+      "overrides": {
+        "display_name": "Kodak Ektar H35"
+      }
     },
     "minolta-maxxum-70": {
       "contamination_key": "minolta-maxxum-70",
@@ -2108,7 +2147,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-17T04:23:19Z"
+      "resolved_at": "2026-08-17T04:23:19Z",
+      "overrides": {
+        "display_name": "Minolta Maxxum 70"
+      }
     },
     "libec-650ex-section-tripod-system": {
       "contamination_key": "libec-650ex-section-tripod-system",
@@ -2287,6 +2329,9 @@
       "spec_surface": {
         "gap": "GoPro delists discontinued models from its storefront: the HERO6 page (CHDHX-601) 500s (measured 2026-08-21), so the gopro/action_cam Next.js surface — which serves current models fine (HERO10 banked) — cannot reach it. Not curation debt on the surface; the model is gone from it. Legacy-body specs would need a different source.",
         "curated_at": "2026-07-29"
+      },
+      "overrides": {
+        "display_name": "GoPro HERO6 Black"
       }
     },
     "sony-100mm-f2-8": {
@@ -2427,7 +2472,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T04:21:47Z"
+      "resolved_at": "2026-08-27T04:21:47Z",
+      "overrides": {
+        "display_name": "Sony A9"
+      }
     },
     "canon-45mm-f1-2": {
       "contamination_key": "canon-45mm-f1-2",
@@ -2476,7 +2524,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-22T14:41:12Z"
+      "resolved_at": "2026-08-22T14:41:12Z",
+      "overrides": {
+        "display_name": "Canon RF 45mm f/1.2 STM"
+      }
     },
     "panasonic-lumix-s5-ii": {
       "contamination_key": "panasonic-lumix-s5-ii",
@@ -2546,7 +2597,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-12T06:00:44Z"
+      "resolved_at": "2026-11-12T06:00:44Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix S5 II"
+      }
     },
     "minolta-maxxum-5000": {
       "contamination_key": "minolta-maxxum-5000",
@@ -2587,7 +2641,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-22T14:42:28Z"
+      "resolved_at": "2026-08-22T14:42:28Z",
+      "overrides": {
+        "display_name": "Minolta Maxxum 5000"
+      }
     },
     "fujifilm-x-t20": {
       "contamination_key": "fujifilm-x-t20",
@@ -2633,6 +2690,9 @@
         "wikipedia_title": "Fujifilm_X-T20",
         "wikipedia_title_resolved": "Fujifilm X-T20",
         "wikipedia_stamped_at": "2026-08-24T21:44:47Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T20"
       }
     },
     "nikon-z7": {
@@ -2714,6 +2774,9 @@
         "wikipedia_title": "Nikon_Z7",
         "wikipedia_title_resolved": "Nikon Z7",
         "wikipedia_stamped_at": "2026-08-24T21:44:51Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z7"
       }
     },
     "canon-35mm-f1-4": {
@@ -2893,7 +2956,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-23T04:18:44Z"
+      "resolved_at": "2026-08-23T04:18:44Z",
+      "overrides": {
+        "display_name": "Fujifilm X-T50"
+      }
     },
     "fujifilm-x-t10": {
       "contamination_key": "fujifilm-x-t10",
@@ -3004,6 +3070,9 @@
         "wikipedia_title": "Fujifilm_X-T10",
         "wikipedia_title_resolved": "Fujifilm X-T10",
         "wikipedia_stamped_at": "2026-08-24T21:45:01Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T10"
       }
     },
     "panasonic-lumix-gh5-ii": {
@@ -3074,7 +3143,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-24T04:06:39Z"
+      "resolved_at": "2026-08-24T04:06:39Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix GH5 II"
+      }
     },
     "canon-powershot-sx70": {
       "contamination_key": "canon-powershot-sx70",
@@ -3130,7 +3202,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-28T14:17:05Z"
+      "resolved_at": "2026-08-28T14:17:05Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SX70 HS"
+      }
     },
     "minolta-maxxum-7000": {
       "contamination_key": "minolta-maxxum-7000",
@@ -3205,6 +3280,9 @@
         "wikipedia_title": "Minolta_Maxxum_7000",
         "wikipedia_title_resolved": "Minolta Maxxum 7000",
         "wikipedia_stamped_at": "2026-08-24T21:45:08Z"
+      },
+      "overrides": {
+        "display_name": "Minolta Maxxum 7000"
       }
     },
     "fujifilm-16mm-f2-8": {
@@ -3288,7 +3366,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T19:18:54Z"
+      "resolved_at": "2026-09-03T19:18:54Z",
+      "overrides": {
+        "display_name": "Fujifilm XF 16mm f/2.8 R WR"
+      }
     },
     "sigma-35mm-f1-4": {
       "contamination_key": "sigma-35mm-f1-4",
@@ -3364,6 +3445,9 @@
         "observed": "https://www.sigma-global.com/en/lenses/a026_35_14/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sigma 35mm f/1.4 DG HSM Art"
       }
     },
     "panasonic-70-200mm-f4": {
@@ -3471,7 +3555,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-26T04:24:12Z"
+      "resolved_at": "2026-08-26T04:24:12Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix S PRO 70-200mm f/4 O.I.S."
+      }
     },
     "sigma-23mm-f1-4": {
       "contamination_key": "sigma-23mm-f1-4",
@@ -3540,6 +3627,9 @@
         "observed": "https://www.sigma-global.com/en/lenses/c023_23_14/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sigma 23mm f/1.4 DC DN Contemporary"
       }
     },
     "canon-18-200mm-f3-5": {
@@ -3610,7 +3700,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:53:24Z"
+      "resolved_at": "2026-08-27T22:53:24Z",
+      "overrides": {
+        "display_name": "Canon EF-S 18-200mm f/3.5-5.6 IS"
+      }
     },
     "nikon-28mm-f2-8": {
       "contamination_key": "nikon-28mm-f2-8",
@@ -3747,6 +3840,9 @@
         "observed": "https://www.sigma-global.com/en/lenses/a019_14_24_28/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sigma 14-24mm f/2.8 DG HSM Art"
       }
     },
     "om-system-20mm-f1-4": {
@@ -3900,7 +3996,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-23T04:24:17Z"
+      "resolved_at": "2026-08-23T04:24:17Z",
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z DX 16-50mm f/2.8 VR"
+      }
     },
     "canon-50mm-f2-5": {
       "contamination_key": "canon-50mm-f2-5",
@@ -3970,7 +4069,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:55:27Z"
+      "resolved_at": "2026-08-27T22:55:27Z",
+      "overrides": {
+        "display_name": "Canon EF 50mm f/2.5 Compact Macro"
+      }
     },
     "canon-70-200mm-f2-8": {
       "contamination_key": "canon-70-200mm-f2-8",
@@ -4317,7 +4419,10 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-08-23T04:26:01Z",
-      "category": "gimbal"
+      "category": "gimbal",
+      "overrides": {
+        "display_name": "DJI Pocket 2"
+      }
     },
     "sony-zv-e10": {
       "contamination_key": "sony-zv-e10",
@@ -4486,6 +4591,9 @@
         "observed": "https://helpguide.sony.net/ilc/2070/v1/en/contents/TP1000201578.html",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sony ZV-E10"
       }
     },
     "canon-eos-r50": {
@@ -4556,7 +4664,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-23T04:26:36Z"
+      "resolved_at": "2026-08-23T04:26:36Z",
+      "overrides": {
+        "display_name": "Canon EOS R50"
+      }
     },
     "nikon-d3400": {
       "contamination_key": "nikon-d3400",
@@ -4602,6 +4713,9 @@
         "wikipedia_title": "Nikon_D3400",
         "wikipedia_title_resolved": "Nikon D3400",
         "wikipedia_stamped_at": "2026-08-24T21:45:12Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D3400"
       }
     },
     "sony-rx10": {
@@ -4773,6 +4887,9 @@
         "wikipedia_title": "Fujifilm_X-Pro3",
         "wikipedia_title_resolved": "Fujifilm X-Pro3",
         "wikipedia_stamped_at": "2026-08-24T21:45:15Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-Pro3"
       }
     },
     "sigma-16mm-f1-4": {
@@ -4843,7 +4960,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:00:26Z"
+      "resolved_at": "2026-09-15T14:00:26Z",
+      "overrides": {
+        "display_name": "Sigma 16mm f/1.4 DC DN Contemporary"
+      }
     },
     "canon-75-300mm-f4": {
       "contamination_key": "canon-75-300mm-f4",
@@ -5146,6 +5266,9 @@
         "wikipedia_title": "Nikon_Z6III",
         "wikipedia_title_resolved": "Nikon Z6III",
         "wikipedia_stamped_at": "2026-08-26T02:32:10Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z6 III"
       }
     },
     "canon-eos-r6-ii": {
@@ -5216,7 +5339,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-25T19:23:18Z"
+      "resolved_at": "2026-08-25T19:23:18Z",
+      "overrides": {
+        "display_name": "Canon EOS R6 Mark II"
+      }
     },
     "nikon-85mm-f1-8": {
       "contamination_key": "nikon-85mm-f1-8",
@@ -5286,7 +5412,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-23T06:03:15Z"
+      "resolved_at": "2026-10-23T06:03:15Z",
+      "overrides": {
+        "display_name": "Nikon AF Nikkor 85mm f/1.8D"
+      }
     },
     "tamron-12-20mm-f2-8": {
       "contamination_key": "tamron-12-20mm-f2-8",
@@ -5335,7 +5464,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-25T19:24:16Z"
+      "resolved_at": "2026-08-25T19:24:16Z",
+      "overrides": {
+        "display_name": "Tamron 12-20mm f/2.8"
+      }
     },
     "sony-a7r-vi": {
       "contamination_key": "sony-a7r-vi",
@@ -5384,7 +5516,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-25T19:25:15Z"
+      "resolved_at": "2026-08-25T19:25:15Z",
+      "overrides": {
+        "display_name": "Sony A7R VI"
+      }
     },
     "olympus-60mm-f2-8": {
       "contamination_key": "olympus-generic",
@@ -5461,7 +5596,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:37:06Z"
+      "resolved_at": "2026-08-27T22:37:06Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro"
+      }
     },
     "om-system-12-40mm-f2-8": {
       "contamination_key": "om-system-generic",
@@ -5517,7 +5655,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T19:21:51Z"
+      "resolved_at": "2026-09-03T19:21:51Z",
+      "overrides": {
+        "display_name": "OM SYSTEM M.Zuiko Digital ED 12-40mm f/2.8 PRO II"
+      }
     },
     "canon-eos": {
       "contamination_key": "canon-eos",
@@ -5749,7 +5890,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:35:51Z"
+      "resolved_at": "2026-08-27T22:35:51Z",
+      "overrides": {
+        "display_name": "Sony FE 35mm f/1.4 GM"
+      }
     },
     "gitzo-traveler": {
       "contamination_key": "gitzo-traveler",
@@ -6708,7 +6852,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T04:29:24Z"
+      "resolved_at": "2026-08-27T04:29:24Z",
+      "overrides": {
+        "display_name": "Sony FX6"
+      }
     },
     "fujifilm-x-t30-ii": {
       "contamination_key": "fujifilm-x-t30-ii",
@@ -6955,7 +7102,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T13:58:45Z"
+      "resolved_at": "2026-09-15T13:58:45Z",
+      "overrides": {
+        "display_name": "GoPro HERO7 Black"
+      }
     },
     "panasonic-s1-mirrorless": {
       "contamination_key": "panasonic-s1-mirrorless",
@@ -7025,7 +7175,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T22:42:27Z"
+      "resolved_at": "2026-08-27T22:42:27Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DC-S1"
+      }
     },
     "panasonic-lumix-zs99": {
       "contamination_key": "panasonic-lumix-zs99",
@@ -7405,7 +7558,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:13:24Z"
+      "resolved_at": "2026-09-15T14:13:24Z",
+      "overrides": {
+        "display_name": "Canon EF-S 24mm f/2.8 STM"
+      }
     },
     "dji-rs-combo-gimbal-stabilizer": {
       "contamination_key": "dji-rs-combo-gimbal-stabilizer",
@@ -8044,7 +8200,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T22:58:16Z"
+      "resolved_at": "2026-08-27T22:58:16Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DMC-GH3"
+      }
     },
     "leica-50mm-f1-5": {
       "contamination_key": "leica-50mm-f1-5",
@@ -8265,7 +8424,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:00:43Z"
+      "resolved_at": "2026-08-27T23:00:43Z",
+      "overrides": {
+        "display_name": "Canon EF 50mm f/1.4 USM"
+      }
     },
     "canon-70-200mm-f4": {
       "contamination_key": "canon-70-200mm-f4",
@@ -8306,7 +8468,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:01:02Z"
+      "resolved_at": "2026-08-27T23:01:02Z",
+      "overrides": {
+        "display_name": "Canon EF 70-200mm f/4L USM"
+      }
     },
     "fujifilm-45-100mm-f4": {
       "contamination_key": "fujifilm-45-100mm-f4",
@@ -8533,7 +8698,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:02:37Z"
+      "resolved_at": "2026-08-27T23:02:37Z",
+      "overrides": {
+        "display_name": "DJI Osmo Action 4"
+      }
     },
     "dji-rs-mini-combo-gimbal": {
       "contamination_key": "dji-rs-mini-combo-gimbal",
@@ -9006,7 +9174,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T22:02:20Z"
+      "resolved_at": "2026-09-03T22:02:20Z",
+      "overrides": {
+        "display_name": "Fujifilm XF 27mm f/2.8"
+      }
     },
     "panasonic-lumix-s9": {
       "contamination_key": "panasonic-lumix-s9",
@@ -9096,7 +9267,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:06:32Z"
+      "resolved_at": "2026-08-27T23:06:32Z",
+      "overrides": {
+        "display_name": "DJI Osmo Action 6"
+      }
     },
     "nikon-sb-28-dx-speedlight": {
       "contamination_key": "nikon-sb-28-dx-speedlight",
@@ -9219,7 +9393,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-30T04:01:13Z"
+      "resolved_at": "2026-10-30T04:01:13Z",
+      "overrides": {
+        "display_name": "Fujifilm X100S"
+      }
     },
     "canon-80-200mm-f4-5": {
       "contamination_key": "canon-80-200mm-f4-5",
@@ -9375,7 +9552,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-04T00:02:27Z"
+      "resolved_at": "2026-09-04T00:02:27Z",
+      "overrides": {
+        "display_name": "Canon EF 40mm f/2.8 STM"
+      }
     },
     "nikon-300mm-f2-8": {
       "contamination_key": "nikon-300mm-f2-8",
@@ -9670,7 +9850,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:11:04Z"
+      "resolved_at": "2026-08-27T23:11:04Z",
+      "overrides": {
+        "display_name": "GoPro HERO9 Black"
+      }
     },
     "godox-v1-flash-fuji": {
       "contamination_key": "godox-v1-flash-fuji",
@@ -9967,7 +10150,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:12:42Z"
+      "resolved_at": "2026-08-27T23:12:42Z",
+      "overrides": {
+        "display_name": "Sony RX100 IV"
+      }
     },
     "nikon-z-fc": {
       "contamination_key": "nikon-z-fc",
@@ -10112,7 +10298,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-11T00:01:08Z"
+      "resolved_at": "2026-09-11T00:01:08Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix S PRO 70-200mm f/2.8 O.I.S."
+      }
     },
     "rokinon-35mm": {
       "contamination_key": "rokinon-35mm",
@@ -10229,7 +10418,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:15:44Z"
+      "resolved_at": "2026-08-27T23:15:44Z",
+      "overrides": {
+        "display_name": "Rokinon 35mm T1.5 Cine DS"
+      }
     },
     "hasselblad-45mm-f4": {
       "contamination_key": "hasselblad-45mm-f4",
@@ -10377,7 +10569,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:17:28Z"
+      "resolved_at": "2026-08-27T23:17:28Z",
+      "overrides": {
+        "display_name": "Hasselblad X1D-50c"
+      }
     },
     "dji-rs-gimbal-stabilizer": {
       "contamination_key": "dji-rs-gimbal-stabilizer",
@@ -10887,7 +11082,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:20:54Z"
+      "resolved_at": "2026-08-27T23:20:54Z",
+      "overrides": {
+        "display_name": "Sony FX2"
+      }
     },
     "nikon-z-30": {
       "contamination_key": "nikon-z-30",
@@ -11078,6 +11276,9 @@
         "wikipedia_title": "Nikon_Z30",
         "wikipedia_title_resolved": "Nikon Z30",
         "wikipedia_stamped_at": "2026-08-28T02:33:27Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z30"
       }
     },
     "sony-fx3": {
@@ -11155,6 +11356,9 @@
         "observed": "https://helpguide.sony.net/ilc/2210/v1/en/contents/TP1000886922.html",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sony FX3"
       }
     },
     "fujifilm-x-t200": {
@@ -11201,6 +11405,9 @@
         "wikipedia_title": "Fujifilm_X-T200",
         "wikipedia_title_resolved": "Fujifilm X-T200",
         "wikipedia_stamped_at": "2026-08-28T02:33:33Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T200"
       }
     },
     "sony-85mm-f1-4": {
@@ -11271,7 +11478,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-01T04:04:13Z"
+      "resolved_at": "2026-11-01T04:04:13Z",
+      "overrides": {
+        "display_name": "Sony FE 85mm f/1.4 GM"
+      }
     },
     "canon-200-400mm-f4": {
       "contamination_key": "canon-200-400mm-f4",
@@ -11399,7 +11609,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:24:07Z"
+      "resolved_at": "2026-08-27T23:24:07Z",
+      "overrides": {
+        "display_name": "Canon RF 16mm f/2.8 STM"
+      }
     },
     "sony-50mm-f2-8": {
       "contamination_key": "sony-50mm-f2-8",
@@ -11440,7 +11653,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:08:50Z"
+      "resolved_at": "2026-09-15T14:08:50Z",
+      "overrides": {
+        "display_name": "Sony 50mm f/2.8 Macro (A-mount)"
+      }
     },
     "canon-100mm-f2-8": {
       "contamination_key": "canon-100mm-f2-8",
@@ -11573,7 +11789,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-04T08:01:04Z"
+      "resolved_at": "2026-09-04T08:01:04Z",
+      "overrides": {
+        "display_name": "Canon EF 100mm f/2.8 Macro USM"
+      }
     },
     "leica-50mm-f1-4": {
       "contamination_key": "leica-50mm-f1-4",
@@ -11636,7 +11855,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-06T15:11:40Z"
+      "resolved_at": "2026-09-06T15:11:40Z",
+      "overrides": {
+        "display_name": "Leica Summilux-M 50mm f/1.4 ASPH"
+      }
     },
     "canon-powershot-sx740": {
       "contamination_key": "canon-powershot-sx740",
@@ -11769,7 +11991,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-02T20:00:48Z"
+      "resolved_at": "2026-09-02T20:00:48Z",
+      "overrides": {
+        "display_name": "Sony FE 28-70mm f/3.5-5.6 OSS"
+      }
     },
     "panasonic-lumix-g9-ii": {
       "contamination_key": "panasonic-lumix-g9-ii",
@@ -11921,7 +12146,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-10T22:02:38Z"
+      "resolved_at": "2026-09-10T22:02:38Z",
+      "overrides": {
+        "display_name": "Sigma 17-40mm f/1.8 DC Art"
+      }
     },
     "sigma-16-300mm-f3-5": {
       "contamination_key": "sigma-16-300mm-f3-5",
@@ -11976,6 +12204,9 @@
         "observed": "https://www.sigma-global.com/en/lenses/c025_16_300_35_67/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sigma 16-300mm f/3.5-6.7 DC OS Contemporary"
       }
     },
     "canon-100-400mm-f5-6": {
@@ -12046,7 +12277,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:18:44Z"
+      "resolved_at": "2026-09-02T20:18:44Z",
+      "overrides": {
+        "display_name": "Canon RF 100-400mm f/5.6-8 IS USM"
+      }
     },
     "canon-28-105mm-f3-5": {
       "contamination_key": "canon-28-105mm-f3-5",
@@ -12157,7 +12391,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:19:22Z"
+      "resolved_at": "2026-09-02T20:19:22Z",
+      "overrides": {
+        "display_name": "Canon EOS R7"
+      }
     },
     "canon-powershot-sd800": {
       "contamination_key": "canon-powershot-sd800",
@@ -12198,7 +12435,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:19:39Z"
+      "resolved_at": "2026-09-02T20:19:39Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SD800 IS"
+      }
     },
     "canon-powershot-v1": {
       "contamination_key": "canon-powershot-v1",
@@ -12247,7 +12487,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:19:57Z"
+      "resolved_at": "2026-09-02T20:19:57Z",
+      "overrides": {
+        "display_name": "Canon PowerShot V1"
+      }
     },
     "fujifilm-x-s20": {
       "contamination_key": "fujifilm-x-s20",
@@ -12322,6 +12565,9 @@
         "wikipedia_title": "Fujifilm_X-S20",
         "wikipedia_title_resolved": "Fujifilm X-S20",
         "wikipedia_stamped_at": "2026-09-03T02:34:13Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-S20"
       }
     },
     "nikon-d3300": {
@@ -12469,6 +12715,9 @@
         "wikipedia_title": "Nikon_D3300",
         "wikipedia_title_resolved": "Nikon D3300",
         "wikipedia_stamped_at": "2026-09-03T02:34:17Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D3300"
       }
     },
     "nikon-d780": {
@@ -12544,6 +12793,9 @@
         "wikipedia_title": "Nikon_D780",
         "wikipedia_title_resolved": "Nikon D780",
         "wikipedia_stamped_at": "2026-09-03T02:34:20Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D780"
       }
     },
     "panasonic-gh5": {
@@ -12621,7 +12873,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:21:08Z"
+      "resolved_at": "2026-09-02T20:21:08Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DC-GH5"
+      }
     },
     "sony-12-24mm-f2-8": {
       "contamination_key": "sony-12-24mm-f2-8",
@@ -12691,7 +12946,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-10T14:00:30Z"
+      "resolved_at": "2026-09-10T14:00:30Z",
+      "overrides": {
+        "display_name": "Sony FE 12-24mm f/2.8 GM"
+      }
     },
     "sony-20-70mm-f4": {
       "contamination_key": "sony-20-70mm-f4",
@@ -12732,7 +12990,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:21:47Z"
+      "resolved_at": "2026-09-02T20:21:47Z",
+      "overrides": {
+        "display_name": "Sony FE 20-70mm f/4 G"
+      }
     },
     "sony-70-350mm-f4-5": {
       "contamination_key": "sony-70-350mm-f4-5",
@@ -12801,7 +13062,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:22:08Z"
+      "resolved_at": "2026-09-02T20:22:08Z",
+      "overrides": {
+        "display_name": "Sony E 70-350mm f/4.5-6.3 G OSS"
+      }
     },
     "sony-a6300": {
       "contamination_key": "sony-a6300",
@@ -12878,7 +13142,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:22:25Z"
+      "resolved_at": "2026-09-02T20:22:25Z",
+      "overrides": {
+        "display_name": "Sony A6300"
+      }
     },
     "sony-a7": {
       "contamination_key": "sony-a7",
@@ -12919,7 +13186,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:22:43Z"
+      "resolved_at": "2026-09-02T20:22:43Z",
+      "overrides": {
+        "display_name": "Sony A7"
+      }
     },
     "sony-zv-1": {
       "contamination_key": "sony-zv-1",
@@ -13053,7 +13323,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:22:59Z"
+      "resolved_at": "2026-09-02T20:22:59Z",
+      "overrides": {
+        "display_name": "Sony ZV-1"
+      }
     },
     "fujifilm-x100f": {
       "contamination_key": "fujifilm-x100f",
@@ -13102,7 +13375,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-03T02:00:52Z"
+      "resolved_at": "2026-09-03T02:00:52Z",
+      "overrides": {
+        "display_name": "Fujifilm X100F"
+      }
     },
     "nikon-d7500": {
       "contamination_key": "nikon-d7500",
@@ -13177,6 +13453,9 @@
         "wikipedia_title": "Nikon_D7500",
         "wikipedia_title_resolved": "Nikon D7500",
         "wikipedia_stamped_at": "2026-09-04T02:38:20Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D7500"
       }
     },
     "canon-50mm-f1-8": {
@@ -13226,7 +13505,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T12:00:23Z"
+      "resolved_at": "2026-09-03T12:00:23Z",
+      "overrides": {
+        "display_name": "Canon EF 50mm f/1.8 STM"
+      }
     },
     "sony-16-25mm-f2-8": {
       "contamination_key": "sony-16-25mm-f2-8",
@@ -13358,7 +13640,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T20:00:29Z"
+      "resolved_at": "2026-09-03T20:00:29Z",
+      "overrides": {
+        "display_name": "Sony FE 16-25mm f/2.8 G"
+      }
     },
     "panasonic-lumix-s-35mm": {
       "contamination_key": "panasonic-lumix-s-35mm",
@@ -13518,7 +13803,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-03T19:20:18Z"
+      "resolved_at": "2026-09-03T19:20:18Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix S 35mm f/1.8"
+      }
     },
     "dji-mavic-3-cine": {
       "contamination_key": "dji-mavic-3-cine",
@@ -16985,7 +17273,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:01:07Z"
+      "resolved_at": "2026-09-15T14:01:07Z",
+      "overrides": {
+        "display_name": "Sony Sonnar T* FE 35mm f/2.8 ZA"
+      }
     },
     "fujifilm-16-50mm-f2-8": {
       "contamination_key": "fujifilm-16-50mm-f2-8",
@@ -17124,7 +17415,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:02:04Z"
+      "resolved_at": "2026-09-15T14:02:04Z",
+      "overrides": {
+        "display_name": "DJI Osmo 360"
+      }
     },
     "fujifilm-100-400mm-f4-5": {
       "contamination_key": "fujifilm-100-400mm-f4-5",
@@ -17352,7 +17646,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:14:13Z"
+      "resolved_at": "2026-09-15T14:14:13Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital ED 7-14mm f/2.8 PRO"
+      }
     },
     "nikon-24mm-f1-8": {
       "contamination_key": "nikon-24mm-f1-8",
@@ -17916,7 +18213,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T08:03:37Z"
+      "resolved_at": "2026-09-04T08:03:37Z",
+      "overrides": {
+        "display_name": "Sony FE 50mm f/1.2 GM"
+      }
     },
     "canon-200-800mm-f6-3": {
       "contamination_key": "canon-200-800mm-f6-3",
@@ -18268,7 +18568,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T10:01:58Z"
+      "resolved_at": "2026-09-04T10:01:58Z",
+      "overrides": {
+        "display_name": "Canon EOS R10"
+      }
     },
     "fujifilm-x-t3": {
       "contamination_key": "fujifilm-x-t3",
@@ -18381,6 +18684,9 @@
         "wikipedia_title": "Fujifilm_X-T3",
         "wikipedia_title_resolved": "Fujifilm X-T3",
         "wikipedia_stamped_at": "2026-09-05T02:34:47Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T3"
       }
     },
     "canon-powershot-sx530": {
@@ -18792,7 +19098,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T12:03:17Z"
+      "resolved_at": "2026-09-04T12:03:17Z",
+      "overrides": {
+        "display_name": "Sigma 16-28mm f/2.8 DG DN Contemporary"
+      }
     },
     "insta360-x4-8k-360-action": {
       "contamination_key": "insta360-x4-8k-360-action",
@@ -19254,7 +19563,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-01T04:05:56Z"
+      "resolved_at": "2026-10-01T04:05:56Z",
+      "overrides": {
+        "display_name": "Canon EF 16-35mm f/2.8L USM"
+      }
     },
     "fujifilm-x-pro2": {
       "contamination_key": "fujifilm-x-pro2",
@@ -19374,6 +19686,9 @@
         "wikipedia_title": "Fujifilm_X-Pro2",
         "wikipedia_title_resolved": "Fujifilm X-Pro2",
         "wikipedia_stamped_at": "2026-09-05T02:34:50Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-Pro2"
       }
     },
     "fujifilm-x-t30": {
@@ -19420,6 +19735,9 @@
         "wikipedia_title": "Fujifilm_X-T30",
         "wikipedia_title_resolved": "Fujifilm X-T30",
         "wikipedia_stamped_at": "2026-09-05T02:34:54Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T30"
       }
     },
     "canon-eos-r100": {
@@ -19640,7 +19958,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T16:03:32Z"
+      "resolved_at": "2026-09-04T16:03:32Z",
+      "overrides": {
+        "display_name": "Sigma 60mm f/2.8 DN Art"
+      }
     },
     "canon-28-70mm-f2-8": {
       "contamination_key": "canon-28-70mm-f2-8",
@@ -19730,7 +20051,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T18:05:54Z"
+      "resolved_at": "2026-09-04T18:05:54Z",
+      "overrides": {
+        "display_name": "Canon RF 16-28mm f/2.8 IS STM"
+      }
     },
     "sony-24-50mm-f2-8": {
       "contamination_key": "sony-24-50mm-f2-8",
@@ -20441,7 +20765,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T22:01:47Z"
+      "resolved_at": "2026-09-04T22:01:47Z",
+      "overrides": {
+        "display_name": "Fujifilm X100VI"
+      }
     },
     "sony-zv-e1": {
       "contamination_key": "sony-zv-e1",
@@ -20695,6 +21022,9 @@
         "wikipedia_title": "Nikon_D5600",
         "wikipedia_title_resolved": "Nikon D5600",
         "wikipedia_stamped_at": "2026-09-05T02:35:05Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D5600"
       }
     },
     "fujifilm-x-100s-ii": {
@@ -23408,7 +23738,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-06T18:00:26Z"
+      "resolved_at": "2026-09-06T18:00:26Z",
+      "overrides": {
+        "display_name": "Canon EF 135mm f/2L USM"
+      }
     },
     "pentax-50mm-f1-4": {
       "contamination_key": "pentax-50mm-f1-4",
@@ -23539,7 +23872,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-06T16:29:51Z"
+      "resolved_at": "2026-09-06T16:29:51Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SX30 IS"
+      }
     },
     "canon-300mm-f4": {
       "contamination_key": "canon-300mm-f4",
@@ -23865,7 +24201,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-06T16:31:19Z"
+      "resolved_at": "2026-09-06T16:31:19Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital ED 17mm f/1.2 PRO"
+      }
     },
     "sony-28mm-f2": {
       "contamination_key": "sony-28mm-f2",
@@ -24026,7 +24365,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-06T16:31:38Z"
+      "resolved_at": "2026-09-06T16:31:38Z",
+      "overrides": {
+        "display_name": "Sony FE 28mm f/2"
+      }
     },
     "olympus-50mm-f3-5": {
       "contamination_key": "olympus-50mm-f3-5",
@@ -24460,7 +24802,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-06T16:35:09Z"
+      "resolved_at": "2026-09-06T16:35:09Z",
+      "overrides": {
+        "display_name": "Canon PowerShot S95"
+      }
     },
     "sony-24-70mm-f2-8": {
       "contamination_key": "sony-24-70mm-f2-8",
@@ -25240,7 +25585,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:03:00Z"
+      "resolved_at": "2026-09-15T14:03:00Z",
+      "overrides": {
+        "display_name": "Sigma 30mm f/1.4 DC DN Contemporary"
+      }
     },
     "canon-11-24mm-f4": {
       "contamination_key": "canon-11-24mm-f4",
@@ -25310,7 +25658,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-08T04:00:54Z"
+      "resolved_at": "2026-09-08T04:00:54Z",
+      "overrides": {
+        "display_name": "Canon EF 11-24mm f/4L USM"
+      }
     },
     "godox-tt600-thinklite-flash": {
       "contamination_key": "godox-tt600-thinklite-flash",
@@ -25551,7 +25902,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:03:59Z"
+      "resolved_at": "2026-09-15T14:03:59Z",
+      "overrides": {
+        "display_name": "Canon EOS 550D (Rebel T2i)"
+      }
     },
     "fujifilm-x-t30-iii": {
       "contamination_key": "fujifilm-x-t30-iii",
@@ -25592,7 +25946,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:01:39Z"
+      "resolved_at": "2026-09-15T14:01:39Z",
+      "overrides": {
+        "display_name": "Fujifilm X-T30 III"
+      }
     },
     "nikon-sb-26-af-speedlight": {
       "contamination_key": "nikon-sb-26-af-speedlight",
@@ -25910,6 +26267,9 @@
           "mpn_wiped"
         ],
         "hard": true
+      },
+      "overrides": {
+        "display_name": "Sigma 28-70mm f/2.8 DG DN Contemporary"
       }
     },
     "canon-14mm-f2-8": {
@@ -26292,7 +26652,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-09T04:03:12Z"
+      "resolved_at": "2026-09-09T04:03:12Z",
+      "overrides": {
+        "display_name": "Canon EOS R8 Mark II"
+      }
     },
     "hoverair-x1-pro-never": {
       "contamination_key": "hoverair-x1-pro-never",
@@ -27782,7 +28145,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-01T06:01:13Z"
+      "resolved_at": "2026-10-01T06:01:13Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix S1II"
+      }
     },
     "nikon-z-40": {
       "contamination_key": "nikon-z-40",
@@ -30679,7 +31045,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-10T04:00:39Z"
+      "resolved_at": "2026-09-10T04:00:39Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DC-S1R"
+      }
     },
     "sony-400-800mm-f6-3": {
       "contamination_key": "sony-400-800mm-f6-3",
@@ -31029,7 +31398,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-10T06:01:18Z"
+      "resolved_at": "2026-09-10T06:01:18Z",
+      "overrides": {
+        "display_name": "Fujifilm GF 63mm f/2.8 R WR"
+      }
     },
     "canon-eos-90d": {
       "contamination_key": "canon-eos-90d",
@@ -31589,7 +31961,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-11T04:02:22Z"
+      "resolved_at": "2026-09-11T04:02:22Z",
+      "overrides": {
+        "display_name": "Canon EOS-1D Mark II"
+      }
     },
     "nikon-60mm-f2-8": {
       "contamination_key": "nikon-60mm-f2-8",
@@ -32414,6 +32789,9 @@
         "wikipedia_title": "Nikon_Z50",
         "wikipedia_title_resolved": "Nikon Z50",
         "wikipedia_stamped_at": "2026-09-15T02:35:45Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z50"
       }
     },
     "sony-rx100-iii": {
@@ -32455,7 +32833,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:09:04Z"
+      "resolved_at": "2026-09-15T14:09:04Z",
+      "overrides": {
+        "display_name": "Sony RX100 III"
+      }
     },
     "sigma-45mm-f2-8": {
       "contamination_key": "sigma-45mm-f2-8",
@@ -32538,7 +32919,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:09:09Z"
+      "resolved_at": "2026-09-15T14:09:09Z",
+      "overrides": {
+        "display_name": "Sigma 45mm f/2.8 DG DN Contemporary"
+      }
     },
     "olympus-12-200mm-f3-5": {
       "contamination_key": "olympus-12-200mm-f3-5",
@@ -32764,7 +33148,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-07T04:03:14Z"
+      "resolved_at": "2026-10-07T04:03:14Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital 45mm f/1.8"
+      }
     },
     "gopro-hero13": {
       "contamination_key": "gopro-hero13",
@@ -32922,7 +33309,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:11:05Z"
+      "resolved_at": "2026-09-15T14:11:05Z",
+      "overrides": {
+        "display_name": "Sony FE 16mm f/1.8 G"
+      }
     },
     "dji-osmo-mobile-se": {
       "contamination_key": "dji-osmo-mobile-se",
@@ -33595,6 +33985,9 @@
         "wikipedia_title": "Nikon_D800",
         "wikipedia_title_resolved": "Nikon D800",
         "wikipedia_stamped_at": "2026-09-15T02:35:52Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D800"
       }
     },
     "dji-in": {
@@ -34169,7 +34562,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:00:55Z"
+      "resolved_at": "2026-09-15T14:00:55Z",
+      "overrides": {
+        "display_name": "Sigma 28-45mm f/1.8 DG DN Art"
+      }
     },
     "nikon-35mm-f1-8": {
       "contamination_key": "nikon-35mm-f1-8",
@@ -34404,6 +34800,9 @@
         "wikipedia_title": "Fujifilm_X-T4",
         "wikipedia_title_resolved": "Fujifilm X-T4",
         "wikipedia_stamped_at": "2026-09-15T02:35:55Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T4"
       }
     },
     "nikon-18mm-f4": {
@@ -35799,6 +36198,9 @@
         "observed": "https://www.sigma-global.com/en/lenses/c018_56_14/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
+      },
+      "overrides": {
+        "display_name": "Sigma 56mm f/1.4 DC DN Contemporary"
       }
     },
     "sony-50mm-f1-4": {
@@ -36005,6 +36407,9 @@
         "wikipedia_title": "Fujifilm_X-E4",
         "wikipedia_title_resolved": "Fujifilm X-E4",
         "wikipedia_stamped_at": "2026-09-16T02:36:06Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-E4"
       }
     },
     "nikon-fm2": {
@@ -36647,7 +37052,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-15T04:04:16Z"
+      "resolved_at": "2026-09-15T04:04:16Z",
+      "overrides": {
+        "display_name": "Sony Vario-Tessar T* E 16-70mm f/4 ZA OSS"
+      }
     },
     "dji-mini-se": {
       "contamination_key": "dji-mini-se",
@@ -37225,7 +37633,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-17T06:02:54Z"
+      "resolved_at": "2026-10-17T06:02:54Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital 25mm f/1.8"
+      }
     },
     "godox-ving-v860iis-ttl-li": {
       "contamination_key": "godox-ving-v860iis-ttl-li",
@@ -38259,6 +38670,9 @@
         "wikipedia_title": "Fujifilm_X-T1",
         "wikipedia_title_resolved": "Fujifilm X-T1",
         "wikipedia_stamped_at": "2026-09-17T02:36:40Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T1"
       }
     },
     "sony-a6600": {
@@ -38329,7 +38743,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-16T04:01:28Z"
+      "resolved_at": "2026-09-16T04:01:28Z",
+      "overrides": {
+        "display_name": "Sony A6600"
+      }
     },
     "om-system-om-3": {
       "contamination_key": "om-system-om-3",
@@ -38398,6 +38815,9 @@
         "wikipedia_title": "OM_System_OM-3",
         "wikipedia_title_resolved": "OM System OM-3",
         "wikipedia_stamped_at": "2026-09-17T02:36:43Z"
+      },
+      "overrides": {
+        "display_name": "OM SYSTEM OM-3"
       }
     },
     "fujifilm-x-e3": {
@@ -38473,6 +38893,9 @@
         "wikipedia_title": "Fujifilm_X-E3",
         "wikipedia_title_resolved": "Fujifilm X-E3",
         "wikipedia_stamped_at": "2026-09-17T02:36:46Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-E3"
       }
     },
     "fujifilm-x-t2": {
@@ -38548,6 +38971,9 @@
         "wikipedia_title": "Fujifilm_X-T2",
         "wikipedia_title_resolved": "Fujifilm X-T2",
         "wikipedia_stamped_at": "2026-09-17T02:36:50Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-T2"
       }
     },
     "nikon-55mm-f3-5": {
@@ -39375,7 +39801,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-03T04:02:19Z"
+      "resolved_at": "2026-10-03T04:02:19Z",
+      "overrides": {
+        "display_name": "Fujifilm XF 23mm f/1.4 R"
+      }
     },
     "canon-85mm-f2": {
       "contamination_key": "canon-85mm-f2",
@@ -39445,7 +39874,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-17T10:02:37Z"
+      "resolved_at": "2026-09-17T10:02:37Z",
+      "overrides": {
+        "display_name": "Canon RF 85mm f/2 Macro IS STM"
+      }
     },
     "canon-18-55mm-f4": {
       "contamination_key": "canon-18-55mm-f4",
@@ -39945,7 +40377,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-19T06:00:26Z"
+      "resolved_at": "2026-09-19T06:00:26Z",
+      "overrides": {
+        "display_name": "Fujifilm XF 16-55mm f/2.8 R LM WR"
+      }
     },
     "paul-c-buff-white-lightining-ultra-1200": {
       "contamination_key": "paul-c-buff-white-lightining-ultra-1200",
@@ -40027,7 +40462,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-27T04:00:48Z"
+      "resolved_at": "2026-09-27T04:00:48Z",
+      "overrides": {
+        "display_name": "Canon EF 15mm f/2.8 Fisheye"
+      }
     },
     "canon-380ex-speedlite": {
       "contamination_key": "canon-380ex-speedlite",
@@ -40551,6 +40989,9 @@
         "wikipedia_title": "Nikon_Z5",
         "wikipedia_title_resolved": "Nikon Z5",
         "wikipedia_stamped_at": "2026-09-21T02:36:35Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z5"
       }
     },
     "hoverair-x1-self-flying-condition": {
@@ -41010,7 +41451,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-22T16:03:06Z"
+      "resolved_at": "2026-09-22T16:03:06Z",
+      "overrides": {
+        "display_name": "Sony FE 8-14mm f/3.5 Fisheye G"
+      }
     },
     "om-system-14-42mm-f3-5": {
       "contamination_key": "om-system-14-42mm-f3-5",
@@ -41059,7 +41503,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-30T04:01:11Z"
+      "resolved_at": "2026-09-30T04:01:11Z",
+      "overrides": {
+        "display_name": "OM SYSTEM M.Zuiko Digital ED 14-42mm f/3.5-5.6 EZ"
+      }
     },
     "promaster-300c-professional-studio-flash": {
       "contamination_key": "promaster-300c-professional-studio-flash",
@@ -41730,7 +42177,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-23T14:00:30Z"
+      "resolved_at": "2026-09-23T14:00:30Z",
+      "overrides": {
+        "display_name": "Canon EF-M 32mm f/1.4 STM"
+      }
     },
     "nikon-z-400": {
       "contamination_key": "nikon-z-400",
@@ -42288,6 +42738,9 @@
         "wikipedia_title": "Nikon_Z50II",
         "wikipedia_title_resolved": "Nikon Z50II",
         "wikipedia_stamped_at": "2026-09-25T02:37:23Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z50 II"
       }
     },
     "sony-a6000": {
@@ -42395,7 +42848,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-24T04:02:14Z"
+      "resolved_at": "2026-09-24T04:02:14Z",
+      "overrides": {
+        "display_name": "Sony A6000"
+      }
     },
     "nikon-24mm-f2-8": {
       "contamination_key": "nikon-24mm-f2-8",
@@ -43423,7 +43879,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-25T04:01:47Z"
+      "resolved_at": "2026-09-25T04:01:47Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DC-S1H"
+      }
     },
     "vivitar-drcls16-duo-racing-first-person-view-goggles": {
       "contamination_key": "vivitar-drcls16-duo-racing-first-person-view-goggles",
@@ -43777,7 +44236,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-25T06:01:32Z"
+      "resolved_at": "2026-09-25T06:01:32Z",
+      "overrides": {
+        "display_name": "Olympus OM-D E-M10 Mark IV"
+      }
     },
     "leica-40mm-f2": {
       "contamination_key": "leica-40mm-f2",
@@ -44288,7 +44750,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-29T04:00:26Z"
+      "resolved_at": "2026-09-29T04:00:26Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix GH6"
+      }
     },
     "hoverair-hover-hoverair-x1-selfie-2-7k-video-wi-fi": {
       "contamination_key": "hoverair-hover-hoverair-x1-selfie-2-7k-video-wi-fi",
@@ -44677,7 +45142,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-04T04:01:57Z"
+      "resolved_at": "2026-10-04T04:01:57Z",
+      "overrides": {
+        "display_name": "Canon EF-M 15-45mm f/3.5-6.3 IS STM"
+      }
     },
     "insta360-x4-air-8k-360": {
       "contamination_key": "insta360-x4-air-8k-360",
@@ -44833,7 +45301,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-30T04:00:23Z"
+      "resolved_at": "2026-09-30T04:00:23Z",
+      "overrides": {
+        "display_name": "Sigma 20-60mm f/2.8-4 DG Contemporary"
+      }
     },
     "canon-eos-r5-c": {
       "contamination_key": "canon-eos-r5-c",
@@ -44902,7 +45373,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-30T04:01:43Z"
+      "resolved_at": "2026-09-30T04:01:43Z",
+      "overrides": {
+        "display_name": "Canon EOS R5 C"
+      }
     },
     "canon-powershot-sx620": {
       "contamination_key": "canon-powershot-sx620",
@@ -45000,7 +45474,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-30T04:02:27Z"
+      "resolved_at": "2026-09-30T04:02:27Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SX620 HS"
+      }
     },
     "pentax-135mm-f2-5": {
       "contamination_key": "pentax-135mm-f2-5",
@@ -45041,7 +45518,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-30T06:00:47Z"
+      "resolved_at": "2026-09-30T06:00:47Z",
+      "overrides": {
+        "display_name": "Pentax SMC Pentax 135mm f/2.5"
+      }
     },
     "hoverair-x1-pro-max-cycling": {
       "contamination_key": "hoverair-x1-pro-max-cycling",
@@ -45609,7 +46089,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-16T04:03:22Z"
+      "resolved_at": "2026-10-16T04:03:22Z",
+      "overrides": {
+        "display_name": "Canon TS-E 24mm f/3.5L"
+      }
     },
     "leica-100mm-f2-8": {
       "contamination_key": "leica-100mm-f2-8",
@@ -45720,7 +46203,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-01T04:01:38Z"
+      "resolved_at": "2026-10-01T04:01:38Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SX1 IS"
+      }
     },
     "nikon-200mm-f4": {
       "contamination_key": "nikon-200mm-f4",
@@ -45761,7 +46247,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-01T04:02:08Z"
+      "resolved_at": "2026-10-01T04:02:08Z",
+      "overrides": {
+        "display_name": "Nikon Nikkor 200mm f/4"
+      }
     },
     "bogen-3001-pro-tripod": {
       "contamination_key": "bogen-3001-pro-tripod",
@@ -45933,7 +46422,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-02T04:03:13Z"
+      "resolved_at": "2026-10-02T04:03:13Z",
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 20mm f/1.8 S"
+      }
     },
     "autel-evo-ii-640t-v3-dual-thermal-640x512-50mp-ryyb": {
       "contamination_key": "autel-evo-ii-640t-v3-dual-thermal-640x512-50mp-ryyb",
@@ -46157,7 +46649,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-02T06:00:55Z"
+      "resolved_at": "2026-10-02T06:00:55Z",
+      "overrides": {
+        "display_name": "Sigma 19mm f/2.8 DN Art"
+      }
     },
     "laowa-35mm": {
       "contamination_key": "laowa-35mm",
@@ -46319,7 +46814,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-04T04:01:02Z"
+      "resolved_at": "2026-10-04T04:01:02Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital ED 75mm f/1.8"
+      }
     },
     "hoverair-x1-self-flying": {
       "contamination_key": "hoverair-x1-self-flying",
@@ -46681,7 +47179,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-06T06:00:25Z"
+      "resolved_at": "2026-10-06T06:00:25Z",
+      "overrides": {
+        "display_name": "Olympus M.Zuiko Digital ED 45mm f/1.2 PRO"
+      }
     },
     "skydio-2-barely": {
       "contamination_key": "skydio-2-barely",
@@ -46905,7 +47406,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-07T06:00:23Z"
+      "resolved_at": "2026-10-07T06:00:23Z",
+      "overrides": {
+        "display_name": "Insta360 GO 3S"
+      }
     },
     "minox-ec-minature-elec-flash": {
       "contamination_key": "minox-ec-minature-elec-flash",
@@ -47259,7 +47763,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-07T04:02:54Z"
+      "resolved_at": "2026-10-07T04:02:54Z",
+      "overrides": {
+        "display_name": "Insta360 GO Ultra"
+      }
     },
     "sony-600mm-f6-3": {
       "contamination_key": "sony-600mm-f6-3",
@@ -47341,7 +47848,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-27T04:00:28Z"
+      "resolved_at": "2026-10-27T04:00:28Z",
+      "overrides": {
+        "display_name": "Sony FE 600mm f/6.3 GM OSS"
+      }
     },
     "dji-qav-s-2-bardwell-race": {
       "contamination_key": "dji-qav-s-2-bardwell-race",
@@ -47560,7 +48070,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-08T06:00:24Z"
+      "resolved_at": "2026-10-08T06:00:24Z",
+      "overrides": {
+        "display_name": "TTArtisan AF 85mm f/1.8 Neo"
+      }
     },
     "canon-speedlite-200e-flash": {
       "contamination_key": "canon-speedlite-200e-flash",
@@ -47728,6 +48241,9 @@
         "wikipedia_title": "OM_System_OM-5",
         "wikipedia_title_resolved": "OM System OM-5",
         "wikipedia_stamped_at": "2026-10-09T02:41:05Z"
+      },
+      "overrides": {
+        "display_name": "OM SYSTEM OM-5"
       }
     },
     "zeiss-35mm-f2-8": {
@@ -48914,7 +49430,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-17T06:01:28Z"
+      "resolved_at": "2026-10-17T06:01:28Z",
+      "overrides": {
+        "display_name": "Sigma 15mm f/1.4 DC Contemporary"
+      }
     },
     "leica-90-280mm-f2.8": {
       "contamination_key": "leica-90-280mm-f2.8",
@@ -49123,7 +49642,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-29T19:11:52Z"
+      "resolved_at": "2026-10-29T19:11:52Z",
+      "overrides": {
+        "display_name": "Sigma 50mm f/1.4 DG HSM Art"
+      }
     },
     "viltrox-14mm-f4": {
       "contamination_key": "viltrox-14mm-f4",
@@ -49181,7 +49703,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-10T04:00:49Z"
+      "resolved_at": "2026-10-10T04:00:49Z",
+      "overrides": {
+        "display_name": "Viltrox AF 14mm f/4 Air"
+      }
     },
     "hasselblad-x2d": {
       "contamination_key": "hasselblad-x2d",
@@ -50415,7 +50940,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-14T12:01:01Z"
+      "resolved_at": "2026-10-14T12:01:01Z",
+      "overrides": {
+        "display_name": "Fujifilm XF 50-140mm f/2.8 R LM OIS WR"
+      }
     },
     "sony-16-55mm-f2-8": {
       "contamination_key": "sony-16-55mm-f2-8",
@@ -50584,7 +51112,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-14T10:11:03Z"
+      "resolved_at": "2026-10-14T10:11:03Z",
+      "overrides": {
+        "display_name": "Sony E 16-55mm f/2.8 G"
+      }
     },
     "canon-22mm-f2": {
       "contamination_key": "canon-22mm-f2",
@@ -50653,7 +51184,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-14T10:12:00Z"
+      "resolved_at": "2026-10-14T10:12:00Z",
+      "overrides": {
+        "display_name": "Canon EF-M 22mm f/2 STM"
+      }
     },
     "tamron-28-200mm-f3-8": {
       "contamination_key": "tamron-28-200mm-f3-8",
@@ -50870,7 +51404,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-15T04:01:16Z"
+      "resolved_at": "2026-10-15T04:01:16Z",
+      "overrides": {
+        "display_name": "Canon RF 600mm f/11 IS STM"
+      }
     },
     "autel-evo-nano-plus": {
       "contamination_key": "autel-evo-nano-plus",
@@ -54744,7 +55281,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-25T04:00:47Z"
+      "resolved_at": "2026-10-25T04:00:47Z",
+      "overrides": {
+        "display_name": "Sony FE 400mm f/4.5 GM OSS"
+      }
     },
     "sony-a9-iii": {
       "contamination_key": "sony-a9-iii",
@@ -56036,7 +56576,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-28T04:02:44Z"
+      "resolved_at": "2026-10-28T04:02:44Z",
+      "overrides": {
+        "display_name": "Sony RX100 II"
+      }
     },
     "hoverair-x1-pro-sp06h004-self-flying": {
       "contamination_key": "hoverair-x1-pro-sp06h004-self-flying",
@@ -58174,7 +58717,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-30T04:04:08Z"
+      "resolved_at": "2026-10-30T04:04:08Z",
+      "overrides": {
+        "display_name": "Canon PowerShot SX540 HS"
+      }
     },
     "olympus-50mm-f1-8": {
       "contamination_key": "olympus-50mm-f1-8",
@@ -58215,7 +58761,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-30T08:00:27Z"
+      "resolved_at": "2026-10-30T08:00:27Z",
+      "overrides": {
+        "display_name": "Olympus Zuiko 50mm f/1.8 (OM)"
+      }
     },
     "panasonic-25mm-f1-7": {
       "contamination_key": "panasonic-25mm-f1-7",
@@ -58264,7 +58813,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-30T06:01:29Z"
+      "resolved_at": "2026-10-30T06:01:29Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix G 25mm f/1.7 ASPH"
+      }
     },
     "glidecam-hd-4000-stabilizer-system": {
       "contamination_key": "glidecam-hd-4000-stabilizer-system",
@@ -58713,7 +59265,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T04:05:47Z"
+      "resolved_at": "2026-10-31T04:05:47Z",
+      "overrides": {
+        "display_name": "Panasonic Lumix DMC-GH2"
+      }
     },
     "hasselblad-21mm-f4": {
       "contamination_key": "hasselblad-21mm-f4",
@@ -58754,7 +59309,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T04:08:56Z"
+      "resolved_at": "2026-10-31T04:08:56Z",
+      "overrides": {
+        "display_name": "Hasselblad XCD 21mm f/4"
+      }
     },
     "pentax-200mm-f4": {
       "contamination_key": "pentax-200mm-f4",
@@ -58795,7 +59353,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T04:14:18Z"
+      "resolved_at": "2026-10-31T04:14:18Z",
+      "overrides": {
+        "display_name": "Pentax SMC Takumar 200mm f/4"
+      }
     },
     "canon-85mm-f1-4": {
       "contamination_key": "canon-85mm-f1-4",
@@ -58872,7 +59433,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T04:14:40Z"
+      "resolved_at": "2026-10-31T04:14:40Z",
+      "overrides": {
+        "display_name": "Canon EF 85mm f/1.4L IS USM"
+      }
     },
     "hoverair-white-hoverair-x1-self-flying-pocket-sized-3-second": {
       "contamination_key": "hoverair-white-hoverair-x1-self-flying-pocket-sized-3-second",
@@ -59148,7 +59712,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T06:01:41Z"
+      "resolved_at": "2026-10-31T06:01:41Z",
+      "overrides": {
+        "display_name": "Canon EF 100mm f/2 USM"
+      }
     },
     "canon-powershot-v10": {
       "contamination_key": "canon-powershot-v10",
@@ -59597,7 +60164,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-01T06:00:26Z"
+      "resolved_at": "2026-11-01T06:00:26Z",
+      "overrides": {
+        "display_name": "Pentax HD DA* 11-18mm f/2.8 ED DC AW"
+      }
     },
     "sony-18-200mm-f3-5": {
       "contamination_key": "sony-18-200mm-f3-5",
@@ -59720,7 +60290,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-01T04:02:21Z"
+      "resolved_at": "2026-11-01T04:02:21Z",
+      "overrides": {
+        "display_name": "Sony E 18-200mm f/3.5-6.3 OSS"
+      }
     },
     "nikon-d810": {
       "contamination_key": "nikon-d810",
@@ -59839,6 +60412,9 @@
         "wikipedia_title": "Nikon_D810",
         "wikipedia_title_resolved": "Nikon D810",
         "wikipedia_stamped_at": "2026-11-02T02:43:54Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D810"
       }
     },
     "nikon-zf": {
@@ -60157,7 +60733,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-02T04:01:24Z"
+      "resolved_at": "2026-11-02T04:01:24Z",
+      "overrides": {
+        "display_name": "Sony A9 II"
+      }
     },
     "slik-pro-cf-632-section": {
       "contamination_key": "slik-pro-cf-632-section",
@@ -60302,7 +60881,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-03T04:04:43Z"
+      "resolved_at": "2026-11-03T04:04:43Z",
+      "overrides": {
+        "display_name": "Nikon Noct-Nikkor 58mm f/1.2"
+      }
     },
     "om-system-100-400mm-f5": {
       "contamination_key": "om-system-100-400mm-f5",
@@ -60551,7 +61133,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-04T04:00:46Z"
+      "resolved_at": "2026-11-04T04:00:46Z",
+      "overrides": {
+        "display_name": "Canon EOS R1"
+      }
     },
     "canon-eos-250d": {
       "contamination_key": "canon-eos-250d",
@@ -60592,7 +61177,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-04T04:01:07Z"
+      "resolved_at": "2026-11-04T04:01:07Z",
+      "overrides": {
+        "display_name": "Canon EOS 250D (Rebel SL3)"
+      }
     },
     "canon-60mm-f2-8": {
       "contamination_key": "canon-60mm-f2-8",
@@ -61318,6 +61906,9 @@
         "wikipedia_title": "Nikon_D500",
         "wikipedia_title_resolved": "Nikon D500",
         "wikipedia_stamped_at": "2026-11-06T02:43:48Z"
+      },
+      "overrides": {
+        "display_name": "Nikon D500"
       }
     },
     "viltrox-35-50mm-f1-4": {
@@ -61565,6 +62156,9 @@
         "wikipedia_title": "Fujifilm_X-E1",
         "wikipedia_title_resolved": "Fujifilm X-E1",
         "wikipedia_stamped_at": "2026-11-08T02:43:07Z"
+      },
+      "overrides": {
+        "display_name": "Fujifilm X-E1"
       }
     },
     "nikon-70-300mm-f4": {
@@ -61865,7 +62459,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-11-07T04:03:55Z"
+      "resolved_at": "2026-11-07T04:03:55Z",
+      "overrides": {
+        "display_name": "Sigma 20mm f/1.4 DG HSM Art"
+      }
     },
     "skydio-2-sdrc2v1-black-blue-60fps-hdr-autonomous": {
       "contamination_key": "skydio-2-sdrc2v1-black-blue-60fps-hdr-autonomous",
@@ -62882,7 +63479,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-11T08:00:28Z"
+      "resolved_at": "2026-11-11T08:00:28Z",
+      "overrides": {
+        "display_name": "Canon EF-S 17-55mm f/2.8 IS USM"
+      }
     },
     "godox-v1mid-ttl-round-head": {
       "contamination_key": "godox-v1mid-ttl-round-head",
