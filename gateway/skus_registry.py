@@ -142,10 +142,14 @@ def get_marketplace_category(entry, key='ebay_category_id'):
 # to alphanumeric-lower before the membership test, so punctuation/case/typo
 # variants ('N/A', 'n.a.', 'Does Not Apply', the recurring 'Dose not apply'
 # misspelling) all resolve to a placeholder and are dropped from identity.
+# ONE set (2026-11-18): a second, shorter definition further down this module
+# rebound the name at import, so the placeholders only this list carried
+# ('nan', 'no', 'donotapply', 'notavailable', 'noapplicable') never applied -
+# an MPN of 'NaN' or 'Not Available' read as a real part number. Union of both.
 _MPN_PLACEHOLDERS = frozenset({
     '', 'na', 'nan', 'none', 'null', 'nil', 'no', 'notapplicable',
     'doesnotapply', 'dosenotapply', 'donotapply', 'unknown', 'unbranded',
-    'generic', 'tbd', 'notavailable', 'noapplicable',
+    'generic', 'tbd', 'notavailable', 'noapplicable', 'nompn',
 })
 
 
@@ -666,18 +670,13 @@ def set_gtin(slug, gtin, provenance, path=SKUS_PATH):
 # none of these (compared on alphanumerics only, so 'N/A', 'n / a', 'Dose Not
 # Apply' typo all collapse). Used to treat a placeholder as ABSENT: it must never
 # block a recovered real MPN, nor stand in as a dedup anchor.
-_MPN_PLACEHOLDERS = frozenset({
-    "", "na", "none", "null", "nil", "doesnotapply", "dosenotapply",
-    "notapplicable", "unbranded", "generic", "unknown", "nompn", "tbd",
-})
-
-
 def _is_real_mpn(v):
     """A usable MPN anchor: non-empty and not a seller placeholder like
-    'Does Not Apply' / 'N/A' / the common typo 'Dose not apply'."""
+    'Does Not Apply' / 'N/A' / the common typo 'Dose not apply'. Reads the
+    one placeholder set through _is_placeholder_mpn."""
     if not v:
         return False
-    return re.sub(r"[^a-z0-9]", "", str(v).lower()) not in _MPN_PLACEHOLDERS
+    return not _is_placeholder_mpn(v)
 
 
 def set_mpn(slug, mpn, provenance, path=SKUS_PATH):

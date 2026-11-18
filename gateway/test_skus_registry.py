@@ -706,3 +706,16 @@ def test_unbound_receipts_survive_a_rebind(tmp_path):
     e = json.loads(p.read_text())['skus']['sony-a7s']
     assert e['marketplace_ids']['ebay_legacy_item_id'] == '222'
     assert [r['item_id'] for r in e['unbound_listings']] == ['358393938452']
+
+
+def test_one_mpn_placeholder_set_2026_11_18():
+    # A second definition used to rebind the name at import and drop five
+    # placeholders from the documented single arbiter.
+    import re as _re
+    from pathlib import Path as _P
+    src = (_P(__file__).parent / 'skus_registry.py').read_text()
+    assert len(_re.findall(r'^_MPN_PLACEHOLDERS\s*=', src, _re.M)) == 1
+    for v in ('NaN', 'No', 'Do Not Apply', 'Not Available', 'No MPN', 'N/A', 'Dose not apply'):
+        assert reg._is_placeholder_mpn(v), v
+        assert not reg._is_real_mpn(v), v
+    assert reg._is_real_mpn('SEL50M28')
