@@ -719,3 +719,91 @@ def test_one_mpn_placeholder_set_2026_11_18():
         assert reg._is_placeholder_mpn(v), v
         assert not reg._is_real_mpn(v), v
     assert reg._is_real_mpn('SEL50M28')
+
+
+# ── correct_contamination_key: re-point a brand-level card to its own entry (2026-11-19) ──
+_CK_PROV = {'method': 'repoint-contamination-key', 'actor': 'lee',
+            'reason': 'first-class sony-35-f14-gm entry exists for this lens'}
+
+
+def _ck_contam(tmp_path, *keys):
+    c = tmp_path / 'contamination.json'
+    c.write_text(json.dumps({'products': {k: {'vendor': 'x'} for k in keys}}))
+    return c
+
+
+def _gm(ck='sony-generic', tier='brand_generic', **kw):
+    kw.setdefault('mpn', 'SEL35F14GM')
+    return reg.build_entry(
+        slug='sony-fe-35mm-f1-4-gm', vendor='Sony', model='FE 35mm f/1.4 GM',
+        facet='lens', contamination_key=ck, resolved=_resolved(**kw),
+        contamination_tier=tier)
+
+
+def _ck(p):
+    e = json.loads(p.read_text())['skus']['sony-fe-35mm-f1-4-gm']
+    return e.get('contamination_key'), e.get('contamination_tier'), e.get('contamination_key_provenance')
+
+
+def test_correct_contamination_key_repoints_and_drops_the_debt_breadcrumb(tmp_path):
+    p, c = tmp_path / 'skus.json', _ck_contam(tmp_path, 'sony-generic', 'sony-35-f14-gm')
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(), path=p)
+    assert _ck(p)[:2] == ('sony-generic', 'brand_generic')
+    assert reg.correct_contamination_key('sony-fe-35mm-f1-4-gm', 'sony-35-f14-gm', _CK_PROV,
+                                         expect_key='sony-generic', contam_path=c, path=p) == 'corrected'
+    key, tier, prov = _ck(p)
+    assert key == 'sony-35-f14-gm' and tier is None
+    assert prov['corrected_from'] == 'sony-generic' and prov['actor'] == 'lee'
+
+
+def test_correct_contamination_key_guards(tmp_path):
+    p, c = tmp_path / 'skus.json', _ck_contam(tmp_path, 'sony-generic', 'sony-35-f14-gm')
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(), path=p)
+    before = p.read_text()
+    call = lambda new, exp, cp=c, slug='sony-fe-35mm-f1-4-gm': reg.correct_contamination_key(
+        slug, new, _CK_PROV, expect_key=exp, contam_path=cp, path=p)
+    assert call('sony-35-f14-gm', 'sony-35-f14-gm') == 'stale-expect'
+    assert call('sony-generic', 'sony-generic') == 'no-op'
+    assert call('sony-35-f14-gm', 'sony-generic', slug='ghost') == 'missing-slug'
+    assert call('sony-35mm-typo', 'sony-generic') == 'unknown-key'
+    assert call('sony-35-f14-gm', 'sony-generic', cp=tmp_path / 'absent.json') == 'registry-unreadable'
+    try:
+        call('  ', 'sony-generic')
+        raise AssertionError('empty key must be refused')
+    except ValueError:
+        pass
+    assert p.read_text() == before                         # every refusal wrote nothing
+
+
+def test_correct_contamination_key_to_a_generic_sets_its_tier(tmp_path):
+    p, c = tmp_path / 'skus.json', _ck_contam(tmp_path, 'sony-35-f14-gm', 'sony-generic', 'lens-generic')
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(ck='sony-35-f14-gm', tier=None), path=p)
+    reg.correct_contamination_key('sony-fe-35mm-f1-4-gm', 'lens-generic', _CK_PROV,
+                                  expect_key='sony-35-f14-gm', contam_path=c, path=p)
+    assert _ck(p)[1] == 'facet_generic'
+    reg.correct_contamination_key('sony-fe-35mm-f1-4-gm', 'sony-generic', _CK_PROV,
+                                  expect_key='lens-generic', contam_path=c, path=p)
+    assert _ck(p)[1] == 'brand_generic'
+
+
+def test_corrected_contamination_key_survives_a_listing_rotation(tmp_path):
+    """The canon-r6 class (09-15) for this field: a wholesale replace whose
+    incoming entry carries the old generic key must not undo the correction."""
+    p, c = tmp_path / 'skus.json', _ck_contam(tmp_path, 'sony-generic', 'sony-35-f14-gm')
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(), path=p)
+    reg.correct_contamination_key('sony-fe-35mm-f1-4-gm', 'sony-35-f14-gm', _CK_PROV,
+                                  expect_key='sony-generic', contam_path=c, path=p)
+    assert reg.upsert('sony-fe-35mm-f1-4-gm', _gm(legacy='999999999999'), path=p) == 'updated'
+    key, tier, prov = _ck(p)
+    assert key == 'sony-35-f14-gm' and tier is None
+    assert prov['corrected_from'] == 'sony-generic'
+    assert prov['superseded']['contamination_key'] == 'sony-generic'
+
+
+def test_unauthored_contamination_key_follows_the_replace(tmp_path):
+    """No receipt = not authored: the replace behaviour is unchanged."""
+    p = tmp_path / 'skus.json'
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(), path=p)
+    reg.upsert('sony-fe-35mm-f1-4-gm', _gm(ck='sony-35-f14-gm', tier=None, legacy='999999999999'), path=p)
+    key, tier, prov = _ck(p)
+    assert key == 'sony-35-f14-gm' and tier is None and prov is None

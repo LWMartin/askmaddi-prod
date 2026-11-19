@@ -530,6 +530,23 @@ def _merge_enrichment(existing, entry):
         identity[field] = old_val
         identity[prov_key] = kept
 
+    # AUTHORED contamination_key (correct_contamination_key doctrine): resolve
+    # keeps an existing key on enrich, but a wholesale replace carries only what
+    # build_entry wrote — the receipt would die and the key would be unguarded.
+    old_ck_prov = existing.get('contamination_key_provenance')
+    if isinstance(old_ck_prov, dict):
+        kept = dict(old_ck_prov)
+        incoming_ck = entry.get('contamination_key')
+        if incoming_ck and incoming_ck != existing.get('contamination_key'):
+            kept['superseded'] = {'contamination_key': incoming_ck,
+                                  'resolved_at': entry.get('resolved_at')}
+        entry['contamination_key'] = existing.get('contamination_key')
+        entry['contamination_key_provenance'] = kept
+        if 'contamination_tier' in existing:
+            entry['contamination_tier'] = existing['contamination_tier']
+        else:
+            entry.pop('contamination_tier', None)
+
     # UNBOUND listings (unbind_listing doctrine): receipts of listings a human
     # took OFF this entry as the wrong product. resolve never writes them; they
     # survive every replace so the firewall can refuse the same listing again.
@@ -755,6 +772,66 @@ def correct_mpn(slug, new_mpn, provenance, expect_mpn, path=SKUS_PATH):
     prov.setdefault('corrected_from', current)
     identity['mpn'] = new_mpn
     identity['mpn_provenance'] = prov
+    registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
+    _atomic_write(registry, path)
+    return 'corrected'
+
+
+def correct_contamination_key(slug, new_key, provenance, expect_key, *,
+                              contam_path=None, path=SKUS_PATH):
+    """Re-point a spine entry's contamination_key to a verified registry product.
+
+    contamination_key is the bridge from a spine slug to the editorial
+    contamination registry; build_card reads it from the spine
+    (_spine_contamination_key) and the relevance gate runs at whatever precision
+    that product carries. A mint stores the first rung of the ladder that
+    resolves (specific -> vendor-generic -> facet-generic), so a card minted
+    before its specific entry existed stays gated at BRAND level for good:
+    resolve keeps an existing key on enrich and never re-derives it.
+    sony-fe-35mm-f1-4-gm sat on sony-generic while a first-class sony-35-f14-gm
+    entry existed for the same lens (2026-11-19). This is the correction door.
+
+    COMPARE-AND-SWAP like correct_mpn / correct_brand: the write lands only if
+    the current key equals `expect_key` exactly. The new key must be a product
+    in the contamination registry; an unreadable registry REFUSES (fail closed:
+    a correction is deliberate, so it may wait, where a mint fails open). The
+    coverage-debt breadcrumb `contamination_tier` follows the new key: dropped
+    on a specific key, set on a generic one. The receipt goes to
+    contamination_key_provenance with corrected_from; _merge_enrichment treats
+    it as authored and carries it through a machine replace.
+
+    Returns 'corrected' | 'stale-expect' | 'no-op' | 'missing-slug'
+          | 'unknown-key' | 'registry-unreadable'. Atomic.
+    """
+    new_key = str(new_key or '').strip()
+    if not new_key:
+        raise ValueError('correct_contamination_key requires a non-empty key')
+    registry = load_registry(path)
+    skus = registry.setdefault('skus', {})
+    entry = skus.get(slug)
+    if entry is None:
+        return 'missing-slug'
+    current = entry.get('contamination_key')
+    if str(current or '').strip() != str(expect_key or '').strip():
+        return 'stale-expect'
+    if current == new_key:
+        return 'no-op'
+    products = _load_contamination_products(contam_path)
+    if products is None:
+        return 'registry-unreadable'
+    if new_key not in products:
+        return 'unknown-key'
+
+    prov = dict(provenance or {})
+    prov.setdefault('corrected_from', current)
+    entry['contamination_key'] = new_key
+    entry['contamination_key_provenance'] = prov
+    if new_key == _generic_key(entry.get('vendor')):
+        entry['contamination_tier'] = 'brand_generic'
+    elif new_key == _generic_key((entry.get('facet') or '').split('/')[0]):
+        entry['contamination_tier'] = 'facet_generic'
+    else:
+        entry.pop('contamination_tier', None)
     registry['as_of'] = time.strftime('%Y-%m-%d', time.gmtime())
     _atomic_write(registry, path)
     return 'corrected'
