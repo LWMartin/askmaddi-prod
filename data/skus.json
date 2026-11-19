@@ -5673,7 +5673,7 @@
       }
     },
     "olympus-60mm-f2-8": {
-      "contamination_key": "olympus-generic",
+      "contamination_key": "olympus-60mm-f2-8",
       "vendor": "Olympus",
       "model": "60mm f2.8",
       "gtin": "04545350041236",
@@ -5750,10 +5750,16 @@
       "resolved_at": "2026-08-27T22:37:06Z",
       "overrides": {
         "display_name": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro"
+      },
+      "contamination_key_provenance": {
+        "method": "correct_contamination_key",
+        "actor": "lee",
+        "reason": "registry v1.14.0 card entry (M.Zuiko 60mm f/2.8 Macro)",
+        "corrected_from": "olympus-generic"
       }
     },
     "om-system-12-40mm-f2-8": {
-      "contamination_key": "om-system-generic",
+      "contamination_key": "om-system-12-40mm-f2-8",
       "vendor": "OM SYSTEM",
       "model": "12 40mm f2.8",
       "gtin": "04545350053727",
@@ -5809,6 +5815,12 @@
       "resolved_at": "2026-09-03T19:21:51Z",
       "overrides": {
         "display_name": "OM SYSTEM M.Zuiko Digital ED 12-40mm f/2.8 PRO II"
+      },
+      "contamination_key_provenance": {
+        "method": "correct_contamination_key",
+        "actor": "lee",
+        "reason": "registry v1.14.0 card entry (12-40mm f/2.8 PRO II)",
+        "corrected_from": "om-system-generic"
       }
     },
     "canon-eos": {
@@ -5896,7 +5908,7 @@
       "resolved_at": "2026-08-27T22:34:55Z"
     },
     "sony-fe-35mm-f1-4-gm": {
-      "contamination_key": "sony-generic",
+      "contamination_key": "sony-35-f14-gm",
       "vendor": "Sony",
       "model": "FE 35mm F1.4 GM",
       "gtin": "00027242921443",
@@ -6044,6 +6056,12 @@
       "resolved_at": "2026-08-27T22:35:51Z",
       "overrides": {
         "display_name": "Sony FE 35mm f/1.4 GM"
+      },
+      "contamination_key_provenance": {
+        "method": "correct_contamination_key",
+        "actor": "lee",
+        "reason": "first-class registry entry exists for this lens",
+        "corrected_from": "sony-generic"
       }
     },
     "gitzo-traveler": {
