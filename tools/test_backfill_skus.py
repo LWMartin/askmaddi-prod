@@ -162,8 +162,13 @@ def test_category_backfill_flagged(monkeypatch):
 # ─── 2026-06-23 lesson: coarse-gate + refuse-to-guess (real failure cases) ──
 
 def _real(slug):
+    # Real identities, frozen (tools/fixtures/backfill_real_identities.json):
+    # live data/cards is rewritten by the nightly and the drip, and this opened
+    # a cwd-relative path besides (2026-11-19, the bank-gate class).
     import json as _j
-    return _j.load(open(f'data/cards/{slug}.json'))['identity']
+    from pathlib import Path as _P
+    f = _P(__file__).resolve().parent / 'fixtures' / 'backfill_real_identities.json'
+    return _j.loads(f.read_text())['identities'][slug]
 
 
 def test_generation_gate_disqualifies_wrong_generation():

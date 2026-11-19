@@ -1,0 +1,243 @@
+{
+  "_source": "askmaddi-prod data/skus.json @ fe3ca066 (bank 2026-11-18 10:14 UTC), entries verbatim, BEFORE fix_wrong_listing corrected them on the box. Frozen 2026-11-19: reading the live spine failed the nightly bank gate once the corrections were applied.",
+  "entries": {
+    "sony-a7s": {
+      "contamination_key": "sony-a7s",
+      "vendor": "Sony",
+      "model": "a7s",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "358393938452",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "ILCE7SM2/B",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony Alpha A7S II ILCE-7SM2 Digital Camera 12.2MP 4K E-mount Camera Body only",
+        "image": "https://i.ebayimg.com/images/g/R4sAAeSwnhhpy6MI/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/pVoAAOSwQAlhh4yX/s-l640.jpg",
+        "price_seen": {
+          "value": "440.99",
+          "currency": "USD",
+          "as_of": "2026-08-27T04:25:32Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-09-16T04:30:53Z",
+          "query": "Sony ILCE7SM2/B",
+          "winner": {
+            "item_id": "v1|327276676543|0",
+            "epid": "20026060067",
+            "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|327276676543|0",
+              "epid": "20026060067",
+              "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/358393938452?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BebVLMg%2BJM--Q1r7IogV100iOyEE%2FxWJLnb2rgKnJAZvJUF1okv0bNJSYcwQULIymBCUUQAjvOInNsWeBLSGFpxbf4iz%2B08jrNuRN%2Bxc--VIcfxDHynkc69pHmPZKEcz%2FJaG%2FaD47DLdWLAU9CQmfnozE30NOdT0%2FH7Wb8UCIJUsw4NmYYYxXla5t%2FSN%2Fbx7o%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-09-15T13:58:37Z"
+    },
+    "canon-50mm-f1-2": {
+      "contamination_key": "canon-50mm-f1-2",
+      "vendor": "Canon",
+      "model": "50mm f1.2",
+      "gtin": "00082300005800",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407274669438",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "1257B002",
+        "gtin_provenance": {
+          "chosen_source": "secondpass:product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "secondpass:candidate",
+              "identifier_type": "GTIN",
+              "raw": "00082300005800",
+              "gtin14": "00082300005800",
+              "valid": true,
+              "item_id": "v1|391817148703|0",
+              "epid": "99723263"
+            },
+            {
+              "source": "secondpass:candidate",
+              "identifier_type": "GTIN",
+              "raw": "00082300005800",
+              "gtin14": "00082300005800",
+              "valid": true,
+              "item_id": "v1|198746792175|0",
+              "epid": "99723263"
+            },
+            {
+              "source": "secondpass:candidate",
+              "identifier_type": "GTIN",
+              "raw": "00082300005800",
+              "gtin14": "00082300005800",
+              "valid": true,
+              "item_id": "v1|112203084031|0",
+              "epid": "99723263"
+            },
+            {
+              "source": "secondpass:candidate",
+              "identifier_type": "GTIN",
+              "raw": "00082300005800",
+              "gtin14": "00082300005800",
+              "valid": true,
+              "item_id": "v1|293247844327|0",
+              "epid": "99723263"
+            }
+          ],
+          "recovery": {
+            "method": "ebay-secondpass",
+            "query": "Canon 1257B002",
+            "verdict": "ADMIT",
+            "recovered_at": "2026-11-09T09:47:06Z",
+            "n_candidates": 5,
+            "n_gtin_bearing": 4,
+            "distinct_gtins": [
+              "00082300005800"
+            ],
+            "model_token": "1257B002",
+            "candidates": [
+              {
+                "item_id": "v1|391817148703|0",
+                "epid": "99723263",
+                "gtin": "00082300005800",
+                "chosen_source": "product.gtins",
+                "title": "Canon EF 50mm f/1.2L USM Lens 1257B002",
+                "token_match": true
+              },
+              {
+                "item_id": "v1|198746792175|0",
+                "epid": "99723263",
+                "gtin": "00082300005800",
+                "chosen_source": "product.gtins",
+                "title": "Canon EF 50mm f/1.2L USM Lens (1257B002) + Filter Kit + Cap Keeper + M",
+                "token_match": true
+              },
+              {
+                "item_id": "v1|112203084031|0",
+                "epid": "99723263",
+                "gtin": "00082300005800",
+                "chosen_source": "product.gtins",
+                "title": "Canon EF 50mm f/1.2L USM Lens (Black) - 1257B002",
+                "token_match": true
+              },
+              {
+                "item_id": "v1|358171523050|0",
+                "epid": "99723263",
+                "gtin": null,
+                "chosen_source": null,
+                "title": "Canon EF 50mm F/1.2L USM Lens",
+                "token_match": true
+              },
+              {
+                "item_id": "v1|293247844327|0",
+                "epid": "99723263",
+                "gtin": "00082300005800",
+                "chosen_source": "product.gtins",
+                "title": "Canon EF 50mm f/1.2L USM Lens (Black) 1257B002 - 7PC Accessory Bundle",
+                "token_match": true
+              }
+            ]
+          }
+        },
+        "market_title": "Canon EF 50mm f1.2 L USM Lens #485",
+        "image": "https://i.ebayimg.com/images/g/naYAAeSwE6lqrUzL/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/-GYAAOSwyytjgyR6/s-l640.jpg",
+        "price_seen": {
+          "value": "457.42",
+          "currency": "USD",
+          "as_of": "2026-10-09T06:00:44Z"
+        },
+        "mpn_provenance": {
+          "chosen_source": "adorama_feed",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "adorama_feed",
+              "mpn": "1257B002",
+              "product_code": "ca5012afu",
+              "feed_gtin": "013803064551",
+              "feed_brand": "Canon",
+              "title": "Canon EF 50mm f/1.2L USM Lens",
+              "snapshot": "2026-11-05",
+              "rule": "code ca5012afu",
+              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+            }
+          ]
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-06T04:45:07Z",
+          "query": "Canon 1257B002",
+          "winner": {
+            "item_id": "v1|391817148703|0",
+            "epid": "99723263",
+            "title": "Canon EF 50mm f/1.2L USM Lens 1257B002"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|391817148703|0",
+              "epid": "99723263",
+              "title": "Canon EF 50mm f/1.2L USM Lens 1257B002",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407274669438?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9pepamSrV4taHMw%2BdZcu5LGWmIrfCeD5mLUxk6p%2F1TN7dxcPGL7tfV5ac6FZk988TfSvf9O3D4rlmtD0pYPnJDLviUHDUSm%2B1S%2BdHu4Vx9J5In6QaQ%2FTdVZMQRmBFuJv7LreQraSCQfuNvwtObRVQIKtSsdimE2qqZxxul8AfZ5KZgzcl2uHPvgx7XVP6q36w%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-10-09T06:00:44Z"
+    }
+  },
+  "repoint_plan_slugs_in_spine": [
+    "canon-28-70mm-f2-8",
+    "nikon-105mm-f2-8",
+    "nikon-120-300mm-f2-8",
+    "nikon-24mm-f1-8",
+    "nikon-35mm-f1-4",
+    "nikon-600mm-f4"
+  ]
+}

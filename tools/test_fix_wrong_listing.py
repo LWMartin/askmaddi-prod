@@ -9,14 +9,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / 'gateway'))
 import fix_wrong_listing as f  # noqa: E402
 
-REAL = Path(__file__).resolve().parent.parent / 'data' / 'skus.json'
+# The real entries as they stood BEFORE the corrections, frozen. Reading the
+# live data/skus.json broke the bank gate on 2026-11-19: the correction this tool
+# exists to make was applied on the box, so the live entry no longer held the
+# wrong values and every nightly's bot_push gate failed here.
+FROZEN = Path(__file__).resolve().parent / 'fixtures' / 'fix_wrong_listing_entries.json'
 ARGS = dict(slug='sony-a7s', expect_item='358393938452', reason='listing is the A7S II',
             mpn='ILCE7S/B', expect_mpn='ILCE7SM2/B')
 
 
 def _spine(tmp_path):
-    """The real sony-a7s entry, verbatim from data/skus.json."""
-    entry = json.loads(REAL.read_text())['skus']['sony-a7s']
+    """The real sony-a7s entry, verbatim, frozen before the correction."""
+    entry = json.loads(FROZEN.read_text())['entries']['sony-a7s']
     p = tmp_path / 'skus.json'
     p.write_text(json.dumps({'version': '0.1.0', 'skus': {'sony-a7s': entry}}))
     return p
@@ -74,10 +78,13 @@ def test_plan_mode_runs_every_row_and_reports_the_worst(tmp_path):
 def test_real_repoint_plan_rows_are_well_formed():
     plan = Path(__file__).resolve().parent / 'rename_plans' / '2026-11-18-repoint.json'
     rows = json.loads(plan.read_text())['repoints']
-    spine = json.loads(REAL.read_text())['skus']
+    # Membership is checked against the spine as it was when the plan ran, not the
+    # live one: a re-pointed card may later be delisted, and that must not fail
+    # the bank gate.
+    known = set(json.loads(FROZEN.read_text())['repoint_plan_slugs_in_spine'])
     for r in rows:
         assert {'slug', 'expect_item', 'expect_mpn', 'mpn', 'reason', 'new_name'} <= set(r)
-        assert r['slug'] in spine
+        assert r['slug'] in known
 
 
 # ── re-point clears the old new-price pin (2026-11-18) ───────────────────────
@@ -87,7 +94,7 @@ EF50_DEST = 'https://www.adorama.com/canon-ef-50-mm-f-1-2l-usm-lens/p/ca5012afu'
 
 
 def _c50(tmp_path, pin=EF50):
-    entry = json.loads(REAL.read_text())['skus']['canon-50mm-f1-2']
+    entry = json.loads(FROZEN.read_text())['entries']['canon-50mm-f1-2']
     p = tmp_path / 'skus.json'
     p.write_text(json.dumps({'version': '0.1.0', 'skus': {'canon-50mm-f1-2': entry}}))
     cards = tmp_path / 'cards'
