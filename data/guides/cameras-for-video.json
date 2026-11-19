@@ -1490,7 +1490,7 @@
     },
     {
       "card_id": "fujifilm-x100v",
-      "display_name": "Fujifilm x100v",
+      "display_name": "Fujifilm X100V",
       "rankable": true,
       "score": 4.2667,
       "mention_boost": 0.0,
@@ -5856,7 +5856,7 @@
     },
     {
       "card_id": "canon-eos-5d",
-      "display_name": "Canon eos 5d",
+      "display_name": "Canon EOS 5D",
       "rankable": true,
       "score": 2.3381,
       "mention_boost": 0.0,
@@ -6202,7 +6202,7 @@
     },
     {
       "card_id": "canon-powershot-s3",
-      "display_name": "Canon powershot s3",
+      "display_name": "Canon PowerShot S3 IS",
       "rankable": true,
       "score": 2.2444,
       "mention_boost": 0.0,
@@ -10954,7 +10954,7 @@
     },
     {
       "card_id": "sony-a7s",
-      "display_name": "Sony a7s",
+      "display_name": "Sony A7S",
       "rankable": true,
       "score": 1.5244,
       "mention_boost": 0.0,
@@ -11723,7 +11723,7 @@
     },
     {
       "card_id": "sony-rx100-v",
-      "display_name": "Sony rx100 v",
+      "display_name": "Sony Cyber-shot RX100 V",
       "rankable": true,
       "score": 1.339,
       "mention_boost": 0.0,
@@ -12171,27 +12171,21 @@
       "card_id": "fujifilm-x-t30",
       "display_name": "Fujifilm X-T30",
       "rankable": true,
-      "score": 1.2682,
+      "score": 1.2667,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "video_capability",
           "weight": 3,
-          "s": 0.1667,
-          "pos": 21,
-          "neg": 11,
-          "total": 60,
+          "s": 0.2286,
+          "pos": 16,
+          "neg": 8,
+          "total": 35,
           "confidence": "high",
           "contested": true,
           "thin": false,
-          "contribution": 0.5,
+          "contribution": 0.6857,
           "top_sources": [
-            {
-              "source_id": "youtube-adorama-is-this-the-best-travel-camera-right-now-fujifilm-x-t30-iii-with-omar-gonzalez",
-              "url": "https://www.youtube.com/watch?v=xRHI0Z-wPJo",
-              "witness": "firsthand",
-              "quote": "And you should know that if you have your video settings at 6K and you go to the auto switch, your auto will be 6K where right now I'm in 4K."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -12203,6 +12197,12 @@
               "url": "https://www.youtube.com/watch?v=myOkN9MMp6k",
               "witness": "firsthand",
               "quote": "and they're absolutely right now the xt30 can do 4K video and it does boast some pretty incredible burst rates for a camera of this size and price however if you want all the specs I'll list as many as I can here but I'm…"
+            },
+            {
+              "source_id": "youtube-futc-why-you-should-buy-the-fujifilm-x-t30-in-2023-full-review",
+              "url": "https://www.youtube.com/watch?v=JqYE5FDscjs",
+              "witness": "firsthand",
+              "quote": "notice when I reached the bottom [Laughter] a 26 megapixel backside illuminated sensor 425 AF points 8 FPS mechanical shutter or up to 30 FPS when using the electronic shutter it even has 4K 30fps or 1080p 120 FPS video …"
             }
           ],
           "axis_display": "Video Capability"
@@ -12210,14 +12210,14 @@
         {
           "axis": "stabilization",
           "weight": 2,
-          "s": -0.1081,
-          "pos": 5,
-          "neg": 9,
-          "total": 37,
-          "confidence": "high",
+          "s": -0.1,
+          "pos": 2,
+          "neg": 3,
+          "total": 10,
+          "confidence": "medium",
           "contested": false,
-          "thin": false,
-          "contribution": -0.2162,
+          "thin": true,
+          "contribution": -0.2,
           "top_sources": [
             {
               "source_id": "youtube-futc-why-you-should-buy-the-fujifilm-x-t30-in-2023-full-review",
@@ -12226,16 +12226,16 @@
               "quote": "that's insane and even the 8-Bit footage looks really good as you can see but keep in mind that it doesn't have any built-in stabilization so for handheld video I would definitely try to use a lens that has stabilization…"
             },
             {
-              "source_id": "youtube-jayregular-fujifilm-x-t30-iii-the-perfect-everything-camera-for-2025",
-              "url": "https://www.youtube.com/watch?v=jGhSA0DNu1c",
-              "witness": "firsthand",
-              "quote": "I also wanted to see how it fared with slow motion."
-            },
-            {
               "source_id": "youtube-leigh-raymond-photography-a-little-giant-my-fuji-x-t30-complete-review",
               "url": "https://www.youtube.com/watch?v=tIPgz0H2_0U",
               "witness": "firsthand",
               "quote": "frames per second though there is a crop now neither the xt 30 nor the xt 3 has in body image stabilization I also had lenses that do not have been image stabilization so handheld video was pretty much impossible even wh…"
+            },
+            {
+              "source_id": "youtube-digidirect-fujifilm-x-t30-review-and-sample-photos",
+              "url": "https://www.youtube.com/watch?v=r1KRCNjaP-o",
+              "witness": "unattested",
+              "quote": "Now, one thing the XT30 does not have is an in-body image stabilization system."
             }
           ],
           "axis_display": "Stabilization"
@@ -12243,21 +12243,15 @@
         {
           "axis": "autofocus_body",
           "weight": 2,
-          "s": 0.2941,
-          "pos": 15,
-          "neg": 5,
-          "total": 34,
-          "confidence": "high",
+          "s": 0.2143,
+          "pos": 6,
+          "neg": 3,
+          "total": 14,
+          "confidence": "medium",
           "contested": true,
-          "thin": false,
-          "contribution": 0.5882,
+          "thin": true,
+          "contribution": 0.4286,
           "top_sources": [
-            {
-              "source_id": "youtube-adorama-is-this-the-best-travel-camera-right-now-fujifilm-x-t30-iii-with-omar-gonzalez",
-              "url": "https://www.youtube.com/watch?v=xRHI0Z-wPJo",
-              "witness": "firsthand",
-              "quote": "On the front, we have a little autofocus uh switch, which by the way, the camera also has a new processor, which allows you to track subjects like birds, planes, trains, people if you're into that."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -12269,6 +12263,12 @@
               "url": "https://www.youtube.com/watch?v=tIPgz0H2_0U",
               "witness": "firsthand",
               "quote": "of the XD 3 so if you're interested you can watch that review when you're done here I mentioned in the beginning of the video that the XT 30 has a autofocus it does it also has autofocus tracking both in still photos and…"
+            },
+            {
+              "source_id": "youtube-digidirect-fujifilm-x-t30-review-and-sample-photos",
+              "url": "https://www.youtube.com/watch?v=r1KRCNjaP-o",
+              "witness": "unattested",
+              "quote": "Now, tying in with that new processor is the autofocus system on the camera."
             }
           ],
           "axis_display": "Autofocus"
@@ -12276,21 +12276,15 @@
         {
           "axis": "evf_lcd",
           "weight": 1,
-          "s": -0.0465,
-          "pos": 10,
-          "neg": 12,
-          "total": 43,
+          "s": -0.3333,
+          "pos": 3,
+          "neg": 9,
+          "total": 18,
           "confidence": "high",
           "contested": true,
           "thin": false,
-          "contribution": -0.0465,
+          "contribution": -0.3333,
           "top_sources": [
-            {
-              "source_id": "youtube-adorama-is-this-the-best-travel-camera-right-now-fujifilm-x-t30-iii-with-omar-gonzalez",
-              "url": "https://www.youtube.com/watch?v=xRHI0Z-wPJo",
-              "witness": "firsthand",
-              "quote": "We also have a touchcreen which allows you to touch your subject to focus."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -12302,6 +12296,12 @@
               "url": "https://www.youtube.com/watch?v=wYm-tdpob-k",
               "witness": "firsthand",
               "quote": "laggy and I found it quicker to use the joystick it can be tilted up or down but not sideways when you hold the camera in portrait mode unfortunately for vloggers it can't be flipped around either the OLED EVF features a…"
+            },
+            {
+              "source_id": "youtube-feralginger-x-t30-review-the-best-budget-fujifilm-camera",
+              "url": "https://www.youtube.com/watch?v=myOkN9MMp6k",
+              "witness": "firsthand",
+              "quote": "that's something you prefer for me I don't really like touchscreen functions in camera so the viewfinder has a refresh rate of 100 HZ and it's 2.3 million."
             }
           ],
           "axis_display": "EVF & LCD"
@@ -12309,14 +12309,14 @@
         {
           "axis": "connectivity",
           "weight": 1,
-          "s": 0.1818,
+          "s": 0.2857,
           "pos": 2,
           "neg": 0,
-          "total": 11,
+          "total": 7,
           "confidence": "medium",
           "contested": false,
           "thin": true,
-          "contribution": 0.1818,
+          "contribution": 0.2857,
           "top_sources": [
             {
               "source_id": "mirrorlessons-2019-03-10-fujifilm-x-t30-review",
@@ -12342,21 +12342,15 @@
         {
           "axis": "handling",
           "weight": 1,
-          "s": 0.2609,
-          "pos": 22,
-          "neg": 10,
-          "total": 46,
-          "confidence": "high",
-          "contested": true,
+          "s": 0.4,
+          "pos": 15,
+          "neg": 5,
+          "total": 25,
+          "confidence": "medium",
+          "contested": false,
           "thin": false,
-          "contribution": 0.2609,
+          "contribution": 0.4,
           "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-fujifilm-x-t30-iii-full-camera-review",
-              "url": "https://www.youtube.com/watch?v=8vc0TgbpT3o",
-              "witness": "firsthand",
-              "quote": "Something I like to see on the top left is one of Fujifilm's film simulator dials."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -12368,6 +12362,12 @@
               "url": "https://www.youtube.com/watch?v=myOkN9MMp6k",
               "witness": "firsthand",
               "quote": "auto switch now I call this the panic button you flip that switch to Auto and it will auto everything so this is a really great option if you want to give the camera to someone that's not comfortable with cameras and get…"
+            },
+            {
+              "source_id": "youtube-john-branch-iv-photography-why-i-will-always-choose-the-fujifilm-x-t30-over-the-x100v",
+              "url": "https://www.youtube.com/watch?v=WpDEEmEkKFY",
+              "witness": "firsthand",
+              "quote": "I just grab myself a hold fast gear strap, put the camera on that, and just hang out with the camera hanging on my wrist and go about my day."
             }
           ],
           "axis_display": "Handling"
@@ -12375,10 +12375,12 @@
       ],
       "missing_axes": [],
       "thin_axes": [
+        "stabilization",
+        "autofocus_body",
         "connectivity"
       ],
       "flags": [
-        "thin (< 15 claims): connectivity"
+        "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
       "rank": 63
     },
@@ -12565,6 +12567,72 @@
       "rank": 64
     },
     {
+      "card_id": "canon-eos-1d-ii",
+      "display_name": "Canon EOS-1D Mark II",
+      "rankable": true,
+      "score": 1.2381,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
+              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
+              "witness": "unattested",
+              "quote": "the shot without stepping away from the action the 45-point autofocus system is a professional level feature usually only found in much more expensive cameras."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.5714,
+          "pos": 5,
+          "neg": 1,
+          "total": 7,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.5714,
+          "top_sources": [
+            {
+              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
+              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
+              "witness": "unattested",
+              "quote": "The dual card slots provide built an insurance policy against any possibility of a losing the shots you've worked so hard to get the Canon EOS 1d Mark II N is a professional grade DSLR that means as the ultra solid const…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "video_capability",
+        "stabilization",
+        "evf_lcd",
+        "connectivity"
+      ],
+      "thin_axes": [
+        "autofocus_body",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: video_capability, stabilization, evf_lcd, connectivity",
+        "thin (< 15 claims): autofocus_body, handling"
+      ],
+      "rank": 65
+    },
+    {
       "card_id": "fujifilm-x100f",
       "display_name": "Fujifilm X100F",
       "rankable": true,
@@ -12716,7 +12784,7 @@
         "missing weighted axes: video_capability, stabilization",
         "thin (< 15 claims): autofocus_body, connectivity"
       ],
-      "rank": 65
+      "rank": 66
     },
     {
       "card_id": "canon-eos-r10",
@@ -12885,7 +12953,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, connectivity, handling"
       ],
-      "rank": 66
+      "rank": 67
     },
     {
       "card_id": "sony-a6600",
@@ -13080,7 +13148,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 67
+      "rank": 68
     },
     {
       "card_id": "panasonic-s1r",
@@ -13280,7 +13348,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, evf_lcd, connectivity, handling"
       ],
-      "rank": 68
+      "rank": 69
     },
     {
       "card_id": "om-system-om-3",
@@ -13476,7 +13544,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 69
+      "rank": 70
     },
     {
       "card_id": "fujifilm-x-t1",
@@ -13627,7 +13695,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): video_capability, autofocus_body, connectivity"
       ],
-      "rank": 70
+      "rank": 71
     },
     {
       "card_id": "sony-rx100-iii",
@@ -13804,7 +13872,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 71
+      "rank": 72
     },
     {
       "card_id": "panasonic-gh3",
@@ -14009,7 +14077,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 72
+      "rank": 73
     },
     {
       "card_id": "fujifilm-x-t10",
@@ -14225,7 +14293,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, connectivity"
       ],
-      "rank": 73
+      "rank": 74
     },
     {
       "card_id": "fujifilm-x-e3",
@@ -14441,7 +14509,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, connectivity"
       ],
-      "rank": 74
+      "rank": 75
     },
     {
       "card_id": "canon-powershot-sx30",
@@ -14603,103 +14671,6 @@
       "flags": [
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
-      ],
-      "rank": 75
-    },
-    {
-      "card_id": "canon-eos-1d-ii",
-      "display_name": "Canon EOS-1D Mark II",
-      "rankable": true,
-      "score": 1.0098,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "autofocus_body",
-          "weight": 2,
-          "s": 0.2692,
-          "pos": 12,
-          "neg": 5,
-          "total": 26,
-          "confidence": "high",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.5385,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
-              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
-              "witness": "unattested",
-              "quote": "the shot without stepping away from the action the 45-point autofocus system is a professional level feature usually only found in much more expensive cameras."
-            }
-          ],
-          "axis_display": "Autofocus"
-        },
-        {
-          "axis": "connectivity",
-          "weight": 1,
-          "s": 0.1818,
-          "pos": 3,
-          "neg": 1,
-          "total": 11,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1818,
-          "top_sources": [
-            {
-              "source_id": "youtube-aleksandr-usovich-5-years-with-the-canon-1dx-ii-my-honest-thoughts",
-              "url": "https://www.youtube.com/watch?v=88jQ104IB-U",
-              "witness": "firsthand",
-              "quote": "I currently have the [clears throat] um the wireless file transfer, the one that connects up to here where I can uh transfer my photos or control my camera."
-            },
-            {
-              "source_id": "youtube-joe-whitnall-photography-retro-review-canon-eos-1d-mkiii-vs-canon-eos-1d-mkiv",
-              "url": "https://www.youtube.com/watch?v=cMN4iPmErCs",
-              "witness": "firsthand",
-              "quote": "that just make sure you get a nice quality one and you won't have a problem if we carry on move to the sides of the cameras here so we'll move to the side on each there are slight differences here so when you go to the M…"
-            },
-            {
-              "source_id": "youtube-video-cameron-canon-1dx-mark-ii-1-year-review-a-cinematographers-video-perspective",
-              "url": "https://www.youtube.com/watch?v=T8Kz6pFGsRU",
-              "witness": "unattested",
-              "quote": "You can write every photo and video file to the CF card, as long as it's fast enough."
-            }
-          ],
-          "axis_display": "Connectivity"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.2895,
-          "pos": 18,
-          "neg": 7,
-          "total": 38,
-          "confidence": "high",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.2895,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
-              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
-              "witness": "unattested",
-              "quote": "The dual card slots provide built an insurance policy against any possibility of a losing the shots you've worked so hard to get the Canon EOS 1d Mark II N is a professional grade DSLR that means as the ultra solid const…"
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "video_capability",
-        "stabilization",
-        "evf_lcd"
-      ],
-      "thin_axes": [
-        "connectivity"
-      ],
-      "flags": [
-        "missing weighted axes: video_capability, stabilization, evf_lcd",
-        "thin (< 15 claims): connectivity"
       ],
       "rank": 76
     },
@@ -16663,6 +16634,150 @@
       "rank": 87
     },
     {
+      "card_id": "nikon-d3200",
+      "display_name": "Nikon d3200",
+      "rankable": true,
+      "score": 0.5972,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "video_capability",
+          "weight": 3,
+          "s": 0.125,
+          "pos": 1,
+          "neg": 0,
+          "total": 8,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.375,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "firsthand",
+              "quote": "We do wonder, however, if users will be able to take full advantage of the greater resolution because of the kit lens Nikon has."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "24.2 MP DX-format CMOS sensor, full HD video recording capability and a lightweight camera body, the D3200 is a very capable DSLR camera for beginner."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "It also builds on the successful D3100 with the addition of Full HD video support, the option for Wi-Fi connectivity and a higher-resolution monitor screen.."
+            }
+          ],
+          "axis_display": "Video Capability"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "performance in real-time autofocus in video mode."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "The Scene pre-sets have also been tweaked and users can now over-ride some settings (such as AF area selection in Sports mode)."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "Connectivity and Wi-Fi WU-1a module The Nikon D3200 comes with a microphone input, a new USB/Audio-video port, an HDMI-CEC connector to enable controlling."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "panel is a second IR receiver, which enables the camera to be operated remotely from the back via an optional remote controller."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.2222,
+          "pos": 3,
+          "neg": 1,
+          "total": 9,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2222,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "semi-pro ergonomics, optical reflex vs."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "compared to other Nikon DSLRs), simplified user interface and lightest and most compact camera body."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "use older Nikkor lenses.) Build and Ergonomics Essentially the design of the camera body hasn&#8217;t changed since the D3100."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "stabilization",
+        "evf_lcd"
+      ],
+      "thin_axes": [
+        "video_capability",
+        "autofocus_body",
+        "connectivity",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: stabilization, evf_lcd",
+        "thin (< 15 claims): video_capability, autofocus_body, connectivity, handling"
+      ],
+      "rank": 88
+    },
+    {
       "card_id": "fujifilm-x-pro2",
       "display_name": "Fujifilm X-Pro2",
       "rankable": true,
@@ -16858,7 +16973,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization"
       ],
-      "rank": 88
+      "rank": 89
     },
     {
       "card_id": "nikon-fe2",
@@ -16912,7 +17027,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 89
+      "rank": 90
     },
     {
       "card_id": "olympus-17mm-f1-2",
@@ -16963,7 +17078,7 @@
         "missing weighted axes: video_capability, stabilization, evf_lcd, connectivity, handling",
         "thin (< 15 claims): autofocus_body"
       ],
-      "rank": 90
+      "rank": 91
     },
     {
       "card_id": "canon-powershot-s95",
@@ -17150,7 +17265,7 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 91
+      "rank": 92
     },
     {
       "card_id": "nikon-d3300",
@@ -17300,7 +17415,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization"
       ],
-      "rank": 92
+      "rank": 93
     },
     {
       "card_id": "fujifilm-x-t3",
@@ -17472,7 +17587,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 93
+      "rank": 94
     },
     {
       "card_id": "hasselblad-500-cm",
@@ -17526,7 +17641,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 94
+      "rank": 95
     },
     {
       "card_id": "panasonic-s1h",
@@ -17694,7 +17809,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, connectivity"
       ],
-      "rank": 95
+      "rank": 96
     },
     {
       "card_id": "panasonic-gh2",
@@ -17879,7 +17994,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 96
+      "rank": 97
     },
     {
       "card_id": "canon-eos-r5-c",
@@ -18083,7 +18198,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity"
       ],
-      "rank": 97
+      "rank": 98
     },
     {
       "card_id": "nikon-z50",
@@ -18266,7 +18381,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 98
+      "rank": 99
     },
     {
       "card_id": "nikon-d5600",
@@ -18371,11 +18486,11 @@
         "missing weighted axes: video_capability, stabilization, handling",
         "thin (< 15 claims): autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 99
+      "rank": 100
     },
     {
       "card_id": "nikon-z8",
-      "display_name": "Nikon z8",
+      "display_name": "Nikon Z8",
       "rankable": true,
       "score": -0.3143,
       "mention_boost": 0.0,
@@ -18549,7 +18664,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 100
+      "rank": 101
     },
     {
       "card_id": "fujifilm-x-e1",
@@ -18714,7 +18829,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 101
+      "rank": 102
     },
     {
       "card_id": "sony-rx100-iv",
@@ -18920,7 +19035,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 102
+      "rank": 103
     },
     {
       "card_id": "sony-a6000",
@@ -19131,7 +19246,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, connectivity"
       ],
-      "rank": 103
+      "rank": 104
     },
     {
       "card_id": "canon-eos-250d",
@@ -19312,7 +19427,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 104
+      "rank": 105
     },
     {
       "card_id": "nikon-z5",
@@ -19447,7 +19562,7 @@
         "missing weighted axes: connectivity",
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, handling"
       ],
-      "rank": 105
+      "rank": 106
     },
     {
       "card_id": "hasselblad-x1d",
@@ -19600,7 +19715,7 @@
         "missing weighted axes: video_capability, stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 106
+      "rank": 107
     },
     {
       "card_id": "fujifilm-x-t30-iii",
@@ -19790,14 +19905,14 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 107
+      "rank": 108
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 107,
-    "ranked": 107,
+    "in_scope": 108,
+    "ranked": 108,
     "excluded": 0,
     "pending_backfill": 0
   }

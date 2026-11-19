@@ -898,7 +898,7 @@
     },
     {
       "card_id": "nikon-24mm-f1-8",
-      "display_name": "Nikon 24mm f1.8",
+      "display_name": "Nikon NIKKOR Z 24mm f/1.8 S",
       "rankable": true,
       "score": 3.5,
       "mention_boost": 0.0,
@@ -1076,7 +1076,7 @@
     },
     {
       "card_id": "canon-35mm-f1-4",
-      "display_name": "Canon 35mm f1.4",
+      "display_name": "Canon EF 35mm f/1.4L USM",
       "rankable": true,
       "score": 2.7906,
       "mention_boost": 0.0,
@@ -1291,6 +1291,164 @@
       "rank": 7
     },
     {
+      "card_id": "hasselblad-21mm-f4",
+      "display_name": "Hasselblad XCD 21mm f/4",
+      "rankable": true,
+      "score": 2.7024,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.1786,
+          "pos": 14,
+          "neg": 9,
+          "total": 28,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.5357,
+          "top_sources": [
+            {
+              "source_id": "youtube-hifi-huff-the-new-hasselblad-21mm-f4-on-the-x1d-1st-shots-thoughts-more",
+              "url": "https://www.youtube.com/watch?v=-qcW6szNwV8",
+              "witness": "firsthand",
+              "quote": "hey guys look what I have the Hasselblad x1d in my right hand and the new 21 millimeter lens that just arrived for me to check it out this is going to give you around a 16 millimeter in full-frame 35 millimeter so it's v…"
+            },
+            {
+              "source_id": "youtube-key2adventure-hasselblad-xcd-21mm-f4-review-shot-on-my-x2d",
+              "url": "https://www.youtube.com/watch?v=A7LA-tN8Bfk",
+              "witness": "firsthand",
+              "quote": "so welcome back to my channel for another review this time I'm raving my Hasselblad lens on xcd 21 millimeter F4 that a friend of mine has borrowed me so kindly so let's see how this awesome lens performs on this camera …"
+            },
+            {
+              "source_id": "youtube-phil-tragen-photography-hasselblad-xcd-21mm-f4-its-a-second-hand-steal",
+              "url": "https://www.youtube.com/watch?v=bpZm31SI6x4",
+              "witness": "firsthand",
+              "quote": "you more it's a 70 mm equivalent owing to the biggest sensor on the x2d and also more image top and bottom thanks to the 4x3 sensor shape one slightly weird thing that I've come to enjoy about these lenses is the sounds …"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
+              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
+              "witness": "firsthand",
+              "quote": "fun it was an incredible place to test this lens out and what's interesting is I'm about two or three feet behind the organ and it actually looks like I'm much further and one of the things that's impressive about the wa…"
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.1667,
+          "pos": 3,
+          "neg": 5,
+          "total": 12,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-hifi-huff-the-new-hasselblad-21mm-f4-on-the-x1d-1st-shots-thoughts-more",
+              "url": "https://www.youtube.com/watch?v=-qcW6szNwV8",
+              "witness": "firsthand",
+              "quote": "this sensor basically I could have pulled these shadows way out it's pretty much unlimited when you're dealing with the shadows even highlights here she was in some harsh sun shining through the ceiling which I did a tes…"
+            },
+            {
+              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
+              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
+              "witness": "firsthand",
+              "quote": "this over to one of the corners you can see there is very little fall-off it stays incredibly sharp and insulins is really impressive let's talk about lens flare and flaring is one of the challenges with wide angles to c…"
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-key2adventure-hasselblad-xcd-21mm-f4-review-shot-on-my-x2d",
+              "url": "https://www.youtube.com/watch?v=A7LA-tN8Bfk",
+              "witness": "firsthand",
+              "quote": "I found a little chromatic aberration but it's almost invisible and it's only at F4 I found this and it is very strong performance and sunlight well that is if you don't stop down to F32 where you see some strange behavi…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.8333,
+          "pos": 5,
+          "neg": 0,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.8333,
+          "top_sources": [
+            {
+              "source_id": "youtube-phil-tragen-photography-hasselblad-xcd-21mm-f4-its-a-second-hand-steal",
+              "url": "https://www.youtube.com/watch?v=bpZm31SI6x4",
+              "witness": "firsthand",
+              "quote": "reviews of this lens they all say the same thing it's built like a tank and they're right it's fairly compact but made of heavy metal and feels like it could survive the apocalypse the V lenses feel solidly built for sur…"
+            },
+            {
+              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
+              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
+              "witness": "firsthand",
+              "quote": "are but it's an incredible lens and like I said if you are doing architectural work at all I think this is essential especially if you're doing interiors because you're just able to photograph in a really tight space and…"
+            },
+            {
+              "source_id": "youtube-best-smart-tech-hasselblad-7392544002552-21-21mm-f-4-32-fixed-prime-lens-xcd-4-21-mm-bla",
+              "url": "https://www.youtube.com/watch?v=ApPiwUb6oTI",
+              "witness": "unattested",
+              "quote": "The build quality of the lens is excellent, showcasing a sleek black finish that aligns perfectly with the aesthetics of the XS system cameras."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [
+        "filter_thread"
+      ],
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "chromatic_aberration",
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: filter_thread",
+        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, build"
+      ],
+      "rank": 8
+    },
+    {
       "card_id": "fujifilm-16mm-f2-8",
       "display_name": "Fujifilm XF 16mm f/2.8 R WR",
       "rankable": true,
@@ -1470,11 +1628,11 @@
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): distortion, vignetting, filter_thread, build"
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "card_id": "nikon-28mm-f2-8",
-      "display_name": "Nikon 28mm f2.8",
+      "display_name": "Nikon NIKKOR Z 28mm f/2.8",
       "rankable": true,
       "score": 2.4423,
       "mention_boost": 0.0,
@@ -1688,7 +1846,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread"
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "card_id": "sigma-16-28mm-f2-8",
@@ -1882,11 +2040,11 @@
       "flags": [
         "thin (< 15 claims): optical_performance, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "card_id": "nikon-35mm-f1-4",
-      "display_name": "Nikon 35mm f1.4",
+      "display_name": "Nikon NIKKOR Z 35mm f/1.4",
       "rankable": true,
       "score": 2.0,
       "mention_boost": 0.0,
@@ -2040,194 +2198,6 @@
       "flags": [
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): optical_performance, distortion, vignetting, filter_thread, build"
-      ],
-      "rank": 11
-    },
-    {
-      "card_id": "hasselblad-21mm-f4",
-      "display_name": "Hasselblad XCD 21mm f/4",
-      "rankable": true,
-      "score": 1.9674,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.2391,
-          "pos": 25,
-          "neg": 14,
-          "total": 46,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.7174,
-          "top_sources": [
-            {
-              "source_id": "youtube-hifi-huff-the-new-hasselblad-21mm-f4-on-the-x1d-1st-shots-thoughts-more",
-              "url": "https://www.youtube.com/watch?v=-qcW6szNwV8",
-              "witness": "firsthand",
-              "quote": "hey guys look what I have the Hasselblad x1d in my right hand and the new 21 millimeter lens that just arrived for me to check it out this is going to give you around a 16 millimeter in full-frame 35 millimeter so it's v…"
-            },
-            {
-              "source_id": "youtube-key2adventure-hasselblad-xcd-21mm-f4-review-shot-on-my-x2d",
-              "url": "https://www.youtube.com/watch?v=A7LA-tN8Bfk",
-              "witness": "firsthand",
-              "quote": "so welcome back to my channel for another review this time I'm raving my Hasselblad lens on xcd 21 millimeter F4 that a friend of mine has borrowed me so kindly so let's see how this awesome lens performs on this camera …"
-            },
-            {
-              "source_id": "youtube-phil-tragen-photography-hasselblad-xcd-21mm-f4-its-a-second-hand-steal",
-              "url": "https://www.youtube.com/watch?v=bpZm31SI6x4",
-              "witness": "firsthand",
-              "quote": "you more it's a 70 mm equivalent owing to the biggest sensor on the x2d and also more image top and bottom thanks to the 4x3 sensor shape one slightly weird thing that I've come to enjoy about these lenses is the sounds …"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -0.1667,
-          "pos": 4,
-          "neg": 6,
-          "total": 12,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
-              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
-              "witness": "firsthand",
-              "quote": "fun it was an incredible place to test this lens out and what's interesting is I'm about two or three feet behind the organ and it actually looks like I'm much further and one of the things that's impressive about the wa…"
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.0833,
-          "pos": 8,
-          "neg": 10,
-          "total": 24,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.1667,
-          "top_sources": [
-            {
-              "source_id": "youtube-hifi-huff-the-new-hasselblad-21mm-f4-on-the-x1d-1st-shots-thoughts-more",
-              "url": "https://www.youtube.com/watch?v=-qcW6szNwV8",
-              "witness": "firsthand",
-              "quote": "this sensor basically I could have pulled these shadows way out it's pretty much unlimited when you're dealing with the shadows even highlights here she was in some harsh sun shining through the ceiling which I did a tes…"
-            },
-            {
-              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
-              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
-              "witness": "firsthand",
-              "quote": "this over to one of the corners you can see there is very little fall-off it stays incredibly sharp and insulins is really impressive let's talk about lens flare and flaring is one of the challenges with wide angles to c…"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 1.0,
-          "pos": 2,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-key2adventure-hasselblad-xcd-21mm-f4-review-shot-on-my-x2d",
-              "url": "https://www.youtube.com/watch?v=A7LA-tN8Bfk",
-              "witness": "firsthand",
-              "quote": "I found a little chromatic aberration but it's almost invisible and it's only at F4 I found this and it is very strong performance and sunlight well that is if you don't stop down to F32 where you see some strange behavi…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 1,
-          "neg": 1,
-          "total": 5,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-hasseled-if-i-had-to-keep-just-one-hasselblad-lens",
-              "url": "https://www.youtube.com/watch?v=D-QMsrlxZH8",
-              "witness": "firsthand",
-              "quote": "comes in at 62 mm so this is a problem all the other filter tracks that I have in my um B and P series they are 72 mm right those that I have but it is still light and it's still quite compact if I were to sell a lens ac…"
-            },
-            {
-              "source_id": "youtube-matt-granger-wide-angle-shoot-out-xcd-25v-vs-28p",
-              "url": "https://www.youtube.com/watch?v=ZwP19SB43Lk",
-              "witness": "firsthand",
-              "quote": "guys yet so what's similar about them let's go through that first well first of all they're both using 77 mil front filter threads but you'll note the actual amount of glass in them varies quite differently and we're goi…"
-            },
-            {
-              "source_id": "youtube-benj-haisch-pushing-hasselblads-wide-angle-lenses-to-their-limits",
-              "url": "https://www.youtube.com/watch?v=A6wKqOMpdeM",
-              "witness": "unattested",
-              "quote": "But one of the things they did do which was really convenient is they kept the 72 millimeter filter threads here."
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.75,
-          "pos": 6,
-          "neg": 0,
-          "total": 8,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.75,
-          "top_sources": [
-            {
-              "source_id": "youtube-phil-tragen-photography-hasselblad-xcd-21mm-f4-its-a-second-hand-steal",
-              "url": "https://www.youtube.com/watch?v=bpZm31SI6x4",
-              "witness": "firsthand",
-              "quote": "reviews of this lens they all say the same thing it's built like a tank and they're right it's fairly compact but made of heavy metal and feels like it could survive the apocalypse the V lenses feel solidly built for sur…"
-            },
-            {
-              "source_id": "youtube-the-art-of-photography-the-widest-hasselblad-lens-hasselblad-21mm-f4-review",
-              "url": "https://www.youtube.com/watch?v=fb3RUm18I-c",
-              "witness": "firsthand",
-              "quote": "are but it's an incredible lens and like I said if you are doing architectural work at all I think this is essential especially if you're doing interiors because you're just able to photograph in a really tight space and…"
-            },
-            {
-              "source_id": "youtube-best-smart-tech-hasselblad-7392544002552-21-21mm-f-4-32-fixed-prime-lens-xcd-4-21-mm-bla",
-              "url": "https://www.youtube.com/watch?v=ApPiwUb6oTI",
-              "witness": "unattested",
-              "quote": "The build quality of the lens is excellent, showcasing a sleek black finish that aligns perfectly with the aesthetics of the XS system cameras."
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "distortion",
-        "chromatic_aberration",
-        "filter_thread",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
       "rank": 12
     },
@@ -2449,6 +2419,213 @@
       "rank": 13
     },
     {
+      "card_id": "viltrox-35mm-f1-4",
+      "display_name": "Viltrox 35mm f1.4",
+      "rankable": true,
+      "score": 1.7083,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.5,
+          "pos": 15,
+          "neg": 3,
+          "total": 24,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.5,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "The overall aim is to optimize sharpness and clarity, while."
+            },
+            {
+              "source_id": "fstoppers-gear-829-viltrox-35mm-f14-pro-worth-it-905298",
+              "url": "https://fstoppers.com/gear/829-viltrox-35mm-f14-pro-worth-it-905298?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "At f/1.4, the center already shows very good sharpness and contrast."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "The Viltrox 35mm f/1.4 is sharp and exceptionally well-designed for shallow depth of field performance."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": -0.2,
+          "pos": 2,
+          "neg": 3,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.4,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "Pro (1/40 sec, f/1.4, ISO 320) (Image credit: Matthew Richards) There’s hardly any distortion to be seen, even with automatic in-camera correction disabled."
+            },
+            {
+              "source_id": "fstoppers-gear-829-viltrox-35mm-f14-pro-worth-it-905298",
+              "url": "https://fstoppers.com/gear/829-viltrox-35mm-f14-pro-worth-it-905298?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "switched off, distortion is limited to mild pincushion, but the corners at f/1.4 are very dark and never fully brighten even at f/2.8, so leave."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "it delivers fast optics with excellent correction for a good price."
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": 0.2,
+          "pos": 2,
+          "neg": 1,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "remains excellent when stopping down, helped by the lens’s particularly well-rounded 11-blade aperture."
+            },
+            {
+              "source_id": "fstoppers-gear-829-viltrox-35mm-f14-pro-worth-it-905298",
+              "url": "https://fstoppers.com/gear/829-viltrox-35mm-f14-pro-worth-it-905298?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "Vignetting is a different story, since it shows up the same way at any resolution, so pay attention to that number regardless of your camera.."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "good clarity right to the edge at f/1.4 and very little vignetting."
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.125,
+          "pos": 1,
+          "neg": 2,
+          "total": 8,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.125,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "minimizing unwanted aberrations like color fringing."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "Longitudinal chromatic aberrations are difficult to get rid of in the editing process, and."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 2,
+          "neg": 2,
+          "total": 9,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "12 groups Angle of view 62.6 degrees Diaphragm blades 11 Minimum aperture f/16 Minimum focus distance 0.3m Maximum magnification 0.18x Filter size 77mm Dimensions 85x112mm."
+            },
+            {
+              "source_id": "fstoppers-gear-829-viltrox-35mm-f14-pro-worth-it-905298",
+              "url": "https://fstoppers.com/gear/829-viltrox-35mm-f14-pro-worth-it-905298?utm_source=fstoppers&utm_medium=RSS&utm_campaign=rss_feed_articles",
+              "witness": "unattested",
+              "quote": "There's no stabilization, the filter thread is 77mm, and a fairly deep plastic hood comes in the box."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "filter thread is 77mm, which is not unusual, but there is no denying that the 35mm Pro feels a little larger than it needs to."
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 0,
+          "total": 6,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.3333,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-viltrox-af-35mm-f-1-4-pro-review-this-lens-com",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/viltrox-af-35mm-f-1-4-pro-review-this-lens-completes-a-trinity-of-pro-primes-with-fast-apertures-and-favored-focal-lengths",
+              "witness": "unattested",
+              "quote": "Again, continuing the theme set by the earlier 50mm and 85mm lenses, the 35mm has a sturdy metal barrel as well."
+            },
+            {
+              "source_id": "petapixel-2026-10-31-viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth",
+              "url": "https://petapixel.com/2026/10/31/viltrox-35mm-f-1-4-pro-review-a-beautiful-behemoth/",
+              "witness": "unattested",
+              "quote": "They are solid lenses, with ambitious optical goals, and."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "chromatic_aberration",
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
+      ],
+      "rank": 14
+    },
+    {
       "card_id": "sigma-23mm-f1-4",
       "display_name": "Sigma 23mm f/1.4 DC DN Contemporary",
       "rankable": true,
@@ -2662,7 +2839,7 @@
       "flags": [
         "thin (< 15 claims): distortion, filter_thread"
       ],
-      "rank": 14
+      "rank": 15
     },
     {
       "card_id": "sony-12-24mm-f2-8",
@@ -2878,7 +3055,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, build"
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "card_id": "sony-35mm-f2-8",
@@ -3078,7 +3255,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread"
       ],
-      "rank": 16
+      "rank": 17
     },
     {
       "card_id": "canon-24mm-f2-8",
@@ -3284,7 +3461,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 17
+      "rank": 18
     },
     {
       "card_id": "sony-fe-35mm-f1-4-gm",
@@ -3435,44 +3612,44 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 18
+      "rank": 19
     },
     {
-      "card_id": "canon-15mm-f2-8",
-      "display_name": "Canon EF 15mm f/2.8 Fisheye",
+      "card_id": "sigma-19mm-f2-8",
+      "display_name": "Sigma 19mm f/2.8 DN Art",
       "rankable": true,
-      "score": 1.0248,
+      "score": 1.0154,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.4808,
-          "pos": 35,
-          "neg": 10,
-          "total": 52,
+          "s": 0.3,
+          "pos": 21,
+          "neg": 9,
+          "total": 40,
           "confidence": "low",
-          "contested": false,
+          "contested": true,
           "thin": false,
-          "contribution": 1.4423,
+          "contribution": 0.9,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f28-fisheye-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=lIhQAgi3oMs",
+              "source_id": "admiringlight-blog-review-sigma-19mm-f2-8-dn-art-sony-e-mount",
+              "url": "https://admiringlight.com/blog/review-sigma-19mm-f2-8-dn-art-sony-e-mount/",
               "witness": "firsthand",
-              "quote": "fullframe camera in this case a 20 mapel Canon 6D with the aperture wide open at f2.8 we see very good sharpness in the middle of the image as well as good colors and excellent contrast however things get a little more c…"
+              "quote": "I wish there were some full size samples to evaluate sharpness of the lens."
             },
             {
-              "source_id": "youtube-retro-games-archive-canon-ef-15mm-f28-fisheye-lens-review",
-              "url": "https://www.youtube.com/watch?v=A8_k-eiTkAE",
+              "source_id": "youtube-brian-macduff-sigma-19mm-f28-lens-review-watch-this-before-you-buy",
+              "url": "https://www.youtube.com/watch?v=C0czYw1eZTc",
               "witness": "firsthand",
-              "quote": "aperture range goes down to f2.8 which is very good indeed um one thing to point out though that as it's a fisheye lens the actual lens itself is pretty massive and it's slightly curved as you can see might be able to de…"
+              "quote": "the day of the day I based on a few things focal length aperture sharpness colors auto focus all those features in the Sony a 65 hundred proved to be pretty impressive but I thought this was going to be my go-to lens for…"
             },
             {
-              "source_id": "youtube-christopher-frost-laowa-8-15mm-f28-fisheye-zoom-lens-review-full-frame",
-              "url": "https://www.youtube.com/watch?v=QOVxOgh5br4",
-              "witness": "unattested",
-              "quote": "So, let's see about image quality then."
+              "source_id": "youtube-chris-baitson-i-try-micro-four-thirds-for-the-first-time-lumix-gf1-sigma-19mm-f28",
+              "url": "https://www.youtube.com/watch?v=Im7PIZwCjtY",
+              "witness": "firsthand",
+              "quote": "peaking this doesn't have it i've never had it i can live without it but zooming in to manually focus automatically i can zoom in on you and manually focus how cool is that all right so the next point i want to make arou…"
             }
           ],
           "axis_display": "Optical Performance"
@@ -3480,32 +3657,26 @@
         {
           "axis": "distortion",
           "weight": 2,
-          "s": 0.0714,
-          "pos": 6,
-          "neg": 5,
-          "total": 14,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 4,
           "confidence": "low",
           "contested": true,
           "thin": true,
-          "contribution": 0.1429,
+          "contribution": 0.0,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-laowa-8-15mm-f28-fisheye-zoom-lens-review-full-frame",
-              "url": "https://www.youtube.com/watch?v=QOVxOgh5br4",
-              "witness": "unattested",
-              "quote": "No in camera corrections are available with this lens at the widest angle of 8 mm and f2.8."
+              "source_id": "youtube-lensvid-sigma-19mm-f28-dn-lens-review-the-best-affordable-wide-angle-lens-for-e-mount",
+              "url": "https://www.youtube.com/watch?v=5nHrjA0fLQ0",
+              "witness": "firsthand",
+              "quote": "work pretty good although you will get a bit higher ISO in the corners we were actually pretty surprised to see the barrel Distortion test for this lens either the lens is Distortion free or Sony has some autoc correct t…"
             },
             {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
-              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "source_id": "youtube-loloho-extra-sigma-19mm-f28-dn-art-review-sony-e-mount-micro-43",
+              "url": "https://www.youtube.com/watch?v=wTrC8nH5xDA",
               "witness": "unattested",
-              "quote": "But what strikes us the most, is actually the overall image look, that is pleasing despite the fisheye distortion; not really compressing the corners."
-            },
-            {
-              "source_id": "youtube-retro-games-archive-canon-ef-15mm-f28-fisheye-lens-review",
-              "url": "https://www.youtube.com/watch?v=A8_k-eiTkAE",
-              "witness": "unattested",
-              "quote": "for example if you're taking a picture of a bend in a road uh fisheye lens will magnify that Distortion the bend and it will make a very impressive photo here's another example picture uh as you can see the edges of the …"
+              "quote": "Now, because this is a wider angle lens, there will be some distortion around the edges of the frame."
             }
           ],
           "axis_display": "Distortion"
@@ -3513,26 +3684,26 @@
         {
           "axis": "vignetting",
           "weight": 2,
-          "s": -0.25,
-          "pos": 2,
-          "neg": 4,
-          "total": 8,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 1,
+          "total": 2,
           "confidence": "low",
           "contested": true,
           "thin": true,
-          "contribution": -0.5,
+          "contribution": -1.0,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f28-fisheye-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=lIhQAgi3oMs",
+              "source_id": "youtube-lensvid-sigma-19mm-f28-dn-lens-review-the-best-affordable-wide-angle-lens-for-e-mount",
+              "url": "https://www.youtube.com/watch?v=5nHrjA0fLQ0",
               "witness": "firsthand",
-              "quote": "down to about f8 well let's see how this lens performs when working against bright lights when the aperture is wide open at f2.8 we do get some problems there is quite complex although admittedly attractive flaring howev…"
+              "quote": "we encounter very little chromatic operation with this lens and Sony cameras know how to deal with them anyway we also didn't encounter any significant flare with the lens as for vignetti with our a6300 vignetti auto cor…"
             },
             {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
-              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "source_id": "youtube-loloho-extra-sigma-19mm-f28-dn-art-review-sony-e-mount-micro-43",
+              "url": "https://www.youtube.com/watch?v=wTrC8nH5xDA",
               "witness": "unattested",
-              "quote": "Stopping down doesn’t really enhance clarity, as it is already small at f/2.8, but do makes it clear that the simpler 5-blades aperture is in use; you can see a pentagon-shaped highlight; made to render perfect stars on …"
+              "quote": "On a full-frame camera, you will get some vignetting in the corners, but with a little bit of cropping, you probably end up with something like a 22 or 23 mm equivalent field of view."
             }
           ],
           "axis_display": "Vignetting"
@@ -3540,26 +3711,26 @@
         {
           "axis": "chromatic_aberration",
           "weight": 1,
-          "s": -0.5714,
-          "pos": 0,
-          "neg": 4,
-          "total": 7,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 1,
+          "total": 3,
           "confidence": "low",
           "contested": false,
           "thin": true,
-          "contribution": -0.5714,
+          "contribution": 0.3333,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f28-fisheye-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=lIhQAgi3oMs",
+              "source_id": "youtube-robin-wong-sigma-19mm-f28-still-good-today",
+              "url": "https://www.youtube.com/watch?v=lFpTCHgppnk",
               "witness": "firsthand",
-              "quote": "in the extreme Corners we see some softness and an awful lot of blue and pink chromatic aberration to be fair that level of color fringing is quite typical for fishe lens but it's still disappointing to see stop The Lens…"
+              "quote": "floor controls I don't see any deal breakers there's nothing too severe I did see some purple fringing in high contrast situations yes the chromatic aberration can be a problem but you can correct that impulse no issue w…"
             },
             {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
-              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
-              "witness": "unattested",
-              "quote": "thanks to the optical design that can make-due with the geometric distortion; obvious chromatic aberrations"
+              "source_id": "youtube-the-hybrid-shooter-sigma-19mm-f28-dn-final-review-samples-with-sony-a6500-4k",
+              "url": "https://www.youtube.com/watch?v=rUhPtWHbGuc",
+              "witness": "firsthand",
+              "quote": "and for posting pictures on the internet I will be mostly able to use these lines at the sharpest point and if I have to stop it down I can live with the crease Chapman so I'm personally very happy with this line there i…"
             }
           ],
           "axis_display": "Chromatic Aberration"
@@ -3567,32 +3738,32 @@
         {
           "axis": "filter_thread",
           "weight": 1,
-          "s": 0.4,
-          "pos": 5,
-          "neg": 1,
-          "total": 10,
+          "s": 0.1667,
+          "pos": 1,
+          "neg": 0,
+          "total": 6,
           "confidence": "low",
-          "contested": true,
+          "contested": false,
           "thin": true,
-          "contribution": 0.4,
+          "contribution": 0.1667,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-laowa-8-15mm-f28-fisheye-zoom-lens-review-full-frame",
-              "url": "https://www.youtube.com/watch?v=QOVxOgh5br4",
-              "witness": "unattested",
-              "quote": "There's no possibility of using filters with this lens either on the front or in the rear."
+              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-prime-lens-for-micro-four-thirds-cameras",
+              "url": "https://www.youtube.com/watch?v=y9rs3BnDT4w",
+              "witness": "firsthand",
+              "quote": "popular for our micro 4/3 lenses so that means that you probably have some UVC pls and nd filters already that are set up for this kind of format and of course being a sigma Art Series lens it comes with the proprietary …"
             },
             {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f28-fisheye-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=lIhQAgi3oMs",
+              "source_id": "youtube-arthur-r-sigma-19mm-f28-lens-for-sony-e-mount",
+              "url": "https://www.youtube.com/watch?v=usDSsY7lmHI",
               "witness": "unattested",
-              "quote": "as you can see here obviously it's best to leave it off you cannot put filters on the front of this lens but there's a little space at the back behind the rear lens element where you can slip in a specialist filter the l…"
+              "quote": "The front 46 mm filter thread."
             },
             {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
-              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-wide-angle-prime-lens-for-micro-four-thir",
+              "url": "https://www.youtube.com/watch?v=uMz3gaxhOEU",
               "witness": "unattested",
-              "quote": "And at the front the non-removable metal lens hood is incompatible with filters, that must be fitted inside the metal-mount; using squared gels at up-to three sheets at a time."
+              "quote": "neutral density filters in a very nice compact 46 millimeter thread size notice that it does come with a lens hood which is proprietary which is great too that guarantees that you don't have any flare when you're working…"
             }
           ],
           "axis_display": "Filter Thread"
@@ -3600,26 +3771,32 @@
         {
           "axis": "build",
           "weight": 1,
-          "s": 0.1111,
-          "pos": 5,
-          "neg": 4,
-          "total": 9,
+          "s": 0.6154,
+          "pos": 9,
+          "neg": 1,
+          "total": 13,
           "confidence": "low",
           "contested": false,
           "thin": true,
-          "contribution": 0.1111,
+          "contribution": 0.6154,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-laowa-8-15mm-f28-fisheye-zoom-lens-review-full-frame",
-              "url": "https://www.youtube.com/watch?v=QOVxOgh5br4",
+              "source_id": "youtube-arthur-r-sigma-19mm-f28-lens-for-sony-e-mount",
+              "url": "https://www.youtube.com/watch?v=usDSsY7lmHI",
               "witness": "firsthand",
-              "quote": "The lens does not seem to feature any weather sealing around it though, so I would keep it out of wet conditions."
+              "quote": "In here, we have a lens hood as well that is plastic."
             },
             {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f28-fisheye-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=lIhQAgi3oMs",
-              "witness": "unattested",
-              "quote": "very nicely indeed feeling very solid and tough but without being too big or heavy there's quite a lot of metal used in the lens body The Lens comes with front and rear lens caps and a detachable metal lens Hood which st…"
+              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-prime-lens-for-micro-four-thirds-cameras",
+              "url": "https://www.youtube.com/watch?v=y9rs3BnDT4w",
+              "witness": "firsthand",
+              "quote": "their Art Series lens or you're getting good quality construction 3 glass moulded aspherical elements super multi-layer coating all this means that this is a very well-put-together lens you have your brass mount and meta…"
+            },
+            {
+              "source_id": "youtube-raychristofer-sigma-19mm-f28-for-m-43-real-world-review",
+              "url": "https://www.youtube.com/watch?v=6xtWUS7xvnw",
+              "witness": "firsthand",
+              "quote": "the lens mount it's not going to break or wear out anytime soon also the focusing ring I think it's made out of some kind of brushed aluminum I haven't figured it out yet and also I've never seen a focusing ring that's p…"
             }
           ],
           "axis_display": "Build Quality"
@@ -3635,206 +3812,6 @@
       ],
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
-      ],
-      "rank": 19
-    },
-    {
-      "card_id": "canon-16-35mm-f2-8",
-      "display_name": "Canon EF 16-35mm f/2.8L USM",
-      "rankable": true,
-      "score": 1.02,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.377,
-          "pos": 35,
-          "neg": 12,
-          "total": 61,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 1.1311,
-          "top_sources": [
-            {
-              "source_id": "youtube-dan-frullani-canon-16-35mm-f28-ii-the-one-lens-id-choose-every-time",
-              "url": "https://www.youtube.com/watch?v=yA_Vj5_V_8k",
-              "witness": "firsthand",
-              "quote": "I think most of them are clinically sharp and they don't have any 3D pop."
-            },
-            {
-              "source_id": "youtube-daufenbach-camera-should-you-buy-the-canon-ef-16-35mm-f28l-iii-usm",
-              "url": "https://www.youtube.com/watch?v=ByyQ5NYihiY",
-              "witness": "firsthand",
-              "quote": "there's many different ones to look at and if you're looking at this one you're probably looking at this one mainly because it's a 2.8 the other ones are good and sometimes even a little cheaper but shooting at a wide an…"
-            },
-            {
-              "source_id": "youtube-digitalrev-tv-canon-16-35-f28l-vs-16-35-f4l-is-vs-17-40-f4l",
-              "url": "https://www.youtube.com/watch?v=Ebckv0kJrDs",
-              "witness": "firsthand",
-              "quote": "is it I mean this is one of my favorite L lenses not because it's the best but because in terms of value for money and for what you get can't be beaten really image quality is excent all around with the 7 18 40 mm and 16…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -0.1667,
-          "pos": 2,
-          "neg": 4,
-          "total": 12,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-jason-pischke-canon-ef-16-35mm-f28l-iii-vs-rf-15-35mm-only-one-stays",
-              "url": "https://www.youtube.com/watch?v=b_ukiAuf_HA",
-              "witness": "firsthand",
-              "quote": "I ran all of these tests on my R6 Mark III, same tripod, same settings, even the same filters, and I also turned off lens corrections so we can really see how these lenses perform optically."
-            },
-            {
-              "source_id": "youtube-thephotosisters-canon-16-35mm-f28l-i-lens-review",
-              "url": "https://www.youtube.com/watch?v=t0X7QOmwMB4",
-              "witness": "unattested",
-              "quote": "Since this is the first version of the 16 to35 L series lens, it definitely has a huge problem with distortion and vignetting around the edges."
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.7778,
-          "pos": 0,
-          "neg": 7,
-          "total": 9,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -1.5556,
-          "top_sources": [
-            {
-              "source_id": "youtube-grant-takes-pictures-canon-16-35mm-f28l-ii-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=Lc2NiWJEBaA",
-              "witness": "firsthand",
-              "quote": "pictures with it to just see what it looked like and a couple of things i discovered with it one it has quite a bit of vignetting that i don't get on any of my other lenses at first i thought it was the uh the lens hood …"
-            },
-            {
-              "source_id": "youtube-nicole-glass-review-canon-16-35mm-f28-iii-lens-worth-the-price",
-              "url": "https://www.youtube.com/watch?v=dwg2u-bovLE",
-              "witness": "firsthand",
-              "quote": "as I love it one it's really heavy so if you're traveling and you want to travel light you can sort of scratch that off your list because it brings a lot to their innocence been getting I've noticed that when I take phot…"
-            },
-            {
-              "source_id": "youtube-jason-pischke-canon-ef-16-35mm-f28l-iii-vs-rf-15-35mm-only-one-stays",
-              "url": "https://www.youtube.com/watch?v=b_ukiAuf_HA",
-              "witness": "unattested",
-              "quote": "This is when the IS in the lens and the IBIS in the camera body end up fighting one another at wider focal lengths, and the end result is this weird jello effect in the corners."
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 1.0,
-          "pos": 2,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-damian-brown-canon-ef-16-35-mm-f28l-ii-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=_lnw-_FTQAo",
-              "witness": "firsthand",
-              "quote": "little Barrel when you're at 16 but nothing to worry about and the chromatic aberration is well controlled [Music] as you probably guessed I only tried this on a fullframe sensor and it performed superbly I'd be very con…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": 0.3333,
-          "pos": 8,
-          "neg": 1,
-          "total": 21,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-damian-brown-canon-ef-16-35-mm-f28l-ii-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=_lnw-_FTQAo",
-              "witness": "firsthand",
-              "quote": "you're into that kind of stat the large 82 mil filter size was a first for Cad and EF lenses and that might be something to consider your filter costs could go up but I think you'll find the image quality more than makes…"
-            },
-            {
-              "source_id": "youtube-grant-takes-pictures-canon-16-35mm-f28l-ii-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=Lc2NiWJEBaA",
-              "witness": "firsthand",
-              "quote": "here so this is a 82 millimeter whereas both my other two lenses are 77 and what that means is that all of my existing filters wouldn't fit on this lens if i was to get it so i've mentioned in the past that with my 24 to…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-canon-ef-16-35mm-f28l-iii-final-review-part-1",
-              "url": "https://www.youtube.com/watch?v=pNRYS1zb0-U",
-              "witness": "unattested",
-              "quote": "Um, one difference is that there's obviously more of a flare at the front of the barrel to accommodate a larger 82mm front filter thread."
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.4444,
-          "pos": 5,
-          "neg": 1,
-          "total": 9,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.4444,
-          "top_sources": [
-            {
-              "source_id": "youtube-damian-brown-canon-ef-16-35-mm-f28l-ii-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=_lnw-_FTQAo",
-              "witness": "firsthand",
-              "quote": "at if I was going to play with this and if I was shooting professionally definitely no argument there jpeg does have its place in the Pro world sorry mate this is a great lens for wedding and Landscape Shooters who love …"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-canon-ef-16-35mm-f28l-iii-final-review-part-1",
-              "url": "https://www.youtube.com/watch?v=pNRYS1zb0-U",
-              "witness": "firsthand",
-              "quote": "One thing I will note before moving on from the build, however, is that um this lens has much more advanced weather sealing over the previous generation."
-            },
-            {
-              "source_id": "youtube-nicole-glass-review-canon-16-35mm-f28-iii-lens-worth-the-price",
-              "url": "https://www.youtube.com/watch?v=dwg2u-bovLE",
-              "witness": "firsthand",
-              "quote": "for just about a month actually more than a month and have used this in so many different environments so I figured I've gathered enough footage and experience to talk about this lens a little bit so let me go over a few…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "distortion",
-        "vignetting",
-        "chromatic_aberration",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, build"
       ],
       "rank": 20
     },
@@ -4782,426 +4759,8 @@
       "rank": 25
     },
     {
-      "card_id": "sigma-19mm-f2-8",
-      "display_name": "Sigma 19mm f/2.8 DN Art",
-      "rankable": true,
-      "score": 0.4881,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.25,
-          "pos": 24,
-          "neg": 12,
-          "total": 48,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.75,
-          "top_sources": [
-            {
-              "source_id": "admiringlight-blog-review-sigma-19mm-f2-8-dn-art-sony-e-mount",
-              "url": "https://admiringlight.com/blog/review-sigma-19mm-f2-8-dn-art-sony-e-mount/",
-              "witness": "firsthand",
-              "quote": "I wish there were some full size samples to evaluate sharpness of the lens."
-            },
-            {
-              "source_id": "youtube-brian-macduff-sigma-19mm-f28-lens-review-watch-this-before-you-buy",
-              "url": "https://www.youtube.com/watch?v=C0czYw1eZTc",
-              "witness": "firsthand",
-              "quote": "the day of the day I based on a few things focal length aperture sharpness colors auto focus all those features in the Sony a 65 hundred proved to be pretty impressive but I thought this was going to be my go-to lens for…"
-            },
-            {
-              "source_id": "youtube-chris-baitson-i-try-micro-four-thirds-for-the-first-time-lumix-gf1-sigma-19mm-f28",
-              "url": "https://www.youtube.com/watch?v=Im7PIZwCjtY",
-              "witness": "firsthand",
-              "quote": "peaking this doesn't have it i've never had it i can live without it but zooming in to manually focus automatically i can zoom in on you and manually focus how cool is that all right so the next point i want to make arou…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": 0.0,
-          "pos": 1,
-          "neg": 1,
-          "total": 4,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-lensvid-sigma-19mm-f28-dn-lens-review-the-best-affordable-wide-angle-lens-for-e-mount",
-              "url": "https://www.youtube.com/watch?v=5nHrjA0fLQ0",
-              "witness": "firsthand",
-              "quote": "work pretty good although you will get a bit higher ISO in the corners we were actually pretty surprised to see the barrel Distortion test for this lens either the lens is Distortion free or Sony has some autoc correct t…"
-            },
-            {
-              "source_id": "youtube-loloho-extra-sigma-19mm-f28-dn-art-review-sony-e-mount-micro-43",
-              "url": "https://www.youtube.com/watch?v=wTrC8nH5xDA",
-              "witness": "unattested",
-              "quote": "Now, because this is a wider angle lens, there will be some distortion around the edges of the frame."
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.6667,
-          "pos": 0,
-          "neg": 2,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -1.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-sigma-19mm-f28-ex-dn-lens-review-with-samples",
-              "url": "https://www.youtube.com/watch?v=Vy2wzLuzQi4",
-              "witness": "firsthand",
-              "quote": "down to F4 or f5.6 for some really fantastic picture quality let's see now about Distortion and vignetting it's good news here there's a little Barrel Distortion visible but even at f2.8 vignetting is nothing bad however…"
-            },
-            {
-              "source_id": "youtube-lensvid-sigma-19mm-f28-dn-lens-review-the-best-affordable-wide-angle-lens-for-e-mount",
-              "url": "https://www.youtube.com/watch?v=5nHrjA0fLQ0",
-              "witness": "firsthand",
-              "quote": "we encounter very little chromatic operation with this lens and Sony cameras know how to deal with them anyway we also didn't encounter any significant flare with the lens as for vignetti with our a6300 vignetti auto cor…"
-            },
-            {
-              "source_id": "youtube-loloho-extra-sigma-19mm-f28-dn-art-review-sony-e-mount-micro-43",
-              "url": "https://www.youtube.com/watch?v=wTrC8nH5xDA",
-              "witness": "unattested",
-              "quote": "On a full-frame camera, you will get some vignetting in the corners, but with a little bit of cropping, you probably end up with something like a 22 or 23 mm equivalent field of view."
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 0.3333,
-          "pos": 2,
-          "neg": 1,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-robin-wong-sigma-19mm-f28-still-good-today",
-              "url": "https://www.youtube.com/watch?v=lFpTCHgppnk",
-              "witness": "firsthand",
-              "quote": "floor controls I don't see any deal breakers there's nothing too severe I did see some purple fringing in high contrast situations yes the chromatic aberration can be a problem but you can correct that impulse no issue w…"
-            },
-            {
-              "source_id": "youtube-the-hybrid-shooter-sigma-19mm-f28-dn-final-review-samples-with-sony-a6500-4k",
-              "url": "https://www.youtube.com/watch?v=rUhPtWHbGuc",
-              "witness": "firsthand",
-              "quote": "and for posting pictures on the internet I will be mostly able to use these lines at the sharpest point and if I have to stop it down I can live with the crease Chapman so I'm personally very happy with this line there i…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": 0.1667,
-          "pos": 1,
-          "neg": 0,
-          "total": 6,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1667,
-          "top_sources": [
-            {
-              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-prime-lens-for-micro-four-thirds-cameras",
-              "url": "https://www.youtube.com/watch?v=y9rs3BnDT4w",
-              "witness": "firsthand",
-              "quote": "popular for our micro 4/3 lenses so that means that you probably have some UVC pls and nd filters already that are set up for this kind of format and of course being a sigma Art Series lens it comes with the proprietary …"
-            },
-            {
-              "source_id": "youtube-arthur-r-sigma-19mm-f28-lens-for-sony-e-mount",
-              "url": "https://www.youtube.com/watch?v=usDSsY7lmHI",
-              "witness": "unattested",
-              "quote": "The front 46 mm filter thread."
-            },
-            {
-              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-wide-angle-prime-lens-for-micro-four-thir",
-              "url": "https://www.youtube.com/watch?v=uMz3gaxhOEU",
-              "witness": "unattested",
-              "quote": "neutral density filters in a very nice compact 46 millimeter thread size notice that it does come with a lens hood which is proprietary which is great too that guarantees that you don't have any flare when you're working…"
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.5714,
-          "pos": 9,
-          "neg": 1,
-          "total": 14,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.5714,
-          "top_sources": [
-            {
-              "source_id": "youtube-arthur-r-sigma-19mm-f28-lens-for-sony-e-mount",
-              "url": "https://www.youtube.com/watch?v=usDSsY7lmHI",
-              "witness": "firsthand",
-              "quote": "In here, we have a lens hood as well that is plastic."
-            },
-            {
-              "source_id": "youtube-digital-goja-unboxing-review-sigma-19mm-f28-dn-prime-lens-for-micro-four-thirds-cameras",
-              "url": "https://www.youtube.com/watch?v=y9rs3BnDT4w",
-              "witness": "firsthand",
-              "quote": "their Art Series lens or you're getting good quality construction 3 glass moulded aspherical elements super multi-layer coating all this means that this is a very well-put-together lens you have your brass mount and meta…"
-            },
-            {
-              "source_id": "youtube-raychristofer-sigma-19mm-f28-for-m-43-real-world-review",
-              "url": "https://www.youtube.com/watch?v=6xtWUS7xvnw",
-              "witness": "firsthand",
-              "quote": "the lens mount it's not going to break or wear out anytime soon also the focusing ring I think it's made out of some kind of brushed aluminum I haven't figured it out yet and also I've never seen a focusing ring that's p…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "distortion",
-        "vignetting",
-        "chromatic_aberration",
-        "filter_thread",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
-      ],
-      "rank": 26
-    },
-    {
-      "card_id": "sigma-15mm-f1-4",
-      "display_name": "Sigma 15mm f/1.4 DC Contemporary",
-      "rankable": true,
-      "score": 0.4113,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.2248,
-          "pos": 65,
-          "neg": 36,
-          "total": 129,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.6744,
-          "top_sources": [
-            {
-              "source_id": "youtube-arthur-r-sigma-15mm-f14-vs-sony-15mm-f14-vs-sigma-16mm-f14-vs-viltrox-15mm-f17",
-              "url": "https://www.youtube.com/watch?v=Pdv8CsGun50",
-              "witness": "firsthand",
-              "quote": "Center sharpness, I let's see, don't see much of a difference here."
-            },
-            {
-              "source_id": "youtube-christopher-frost-sigma-15mm-f14-dc-c-aps-c-lens-review",
-              "url": "https://www.youtube.com/watch?v=5G6RqQzqVvE",
-              "witness": "firsthand",
-              "quote": "I reviewed it on a number of different systems, and although it was a large and, well, very slightly ugly-looking lens, well, it was pretty sharp and certainly offered striking images, although its out-of-focus backgroun…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
-              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
-              "witness": "firsthand",
-              "quote": "for you can see that the center performance uh if anything I would very slightly favor the 15 mm in my results here in the mid-frame they look very close to the same in the corners it's a little bit more consistent out t…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -0.0444,
-          "pos": 10,
-          "neg": 12,
-          "total": 45,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.0889,
-          "top_sources": [
-            {
-              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
-              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
-              "witness": "firsthand",
-              "quote": "I can&rsquo;t say the same about barrel distortion, which relies."
-            },
-            {
-              "source_id": "youtube-camera-centre-uk-sigma-15mm-f14-in-real-world-use",
-              "url": "https://www.youtube.com/watch?v=GrdMmV2a_FI",
-              "witness": "firsthand",
-              "quote": "And I can tell that by me shooting just in general, I mean, of course, there is distortion."
-            },
-            {
-              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
-              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
-              "witness": "firsthand",
-              "quote": "Now, continuing in that theme, I was actually surprised to find that the 15 millimeter actually sported more barrel distortion and vignette than last year's 12mm lens did."
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.119,
-          "pos": 8,
-          "neg": 13,
-          "total": 42,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.2381,
-          "top_sources": [
-            {
-              "source_id": "youtube-mark-bennetts-camera-crisis-the-goat-was-replaced-the-sigma-15mm-f14",
-              "url": "https://www.youtube.com/watch?v=bsiFDMe4PBg",
-              "witness": "firsthand",
-              "quote": "So, if I had like a white light in the background and I'm down at 1.4, you could see like a blue ring around it."
-            },
-            {
-              "source_id": "youtube-park-cameras-aps-c-game-changer-sigma-15mm-f14-lens-review",
-              "url": "https://www.youtube.com/watch?v=pEaqADavMvE",
-              "witness": "firsthand",
-              "quote": "Now, I did notice there was a little bit of vignetting and a little bit of distortion as well."
-            },
-            {
-              "source_id": "youtube-petapixel-sigma-15mm-f14-dg-dn-art-review-wide-weird-weighty-and-wonderful",
-              "url": "https://www.youtube.com/watch?v=bV40GqMxHMk",
-              "witness": "firsthand",
-              "quote": "collecting enough light the only caveat I have with that lens is if you're going to shoot anything close to the frame you definitely want to stop down but I think sigma's made a very interesting optic here I'm sorry we c…"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": -0.1429,
-          "pos": 9,
-          "neg": 15,
-          "total": 42,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.1429,
-          "top_sources": [
-            {
-              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
-              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
-              "witness": "firsthand",
-              "quote": "Now, another area that I was underwhelmed by the optical performance of the 15 mm is that you can see that in the correct situations, you're going to see quite pronounced amounts of chromatic aberration, particularly the…"
-            },
-            {
-              "source_id": "youtube-mark-bennetts-camera-crisis-the-goat-was-replaced-the-sigma-15mm-f14",
-              "url": "https://www.youtube.com/watch?v=bsiFDMe4PBg",
-              "witness": "firsthand",
-              "quote": "With chromatic aberration, if we look at lateral chromatic aberration, that's chromatic aberration of the thing that is in focus."
-            },
-            {
-              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
-              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
-              "witness": "unattested",
-              "quote": "They&rsquo;re supplemented by three SLD (Special Low Dispersion) elements to enhance clarity while minimizing color fringing, along with one top-grade FLD (Fluorite Low Dispersion)."
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": -0.0625,
-          "pos": 0,
-          "neg": 1,
-          "total": 16,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.0625,
-          "top_sources": [
-            {
-              "source_id": "youtube-arthur-r-sigma-15mm-f14-vs-sony-15mm-f14-vs-sigma-16mm-f14-vs-viltrox-15mm-f17",
-              "url": "https://www.youtube.com/watch?v=Pdv8CsGun50",
-              "witness": "firsthand",
-              "quote": "No edits, no filters, just straight out of my camera."
-            },
-            {
-              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
-              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
-              "witness": "firsthand",
-              "quote": "We have got a filter thread size of 58 mm up front."
-            },
-            {
-              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
-              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
-              "witness": "unattested",
-              "quote": "element has a keep-clean fluorine coating and the filter attachment thread is a mere 58mm."
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.2692,
-          "pos": 10,
-          "neg": 3,
-          "total": 26,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.2692,
-          "top_sources": [
-            {
-              "source_id": "youtube-arron-prescott-the-best-aps-c-lens-the-sigma-15mm-f14",
-              "url": "https://www.youtube.com/watch?v=ns_0DARDlHM",
-              "witness": "firsthand",
-              "quote": "Under the plastic rear lens cap is the electronic connection, of course, for the auto focus, and I'm happy to see there is a rubber gasket for weather sealing."
-            },
-            {
-              "source_id": "youtube-petapixel-sigma-15mm-f14-dg-dn-art-review-wide-weird-weighty-and-wonderful",
-              "url": "https://www.youtube.com/watch?v=bV40GqMxHMk",
-              "witness": "firsthand",
-              "quote": "element from damage I'm sure I'll still find a way now this is part of their art series lens so it's going to be very well built I mean I like the manual focus it's really well dampened we have a beautiful apertur in on …"
-            },
-            {
-              "source_id": "youtube-tony-chelsea-northrup-sigma-v-sony-15mm-f14-lens-comparison",
-              "url": "https://www.youtube.com/watch?v=5tW_W50m3FU",
-              "witness": "firsthand",
-              "quote": "I want to talk about the build of this lens."
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [],
-      "flags": [],
-      "rank": 27
-    },
-    {
       "card_id": "canon-20mm-f2-8",
-      "display_name": "Canon 20mm f2.8",
+      "display_name": "Canon EF 20mm f/2.8 USM",
       "rankable": true,
       "score": 0.3529,
       "mention_boost": 0.0,
@@ -5384,7 +4943,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 28
+      "rank": 26
     },
     {
       "card_id": "panasonic-lumix-s-35mm",
@@ -5584,11 +5143,11 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 29
+      "rank": 27
     },
     {
       "card_id": "zeiss-35mm-f1-4",
-      "display_name": "Zeiss 35mm f1.4",
+      "display_name": "Zeiss Contax Distagon T* 35mm f/1.4 (C/Y)",
       "rankable": true,
       "score": 0.2774,
       "mention_boost": 0.0,
@@ -5790,7 +5349,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 30
+      "rank": 28
     },
     {
       "card_id": "canon-24mm-f3-5",
@@ -6001,7 +5560,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, filter_thread, build"
       ],
-      "rank": 31
+      "rank": 29
     },
     {
       "card_id": "rokinon-35mm",
@@ -6206,7 +5765,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread"
       ],
-      "rank": 32
+      "rank": 30
     },
     {
       "card_id": "viltrox-14mm-f4",
@@ -6424,11 +5983,11 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 33
+      "rank": 31
     },
     {
       "card_id": "leica-35mm-f2",
-      "display_name": "Leica 35mm f2",
+      "display_name": "Leica Summicron-M 35mm f/2 ASPH",
       "rankable": true,
       "score": 0.0483,
       "mention_boost": 0.0,
@@ -6576,11 +6135,11 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, filter_thread, build"
       ],
-      "rank": 34
+      "rank": 32
     },
     {
       "card_id": "nikon-35mm-f1-8",
-      "display_name": "Nikon 35mm f1.8",
+      "display_name": "Nikon NIKKOR Z 35mm f/1.8 S",
       "rankable": true,
       "score": -0.0,
       "mention_boost": 0.0,
@@ -6723,224 +6282,7 @@
         "missing weighted axes: distortion",
         "thin (< 15 claims): optical_performance, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 35
-    },
-    {
-      "card_id": "canon-11-24mm-f4",
-      "display_name": "Canon EF 11-24mm f/4L USM",
-      "rankable": true,
-      "score": -0.1182,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.1471,
-          "pos": 33,
-          "neg": 23,
-          "total": 68,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.4412,
-          "top_sources": [
-            {
-              "source_id": "youtube-digitalrev-tv-canon-11-24mm-f4l-usm-hands-on-review",
-              "url": "https://www.youtube.com/watch?v=SUoP6yD3XHE",
-              "witness": "firsthand",
-              "quote": "for decades in one set 144 tiles of marjong tiles all carved by hand with simple handmade tools not often do I have to resort to the a word but the images that you get from it can only be described as awesome if you thin…"
-            },
-            {
-              "source_id": "youtube-dpreview-tv-canon-11-24mm-f4l-usm-product-overview",
-              "url": "https://www.youtube.com/watch?v=6RqU6eL3C60",
-              "witness": "firsthand",
-              "quote": "[Music] hi I'm Carrie from DP Review and this is the Canon EF 11 to 24 mm f4l USM lens now this Canon EF 11 to 24 mm is an ultra wideangle zoom lens with minimal Distortion and excellent sharpness it also happens to be t…"
-            },
-            {
-              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
-              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
-              "witness": "firsthand",
-              "quote": "reason so don't expect much but you do see a little bit as I'll show you a picture took just holding up the Canon USM 6 and 24 millimeters you're pretty much spot-on but this lens is very sharp all around as you use thes…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": 0.12,
-          "pos": 8,
-          "neg": 5,
-          "total": 25,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.24,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
-              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
-              "witness": "firsthand",
-              "quote": "test chart here I've taken a few steps back and you can see by the lines at the bottom of the image that Distortion at normal distances isn't quite so bad anyway once you zoom into about 18 mm that Distortion straightens…"
-            },
-            {
-              "source_id": "youtube-darren-miles-canon-ef-11-24mm-f4-l-review-by-darren-miles",
-              "url": "https://www.youtube.com/watch?v=yGXC0MGRHNg",
-              "witness": "firsthand",
-              "quote": "expectation is Distortion and even though Canon claims that distortion is well controlled I found the lens to exhibit a lot of distortion especially at 11 millimeters in fact in my 10 years plus of real estate photograph…"
-            },
-            {
-              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
-              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
-              "witness": "firsthand",
-              "quote": "no fisheye effect you do have to watch your edges you do have to watch the corners a frame because you do get that specialized distortion which I'll show you when I switch out these lenses in a little bit of what you get…"
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.2941,
-          "pos": 5,
-          "neg": 10,
-          "total": 17,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.5882,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
-              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
-              "witness": "firsthand",
-              "quote": "of light at 11 mm and F4 are stretched perhaps unsurprisingly but we're not seeing much in the way of perpendicular coma so it's actually a good performance here finally Baka I can't imagine anyone in a right mind buying…"
-            },
-            {
-              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
-              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
-              "witness": "firsthand",
-              "quote": "and in it and you know it an 11 millimeter is a four you do get slight vignette and that's quite expected with something like this with the bulbous element and once again I don't know what you're looking for in regards t…"
-            },
-            {
-              "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
-              "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
-              "witness": "firsthand",
-              "quote": "that's pretty much as tight as you can get it now to me that looks like an extremely clean photo now what we do have here is we have one lens flare probably the sun in the corner is just barely glancing the bulb so you h…"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": -0.5,
-          "pos": 0,
-          "neg": 2,
-          "total": 4,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.5,
-          "top_sources": [
-            {
-              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
-              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
-              "witness": "firsthand",
-              "quote": "Chromatic Aberrations (CAs) We got used to rather low lateral chromatic aberrations (color shadows at harsh."
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
-              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
-              "witness": "unattested",
-              "quote": "do see some quite clear chromatic aberration but you can use chromatic aberration correction in your camera or in editing to correct that nicely as you can see stop down to f5.6 to f8 or to f11 and you'll see very tiny i…"
-            },
-            {
-              "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
-              "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
-              "witness": "unattested",
-              "quote": "this works this lens has a constant aperture of f4 it has nine blades in its aperture and the blades are curved uh it's got 16 elements in 11 groups an ultra low dispersion element to help keep cromatic aberration down a…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": -0.1111,
-          "pos": 2,
-          "neg": 3,
-          "total": 9,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": -0.1111,
-          "top_sources": [
-            {
-              "source_id": "youtube-nick-page-canon-11-24mm-f4-l-hands-on-review",
-              "url": "https://www.youtube.com/watch?v=iXjk3GVf9G0",
-              "witness": "firsthand",
-              "quote": "so uh here we have the 11 mm and then here we have 16 mimet and you can see the difference that makes so a few features of this lens you can see that this front element is very large and very bulbous it really protrudes …"
-            },
-            {
-              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
-              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
-              "witness": "unattested",
-              "quote": "but this won&#8217;t help you with filters because the (vulnerable) bulb-like front element just doesn&#8217;t allow this."
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
-              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
-              "witness": "unattested",
-              "quote": "Canon lens in question this piece of Kit is big and it weighs a ton well not really that would be stupid it's well over a kilogram though that huge glass front element is beautiful and frighteningly exposed there the use…"
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.4,
-          "pos": 6,
-          "neg": 2,
-          "total": 10,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
-              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
-              "witness": "firsthand",
-              "quote": "of plastic and not metal a surprise on such an expensive piece of Kit overall though the build quality is Seconds To None just keep that beautiful front element away from knocks and scratches goodness knows how much it w…"
-            },
-            {
-              "source_id": "youtube-the-grant-gatsby-canon-11-24mm-f4l-usm-lens-review-vlog",
-              "url": "https://www.youtube.com/watch?v=UBo_csgPvKg",
-              "witness": "firsthand",
-              "quote": "then it's not a sub s trout but what are you gonna do taking advantage of the full weather sealing of this lens right now because it's drizzling I mean it's not bad but most people would cry I feel safe good [Music] I do…"
-            },
-            {
-              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
-              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
-              "witness": "unattested",
-              "quote": "The lens is also designed to survive in harsh conditions with a sealing against dust and moisture."
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "chromatic_aberration",
-        "filter_thread",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): chromatic_aberration, filter_thread, build"
-      ],
-      "rank": 36
+      "rank": 33
     },
     {
       "card_id": "sigma-20mm-f1-4",
@@ -7135,11 +6477,11 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 37
+      "rank": 34
     },
     {
       "card_id": "canon-14mm-f2-8",
-      "display_name": "Canon 14mm f2.8",
+      "display_name": "Canon EF 14mm f/2.8L II USM",
       "rankable": true,
       "score": -0.2444,
       "mention_boost": 0.0,
@@ -7351,7 +6693,440 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, build"
       ],
-      "rank": 38
+      "rank": 35
+    },
+    {
+      "card_id": "canon-11-24mm-f4",
+      "display_name": "Canon EF 11-24mm f/4L USM",
+      "rankable": true,
+      "score": -0.4281,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.1471,
+          "pos": 33,
+          "neg": 23,
+          "total": 68,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.4412,
+          "top_sources": [
+            {
+              "source_id": "youtube-digitalrev-tv-canon-11-24mm-f4l-usm-hands-on-review",
+              "url": "https://www.youtube.com/watch?v=SUoP6yD3XHE",
+              "witness": "firsthand",
+              "quote": "for decades in one set 144 tiles of marjong tiles all carved by hand with simple handmade tools not often do I have to resort to the a word but the images that you get from it can only be described as awesome if you thin…"
+            },
+            {
+              "source_id": "youtube-dpreview-tv-canon-11-24mm-f4l-usm-product-overview",
+              "url": "https://www.youtube.com/watch?v=6RqU6eL3C60",
+              "witness": "firsthand",
+              "quote": "[Music] hi I'm Carrie from DP Review and this is the Canon EF 11 to 24 mm f4l USM lens now this Canon EF 11 to 24 mm is an ultra wideangle zoom lens with minimal Distortion and excellent sharpness it also happens to be t…"
+            },
+            {
+              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
+              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
+              "witness": "firsthand",
+              "quote": "reason so don't expect much but you do see a little bit as I'll show you a picture took just holding up the Canon USM 6 and 24 millimeters you're pretty much spot-on but this lens is very sharp all around as you use thes…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": 0.0556,
+          "pos": 6,
+          "neg": 5,
+          "total": 18,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1111,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
+              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
+              "witness": "firsthand",
+              "quote": "test chart here I've taken a few steps back and you can see by the lines at the bottom of the image that Distortion at normal distances isn't quite so bad anyway once you zoom into about 18 mm that Distortion straightens…"
+            },
+            {
+              "source_id": "youtube-darren-miles-canon-ef-11-24mm-f4-l-review-by-darren-miles",
+              "url": "https://www.youtube.com/watch?v=yGXC0MGRHNg",
+              "witness": "firsthand",
+              "quote": "expectation is Distortion and even though Canon claims that distortion is well controlled I found the lens to exhibit a lot of distortion especially at 11 millimeters in fact in my 10 years plus of real estate photograph…"
+            },
+            {
+              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
+              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
+              "witness": "firsthand",
+              "quote": "no fisheye effect you do have to watch your edges you do have to watch the corners a frame because you do get that specialized distortion which I'll show you when I switch out these lenses in a little bit of what you get…"
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.3846,
+          "pos": 3,
+          "neg": 8,
+          "total": 13,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.7692,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
+              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
+              "witness": "firsthand",
+              "quote": "of light at 11 mm and F4 are stretched perhaps unsurprisingly but we're not seeing much in the way of perpendicular coma so it's actually a good performance here finally Baka I can't imagine anyone in a right mind buying…"
+            },
+            {
+              "source_id": "youtube-eric-rossi-canon-11-24mm-f4l-review-hands-on-canon-16-35-f4-vs-buying-this-3000-lens",
+              "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
+              "witness": "firsthand",
+              "quote": "and in it and you know it an 11 millimeter is a four you do get slight vignette and that's quite expected with something like this with the bulbous element and once again I don't know what you're looking for in regards t…"
+            },
+            {
+              "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
+              "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
+              "witness": "firsthand",
+              "quote": "that's pretty much as tight as you can get it now to me that looks like an extremely clean photo now what we do have here is we have one lens flare probably the sun in the corner is just barely glancing the bulb so you h…"
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 2,
+          "total": 4,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.5,
+          "top_sources": [
+            {
+              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
+              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
+              "witness": "firsthand",
+              "quote": "Chromatic Aberrations (CAs) We got used to rather low lateral chromatic aberrations (color shadows at harsh."
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
+              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
+              "witness": "unattested",
+              "quote": "do see some quite clear chromatic aberration but you can use chromatic aberration correction in your camera or in editing to correct that nicely as you can see stop down to f5.6 to f8 or to f11 and you'll see very tiny i…"
+            },
+            {
+              "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
+              "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
+              "witness": "unattested",
+              "quote": "this works this lens has a constant aperture of f4 it has nine blades in its aperture and the blades are curved uh it's got 16 elements in 11 groups an ultra low dispersion element to help keep cromatic aberration down a…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": -0.1111,
+          "pos": 2,
+          "neg": 3,
+          "total": 9,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.1111,
+          "top_sources": [
+            {
+              "source_id": "youtube-nick-page-canon-11-24mm-f4-l-hands-on-review",
+              "url": "https://www.youtube.com/watch?v=iXjk3GVf9G0",
+              "witness": "firsthand",
+              "quote": "so uh here we have the 11 mm and then here we have 16 mimet and you can see the difference that makes so a few features of this lens you can see that this front element is very large and very bulbous it really protrudes …"
+            },
+            {
+              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
+              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
+              "witness": "unattested",
+              "quote": "but this won&#8217;t help you with filters because the (vulnerable) bulb-like front element just doesn&#8217;t allow this."
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
+              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
+              "witness": "unattested",
+              "quote": "Canon lens in question this piece of Kit is big and it weighs a ton well not really that would be stupid it's well over a kilogram though that huge glass front element is beautiful and frighteningly exposed there the use…"
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.4,
+          "pos": 6,
+          "neg": 2,
+          "total": 10,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
+              "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
+              "witness": "firsthand",
+              "quote": "of plastic and not metal a surprise on such an expensive piece of Kit overall though the build quality is Seconds To None just keep that beautiful front element away from knocks and scratches goodness knows how much it w…"
+            },
+            {
+              "source_id": "youtube-the-grant-gatsby-canon-11-24mm-f4l-usm-lens-review-vlog",
+              "url": "https://www.youtube.com/watch?v=UBo_csgPvKg",
+              "witness": "firsthand",
+              "quote": "then it's not a sub s trout but what are you gonna do taking advantage of the full weather sealing of this lens right now because it's drizzling I mean it's not bad but most people would cry I feel safe good [Music] I do…"
+            },
+            {
+              "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
+              "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
+              "witness": "unattested",
+              "quote": "The lens is also designed to survive in harsh conditions with a sealing against dust and moisture."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "vignetting",
+        "chromatic_aberration",
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
+      ],
+      "rank": 36
+    },
+    {
+      "card_id": "sigma-15mm-f1-4",
+      "display_name": "Sigma 15mm f/1.4 DC Contemporary",
+      "rankable": true,
+      "score": -0.4456,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.16,
+          "pos": 45,
+          "neg": 29,
+          "total": 100,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.48,
+          "top_sources": [
+            {
+              "source_id": "youtube-arthur-r-sigma-15mm-f14-vs-sony-15mm-f14-vs-sigma-16mm-f14-vs-viltrox-15mm-f17",
+              "url": "https://www.youtube.com/watch?v=Pdv8CsGun50",
+              "witness": "firsthand",
+              "quote": "Center sharpness, I let's see, don't see much of a difference here."
+            },
+            {
+              "source_id": "youtube-christopher-frost-sigma-15mm-f14-dc-c-aps-c-lens-review",
+              "url": "https://www.youtube.com/watch?v=5G6RqQzqVvE",
+              "witness": "firsthand",
+              "quote": "I reviewed it on a number of different systems, and although it was a large and, well, very slightly ugly-looking lens, well, it was pretty sharp and certainly offered striking images, although its out-of-focus backgroun…"
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
+              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
+              "witness": "firsthand",
+              "quote": "for you can see that the center performance uh if anything I would very slightly favor the 15 mm in my results here in the mid-frame they look very close to the same in the corners it's a little bit more consistent out t…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": -0.2069,
+          "pos": 3,
+          "neg": 9,
+          "total": 29,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -0.4138,
+          "top_sources": [
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
+              "witness": "firsthand",
+              "quote": "I can&rsquo;t say the same about barrel distortion, which relies."
+            },
+            {
+              "source_id": "youtube-camera-centre-uk-sigma-15mm-f14-in-real-world-use",
+              "url": "https://www.youtube.com/watch?v=GrdMmV2a_FI",
+              "witness": "firsthand",
+              "quote": "And I can tell that by me shooting just in general, I mean, of course, there is distortion."
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
+              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
+              "witness": "firsthand",
+              "quote": "Now, continuing in that theme, I was actually surprised to find that the 15 millimeter actually sported more barrel distortion and vignette than last year's 12mm lens did."
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.2059,
+          "pos": 5,
+          "neg": 12,
+          "total": 34,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -0.4118,
+          "top_sources": [
+            {
+              "source_id": "youtube-mark-bennetts-camera-crisis-the-goat-was-replaced-the-sigma-15mm-f14",
+              "url": "https://www.youtube.com/watch?v=bsiFDMe4PBg",
+              "witness": "firsthand",
+              "quote": "So, if I had like a white light in the background and I'm down at 1.4, you could see like a blue ring around it."
+            },
+            {
+              "source_id": "youtube-park-cameras-aps-c-game-changer-sigma-15mm-f14-lens-review",
+              "url": "https://www.youtube.com/watch?v=pEaqADavMvE",
+              "witness": "firsthand",
+              "quote": "Now, I did notice there was a little bit of vignetting and a little bit of distortion as well."
+            },
+            {
+              "source_id": "youtube-tony-chelsea-northrup-sigma-v-sony-15mm-f14-lens-comparison",
+              "url": "https://www.youtube.com/watch?v=5tW_W50m3FU",
+              "witness": "firsthand",
+              "quote": "I'm going to go to the far edge on the Sigma and zoom in and you can see the very edge of the frame a little bit darker."
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.1579,
+          "pos": 8,
+          "neg": 14,
+          "total": 38,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -0.1579,
+          "top_sources": [
+            {
+              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
+              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
+              "witness": "firsthand",
+              "quote": "Now, another area that I was underwhelmed by the optical performance of the 15 mm is that you can see that in the correct situations, you're going to see quite pronounced amounts of chromatic aberration, particularly the…"
+            },
+            {
+              "source_id": "youtube-mark-bennetts-camera-crisis-the-goat-was-replaced-the-sigma-15mm-f14",
+              "url": "https://www.youtube.com/watch?v=bsiFDMe4PBg",
+              "witness": "firsthand",
+              "quote": "With chromatic aberration, if we look at lateral chromatic aberration, that's chromatic aberration of the thing that is in focus."
+            },
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
+              "witness": "unattested",
+              "quote": "They&rsquo;re supplemented by three SLD (Special Low Dispersion) elements to enhance clarity while minimizing color fringing, along with one top-grade FLD (Fluorite Low Dispersion)."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": -0.1,
+          "pos": 0,
+          "neg": 1,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.1,
+          "top_sources": [
+            {
+              "source_id": "youtube-arthur-r-sigma-15mm-f14-vs-sony-15mm-f14-vs-sigma-16mm-f14-vs-viltrox-15mm-f17",
+              "url": "https://www.youtube.com/watch?v=Pdv8CsGun50",
+              "witness": "firsthand",
+              "quote": "No edits, no filters, just straight out of my camera."
+            },
+            {
+              "source_id": "youtube-dustin-abbott-sigma-15mm-f14-dc-contemporary-aps-c-review-another-wide-angle-gem",
+              "url": "https://www.youtube.com/watch?v=mCx9m6h-dy8",
+              "witness": "firsthand",
+              "quote": "We have got a filter thread size of 58 mm up front."
+            },
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
+              "witness": "unattested",
+              "quote": "element has a keep-clean fluorine coating and the filter attachment thread is a mere 58mm."
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.1579,
+          "pos": 5,
+          "neg": 2,
+          "total": 19,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.1579,
+          "top_sources": [
+            {
+              "source_id": "youtube-arron-prescott-the-best-aps-c-lens-the-sigma-15mm-f14",
+              "url": "https://www.youtube.com/watch?v=ns_0DARDlHM",
+              "witness": "firsthand",
+              "quote": "Under the plastic rear lens cap is the electronic connection, of course, for the auto focus, and I'm happy to see there is a rubber gasket for weather sealing."
+            },
+            {
+              "source_id": "youtube-tony-chelsea-northrup-sigma-v-sony-15mm-f14-lens-comparison",
+              "url": "https://www.youtube.com/watch?v=5tW_W50m3FU",
+              "witness": "firsthand",
+              "quote": "I want to talk about the build of this lens."
+            },
+            {
+              "source_id": "digitalcameraworld-cameras-lenses-sigma-15mm-f-1-4-dc-c-review",
+              "url": "https://www.digitalcameraworld.com/cameras/lenses/sigma-15mm-f-1-4-dc-c-review",
+              "witness": "unattested",
+              "quote": "Many lightweight lenses from the likes of Canon, Nikon and others have plastic."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "filter_thread"
+      ],
+      "flags": [
+        "thin (< 15 claims): filter_thread"
+      ],
+      "rank": 37
     },
     {
       "card_id": "canon-16-28mm-f2-8",
@@ -7546,7 +7321,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 39
+      "rank": 38
     },
     {
       "card_id": "sony-16-25mm-f2-8",
@@ -7757,6 +7532,147 @@
       ],
       "flags": [
         "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
+      ],
+      "rank": 39
+    },
+    {
+      "card_id": "canon-15mm-f2-8",
+      "display_name": "Canon EF 15mm f/2.8 Fisheye",
+      "rankable": true,
+      "score": -0.6349,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.2143,
+          "pos": 7,
+          "neg": 4,
+          "total": 14,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.6429,
+          "top_sources": [
+            {
+              "source_id": "youtube-retro-games-archive-canon-ef-15mm-f28-fisheye-lens-review",
+              "url": "https://www.youtube.com/watch?v=A8_k-eiTkAE",
+              "witness": "firsthand",
+              "quote": "aperture range goes down to f2.8 which is very good indeed um one thing to point out though that as it's a fisheye lens the actual lens itself is pretty massive and it's slightly curved as you can see might be able to de…"
+            },
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
+              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "witness": "unattested",
+              "quote": "as the large-diameter optical element tries to focus all 180º diagonal view on a squared image sensor; but good - almost impressive - contrast"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": 0.1111,
+          "pos": 4,
+          "neg": 3,
+          "total": 9,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.2222,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
+              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "witness": "unattested",
+              "quote": "But what strikes us the most, is actually the overall image look, that is pleasing despite the fisheye distortion; not really compressing the corners."
+            },
+            {
+              "source_id": "youtube-retro-games-archive-canon-ef-15mm-f28-fisheye-lens-review",
+              "url": "https://www.youtube.com/watch?v=A8_k-eiTkAE",
+              "witness": "unattested",
+              "quote": "for example if you're taking a picture of a bend in a road uh fisheye lens will magnify that Distortion the bend and it will make a very impressive photo here's another example picture uh as you can see the edges of the …"
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.6667,
+          "pos": 0,
+          "neg": 2,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
+              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "witness": "unattested",
+              "quote": "Stopping down doesn’t really enhance clarity, as it is already small at f/2.8, but do makes it clear that the simpler 5-blades aperture is in use; you can see a pentagon-shaped highlight; made to render perfect stars on …"
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 1,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
+              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "witness": "unattested",
+              "quote": "thanks to the optical design that can make-due with the geometric distortion; obvious chromatic aberrations"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": 0.3333,
+          "pos": 1,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.3333,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-15mm-f28-fisheye-review",
+              "url": "https://www.youtube.com/watch?v=Mh9-Y3tT3U8",
+              "witness": "unattested",
+              "quote": "And at the front the non-removable metal lens hood is incompatible with filters, that must be fitted inside the metal-mount; using squared gels at up-to three sheets at a time."
+            }
+          ],
+          "axis_display": "Filter Thread"
+        }
+      ],
+      "missing_axes": [
+        "build"
+      ],
+      "thin_axes": [
+        "optical_performance",
+        "distortion",
+        "vignetting",
+        "chromatic_aberration",
+        "filter_thread"
+      ],
+      "flags": [
+        "missing weighted axes: build",
+        "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread"
       ],
       "rank": 40
     },
@@ -7980,7 +7896,7 @@
     },
     {
       "card_id": "nikon-35mm-f2-8",
-      "display_name": "Nikon 35mm f2.8",
+      "display_name": "Nikon Nikkor-S Auto 35mm f/2.8",
       "rankable": true,
       "score": -0.8457,
       "mention_boost": 0.0,
@@ -8288,7 +8204,7 @@
     },
     {
       "card_id": "ttartisan-24mm-f3-8",
-      "display_name": "TTArtisan 24mm f3.8",
+      "display_name": "TTArtisan AF 24mm f/3.8",
       "rankable": true,
       "score": -1.1404,
       "mention_boost": 0.0,
@@ -9202,7 +9118,7 @@
     },
     {
       "card_id": "canon-28mm-f3-5",
-      "display_name": "Canon 28mm f3.5",
+      "display_name": "Canon EF-M 28mm f/3.5 Macro IS STM",
       "rankable": true,
       "score": -1.4248,
       "mention_boost": 0.0,
@@ -9950,6 +9866,132 @@
         "thin (< 15 claims): chromatic_aberration, filter_thread, build"
       ],
       "rank": 52
+    },
+    {
+      "card_id": "canon-16-35mm-f2-8",
+      "display_name": "Canon EF 16-35mm f/2.8L USM",
+      "rankable": true,
+      "score": -2.0846,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.5385,
+          "pos": 8,
+          "neg": 1,
+          "total": 13,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.6154,
+          "top_sources": [
+            {
+              "source_id": "youtube-that-ginger-photographer-the-canon-16-35mm-f28-a-lens-worth-every-penny-in-depth-review",
+              "url": "https://www.youtube.com/watch?v=1wmhxLckBZo",
+              "witness": "firsthand",
+              "quote": "a paint landscape if you're not getting it all in let me know your thoughts in the comments if you shoot wide or if you're looking to upgrade to the 16 to 35 mil and i'll see you in the next video love you bye"
+            },
+            {
+              "source_id": "youtube-thephotosisters-canon-16-35mm-f28l-i-lens-review",
+              "url": "https://www.youtube.com/watch?v=t0X7QOmwMB4",
+              "witness": "firsthand",
+              "quote": "And I know you're saying, \"Well, you could just zoom into 35 mm on this lens.\" Well, obviously the max aperture is f2.8, so I can't shoot down at the apertures that I like to shoot at."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 2,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-thephotosisters-canon-16-35mm-f28l-i-lens-review",
+              "url": "https://www.youtube.com/watch?v=t0X7QOmwMB4",
+              "witness": "unattested",
+              "quote": "Since this is the first version of the 16 to35 L series lens, it definitely has a huge problem with distortion and vignetting around the edges."
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 1,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-tom-buck-canon-16-35-f28-vs-f4-is-it-worth-the-extra-1000",
+              "url": "https://www.youtube.com/watch?v=V2pZT8Hz2YM",
+              "witness": "unattested",
+              "quote": "(clicks fingers) So this is the F4 lens all the way zoomed out to 16 mm, you can definitely notice a difference, but at F4, with an ISO of 160, it is way too dark."
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": 0.3,
+          "pos": 3,
+          "neg": 0,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.3,
+          "top_sources": [
+            {
+              "source_id": "youtube-chrisv-using-a-12-year-old-lens-canon-16-35-f28-review",
+              "url": "https://www.youtube.com/watch?v=WyeNiOt-SUo",
+              "witness": "firsthand",
+              "quote": "been released which is nice but not only that is quite a bit smaller the filter thread on this lens is 77 millimeter which is actually the same filter thread for most of my other lenses so it is convenient to have the sa…"
+            },
+            {
+              "source_id": "youtube-matthew-obrien-why-this-is-the-best-cheap-f28-canon-l-series-zoom-lens-for-vlogging-yout",
+              "url": "https://www.youtube.com/watch?v=uLGAwjAQq3w",
+              "witness": "unattested",
+              "quote": "Still has a 77-mm diameter, so any screw-on filters you have will work on this lens as well."
+            },
+            {
+              "source_id": "youtube-tom-buck-canon-16-35-f28-vs-f4-is-it-worth-the-extra-1000",
+              "url": "https://www.youtube.com/watch?v=V2pZT8Hz2YM",
+              "witness": "unattested",
+              "quote": "It also does have a bigger filter diameter."
+            }
+          ],
+          "axis_display": "Filter Thread"
+        }
+      ],
+      "missing_axes": [
+        "chromatic_aberration",
+        "build"
+      ],
+      "thin_axes": [
+        "optical_performance",
+        "distortion",
+        "vignetting",
+        "filter_thread"
+      ],
+      "flags": [
+        "missing weighted axes: chromatic_aberration, build",
+        "thin (< 15 claims): optical_performance, distortion, vignetting, filter_thread"
+      ],
+      "rank": 53
     }
   ],
   "excluded": [
@@ -10004,21 +10046,21 @@
     },
     {
       "card_id": "canon-200-400mm-f4",
-      "display_name": "Canon 200 400mm f4",
+      "display_name": "Canon EF 200-400mm f/4L IS USM Extender 1.4x",
       "reasons": [
         "require focal_length_mm <= 35: got 400"
       ]
     },
     {
       "card_id": "canon-28-105mm-f3-5",
-      "display_name": "Canon 28 105mm f3.5",
+      "display_name": "Canon EF 28-105mm f/3.5-4.5 II USM",
       "reasons": [
         "require focal_length_mm <= 35: got 105"
       ]
     },
     {
       "card_id": "canon-28-70mm-f2-8",
-      "display_name": "Canon 28 70mm f2.8",
+      "display_name": "Canon RF 28-70mm f/2.8 IS STM",
       "reasons": [
         "require focal_length_mm <= 35: got 70"
       ]
@@ -10039,7 +10081,7 @@
     },
     {
       "card_id": "canon-50mm-f1-2",
-      "display_name": "Canon 50mm f1.2",
+      "display_name": "Canon RF 50mm f/1.2L USM",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
@@ -10074,7 +10116,7 @@
     },
     {
       "card_id": "canon-70-200mm-f2-8",
-      "display_name": "Canon 70 200mm f2.8",
+      "display_name": "Canon EF 70-200mm f/2.8L USM",
       "reasons": [
         "require focal_length_mm <= 35: got 200"
       ]
@@ -10088,7 +10130,7 @@
     },
     {
       "card_id": "canon-85mm-f1-2",
-      "display_name": "Canon 85mm f1.2",
+      "display_name": "Canon EF 85mm f/1.2L II USM",
       "reasons": [
         "require focal_length_mm <= 35: got 85"
       ]
@@ -10130,7 +10172,7 @@
     },
     {
       "card_id": "leica-100mm-f2-8",
-      "display_name": "Leica 100mm f2.8",
+      "display_name": "Leica APO-Macro-Elmarit-R 100mm f/2.8",
       "reasons": [
         "require focal_length_mm <= 35: got 100"
       ]
@@ -10144,21 +10186,21 @@
     },
     {
       "card_id": "leica-50mm-f2",
-      "display_name": "Leica 50mm f2",
+      "display_name": "Leica Summicron-M 50mm f/2",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
     },
     {
       "card_id": "nikon-105mm-f2-8",
-      "display_name": "Nikon 105mm f2.8",
+      "display_name": "Nikon NIKKOR Z MC 105mm f/2.8 VR S",
       "reasons": [
         "require focal_length_mm <= 35: got 105"
       ]
     },
     {
       "card_id": "nikon-120-300mm-f2-8",
-      "display_name": "Nikon 120 300mm f2.8",
+      "display_name": "Nikon NIKKOR Z 120-300mm f/2.8 TC VR S",
       "reasons": [
         "require focal_length_mm <= 35: got 300"
       ]
@@ -10179,14 +10221,14 @@
     },
     {
       "card_id": "nikon-50mm-f1-8",
-      "display_name": "Nikon 50mm f1.8",
+      "display_name": "Nikon AF Nikkor 50mm f/1.8D",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
     },
     {
       "card_id": "nikon-50mm-f2",
-      "display_name": "Nikon 50mm f2",
+      "display_name": "Nikon NIKKOR 50mm f/2 Ai",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
@@ -10200,14 +10242,14 @@
     },
     {
       "card_id": "nikon-600mm-f4",
-      "display_name": "Nikon 600mm f4",
+      "display_name": "Nikon NIKKOR Z 600mm f/4 TC VR S",
       "reasons": [
         "require focal_length_mm <= 35: got 600"
       ]
     },
     {
       "card_id": "nikon-800mm-f5-6",
-      "display_name": "Nikon 800mm f5.6",
+      "display_name": "Nikon AI-S Nikkor 800mm f/5.6 ED IF",
       "reasons": [
         "require focal_length_mm <= 35: got 800"
       ]
@@ -10361,7 +10403,7 @@
     },
     {
       "card_id": "sigma-85mm-f1-2",
-      "display_name": "Sigma 85mm f1.2",
+      "display_name": "Sigma 85mm f/1.2 DG Art",
       "reasons": [
         "require focal_length_mm <= 35: got 85"
       ]
@@ -10375,7 +10417,7 @@
     },
     {
       "card_id": "sony-100mm-f2-8",
-      "display_name": "Sony 100mm f2.8",
+      "display_name": "Sony FE 100mm f/2.8 Macro GM OSS",
       "reasons": [
         "require focal_length_mm <= 35: got 100"
       ]
@@ -10431,14 +10473,14 @@
     },
     {
       "card_id": "sony-50mm-f1-4",
-      "display_name": "Sony 50mm f1.4",
+      "display_name": "Sony FE 50mm f/1.4 GM",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
     },
     {
       "card_id": "sony-50mm-f2-8",
-      "display_name": "Sony 50mm f/2.8 Macro (A-mount)",
+      "display_name": "Sony FE 50mm f/2.8 Macro",
       "reasons": [
         "require focal_length_mm <= 35: got 50"
       ]
@@ -10473,7 +10515,7 @@
     },
     {
       "card_id": "tamron-28-80mm",
-      "display_name": "Tamron 28 80mm",
+      "display_name": "Tamron SP 28-80mm f/3.5-4.2 (27A)",
       "reasons": [
         "require focal_length_mm <= 35: got 80"
       ]
@@ -10496,8 +10538,8 @@
     }
   ],
   "counts": {
-    "in_scope": 129,
-    "ranked": 52,
+    "in_scope": 130,
+    "ranked": 53,
     "excluded": 76,
     "pending_backfill": 1
   }

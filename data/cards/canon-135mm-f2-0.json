@@ -28,15 +28,15 @@
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 42,
-      "price_updated_at": "2026-11-18T10:10:05.535661+00:00"
+      "sample_size": 41,
+      "price_updated_at": "2026-11-19T10:10:06.064047+00:00"
     },
-    "price_updated_at": "2026-10-29T08:35:19.867085+00:00"
+    "price_updated_at": "2026-11-17T23:50:31.093956+00:00"
   },
   "freshness": {
     "created_at": "2026-10-29T08:35:19.858258+00:00",
-    "last_built": "2026-10-29T08:35:19.858258+00:00",
-    "last_checked": "2026-10-29T08:35:19.858258+00:00",
+    "last_built": "2026-11-17T23:50:31.083722+00:00",
+    "last_checked": "2026-11-17T23:50:31.083722+00:00",
     "source_count": 17,
     "source_types": {
       "pro": 17
@@ -74,10 +74,10 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 25,
-        "neu": 5,
+        "pos": 26,
+        "neu": 6,
         "neg": 5,
-        "total": 35,
+        "total": 37,
         "sources": [
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
@@ -157,6 +157,22 @@
             "url": "https://www.youtube.com/watch?v=qb07cJtMD6Y",
             "weight": 0.75,
             "quote_excerpt": "you know every feature on their face to be super sharp I'm definitely in the camp of I'd rather have to sharp and then later I can skin soften or something like that then having not sharp images and then there's really nothing you can do later you can't really sharpen up a dull photo so number two…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "Looking at its aperture of f2, everything looks sharp.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "I have some lenses with really low apertures that do not look good and they're very soft at their lowest aperture.",
             "witness": "firsthand"
           },
           {
@@ -363,10 +379,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.6,
+        "source_count": 11,
+        "polarity_agreement": 0.636,
         "dominant_polarity": "pos",
-        "max_source_share": 0.257,
+        "max_source_share": 0.243,
         "contested": false
       },
       "notes": [],
@@ -378,32 +394,16 @@
     },
     {
       "axis_id": "af_performance",
-      "display_name": "af_performance",
+      "display_name": "Autofocus",
       "axis_type": "lead",
       "stills": {
         "measurement": null,
         "sentiment": {
           "pos": 6,
-          "neu": 8,
-          "neg": 8,
-          "total": 22,
+          "neu": 7,
+          "neg": 7,
+          "total": 20,
           "sources": [
-            {
-              "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-              "weight": 0.75,
-              "quote_excerpt": "regard but for a manual focus lens i wouldn't want anything faster than an f2 for a 135 millimeter focal length especially because if you're using it on film it's very hard to focus on film uh unless you have a diopter or unless you have some sort of magnifier on it or you wear glasses for that…",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-              "weight": 0.75,
-              "quote_excerpt": "on digital it is much easier now i know they make autofocus lenses that are 1.8 but that's autofocus versus manual focus to neither here nor there anyway uh let's talk about optics for a second because i'm sure that's what most of you are interested in how is it how does it perform can it resolve…",
-              "witness": "firsthand"
-            },
             {
               "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
               "source_type": "youtube",
@@ -568,10 +568,10 @@
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 11,
-          "polarity_agreement": 0.455,
-          "dominant_polarity": "neg",
-          "max_source_share": 0.182,
+          "source_count": 10,
+          "polarity_agreement": 0.4,
+          "dominant_polarity": "pos",
+          "max_source_share": 0.2,
           "contested": true
         },
         "notes": []
@@ -580,18 +580,10 @@
         "measurement": null,
         "sentiment": {
           "pos": 8,
-          "neu": 14,
+          "neu": 13,
           "neg": 9,
-          "total": 31,
+          "total": 30,
           "sources": [
-            {
-              "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-              "weight": 0.75,
-              "quote_excerpt": "perform in that regard what's it like to shoot on film what's the build quality like i'm gonna talk about all that right now before i do if you haven't subscribed to the channel please do so like this video it helps out the channel a lot it helps me out a lot and big thanks to all those of",
-              "witness": "firsthand"
-            },
             {
               "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
               "source_type": "youtube",
@@ -836,10 +828,10 @@
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 14,
-          "polarity_agreement": 0.357,
-          "dominant_polarity": "neu",
-          "max_source_share": 0.161,
+          "source_count": 13,
+          "polarity_agreement": 0.385,
+          "dominant_polarity": "neg",
+          "max_source_share": 0.167,
           "contested": true
         },
         "notes": []
@@ -850,35 +842,11 @@
       "display_name": "Build Quality",
       "axis_type": "lead",
       "sentiment": {
-        "pos": 4,
+        "pos": 1,
         "neu": 1,
         "neg": 4,
-        "total": 9,
+        "total": 6,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "lens you want something that has a little bit of character it's not so perfect like a lot of the new lenses out there but still resolves well it has great color this might be a lens to consider if you have the means to afford it now this is a heavier lens as i mentioned manual focus so if",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "anyway let's talk about the build quality and optics on this build quality it is a full metal lens beautifully made it is a heavy lens at 660 grams you have six elements five groups eight aperture blades inside of this close focusing is 1.3 meters so it's not the most you know you can't really get…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "it is a beautifully made lens so you might want to wrap that lid so just with a piece of clear plastic that would be my recommendation because i like to keep my lenses looking as good as possible but eat to each their own right but you cannot pull out the lens hood when you have the lens cap",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-james-reader-the-best-bargain-ef-portrait-lens-youve-never-tried",
             "source_type": "youtube",
@@ -931,20 +899,20 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
+        "source_count": 3,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "neg",
-        "max_source_share": 0.444,
-        "contested": true
+        "max_source_share": 0.667,
+        "contested": false
       },
       "notes": [],
       "weather_sealing": false,
       "materials": "composite",
       "mount_construction": "composite",
       "face_quote": {
-        "quote_excerpt": "anyway let's talk about the build quality and optics on this build quality it is a full metal lens beautifully made it is a heavy lens at 660 grams you have six elements five groups eight aperture blades inside of this close focusing is 1.3 meters so it's not the most you know you can't really get…",
-        "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-        "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ"
+        "quote_excerpt": "you can use it in an outdoor environment this lens isn't necessarily designed for that because it doesn't come with weather ceiling but i wish it did so i'm not going to be giving it the full marks because other lenses do have better build quality so i'm only going to be giving it an 8 out of 10.",
+        "source_id": "youtube-photo-feaver-the-canon-135mm-f20l-usm-lens-in-depth-review",
+        "url": "https://www.youtube.com/watch?v=gE4ZmUAFe1M"
       }
     },
     {
@@ -956,35 +924,11 @@
       "crop_factor_implications": "",
       "current_body_compatibility": [],
       "sentiment": {
-        "pos": 11,
-        "neu": 15,
-        "neg": 1,
-        "total": 27,
+        "pos": 9,
+        "neu": 16,
+        "neg": 0,
+        "total": 25,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "on it so keep that in mind as well now this is the new fd mount versus the fd mount the difference is really the screw lock mechanism that's on the back of the lens the screw lock is a little bit uh cumbersome when you're adapting it to other cameras out there but the new fd is relatively simple",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "you press a button you turn it lock it you're good to go and the aperture ring on this is from f2 to f32 uh besides that though it just looks great it's got this beautiful black paint finish to it it's just solid it's just such a well-made lens this is a lens made in japan and if you",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "the r5 as i mentioned earlier yes it can this was something i was quite shocked about even myself and leon from rice ball photography who took photos of me with this we compared it to the ef 135 f2 we actually preferred the image quality out of this lens versus the ef the fma had a smoother bokeh…",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
             "source_type": "youtube",
@@ -1008,6 +952,14 @@
             "weight": 0.75,
             "quote_excerpt": "Fuji and Panasonic and Olympus where do they fit in my life I want one of each I think I don't know I changed my mind a lot gear doesn't matter but it's all that matters at the same time and I just what could I buy right now during the video oh wait I'll wait I've been selling a",
             "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "Not the purpose for this lens.",
+            "witness": "unattested"
           },
           {
             "source_id": "youtube-dirksón-photography-canon-ef-135mm-l-f20-long-term-review-for-2019-the-best-portrait-len",
@@ -1181,10 +1133,10 @@
       },
       "convergence": {
         "source_count": 10,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.222,
-        "contested": true
+        "polarity_agreement": 0.6,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.24,
+        "contested": false
       },
       "face_quote": {
         "quote_excerpt": "I looked at um people who have used the 135 F2L Canon lens with like the Sigma EF to Lmount adapter, which is not cheap.",
@@ -1218,19 +1170,11 @@
         "sample_size": 0
       },
       "sentiment": {
-        "pos": 6,
+        "pos": 5,
         "neu": 3,
         "neg": 3,
-        "total": 12,
+        "total": 11,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "lens goes for a premium on ebay they're anywhere from a thousand plus us dollars even higher depending on the condition of it this lens that i've been testing is pretty much mint condition so i think it's gonna go pretty high up in price when rice ball sells it after this review but i'm very…",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
@@ -1322,16 +1266,16 @@
         ]
       },
       "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.833,
+        "source_count": 5,
+        "polarity_agreement": 0.8,
         "dominant_polarity": "pos",
-        "max_source_share": 0.417,
+        "max_source_share": 0.455,
         "contested": false
       },
       "face_quote": {
-        "quote_excerpt": "now lastly but most importantly is price now because you can buy this lens brand new i'm going to be carrying its brand new price versus other lenses but do bear in mind because of the age of this lens you can probably get it for around 500 pounds second hand so if you're looking at this lens you…",
-        "source_id": "youtube-photo-feaver-the-canon-135mm-f20l-usm-lens-in-depth-review",
-        "url": "https://www.youtube.com/watch?v=gE4ZmUAFe1M"
+        "quote_excerpt": "maybe an 8514 lens that would cost you less and it would probably give you a little bit more functionality than this lens but all in all I think this is a great lens and you guys can take a look at the sample images tell me what you think if you guys have any questions leave me a comment",
+        "source_id": "youtube-vincent-martinez-photography-canon-135mm-f2-review",
+        "url": "https://www.youtube.com/watch?v=dcCF-zd-ooI"
       }
     },
     {
@@ -1505,19 +1449,11 @@
       },
       "delta_from_baseline_pct": 0.0,
       "sentiment": {
-        "pos": 8,
+        "pos": 7,
         "neu": 2,
         "neg": 1,
-        "total": 11,
+        "total": 10,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "it does kind of increase the weight of it here it is on the r5 right here and it's adapted but um it is much easier to use than on the f1n now as i mentioned is a manual focus lens so you're gonna have to rely on focus peaking and magnification the r5's magnification and focus speaking is fantastic",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-cozy-clicks-the-stay-focused-podcast-review-of-the-canon-135mm-2-0-video",
             "source_type": "youtube",
@@ -1601,10 +1537,10 @@
         ]
       },
       "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.833,
+        "source_count": 5,
+        "polarity_agreement": 0.8,
         "dominant_polarity": "pos",
-        "max_source_share": 0.545,
+        "max_source_share": 0.6,
         "contested": false
       }
     }
@@ -1735,10 +1671,18 @@
       "measurement": null,
       "sentiment": {
         "pos": 2,
-        "neu": 0,
+        "neu": 1,
         "neg": 0,
-        "total": 2,
+        "total": 3,
         "sources": [
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "It is not a birding or wildlife lens.",
+            "witness": "unattested"
+          },
           {
             "source_id": "youtube-james-reader-the-best-bargain-ef-portrait-lens-youve-never-tried",
             "source_type": "youtube",
@@ -1758,7 +1702,13 @@
         ]
       },
       "confidence": "low",
-      "convergence": null,
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
+      },
       "notes": []
     },
     {
@@ -1767,35 +1717,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 20,
+        "pos": 17,
         "neu": 0,
-        "neg": 1,
-        "total": 21,
+        "neg": 2,
+        "total": 19,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "really exciting so that's what we're doing right here now here's a cliff notes version of this video in case you don't have time to watch this entire review this lens performs beautifully it exceeded my expectations it resolves 45 megapixels amazingly on the canon r5 beautiful bokeh uh if you are a…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "this lens nor is it designed for that it's designed for portraiture and to really obliterate your background on any subject that you're shooting but uh the performance out of it is absolutely stunning yes it is um has a lens hood built into it it's an external lens hood built in on this it is a…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "is beautiful if you have the means as i mentioned earlier in this video and you are open to adapting different lenses to your camera system this is a lens to heavily consider anyway once again if you like this video please like subscribe to the channel helps me out a lot big thanks to rice ball…",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
             "source_type": "youtube",
@@ -1835,6 +1761,14 @@
             "weight": 0.75,
             "quote_excerpt": "very clear InFocus picture but the background stayed pretty blurry and beautiful so I love that combination of the sharpness of the subject with the blurry background now this photo was shot at an f-stop of 2.2 shutter speed one 800 and an ISO of 100 now I wanted to switch gears a little bit and I…",
             "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "it just simply can't produce the kind of quality uh of creative that this lens is producing for me because of how it flattens the background and brings it beside the subject but keeps that separation.",
+            "witness": "unattested"
           },
           {
             "source_id": "youtube-dirksón-photography-canon-ef-135mm-l-f20-long-term-review-for-2019-the-best-portrait-len",
@@ -1945,9 +1879,9 @@
       "confidence": "low",
       "convergence": {
         "source_count": 12,
-        "polarity_agreement": 1.0,
+        "polarity_agreement": 0.917,
         "dominant_polarity": "pos",
-        "max_source_share": 0.238,
+        "max_source_share": 0.263,
         "contested": false
       },
       "notes": [],
@@ -2161,27 +2095,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 12,
+        "pos": 11,
         "neu": 1,
-        "neg": 7,
-        "total": 20,
+        "neg": 6,
+        "total": 18,
         "sources": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "like that and that's something that really attracts you especially to that you know that vintage canon era right this is gonna be a lens to definitely consider okay so what is it like to use well i tried it on film with the canon f1n the camera right here i'll probably be doing a review on this…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "the future and i've also used it on the canon r5 now with the f1n because this lens is quite long right there's it's very front heavy so i would definitely recommend an ae winder or some sort of grip external grip to the f1n to sort of give you a little bit more balance because it's got a little",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
@@ -2330,10 +2248,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 11,
-        "polarity_agreement": 0.636,
+        "source_count": 10,
+        "polarity_agreement": 0.6,
         "dominant_polarity": "pos",
-        "max_source_share": 0.15,
+        "max_source_share": 0.167,
         "contested": false
       },
       "notes": []
@@ -2412,14 +2330,14 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 17 reviewer sources for Canon EF 135mm f/2L USM. Optical performance draws the most discussion: 25 positive, 5 neutral, and 5 negative across 35 sentiment markers. The most criticism lands on AF for stills: 27% positive, 37% neutral, 36% negative across 22 claims. Opinion is split on handling (12 positive, 1 neutral, 7 negative claims).",
+    "consensus_paragraph": "Synthesized from 17 reviewer sources for Canon 135mm f2.0. Optical performance draws the most discussion: 26 positive, 6 neutral, and 5 negative across 37 sentiment markers. The most criticism lands on AF for stills: 30% positive, 35% neutral, 35% negative across 20 claims. Opinion is split on AF for video (8 positive, 13 neutral, 9 negative claims).",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
-        "pos": 25,
-        "neu": 5,
+        "pos": 26,
+        "neu": 6,
         "neg": 5,
-        "total": 35,
+        "total": 37,
         "top_quote_refs": [
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
@@ -2450,26 +2368,10 @@
       {
         "aspect": "af_performance.stills",
         "pos": 6,
-        "neu": 8,
-        "neg": 8,
-        "total": 22,
+        "neu": 7,
+        "neg": 7,
+        "total": 20,
         "top_quote_refs": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "regard but for a manual focus lens i wouldn't want anything faster than an f2 for a 135 millimeter focal length especially because if you're using it on film it's very hard to focus on film uh unless you have a diopter or unless you have some sort of magnifier on it or you wear glasses for that…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "on digital it is much easier now i know they make autofocus lenses that are 1.8 but that's autofocus versus manual focus to neither here nor there anyway uh let's talk about optics for a second because i'm sure that's what most of you are interested in how is it how does it perform can it resolve…",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
@@ -2477,24 +2379,32 @@
             "weight": 0.75,
             "quote_excerpt": "down to f/2.8 and this is all cleared up overall the lens is turning in a great performance in both areas this is definitely not a macro lens but it can focus reasonably closely to your subject all the same at f2 the close-up image quality is okay although you can see hints of purple flinging stop…",
             "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-d-phillips-studios-why-i-love-the-135mm-f2-from-canon-lens-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=qb07cJtMD6Y",
+            "weight": 0.75,
+            "quote_excerpt": "by the wide aperture couple quick things it focuses really fast and it's not super expensive so that's really good so this lens isn't without its shortcomings it's not weather sealed which is just something you need to worry about if you're out in the rain or something like that a couple of my…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-dirksón-photography-canon-ef-135mm-l-f20-long-term-review-for-2019-the-best-portrait-len",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=O5Mww3XUX-o",
+            "weight": 0.75,
+            "quote_excerpt": "a sportsman this is an athlete this is fast no problem it will help you get the job done it will help you get the image I never had a moment where I thought the lens was in my way the lens was against me with other lenses I had that shooting wide open with other lenses not always the",
+            "witness": "firsthand"
           }
         ]
       },
       {
         "aspect": "af_performance.video",
         "pos": 8,
-        "neu": 14,
+        "neu": 13,
         "neg": 9,
-        "total": 31,
+        "total": 30,
         "top_quote_refs": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "perform in that regard what's it like to shoot on film what's the build quality like i'm gonna talk about all that right now before i do if you haven't subscribed to the channel please do so like this video it helps out the channel a lot it helps me out a lot and big thanks to all those of",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
             "source_type": "youtube",
@@ -2510,38 +2420,46 @@
             "weight": 0.75,
             "quote_excerpt": "my mind and had me thinking I actually want to can camera back even though this is actually autofocusing perfectly Nik on new technology I have zero need for Canon but I almost I was on my way to buy a Canon 5D Mark II until I realized it took cast cards who even does that like I have the",
             "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=XrPO09HBT9I",
+            "weight": 0.75,
+            "quote_excerpt": "of the bird but can you follow it huh is he in Focus anymore no I realized he's floating closer to me and then I adjusted watch it boom we got that that's the best moment I think I've ever captured of a bird flying away from me usually I miss those moments cuz I'm too tight on the shot",
+            "witness": "firsthand"
           }
         ]
       },
       {
         "aspect": "build",
-        "pos": 4,
+        "pos": 1,
         "neu": 1,
         "neg": 4,
-        "total": 9,
+        "total": 6,
         "top_quote_refs": [
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-james-reader-the-best-bargain-ef-portrait-lens-youve-never-tried",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=zCMBxIGYyz8",
             "weight": 0.75,
-            "quote_excerpt": "lens you want something that has a little bit of character it's not so perfect like a lot of the new lenses out there but still resolves well it has great color this might be a lens to consider if you have the means to afford it now this is a heavier lens as i mentioned manual focus so if",
+            "quote_excerpt": "And it is an L lens, but from what I understand, it doesn't actually have full weather sealing.",
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-ordinary-filmmaker-canon-rf-135mm-f2-l-usm-prime-lens",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=V50juGFbG8g",
             "weight": 0.75,
-            "quote_excerpt": "anyway let's talk about the build quality and optics on this build quality it is a full metal lens beautifully made it is a heavy lens at 660 grams you have six elements five groups eight aperture blades inside of this close focusing is 1.3 meters so it's not the most you know you can't really get…",
-            "witness": "unattested"
+            "quote_excerpt": "videos about lenses that well it was more or less somebody dreaming about it maybe a patent but there wasn't a whole lot of information there to really consider them trustworthy and i just i stopped putting them out there because i get a lot of questions and i say yeah we haven't heard anything for…",
+            "witness": "firsthand"
           },
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-photo-feaver-the-canon-135mm-f20l-usm-lens-in-depth-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=gE4ZmUAFe1M",
             "weight": 0.75,
-            "quote_excerpt": "it is a beautifully made lens so you might want to wrap that lid so just with a piece of clear plastic that would be my recommendation because i like to keep my lenses looking as good as possible but eat to each their own right but you cannot pull out the lens hood when you have the lens cap",
+            "quote_excerpt": "it doesn't have weather ceiling which is one of the biggest gripes i've got with this lens a lens of over a thousand pounds you'd expect it to have weather ceiling but to be honest it doesn't and it's something that i really wish it did have if it did to be honest this would be a really all…",
             "witness": "firsthand"
           }
         ]
@@ -2616,10 +2534,18 @@
       {
         "aspect": "coma",
         "pos": 2,
-        "neu": 0,
+        "neu": 1,
         "neg": 0,
-        "total": 2,
+        "total": 3,
         "top_quote_refs": [
+          {
+            "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+            "weight": 0.75,
+            "quote_excerpt": "It is not a birding or wildlife lens.",
+            "witness": "unattested"
+          },
           {
             "source_id": "youtube-james-reader-the-best-bargain-ef-portrait-lens-youve-never-tried",
             "source_type": "youtube",
@@ -2640,34 +2566,34 @@
       },
       {
         "aspect": "bokeh",
-        "pos": 20,
+        "pos": 17,
         "neu": 0,
-        "neg": 1,
-        "total": 21,
+        "neg": 2,
+        "total": 19,
         "top_quote_refs": [
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=XrPO09HBT9I",
             "weight": 0.75,
-            "quote_excerpt": "really exciting so that's what we're doing right here now here's a cliff notes version of this video in case you don't have time to watch this entire review this lens performs beautifully it exceeded my expectations it resolves 45 megapixels amazingly on the canon r5 beautiful bokeh uh if you are a…",
+            "quote_excerpt": "back even though this isn't much reach the magic more than makes up for it the 3D pop separation the micro contrast abilities the be anger and aggression it gives you the sweet spot I mean if you see a bird way off in the distance are you going to get much of it I'll show you some I got",
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=Dv24fs1V7kA",
             "weight": 0.75,
-            "quote_excerpt": "this lens nor is it designed for that it's designed for portraiture and to really obliterate your background on any subject that you're shooting but uh the performance out of it is absolutely stunning yes it is um has a lens hood built into it it's an external lens hood built in on this it is a…",
+            "quote_excerpt": "very tight angle of view indeed which is probably a little less practical but whatever kind of camera you're using that telephoto focal length will give you very compressed background and this lens's very bright maximum aperture of F2 means that those backgrounds can be very out of focus indeed…",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
+            "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
+            "url": "https://www.youtube.com/watch?v=Dv24fs1V7kA",
             "weight": 0.75,
-            "quote_excerpt": "is beautiful if you have the means as i mentioned earlier in this video and you are open to adapting different lenses to your camera system this is a lens to heavily consider anyway once again if you like this video please like subscribe to the channel helps me out a lot big thanks to rice ball…",
-            "witness": "firsthand"
+            "quote_excerpt": "fact when you're using it this lens seems to give the best effect when you're far away from your subject this is a lens that loves distance it can give you really unique pictures that look gently beautiful with an interesting subject isolation it can also give you some really striking close-up…",
+            "witness": "unattested"
           }
         ]
       },
@@ -2739,27 +2665,11 @@
       },
       {
         "aspect": "handling",
-        "pos": 12,
+        "pos": 11,
         "neu": 1,
-        "neg": 7,
-        "total": 20,
+        "neg": 6,
+        "total": 18,
         "top_quote_refs": [
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "like that and that's something that really attracts you especially to that you know that vintage canon era right this is gonna be a lens to definitely consider okay so what is it like to use well i tried it on film with the canon f1n the camera right here i'll probably be doing a review on this…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-            "weight": 0.75,
-            "quote_excerpt": "the future and i've also used it on the canon r5 now with the f1n because this lens is quite long right there's it's very front heavy so i would definitely recommend an ae winder or some sort of grip external grip to the f1n to sort of give you a little bit more balance because it's got a little",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
             "source_type": "youtube",
@@ -2767,6 +2677,22 @@
             "weight": 0.75,
             "quote_excerpt": "little heavy so it would balance much better on one of Canon's bigger camera bodies the focus ring is large and very well damped turning very smoothly with just the right amount of precision you can turn the focus ring anytime even when the lens is set to autofocus and the large front element does…",
             "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-christopher-frost-canon-135mm-f2-usm-l-lens-review-with-samples-full-frame-and-aps-c",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=Dv24fs1V7kA",
+            "weight": 0.75,
+            "quote_excerpt": "rather well it's built fantastically well and it's very sharp displaying little Distortion and having a beautiful quality bocker it's not the easiest camera lens to use but it is seriously rewarding and the pictures it can give you are interesting because they look so confessed and yet you also get…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-cozy-clicks-the-stay-focused-podcast-review-of-the-canon-135mm-2-0-video",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=cpGgaH_Hh3w",
+            "weight": 0.75,
+            "quote_excerpt": "[Music] hey guys it's Emily with cozy cliques and one of the most common questions I get asked from you is what is my favorite lens to shoot with and I'm not secretive about it I love shooting with the 135 millimeter lens which is this one right here I'm gonna show you how easy it is to shoot with",
+            "witness": "firsthand"
           }
         ]
       },
@@ -2790,11 +2716,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 234,
-      "evaluated": 178,
-      "non_evaluative": 56,
+      "examined": 223,
+      "evaluated": 166,
+      "non_evaluative": 57,
       "non_evaluative_breakdown": {
-        "non_claim": 56
+        "non_claim": 57
       },
       "off_axis": 0,
       "ruleset": {
@@ -2802,7 +2728,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "234 examined · 178 evaluated under askmaddi-polarity",
+      "receipt_line": "223 examined · 166 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -2963,17 +2889,6 @@
   },
   "sources": [
     {
-      "source_id": "youtube-bobby-tonelli-canon-new-fd-135mm-f2-review-vintage-canon-at-its-best",
-      "source_type": "pro",
-      "reviewer": "Bobby Tonelli",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=h9_DS3Z3PqQ",
-      "title": "Canon New FD 135mm f2 Review: Vintage Canon At It's Best!",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863327+00:00",
-      "weight": 0.75
-    },
-    {
       "source_id": "youtube-camera-conspiracies-the-most-versatile-lens-ever-made-portraits-wildlife-and-more-legend",
       "source_type": "pro",
       "reviewer": "Camera Conspiracies",
@@ -2981,7 +2896,7 @@
       "url": "https://www.youtube.com/watch?v=XrPO09HBT9I",
       "title": "The Most Versatile Lens Ever Made (Portraits, Wildlife and More) Legendary Canon EF 135mm f2 Review",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863339+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088431+00:00",
       "weight": 0.75
     },
     {
@@ -2992,7 +2907,7 @@
       "url": "https://www.youtube.com/watch?v=Dv24fs1V7kA",
       "title": "Canon 135mm f/2 USM 'L' lens review with samples (Full-frame and APS-C))",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863343+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088440+00:00",
       "weight": 0.75
     },
     {
@@ -3003,7 +2918,7 @@
       "url": "https://www.youtube.com/watch?v=85XbSHv8v9U",
       "title": "Sharp enough for 45mp? Canon EF 135mm f/2 'L' USM",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863345+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088444+00:00",
       "weight": 0.75
     },
     {
@@ -3014,7 +2929,7 @@
       "url": "https://www.youtube.com/watch?v=cpGgaH_Hh3w",
       "title": "Review of the Canon 135mm 2 0 VIDEO",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863348+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088447+00:00",
       "weight": 0.75
     },
     {
@@ -3025,7 +2940,18 @@
       "url": "https://www.youtube.com/watch?v=qb07cJtMD6Y",
       "title": "Why I love the 135mm f2 from Canon - Lens Review -",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863351+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088450+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "youtube-demanin-digital-ef-135mm-f2-wow",
+      "source_type": "pro",
+      "reviewer": "Demanin Digital",
+      "platform": "youtube",
+      "url": "https://www.youtube.com/watch?v=TmiemXzxcKc",
+      "title": "EF 135mm F2 // WOW!",
+      "publication_date": "",
+      "ingested_at": "2026-11-17T23:50:31.088453+00:00",
       "weight": 0.75
     },
     {
@@ -3036,7 +2962,7 @@
       "url": "https://www.youtube.com/watch?v=O5Mww3XUX-o",
       "title": "Canon EF 135mm L f2.0 long term REVIEW for 2019 - the best portrait lens ever?",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863353+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088455+00:00",
       "weight": 0.75
     },
     {
@@ -3047,7 +2973,7 @@
       "url": "https://www.youtube.com/watch?v=zCMBxIGYyz8",
       "title": "The BEST Bargain EF Portrait Lens You’ve Never Tried",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863356+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088458+00:00",
       "weight": 0.75
     },
     {
@@ -3058,7 +2984,7 @@
       "url": "https://www.youtube.com/watch?v=yl65zlMv_2E",
       "title": "Canon 135mm f2 Review for Event Photography and Portraits",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863358+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088461+00:00",
       "weight": 0.75
     },
     {
@@ -3069,7 +2995,7 @@
       "url": "https://www.youtube.com/watch?v=V50juGFbG8g",
       "title": "Canon RF 135mm F2 L USM Prime Lens",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863360+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088464+00:00",
       "weight": 0.75
     },
     {
@@ -3080,7 +3006,7 @@
       "url": "https://www.youtube.com/watch?v=gE4ZmUAFe1M",
       "title": "The Canon 135mm F/2.0L USM Lens In-Depth Review",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863363+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088466+00:00",
       "weight": 0.75
     },
     {
@@ -3091,7 +3017,7 @@
       "url": "https://www.youtube.com/watch?v=mqFItwoitBw",
       "title": "135mm f2 | Real-World Review for Wildlife Photography",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863365+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088469+00:00",
       "weight": 0.75
     },
     {
@@ -3102,7 +3028,7 @@
       "url": "https://www.youtube.com/watch?v=BucvnjiI3Co",
       "title": "🥰 FULL REVIEW: CANON 135mm f2 EF LENS 🥰 EPIC GLASS!",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863367+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088471+00:00",
       "weight": 0.75
     },
     {
@@ -3113,7 +3039,7 @@
       "url": "https://www.youtube.com/watch?v=GqqC2x4ntuM",
       "title": "A Look at the Original 135mm f2 L Lens",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863370+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088474+00:00",
       "weight": 0.75
     },
     {
@@ -3124,7 +3050,7 @@
       "url": "https://www.youtube.com/watch?v=Gt3yWrU7r0o",
       "title": "Canon EF 135mm f/2L USM - A prime lens for beautiful portraits",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863372+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088476+00:00",
       "weight": 0.75
     },
     {
@@ -3135,7 +3061,7 @@
       "url": "https://www.youtube.com/watch?v=dcCF-zd-ooI",
       "title": "Canon 135mm f/2 Review",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863374+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088478+00:00",
       "weight": 0.75
     },
     {
@@ -3146,17 +3072,17 @@
       "url": "https://www.youtube.com/watch?v=mPJlbxVIf5Q",
       "title": "CANON RF 135 f/1.8 L vs EF 135 f/2 L – Which 135mm is Best?",
       "publication_date": "",
-      "ingested_at": "2026-10-29T08:35:19.863377+00:00",
+      "ingested_at": "2026-11-17T23:50:31.088481+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/canon-135mm-f2-0/",
-    "reddit": "Canon EF 135mm f/2L USM\n\nSynthesized from 17 reviewer sources for Canon EF 135mm f/2L USM. Optical performance draws the most discussion: 25 positive, 5 neutral, and 5 negative across 35 sentiment markers. The most criticism lands on AF for stills: 27% positive, 37% neutral, 36% negative across 22 claims. Opinion is split on handling (12 positive, 1 neutral, 7 negative claims).\n\nI pulled together all 17 reviews in one place: https://askmaddi.com/cards/canon-135mm-f2-0/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Canon EF 135mm f/2L USM**\nSynthesized from 17 reviewer sources for Canon EF 135mm f/2L USM. Optical performance draws the most discussion: 25 positive, 5 neutral, and 5 negative across 35 sentiment markers. The most criticism lands on AF for stills: 27% positive, 37% neutral, 36% negative across 22 claims. Opinion is split on handling (12 positive, 1 neutral, 7 negative claims).\nAll 17 reviews in one place: https://askmaddi.com/cards/canon-135mm-f2-0/\n_(disclosure: I built this)_",
+    "reddit": "Canon EF 135mm f/2L USM\n\nSynthesized from 17 reviewer sources for Canon 135mm f2.0. Optical performance draws the most discussion: 26 positive, 6 neutral, and 5 negative across 37 sentiment markers. The most criticism lands on AF for stills: 30% positive, 35% neutral, 35% negative across 20 claims. Opinion is split on AF for video (8 positive, 13 neutral, 9 negative claims).\n\nI pulled together all 17 reviews in one place: https://askmaddi.com/cards/canon-135mm-f2-0/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon EF 135mm f/2L USM**\nSynthesized from 17 reviewer sources for Canon 135mm f2.0. Optical performance draws the most discussion: 26 positive, 6 neutral, and 5 negative across 37 sentiment markers. The most criticism lands on AF for stills: 30% positive, 35% neutral, 35% negative across 20 claims. Opinion is split on AF for video (8 positive, 13 neutral, 9 negative claims).\nAll 17 reviews in one place: https://askmaddi.com/cards/canon-135mm-f2-0/\n_(disclosure: I built this)_",
     "og": {
       "title": "Canon EF 135mm f/2L USM — Reviewed",
-      "description": "Synthesized from 17 reviewer sources for Canon EF 135mm f/2L USM. Optical performance draws the most discussion: 25 positive, 5 neutral, and 5 negative across 35 sentiment markers. The most criticism lands on AF for stills: 27% positive, 37% neutral, 36% negative across 22 claims. Opinion is split on handling (12 positive, 1 neutral, 7 negative claims).",
+      "description": "Synthesized from 17 reviewer sources for Canon 135mm f2.0. Optical performance draws the most discussion: 26 positive, 6 neutral, and 5 negative across 37 sentiment markers. The most criticism lands on AF for stills: 30% positive, 35% neutral, 35% negative across 20 claims. Opinion is split on AF for video (8 positive, 13 neutral, 9 negative claims).",
       "image": null,
       "url": "https://askmaddi.com/cards/canon-135mm-f2-0/"
     }

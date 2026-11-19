@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-18",
+  "as_of": "2026-11-19",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -555,8 +555,8 @@
       "model": "A7 V",
       "gtin": "00027242934061",
       "marketplace_ids": {
-        "ebay_epid": "11057690094",
-        "ebay_legacy_item_id": "176410454717",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "900098699895",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -566,7 +566,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7RM5B",
+        "mpn": "ILCE7M5/B",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": true,
@@ -614,17 +614,22 @@
             ]
           }
         },
-        "market_title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW",
-        "image": "https://i.ebayimg.com/images/g/MRAAAOSw1TxmYMB2/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "listing and part number are the A7R V (ILCE7RM5B); the A7 V is ILCE7M5/B, UPC 027242934061 matches the spine GTIN",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "ILCE7RM5B"
+        },
+        "market_title": "Sony a7 V Mirrorless Camera ILCE-7M5/B",
+        "image": "https://i.ebayimg.com/images/g/WpoAAeSwEaNq~EV~/s-l1600.jpg",
         "price_seen": {
-          "value": "2599.00",
+          "value": "2439.95",
           "currency": "USD",
-          "as_of": "2026-08-26T04:15:04Z"
+          "as_of": "2026-11-18T21:09:13Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/176410454717?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FrpWur%2BBoyYurAt1iYn4g7OZ5VyT7ODfGrHT6WDz7FaV%2Fhi0jGuGVk%2FpCEDtaH3lZA%2B2mPvi3zwBsB%2BcOBhRyf6nn48CCL9jgkaMKOrhZa%2FjyvH1M60PlhUxu6ujCX2IG2Td3fhVY6Mf2VOerFRBYBJUrQ%2FgpJ%2BEGOPweIRLAH4WNZZhke7stYmZ7x1R9wA%2Fo%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/900098699895?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=sony-a7-v&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FHHmjkPgzuuE5bo5DErX%2FiRUZOOqu%2FW%2Fxn0bCS3Np6GzglvkRgQXyRXax1MzTJO3SRAlfiDBgSDUMxmXJMlborgybdcbc093qxLu%2BF0aWDfz82t04vRt26H5qi0AbLVhma2ivTdwbJeOQdgGGShgh%2Fdz5%2B5GRexTOtV7YQbC4UEKDSPthles%2FcEjQ%2BQdIKHqg%3D",
         "amazon_asin": null
       },
       "needs_review": true,
@@ -636,7 +641,38 @@
         "doc_id": "251h_specifications_ilc2540",
         "observed": "https://helpguide.sony.net/ilc/2540/v1/en/contents/251h_specifications_ilc2540.html",
         "curated_at": "2026-07-29"
-      }
+      },
+      "unbound_listings": [
+        {
+          "item_id": "176410454717",
+          "epid": "11057690094",
+          "affiliate_url": "https://www.ebay.com/itm/176410454717?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FrpWur%2BBoyYurAt1iYn4g7OZ5VyT7ODfGrHT6WDz7FaV%2Fhi0jGuGVk%2FpCEDtaH3lZA%2B2mPvi3zwBsB%2BcOBhRyf6nn48CCL9jgkaMKOrhZa%2FjyvH1M60PlhUxu6ujCX2IG2Td3fhVY6Mf2VOerFRBYBJUrQ%2FgpJ%2BEGOPweIRLAH4WNZZhke7stYmZ7x1R9wA%2Fo%3D",
+          "unbound_at": "2026-11-18T21:08:43Z",
+          "market_title": "Sony Alpha a7R V 61MP Full-Frame Mirrorless Camera - Body Only - BRAND NEW",
+          "image": "https://i.ebayimg.com/images/g/MRAAAOSw1TxmYMB2/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/zaUAAOSwtclm45oX/s-l1600.jpg",
+          "price_seen": {
+            "value": "2599.00",
+            "currency": "USD",
+            "as_of": "2026-08-26T04:15:04Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "listing and part number are the A7R V (ILCE7RM5B); the A7 V is ILCE7M5/B, UPC 027242934061 matches the spine GTIN",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "bound_listings": [
+        {
+          "item_id": "900098699895",
+          "epid": "",
+          "title": "Sony a7 V Mirrorless Camera ILCE-7M5/B",
+          "listing_mpn": "ILCE-7M5/B",
+          "bound_at": "2026-11-18T21:09:13Z",
+          "method": "part-number-match",
+          "query": "Sony ILCE7M5/B",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "sony-a1": {
       "contamination_key": "sony-a1",
@@ -1747,7 +1783,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-17T04:18:27Z"
+      "resolved_at": "2026-08-17T04:18:27Z",
+      "overrides": {
+        "display_name": "Leica Summicron-M 50mm f/2"
+      }
     },
     "hasselblad-500-cm": {
       "contamination_key": "hasselblad-500-cm",
@@ -2341,7 +2380,7 @@
       "gtin": "00027242904286",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "206517553059",
+        "ebay_legacy_item_id": "267831547631",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -2351,7 +2390,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "",
+        "mpn": "SEL100M28GM",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -2386,23 +2425,62 @@
             }
           ]
         },
-        "market_title": "Sony FE 100mm f2.8 STF GM OSS Lens E Mount SEL100F28GM #449",
-        "image": "https://i.ebayimg.com/images/g/SB0AAeSwijdqj0fW/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/mY0AAOSw8q9eUmsy/s-l640.jpg",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 13/14 are the FE 100mm f/2.8 Macro GM OSS; listing and new-price link were the FE 100mm f/2.8 STF GM OSS",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "market_title": "Sony FE 100mm f/2.8 f2.8 Macro OSS GM Lens (SEL100M28GM) + Filter * Barely Used!",
+        "image": "https://i.ebayimg.com/images/g/k~gAAeSwkLJq6R1J/s-l1600.jpg",
         "price_seen": {
-          "value": "792.57",
+          "value": "1279.00",
           "currency": "USD",
-          "as_of": "2026-09-03T19:17:39Z"
+          "as_of": "2026-11-18T20:25:31Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/206517553059?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FRwqVes17XCI1CILQbvCfn4wlvG0IzRYJGGqZ50%2FJmIvJKAJ72GIz0hFXRMUBEvW4j7GXNyhwWeuYQRn3PyZNFw150TvsNx0JeZTGppVD70BOuTpxY%2BxDdwVdLmI%2Bd4Jvf75plZfJTR5XMOgEBRyiFcGYTw3iq%2FPSxxvE63SzDWTRpwM94IXm1uwSGTcpEyKo%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/267831547631?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=sony-100mm-f2-8&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T19:17:39Z"
+      "resolved_at": "2026-09-03T19:17:39Z",
+      "unbound_listings": [
+        {
+          "item_id": "206517553059",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/206517553059?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FRwqVes17XCI1CILQbvCfn4wlvG0IzRYJGGqZ50%2FJmIvJKAJ72GIz0hFXRMUBEvW4j7GXNyhwWeuYQRn3PyZNFw150TvsNx0JeZTGppVD70BOuTpxY%2BxDdwVdLmI%2Bd4Jvf75plZfJTR5XMOgEBRyiFcGYTw3iq%2FPSxxvE63SzDWTRpwM94IXm1uwSGTcpEyKo%3D",
+          "unbound_at": "2026-11-18T18:28:15Z",
+          "market_title": "Sony FE 100mm f2.8 STF GM OSS Lens E Mount SEL100F28GM #449",
+          "image": "https://i.ebayimg.com/images/g/SB0AAeSwijdqj0fW/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/mY0AAOSw8q9eUmsy/s-l640.jpg",
+          "price_seen": {
+            "value": "792.57",
+            "currency": "USD",
+            "as_of": "2026-09-03T19:17:39Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 13/14 are the FE 100mm f/2.8 Macro GM OSS; listing and new-price link were the FE 100mm f/2.8 STF GM OSS",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Sony FE 100mm f/2.8 Macro GM OSS"
+      },
+      "bound_listings": [
+        {
+          "item_id": "267831547631",
+          "epid": "",
+          "title": "Sony FE 100mm f/2.8 f2.8 Macro OSS GM Lens (SEL100M28GM) + Filter * Barely Used!",
+          "listing_mpn": "",
+          "bound_at": "2026-11-18T20:25:31Z",
+          "method": "part-number-match",
+          "query": "Sony SEL100M28GM",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "sony-a9": {
       "contamination_key": "sony-a9",
@@ -2818,7 +2896,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-03T19:18:36Z"
+      "resolved_at": "2026-09-03T19:18:36Z",
+      "overrides": {
+        "display_name": "Canon EF 35mm f/1.4L USM"
+      }
     },
     "panasonic-s5-mirrorless": {
       "contamination_key": "panasonic-s5-mirrorless",
@@ -3711,8 +3792,8 @@
       "model": "28mm f2.8",
       "gtin": null,
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "168349678077",
+        "ebay_epid": "5051904954",
+        "ebay_legacy_item_id": "353880553003",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -3722,49 +3803,116 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "NA",
+        "mpn": "20101",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Nikon Ai Nikkor 28mm f/2.8 MF Wide Angle Prime Lens Nikon F",
-        "image": "https://i.ebayimg.com/images/g/9rYAAeSwzmBp9ubn/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/N9kAAOSw7PljcNvJ/s-l640.png",
-        "price_seen": {
-          "value": "135.65",
-          "currency": "USD",
-          "as_of": "2026-08-26T15:27:36Z"
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 12 of about 17 naming a version are the Z 28mm f/2.8 (incl. SE); listing was a used Ai 28mm f/2.8. nikon-z-28 is an unbuilt mint listed as the Z 28-400, so no card covers it",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "NA"
         },
+        "image_catalog": "https://i.ebayimg.com/images/g/6iUAAOSw3iRk44gi/s-l640.jpg",
         "image_provenance": {
           "recovered_by": "image-second-pass",
-          "recovered_at": "2026-10-02T04:30:16Z",
-          "query": "Nikon NA",
+          "recovered_at": "2026-11-18T19:35:02Z",
+          "query": "Nikon 20101",
           "winner": {
-            "item_id": "v1|188853889802|0",
-            "epid": "1479686366",
-            "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938"
+            "item_id": "v1|353880553003|0",
+            "epid": "5051904954",
+            "title": "Nikon NIKKOR Z 28mm f/2.8 Lens 20101"
           },
           "epid_match": false,
           "inspected": [
             {
-              "item_id": "v1|188853889802|0",
-              "epid": "1479686366",
-              "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938",
+              "item_id": "v1|287659482922|0",
+              "epid": "1539719917",
+              "title": "NIKON MMK20101 M SM E 10XA SM Eyepiece For Microscope 10x/23 Japan New READ",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|353880553003|0",
+              "epid": "5051904954",
+              "title": "Nikon NIKKOR Z 28mm f/2.8 Lens 20101",
               "had_catalog": true,
               "accepted": true
             }
           ]
+        },
+        "market_title": "Nikon NIKKOR Z 28mm f/2.8 Lens 20101",
+        "image": "https://i.ebayimg.com/images/g/G9cAAOSwwJ9h9Azi/s-l1600.jpg",
+        "price_seen": {
+          "value": "234.00",
+          "currency": "USD",
+          "as_of": "2026-11-18T20:25:22Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/168349678077?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F0j37G4sNDCNUVhno5gcW5R67GTH8aswyXCPBKxR3IWVtdaQsrKC9A3L3U8BwwkJWquNi6kAMB17JBzXBVhmwZmliJP1HqYNWlMpdqhWcbqSH2r9%2F0KhZXDfBuQBoeqrW112VbFHvA5YEDnuvl3rBd7zdmNE14qRZcxTvcECAngNuXknJgxRlpOxb8v%2FzbC%2F8%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/353880553003?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=nikon-28mm-f2-8&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T13:58:26Z"
+      "resolved_at": "2026-09-15T13:58:26Z",
+      "unbound_listings": [
+        {
+          "item_id": "168349678077",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/168349678077?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F0j37G4sNDCNUVhno5gcW5R67GTH8aswyXCPBKxR3IWVtdaQsrKC9A3L3U8BwwkJWquNi6kAMB17JBzXBVhmwZmliJP1HqYNWlMpdqhWcbqSH2r9%2F0KhZXDfBuQBoeqrW112VbFHvA5YEDnuvl3rBd7zdmNE14qRZcxTvcECAngNuXknJgxRlpOxb8v%2FzbC%2F8%3D",
+          "unbound_at": "2026-11-18T19:33:56Z",
+          "market_title": "Nikon Ai Nikkor 28mm f/2.8 MF Wide Angle Prime Lens Nikon F",
+          "image": "https://i.ebayimg.com/images/g/9rYAAeSwzmBp9ubn/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/N9kAAOSw7PljcNvJ/s-l640.png",
+          "image_provenance": {
+            "recovered_by": "image-second-pass",
+            "recovered_at": "2026-10-02T04:30:16Z",
+            "query": "Nikon NA",
+            "winner": {
+              "item_id": "v1|188853889802|0",
+              "epid": "1479686366",
+              "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938"
+            },
+            "epid_match": false,
+            "inspected": [
+              {
+                "item_id": "v1|188853889802|0",
+                "epid": "1479686366",
+                "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938",
+                "had_catalog": true,
+                "accepted": true
+              }
+            ]
+          },
+          "price_seen": {
+            "value": "135.65",
+            "currency": "USD",
+            "as_of": "2026-08-26T15:27:36Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 12 of about 17 naming a version are the Z 28mm f/2.8 (incl. SE); listing was a used Ai 28mm f/2.8. nikon-z-28 is an unbuilt mint listed as the Z 28-400, so no card covers it",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 28mm f/2.8"
+      },
+      "bound_listings": [
+        {
+          "item_id": "353880553003",
+          "epid": "5051904954",
+          "title": "Nikon NIKKOR Z 28mm f/2.8 Lens 20101",
+          "listing_mpn": "20101",
+          "bound_at": "2026-11-18T20:25:22Z",
+          "method": "part-number-match",
+          "query": "Nikon 20101",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "sigma-14-24mm-f2-8": {
       "contamination_key": "sigma-14-24mm-f2-8",
@@ -4170,7 +4318,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:06:08Z"
+      "resolved_at": "2026-09-15T14:06:08Z",
+      "overrides": {
+        "display_name": "Canon EF 70-200mm f/2.8L USM"
+      }
     },
     "gopro-hero11": {
       "contamination_key": "gopro-hero11",
@@ -6767,7 +6918,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-08-27T22:41:54Z"
+      "resolved_at": "2026-08-27T22:41:54Z",
+      "overrides": {
+        "display_name": "Canon EOS 5D"
+      }
     },
     "sony-fx6": {
       "contamination_key": "sony-fx6",
@@ -6939,7 +7093,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "358393938452",
+        "ebay_legacy_item_id": "",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -6949,35 +7103,41 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "ILCE7SM2/B",
+        "mpn": "ILCE7S/B",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Sony Alpha A7S II ILCE-7SM2 Digital Camera 12.2MP 4K E-mount Camera Body only",
-        "image": "https://i.ebayimg.com/images/g/R4sAAeSwnhhpy6MI/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/pVoAAOSwQAlhh4yX/s-l640.jpg",
-        "price_seen": {
-          "value": "440.99",
-          "currency": "USD",
-          "as_of": "2026-08-27T04:25:32Z"
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "listing is the A7S II; card and reviews are the original A7S (ILCE7S/B)",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "ILCE7SM2/B"
         },
+        "image_catalog": "https://i.ebayimg.com/images/g/g74AAOSwx-9W0veH/s-l640.jpg",
         "image_provenance": {
           "recovered_by": "image-second-pass",
-          "recovered_at": "2026-09-16T04:30:53Z",
-          "query": "Sony ILCE7SM2/B",
+          "recovered_at": "2026-11-18T17:30:55Z",
+          "query": "Sony ILCE7S/B",
           "winner": {
-            "item_id": "v1|327276676543|0",
-            "epid": "20026060067",
-            "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black"
+            "item_id": "v1|307284499615|0",
+            "epid": "219584238",
+            "title": "Sony a7S ILCE-7S 35 languages (Shutter Count 1240) [Top Mint] US Stock"
           },
           "epid_match": false,
           "inspected": [
             {
-              "item_id": "v1|327276676543|0",
-              "epid": "20026060067",
-              "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black",
+              "item_id": "v1|377646182440|0",
+              "epid": "219584238",
+              "title": "Sony Alpha A7S ILCE-7S 12.2MP Mirrorless Camera Body with Battery Charger",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|307284499615|0",
+              "epid": "219584238",
+              "title": "Sony a7S ILCE-7S 35 languages (Shutter Count 1240) [Top Mint] US Stock",
               "had_catalog": true,
               "accepted": true
             }
@@ -6985,13 +7145,55 @@
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/358393938452?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BebVLMg%2BJM--Q1r7IogV100iOyEE%2FxWJLnb2rgKnJAZvJUF1okv0bNJSYcwQULIymBCUUQAjvOInNsWeBLSGFpxbf4iz%2B08jrNuRN%2Bxc--VIcfxDHynkc69pHmPZKEcz%2FJaG%2FaD47DLdWLAU9CQmfnozE30NOdT0%2FH7Wb8UCIJUsw4NmYYYxXla5t%2FSN%2Fbx7o%3D",
+        "ebay_epn_url": "",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T13:58:37Z"
+      "resolved_at": "2026-09-15T13:58:37Z",
+      "unbound_listings": [
+        {
+          "item_id": "358393938452",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/358393938452?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BebVLMg%2BJM--Q1r7IogV100iOyEE%2FxWJLnb2rgKnJAZvJUF1okv0bNJSYcwQULIymBCUUQAjvOInNsWeBLSGFpxbf4iz%2B08jrNuRN%2Bxc--VIcfxDHynkc69pHmPZKEcz%2FJaG%2FaD47DLdWLAU9CQmfnozE30NOdT0%2FH7Wb8UCIJUsw4NmYYYxXla5t%2FSN%2Fbx7o%3D",
+          "unbound_at": "2026-11-18T17:30:13Z",
+          "market_title": "Sony Alpha A7S II ILCE-7SM2 Digital Camera 12.2MP 4K E-mount Camera Body only",
+          "image": "https://i.ebayimg.com/images/g/R4sAAeSwnhhpy6MI/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/pVoAAOSwQAlhh4yX/s-l640.jpg",
+          "image_provenance": {
+            "recovered_by": "image-second-pass",
+            "recovered_at": "2026-09-16T04:30:53Z",
+            "query": "Sony ILCE7SM2/B",
+            "winner": {
+              "item_id": "v1|327276676543|0",
+              "epid": "20026060067",
+              "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black"
+            },
+            "epid_match": false,
+            "inspected": [
+              {
+                "item_id": "v1|327276676543|0",
+                "epid": "20026060067",
+                "title": "Sony a7S II ILCE7SM2/B 12.2 MP E-mount Camera with Full-Frame Sensor, Black",
+                "had_catalog": true,
+                "accepted": true
+              }
+            ]
+          },
+          "price_seen": {
+            "value": "440.99",
+            "currency": "USD",
+            "as_of": "2026-08-27T04:25:32Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "listing is the A7S II; card and reviews are the original A7S (ILCE7S/B)",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Sony A7S"
+      }
     },
     "gopro-hero7": {
       "contamination_key": "gopro-hero7",
@@ -7461,7 +7663,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-18T06:02:29Z"
+      "resolved_at": "2026-11-18T06:02:29Z",
+      "overrides": {
+        "display_name": "Zeiss Contax Distagon T* 35mm f/1.4 (C/Y)"
+      }
     },
     "nikon-35mm-f2": {
       "contamination_key": "nikon-35mm-f2",
@@ -9050,7 +9255,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:04:12Z"
+      "resolved_at": "2026-08-27T23:04:12Z",
+      "overrides": {
+        "display_name": "Sony Cyber-shot RX100 V"
+      }
     },
     "nikon-z-9": {
       "contamination_key": "nikon-z-9",
@@ -10068,7 +10276,10 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-08-27T23:11:44Z",
-      "category": "flash"
+      "category": "flash",
+      "overrides": {
+        "display_name": "Yongnuo YN600EX-RT II Speedlite"
+      }
     },
     "godox-v1-flash-canon": {
       "contamination_key": "godox-v1-flash-canon",
@@ -11539,7 +11750,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-08-27T23:23:50Z"
+      "resolved_at": "2026-08-27T23:23:50Z",
+      "overrides": {
+        "display_name": "Canon EF 200-400mm f/4L IS USM Extender 1.4x"
+      }
     },
     "canon-16mm-f2-8": {
       "contamination_key": "canon-16mm-f2-8",
@@ -11621,7 +11835,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "227500838396",
+        "ebay_legacy_item_id": "198650636198",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -11631,23 +11845,28 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "SAL50M28",
+        "mpn": "SEL50M28",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Sony 50mm F/2.8 Macro Prime Lens SAL50M28 (Sony A-Mount) [Exc] US Stock",
-        "image": "https://i.ebayimg.com/images/g/0ogAAeSwP19qYgjC/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 naming a 50mm f/2.8 are the FE 50mm f/2.8 Macro SEL50M28; listing was the A-mount SAL50M28",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "SAL50M28"
+        },
+        "market_title": "Sony SEL50M28 E ",
+        "image": "https://i.ebayimg.com/images/g/lKQAAeSwNCNqrV7b/s-l1600.jpg",
         "price_seen": {
-          "value": "79.80",
+          "value": "293.99",
           "currency": "USD",
-          "as_of": "2026-09-04T08:00:28Z"
+          "as_of": "2026-11-18T20:25:28Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/227500838396?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/198650636198?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=sony-50mm-f2-8&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
@@ -11655,8 +11874,39 @@
       "minted_needs_review": false,
       "resolved_at": "2026-09-15T14:08:50Z",
       "overrides": {
-        "display_name": "Sony 50mm f/2.8 Macro (A-mount)"
-      }
+        "display_name": "Sony FE 50mm f/2.8 Macro"
+      },
+      "unbound_listings": [
+        {
+          "item_id": "227500838396",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/227500838396?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+          "unbound_at": "2026-11-18T19:33:56Z",
+          "market_title": "Sony 50mm F/2.8 Macro Prime Lens SAL50M28 (Sony A-Mount) [Exc] US Stock",
+          "image": "https://i.ebayimg.com/images/g/0ogAAeSwP19qYgjC/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "79.80",
+            "currency": "USD",
+            "as_of": "2026-09-04T08:00:28Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 naming a 50mm f/2.8 are the FE 50mm f/2.8 Macro SEL50M28; listing was the A-mount SAL50M28",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "bound_listings": [
+        {
+          "item_id": "198650636198",
+          "epid": "",
+          "title": "Sony SEL50M28 E ",
+          "listing_mpn": "SEL50M28",
+          "bound_at": "2026-11-18T20:25:28Z",
+          "method": "part-number-match",
+          "query": "Sony SEL50M28",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "canon-100mm-f2-8": {
       "contamination_key": "canon-100mm-f2-8",
@@ -12321,7 +12571,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-02T20:19:06Z"
+      "resolved_at": "2026-09-02T20:19:06Z",
+      "overrides": {
+        "display_name": "Canon EF 28-105mm f/3.5-4.5 II USM"
+      }
     },
     "canon-eos-r7": {
       "contamination_key": "canon-eos-r7",
@@ -17658,7 +17911,7 @@
       "gtin": "00018208200573",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "800609844773",
+        "ebay_legacy_item_id": "383949332040",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -17668,7 +17921,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "20080",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -17682,23 +17935,62 @@
             }
           ]
         },
-        "market_title": "Nikon AF-S NIKKOR 24mm f/1.8 G ED Wide Angle Lens from Japan [Top Mint] N2162",
-        "image": "https://i.ebayimg.com/images/g/C8UAAeSwFs9qmkOg/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the Z 24mm f/1.8 S; listing was a used AF-S 24mm f/1.8G",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "market_title": "Nikon NIKKOR Z 24mm f/1.8 S Lens 20080",
+        "image": "https://i.ebayimg.com/images/g/LBkAAOSwcaxmv17G/s-l1600.jpg",
         "price_seen": {
-          "value": "379.99",
+          "value": "834.00",
           "currency": "USD",
-          "as_of": "2026-09-04T06:01:00Z"
+          "as_of": "2026-11-18T20:25:19Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/800609844773?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F9Z9OQxRQQKv7mQAEdgAgLW6IulbPDrTE%2BdHgDZOfXnmxERVKmY93WpslGSIVHsA44ggv7IIl0SHFRXOezyWXWiKwGvlVX9SlS801ertaUK6ZPG5T0eeQERBqN1nq2%2FamNxeGORXTyg8gY8eYEtCBsBBy7TLzKWDzJaR7%2B%2Ft1jYQMeHqTmvXLLuMpKOfY9Low%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/383949332040?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=nikon-24mm-f1-8&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-04T06:01:00Z"
+      "resolved_at": "2026-09-04T06:01:00Z",
+      "unbound_listings": [
+        {
+          "item_id": "800609844773",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/800609844773?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F9Z9OQxRQQKv7mQAEdgAgLW6IulbPDrTE%2BdHgDZOfXnmxERVKmY93WpslGSIVHsA44ggv7IIl0SHFRXOezyWXWiKwGvlVX9SlS801ertaUK6ZPG5T0eeQERBqN1nq2%2FamNxeGORXTyg8gY8eYEtCBsBBy7TLzKWDzJaR7%2B%2Ft1jYQMeHqTmvXLLuMpKOfY9Low%3D",
+          "unbound_at": "2026-11-18T18:09:33Z",
+          "market_title": "Nikon AF-S NIKKOR 24mm f/1.8 G ED Wide Angle Lens from Japan [Top Mint] N2162",
+          "image": "https://i.ebayimg.com/images/g/C8UAAeSwFs9qmkOg/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "379.99",
+            "currency": "USD",
+            "as_of": "2026-09-04T06:01:00Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the Z 24mm f/1.8 S; listing was a used AF-S 24mm f/1.8G",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 24mm f/1.8 S"
+      },
+      "bound_listings": [
+        {
+          "item_id": "383949332040",
+          "epid": "",
+          "title": "Nikon NIKKOR Z 24mm f/1.8 S Lens 20080",
+          "listing_mpn": "20080",
+          "bound_at": "2026-11-18T20:25:19Z",
+          "method": "part-number-match",
+          "query": "Nikon 20080",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "sony-hdr-as50-full-hd": {
       "contamination_key": "sony-hdr-as50-full-hd",
@@ -18001,8 +18293,8 @@
       "model": "x100v",
       "gtin": "00074101209587",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "388493594970",
+        "ebay_epid": "15037001102",
+        "ebay_legacy_item_id": "336894234350",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -18012,7 +18304,7 @@
       },
       "identity": {
         "brand": "Fujifilm",
-        "mpn": "16821822",
+        "mpn": "16642939",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -18026,23 +18318,83 @@
             }
           ]
         },
-        "market_title": "Fujifilm X100VI 40.2 MP Digital Camera Silver - NEW USA MODEL Made In Japan!",
-        "image": "https://i.ebayimg.com/images/g/6CYAAeSwXEVo78fP/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "listing is the X100VI (16821822); card is the X100V (16642939, silver)",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "16821822"
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/-hcAAOSwjsxe6eJE/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-18T17:53:42Z",
+          "query": "Fujifilm 16642939",
+          "winner": {
+            "item_id": "v1|336894234350|0",
+            "epid": "15037001102",
+            "title": "Fujifilm X100V 26.1MP Digital Camera - Silver - Excellent Condition"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|336894234350|0",
+              "epid": "15037001102",
+              "title": "Fujifilm X100V 26.1MP Digital Camera - Silver - Excellent Condition",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        },
+        "market_title": "Fujifilm X100V 26.1MP Digital Camera - Silver - Excellent Condition",
+        "image": "https://i.ebayimg.com/images/g/Z7YAAeSwEQFq9d5g/s-l1600.jpg",
         "price_seen": {
-          "value": "2168.99",
+          "value": "1399.00",
           "currency": "USD",
-          "as_of": "2026-08-27T23:21:11Z"
+          "as_of": "2026-11-18T20:25:17Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/388493594970?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/336894234350?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=fujifilm-x100v&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:02:22Z"
+      "resolved_at": "2026-09-15T14:02:22Z",
+      "unbound_listings": [
+        {
+          "item_id": "388493594970",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/388493594970?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+          "unbound_at": "2026-11-18T17:50:30Z",
+          "market_title": "Fujifilm X100VI 40.2 MP Digital Camera Silver - NEW USA MODEL Made In Japan!",
+          "image": "https://i.ebayimg.com/images/g/6CYAAeSwXEVo78fP/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "2168.99",
+            "currency": "USD",
+            "as_of": "2026-08-27T23:21:11Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "listing is the X100VI (16821822); card is the X100V (16642939, silver)",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Fujifilm X100V"
+      },
+      "bound_listings": [
+        {
+          "item_id": "336894234350",
+          "epid": "15037001102",
+          "title": "Fujifilm X100V 26.1MP Digital Camera - Silver - Excellent Condition",
+          "listing_mpn": "16642939",
+          "bound_at": "2026-11-18T20:25:17Z",
+          "method": "part-number-match",
+          "query": "Fujifilm 16642939",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "nikon-105mm-f2-8": {
       "contamination_key": "nikon-105mm-f2-8",
@@ -18051,7 +18403,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "206529026675",
+        "ebay_legacy_item_id": "",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -18061,7 +18413,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "20100",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": true,
@@ -18134,23 +18486,71 @@
             ]
           }
         },
-        "market_title": "Nikon Nikkor AF 105mm f2.8 Micro Lens #572",
-        "image": "https://i.ebayimg.com/images/g/AEYAAeSwN0tqltdA/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "132.68",
-          "currency": "USD",
-          "as_of": "2026-09-04T08:03:19Z"
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the Z MC 105mm f/2.8 VR S; listing was a used AF 105mm f/2.8 Micro",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/U4QAAOSwTVFlM-G8/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-18T18:11:04Z",
+          "query": "Nikon 20100",
+          "winner": {
+            "item_id": "v1|960169352444|0",
+            "epid": "14048018307",
+            "title": "Nikon NIKKOR Z MC 105mm f/2.8 VR S Macro Lens"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|117516310940|0",
+              "epid": "1317598342",
+              "title": "NIKON  MBJ20100 LENS, EYEPIECE LENS, 10X/20 CFWN 10x with Diopter adjustment",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|960169352444|0",
+              "epid": "14048018307",
+              "title": "Nikon NIKKOR Z MC 105mm f/2.8 VR S Macro Lens",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/206529026675?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8R3H2FCfXkhcAcHJHRwRIYaJ8LrZi0DN76aTPyAqIA%2BodG7WcrefmeG2C0cASSYh4ZAGoXWkzWO0I04QK--wSXIgxbFqSKOS%2B4j%2B2ZXTm7UnB3FO2npnMR6HbLJfNC3RUYA77WA01QMduDaKX0qpgCrFixjaqT9ootQwmENMU4PTjqg9cf5sPlgrFzj5Uvavo%3D",
+        "ebay_epn_url": "",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-04T08:03:19Z"
+      "resolved_at": "2026-09-04T08:03:19Z",
+      "unbound_listings": [
+        {
+          "item_id": "206529026675",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/206529026675?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8R3H2FCfXkhcAcHJHRwRIYaJ8LrZi0DN76aTPyAqIA%2BodG7WcrefmeG2C0cASSYh4ZAGoXWkzWO0I04QK--wSXIgxbFqSKOS%2B4j%2B2ZXTm7UnB3FO2npnMR6HbLJfNC3RUYA77WA01QMduDaKX0qpgCrFixjaqT9ootQwmENMU4PTjqg9cf5sPlgrFzj5Uvavo%3D",
+          "unbound_at": "2026-11-18T18:09:32Z",
+          "market_title": "Nikon Nikkor AF 105mm f2.8 Micro Lens #572",
+          "image": "https://i.ebayimg.com/images/g/AEYAAeSwN0tqltdA/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "132.68",
+            "currency": "USD",
+            "as_of": "2026-09-04T08:03:19Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the Z MC 105mm f/2.8 VR S; listing was a used AF 105mm f/2.8 Micro",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z MC 105mm f/2.8 VR S"
+      }
     },
     "sony-50mm-f1-2": {
       "contamination_key": "sony-50mm-f1-2",
@@ -18910,7 +19310,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "147542980969",
+        "ebay_legacy_item_id": "296748955630",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -18920,29 +19320,68 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "",
+        "mpn": "20126",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Nikon Nikkor AI-S 35mm f1.4 Lens AIS #558",
-        "image": "https://i.ebayimg.com/images/g/cXgAAeSw~uRqfiIW/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the Z 35mm f/1.4; listing was a used AI-S 35mm f/1.4",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "market_title": "Nikon NIKKOR Z 35mm f/1.4 Lens (Nikon Z) - 20126",
+        "image": "https://i.ebayimg.com/images/g/3kYAAOSwcYlnC8m8/s-l1600.jpg",
         "price_seen": {
-          "value": "365.42",
+          "value": "689.95",
           "currency": "USD",
-          "as_of": "2026-09-04T14:00:23Z"
+          "as_of": "2026-11-18T20:25:23Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/147542980969?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/296748955630?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=nikon-35mm-f1-4&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Bhdef8OlS6WRVidSw2Gx3K9Biui4IcwHo%2Bml%2BYvfEfr3Iu3iUHFIxUFDdS7hdB2%2FoTiC4Qu9FUWCuRDITEQCpZbGfFD%2FSlX9DXxBNl4A0tzZX8CJvWBlMJQfn32ZonDNwVUTZtVbU9TujCqKCVMq%2F3hJZmFfYVk7g3XLx4bi1cisIskDAPyl1fxxj7nFspcxE%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-04T14:00:23Z"
+      "resolved_at": "2026-09-04T14:00:23Z",
+      "unbound_listings": [
+        {
+          "item_id": "147542980969",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/147542980969?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+          "unbound_at": "2026-11-18T18:09:33Z",
+          "market_title": "Nikon Nikkor AI-S 35mm f1.4 Lens AIS #558",
+          "image": "https://i.ebayimg.com/images/g/cXgAAeSw~uRqfiIW/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "365.42",
+            "currency": "USD",
+            "as_of": "2026-09-04T14:00:23Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the Z 35mm f/1.4; listing was a used AI-S 35mm f/1.4",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 35mm f/1.4"
+      },
+      "bound_listings": [
+        {
+          "item_id": "296748955630",
+          "epid": "",
+          "title": "Nikon NIKKOR Z 35mm f/1.4 Lens (Nikon Z) - 20126",
+          "listing_mpn": "20126",
+          "bound_at": "2026-11-18T20:25:23Z",
+          "method": "part-number-match",
+          "query": "Nikon 20126",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "canon-15-30mm-f4-5": {
       "contamination_key": "canon-15-30mm-f4-5",
@@ -19970,7 +20409,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "198637924274",
+        "ebay_legacy_item_id": "206696196985",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -19980,29 +20419,68 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "6535C002",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "[Almost MINT]  Canon EF 28-70mm f/2.8L USM Zoom Lens L Series From JAPAN",
-        "image": "https://i.ebayimg.com/images/g/sbYAAeSwHYBqph-d/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the RF 28-70mm f/2.8 IS STM; listing was a used EF 28-70mm f/2.8L",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "market_title": "Canon RF 28-70mm f/2.8 IS STM Lens - 6535C002 - NEW",
+        "image": "https://i.ebayimg.com/images/g/PMYAAeSwpZxq9iHu/s-l1600.jpg",
         "price_seen": {
-          "value": "289.99",
+          "value": "999.00",
           "currency": "USD",
-          "as_of": "2026-10-08T06:02:15Z"
+          "as_of": "2026-11-18T20:25:12Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/198637924274?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FcyjSbOCWU%2BpEjYGYHZRsumrpOqpabY7gvX3MkoJYIzkChmt92DQzGMdwZcaAfPTswSUBPMxWlCb53ffnDm42kEjYTe%2FyIz%2F6Z28rhnS4Wsfeiak1MXTj8RBWatE%2B9fHhc7AVIdmN4e%2BxZ3CSngYXiMOR8kHnDikWcG9gjx%2Fo%2F2peNZQp3DcS0GEQmcVIJvJA%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/206696196985?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=canon-28-70mm-f2-8&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9LRxOR2egQM%2Fy8M2QYrMjS14ozqZjGeOkxaEpniSOOwADXH5Dq99dKX9g5XMpbesV9macNv4SBsa6HO09WLbS6c0NJWAX7YnheVz%2F9ziQSDWwM7pcvRQuOq5E1fGQqhRmPh0tzY7t%2BxnPN4s31W1EFyL8u6Ez1Xu1IANjQgRuoPF%2F6Cx%2F2tmJOQf4YvcgcMF8%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-08T06:02:15Z"
+      "resolved_at": "2026-10-08T06:02:15Z",
+      "unbound_listings": [
+        {
+          "item_id": "198637924274",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/198637924274?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FcyjSbOCWU%2BpEjYGYHZRsumrpOqpabY7gvX3MkoJYIzkChmt92DQzGMdwZcaAfPTswSUBPMxWlCb53ffnDm42kEjYTe%2FyIz%2F6Z28rhnS4Wsfeiak1MXTj8RBWatE%2B9fHhc7AVIdmN4e%2BxZ3CSngYXiMOR8kHnDikWcG9gjx%2Fo%2F2peNZQp3DcS0GEQmcVIJvJA%3D",
+          "unbound_at": "2026-11-18T18:09:32Z",
+          "market_title": "[Almost MINT]  Canon EF 28-70mm f/2.8L USM Zoom Lens L Series From JAPAN",
+          "image": "https://i.ebayimg.com/images/g/sbYAAeSwHYBqph-d/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "289.99",
+            "currency": "USD",
+            "as_of": "2026-10-08T06:02:15Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the RF 28-70mm f/2.8 IS STM; listing was a used EF 28-70mm f/2.8L",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Canon RF 28-70mm f/2.8 IS STM"
+      },
+      "bound_listings": [
+        {
+          "item_id": "206696196985",
+          "epid": "",
+          "title": "Canon RF 28-70mm f/2.8 IS STM Lens - 6535C002 - NEW",
+          "listing_mpn": "6535C002",
+          "bound_at": "2026-11-18T20:25:12Z",
+          "method": "part-number-match",
+          "query": "Canon 6535C002",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "canon-16-28mm-f2-8": {
       "contamination_key": "canon-16-28mm-f2-8",
@@ -20360,6 +20838,9 @@
         "wikipedia_title": "Nikon_Z8",
         "wikipedia_title_resolved": "Nikon Z8",
         "wikipedia_stamped_at": "2026-09-05T02:34:57Z"
+      },
+      "overrides": {
+        "display_name": "Nikon Z8"
       }
     },
     "canon-eos-r5-ii": {
@@ -23058,7 +23539,7 @@
       "gtin": "00085126321567",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "377396218049",
+        "ebay_legacy_item_id": "377556698632",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -23068,7 +23549,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "",
+        "mpn": "323965",
         "gtin_provenance": {
           "chosen_source": "product.gtins",
           "conflict": false,
@@ -23103,22 +23584,27 @@
             }
           ]
         },
-        "market_title": "Zhongyi Mitakon 85mm F1.2 Manual Full Frame Lens for EF/RF/E/X/GFX/F/Z/L/K-mount",
-        "image": "https://i.ebayimg.com/images/g/f00AAeSw65Bqcwv5/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/q44AAOSwZQxg~t6g/s-l640.jpg",
-        "price_seen": {
-          "value": "504.67",
-          "currency": "USD",
-          "as_of": "2026-09-22T16:03:41Z"
-        },
         "brand_provenance": {
           "method": "feed-verified-correction",
           "note": "identity came from a Zhongyi Mitakon 85mm F1.2 eBay listing; the card and its page are the Sigma; approved by Lee 2026-11-05 (contamination review)",
           "corrected_from": "Zhongyi"
+        },
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "listing is a Zhongyi Mitakon 85mm f/1.2; card name and reviews 8/8 are the Sigma 85mm F1.2 DG Art",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "market_title": "Sigma 85mm f/1.2 DG Art Full-Frame Portrait Prime Lens (Sony E)",
+        "image": "https://i.ebayimg.com/images/g/S0sAAeSwFEFqyMSP/s-l1600.jpg",
+        "price_seen": {
+          "value": "1599.00",
+          "currency": "USD",
+          "as_of": "2026-11-18T20:25:29Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377396218049?var=645716280330&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BvYUUAS3qx%2FaFbZKelJREjJzBHHouUumVipZCr355EAGGYJXZkHEXVNSajZrcS4AtKqCBDsQ8AVKmPbspwsLUYXq3THVywE4mwiEconkwaKvsK7cQySkCIKZc56ocU1JuZqcKfK7dKH5mqBJaMpxloW4DmcR9XT2Sp0AKPvOFZqv9Cg9EsTiU%2BWuDw0rs4MkU%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/377556698632?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=sigma-85mm-f1-2&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FsE9%2FwD%2BrmoJHVKpPKhDzEGGBL5KwARrkOkDj13Puv4CmqBRmM50tEyiW8wX1bXFa8ku7%2FfqvYzLLomm1XtOAoWWz49KrIPxV2mA372K%2F2Q0UwXQvz%2BgokghkWENBvPiFzrbdDQhWNg4VDxniVOCO6mueVHhYLUdPc2VKgj24FMcD%2FuePUmos7a6s8rJJD2Mc%3D",
         "amazon_asin": null
       },
       "needs_review": true,
@@ -23130,134 +23616,41 @@
         "observed": "https://www.sigma-global.com/en/lenses/a026_85_12/",
         "discovered_by": "resolve_spec_surface",
         "curated_at": "2026-09-15"
-      }
-    },
-    "ricoh-40mm": {
-      "contamination_key": "ricoh-40mm",
-      "vendor": "Ricoh",
-      "model": "40mm",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "267719223204",
-        "amazon_asin": null
       },
-      "unspsc": null,
-      "facet": "body",
-      "marketplace_categories": {
-        "ebay_category_id": "15230"
-      },
-      "identity": {
-        "brand": "Ricoh",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": true,
-          "observations": [
-            {
-              "source": "secondpass:candidate",
-              "identifier_type": "GTIN",
-              "raw": "04549212303739",
-              "gtin14": "04549212303739",
-              "valid": true,
-              "item_id": "v1|137914379186|0",
-              "epid": "9058118463"
-            },
-            {
-              "source": "secondpass:candidate",
-              "identifier_type": "GTIN",
-              "raw": "00027075306318",
-              "gtin14": "00027075306318",
-              "valid": true,
-              "item_id": "v1|900073466219|0",
-              "epid": "22066954349"
-            },
-            {
-              "source": "secondpass:candidate",
-              "identifier_type": "GTIN",
-              "raw": "00027075303973",
-              "gtin14": "00027075303973",
-              "valid": true,
-              "item_id": "v1|287673298602|0",
-              "epid": "11050619134"
-            },
-            {
-              "source": "secondpass:candidate",
-              "identifier_type": "GTIN",
-              "raw": "00027075111004",
-              "gtin14": "00027075111004",
-              "valid": true,
-              "item_id": "v1|307265346794|0",
-              "epid": "99710646"
-            }
-          ],
-          "recovery": {
-            "method": "ebay-secondpass",
-            "query": "Ricoh 40mm",
-            "verdict": "CONFLICT-DROP",
-            "recovered_at": "2026-11-09T09:38:16Z",
-            "n_candidates": 4,
-            "n_gtin_bearing": 4,
-            "distinct_gtins": [
-              "00027075111004",
-              "00027075303973",
-              "00027075306318",
-              "04549212303739"
-            ],
-            "model_token": "40mm",
-            "candidates": [
-              {
-                "item_id": "v1|137914379186|0",
-                "epid": "9058118463",
-                "gtin": "04549212303739",
-                "chosen_source": "product.gtins",
-                "title": "Ricoh GR IIIx 24MP f/2.8 40mm Compact Digital Camera w/ Extras",
-                "token_match": true
-              },
-              {
-                "item_id": "v1|900073466219|0",
-                "epid": "22066954349",
-                "gtin": "00027075306318",
-                "chosen_source": "aspect",
-                "title": "Ricoh GR IIIx HDF 24MP APS-C Compact Camera 40mm f/2.8 Only 28 Shutter",
-                "token_match": true
-              },
-              {
-                "item_id": "v1|287673298602|0",
-                "epid": "11050619134",
-                "gtin": "00027075303973",
-                "chosen_source": "aspect",
-                "title": "Ricoh GV-3 External Viewfinder for GR IIIx (40mm FOV equivalent)",
-                "token_match": true
-              },
-              {
-                "item_id": "v1|307265346794|0",
-                "epid": "99710646",
-                "gtin": "00027075111004",
-                "chosen_source": "product.gtins",
-                "title": "smc PENTAX DA 40mm f/2.8 Limited Lens (Pentax K Mount) [Near Mint] US ",
-                "token_match": true
-              }
-            ]
-          }
-        },
-        "market_title": "Ricoh 126-C Auto CDS Camera 126 Film Camera 40mm F 2.8 Rikenon Lens - NO BATTERY",
-        "image": "https://i.ebayimg.com/images/g/NakAAeSwvAFqS2ye/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "49.99",
-          "currency": "USD",
-          "as_of": "2026-09-06T04:01:51Z"
+      "unbound_listings": [
+        {
+          "item_id": "377396218049",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/377396218049?var=645716280330&mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BvYUUAS3qx%2FaFbZKelJREjJzBHHouUumVipZCr355EAGGYJXZkHEXVNSajZrcS4AtKqCBDsQ8AVKmPbspwsLUYXq3THVywE4mwiEconkwaKvsK7cQySkCIKZc56ocU1JuZqcKfK7dKH5mqBJaMpxloW4DmcR9XT2Sp0AKPvOFZqv9Cg9EsTiU%2BWuDw0rs4MkU%3D",
+          "unbound_at": "2026-11-18T18:49:10Z",
+          "market_title": "Zhongyi Mitakon 85mm F1.2 Manual Full Frame Lens for EF/RF/E/X/GFX/F/Z/L/K-mount",
+          "image": "https://i.ebayimg.com/images/g/f00AAeSw65Bqcwv5/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/q44AAOSwZQxg~t6g/s-l640.jpg",
+          "price_seen": {
+            "value": "504.67",
+            "currency": "USD",
+            "as_of": "2026-09-22T16:03:41Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "listing is a Zhongyi Mitakon 85mm f/1.2; card name and reviews 8/8 are the Sigma 85mm F1.2 DG Art",
+          "tool": "fix_wrong_listing"
         }
+      ],
+      "overrides": {
+        "display_name": "Sigma 85mm f/1.2 DG Art"
       },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/267719223204?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9DLYv8pibpVoodWqtR5Dim29zo0K6n5mmoJC53XFAqW%2BJLMh6VQGRNeRSzC0DUBaJfeQNviu3xcFx2mH3gOiqNer49jmGTHPm76aerbwT1PM%2BhDjvWtfQeSuaIEHq5fdtWB90MNX78ETFeZ0AuRflo6%2BRhAzltKdbM4rxhG%2Bsm%2F1Xaf7VF79HHkd0j7MXyRjU%3D",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-09-06T04:01:51Z"
+      "bound_listings": [
+        {
+          "item_id": "377556698632",
+          "epid": "",
+          "title": "Sigma 85mm f/1.2 DG Art Full-Frame Portrait Prime Lens (Sony E)",
+          "listing_mpn": "323965",
+          "bound_at": "2026-11-18T20:25:29Z",
+          "method": "part-number-match",
+          "query": "Sigma 323965",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "dji-air-2-works-perfectly": {
       "contamination_key": "dji-air-2-works-perfectly",
@@ -24556,7 +24949,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-06T18:02:01Z"
+      "resolved_at": "2026-09-06T18:02:01Z",
+      "overrides": {
+        "display_name": "Canon EF 20mm f/2.8 USM"
+      }
     },
     "nikon-35-200mm-f3-5": {
       "contamination_key": "nikon-35-200mm-f3-5",
@@ -26278,8 +26674,8 @@
       "model": "14mm f2.8",
       "gtin": null,
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "267771333141",
+        "ebay_epid": "99696945",
+        "ebay_legacy_item_id": "116739224905",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -26289,7 +26685,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "2045B002",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": true,
@@ -26363,23 +26759,83 @@
             ]
           }
         },
-        "market_title": "Canon EF 14mm f2.8 L USM Lens",
-        "image": "https://i.ebayimg.com/images/g/q5sAAeSwSHBqlFF9/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews naming a version are 4/4 the EF 14mm f/2.8L II USM (RF 14mm f/1.4 excluded: not f/2.8); listing was the gen-I EF 14mm f/2.8L USM",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/adgAAOSw4jVgpSmq/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-18T19:34:57Z",
+          "query": "Canon 2045B002",
+          "winner": {
+            "item_id": "v1|116739224905|0",
+            "epid": "99696945",
+            "title": "Canon EF 14mm f/2.8L II USM Ultra-Wide Angle Lens - 2045B002"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|116739224905|0",
+              "epid": "99696945",
+              "title": "Canon EF 14mm f/2.8L II USM Ultra-Wide Angle Lens - 2045B002",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        },
+        "market_title": "Canon EF 14mm f/2.8L II USM Ultra-Wide Angle Lens - 2045B002",
+        "image": "https://i.ebayimg.com/images/g/MG0AAeSwBTVoohS4/s-l1600.jpg",
         "price_seen": {
-          "value": "349.00",
+          "value": "1235.99",
           "currency": "USD",
-          "as_of": "2026-09-09T04:01:48Z"
+          "as_of": "2026-11-18T20:25:10Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/267771333141?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9Z6%2BFDPmuQgPXFJ7u1aiKAopE8ZQN6zObS0QGSwWatRjrBq9kapO9rBlVz0lmR%2F8IUazUgPctpOCaPxMQ0nlkic%2BEauZuIE7NGtVvZzkM8tAZrjeiwSMuGKhguudhwesbQWCG12a2UNZHM8RMjsYF%2BFA3NFl3GFHtV9bqqlDSSHDEn0CyXQbJCbAnoZLigghg%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/116739224905?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=canon-14mm-f2-8&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9b%2BgDwcbR5JQkNc8pyJqkWNalOv8Kp7LL4ip9ba0mdD6sfpnieqBNuZHTAdY97XVVy6BMOPMiTS2D%2BaaPx%2Bc%2FgQEeVD%2FkFWtCYdYgSmV3DegCT48E%2BXkvII0e5xB0WYXxp%2BC8hgyC9AOPmZP1mIIzVEDkDNzQB8K%2BOgfZbCsBTV5aKA5BtTaokL%2Bxu1bfUuqo%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-09T04:01:48Z"
+      "resolved_at": "2026-09-09T04:01:48Z",
+      "unbound_listings": [
+        {
+          "item_id": "267771333141",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/267771333141?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9Z6%2BFDPmuQgPXFJ7u1aiKAopE8ZQN6zObS0QGSwWatRjrBq9kapO9rBlVz0lmR%2F8IUazUgPctpOCaPxMQ0nlkic%2BEauZuIE7NGtVvZzkM8tAZrjeiwSMuGKhguudhwesbQWCG12a2UNZHM8RMjsYF%2BFA3NFl3GFHtV9bqqlDSSHDEn0CyXQbJCbAnoZLigghg%3D",
+          "unbound_at": "2026-11-18T19:33:56Z",
+          "market_title": "Canon EF 14mm f2.8 L USM Lens",
+          "image": "https://i.ebayimg.com/images/g/q5sAAeSwSHBqlFF9/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "349.00",
+            "currency": "USD",
+            "as_of": "2026-09-09T04:01:48Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews naming a version are 4/4 the EF 14mm f/2.8L II USM (RF 14mm f/1.4 excluded: not f/2.8); listing was the gen-I EF 14mm f/2.8L USM",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Canon EF 14mm f/2.8L II USM"
+      },
+      "bound_listings": [
+        {
+          "item_id": "116739224905",
+          "epid": "99696945",
+          "title": "Canon EF 14mm f/2.8L II USM Ultra-Wide Angle Lens - 2045B002",
+          "listing_mpn": "2045B002",
+          "bound_at": "2026-11-18T20:25:10Z",
+          "method": "part-number-match",
+          "query": "Canon 2045B002",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "manfrotto-mm294a4-section-aluminum-monopod": {
       "contamination_key": "manfrotto-mm294a4-section-aluminum-monopod",
@@ -26902,7 +27358,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "336761366373",
+        "ebay_legacy_item_id": "227426893194",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -26912,29 +27368,103 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "",
+        "mpn": "1362C002",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "Canon FD 28mm f/3.5 Manual Focus Wide Angle Lens W/Caps & Filter",
-        "image": "https://i.ebayimg.com/images/g/JSsAAeSwJmhqjfSn/s-l1600.jpg",
-        "image_catalog": "",
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 9 of 11 naming a version are the EF-M 28mm f/3.5 Macro IS STM (FL 2, FD 0); listing was a used FD 28mm f/3.5",
+          "tool": "fix_wrong_listing",
+          "corrected_from": ""
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/0~kAAOSw8S9eThtj/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-18T19:35:00Z",
+          "query": "Canon 1362C002",
+          "winner": {
+            "item_id": "v1|126838956341|0",
+            "epid": "230271029",
+            "title": "Canon EF-M 28mm f/3.5 Macro single focus lens for Mirrorless Digital Camera"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|168863270455|0",
+              "epid": "230271029",
+              "title": "Canon EF-M 28mm F/3.5 Macro IS STM Prime Lens ",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|227426893194|0",
+              "epid": "230271029",
+              "title": "Canon EF-M 28mm f/3.5 macro IS STM Prime Lens for Mirrorless w/Caps from Japan",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|126838956341|0",
+              "epid": "230271029",
+              "title": "Canon EF-M 28mm f/3.5 Macro single focus lens for Mirrorless Digital Camera",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        },
+        "market_title": "Canon EF-M 28mm f/3.5 macro IS STM Prime Lens for Mirrorless w/Caps from Japan",
+        "image": "https://i.ebayimg.com/images/g/4aAAAeSwt25qUlEv/s-l1600.jpg",
         "price_seen": {
-          "value": "62.87",
+          "value": "218.00",
           "currency": "USD",
-          "as_of": "2026-09-09T12:00:45Z"
+          "as_of": "2026-11-18T20:25:14Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/336761366373?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/227426893194?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=canon-28mm-f3-5&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9V2etlSotAdYkCKkjUNePQ5bOHTC8CAxcvfqmwx8j7mNoLTPTHeqjg1zCA9%2BXMAl71qHehV%2BA1fj%2BxGQRq5sP1n1R45%2F0SWHgCHR9UEZMxFcbdpTHJg4JiHDbOgXikimkm0Uukc%2FwGWzt2REd%2BIllcKNWrYE3zeHfjtOlJhV4bPAu27zKhvNG%2BTdYaEOpw3x4%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-09T12:00:45Z"
+      "resolved_at": "2026-09-09T12:00:45Z",
+      "unbound_listings": [
+        {
+          "item_id": "336761366373",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/336761366373?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+          "unbound_at": "2026-11-18T19:33:56Z",
+          "market_title": "Canon FD 28mm f/3.5 Manual Focus Wide Angle Lens W/Caps & Filter",
+          "image": "https://i.ebayimg.com/images/g/JSsAAeSwJmhqjfSn/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "62.87",
+            "currency": "USD",
+            "as_of": "2026-09-09T12:00:45Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 9 of 11 naming a version are the EF-M 28mm f/3.5 Macro IS STM (FL 2, FD 0); listing was a used FD 28mm f/3.5",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Canon EF-M 28mm f/3.5 Macro IS STM"
+      },
+      "bound_listings": [
+        {
+          "item_id": "227426893194",
+          "epid": "",
+          "title": "Canon EF-M 28mm f/3.5 macro IS STM Prime Lens for Mirrorless w/Caps from Japan",
+          "listing_mpn": "1362C002",
+          "bound_at": "2026-11-18T20:25:14Z",
+          "method": "part-number-match",
+          "query": "Canon 1362C002",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "fujifilm-x100rf": {
       "contamination_key": "fujifilm-x100rf",
@@ -28970,36 +29500,6 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-09-09T22:50:48Z"
-    },
-    "nikon-z-28": {
-      "contamination_key": "nikon-z-28",
-      "vendor": "Nikon",
-      "model": "z 28",
-      "gtin": "018208201259",
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "",
-      "marketplace_categories": {
-        "ebay_category_id": ""
-      },
-      "identity": {
-        "mpn": "20125",
-        "brand": "Nikon",
-        "market_title": "Nikon NIKKOR Z 28-400mm f/4-8 VR Lens",
-        "image": "https://www.adorama.com/images/Large/NKZ28400.jpg"
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-nikkor-z-28-400-mm-f-4-8-vr-lens%2Fp%2Fnkz28400",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-09-09T22:50:57Z"
     },
     "fujifilm-30mm-f2.8": {
       "contamination_key": "fujifilm-30mm-f2.8",
@@ -33705,7 +34205,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "198635288018",
+        "ebay_legacy_item_id": "327374651327",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -33715,7 +34215,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "NA",
+        "mpn": "20113",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -33729,43 +34229,82 @@
             }
           ]
         },
-        "market_title": "Nikon Nikkor ED AF-I 600mm f/4 D ED Telephoto Great Condition ",
-        "image": "https://i.ebayimg.com/images/g/xtYAAeSwNyZqpJO1/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/N9kAAOSw7PljcNvJ/s-l640.png",
-        "price_seen": {
-          "value": "1650.00",
-          "currency": "USD",
-          "as_of": "2026-09-12T04:02:29Z"
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the Z 600mm f/4 TC VR S; listing was a used AF-I 600mm f/4D",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "NA"
         },
-        "image_provenance": {
-          "recovered_by": "image-second-pass",
-          "recovered_at": "2026-09-12T04:36:32Z",
-          "query": "Nikon NA",
-          "winner": {
-            "item_id": "v1|188853889802|0",
-            "epid": "1479686366",
-            "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938"
-          },
-          "epid_match": false,
-          "inspected": [
-            {
-              "item_id": "v1|188853889802|0",
-              "epid": "1479686366",
-              "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938",
-              "had_catalog": true,
-              "accepted": true
-            }
-          ]
+        "market_title": "NIKKOR Z 600mm f/4 TC VR S",
+        "image": "https://i.ebayimg.com/images/g/R5cAAeSwEJBq~FMV/s-l1600.jpg",
+        "price_seen": {
+          "value": "13739.95",
+          "currency": "USD",
+          "as_of": "2026-11-18T20:25:26Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/198635288018?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BqXIAQ%2F%2BNQpGjrxGT4hXHrePzFao6rszrZ0mTdHiLQ4RCgKLoLQU2tumkX0NqN57FmOzDoD6h8rrYMPCPrtv%2BHBDtthxfKw8Ck9fM0VohcMULJdBmRN%2FpmzvrdyEDcRyepLWExukFuqMFcxHoY%2FLQ7jVFWciMw8DoqgI4cdbYewqwQoD3VG68OvRj1y%2FvPqLY%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/327374651327?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=nikon-600mm-f4&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8lKBpjOiwTpKbNtWxzYNUe5QZbK20aQYManyyj2eKV%2F0Pl3Vtu5Anwi8OPUVL%2Bed45Gv8zLVvPZF4XiCTynQmla%2Fjctbj3laMgpFVFP5JHefUKOQEMV22%2Bfv94pJofdFviGRyW9MUNQAbfPokh1lPqK6QPW9xHKV%2B4uKR6UFEV5BcEC4mq0YhMLpVIF8SPnLk%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-12T04:02:29Z"
+      "resolved_at": "2026-09-12T04:02:29Z",
+      "unbound_listings": [
+        {
+          "item_id": "198635288018",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/198635288018?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BqXIAQ%2F%2BNQpGjrxGT4hXHrePzFao6rszrZ0mTdHiLQ4RCgKLoLQU2tumkX0NqN57FmOzDoD6h8rrYMPCPrtv%2BHBDtthxfKw8Ck9fM0VohcMULJdBmRN%2FpmzvrdyEDcRyepLWExukFuqMFcxHoY%2FLQ7jVFWciMw8DoqgI4cdbYewqwQoD3VG68OvRj1y%2FvPqLY%3D",
+          "unbound_at": "2026-11-18T18:09:33Z",
+          "market_title": "Nikon Nikkor ED AF-I 600mm f/4 D ED Telephoto Great Condition ",
+          "image": "https://i.ebayimg.com/images/g/xtYAAeSwNyZqpJO1/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/N9kAAOSw7PljcNvJ/s-l640.png",
+          "image_provenance": {
+            "recovered_by": "image-second-pass",
+            "recovered_at": "2026-09-12T04:36:32Z",
+            "query": "Nikon NA",
+            "winner": {
+              "item_id": "v1|188853889802|0",
+              "epid": "1479686366",
+              "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938"
+            },
+            "epid_match": false,
+            "inspected": [
+              {
+                "item_id": "v1|188853889802|0",
+                "epid": "1479686366",
+                "title": "^ Nikon AF NIKKOR 50mm f/1.4D Lens & NA C-Mount Adapter #X8938",
+                "had_catalog": true,
+                "accepted": true
+              }
+            ]
+          },
+          "price_seen": {
+            "value": "1650.00",
+            "currency": "USD",
+            "as_of": "2026-09-12T04:02:29Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the Z 600mm f/4 TC VR S; listing was a used AF-I 600mm f/4D",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 600mm f/4 TC VR S"
+      },
+      "bound_listings": [
+        {
+          "item_id": "327374651327",
+          "epid": "",
+          "title": "NIKKOR Z 600mm f/4 TC VR S",
+          "listing_mpn": "20113",
+          "bound_at": "2026-11-18T20:25:26Z",
+          "method": "part-number-match",
+          "query": "Nikon 20113",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "profoto-d2i-industrial-1000ws-air": {
       "contamination_key": "profoto-d2i-industrial-1000ws-air",
@@ -34574,7 +35113,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "147567082129",
+        "ebay_legacy_item_id": "352616530860",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -34584,7 +35123,7 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "2215",
+        "mpn": "20081",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": true,
@@ -34692,40 +35231,90 @@
             ]
           }
         },
-        "market_title": "Nikon Nikkor AF-S 35mm f1.8 G ED Lens #742",
-        "image": "https://i.ebayimg.com/images/g/g44AAeSwp-ZqpI3P/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "330.23",
-          "currency": "USD",
-          "as_of": "2026-09-14T16:03:20Z"
-        },
         "mpn_provenance": {
-          "chosen_source": "adorama_feed",
-          "conflict": false,
-          "observations": [
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the Z 35mm f/1.8 S; listing and new-price pin were the AF-S 35mm f/1.8G ED",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "2215"
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/46wAAOSwSItjpDwC/s-l1600.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-18T18:29:12Z",
+          "query": "Nikon 20081",
+          "winner": {
+            "item_id": "v1|304928864096|0",
+            "epid": "24023612776",
+            "title": "Nikon NIKKOR Z 35mm f/1.8 S Lens - 20081"
+          },
+          "epid_match": false,
+          "inspected": [
             {
-              "source": "adorama_feed",
-              "mpn": "2215",
-              "product_code": "nk3518edu",
-              "feed_gtin": "018208022151",
-              "feed_brand": "Nikon",
-              "title": "Nikon 35mm f/1.8G AF-S ED NIKKOR Lens for DSLR Cameras",
-              "snapshot": "2026-11-05",
-              "rule": "code nk3518edu",
-              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
+              "item_id": "v1|117475544921|0",
+              "epid": "24023612776",
+              "title": "Nikon NIKKOR Z 35mm f/1.8 S Lens Full Frame Mirrorless Z Mount Wide Angle 20081",
+              "had_catalog": false,
+              "accepted": false
+            },
+            {
+              "item_id": "v1|304928864096|0",
+              "epid": "24023612776",
+              "title": "Nikon NIKKOR Z 35mm f/1.8 S Lens - 20081",
+              "had_catalog": true,
+              "accepted": true
             }
           ]
+        },
+        "market_title": "Nikon NIKKOR Z 35mm f/1.8 S Lens 20081",
+        "image": "https://i.ebayimg.com/images/g/ITkAAOSw14xjCP7D/s-l1600.jpg",
+        "price_seen": {
+          "value": "653.00",
+          "currency": "USD",
+          "as_of": "2026-11-18T20:25:25Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/147567082129?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/352616530860?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=nikon-35mm-f1-8&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-14T16:03:20Z"
+      "resolved_at": "2026-09-14T16:03:20Z",
+      "unbound_listings": [
+        {
+          "item_id": "147567082129",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/147567082129?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+          "unbound_at": "2026-11-18T18:28:15Z",
+          "market_title": "Nikon Nikkor AF-S 35mm f1.8 G ED Lens #742",
+          "image": "https://i.ebayimg.com/images/g/g44AAeSwp-ZqpI3P/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "330.23",
+            "currency": "USD",
+            "as_of": "2026-09-14T16:03:20Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the Z 35mm f/1.8 S; listing and new-price pin were the AF-S 35mm f/1.8G ED",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 35mm f/1.8 S"
+      },
+      "bound_listings": [
+        {
+          "item_id": "352616530860",
+          "epid": "",
+          "title": "Nikon NIKKOR Z 35mm f/1.8 S Lens 20081",
+          "listing_mpn": "20081",
+          "bound_at": "2026-11-18T20:25:25Z",
+          "method": "part-number-match",
+          "query": "Nikon 20081",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "fujifilm-x-t4": {
       "contamination_key": "fujifilm-x-t4",
@@ -34886,36 +35475,6 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-09-14T20:01:33Z"
-    },
-    "nikon-z-85": {
-      "contamination_key": "nikon-z-85",
-      "vendor": "Nikon",
-      "model": "z 85",
-      "gtin": "018208201143",
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "",
-      "marketplace_categories": {
-        "ebay_category_id": ""
-      },
-      "identity": {
-        "mpn": "20114",
-        "brand": "Nikon",
-        "market_title": "Nikon NIKKOR Z 85mm f/1.2 S Lens",
-        "image": "https://www.adorama.com/images/Large/NKZ8512.jpg"
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-nikkor-z-85-mm-f-1-2-s-lens%2Fp%2Fnkz8512",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-09-14T20:28:15Z"
     },
     "zhiyun-crane-axis-handheld-gimbal": {
       "contamination_key": "zhiyun-crane-axis-handheld-gimbal",
@@ -36291,7 +36850,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:01:03Z"
+      "resolved_at": "2026-09-15T14:01:03Z",
+      "overrides": {
+        "display_name": "Sony FE 50mm f/1.4 GM"
+      }
     },
     "panasonic-lumix-s-26mm": {
       "contamination_key": "panasonic-lumix-s-26mm",
@@ -36795,7 +37357,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-15T04:03:03Z"
+      "resolved_at": "2026-09-15T04:03:03Z",
+      "overrides": {
+        "display_name": "Nikon AF Nikkor 50mm f/1.8D"
+      }
     },
     "sony-300mm-f2-8": {
       "contamination_key": "sony-300mm-f2-8",
@@ -37333,7 +37898,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-09-15T14:09:28Z"
+      "resolved_at": "2026-09-15T14:09:28Z",
+      "overrides": {
+        "display_name": "Canon EF 85mm f/1.2L II USM"
+      }
     },
     "hasselblad-907x": {
       "contamination_key": "hasselblad-907x",
@@ -43789,7 +44357,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-02T04:02:08Z"
+      "resolved_at": "2026-10-02T04:02:08Z",
+      "overrides": {
+        "display_name": "Nikon AI-S Nikkor 800mm f/5.6 ED IF"
+      }
     },
     "sirui-35mm-f1-4": {
       "contamination_key": "sirui-35mm-f1-4",
@@ -45693,7 +46264,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-09-30T06:01:56Z"
+      "resolved_at": "2026-09-30T06:01:56Z",
+      "overrides": {
+        "display_name": "Nikon NIKKOR 50mm f/2 Ai"
+      }
     },
     "sony-28-70mm-f2": {
       "contamination_key": "sony-28-70mm-f2",
@@ -46133,7 +46707,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-01T04:01:13Z"
+      "resolved_at": "2026-10-01T04:01:13Z",
+      "overrides": {
+        "display_name": "Leica APO-Macro-Elmarit-R 100mm f/2.8"
+      }
     },
     "canon-powershot-sx1": {
       "contamination_key": "canon-powershot-sx1",
@@ -46742,7 +47319,10 @@
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-01T04:03:53Z"
+      "resolved_at": "2026-11-01T04:03:53Z",
+      "overrides": {
+        "display_name": "Nikon Nikkor-S Auto 35mm f/2.8"
+      }
     },
     "olympus-75mm-f1-8": {
       "contamination_key": "olympus-75mm-f1-8",
@@ -47410,47 +47990,6 @@
       "overrides": {
         "display_name": "Insta360 GO 3S"
       }
-    },
-    "minox-ec-minature-elec-flash": {
-      "contamination_key": "minox-ec-minature-elec-flash",
-      "vendor": "Minox",
-      "model": "ec minature elec flash",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "327372069781",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "body",
-      "marketplace_categories": {
-        "ebay_category_id": "31388"
-      },
-      "identity": {
-        "brand": "Minox",
-        "mpn": "MXCEC",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Minox-EC Minature Camera W/Elec-flash",
-        "image": "https://www.adorama.com/images/xlarge/2074992.JPG",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "88.00",
-          "currency": "USD",
-          "as_of": "2026-10-07T04:01:22Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/327372069781?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-10-07T04:01:22Z"
     },
     "gopro-max-8k-360-action": {
       "contamination_key": "gopro-max-8k-360-action",
@@ -48747,8 +49286,8 @@
       "model": "50mm f1.2",
       "gtin": "00082300005800",
       "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "407274669438",
+        "ebay_epid": "9024245383",
+        "ebay_legacy_item_id": "307225929616",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -48758,7 +49297,7 @@
       },
       "identity": {
         "brand": "Canon",
-        "mpn": "1257B002",
+        "mpn": "2959C002",
         "gtin_provenance": {
           "chosen_source": "secondpass:product.gtins",
           "conflict": false,
@@ -48855,60 +49394,103 @@
             ]
           }
         },
-        "market_title": "Canon EF 50mm f1.2 L USM Lens #485",
-        "image": "https://i.ebayimg.com/images/g/naYAAeSwE6lqrUzL/s-l1600.jpg",
-        "image_catalog": "https://i.ebayimg.com/images/g/-GYAAOSwyytjgyR6/s-l640.jpg",
-        "price_seen": {
-          "value": "457.42",
-          "currency": "USD",
-          "as_of": "2026-10-09T06:00:44Z"
-        },
         "mpn_provenance": {
-          "chosen_source": "adorama_feed",
-          "conflict": false,
-          "observations": [
-            {
-              "source": "adorama_feed",
-              "mpn": "1257B002",
-              "product_code": "ca5012afu",
-              "feed_gtin": "013803064551",
-              "feed_brand": "Canon",
-              "title": "Canon EF 50mm f/1.2L USM Lens",
-              "snapshot": "2026-11-05",
-              "rule": "code ca5012afu",
-              "note": "group-C sort 2026-11-05: reviewed row, matcher-simulated, approved by Lee"
-            }
-          ]
+          "method": "wrong-listing-correction",
+          "reason": "reviews 3/3 are the RF 50mm f/1.2L USM; listing and new-price pin were the EF 50mm f/1.2L USM",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "1257B002"
         },
+        "image_catalog": "https://i.ebayimg.com/images/g/AJ4AAOSwGzNeTevL/s-l640.jpg",
         "image_provenance": {
           "recovered_by": "image-second-pass",
-          "recovered_at": "2026-11-06T04:45:07Z",
-          "query": "Canon 1257B002",
+          "recovered_at": "2026-11-18T18:29:08Z",
+          "query": "Canon 2959C002",
           "winner": {
-            "item_id": "v1|391817148703|0",
-            "epid": "99723263",
-            "title": "Canon EF 50mm f/1.2L USM Lens 1257B002"
+            "item_id": "v1|307225929616|0",
+            "epid": "9024245383",
+            "title": "Canon RF 50mm f/1.2L USM Lens - 2959C002"
           },
           "epid_match": false,
           "inspected": [
             {
-              "item_id": "v1|391817148703|0",
-              "epid": "99723263",
-              "title": "Canon EF 50mm f/1.2L USM Lens 1257B002",
+              "item_id": "v1|307225929616|0",
+              "epid": "9024245383",
+              "title": "Canon RF 50mm f/1.2L USM Lens - 2959C002",
               "had_catalog": true,
               "accepted": true
             }
           ]
+        },
+        "market_title": "Canon RF 50mm f/1.2L USM Lens - 2959C002",
+        "image": "https://i.ebayimg.com/images/g/qqcAAeSwFPtqy4f3/s-l1600.jpg",
+        "price_seen": {
+          "value": "2217.48",
+          "currency": "USD",
+          "as_of": "2026-11-18T20:25:16Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/407274669438?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9pepamSrV4taHMw%2BdZcu5LGWmIrfCeD5mLUxk6p%2F1TN7dxcPGL7tfV5ac6FZk988TfSvf9O3D4rlmtD0pYPnJDLviUHDUSm%2B1S%2BdHu4Vx9J5In6QaQ%2FTdVZMQRmBFuJv7LreQraSCQfuNvwtObRVQIKtSsdimE2qqZxxul8AfZ5KZgzcl2uHPvgx7XVP6q36w%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/307225929616?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=canon-50mm-f1-2&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2FRmiJ6lk7xQb74gok%2BoC4R2yD0%2BYkkeUYbpODuHK8MY9HEjAPf7mgRNaBEzAZmIJhBYq7jgrTd306AC04EkxLxtSPNevp6kkfkny0Cx5aFCUm2JbO60LHKQFfQ5gj6D6lXN90vHXzc4VXV5VvZc%2Bufw08gNF2OSxulwZP5hCqPWVKJBBgWW4flAa36yhzrE9w%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-10-09T06:00:44Z"
+      "resolved_at": "2026-10-09T06:00:44Z",
+      "unbound_listings": [
+        {
+          "item_id": "407274669438",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/407274669438?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9pepamSrV4taHMw%2BdZcu5LGWmIrfCeD5mLUxk6p%2F1TN7dxcPGL7tfV5ac6FZk988TfSvf9O3D4rlmtD0pYPnJDLviUHDUSm%2B1S%2BdHu4Vx9J5In6QaQ%2FTdVZMQRmBFuJv7LreQraSCQfuNvwtObRVQIKtSsdimE2qqZxxul8AfZ5KZgzcl2uHPvgx7XVP6q36w%3D",
+          "unbound_at": "2026-11-18T18:28:15Z",
+          "market_title": "Canon EF 50mm f1.2 L USM Lens #485",
+          "image": "https://i.ebayimg.com/images/g/naYAAeSwE6lqrUzL/s-l1600.jpg",
+          "image_catalog": "https://i.ebayimg.com/images/g/-GYAAOSwyytjgyR6/s-l640.jpg",
+          "image_provenance": {
+            "recovered_by": "image-second-pass",
+            "recovered_at": "2026-11-06T04:45:07Z",
+            "query": "Canon 1257B002",
+            "winner": {
+              "item_id": "v1|391817148703|0",
+              "epid": "99723263",
+              "title": "Canon EF 50mm f/1.2L USM Lens 1257B002"
+            },
+            "epid_match": false,
+            "inspected": [
+              {
+                "item_id": "v1|391817148703|0",
+                "epid": "99723263",
+                "title": "Canon EF 50mm f/1.2L USM Lens 1257B002",
+                "had_catalog": true,
+                "accepted": true
+              }
+            ]
+          },
+          "price_seen": {
+            "value": "457.42",
+            "currency": "USD",
+            "as_of": "2026-10-09T06:00:44Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 3/3 are the RF 50mm f/1.2L USM; listing and new-price pin were the EF 50mm f/1.2L USM",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Canon RF 50mm f/1.2L USM"
+      },
+      "bound_listings": [
+        {
+          "item_id": "307225929616",
+          "epid": "9024245383",
+          "title": "Canon RF 50mm f/1.2L USM Lens - 2959C002",
+          "listing_mpn": "2959C002",
+          "bound_at": "2026-11-18T20:25:16Z",
+          "method": "part-number-match",
+          "query": "Canon 2959C002",
+          "tool": "bind_listing"
+        }
+      ]
     },
     "nikon-105mm-f1-4": {
       "contamination_key": "nikon-105mm-f1-4",
@@ -51328,7 +51910,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-14T12:01:48Z"
+      "resolved_at": "2026-10-14T12:01:48Z",
+      "overrides": {
+        "display_name": "TTArtisan AF 24mm f/3.8"
+      }
     },
     "canon-600mm-f11": {
       "contamination_key": "canon-600mm-f11",
@@ -54375,7 +54960,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-24T04:01:53Z"
+      "resolved_at": "2026-10-24T04:01:53Z",
+      "overrides": {
+        "display_name": "Leica Summicron-M 35mm f/2 ASPH"
+      }
     },
     "ttartisan-50mm-f1-2": {
       "contamination_key": "ttartisan-50mm-f1-2",
@@ -54816,47 +55404,6 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-10-24T06:02:38Z"
-    },
-    "nikon-50mm-f2-0": {
-      "contamination_key": "nikon-50mm-f2-0",
-      "vendor": "Nikon",
-      "model": "50mm f2.0",
-      "gtin": null,
-      "marketplace_ids": {
-        "ebay_epid": "",
-        "ebay_legacy_item_id": "327419965617",
-        "amazon_asin": null
-      },
-      "unspsc": null,
-      "facet": "lens",
-      "marketplace_categories": {
-        "ebay_category_id": "3323"
-      },
-      "identity": {
-        "brand": "Nikon",
-        "mpn": "",
-        "gtin_provenance": {
-          "chosen_source": null,
-          "conflict": false,
-          "observations": []
-        },
-        "market_title": "Nikon Nikkor-H 50mm F2 Non-Ai Lens",
-        "image": "https://i.ebayimg.com/images/g/9JUAAeSwu6Vq244F/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "50.00",
-          "currency": "USD",
-          "as_of": "2026-10-24T08:00:58Z"
-        }
-      },
-      "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/327419965617?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
-        "amazon_asin": null
-      },
-      "needs_review": true,
-      "source": "resolved",
-      "minted_needs_review": false,
-      "resolved_at": "2026-10-24T08:00:58Z"
     },
     "olympus-300mm-f4-0": {
       "contamination_key": "olympus-300mm-f4-0",
@@ -56767,7 +57314,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-29T04:04:02Z"
+      "resolved_at": "2026-10-29T04:04:02Z",
+      "overrides": {
+        "display_name": "Canon PowerShot S3 IS"
+      }
     },
     "canon-400mm-f2-8": {
       "contamination_key": "canon-400mm-f2-8",
@@ -58619,7 +59169,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-30T04:01:38Z"
+      "resolved_at": "2026-10-30T04:01:38Z",
+      "overrides": {
+        "display_name": "Tamron SP 28-80mm f/3.5-4.2 (27A)"
+      }
     },
     "canon-powershot-sx540": {
       "contamination_key": "canon-powershot-sx540",
@@ -58958,7 +59511,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "336850398277",
+        "ebay_legacy_item_id": "",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -58968,29 +59521,49 @@
       },
       "identity": {
         "brand": "Nikon",
-        "mpn": "201287",
+        "mpn": "20135",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
           "observations": []
         },
-        "market_title": "🎦 [Almost Unused] Nikon AF-S NIKKOR 120-300mm f2.8E FL ED SR VR Zoom Lens JAPAN",
-        "image": "https://i.ebayimg.com/images/g/zwAAAeSwrGRqEkh7/s-l1600.jpg",
-        "image_catalog": "",
-        "price_seen": {
-          "value": "7999.99",
-          "currency": "USD",
-          "as_of": "2026-10-30T06:03:40Z"
+        "mpn_provenance": {
+          "method": "wrong-listing-correction",
+          "reason": "reviews 20/20 are the Z 120-300mm f/2.8 TC VR S; listing was the F-mount AF-S 120-300mm f/2.8E",
+          "tool": "fix_wrong_listing",
+          "corrected_from": "201287"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/336850398277?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F942YmN7QOiZbsngczz94Aov1%2B8%2Fev00I2Ek%2BPtOcvbDInMMsPjvzUtBevqBRBTAl4c8%2FV4eS7EPDw%2FIaP7LVCLYEGVLX5EnRCVDY%2Boa1rqBwstaqN1yiX%2Fu%2FnPc54XVkJYEsSFllw2luXn8U%2BRgzuJvxfXayyPrxAtOHaFaNAlHT33MTSzhZsyh1Sn30UsJk%3D",
+        "ebay_epn_url": "",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-30T06:03:40Z"
+      "resolved_at": "2026-10-30T06:03:40Z",
+      "unbound_listings": [
+        {
+          "item_id": "336850398277",
+          "epid": "",
+          "affiliate_url": "https://www.ebay.com/itm/336850398277?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F942YmN7QOiZbsngczz94Aov1%2B8%2Fev00I2Ek%2BPtOcvbDInMMsPjvzUtBevqBRBTAl4c8%2FV4eS7EPDw%2FIaP7LVCLYEGVLX5EnRCVDY%2Boa1rqBwstaqN1yiX%2Fu%2FnPc54XVkJYEsSFllw2luXn8U%2BRgzuJvxfXayyPrxAtOHaFaNAlHT33MTSzhZsyh1Sn30UsJk%3D",
+          "unbound_at": "2026-11-18T18:09:33Z",
+          "market_title": "🎦 [Almost Unused] Nikon AF-S NIKKOR 120-300mm f2.8E FL ED SR VR Zoom Lens JAPAN",
+          "image": "https://i.ebayimg.com/images/g/zwAAAeSwrGRqEkh7/s-l1600.jpg",
+          "image_catalog": "",
+          "price_seen": {
+            "value": "7999.99",
+            "currency": "USD",
+            "as_of": "2026-10-30T06:03:40Z"
+          },
+          "method": "unbind-wrong-product",
+          "reason": "reviews 20/20 are the Z 120-300mm f/2.8 TC VR S; listing was the F-mount AF-S 120-300mm f/2.8E",
+          "tool": "fix_wrong_listing"
+        }
+      ],
+      "overrides": {
+        "display_name": "Nikon NIKKOR Z 120-300mm f/2.8 TC VR S"
+      }
     },
     "canon-20-50mm-f4": {
       "contamination_key": "canon-20-50mm-f4",
@@ -59601,7 +60174,10 @@
       "needs_review": true,
       "source": "generated",
       "minted_needs_review": true,
-      "resolved_at": "2026-10-31T04:47:19Z"
+      "resolved_at": "2026-10-31T04:47:19Z",
+      "overrides": {
+        "display_name": "DJI FPV Goggles V2"
+      }
     },
     "dji-dji-only-powers-on-flies-works-crash-damage-as-is": {
       "contamination_key": "dji-dji-only-powers-on-flies-works-crash-damage-as-is",
@@ -64432,7 +65008,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "296028213926",
+        "ebay_legacy_item_id": "820343278114",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -64442,7 +65018,7 @@
       },
       "identity": {
         "brand": "Sigma",
-        "mpn": "207965",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
           "conflict": false,
@@ -64456,23 +65032,23 @@
             }
           ]
         },
-        "market_title": "Sigma 10-18mm F2.8 DC DN Contemporary for Sony E Mount",
-        "image": "https://i.ebayimg.com/images/g/QPoAAeSwBWJpcr6L/s-l1600.jpg",
+        "market_title": "Sigma 10-18mm f/2.8 DC DN Contemporary Lens For Sony E **NEW IN BOX**",
+        "image": "https://i.ebayimg.com/images/g/U90AAeSwHPhq9JQZ/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "729.00",
+          "value": "699.95",
           "currency": "USD",
-          "as_of": "2026-11-11T04:00:51Z"
+          "as_of": "2026-11-19T06:04:25Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/296028213926?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8Vliq2cNOLXu--iQBs2msXfIYkExMjMQ5IwAhx%2FydQaWC9u3Mxv8yijE2MtpYc9LOq5aliUfGV81PdO1YOSSAYNExHBpT1g2CmUB03jvTUnAeJywW29EQOzh91y0lfvPixy8ULRxJuc5Mc4WnKhxY4Oz5abbwgZm0kDscs0xJkomAtkwK%2F91pZ%2Fz%2FH5J4r7ws%3D",
+        "ebay_epn_url": "https://www.ebay.com/itm/820343278114?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-12T21:02:05Z"
+      "resolved_at": "2026-11-19T06:04:25Z"
     },
     "nikon-20mm-f2.8": {
       "contamination_key": "nikon-20mm-f2.8",
@@ -66514,6 +67090,158 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-18T06:00:51Z"
+    },
+    "dji-replacment-dji-aircraft": {
+      "contamination_key": "dji-replacment-dji-aircraft",
+      "vendor": "DJI",
+      "model": "Replacment DJI Aircraft",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "195537637966",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "182969"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "DJI Mini 3 Aircraft Only Replacement for Crash/Lost Drone New, No Remote/Battery",
+        "image": "https://i.ebayimg.com/images/g/GkcAAOSwwqVjrfgN/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "369.00",
+          "currency": "USD",
+          "as_of": "2026-11-19T04:50:41Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/195537637966?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-19T04:50:41Z"
+    },
+    "gopro-hero8": {
+      "contamination_key": "gopro-hero8",
+      "vendor": "GoPro",
+      "model": "hero8",
+      "gtin": "00818279027532",
+      "marketplace_ids": {
+        "ebay_epid": "7050630439",
+        "ebay_legacy_item_id": "267833856456",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "action_cam",
+      "marketplace_categories": {
+        "ebay_category_id": "11724"
+      },
+      "identity": {
+        "brand": "GoPro",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "product.gtins",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "product.gtins",
+              "identifier_type": "GTIN",
+              "raw": "0818279027532",
+              "gtin14": "00818279027532",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "UPC",
+              "raw": "0818279027532",
+              "gtin14": "00818279027532",
+              "valid": true
+            },
+            {
+              "source": "product.additionalProductIdentities",
+              "identifier_type": "EAN",
+              "raw": "0818279027532",
+              "gtin14": "00818279027532",
+              "valid": true
+            },
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "0818279027532",
+              "gtin14": "00818279027532",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "GoPro Hero 8 Camera Sport - Black",
+        "image": "https://i.ebayimg.com/images/g/520AAeSwqwZq7Bpq/s-l1600.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/JFIAAOSwqsFjpMYq/s-l1600.jpg",
+        "price_seen": {
+          "value": "140.00",
+          "currency": "USD",
+          "as_of": "2026-11-19T06:03:19Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/267833856456?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde9h8vNfXCVdfQoQ64KbUc6FGIFaFMTaKFPUZjmI%2FALwQzaEVGPjuwNvufosNVdeodzPp9j3DQkLhaQoDoQeyAYvxQ2quuHq1iHHe397krgC24MPRvOPeHh006KLz04G%2FN%2BJWs6yLzarIQp1wy%2Bj3Kq0nE7oE64l58jMHZlbKNcjv1KqxLHW3Jy9qbgazeoLsUE%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-19T06:03:19Z"
+    },
+    "canon-powershot-g3": {
+      "contamination_key": "canon-powershot-g3",
+      "vendor": "Canon",
+      "model": "powershot g3",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "206642370228",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon PowerShot G3 4.0MP Compact Digital Camera w/ battery - TESTED Working",
+        "image": "https://i.ebayimg.com/images/g/cuwAAeSwK05q2DoX/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "44.95",
+          "currency": "USD",
+          "as_of": "2026-11-19T06:15:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/206642370228?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-19T06:15:35Z"
     }
   },
   "substrate": [

@@ -570,7 +570,7 @@
     },
     {
       "card_id": "fujifilm-x100v",
-      "display_name": "Fujifilm x100v",
+      "display_name": "Fujifilm X100V",
       "rankable": true,
       "score": 4.6527,
       "mention_boost": 0.0,
@@ -3784,7 +3784,7 @@
     },
     {
       "card_id": "canon-eos-5d",
-      "display_name": "Canon eos 5d",
+      "display_name": "Canon EOS 5D",
       "rankable": true,
       "score": 3.0353,
       "mention_boost": 0.0,
@@ -5931,6 +5931,117 @@
       "rank": 35
     },
     {
+      "card_id": "canon-eos-1d-ii",
+      "display_name": "Canon EOS-1D Mark II",
+      "rankable": true,
+      "score": 2.6048,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "handling",
+          "weight": 3,
+          "s": 0.5714,
+          "pos": 5,
+          "neg": 1,
+          "total": 7,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.7143,
+          "top_sources": [
+            {
+              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
+              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
+              "witness": "unattested",
+              "quote": "The dual card slots provide built an insurance policy against any possibility of a losing the shots you've worked so hard to get the Canon EOS 1d Mark II N is a professional grade DSLR that means as the ultra solid const…"
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
+              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
+              "witness": "unattested",
+              "quote": "the shot without stepping away from the action the 45-point autofocus system is a professional level feature usually only found in much more expensive cameras."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "sensor_performance",
+          "weight": 1,
+          "s": 0.1667,
+          "pos": 8,
+          "neg": 5,
+          "total": 18,
+          "confidence": "medium",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1667,
+          "top_sources": [
+            {
+              "source_id": "youtube-cars-and-cameras-canon-eos-1d-mark-ii-17-year-old-camera-still-good-in-2021",
+              "url": "https://www.youtube.com/watch?v=NsV08ejc1WI",
+              "witness": "firsthand",
+              "quote": "is on the low end but as you look at the pictures coming out of the camera they look really nice so what's really the disadvantage well you're not going to be able to really crop in but i look at this camera more like a …"
+            },
+            {
+              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
+              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
+              "witness": "unattested",
+              "quote": "The 1d Mark II N 8.2 megapixel APS-C sensor that has a 1.3x crop factor it takes full-frame lenses but the crop factor was designed for sports photographers to get closer to the action the 8.5 frames per second burst rat…"
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 1,
+          "s": 0.0571,
+          "pos": 10,
+          "neg": 8,
+          "total": 35,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.0571,
+          "top_sources": [
+            {
+              "source_id": "youtube-cars-and-cameras-canon-eos-1d-mark-ii-17-year-old-camera-still-good-in-2021",
+              "url": "https://www.youtube.com/watch?v=NsV08ejc1WI",
+              "witness": "firsthand",
+              "quote": "in photography to shoot in the moment and that's what you got not all this heavy processing with photoshop and everything so what you're seeing out of this camera is just the this is the straight jpegs yes this camera ca…"
+            }
+          ],
+          "axis_display": "Image Quality"
+        }
+      ],
+      "missing_axes": [
+        "evf_lcd"
+      ],
+      "thin_axes": [
+        "handling",
+        "autofocus_body"
+      ],
+      "flags": [
+        "missing weighted axes: evf_lcd",
+        "thin (< 15 claims): handling, autofocus_body"
+      ],
+      "rank": 36
+    },
+    {
       "card_id": "nikon-z50-ii",
       "display_name": "Nikon Z50 II",
       "rankable": true,
@@ -6106,7 +6217,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 36
+      "rank": 37
     },
     {
       "card_id": "nikon-d800",
@@ -6288,7 +6399,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body"
       ],
-      "rank": 37
+      "rank": 38
     },
     {
       "card_id": "sony-a7",
@@ -6466,7 +6577,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 38
+      "rank": 39
     },
     {
       "card_id": "nikon-z6-iii",
@@ -6644,7 +6755,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 39
+      "rank": 40
     },
     {
       "card_id": "kodak-ektar",
@@ -6729,7 +6840,7 @@
       "flags": [
         "missing weighted axes: autofocus_body, sensor_performance, evf_lcd"
       ],
-      "rank": 40
+      "rank": 41
     },
     {
       "card_id": "dji-osmo-action-4",
@@ -6888,7 +6999,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, evf_lcd"
       ],
-      "rank": 41
+      "rank": 42
     },
     {
       "card_id": "panasonic-s1r",
@@ -7054,7 +7165,7 @@
       "flags": [
         "thin (< 15 claims): handling, image_quality, evf_lcd"
       ],
-      "rank": 42
+      "rank": 43
     },
     {
       "card_id": "fujifilm-x-t20",
@@ -7232,7 +7343,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 43
+      "rank": 44
     },
     {
       "card_id": "sony-a9-ii",
@@ -7410,7 +7521,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 44
+      "rank": 45
     },
     {
       "card_id": "nikon-fe2",
@@ -7498,7 +7609,7 @@
         "missing weighted axes: autofocus_body, sensor_performance, evf_lcd",
         "thin (< 15 claims): image_quality"
       ],
-      "rank": 45
+      "rank": 46
     },
     {
       "card_id": "fujifilm-x100s",
@@ -7676,7 +7787,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 46
+      "rank": 47
     },
     {
       "card_id": "canon-powershot-v1",
@@ -7825,7 +7936,7 @@
       "flags": [
         "missing weighted axes: evf_lcd"
       ],
-      "rank": 47
+      "rank": 48
     },
     {
       "card_id": "fujifilm-x-e5",
@@ -8003,7 +8114,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 48
+      "rank": 49
     },
     {
       "card_id": "canon-powershot-sx620",
@@ -8146,11 +8257,11 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): handling, autofocus_body, sensor_performance, image_quality"
       ],
-      "rank": 49
+      "rank": 50
     },
     {
       "card_id": "canon-powershot-s3",
-      "display_name": "Canon powershot s3",
+      "display_name": "Canon PowerShot S3 IS",
       "rankable": true,
       "score": 2.0833,
       "mention_boost": 0.0,
@@ -8265,7 +8376,7 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): handling, autofocus_body, sensor_performance, image_quality"
       ],
-      "rank": 50
+      "rank": 51
     },
     {
       "card_id": "minolta-maxxum-7000",
@@ -8430,7 +8541,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, image_quality"
       ],
-      "rank": 51
+      "rank": 52
     },
     {
       "card_id": "fujifilm-x-pro2",
@@ -8596,7 +8707,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 52
+      "rank": 53
     },
     {
       "card_id": "nikon-d810",
@@ -8774,7 +8885,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 53
+      "rank": 54
     },
     {
       "card_id": "panasonic-lumix-gh6",
@@ -8952,7 +9063,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 54
+      "rank": 55
     },
     {
       "card_id": "om-system-om-5",
@@ -9130,7 +9241,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 55
+      "rank": 56
     },
     {
       "card_id": "sony-zv-1",
@@ -9308,7 +9419,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 56
+      "rank": 57
     },
     {
       "card_id": "sony-a7r",
@@ -9486,11 +9597,11 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 57
+      "rank": 58
     },
     {
       "card_id": "sony-a7s",
-      "display_name": "Sony a7s",
+      "display_name": "Sony A7S",
       "rankable": true,
       "score": 1.9812,
       "mention_boost": 0.0,
@@ -9632,7 +9743,7 @@
       "flags": [
         "thin (< 15 claims): handling"
       ],
-      "rank": 58
+      "rank": 59
     },
     {
       "card_id": "fujifilm-x100f",
@@ -9815,7 +9926,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, sensor_performance"
       ],
-      "rank": 59
+      "rank": 60
     },
     {
       "card_id": "canon-powershot-sd800",
@@ -9981,7 +10092,7 @@
       "flags": [
         "thin (< 15 claims): handling, autofocus_body, sensor_performance"
       ],
-      "rank": 60
+      "rank": 61
     },
     {
       "card_id": "nikon-z7",
@@ -10163,11 +10274,11 @@
       "flags": [
         "thin (< 15 claims): image_quality"
       ],
-      "rank": 61
+      "rank": 62
     },
     {
       "card_id": "sony-rx100-v",
-      "display_name": "Sony rx100 v",
+      "display_name": "Sony Cyber-shot RX100 V",
       "rankable": true,
       "score": 1.8747,
       "mention_boost": 0.0,
@@ -10281,7 +10392,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 62
+      "rank": 63
     },
     {
       "card_id": "nikon-d500",
@@ -10459,7 +10570,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 63
+      "rank": 64
     },
     {
       "card_id": "fujifilm-x-e4",
@@ -10637,7 +10748,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 64
+      "rank": 65
     },
     {
       "card_id": "canon-powershot-sx1",
@@ -10786,140 +10897,27 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): handling, autofocus_body, sensor_performance, image_quality"
       ],
-      "rank": 65
-    },
-    {
-      "card_id": "canon-eos-1d-ii",
-      "display_name": "Canon EOS-1D Mark II",
-      "rankable": true,
-      "score": 1.6841,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "handling",
-          "weight": 3,
-          "s": 0.2895,
-          "pos": 18,
-          "neg": 7,
-          "total": 38,
-          "confidence": "high",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.8684,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
-              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
-              "witness": "unattested",
-              "quote": "The dual card slots provide built an insurance policy against any possibility of a losing the shots you've worked so hard to get the Canon EOS 1d Mark II N is a professional grade DSLR that means as the ultra solid const…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "autofocus_body",
-          "weight": 2,
-          "s": 0.2692,
-          "pos": 12,
-          "neg": 5,
-          "total": 26,
-          "confidence": "high",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.5385,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
-              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
-              "witness": "unattested",
-              "quote": "the shot without stepping away from the action the 45-point autofocus system is a professional level feature usually only found in much more expensive cameras."
-            }
-          ],
-          "axis_display": "Autofocus"
-        },
-        {
-          "axis": "sensor_performance",
-          "weight": 1,
-          "s": 0.1481,
-          "pos": 22,
-          "neg": 14,
-          "total": 54,
-          "confidence": "high",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.1481,
-          "top_sources": [
-            {
-              "source_id": "youtube-cars-and-cameras-canon-eos-1d-mark-ii-17-year-old-camera-still-good-in-2021",
-              "url": "https://www.youtube.com/watch?v=NsV08ejc1WI",
-              "witness": "firsthand",
-              "quote": "is on the low end but as you look at the pictures coming out of the camera they look really nice so what's really the disadvantage well you're not going to be able to really crop in but i look at this camera more like a …"
-            },
-            {
-              "source_id": "youtube-camera-jungle-camera-jungle-presents-canon-eos-1d-mark-ii-n",
-              "url": "https://www.youtube.com/watch?v=ZeqNp50Vy6Q",
-              "witness": "unattested",
-              "quote": "The 1d Mark II N 8.2 megapixel APS-C sensor that has a 1.3x crop factor it takes full-frame lenses but the crop factor was designed for sports photographers to get closer to the action the 8.5 frames per second burst rat…"
-            }
-          ],
-          "axis_display": "Sensor Performance"
-        },
-        {
-          "axis": "image_quality",
-          "weight": 1,
-          "s": 0.129,
-          "pos": 23,
-          "neg": 15,
-          "total": 62,
-          "confidence": "high",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.129,
-          "top_sources": [
-            {
-              "source_id": "youtube-cars-and-cameras-canon-eos-1d-mark-ii-17-year-old-camera-still-good-in-2021",
-              "url": "https://www.youtube.com/watch?v=NsV08ejc1WI",
-              "witness": "firsthand",
-              "quote": "in photography to shoot in the moment and that's what you got not all this heavy processing with photoshop and everything so what you're seeing out of this camera is just the this is the straight jpegs yes this camera ca…"
-            }
-          ],
-          "axis_display": "Image Quality"
-        }
-      ],
-      "missing_axes": [
-        "evf_lcd"
-      ],
-      "thin_axes": [],
-      "flags": [
-        "missing weighted axes: evf_lcd"
-      ],
       "rank": 66
     },
     {
       "card_id": "fujifilm-x-t30",
       "display_name": "Fujifilm X-T30",
       "rankable": true,
-      "score": 1.662,
+      "score": 1.6306,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "handling",
           "weight": 3,
-          "s": 0.2609,
-          "pos": 22,
-          "neg": 10,
-          "total": 46,
-          "confidence": "high",
-          "contested": true,
+          "s": 0.4,
+          "pos": 15,
+          "neg": 5,
+          "total": 25,
+          "confidence": "medium",
+          "contested": false,
           "thin": false,
-          "contribution": 0.7826,
+          "contribution": 1.2,
           "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-fujifilm-x-t30-iii-full-camera-review",
-              "url": "https://www.youtube.com/watch?v=8vc0TgbpT3o",
-              "witness": "firsthand",
-              "quote": "Something I like to see on the top left is one of Fujifilm's film simulator dials."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -10931,6 +10929,12 @@
               "url": "https://www.youtube.com/watch?v=myOkN9MMp6k",
               "witness": "firsthand",
               "quote": "auto switch now I call this the panic button you flip that switch to Auto and it will auto everything so this is a really great option if you want to give the camera to someone that's not comfortable with cameras and get…"
+            },
+            {
+              "source_id": "youtube-john-branch-iv-photography-why-i-will-always-choose-the-fujifilm-x-t30-over-the-x100v",
+              "url": "https://www.youtube.com/watch?v=WpDEEmEkKFY",
+              "witness": "firsthand",
+              "quote": "I just grab myself a hold fast gear strap, put the camera on that, and just hang out with the camera hanging on my wrist and go about my day."
             }
           ],
           "axis_display": "Handling"
@@ -10938,21 +10942,15 @@
         {
           "axis": "autofocus_body",
           "weight": 2,
-          "s": 0.2941,
-          "pos": 15,
-          "neg": 5,
-          "total": 34,
-          "confidence": "high",
+          "s": 0.2143,
+          "pos": 6,
+          "neg": 3,
+          "total": 14,
+          "confidence": "medium",
           "contested": true,
-          "thin": false,
-          "contribution": 0.5882,
+          "thin": true,
+          "contribution": 0.4286,
           "top_sources": [
-            {
-              "source_id": "youtube-adorama-is-this-the-best-travel-camera-right-now-fujifilm-x-t30-iii-with-omar-gonzalez",
-              "url": "https://www.youtube.com/watch?v=xRHI0Z-wPJo",
-              "witness": "firsthand",
-              "quote": "On the front, we have a little autofocus uh switch, which by the way, the camera also has a new processor, which allows you to track subjects like birds, planes, trains, people if you're into that."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -10964,6 +10962,12 @@
               "url": "https://www.youtube.com/watch?v=tIPgz0H2_0U",
               "witness": "firsthand",
               "quote": "of the XD 3 so if you're interested you can watch that review when you're done here I mentioned in the beginning of the video that the XT 30 has a autofocus it does it also has autofocus tracking both in still photos and…"
+            },
+            {
+              "source_id": "youtube-digidirect-fujifilm-x-t30-review-and-sample-photos",
+              "url": "https://www.youtube.com/watch?v=r1KRCNjaP-o",
+              "witness": "unattested",
+              "quote": "Now, tying in with that new processor is the autofocus system on the camera."
             }
           ],
           "axis_display": "Autofocus"
@@ -10971,14 +10975,14 @@
         {
           "axis": "sensor_performance",
           "weight": 1,
-          "s": -0.0909,
-          "pos": 8,
-          "neg": 11,
-          "total": 33,
-          "confidence": "high",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.0909,
+          "s": -0.1429,
+          "pos": 3,
+          "neg": 5,
+          "total": 14,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.1429,
           "top_sources": [
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
@@ -10993,10 +10997,10 @@
               "quote": "80 millimeter and a 35 millimeter prime would on a full frame body not a negative thing just a thing many of you wanted to know other comparisons between these aps-c cameras and the full-frame mirrorless bodies out there…"
             },
             {
-              "source_id": "youtube-petapixel-fujifilm-x-t30-iii-review-is-this-too-familiar",
-              "url": "https://www.youtube.com/watch?v=ztuzdCXjvx4",
-              "witness": "firsthand",
-              "quote": "I mean, we've got the same 26-megapixel sensor we've always had."
+              "source_id": "mirrorlessons-2019-03-10-fujifilm-x-t30-review",
+              "url": "https://www.mirrorlessons.com/2019/03/10/fujifilm-x-t30-review/",
+              "witness": "unattested",
+              "quote": "image quality and performance are on par with the flagship models."
             }
           ],
           "axis_display": "Sensor Performance"
@@ -11004,21 +11008,15 @@
         {
           "axis": "image_quality",
           "weight": 1,
-          "s": 0.4286,
-          "pos": 22,
-          "neg": 4,
-          "total": 42,
+          "s": 0.4783,
+          "pos": 13,
+          "neg": 2,
+          "total": 23,
           "confidence": "high",
           "contested": false,
           "thin": false,
-          "contribution": 0.4286,
+          "contribution": 0.4783,
           "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-fujifilm-x-t30-iii-full-camera-review",
-              "url": "https://www.youtube.com/watch?v=8vc0TgbpT3o",
-              "witness": "firsthand",
-              "quote": "I'm a big fan of that, and I especially love the classic chrome and the various black and white [music] Acros simulations, and you can also adjust the graininess of them in your camera's menu."
-            },
             {
               "source_id": "youtube-digidirect-fujifilm-x-t30-review-and-sample-photos",
               "url": "https://www.youtube.com/watch?v=r1KRCNjaP-o",
@@ -11030,6 +11028,12 @@
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
               "witness": "firsthand",
               "quote": "do like about the XT 30 is that we have all the same color profiles what we would have found on the XT three normally Fuji has rip those out of the lower-cost cameras so that's a great plus here I've got a Turner I've go…"
+            },
+            {
+              "source_id": "youtube-engadget-fujifilm-x-t30-review-most-of-the-x-t3-for-nearly-half-the-price",
+              "url": "https://www.youtube.com/watch?v=wYm-tdpob-k",
+              "witness": "firsthand",
+              "quote": "reproduces colors and skin tones with excellent JPEG straight out of the camera RAW dynamic range is excellent letting you bring up shadow detail even on underexposed shots at up to ISO 3200 should you want to get more a…"
             }
           ],
           "axis_display": "Image Quality"
@@ -11037,21 +11041,15 @@
         {
           "axis": "evf_lcd",
           "weight": 1,
-          "s": -0.0465,
-          "pos": 10,
-          "neg": 12,
-          "total": 43,
+          "s": -0.3333,
+          "pos": 3,
+          "neg": 9,
+          "total": 18,
           "confidence": "high",
           "contested": true,
           "thin": false,
-          "contribution": -0.0465,
+          "contribution": -0.3333,
           "top_sources": [
-            {
-              "source_id": "youtube-adorama-is-this-the-best-travel-camera-right-now-fujifilm-x-t30-iii-with-omar-gonzalez",
-              "url": "https://www.youtube.com/watch?v=xRHI0Z-wPJo",
-              "witness": "firsthand",
-              "quote": "We also have a touchcreen which allows you to touch your subject to focus."
-            },
             {
               "source_id": "youtube-dpreview-tv-dpreview-tv-fujifilm-x-t30-first-impressions-review",
               "url": "https://www.youtube.com/watch?v=1hGxIUr-wjw",
@@ -11063,14 +11061,25 @@
               "url": "https://www.youtube.com/watch?v=wYm-tdpob-k",
               "witness": "firsthand",
               "quote": "laggy and I found it quicker to use the joystick it can be tilted up or down but not sideways when you hold the camera in portrait mode unfortunately for vloggers it can't be flipped around either the OLED EVF features a…"
+            },
+            {
+              "source_id": "youtube-feralginger-x-t30-review-the-best-budget-fujifilm-camera",
+              "url": "https://www.youtube.com/watch?v=myOkN9MMp6k",
+              "witness": "firsthand",
+              "quote": "that's something you prefer for me I don't really like touchscreen functions in camera so the viewfinder has a refresh rate of 100 HZ and it's 2.3 million."
             }
           ],
           "axis_display": "EVF & LCD"
         }
       ],
       "missing_axes": [],
-      "thin_axes": [],
-      "flags": [],
+      "thin_axes": [
+        "autofocus_body",
+        "sensor_performance"
+      ],
+      "flags": [
+        "thin (< 15 claims): autofocus_body, sensor_performance"
+      ],
       "rank": 67
     },
     {
@@ -15810,7 +15819,7 @@
     },
     {
       "card_id": "nikon-z8",
-      "display_name": "Nikon z8",
+      "display_name": "Nikon Z8",
       "rankable": true,
       "score": 0.619,
       "mention_boost": 0.0,
@@ -16585,6 +16594,147 @@
       "rank": 101
     },
     {
+      "card_id": "nikon-d3200",
+      "display_name": "Nikon d3200",
+      "rankable": true,
+      "score": 0.4042,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "handling",
+          "weight": 3,
+          "s": 0.2222,
+          "pos": 3,
+          "neg": 1,
+          "total": 9,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "semi-pro ergonomics, optical reflex vs."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "compared to other Nikon DSLRs), simplified user interface and lightest and most compact camera body."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "use older Nikkor lenses.) Build and Ergonomics Essentially the design of the camera body hasn&#8217;t changed since the D3100."
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "performance in real-time autofocus in video mode."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "The Scene pre-sets have also been tweaked and users can now over-ride some settings (such as AF area selection in Sports mode)."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "sensor_performance",
+          "weight": 1,
+          "s": -0.2,
+          "pos": 4,
+          "neg": 10,
+          "total": 30,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.2,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "Nikon D3200 Reviews - DXOMARK Skip to content Sensors &nbsp;>&nbsp; Nikon D3200 &nbsp;>&nbsp; Sensor&nbsp;Test Results Introduction The Nikon D3200 versus its competitors The Nikon D3200."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "Image Sensor Full 1080p HD video with stereo sound Easy-To-Use with Nikon&rsquo;s Guide Mode Fast and accurate shooting with 11-point Autofocus System 3-in."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "DSLR with good low light performance."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 1,
+          "s": -0.0625,
+          "pos": 2,
+          "neg": 3,
+          "total": 16,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.0625,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "With its DxOmark Score of 81, the D3200 is on the exact same footing as the NEX-7 , sharing the same 24.1-bit measurement for color."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "three sizes for JPEG files, each with three quality levels."
+            }
+          ],
+          "axis_display": "Image Quality"
+        }
+      ],
+      "missing_axes": [
+        "evf_lcd"
+      ],
+      "thin_axes": [
+        "handling",
+        "autofocus_body"
+      ],
+      "flags": [
+        "missing weighted axes: evf_lcd",
+        "thin (< 15 claims): handling, autofocus_body"
+      ],
+      "rank": 102
+    },
+    {
       "card_id": "panasonic-gh3",
       "display_name": "Panasonic Lumix DMC-GH3",
       "rankable": true,
@@ -16753,7 +16903,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, sensor_performance"
       ],
-      "rank": 102
+      "rank": 103
     },
     {
       "card_id": "nikon-z5",
@@ -16866,7 +17016,7 @@
         "missing weighted axes: image_quality",
         "thin (< 15 claims): handling, autofocus_body, sensor_performance, evf_lcd"
       ],
-      "rank": 103
+      "rank": 104
     },
     {
       "card_id": "nikon-z50",
@@ -17002,7 +17152,7 @@
         "missing weighted axes: image_quality",
         "thin (< 15 claims): handling, autofocus_body, sensor_performance"
       ],
-      "rank": 104
+      "rank": 105
     },
     {
       "card_id": "nikon-d5600",
@@ -17106,7 +17256,7 @@
         "missing weighted axes: handling, image_quality",
         "thin (< 15 claims): autofocus_body, sensor_performance, evf_lcd"
       ],
-      "rank": 105
+      "rank": 106
     },
     {
       "card_id": "sony-rx100-iv",
@@ -17277,7 +17427,7 @@
       "flags": [
         "thin (< 15 claims): handling, autofocus_body"
       ],
-      "rank": 106
+      "rank": 107
     },
     {
       "card_id": "fujifilm-x-t30-iii",
@@ -17445,14 +17595,14 @@
       "flags": [
         "thin (< 15 claims): handling, autofocus_body, sensor_performance, image_quality, evf_lcd"
       ],
-      "rank": 107
+      "rank": 108
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 107,
-    "ranked": 107,
+    "in_scope": 108,
+    "ranked": 108,
     "excluded": 0,
     "pending_backfill": 0
   }

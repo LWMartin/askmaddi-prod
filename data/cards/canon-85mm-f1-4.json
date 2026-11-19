@@ -22,24 +22,24 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 880.0,
+        "pre_owned": 849.99,
         "refurbished": 1059.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 29,
-      "price_updated_at": "2026-11-18T10:10:22.200594+00:00"
+      "sample_size": 30,
+      "price_updated_at": "2026-11-19T10:10:23.104085+00:00"
     },
-    "price_updated_at": "2026-10-31T09:32:05.953103+00:00"
+    "price_updated_at": "2026-11-18T08:09:45.908286+00:00"
   },
   "freshness": {
     "created_at": "2026-10-31T09:32:05.923950+00:00",
-    "last_built": "2026-10-31T09:32:05.923950+00:00",
-    "last_checked": "2026-10-31T09:32:05.923950+00:00",
-    "source_count": 20,
+    "last_built": "2026-11-18T08:09:45.877158+00:00",
+    "last_checked": "2026-11-18T08:09:45.877158+00:00",
+    "source_count": 17,
     "source_types": {
-      "pro": 20
+      "pro": 17
     },
     "build_model": "claude-sonnet-4-5-20250929",
     "build_version": "stage6-v0.1"
@@ -75,10 +75,10 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 54,
-        "neu": 23,
-        "neg": 32,
-        "total": 109,
+        "pos": 39,
+        "neu": 13,
+        "neg": 27,
+        "total": 79,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -217,116 +217,36 @@
             "witness": "reported"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "Well, we'll see about its image sharpness in a [music] minute.",
+            "quote_excerpt": "contrasting edges which reduces contrast quite a bit Corner image quality is very soft as you can see at F2 we see more contrast in the corners and back in the middle sharpness and contrast are now excellent at f2.8 image quality is razor sharp in the middle and the corners are looking better now…",
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "So, let's look at image quality.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Due to vignetting, they look darker, unsurprisingly, but sharpness is just as fantastic as in the middle.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The lens tastes sharp down to f11 where softness from defraction is [music] beginning to kick in.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Let's challenge the lens's central image quality much harder now though by mounting it onto an APS-C camera, my Canon EOS R7 with its rather barbaric 32.5 megapixel sensor which has a much greater pixel density.",
+            "quote_excerpt": "quite sharp and f5.6 and f8 very sharp f11 and F16 look about the same I have a feeling that the lens isn't quite stopping down as far as it should here because the image should be a bit softer than this due to defraction overall well the lens could be a lot sharper at half 1.4 especially in the",
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "Sharpness and contrast are now only okay in the middle of the image as you might be able to see.",
+            "quote_excerpt": "falls quite softly across the image frame at f2 and f2.8 the corners get brighter the lens's minimum Focus distance is quite long here about a full meter which can be quite limiting and annoying when shooting anything small at f1.4 the image is just a little soft but F2 looks sharp again let's see…",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "They are good, [music] but not quite razor sharp.",
+            "quote_excerpt": "this is a lens with a number of optical issues as well as quite slow autofocus and a long minimum Focus distance so this is not a high quality lens but still it's not necessarily bad value even if it's not so sharp it still produces some pretty beautiful images with gorgeous bker and getting an 8 5…",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Stop down to f2 for excellent image quality in the corners though.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The lens taste is sharp down to f11 where we see a rather softer image.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "I reckon there's a good chance that Canon's bigger and more expensive RF85mm f1.2 lens will be a little bit sharper than this.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "And if you want to see the sharpest lens on the whole system, then check out my review of the Canon RF 135mm F1.8 8 L lens which was razor sharp even on this APS-C sensor.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Close-up image quality is very poor at f1.4.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "At f2, the image has far more contrast, but sharpness is still a bit weak.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "It's at f2.8 that we're treated to excellent sharpness again.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
@@ -513,30 +433,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "And if you pixel peep the focused areas, the new 1.4 L is also crisper and higher contrast.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Pixel peeping the focus detail shows the 1.2L to be very sharp, but the new 1.4L to be a little crisper still with slightly higher contrast, too.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "As we saw in the portrait test, the rendering from the 1.2L also looks nice and soft.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
@@ -567,14 +463,6 @@
             "weight": 0.75,
             "quote_excerpt": "For hand-holding, I shot a shot at 1/10 of a second inside here at the of the bobblehead, and it's sharp.",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "It is sharp, it is colorful, it is beautiful, and it worked out extremely well.",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
@@ -785,134 +673,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Let's start by talking about just how sharp this lens is from the center to the edge of the frame.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Even wide open at F 1.4, the RF 85mm F 1.4 LVCM is extremely sharp throughout the entire frame.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "We set up a tripod so that we could test the sharpness.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If we look at a 300% crop, we will see this lens leaves nothing to be lacking in terms of sharpness in the center.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "And if we look at a photo here where the subjects are spread out, if we go to the edge of the frame, you will see that they remain perfectly sharp.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Here I've composed my daughter off on the side and when I zoom in, this lens still creates a perfectly sharp image.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I love this because I know that as long as I keep my subjects in the same focal plane, even the people on the edge of the frame will be sharp when I shoot at F 1.4.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "When I stop down from F 1.4 to two, to 2.8, to four, I barely notice a difference in the sharpness because this lens is so sharp to begin with.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Now, let's compare the sharpness between the two lenses.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "It's not until you get down towards the edge of the frame that you will notice that the RF 85mm 1.4 holds up sharper than the 85mm F2.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "That said, most of the time I'm careful to hold my camera as still as possible while shooting and I have no problem getting sharp photos at 1/125 of a second, 1/50 as seen here, or even slower.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "At 1/30 of a second, I rarely had any problems getting sharp photos.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "When I got to 1/8 of a second or 1/4 of a second, the images weren't as sharp.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If you're looking for a difference in terms of sharpness, good luck.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "In the center, they are both as sharp as it gets.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "When we zoom in, we notice they are both razor sharp.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
@@ -956,10 +716,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 17,
-        "polarity_agreement": 0.765,
+        "source_count": 14,
+        "polarity_agreement": 0.714,
         "dominant_polarity": "pos",
-        "max_source_share": 0.147,
+        "max_source_share": 0.165,
         "contested": false
       },
       "notes": [],
@@ -971,15 +731,15 @@
     },
     {
       "axis_id": "af_performance",
-      "display_name": "af_performance",
+      "display_name": "Autofocus",
       "axis_type": "lead",
       "stills": {
         "measurement": null,
         "sentiment": {
-          "pos": 23,
-          "neu": 22,
-          "neg": 16,
-          "total": 61,
+          "pos": 18,
+          "neu": 12,
+          "neg": 11,
+          "total": 41,
           "sources": [
             {
               "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -1003,30 +763,6 @@
               "url": "https://opticallimits.com/canon/canon-ef/canon-ef-85mm-f-1-4-usm-l-is-review/",
               "weight": 0.75,
               "quote_excerpt": "is facing tough competition from the Sigma 85mm f/1.4 ART lens but the Canon lens has the benefit of providing more consistent focusing results.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "Like Canon's other VCM lenses, autofocus is lightning fast and very accurate, as you can see here.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "Overall, the RF85mm f1.4 4 turned out to be an excellent performer, offering tons of sharpness and contrast and very soft out of focus backgrounds.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "And its autofocus is lightning fast.",
               "witness": "unattested"
             },
             {
@@ -1182,38 +918,6 @@
               "witness": "unattested"
             },
             {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "Starting with focusing at their maximum apertures on an R5 M I body.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "Next, for the old EF851.4L, adapted to the R52 and focusing a bit faster than the F1.2L, I'd say roughly similar to the F2STM in overall speed and audibility.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "By the way, the closest focusing distance of this lens is 75 cm.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "Note, this lens may be dimmer, but can focus closer than the other three on test.",
-              "witness": "unattested"
-            },
-            {
               "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
               "source_type": "youtube",
               "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
@@ -1227,30 +931,6 @@
               "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
               "weight": 0.75,
               "quote_excerpt": "Because that 1.2 85L version two lens is super slow focusing.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "So, the rule of thumb is bump that aperture up a little higher to give yourself some breathing room so that they're both in focus if that is the key.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "It's quick, it's accurate, and on this R six Mark III, it did a fantastic job.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "With the 1.4, you can get as close as 2 and 1/2 ft to get it still in focus.",
               "witness": "unattested"
             },
             {
@@ -1388,106 +1068,26 @@
               "weight": 0.75,
               "quote_excerpt": "Now, this is one of Samyang's very first autofocus lenses.",
               "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "To test the autofocus speed of this lens, I put it on my Canon R5, put the camera on face detection, and have my daughter run full speed right at me.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "The autofocus was blazingly fast.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "We will look at autofocus speed a little bit later when we compare this lens to the other two Canon offerings.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "F1.4's minimum focus distance, F2's minimum focus distance.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Let's look at focusing speed.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Going from minimum focus to locking on a subject is slow with the RF 85mm F2.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Compare that now with the RF 85mm 1.4, which is virtually instant.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "The RF 85mm F2 isn't always confident in its focusing.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Here in this photo of my daughter facing away, the F2 version continued to hunt for focus to find her eyelash when I was using face detection.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Because I'm mostly using this lens for portraits, I need to use a faster shutter speed anyways because my subjects will inevitably be moving.",
-              "witness": "firsthand"
             }
           ]
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 14,
-          "polarity_agreement": 0.571,
+          "source_count": 10,
+          "polarity_agreement": 0.7,
           "dominant_polarity": "pos",
-          "max_source_share": 0.164,
-          "contested": true
+          "max_source_share": 0.22,
+          "contested": false
         },
         "notes": []
       },
       "video": {
         "measurement": null,
         "sentiment": {
-          "pos": 22,
-          "neu": 33,
-          "neg": 14,
-          "total": 69,
+          "pos": 16,
+          "neu": 20,
+          "neg": 12,
+          "total": 48,
           "sources": [
             {
               "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -1506,43 +1106,11 @@
               "witness": "unattested"
             },
             {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+              "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
               "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+              "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
               "weight": 0.75,
-              "quote_excerpt": "And that series uniformity goes to [music] Canon's credit, as it makes the lenses easier to swap out when shooting video, especially if you're using an electronic gimbal, and everything's [music] balanced up nicely.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "All the other VCM lenses I've tested have been very high quality so far, and their extra features, an aperture ring, uniform size, and low focus breathing are all pretty helpful for professional video makers and will [music] of course get you incredibly striking video footage, and also beautiful…",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "[music] As with the other VCM lenses, this thing is weather sealed with control, focus, and aperture rings.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "And there's virtually no focus breathing that I could see anyway when you're turning that rubberized focus ring.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-              "weight": 0.75,
-              "quote_excerpt": "But this new 851.4 is still excellent and its extra functionality for video work including low focus breathing and small size are both welcome as well.",
+              "quote_excerpt": "but very pedestrian it needs a bit of a dose of steroids here really not only does it move quite slowly but it also takes a few moments to properly lock onto your sub object although when it does it's generally accurate so yes the autofocus does work but only very slowly on a nickon z7 camera…",
               "witness": "unattested"
             },
             {
@@ -1650,30 +1218,6 @@
               "witness": "unattested"
             },
             {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "This makes it easy to swap lenses when a body is rigged for video.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "In terms of controls, it starts with a d-cllicked aperture ring that turns smoothly between f1.4 and f-16.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-              "weight": 0.75,
-              "quote_excerpt": "There's a visible focus pull between the subjects.",
-              "witness": "unattested"
-            },
-            {
               "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
               "source_type": "youtube",
               "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
@@ -1687,78 +1231,6 @@
               "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
               "weight": 0.75,
               "quote_excerpt": "And of course, at F20, everything's in focus and it's kind of not something you're really going to ever shoot at.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "Canon considers these their hybrid lenses, meaning they're great for video and they're also great for stills.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "You have your autofocus to manual button.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "This is really designed for people that are shooting video that want to change the aperture while they are recording video.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "And when you're shooting at 1.4, you get that nice separation from the background, but you do need to be careful if you have multiple people in the frame that they're on the same plane because if they're not, one of them will be in focus and the other won't.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "Now, let's talk about the focus motor in this lens.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "It was able to track them the entire time and keep them in focus, whether they're going across the frame or coming towards you or coming through a frame when you weren't even waiting for someone to come through the frame.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "It tracked them all the way through the frame and I was able to bang out those 40 frames a second or 12 frames a second with the mechanical shutter and get topnotch autofocus time and time again.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "Even when Richie was coming around a tree, the focus was able to pick up on him and track him all the way through the frame without an issue.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-              "weight": 0.75,
-              "quote_excerpt": "So, you can get slightly closer to get things in focus.",
               "witness": "unattested"
             },
             {
@@ -1906,46 +1378,6 @@
               "witness": "unattested"
             },
             {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "For the first section of this video, I will be analyzing the newly released RF 85mm f/1.4L VCM.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "I can stop down if I want to put more in focus, but if I want to pop them out from the background, this lens allows me to do that.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "If we look at manually focusing, we'll notice some interesting things here.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "If you switch the F2 version to manual focus and turn the dial, it's painfully slow requiring many rotations to go to minimum focus distance.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-              "weight": 0.75,
-              "quote_excerpt": "Contrast that now with the 1.4 version and you'll notice it only takes a few rotations to go from infinity focus all the way down to minimum focus.",
-              "witness": "unattested"
-            },
-            {
               "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
               "source_type": "youtube",
               "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
@@ -2045,10 +1477,10 @@
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 17,
-          "polarity_agreement": 0.529,
+          "source_count": 14,
+          "polarity_agreement": 0.429,
           "dominant_polarity": "neu",
-          "max_source_share": 0.13,
+          "max_source_share": 0.188,
           "contested": true
         },
         "notes": []
@@ -2059,10 +1491,10 @@
       "display_name": "Build Quality",
       "axis_type": "lead",
       "sentiment": {
-        "pos": 17,
+        "pos": 16,
         "neu": 5,
         "neg": 8,
-        "total": 30,
+        "total": 29,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -2158,14 +1590,6 @@
             "url": "https://www.youtube.com/watch?v=soBsUcp8X2M",
             "weight": 0.75,
             "quote_excerpt": "It's not weather sealed and there's no hood included either, but it is one of the rare primes out there to feature optical image stabilization, while the one-to-two or 50% reproduction makes it the leader in this test for those who also like to dabble with closer photography, again without having…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "It is a nicely built lens.",
             "witness": "unattested"
           },
           {
@@ -2308,10 +1732,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 11,
-        "polarity_agreement": 0.727,
+        "source_count": 10,
+        "polarity_agreement": 0.7,
         "dominant_polarity": "pos",
-        "max_source_share": 0.233,
+        "max_source_share": 0.241,
         "contested": false
       },
       "notes": [],
@@ -2333,10 +1757,10 @@
       "crop_factor_implications": "",
       "current_body_compatibility": [],
       "sentiment": {
-        "pos": 19,
-        "neu": 54,
+        "pos": 16,
+        "neu": 34,
         "neg": 2,
-        "total": 75,
+        "total": 52,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -2395,28 +1819,20 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "It's a full-frame lens for their mirrorless RFmount cameras, and it's the latest [music] in Canon's VCM series of hybrid lenses, which are intended for both stills and [music] video work.",
-            "witness": "unattested"
+            "quote_excerpt": "for what you're getting here any 885mm f1.4 on a fullframe camera is going to produce seriously dramatic images with a lovely narrow depth of field perfect for all kinds of portrait and subject photography the lens will be available on Sony E and neon Zed Mount and I'd like to thank maker for…",
+            "witness": "firsthand"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "And as with the others, that aperture ring will only work in video mode on all but the very latest Canon RF mount cameras.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The good news though is that you only need to top the lens down to f2 for excellent image quality to return.",
-            "witness": "unattested"
+            "quote_excerpt": "metal lens mount with a USB C port for firmware update and an attractive red colored weather sealing gasket in front of that comes an aperture ring which turns with quite heavy clicks every third of an f- stop on the side comes an autom manual focus switch as well as a customizable Focus hold…",
+            "witness": "firsthand"
           },
           {
             "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
@@ -2497,94 +1913,6 @@
             "weight": 0.75,
             "quote_excerpt": "Oh, and if you're interested in a Canon telephoto zoom, do check out my other video comparing several RF models with and without teleconverters.",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Hi, I'm Gordon from Camera Labs and this is my first looks review of the Canon RF85mm F1.4 LVCM, a high-end short telephoto prime lens for full-frame EOSR mirrorless cameras and aimed at professional portrait and event photographers.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "The RF85 1.4L becomes Canon's third, well, technically it's fourth 85 in the RF mount.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Note, as the aperture is closed though, the older EF lens will reveal more of a defined geometric shape from its diaphragm system.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "And while it remains frustrating that Sigma and other third parties can't make full-frame lenses in the RF mount, not yet, Canon does at least have the RF852 as a lowerc cost, more affordable option with the added bonuses of closer focusing and optical image stabilization.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "And I have a review of that lens if you're interested.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Jared Poland, Froosphoto.com, and this is a review of Canon's 85mm F1.4 L VCM lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "So, what did I shoot with this lens?",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "and I love my 28 to 70 F2 and this is a great companion lens for that or an 85 is a great companion lens and that brings up an interesting point is that when I went to Japan I didn't take any 85 and the reason for that is this one wasn't out yet or it didn't come to",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Now, speaking of Japan, the reason I was in Japan is because I got to tour Canon's lens factory where we see where the RF lenses like these are made.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "I do want to point out that this is an L lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Canon has done a nice job of giving you choices here for your RF lens lineup when it comes to 85.",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
@@ -2787,94 +2115,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Today, I'm doing a review of my Canon RF 85mm f/1.4L VCM lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "When I'm photographing with an 85mm lens on one camera, I pair it with a 35mm lens as seen here on my other camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Canon currently offers three 85mm lenses.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Here are some photos I took hand-holding this lens with my Canon R5 using the IBIS in the camera.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If you'd like to see my video review of that lens, you can click above.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Another question I frequently get asked is, \"Which lens should I get?",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If you don't already have an 85 or a 50 mm lens, you can always start with the RF 50 mm F 1.8 and the RF 85 mm F2.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Down in the description, I'll have links to all of these lenses and the cameras that I recommend.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I have extensively used all of Canon's 85 mm lenses going all the way back to the EF lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If you would like to read the written review of my lens, in the description there will soon be a link to our blog.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "That was the Canon RF 85mm f/1.4.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
@@ -2941,16 +2181,16 @@
         ]
       },
       "convergence": {
-        "source_count": 14,
-        "polarity_agreement": 0.786,
+        "source_count": 11,
+        "polarity_agreement": 0.636,
         "dominant_polarity": "neu",
-        "max_source_share": 0.16,
+        "max_source_share": 0.231,
         "contested": false
       },
       "face_quote": {
-        "quote_excerpt": "And as with the others, that aperture ring will only work in video mode on all but the very latest Canon RF mount cameras.",
-        "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-        "url": "https://www.youtube.com/watch?v=InkHfr_qNrU"
+        "quote_excerpt": "Now, I shot this on my Canon EOS R5 using the EF to RF adapter, and I must say, this lens worked incredibly well with the latest mirrorless cameras that Canon have to offer.",
+        "source_id": "youtube-photo-feaver-the-canon-ef-85mm-f14l-is-usm-lens-in-depth-review",
+        "url": "https://www.youtube.com/watch?v=RWJDm5Ck5Bs"
       }
     },
     {
@@ -2980,9 +2220,9 @@
       },
       "sentiment": {
         "pos": 15,
-        "neu": 25,
-        "neg": 15,
-        "total": 55,
+        "neu": 19,
+        "neg": 13,
+        "total": 47,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -3007,6 +2247,14 @@
             "weight": 0.75,
             "quote_excerpt": "lens and it definitely comes recommended but for its price the very fussiest photographers might be left wanting just a bit more",
             "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
+            "weight": 0.75,
+            "quote_excerpt": "greetings again everyone today I have a new full-frame autofocus lens from maker with a very popular design maker is still quite new to including autofocus in their lenses so this new 85mm f1.4 is quite an ambitious design for them and its price tag of only $470 or £390 here in the UK is…",
+            "witness": "firsthand"
           },
           {
             "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
@@ -3129,30 +2377,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Launched in September 2025 and costing around 1680, I've got the dollar and the latest pricing in the description link because it does change.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "As a budget lens in Canon series, though, there's no weather ceiling, no lens hood included, and it's also a stop dimmer than the F1.4L, but it's still capable of delivering shallow depth of field effects, as you'll see, and costing around $650 or £550.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "It's around 1/3 the price of the new F1.4 Lens.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
@@ -3175,30 +2399,6 @@
             "weight": 0.75,
             "quote_excerpt": "I personally would go with the smaller, lighter, less expensive lens because it's just better to have the IS in my opinion, especially in this day and age when you're shooting a lot of video along with photos.",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "For those of you who are thinking about getting an 85F2, that one doesn't come with a lens hood, but of course, the more expensive 8512 does come with a lens hood.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Now, mind you, the Canon EF version of their 851.4 still sells today for 1749 bucks.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Now, if both of those are a little too expensive for you, Canon has the 85 F2, which also doubles as a macro option, and that is RF as well, and that comes in at 700 bucks.",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
@@ -3369,30 +2569,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "With the RF 85mm F2, it's still really good for the price, but it is a little bit smaller and it's not quite as smooth.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "For the price, the RF 85mm f/2 IS STM macro lens is probably the best value of Canon's three lenses.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Which photo costs a thousand dollars more?",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-totally-exposed-canon-85mm-f14l-is-review",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=gwhpEeiUlKg",
@@ -3427,16 +2603,16 @@
         ]
       },
       "convergence": {
-        "source_count": 17,
-        "polarity_agreement": 0.471,
+        "source_count": 15,
+        "polarity_agreement": 0.4,
         "dominant_polarity": "neu",
-        "max_source_share": 0.182,
+        "max_source_share": 0.213,
         "contested": true
       },
       "face_quote": {
-        "quote_excerpt": "As a budget lens in Canon series, though, there's no weather ceiling, no lens hood included, and it's also a stop dimmer than the F1.4L, but it's still capable of delivering shallow depth of field effects, as you'll see, and costing around $650 or £550.",
-        "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-        "url": "https://www.youtube.com/watch?v=YIox841n4Lo"
+        "quote_excerpt": "I personally would go with the smaller, lighter, less expensive lens because it's just better to have the IS in my opinion, especially in this day and age when you're shooting a lot of video along with photos.",
+        "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
+        "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ"
       }
     },
     {
@@ -3447,10 +2623,10 @@
       "successor": null,
       "siblings": [],
       "sentiment": {
-        "pos": 15,
-        "neu": 23,
-        "neg": 4,
-        "total": 42,
+        "pos": 9,
+        "neu": 13,
+        "neg": 3,
+        "total": 25,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -3613,46 +2789,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Upon closer examination though, the newer RF version on the left is crisper on the focus details and better defined overall.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "First, you'll notice how the reproduction from the new RF lens on the left is a bit smaller from the same distance.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "But I do think that from these initial tests, we have a good idea where the new lens fits into the range and what it's capable of.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "And the reason I chose the 85 over a 70 to 200 2.8 was to have that 1.4 and create that isolation and separation that will set you apart as a photographer.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "So, you can see that Canon gives you a bunch of different options to choose from when it comes to 85.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-leah-davies-canon-ef-85mm-f14-usm-vs-canon-ef-85mm-f18-usm-is-it-worth-the-extra-1000-ph",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=0uu6wckKf54",
@@ -3667,102 +2803,6 @@
             "weight": 0.75,
             "quote_excerpt": "this definitely feels like a pretty big upgrade in the autofocus department after that night when I was shooting with this lens and 60 I was like well I should probably get my hands on a 5d Mark 4 because to really see the true potential the autofocus speed on this lens you need a better camera…",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I'm going to be comparing it to the Canon 85mm f/1.2 and the Canon 85mm f/2.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I've been using the F2 version for the last couple years and have really enjoyed this lens.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Here you'll see the difference between how close I was using the F2 version compared to how far back I had to be with the F1.4 version.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "This is the F2 version.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Second, though at first glance the 85mm f/2 seems a little shorter, the barrel extends when focusing so it actually ends up being a fair amount longer than the RF 85mm f/1.4.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "The 1.4 version actually has faster autofocus and is quieter than the 1.2 version.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "The first thing I want to make note of when comparing these two lenses is how the 1.2 version is slightly more zoomed in than the 1.4 version.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Though it's a very small difference, I personally prefer the slightly wider field of view of the 1.4 version.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "In terms of bokeh, we'll notice that the 1.2 version continues to be Canon's champion.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "And though the 1.2 version has a blurrier background, the 1.4 version is not far behind.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Let's talk more about the size and weight of the 1.2 version because I think this is the most important thing to consider.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "It's a lot cheaper and the only real advantage is the 1.2 version has is that it lets in a little bit more light and gives you a slightly blurrier background.",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
@@ -3791,10 +2831,10 @@
         ]
       },
       "convergence": {
-        "source_count": 11,
-        "polarity_agreement": 0.727,
+        "source_count": 8,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "neu",
-        "max_source_share": 0.286,
+        "max_source_share": 0.4,
         "contested": false
       }
     },
@@ -3810,11 +2850,19 @@
       },
       "delta_from_baseline_pct": 0.0,
       "sentiment": {
-        "pos": 8,
-        "neu": 16,
+        "pos": 5,
+        "neu": 9,
         "neg": 17,
-        "total": 41,
+        "total": 31,
         "sources": [
+          {
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
+            "weight": 0.75,
+            "quote_excerpt": "this lens for testing although as usual this is a totally independent review the lens itself is pretty bulky as you can see and being made of plastic it weighs about 750 G its body has a slightly cheap feel to it a few slightly rough edges but nothing you'd really consider a problem at the rear we…",
+            "witness": "firsthand"
+          },
           {
             "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
             "source_type": "youtube",
@@ -3896,68 +2944,12 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "It measures 78x 91 mil, weighs 500 g, and is the only one here to sport optical stabilization as well as 50% or 1 to2 micro capabilities.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "It's also a pretty hefty lens, measuring £103 by 117 mil and weighing almost double at 1,195 g.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "At 89 by 105 mil and weighing 950 grams, this older model is larger and heavier than the new RF version, although it does include optical image stabilization.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "And that's going to make it very tempting for professional portrait and event photographers in the Canon system, especially if they're going to be carrying it around all day long.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
             "weight": 0.75,
             "quote_excerpt": "This lens right here is much lighter than the 1.2.",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Now, let's talk about the weight.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "This lens weighs in at 1.4 4 lb or 636 g, which is a far cry from the much heavier and beefier that might break our counter 851.2 Jagunda.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "It would be my choice if I didn't have to worry about size or weight because this 14 was a joy to shoot with because it was compact.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
@@ -4048,38 +3040,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If you have used the RF 85mm F2 IS STM macro lens or the RF 28-70 F2 .8 IS STM lens, you will notice they are very similar in size and weight.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "These two lenses are very similar in size and weight, but there are two things to note.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "It weighs half as much and is way smaller in diameter, making it a joy to put on the camera and hold while photographing.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "That said, some of you will want the best possible bokeh and you can shoulder the weight and therefore you might want to get the RF 85mm f/1.2.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
@@ -4146,16 +3106,16 @@
         ]
       },
       "convergence": {
-        "source_count": 16,
-        "polarity_agreement": 0.5,
+        "source_count": 14,
+        "polarity_agreement": 0.643,
         "dominant_polarity": "neg",
-        "max_source_share": 0.195,
-        "contested": true
+        "max_source_share": 0.258,
+        "contested": false
       },
       "face_quote": {
-        "quote_excerpt": "This lens weighs in at 1.4 4 lb or 636 g, which is a far cry from the much heavier and beefier that might break our counter 851.2 Jagunda.",
-        "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-        "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM"
+        "quote_excerpt": "So, the RF is a smaller lens and weighs less.",
+        "source_id": "youtube-video-gizmology-canon-rf-85mm-f14-vs-ef-85mm-f14-is-lens-body-comparison-only",
+        "url": "https://www.youtube.com/watch?v=xpxY67AcN1U"
       }
     }
   ],
@@ -4167,9 +3127,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 2,
-        "neu": 6,
+        "neu": 5,
         "neg": 4,
-        "total": 12,
+        "total": 11,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -4196,20 +3156,12 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "Let's turn in camera corrections off [music] and take a look at distortion and vignetting.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The lens projects a small amount of pin cushion distortion here.",
-            "witness": "unattested"
+            "quote_excerpt": "information correctly and correctly worked with the camera's inbody stabilization all right image quality now as I mentioned I'll be testing it on my Nikon z7 with its 45 map sensor in camera Corrections are turned on in the middle of the image at f1.4 we're seeing quite a lot of detail here but we…",
+            "witness": "firsthand"
           },
           {
             "source_id": "youtube-gordon-laing-best-canon-rf-85mm-f12-vs-f14-vs-f2-compared-plus-ef-14l",
@@ -4272,16 +3224,16 @@
       "confidence": "low",
       "convergence": {
         "source_count": 5,
-        "polarity_agreement": 0.8,
+        "polarity_agreement": 0.6,
         "dominant_polarity": "neu",
-        "max_source_share": 0.25,
+        "max_source_share": 0.273,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "So, let's go have a look at distortion and vignetting.",
-        "source_id": "youtube-photo-feaver-the-canon-ef-85mm-f14l-is-usm-lens-in-depth-review",
-        "url": "https://www.youtube.com/watch?v=RWJDm5Ck5Bs"
+        "quote_excerpt": "of the game I must say the Sigma lens did perform a little bit better when it comes to Distortion and vignetting slightly less vignetting wide open at f1.4 so overall the Sigma lens wins this round now moving on to lens flaring now I must say both of these lenses do suffer from flaring but I would…",
+        "source_id": "youtube-photo-feaver-canon-85mm-f14l-is-vs-sigma-85mm-f14-art-lens-shootout-whats-the-best-prime",
+        "url": "https://www.youtube.com/watch?v=F29OIw1gX4M"
       }
     },
     {
@@ -4290,10 +3242,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 5,
-        "neu": 13,
-        "neg": 18,
-        "total": 36,
+        "pos": 3,
+        "neu": 10,
+        "neg": 16,
+        "total": 29,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -4368,52 +3320,12 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "Back in my preview video a month ago, the early production copy of the lens that I worked with looked a little softer in the corners.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "And additional brightness from the reduced vignetting really makes that image fly out at you.",
+            "quote_excerpt": "corners but if you stop down the aperture it quickly gets better the results will look better on a lower resolution camera okay let's turn off in camera Corrections and take a look at Distortion and vignetting the good news here is that the lens has no Distortion and while at F 1.4 the corners are…",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Let's open the aperture back up and look over into [music] the image corners.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Stop down to f2 or f2.8 to see that vignetting greatly reduced [music] as you will have noticed on the sharpness test earlier.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "When it comes to work against bright lights, the lens does an averely good job here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The only problem I noticed was some rather strong cats eye shapes to specular highlights in the image corners, but that is simply normal for this kind of optic, especially one whose physical dimensions are a little smaller than average.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-gordon-laing-best-canon-rf-85mm-f12-vs-f14-vs-f2-compared-plus-ef-14l",
@@ -4566,38 +3478,22 @@
             "weight": 0.75,
             "quote_excerpt": "It did have quite severe vignetting.",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "There are some artifacts that appear in the bottom corner opposite of the light source, but this is normal.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "The center of the image remains contrasty and isn't washed out, even though the spotlight was shining directly into the lens.",
-            "witness": "unattested"
           }
         ]
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.778,
+        "source_count": 8,
+        "polarity_agreement": 0.875,
         "dominant_polarity": "neg",
-        "max_source_share": 0.25,
+        "max_source_share": 0.31,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Now, I did notice at 1.6, 1.8, there were some vignetting around the edges of the frame.",
-        "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
-        "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ"
+        "quote_excerpt": "nothing to Rave about all right let's look at vignetting and distortion on a full-frame camera the lens projects a very gentle pin cushion Distortion you'd think that with a large size of the lens's front element you would see reduced vignetting well think again as at f1.4 those Corners are really…",
+        "source_id": "youtube-christopher-frost-canon-ef-85mm-f14-is-usm-l-lens-review-with-samples-full-frame-aps-c",
+        "url": "https://www.youtube.com/watch?v=I9AGmygnoYQ"
       }
     },
     {
@@ -4606,10 +3502,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 7,
-        "neg": 8,
-        "total": 18,
+        "pos": 2,
+        "neu": 6,
+        "neg": 7,
+        "total": 15,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -4649,30 +3545,6 @@
             "url": "https://opticallimits.com/canon/canon-ef/canon-ef-85mm-f-1-4-usm-l-is-review/",
             "weight": 0.75,
             "quote_excerpt": "Bokeh fringing is a common.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "At f1.4, four, we're seeing excellent sharpness and contrast right away in the middle of the image with no purple fringing.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "And finally, longitudinal chromatic aberration.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "At f1.4, you might be able to see a little bit of longitudinal color fringing there, but it's nothing really worse than average.",
             "witness": "unattested"
           },
           {
@@ -4759,17 +3631,17 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.6,
+        "source_count": 4,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "neg",
-        "max_source_share": 0.333,
+        "max_source_share": 0.4,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "See It suffers from more purple fringing where if we look over on the actual Sigma lens It suffers more from Green fringing now out of the two I would say the Canon lens is slightly worse but it's a differencing of degrees in different colors so do bear that in mind that these lenses both suffer…",
-        "source_id": "youtube-photo-feaver-canon-85mm-f14l-is-vs-sigma-85mm-f14-art-lens-shootout-whats-the-best-prime",
-        "url": "https://www.youtube.com/watch?v=F29OIw1gX4M"
+        "quote_excerpt": "aberrations which show up as kind of a pink slash purple fringing before the plane of focus and green fringing after the plane of focus it's fairly pronounced and it doesn't really clear up until around f 2.8 and beyond and so the what happens with that is that it does rob the lens of some contrast…",
+        "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
+        "url": "https://www.youtube.com/watch?v=aN-d85EASNY"
       }
     },
     {
@@ -4778,10 +3650,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 2,
-        "neu": 2,
+        "pos": 1,
+        "neu": 1,
         "neg": 0,
-        "total": 4,
+        "total": 2,
         "sources": [
           {
             "source_id": "youtube-georges-cameras-tv-a-god-tier-portrait-lens-canon-85mm-f14-is-usm-review-by-georges-came",
@@ -4789,22 +3661,6 @@
             "url": "https://www.youtube.com/watch?v=ZZ3YsCaLYFc",
             "weight": 0.75,
             "quote_excerpt": "taken a couple of shots of it literally directly at the Sun behind this building and it's actually done a pretty good job with the flaring it's nice and smooth the edges of the sun rays ants who like inflicting and there's not a lot of like color fringing oh it looks quite good so I'm very…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Now, these tests were all performed around Canon's buildings, so my subjects and backgrounds are going to be different for my normal reviews that I do around Brighton.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I was pleasantly surprised at how this lens handles sun flare.",
             "witness": "firsthand"
           },
           {
@@ -4819,10 +3675,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 4,
+        "source_count": 2,
         "polarity_agreement": 0.5,
         "dominant_polarity": "pos",
-        "max_source_share": 0.25,
+        "max_source_share": 0.5,
         "contested": true
       },
       "notes": []
@@ -4833,10 +3689,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 20,
-        "neu": 21,
-        "neg": 7,
-        "total": 48,
+        "pos": 13,
+        "neu": 8,
+        "neg": 6,
+        "total": 27,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -4869,30 +3725,6 @@
             "weight": 0.75,
             "quote_excerpt": "Photography especially for getting nicely out of focused backgrounds and getting fast shutter speeds at f1.4 and 85 mm is telephoto enough for image stabilization to be quite useful in getting sharper pictures with slower shutter speeds here's some footage with it turned off and now turned on it's…",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The quality of this lens's boke is nice and smooth though, which is of course helpful for portrait photography.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "Next, let's see about the quality of this lens's outfocus backgrounds.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "I personally love the defocus smoothing version of that big old lens with its unbelievably soft bcker.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-dustin-abbott-canon-ef-85mm-f14l-is-final-review-4k",
@@ -4983,75 +3815,11 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Look closer at both samples, and I'd say the EF lens on the right is looking a tad softer on its bokeh rendering, but there's not much between them in terms of overall style.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Looking at the whole frames, you can see how that extra stop of aperture has allowed the new 1.4 4 L to deliver a shallower depth of field with greater background blur.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Viewing the whole images reveals the greater background blur, of course, from the 1.2L on the right.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Anyway, taking a closer look shows how the 1.2 2L version on the right is not only delivering a shallower depth of field, but maintaining nice soft bokeh.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "The bokeh blobs on the right at a maximum aperture of f2 are of course smaller and not overlapping here.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "while maintaining nicely rendered bokeh in the blurred areas.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "But for most of us, the new 1.4 L delivers sufficient bokeh with the benefit of quicker and quieter focusing and sharper focus details.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
             "weight": 0.75,
             "quote_excerpt": "This lens really obliterates the background.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "And part of the separation from the background is because you have 11 blades in this lens.",
             "witness": "unattested"
           },
           {
@@ -5092,86 +3860,6 @@
             "url": "https://www.youtube.com/watch?v=4YcWItKTbnc",
             "weight": 0.75,
             "quote_excerpt": "we saw in the computer this lens does have sort of like a football sort of oblong type bokeh around the outside edges and that's when we're looking at straight on light bokeh balls obviously in the real world when you're just shooting outside it's still gonna look creamy and smooth behind but when…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "This focal length brings the background a little bit closer through compression.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "For me, I like a buttery smooth rendering and I like a wrap-around cat's eye shape to the bokeh at wide apertures.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Looking at the portraits, you will notice how the background blur swirls around keeping the attention on my subject.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "also notice how large and smooth the background blur is.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Stopping down from F1.4 to F2 to 2.8 to F4, you will notice that the bokeh remains circular due to the 11 blade aperture.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Later in the video, we will compare the background blur to the 85 mm F1.2 and F2 versions.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Now, we're going to take a look at the bokeh with these two lenses.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "You'll notice with the 85mm 1.4, the bokeh is bigger and more smooth.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "When we zoom in, we notice that the 1.2 version has the most background blur.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If we look at the background blur, we notice they both have beautiful bokeh in the background.",
             "witness": "firsthand"
           },
           {
@@ -5226,17 +3914,17 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 13,
-        "polarity_agreement": 0.538,
+        "source_count": 9,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "pos",
-        "max_source_share": 0.208,
-        "contested": true
+        "max_source_share": 0.333,
+        "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "For me, I like a buttery smooth rendering and I like a wrap-around cat's eye shape to the bokeh at wide apertures.",
-        "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-        "url": "https://www.youtube.com/watch?v=4bUvza0i4ts"
+        "quote_excerpt": "Both lenses deliver pleasing background blur.",
+        "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
+        "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs"
       }
     },
     {
@@ -5341,16 +4029,16 @@
       "measurement": null,
       "sentiment": {
         "pos": 2,
-        "neu": 10,
-        "neg": 1,
-        "total": 13,
+        "neu": 6,
+        "neg": 2,
+        "total": 10,
         "sources": [
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "The lens comes with a hood and its front filter size is 67 mm and as I mentioned before, it does not feature its own optical stabilization.",
+            "quote_excerpt": "has a 77 mm filter thread size and it comes with quite a deep plastic Hood it does not feature image stabilization overall the build quality is fine but the autofocus motor pretty rudimentary to say the least although it does get you there eventually oh and on my nickon z7 I can report that the…",
             "witness": "firsthand"
           },
           {
@@ -5394,30 +4082,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "The filter thread is also unified across the series, measuring 67 mil and as an L lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Also, this is an 82mm filter thread.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "This is a 67 mm filter thread, which is the same across the current VCM lineup.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=qD_Tc4-Nu08",
@@ -5453,17 +4117,17 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.75,
+        "source_count": 6,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neu",
-        "max_source_share": 0.308,
-        "contested": false
+        "max_source_share": 0.4,
+        "contested": true
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "The EF lens includes a 77 mm filter thread, where the RF lens uses a smaller 67 mm filter thread.",
-        "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
-        "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs"
+        "quote_excerpt": "has a 77 mm filter thread size and it comes with quite a deep plastic Hood it does not feature image stabilization overall the build quality is fine but the autofocus motor pretty rudimentary to say the least although it does get you there eventually oh and on my nickon z7 I can report that the…",
+        "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
+        "url": "https://www.youtube.com/watch?v=8lizAZSSL2c"
       }
     },
     {
@@ -5472,10 +4136,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 16,
-        "neg": 8,
-        "total": 27,
+        "pos": 0,
+        "neu": 8,
+        "neg": 7,
+        "total": 15,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -5507,22 +4171,6 @@
             "url": "https://opticallimits.com/canon/canon-ef/canon-ef-85mm-f-1-4-usm-l-is-review/",
             "weight": 0.75,
             "quote_excerpt": "For whatever reason, Canon decided to \"shrink\" the lens hood.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The lens's aperture mechanism has 11 iris blades to it, and its minimum focus distance is 75 cm, so just a little bit closer than average for a portrait lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-            "weight": 0.75,
-            "quote_excerpt": "The lens's minimum focus is 75 cm.",
             "witness": "unattested"
           },
           {
@@ -5574,44 +4222,12 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "I've placed them in order of focal length here, although do note that the hoods on the 35 and 50 were accidentally swapped.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "With focal lengths now ranging from 20 all the way to 85 mm, you have to wonder if they could expand this range further while maintaining the size and that f1.4 aperture.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Canon includes a lens hood, in this case cylindrical like the 50.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-85-14l-is-lens-review-better-than-canon-85-12l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
             "weight": 0.75,
             "quote_excerpt": "It's kind of like if you're doing portraits with this lens, you can get some nice headshot portraits, but it's not as long as say a 105 or a 135 where you can take a couple steps back and get a shoulder length, a mid length, or a full body shot with a something like an 85 1.4.",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Personally, I think the 85mm focal length is a great focal length to have in the bag.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
@@ -5628,54 +4244,6 @@
             "weight": 0.75,
             "quote_excerpt": "majorly important both of these lenses have the same aperture so it doesn't really matter but size is an issue for me so that's why the Cannon lens is winning this round now talking about size let's move on to the weight of these lenses now because of the Canon lens is made more premium plastic…",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "85 is a wonderful focal length for portraits.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Compact size is a big factor for me.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Even the hood is small, not taking up too much space when mounted on the lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Canon has created these VCM lenses to all virtually be identical in size and weight, and I think they are the perfect size.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "Having the lenses small means I can have more tools in my bag when I'm working and moving at a rapid pace.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "The diameter of it is massive, making it difficult not only to take out of my bag and safely mount on my camera without dropping it, but also just to hold while photographing.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
@@ -5697,10 +4265,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 12,
-        "polarity_agreement": 0.583,
+        "source_count": 8,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neu",
-        "max_source_share": 0.222,
+        "max_source_share": 0.333,
         "contested": true
       },
       "notes": []
@@ -5711,10 +4279,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 12,
-        "neu": 9,
+        "pos": 8,
+        "neu": 6,
         "neg": 3,
-        "total": 24,
+        "total": 17,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -5789,38 +4357,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "And some people may prefer the mechanically linked focusing ring.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "I do wish that they would have a switch that let you choose, but Canon believes that still photography shooters are going to stick to the body dials that they're used to using, and a switch can at least lock it in the A position if desired.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "Let's take a look at the outside of this lens and talk about how it feels.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "We all know that an 85 is considered a portrait lens, but I showed you that not only is it great for getting portraits, whether they're candid or set up, this lens is fantastic for everything you decide to throw at it.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-justin-myers-canon-ef-85mm-f14l-is-usm-still-the-best-85mm-or-outdated-in-a-mirrorless-w",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=qD_Tc4-Nu08",
@@ -5861,30 +4397,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "If the lens is lightweight and easy to hold, I find myself using it more and more.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "On a wedding day, this allows me to get better detail photos of my rings when I can use the F2 version.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "And even though I'm now going to the RF 85mm 1.4 for portraits, it's nice to know I have a great backup lens in my kit.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
@@ -5912,10 +4424,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.125,
+        "source_count": 7,
+        "polarity_agreement": 0.571,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.176,
         "contested": true
       },
       "notes": [],
@@ -5931,10 +4443,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 8,
-        "neu": 7,
+        "pos": 6,
+        "neu": 6,
         "neg": 6,
-        "total": 21,
+        "total": 18,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -5943,6 +4455,14 @@
             "weight": 0.75,
             "quote_excerpt": "The AF is both very fast and silent..",
             "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
+            "weight": 0.75,
+            "quote_excerpt": "large manual focus ring which turns smoothly enough but has a slightly rough feel to it I found that the lens's manual focus response was a bit slow jerky and imprecise so not a pleasant manual focusing experience here as you can see here the lens suffers from a moderate level of focus breathing…",
+            "witness": "firsthand"
           },
           {
             "source_id": "youtube-gordon-laing-best-canon-rf-85mm-f12-vs-f14-vs-f2-compared-plus-ef-14l",
@@ -6033,30 +4553,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "Next for the high-end 851.2L, arguably a tad slower still up focusing in this test and a little louder, too.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-            "weight": 0.75,
-            "quote_excerpt": "But now, for the new RF1.4L, visibly focusing much faster than the other three models here, and in complete silence, too.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-            "weight": 0.75,
-            "quote_excerpt": "And being that this is a hybrid lens that's great for video and stills, sometimes you want them to be damn quiet when you're shooting your video.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-lee-zavitz-canon-85mm-f14-l-is-review-testing-in-4k",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=4YcWItKTbnc",
@@ -6071,14 +4567,6 @@
             "weight": 0.75,
             "quote_excerpt": "to the Focus motor of both of these lenses now both of them have autofocus which is great but they do have them to differencing degrees the Canon lens has the ultra Sonic Focus motor and must say if you've ever used a Canon L Series lens before it has superb autofocus really quick really quiet and…",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "The autofocus is instant, silent, and accurate.",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
@@ -6108,10 +4596,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.444,
+        "source_count": 7,
+        "polarity_agreement": 0.429,
         "dominant_polarity": "neu",
-        "max_source_share": 0.524,
+        "max_source_share": 0.611,
         "contested": true
       },
       "notes": []
@@ -6165,14 +4653,14 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 20 reviewer sources for Canon EF 85mm f/1.4L IS USM. Optical performance draws the most discussion: 54 positive, 23 neutral, and 32 negative across 109 sentiment markers. The most criticism lands on vignetting: 14% positive, 36% neutral, 50% negative across 36 claims. Opinion is split on AF for stills (23 positive, 22 neutral, 16 negative claims).",
+    "consensus_paragraph": "Synthesized from 17 reviewer sources for Canon 85mm f1.4. Optical performance draws the most discussion: 39 positive, 13 neutral, and 27 negative across 79 sentiment markers. The most criticism lands on vignetting: 10% positive, 35% neutral, 55% negative across 29 claims. Opinion is split on AF for stills (18 positive, 12 neutral, 11 negative claims).",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
-        "pos": 54,
-        "neu": 23,
-        "neg": 32,
-        "total": 109,
+        "pos": 39,
+        "neu": 13,
+        "neg": 27,
+        "total": 79,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6202,10 +4690,10 @@
       },
       {
         "aspect": "af_performance.stills",
-        "pos": 23,
-        "neu": 22,
-        "neg": 16,
-        "total": 61,
+        "pos": 18,
+        "neu": 12,
+        "neg": 11,
+        "total": 41,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6235,10 +4723,10 @@
       },
       {
         "aspect": "af_performance.video",
-        "pos": 22,
-        "neu": 33,
-        "neg": 14,
-        "total": 69,
+        "pos": 16,
+        "neu": 20,
+        "neg": 12,
+        "total": 48,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6257,21 +4745,21 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "And that series uniformity goes to [music] Canon's credit, as it makes the lenses easier to swap out when shooting video, especially if you're using an electronic gimbal, and everything's [music] balanced up nicely.",
+            "quote_excerpt": "but very pedestrian it needs a bit of a dose of steroids here really not only does it move quite slowly but it also takes a few moments to properly lock onto your sub object although when it does it's generally accurate so yes the autofocus does work but only very slowly on a nickon z7 camera…",
             "witness": "unattested"
           }
         ]
       },
       {
         "aspect": "build",
-        "pos": 17,
+        "pos": 16,
         "neu": 5,
         "neg": 8,
-        "total": 30,
+        "total": 29,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6302,9 +4790,9 @@
       {
         "aspect": "distortion",
         "pos": 2,
-        "neu": 6,
+        "neu": 5,
         "neg": 4,
-        "total": 12,
+        "total": 11,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6334,10 +4822,10 @@
       },
       {
         "aspect": "vignetting",
-        "pos": 5,
-        "neu": 13,
-        "neg": 18,
-        "total": 36,
+        "pos": 3,
+        "neu": 10,
+        "neg": 16,
+        "total": 29,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6367,10 +4855,10 @@
       },
       {
         "aspect": "chromatic_aberration",
-        "pos": 3,
-        "neu": 7,
-        "neg": 8,
-        "total": 18,
+        "pos": 2,
+        "neu": 6,
+        "neg": 7,
+        "total": 15,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6400,10 +4888,10 @@
       },
       {
         "aspect": "coma",
-        "pos": 2,
-        "neu": 2,
+        "pos": 1,
+        "neu": 1,
         "neg": 0,
-        "total": 4,
+        "total": 2,
         "top_quote_refs": [
           {
             "source_id": "youtube-georges-cameras-tv-a-god-tier-portrait-lens-canon-85mm-f14-is-usm-review-by-georges-came",
@@ -6414,29 +4902,21 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
+            "source_id": "youtube-totally-exposed-canon-85mm-f14l-is-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
+            "url": "https://www.youtube.com/watch?v=gwhpEeiUlKg",
             "weight": 0.75,
-            "quote_excerpt": "Now, these tests were all performed around Canon's buildings, so my subjects and backgrounds are going to be different for my normal reviews that I do around Brighton.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-            "weight": 0.75,
-            "quote_excerpt": "I was pleasantly surprised at how this lens handles sun flare.",
+            "quote_excerpt": "leave a comment below and to anything right and so it's been a couple of weeks actually seems to be tested that out of the sausage insider whatever it was festival as a sign of us it's given us a couple more weeks to kind of reflect on the lens and have a think about what we reckon to it",
             "witness": "firsthand"
           }
         ]
       },
       {
         "aspect": "bokeh",
-        "pos": 20,
-        "neu": 21,
-        "neg": 7,
-        "total": 48,
+        "pos": 13,
+        "neu": 8,
+        "neg": 6,
+        "total": 27,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6500,16 +4980,16 @@
       {
         "aspect": "filter_thread",
         "pos": 2,
-        "neu": 10,
-        "neg": 1,
-        "total": 13,
+        "neu": 6,
+        "neg": 2,
+        "total": 10,
         "top_quote_refs": [
           {
-            "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "The lens comes with a hood and its front filter size is 67 mm and as I mentioned before, it does not feature its own optical stabilization.",
+            "quote_excerpt": "has a 77 mm filter thread size and it comes with quite a deep plastic Hood it does not feature image stabilization overall the build quality is fine but the autofocus motor pretty rudimentary to say the least although it does get you there eventually oh and on my nickon z7 I can report that the…",
             "witness": "firsthand"
           },
           {
@@ -6532,10 +5012,10 @@
       },
       {
         "aspect": "dimensions",
-        "pos": 3,
-        "neu": 16,
-        "neg": 8,
-        "total": 27,
+        "pos": 0,
+        "neu": 8,
+        "neg": 7,
+        "total": 15,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6565,10 +5045,10 @@
       },
       {
         "aspect": "handling",
-        "pos": 12,
-        "neu": 9,
+        "pos": 8,
+        "neu": 6,
         "neg": 3,
-        "total": 24,
+        "total": 17,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6598,10 +5078,10 @@
       },
       {
         "aspect": "af_noise",
-        "pos": 8,
-        "neu": 7,
+        "pos": 6,
+        "neu": 6,
         "neg": 6,
-        "total": 21,
+        "total": 18,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6612,19 +5092,19 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-gordon-laing-best-canon-rf-85mm-f12-vs-f14-vs-f2-compared-plus-ef-14l",
+            "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=soBsUcp8X2M",
+            "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
             "weight": 0.75,
-            "quote_excerpt": "In fact it's still quite a jolt to see it in action alongside the other models on test and as you'll hear in a moment it operates in silence too.",
-            "witness": "unattested"
+            "quote_excerpt": "large manual focus ring which turns smoothly enough but has a slightly rough feel to it I found that the lens's manual focus response was a bit slow jerky and imprecise so not a pleasant manual focusing experience here as you can see here the lens suffers from a moderate level of focus breathing…",
+            "witness": "firsthand"
           },
           {
             "source_id": "youtube-gordon-laing-best-canon-rf-85mm-f12-vs-f14-vs-f2-compared-plus-ef-14l",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=soBsUcp8X2M",
             "weight": 0.75,
-            "quote_excerpt": "Next for the latest RF 85 1.4 L VCM which pulls focus faster at just over a second and while it occasionally pauses before starting in this particular environment, the process is smooth and confident and essentially silent, too.",
+            "quote_excerpt": "In fact it's still quite a jolt to see it in action alongside the other models on test and as you'll hear in a moment it operates in silence too.",
             "witness": "unattested"
           }
         ]
@@ -6632,11 +5112,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 694,
-      "evaluated": 467,
-      "non_evaluative": 227,
+      "examined": 505,
+      "evaluated": 366,
+      "non_evaluative": 139,
       "non_evaluative_breakdown": {
-        "non_claim": 227
+        "non_claim": 139
       },
       "off_axis": 0,
       "ruleset": {
@@ -6644,7 +5124,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "694 examined · 467 evaluated under askmaddi-polarity",
+      "receipt_line": "505 examined · 366 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -6653,10 +5133,10 @@
     "successor": null,
     "siblings": [],
     "sentiment": {
-      "pos": 15,
-      "neu": 23,
-      "neg": 4,
-      "total": 42,
+      "pos": 9,
+      "neu": 13,
+      "neg": 3,
+      "total": 25,
       "sources": [
         {
           "source_id": "opticallimits-canon-canon-ef-canon-ef-85mm-f-1-4-usm-l-is-review",
@@ -6819,46 +5299,6 @@
           "witness": "unattested"
         },
         {
-          "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-          "weight": 0.75,
-          "quote_excerpt": "Upon closer examination though, the newer RF version on the left is crisper on the focus details and better defined overall.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-          "weight": 0.75,
-          "quote_excerpt": "First, you'll notice how the reproduction from the new RF lens on the left is a bit smaller from the same distance.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-          "weight": 0.75,
-          "quote_excerpt": "But I do think that from these initial tests, we have a good idea where the new lens fits into the range and what it's capable of.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-          "weight": 0.75,
-          "quote_excerpt": "And the reason I chose the 85 over a 70 to 200 2.8 was to have that 1.4 and create that isolation and separation that will set you apart as a photographer.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-          "weight": 0.75,
-          "quote_excerpt": "So, you can see that Canon gives you a bunch of different options to choose from when it comes to 85.",
-          "witness": "unattested"
-        },
-        {
           "source_id": "youtube-leah-davies-canon-ef-85mm-f14-usm-vs-canon-ef-85mm-f18-usm-is-it-worth-the-extra-1000-ph",
           "source_type": "youtube",
           "url": "https://www.youtube.com/watch?v=0uu6wckKf54",
@@ -6873,102 +5313,6 @@
           "weight": 0.75,
           "quote_excerpt": "this definitely feels like a pretty big upgrade in the autofocus department after that night when I was shooting with this lens and 60 I was like well I should probably get my hands on a 5d Mark 4 because to really see the true potential the autofocus speed on this lens you need a better camera…",
           "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "I'm going to be comparing it to the Canon 85mm f/1.2 and the Canon 85mm f/2.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "I've been using the F2 version for the last couple years and have really enjoyed this lens.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "Here you'll see the difference between how close I was using the F2 version compared to how far back I had to be with the F1.4 version.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "This is the F2 version.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "Second, though at first glance the 85mm f/2 seems a little shorter, the barrel extends when focusing so it actually ends up being a fair amount longer than the RF 85mm f/1.4.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "The 1.4 version actually has faster autofocus and is quieter than the 1.2 version.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "The first thing I want to make note of when comparing these two lenses is how the 1.2 version is slightly more zoomed in than the 1.4 version.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "Though it's a very small difference, I personally prefer the slightly wider field of view of the 1.4 version.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "In terms of bokeh, we'll notice that the 1.2 version continues to be Canon's champion.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "And though the 1.2 version has a blurrier background, the 1.4 version is not far behind.",
-          "witness": "unattested"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "Let's talk more about the size and weight of the 1.2 version because I think this is the most important thing to consider.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-          "weight": 0.75,
-          "quote_excerpt": "It's a lot cheaper and the only real advantage is the 1.2 version has is that it lets in a little bit more light and gives you a slightly blurrier background.",
-          "witness": "unattested"
         },
         {
           "source_id": "youtube-stefan-botha-studios-canon-rf85mm-f14-l-vcm-vs-canon-ef-85mm-f14-l-is-usm-lens-compariso",
@@ -7012,7 +5356,7 @@
       "url": "https://opticallimits.com/canon/canon-ef/canon-ef-85mm-f-1-4-usm-l-is-review/",
       "title": "Canon EF 85mm f/1.4 USM L IS Review - OpticalLimits",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935009+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896371+00:00",
       "weight": 0.75
     },
     {
@@ -7023,18 +5367,18 @@
       "url": "https://www.youtube.com/watch?v=I9AGmygnoYQ",
       "title": "Canon EF 85mm f/1.4 IS USM 'L' lens review with samples (Full-frame & APS-C)",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935018+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896391+00:00",
       "weight": 0.75
     },
     {
-      "source_id": "youtube-christopher-frost-canon-rf-85mm-f14-l-vcm-lens-review",
+      "source_id": "youtube-christopher-frost-meike-85mm-f14-autofocus-lens-review",
       "source_type": "pro",
       "reviewer": "Christopher Frost",
       "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=InkHfr_qNrU",
-      "title": "Canon RF 85mm f/1.4 'L' VCM lens review",
+      "url": "https://www.youtube.com/watch?v=8lizAZSSL2c",
+      "title": "Meike 85mm f/1.4 (Autofocus) lens review",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935022+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896395+00:00",
       "weight": 0.75
     },
     {
@@ -7045,7 +5389,7 @@
       "url": "https://www.youtube.com/watch?v=aN-d85EASNY",
       "title": "Canon EF 85mm f/1.4L IS | Final Review | 4K",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935025+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896399+00:00",
       "weight": 0.75
     },
     {
@@ -7056,7 +5400,7 @@
       "url": "https://www.youtube.com/watch?v=KNOX-dehNj4",
       "title": "Canon EF 85mm f/1.4L IS USM | First Look | 4K",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935028+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896403+00:00",
       "weight": 0.75
     },
     {
@@ -7067,7 +5411,7 @@
       "url": "https://www.youtube.com/watch?v=ZZ3YsCaLYFc",
       "title": "A God Tier Portrait Lens | Canon 85mm F1.4 IS USM Review by Georges Cameras",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935031+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896406+00:00",
       "weight": 0.75
     },
     {
@@ -7078,18 +5422,7 @@
       "url": "https://www.youtube.com/watch?v=soBsUcp8X2M",
       "title": "BEST Canon RF 85mm: f1.2 vs f1.4 vs f2 compared plus EF 1.4L!",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935033+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-gordon-laing-canon-rf-85mm-f14l-vcm-review-first-looks-vs-f12-vs-f2-vs-ef",
-      "source_type": "pro",
-      "reviewer": "Gordon Laing",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=YIox841n4Lo",
-      "title": "Canon RF 85mm f1.4L VCM REVIEW: first-looks vs f1.2 vs f2 vs EF",
-      "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935036+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896409+00:00",
       "weight": 0.75
     },
     {
@@ -7100,18 +5433,7 @@
       "url": "https://www.youtube.com/watch?v=YDlzuiTMGeQ",
       "title": "Canon 85 1.4L IS Lens Review | Better than Canon 85 1.2L?",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935038+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-jared-polin-canon-rf-85-14l-vcm-review-a-professional-portrait-lens-for-less-vs-85-12l",
-      "source_type": "pro",
-      "reviewer": "Jared Polin",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=zlBJD3CBgwM",
-      "title": "Canon RF 85 1.4L VCM REVIEW: a PROFESSIONAL Portrait Lens for LESS?! (vs 85 1.2L)",
-      "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935040+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896412+00:00",
       "weight": 0.75
     },
     {
@@ -7122,7 +5444,7 @@
       "url": "https://www.youtube.com/watch?v=qD_Tc4-Nu08",
       "title": "Canon EF 85mm f1.4L IS USM: Still the Best 85mm or Outdated in a Mirrorless World?",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935043+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896415+00:00",
       "weight": 0.75
     },
     {
@@ -7133,7 +5455,7 @@
       "url": "https://www.youtube.com/watch?v=0uu6wckKf54",
       "title": "Canon EF 85mm F/1.4 USM vs. Canon EF 85mm F/1.8 USM | Is it worth the extra $1000?? + Photo Examples",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935045+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896418+00:00",
       "weight": 0.75
     },
     {
@@ -7144,7 +5466,7 @@
       "url": "https://www.youtube.com/watch?v=4YcWItKTbnc",
       "title": "Canon 85mm f1.4 L IS - Review & Testing - in 4k",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935048+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896422+00:00",
       "weight": 0.75
     },
     {
@@ -7155,7 +5477,7 @@
       "url": "https://www.youtube.com/watch?v=F29OIw1gX4M",
       "title": "Canon 85mm F/1.4L IS Vs Sigma 85mm F/1.4 Art Lens Shootout /// What's the Best Prime Lens?",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935050+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896425+00:00",
       "weight": 0.75
     },
     {
@@ -7166,18 +5488,7 @@
       "url": "https://www.youtube.com/watch?v=RWJDm5Ck5Bs",
       "title": "The Canon EF 85mm F/1.4L IS USM Lens In-Depth Review",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935052+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-shane-long-photography-canon-rf-85mm-f14-l-vcm-vs-f12-vs-f2-which-one-should-you-buy-rev",
-      "source_type": "pro",
-      "reviewer": "Shane Long Photography",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=4bUvza0i4ts",
-      "title": "Canon RF 85mm f1.4 L VCM vs f1.2 vs f2 — Which One Should You Buy? Review by a Wedding Photographer",
-      "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935055+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896428+00:00",
       "weight": 0.75
     },
     {
@@ -7188,7 +5499,7 @@
       "url": "https://www.youtube.com/watch?v=LxMLG2IbsQs",
       "title": "Canon RF85mm f/1.4 L VCM vs Canon EF 85mm f/1.4 L IS USM - Lens Comparison & Review",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935057+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896431+00:00",
       "weight": 0.75
     },
     {
@@ -7199,7 +5510,7 @@
       "url": "https://www.youtube.com/watch?v=gwhpEeiUlKg",
       "title": "CANON 85mm f1.4L IS Review",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935060+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896434+00:00",
       "weight": 0.75
     },
     {
@@ -7210,7 +5521,7 @@
       "url": "https://www.youtube.com/watch?v=xpxY67AcN1U",
       "title": "Canon RF 85mm f/1.4 vs EF 85mm f/1.4 IS | Lens Body Comparison Only",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935062+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896437+00:00",
       "weight": 0.75
     },
     {
@@ -7221,17 +5532,17 @@
       "url": "https://www.youtube.com/watch?v=Qb3e5fWOC2Q",
       "title": "Is it worth the price? Canon 85mm f1.4 vs Samyang 85mm f1.4",
       "publication_date": "",
-      "ingested_at": "2026-10-31T09:32:05.935065+00:00",
+      "ingested_at": "2026-11-18T08:09:45.896441+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/canon-85mm-f1-4/",
-    "reddit": "Canon EF 85mm f/1.4L IS USM\n\nSynthesized from 20 reviewer sources for Canon EF 85mm f/1.4L IS USM. Optical performance draws the most discussion: 54 positive, 23 neutral, and 32 negative across 109 sentiment markers. The most criticism lands on vignetting: 14% positive, 36% neutral, 50% negative across 36 claims. Opinion is split on AF for stills (23 positive, 22 neutral, 16 negative claims).\n\nI pulled together all 20 reviews in one place: https://askmaddi.com/cards/canon-85mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Canon EF 85mm f/1.4L IS USM**\nSynthesized from 20 reviewer sources for Canon EF 85mm f/1.4L IS USM. Optical performance draws the most discussion: 54 positive, 23 neutral, and 32 negative across 109 sentiment markers. The most criticism lands on vignetting: 14% positive, 36% neutral, 50% negative across 36 claims. Opinion is split on AF for stills (23 positive, 22 neutral, 16 negative claims).\nAll 20 reviews in one place: https://askmaddi.com/cards/canon-85mm-f1-4/\n_(disclosure: I built this)_",
+    "reddit": "Canon EF 85mm f/1.4L IS USM\n\nSynthesized from 17 reviewer sources for Canon 85mm f1.4. Optical performance draws the most discussion: 39 positive, 13 neutral, and 27 negative across 79 sentiment markers. The most criticism lands on vignetting: 10% positive, 35% neutral, 55% negative across 29 claims. Opinion is split on AF for stills (18 positive, 12 neutral, 11 negative claims).\n\nI pulled together all 17 reviews in one place: https://askmaddi.com/cards/canon-85mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon EF 85mm f/1.4L IS USM**\nSynthesized from 17 reviewer sources for Canon 85mm f1.4. Optical performance draws the most discussion: 39 positive, 13 neutral, and 27 negative across 79 sentiment markers. The most criticism lands on vignetting: 10% positive, 35% neutral, 55% negative across 29 claims. Opinion is split on AF for stills (18 positive, 12 neutral, 11 negative claims).\nAll 17 reviews in one place: https://askmaddi.com/cards/canon-85mm-f1-4/\n_(disclosure: I built this)_",
     "og": {
       "title": "Canon EF 85mm f/1.4L IS USM — Reviewed",
-      "description": "Synthesized from 20 reviewer sources for Canon EF 85mm f/1.4L IS USM. Optical performance draws the most discussion: 54 positive, 23 neutral, and 32 negative across 109 sentiment markers. The most criticism lands on vignetting: 14% positive, 36% neutral, 50% negative across 36 claims. Opinion is split on AF for stills (23 positive, 22 neutral, 16 negative claims).",
+      "description": "Synthesized from 17 reviewer sources for Canon 85mm f1.4. Optical performance draws the most discussion: 39 positive, 13 neutral, and 27 negative across 79 sentiment markers. The most criticism lands on vignetting: 10% positive, 35% neutral, 55% negative across 29 claims. Opinion is split on AF for stills (18 positive, 12 neutral, 11 negative claims).",
       "image": null,
       "url": "https://askmaddi.com/cards/canon-85mm-f1-4/"
     }

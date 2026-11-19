@@ -1965,6 +1965,119 @@
         "thin (< 15 claims): sensor_performance, handling, evf_lcd"
       ],
       "rank": 14
+    },
+    {
+      "card_id": "nikon-d3200",
+      "display_name": "Nikon d3200",
+      "rankable": true,
+      "score": -0.5028,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "sensor_performance",
+          "weight": 3,
+          "s": -0.2,
+          "pos": 4,
+          "neg": 10,
+          "total": 30,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.6,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "Nikon D3200 Reviews - DXOMARK Skip to content Sensors &nbsp;>&nbsp; Nikon D3200 &nbsp;>&nbsp; Sensor&nbsp;Test Results Introduction The Nikon D3200 versus its competitors The Nikon D3200."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "Image Sensor Full 1080p HD video with stereo sound Easy-To-Use with Nikon&rsquo;s Guide Mode Fast and accurate shooting with 11-point Autofocus System 3-in."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "DSLR with good low light performance."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 2,
+          "s": -0.0625,
+          "pos": 2,
+          "neg": 3,
+          "total": 16,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": -0.125,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "With its DxOmark Score of 81, the D3200 is on the exact same footing as the NEX-7 , sharing the same 24.1-bit measurement for color."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "three sizes for JPEG files, each with three quality levels."
+            }
+          ],
+          "axis_display": "Image Quality"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.2222,
+          "pos": 3,
+          "neg": 1,
+          "total": 9,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2222,
+          "top_sources": [
+            {
+              "source_id": "dxomark-nikon-d3200-review",
+              "url": "https://www.dxomark.com/nikon-d3200-review/",
+              "witness": "unattested",
+              "quote": "semi-pro ergonomics, optical reflex vs."
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-d3200",
+              "url": "https://photographylife.com/reviews/nikon-d3200",
+              "witness": "unattested",
+              "quote": "compared to other Nikon DSLRs), simplified user interface and lightest and most compact camera body."
+            },
+            {
+              "source_id": "photoreview-reviews-dslr-cameras-entry-level-nikon-d3200",
+              "url": "https://www.photoreview.com.au/reviews/dslr-cameras/entry-level/nikon-d3200/",
+              "witness": "unattested",
+              "quote": "use older Nikkor lenses.) Build and Ergonomics Essentially the design of the camera body hasn&#8217;t changed since the D3100."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "evf_lcd"
+      ],
+      "thin_axes": [
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: evf_lcd",
+        "thin (< 15 claims): handling"
+      ],
+      "rank": 15
     }
   ],
   "excluded": [
@@ -2007,7 +2120,7 @@
     },
     {
       "card_id": "canon-eos-5d",
-      "display_name": "Canon eos 5d",
+      "display_name": "Canon EOS 5D",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2070,7 +2183,7 @@
     },
     {
       "card_id": "canon-powershot-s3",
-      "display_name": "Canon powershot s3",
+      "display_name": "Canon PowerShot S3 IS",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2266,7 +2379,7 @@
     },
     {
       "card_id": "fujifilm-x100v",
-      "display_name": "Fujifilm x100v",
+      "display_name": "Fujifilm X100V",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2399,7 +2512,7 @@
     },
     {
       "card_id": "nikon-z8",
-      "display_name": "Nikon z8",
+      "display_name": "Nikon Z8",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2553,7 +2666,7 @@
     },
     {
       "card_id": "sony-a7s",
-      "display_name": "Sony a7s",
+      "display_name": "Sony A7S",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2609,7 +2722,7 @@
     },
     {
       "card_id": "sony-rx100-v",
-      "display_name": "Sony rx100 v",
+      "display_name": "Sony Cyber-shot RX100 V",
       "unknowns": [
         "resolution_mp: resolution_mp not present on card"
       ]
@@ -2623,8 +2736,8 @@
     }
   ],
   "counts": {
-    "in_scope": 107,
-    "ranked": 14,
+    "in_scope": 108,
+    "ranked": 15,
     "excluded": 2,
     "pending_backfill": 91
   }

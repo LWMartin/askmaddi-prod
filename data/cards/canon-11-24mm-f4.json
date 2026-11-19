@@ -22,25 +22,25 @@
     "used_market": {
       "source": "ebay",
       "bands": {
-        "pre_owned": 899.0,
+        "pre_owned": 850.0,
         "refurbished": 1127.65,
         "open_box": 1200.0
       },
       "sold_last_90d": 0,
       "search_url": null,
       "affiliate_url": null,
-      "sample_size": 35,
-      "price_updated_at": "2026-11-18T10:10:04.469151+00:00"
+      "sample_size": 36,
+      "price_updated_at": "2026-11-19T10:10:05.437738+00:00"
     },
-    "price_updated_at": "2026-10-03T12:40:40.676064+00:00"
+    "price_updated_at": "2026-11-18T00:21:20.570000+00:00"
   },
   "freshness": {
     "created_at": "2026-10-03T12:40:40.665663+00:00",
-    "last_built": "2026-10-03T12:40:40.665663+00:00",
-    "last_checked": "2026-10-03T12:40:40.665663+00:00",
-    "source_count": 16,
+    "last_built": "2026-11-18T00:21:20.559513+00:00",
+    "last_checked": "2026-11-18T00:21:20.559513+00:00",
+    "source_count": 15,
     "source_types": {
-      "pro": 16
+      "pro": 15
     },
     "build_model": "claude-sonnet-4-5-20250929",
     "build_version": "stage6-v0.1"
@@ -644,15 +644,15 @@
     },
     {
       "axis_id": "af_performance",
-      "display_name": "af_performance",
+      "display_name": "Autofocus",
       "axis_type": "lead",
       "stills": {
         "measurement": null,
         "sentiment": {
-          "pos": 4,
+          "pos": 3,
           "neu": 3,
           "neg": 0,
-          "total": 7,
+          "total": 6,
           "sources": [
             {
               "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -701,24 +701,16 @@
               "weight": 0.75,
               "quote_excerpt": "to focus on something far away here that not something up close and no Parra way again and then up close again I think you get the idea in the end it's ridiculously fast and crazy accurate which means there's nothing to fault here but again fast AF on a wide-angle lens is just a nice bonus but as…",
               "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-              "weight": 0.75,
-              "quote_excerpt": "much quicker in the real world wasn't a problem for me I used it these as these guys were celebrating I didn't misfocus it's going to be much harder to misfocus at 10 mm cuz everything's going to look like it's in focus and also it's an F4 so the motors perfectly fine for how I was using it now",
-              "witness": "firsthand"
             }
           ]
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 3,
-          "polarity_agreement": 0.667,
-          "dominant_polarity": "pos",
-          "max_source_share": 0.429,
-          "contested": false
+          "source_count": 2,
+          "polarity_agreement": 0.5,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.5,
+          "contested": true
         },
         "notes": []
       },
@@ -727,8 +719,8 @@
         "sentiment": {
           "pos": 7,
           "neu": 3,
-          "neg": 3,
-          "total": 13,
+          "neg": 2,
+          "total": 12,
           "sources": [
             {
               "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -752,14 +744,6 @@
               "url": "https://www.youtube.com/watch?v=yGXC0MGRHNg",
               "weight": 0.75,
               "quote_excerpt": "my word for it see for yourself as with all of my reviews the next two to three minutes will be a series of Stills and video clips demonstrated in the optical virtues of the Canon 11 or 24 millimeter f/4 lenz and if you're a real estate or architectural photography professional the canon 11 or 24…",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-              "source_type": "youtube",
-              "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-              "weight": 0.75,
-              "quote_excerpt": "this lens there's not a lot of room needed to move the focus element it's not super heavy whereas in something like this you're moving a much heavier element and Canon also went ahead let me check my notes they put in here a position sensor which shortens the AF times when you go ahead and use it…",
               "witness": "firsthand"
             },
             {
@@ -838,10 +822,10 @@
         },
         "confidence": "low",
         "convergence": {
-          "source_count": 8,
-          "polarity_agreement": 0.5,
+          "source_count": 7,
+          "polarity_agreement": 0.571,
           "dominant_polarity": "pos",
-          "max_source_share": 0.231,
+          "max_source_share": 0.25,
           "contested": true
         },
         "notes": []
@@ -966,10 +950,10 @@
       "crop_factor_implications": "",
       "current_body_compatibility": [],
       "sentiment": {
-        "pos": 3,
+        "pos": 2,
         "neu": 10,
         "neg": 1,
-        "total": 14,
+        "total": 13,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -1028,14 +1012,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "this is a review of the Canon RF 10 to 20 mm F4 I this is an old Ultra wide angle lens and I've been waiting for this since the RF Mount was announced why because this is the Behemoth that I've been carrying around ever since with an adapter on it and this is an absolute monster the 11",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-11-24mm-f4l-usm-real-world-review",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=nOavQXaw7AU",
@@ -1086,16 +1062,11 @@
         ]
       },
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.75,
+        "source_count": 7,
+        "polarity_agreement": 0.857,
         "dominant_polarity": "neu",
-        "max_source_share": 0.286,
+        "max_source_share": 0.308,
         "contested": false
-      },
-      "face_quote": {
-        "quote_excerpt": "this is a review of the Canon RF 10 to 20 mm F4 I this is an old Ultra wide angle lens and I've been waiting for this since the RF Mount was announced why because this is the Behemoth that I've been carrying around ever since with an adapter on it and this is an absolute monster the 11",
-        "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-        "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo"
       }
     },
     {
@@ -1124,10 +1095,10 @@
         "sample_size": 0
       },
       "sentiment": {
-        "pos": 10,
+        "pos": 9,
         "neu": 5,
         "neg": 10,
-        "total": 25,
+        "total": 24,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -1200,14 +1171,6 @@
             "weight": 0.75,
             "quote_excerpt": "and lives on my camera for most of this stuff so be it even though the price is about $2,000 less I would still take this over something like this and that's because of the weight and heft of this I didn't have a bad time shooting with this but for what I do I personally don't need what this",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "photo at checkout to get 10% off your first order now let's talk about price $22.99 for this lens whereas this lens brand new was $3,000 and you can probably get it for under $2,000 used today this is a must buy for the people that know they need this people go who's the 10 mm for who shoots at",
-            "witness": "unattested"
           },
           {
             "source_id": "youtube-jared-polin-canon-11-24mm-f4l-usm-real-world-review",
@@ -1332,10 +1295,10 @@
         ]
       },
       "convergence": {
-        "source_count": 12,
-        "polarity_agreement": 0.667,
+        "source_count": 11,
+        "polarity_agreement": 0.636,
         "dominant_polarity": "pos",
-        "max_source_share": 0.24,
+        "max_source_share": 0.25,
         "contested": false
       },
       "face_quote": {
@@ -1390,9 +1353,9 @@
       "delta_from_baseline_pct": 0.0,
       "sentiment": {
         "pos": 3,
-        "neu": 6,
-        "neg": 11,
-        "total": 20,
+        "neu": 5,
+        "neg": 10,
+        "total": 18,
         "sources": [
           {
             "source_id": "youtube-christopher-frost-canon-ef-11-24mm-f4-usm-l-lens-review-with-samples-full-frame-and-aps",
@@ -1424,22 +1387,6 @@
             "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
             "weight": 0.75,
             "quote_excerpt": "right now this has a lot that it can do a little bit of weight to it and it should I just had a couple more things but if you need it if yours they use and you're buying it for a reason and it'll fulfill that need this is the 11 to 24 lens right now I just wanted",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "20 weighs in at 1.25 lb or 570 G with the chunker of a lens the 11 to 24 coming in at 2.6 lb or 1180 G it is a heavy lens and this is much more of a joy to fit in your bag and hold in your hands because it it's light all right this is your lens",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "standpoint but for those who are looking to get ultrawide video to have is built in something light like this that's going to be pretty amazing when you're walking around now before I jump into the computer I want to explain what you're going to see when you attach the 10 to 20 mm to any of your RF…",
             "witness": "firsthand"
           },
           {
@@ -1557,10 +1504,10 @@
         ]
       },
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.556,
+        "source_count": 8,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neg",
-        "max_source_share": 0.25,
+        "max_source_share": 0.278,
         "contested": true
       },
       "face_quote": {
@@ -1577,10 +1524,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 8,
-        "neu": 12,
+        "pos": 6,
+        "neu": 7,
         "neg": 5,
-        "total": 25,
+        "total": 18,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -1663,62 +1610,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "now some people might say is that a fisheye lens and no this is a rectilinear lens which is designed for the lines to be straighter vers Bode that you get in a fisheye for those of you out there who have a 14 to35 F4 from Canon just basically look at it put it in your hands and you",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "there is lens correction data and information built into the lenses so the preview that you're getting inside of the camera is the 10 mm preview but in Lightroom at the time of recording this you do not have the lens correction data already built in the Lightroom it will be out as soon as this lens…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "I show you the raw file without lens correction you can see you're gaining a little more on the edges it is a 10 mm lens with correction without correction I don't know what the exact millimeters are but it's not as rectilinear as you would get when you shoot 10 this isn't an issue with the lens…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "trying to pull one over on anybody Canon Nikon Sony Tamron Sigma they all have lens profiles that they're building for these lenses that are designed specifically for digital cameras so whereas if you have lens correction off you're going to see a strong vignette when lens correction is on you're…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "companies can make these lenses smaller and lighter and more affordable by being able to do this and it's not a problem at all it's we're going to see more and more of this as we go forward the fact that they were able to give you a 10 mm corrected frame uh image is I mean look at the",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "you how we corrected this because lens correction isn't built into Lightroom at the time of recording this we went ahead and matched it to a JPEG based off of a 14 to35 5 F4 correction so we got it as close as possible we think it's right there it's it there's nothing wrong with it so we like how",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "see with the raw file look up here we've got the light stanions both sides now when I go ahead and enable lens correction and put the Distortion up to 120 look at what you see this is the difference I lost those other light stanions but this is the corrected at 10 mm this is what you see when",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
@@ -1786,10 +1677,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 10,
-        "polarity_agreement": 0.4,
+        "source_count": 9,
+        "polarity_agreement": 0.444,
         "dominant_polarity": "neg",
-        "max_source_share": 0.28,
+        "max_source_share": 0.333,
         "contested": true
       },
       "notes": [],
@@ -1805,10 +1696,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 5,
+        "pos": 3,
         "neu": 2,
-        "neg": 10,
-        "total": 17,
+        "neg": 8,
+        "total": 13,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -1875,38 +1766,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "but watch what happens when we turn it off I turn it off and you can see how strong the vignette is around the outside but again Canon designed this for 10 mm corrected and it's slightly Bo because that's just what you're getting when it's uncorrected sometimes you might like that in your frame and…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "not but just be aware that when it's uncorrected there is more vignetting and you're going to see some much darker spots around the outside that's when it's uncorrected for example when we saw the 20 to 70 mm F4 from Sony when it's uncorrected it is heavy on the vignette when you add the correction…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "four degrees makes all the difference in the world just look at how much wider we are with the light stanches there's so much more room to breathe on the left and on the right compared to the 11 mm and I should also say if you only have a 14 mm you're getting something like two times more the",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "take it a step further on the same exact image and show you with zero Distortion correction I left vignetting correction on and look how much wider it is I am getting the light stance fully in on the right and the left and I noticed at the top of the frame I actually got part of the steel girds",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
@@ -1950,10 +1809,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.667,
+        "source_count": 5,
+        "polarity_agreement": 0.6,
         "dominant_polarity": "neg",
-        "max_source_share": 0.353,
+        "max_source_share": 0.462,
         "contested": false
       },
       "notes": [],
@@ -2195,19 +2054,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 2,
+        "pos": 1,
         "neu": 0,
         "neg": 0,
-        "total": 2,
+        "total": 1,
         "sources": [
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "zoom out to 20 and it looks perfectly fine the colors the tones the clarity as I always say it looks fantastic especially when we knock some of our fro Pack 4 onto it looks much better back to 10 mm down low to get Bryce Harper here with the R3 love the way this looks you can look up",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
             "source_type": "youtube",
@@ -2219,13 +2070,7 @@
         ]
       },
       "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 1.0,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.5,
-        "contested": false
-      },
+      "convergence": null,
       "notes": []
     },
     {
@@ -2335,9 +2180,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 2,
-        "neu": 11,
-        "neg": 2,
-        "total": 15,
+        "neu": 10,
+        "neg": 1,
+        "total": 13,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2412,22 +2257,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "this was announced why isn't it a 10 to 24 why did they shave off 4 mm one probably size and weight and two when you're shooting a 10 mm lens or an ultra wideangle lens you're not trying to shoot it 20 or 24 you have lenses to do that you have the 14 to 35 the 15 to",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "35 that's where you're going to do that when you want to shoot wide you shoot at 10 mm that's what you have the ability to do with this and that's why you don't need the extra millimeters on the long end now there are a couple of switches on this lens you've got your autofocus to manual as well",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-jared-polin-canon-11-24mm-f4l-usm-real-world-review",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=nOavQXaw7AU",
@@ -2463,10 +2292,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.75,
+        "source_count": 7,
+        "polarity_agreement": 0.857,
         "dominant_polarity": "neu",
-        "max_source_share": 0.267,
+        "max_source_share": 0.308,
         "contested": false
       },
       "notes": []
@@ -2477,10 +2306,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 2,
+        "pos": 2,
+        "neu": 0,
         "neg": 3,
-        "total": 8,
+        "total": 5,
         "sources": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2496,30 +2325,6 @@
             "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
             "weight": 0.75,
             "quote_excerpt": "of the lens where we can see a heavyduty metal lens mount and a weather sealing gasket the zoom ring isn't quite the smoothest to turn in the world but then again it has to move some pretty huge glass elements and it does at least turn quite evenly and precisely the manual focus ring turns very…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "basically have what a 10 to 20 looks and feels like in your hands now in terms of the zoom throw this is 10 this is 20 it's not a long throw at all and honestly when you get a lens like this you're not really going to shoot it at 20 so there were a lot of comments when",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "some people do use it so what do you use a control ring for let me know how you use it in the comments maybe I didn't think of something and that might work for me so let me know what works for you that's the outside of the lens guys not a lot to it is a beautiful feeling",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "lens in the hands now let's talk briefly about the is I don't know if is really needed in something this wide when it comes to Stills but when it comes to video it definitely comes in handy we did a quick walking test just to see what it looked like but I primarily am reviewing this from a photo",
             "witness": "firsthand"
           },
           {
@@ -2550,10 +2355,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.4,
+        "source_count": 4,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "pos",
-        "max_source_share": 0.375,
+        "max_source_share": 0.4,
         "contested": true
       },
       "notes": []
@@ -2646,7 +2451,7 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 16 reviewer sources for Canon EF 11-24mm f/4L USM. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on vignetting: 29% positive, 12% neutral, 59% negative across 17 claims. Opinion is split on distortion (8 positive, 12 neutral, 5 negative claims).",
+    "consensus_paragraph": "Synthesized from 15 reviewer sources for Canon 11 24mm f4. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on distortion: 33% positive, 39% neutral, 28% negative across 18 claims.",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
@@ -2683,10 +2488,10 @@
       },
       {
         "aspect": "af_performance.stills",
-        "pos": 4,
+        "pos": 3,
         "neu": 3,
         "neg": 0,
-        "total": 7,
+        "total": 6,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2718,8 +2523,8 @@
         "aspect": "af_performance.video",
         "pos": 7,
         "neu": 3,
-        "neg": 3,
-        "total": 13,
+        "neg": 2,
+        "total": 12,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2782,10 +2587,10 @@
       },
       {
         "aspect": "distortion",
-        "pos": 8,
-        "neu": 12,
+        "pos": 6,
+        "neu": 7,
         "neg": 5,
-        "total": 25,
+        "total": 18,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2815,10 +2620,10 @@
       },
       {
         "aspect": "vignetting",
-        "pos": 5,
+        "pos": 3,
         "neu": 2,
-        "neg": 10,
-        "total": 17,
+        "neg": 8,
+        "total": 13,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -2947,19 +2752,11 @@
       },
       {
         "aspect": "color_rendition",
-        "pos": 2,
+        "pos": 1,
         "neu": 0,
         "neg": 0,
-        "total": 2,
+        "total": 1,
         "top_quote_refs": [
-          {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-            "weight": 0.75,
-            "quote_excerpt": "zoom out to 20 and it looks perfectly fine the colors the tones the clarity as I always say it looks fantastic especially when we knock some of our fro Pack 4 onto it looks much better back to 10 mm down low to get Bryce Harper here with the R3 love the way this looks you can look up",
-            "witness": "firsthand"
-          },
           {
             "source_id": "youtube-lavikka-photography-canon-ef-11-24mm-f4-l-usm-ultra-wide-lens-tested-and-reviewed-on-the",
             "source_type": "youtube",
@@ -3006,9 +2803,9 @@
       {
         "aspect": "dimensions",
         "pos": 2,
-        "neu": 11,
-        "neg": 2,
-        "total": 15,
+        "neu": 10,
+        "neg": 1,
+        "total": 13,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -3038,10 +2835,10 @@
       },
       {
         "aspect": "handling",
-        "pos": 3,
-        "neu": 2,
+        "pos": 2,
+        "neu": 0,
         "neg": 3,
-        "total": 8,
+        "total": 5,
         "top_quote_refs": [
           {
             "source_id": "opticallimits-canon-canon-ef-canon-ef-11-24mm-f-4-usm-l-review",
@@ -3060,12 +2857,12 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
+            "source_id": "youtube-nick-page-canon-11-24mm-f4-l-hands-on-review",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
+            "url": "https://www.youtube.com/watch?v=iXjk3GVf9G0",
             "weight": 0.75,
-            "quote_excerpt": "basically have what a 10 to 20 looks and feels like in your hands now in terms of the zoom throw this is 10 this is 20 it's not a long throw at all and honestly when you get a lens like this you're not really going to shoot it at 20 so there were a lot of comments when",
-            "witness": "unattested"
+            "quote_excerpt": "well uh I it's really a lot of fun to use you get such a unique cool perspective it's really a very different look and if you're wanting to separate your photography from other people's uh you know a different focal length like this is a great way to do it now all of this comes at a cost the",
+            "witness": "firsthand"
           }
         ]
       },
@@ -3097,11 +2894,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 256,
-      "evaluated": 183,
-      "non_evaluative": 73,
+      "examined": 233,
+      "evaluated": 167,
+      "non_evaluative": 66,
       "non_evaluative_breakdown": {
-        "non_claim": 73
+        "non_claim": 66
       },
       "off_axis": 0,
       "ruleset": {
@@ -3109,7 +2906,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "256 examined · 183 evaluated under askmaddi-polarity",
+      "receipt_line": "233 examined · 167 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -3146,7 +2943,7 @@
     "computed_by": "axis_roles@1",
     "most_discussed": "optical_performance",
     "highest_rated": "distortion",
-    "lowest_rated": "dimensions"
+    "lowest_rated": "weight"
   },
   "sources": [
     {
@@ -3157,7 +2954,7 @@
       "url": "https://opticallimits.com/canon/canon-ef/canon-ef-11-24mm-f-4-usm-l-review/",
       "title": "Canon EF 11-24mm f/4 USM L Review - OpticalLimits",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671226+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564488+00:00",
       "weight": 0.75
     },
     {
@@ -3168,7 +2965,7 @@
       "url": "https://www.youtube.com/watch?v=fCdNU_bDf18",
       "title": "So This is What 11mm Looks Like! The Canon EF 11-24 f4L USM",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671237+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564510+00:00",
       "weight": 0.75
     },
     {
@@ -3179,7 +2976,7 @@
       "url": "https://www.youtube.com/watch?v=1cPWpYtW1UQ",
       "title": "Canon EF 11-24mm f/4 USM 'L' lens review with samples (Full-frame and APS-C)",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671241+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564521+00:00",
       "weight": 0.75
     },
     {
@@ -3190,7 +2987,7 @@
       "url": "https://www.youtube.com/watch?v=yGXC0MGRHNg",
       "title": "Canon EF 11-24mm f/4 L Review by Darren Miles",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671244+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564529+00:00",
       "weight": 0.75
     },
     {
@@ -3201,7 +2998,7 @@
       "url": "https://www.youtube.com/watch?v=SUoP6yD3XHE",
       "title": "Canon 11-24mm f/4L USM Hands-on Review",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671246+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564536+00:00",
       "weight": 0.75
     },
     {
@@ -3212,7 +3009,7 @@
       "url": "https://www.youtube.com/watch?v=6RqU6eL3C60",
       "title": "Canon 11-24mm F4L USM Product Overview",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671249+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564544+00:00",
       "weight": 0.75
     },
     {
@@ -3223,18 +3020,7 @@
       "url": "https://www.youtube.com/watch?v=hvDYrxrzGzE",
       "title": "Canon 11-24mm f/4L Review Hands On: Canon 16-35 f/4 vs Buying This $3,000 Lens",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671252+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-jared-polin-canon-10-20-f4l-rf-review-watch-before-you-buy-vs-canon-11-24",
-      "source_type": "pro",
-      "reviewer": "Jared Polin",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=0el8ZqbeMPo",
-      "title": "Canon 10-20 f4L RF REVIEW: WATCH BEFORE YOU BUY! (vs Canon 11-24)",
-      "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671254+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564552+00:00",
       "weight": 0.75
     },
     {
@@ -3245,7 +3031,7 @@
       "url": "https://www.youtube.com/watch?v=nOavQXaw7AU",
       "title": "Canon 11-24mm f/4L USM \"Real World Review\"",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671257+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564560+00:00",
       "weight": 0.75
     },
     {
@@ -3256,7 +3042,7 @@
       "url": "https://www.youtube.com/watch?v=lSUPKysuo54",
       "title": "Canon EF 11-24mm F4 L USM Ultra Wide Lens Tested and Reviewed on the Canon 5DS",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671259+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564567+00:00",
       "weight": 0.75
     },
     {
@@ -3267,7 +3053,7 @@
       "url": "https://www.youtube.com/watch?v=Uxloy3MIuFE",
       "title": "New Product: Canon 11-24mm",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671262+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564575+00:00",
       "weight": 0.75
     },
     {
@@ -3278,7 +3064,7 @@
       "url": "https://www.youtube.com/watch?v=iXjk3GVf9G0",
       "title": "Canon 11-24mm F4 L Hands on review",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671278+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564582+00:00",
       "weight": 0.75
     },
     {
@@ -3289,7 +3075,7 @@
       "url": "https://www.youtube.com/watch?v=_1P2C71OO8U",
       "title": "The Canon 11-24mm F/4.0L USM Lens Review",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671281+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564589+00:00",
       "weight": 0.75
     },
     {
@@ -3300,7 +3086,7 @@
       "url": "https://www.youtube.com/watch?v=UwV0T1qvW_o",
       "title": "Hands-On With the Canon EF 11–24mm f/4L USM Lens",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671286+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564595+00:00",
       "weight": 0.75
     },
     {
@@ -3311,7 +3097,7 @@
       "url": "https://www.youtube.com/watch?v=UBo_csgPvKg",
       "title": "CANON 11-24mm f/4L USM LENS REVIEW (VLOG?)",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671291+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564601+00:00",
       "weight": 0.75
     },
     {
@@ -3322,17 +3108,17 @@
       "url": "https://www.youtube.com/watch?v=mvmcE_y5O2I",
       "title": "Why It's Expensive - $3000 Wide Angle Lens! Canon EF 11-24mm F4L (Ep. 5)",
       "publication_date": "",
-      "ingested_at": "2026-10-03T12:40:40.671296+00:00",
+      "ingested_at": "2026-11-18T00:21:20.564608+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/canon-11-24mm-f4/",
-    "reddit": "Canon EF 11-24mm f/4L USM\n\nSynthesized from 16 reviewer sources for Canon EF 11-24mm f/4L USM. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on vignetting: 29% positive, 12% neutral, 59% negative across 17 claims. Opinion is split on distortion (8 positive, 12 neutral, 5 negative claims).\n\nI pulled together all 16 reviews in one place: https://askmaddi.com/cards/canon-11-24mm-f4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Canon EF 11-24mm f/4L USM**\nSynthesized from 16 reviewer sources for Canon EF 11-24mm f/4L USM. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on vignetting: 29% positive, 12% neutral, 59% negative across 17 claims. Opinion is split on distortion (8 positive, 12 neutral, 5 negative claims).\nAll 16 reviews in one place: https://askmaddi.com/cards/canon-11-24mm-f4/\n_(disclosure: I built this)_",
+    "reddit": "Canon EF 11-24mm f/4L USM\n\nSynthesized from 15 reviewer sources for Canon 11 24mm f4. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on distortion: 33% positive, 39% neutral, 28% negative across 18 claims.\n\nI pulled together all 15 reviews in one place: https://askmaddi.com/cards/canon-11-24mm-f4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon EF 11-24mm f/4L USM**\nSynthesized from 15 reviewer sources for Canon 11 24mm f4. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on distortion: 33% positive, 39% neutral, 28% negative across 18 claims.\nAll 15 reviews in one place: https://askmaddi.com/cards/canon-11-24mm-f4/\n_(disclosure: I built this)_",
     "og": {
       "title": "Canon EF 11-24mm f/4L USM — Reviewed",
-      "description": "Synthesized from 16 reviewer sources for Canon EF 11-24mm f/4L USM. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on vignetting: 29% positive, 12% neutral, 59% negative across 17 claims. Opinion is split on distortion (8 positive, 12 neutral, 5 negative claims).",
+      "description": "Synthesized from 15 reviewer sources for Canon 11 24mm f4. Optical performance draws the most discussion: 33 positive, 12 neutral, and 23 negative across 68 sentiment markers. The most criticism lands on distortion: 33% positive, 39% neutral, 28% negative across 18 claims.",
       "image": null,
       "url": "https://askmaddi.com/cards/canon-11-24mm-f4/"
     }
