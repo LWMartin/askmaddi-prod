@@ -74,10 +74,11 @@ def test_refusals_write_nothing(tmp_path):
 
 
 def test_registry_piped_on_stdin(tmp_path):
-    skus, reg = _files(tmp_path)
-    r = subprocess.run([sys.executable, str(HERE / 'correct_contamination_key.py'),
-                        '--contam-json', '/dev/stdin', '--skus', str(skus), '--apply'] + ARGS,
-                       input=reg.read_text(), capture_output=True, text=True)
-    assert r.returncode == 0, r.stdout + r.stderr
-    assert json.loads(skus.read_text())['skus']['sony-fe-35mm-f1-4-gm'][
-        'contamination_key'] == 'sony-35-f14-gm'
+    for flag in ('-', '/dev/stdin'):     # both read the open descriptor, never re-open
+        skus, reg = _files(tmp_path)
+        r = subprocess.run([sys.executable, str(HERE / 'correct_contamination_key.py'),
+                            '--contam-json', flag, '--skus', str(skus), '--apply'] + ARGS,
+                           input=reg.read_text(), capture_output=True, text=True)
+        assert r.returncode == 0, r.stdout + r.stderr
+        assert json.loads(skus.read_text())['skus']['sony-fe-35mm-f1-4-gm'][
+            'contamination_key'] == 'sony-35-f14-gm'

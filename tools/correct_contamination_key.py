@@ -16,7 +16,7 @@ take the file away from the gateway). So on the box root reads the registry and
 pipes it in:
 
     cat /home/phantomops/phantom-ops/claude/workspace/aggregator-build/fixtures/manifests/contamination.json \\
-      | sudo -u askmaddi python3 tools/correct_contamination_key.py --contam-json /dev/stdin \\
+      | sudo -u askmaddi python3 tools/correct_contamination_key.py --contam-json - \\
           --slug sony-fe-35mm-f1-4-gm --expect sony-generic --new sony-35-f14-gm \\
           --reason "first-class registry entry exists for this lens"
 
@@ -42,7 +42,7 @@ def main(argv=None, out=sys.stdout):
     ap.add_argument('--reason', required=True)
     ap.add_argument('--actor', default='lee')
     ap.add_argument('--contam-json', default=None,
-                    help='contamination.json (/dev/stdin to pipe it in)')
+                    help="contamination.json, or '-' to read it piped on stdin")
     ap.add_argument('--skus', default=str(skus_registry.SKUS_PATH))
     ap.add_argument('--apply', action='store_true')
     a = ap.parse_args(argv)
@@ -50,8 +50,15 @@ def main(argv=None, out=sys.stdout):
     # Read the registry ONCE (stdin can only be read once), then hand the door a
     # private copy so the dry-run report and the write see the same bytes.
     try:
-        raw = Path(a.contam_json).read_text(encoding='utf-8') if a.contam_json else \
-            json.dumps({'products': skus_registry._load_contamination_products()})
+        if a.contam_json in ('-', '/dev/stdin'):
+            # The already-open descriptor, never a re-open: opening /dev/stdin
+            # re-opens the pipe via /proc/self/fd/0, and a pipe root created is
+            # EACCES to askmaddi (verified 2026-11-19 with sudo -u).
+            raw = sys.stdin.read()
+        elif a.contam_json:
+            raw = Path(a.contam_json).read_text(encoding='utf-8')
+        else:
+            raw = json.dumps({'products': skus_registry._load_contamination_products()})
         products = json.loads(raw).get('products')
     except (OSError, ValueError, AttributeError):
         products = None
