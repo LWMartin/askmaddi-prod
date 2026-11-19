@@ -11,59 +11,53 @@
     "subcategory": "mirrorless",
     "year_introduced": null,
     "image_thumb": "https://i.ebayimg.com/images/g/HTwAAOSw2uZkmo2-/s-l1600.jpg",
-    "image_source": "ebay_catalog",
-    "mpn": "NIKON Z 8"
+    "image_source": "ebay_catalog"
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 3197,
-    "current_new_source": "adorama_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z8-mirrorless-camera-body-only-45-mp%2Fp%2Fnkz8",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-z8-mirrorless-camera-body-only-45-mp%2Fp%2Fnkz8",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 2501.0,
-        "refurbished": 2665.69,
-        "open_box": 2800.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 27,
-      "price_updated_at": "2026-11-19T10:11:35.606772+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-09T15:39:54.436735+00:00"
+    "price_updated_at": "2026-11-19T08:19:05.446649+00:00"
   },
   "freshness": {
     "created_at": "2026-09-09T15:39:54.430251+00:00",
-    "last_built": "2026-09-09T15:39:54.430251+00:00",
-    "last_checked": "2026-09-09T15:39:54.430251+00:00",
-    "source_count": 6,
+    "last_built": "2026-11-19T08:19:05.440077+00:00",
+    "last_checked": "2026-11-19T08:19:05.440077+00:00",
+    "source_count": 9,
     "source_types": {
-      "community": 2,
-      "pro": 4
+      "lab": 1,
+      "pro": 6,
+      "community": 2
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
   },
   "confidence": {
-    "overall": "low",
+    "overall": "medium",
     "per_axis": {
       "mount_compat": "medium",
+      "video_capability": "medium",
       "sensor_performance": "medium",
-      "burst_buffer": "medium",
       "price": "medium",
-      "autofocus_body": "medium",
-      "dimensions": "medium",
-      "handling": "low",
+      "burst_buffer": "medium",
       "image_quality": "medium",
-      "video_capability": "low",
+      "dimensions": "medium",
+      "handling": "medium",
+      "autofocus_body": "medium",
+      "generation_context": "medium",
       "build": "medium",
       "evf_lcd": "low",
       "weight": "medium",
-      "stabilization": "low",
-      "generation_context": "low",
+      "stabilization": "medium",
       "connectivity": "low"
     }
   },
@@ -82,10 +76,18 @@
       "measurement": null,
       "sentiment": {
         "pos": 11,
-        "neu": 38,
-        "neg": 4,
-        "total": 53,
+        "neu": 42,
+        "neg": 5,
+        "total": 58,
         "sources": [
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "Lens Reviews Other Gear Reviews More Contact Us Workshops Support Us Submit Content",
+            "witness": "unattested"
+          },
           {
             "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
             "source_type": "retailer_review",
@@ -268,6 +270,38 @@
             "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
             "weight": 0.75,
             "quote_excerpt": "Equally, a slightly scuffed, older compact camera might tempt me, like a Leica D-Lux 5 or Ricoh GR III .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "When we published our series on camera firmware hacks , with parts on fpSup on the SIGMA fp , the Sony a7 IV shutter-angle research and Wonder Lantern on the Nikon Z30 , our reader Derek Morrison asked in the comments about a mod for the Nikon Z8.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "Nikon does not endorse or support the project.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "It works only with the Nikon Z8 on firmware C 3.11 and is used at your own risk.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "For more information, please visit the Nikon website .",
             "witness": "unattested"
           },
           {
@@ -514,10 +548,10 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.8,
+        "source_count": 7,
+        "polarity_agreement": 0.857,
         "dominant_polarity": "neu",
-        "max_source_share": 0.434,
+        "max_source_share": 0.397,
         "contested": false
       },
       "notes": [],
@@ -528,15 +562,195 @@
       }
     },
     {
+      "axis_id": "video_capability",
+      "display_name": "Video Capability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 13,
+        "neg": 3,
+        "total": 19,
+        "sources": [
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "NikonFirmwarePatch is a community firmware mod for the Nikon Z8 that adds 3:2 open-gate N-RAW recording in 8.3K, two more N-RAW quality levels, ProRes 422, LT and Proxy, lower H.265 bitrates, S-Log3 and Log3G10 recording, RAW pre-capture and in-camera pixel-shift merging.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "It adds FX 3:2 open-gate recording in N-RAW at 8.3K 30p, 25p and 24p, with an active image of 8256 x 5504 pixels.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The video-quality group adds ProRes 422, ProRes 422 LT and ProRes 422 Proxy to the Z8’s ProRes 422 HQ, in the same frame sizes and frame rates as stock.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "For H.265, you can choose 100, 60, 45, 30 or 20 percent of Nikon’s bitrate, and the menu shows the target in Mbps.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "NikonFirmwarePatch adds S-Log3 and Log3G10 next to N-Log on the Nikon Z8, shown in the emulator.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "According to the developer, both new modes use recording matrices calibrated from real footage.",
+            "witness": "reported"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "A Z8 that records S-Log3 could, in theory, drop into a Sony FX workflow with the same input transform in DaVinci Resolve.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The video-quality group adds ProRes 422, LT and Proxy to the Nikon Z8, shown in the emulator.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "Merges from 16 and 32 frames give 16512 x 11008 pixels.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "Earlier camera tests with the same code covered four ProRes HQ and LT recordings, 99 RAW pre-capture files and two pixel-shift merges.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "That is a good start, but it is a small sample for a mod that changes how a camera records.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "It records 8.3K N-RAW, ProRes RAW and ProRes 422 HQ internally, and Nikon added shutter angle and other video tools with firmware 2.10 in 2025 .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "What the mod adds is mostly what users have asked for since launch: open gate, lighter codecs and log curves that match other cameras on set.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "Kodak has also been wise to limit the pixel count on the tiny sensor.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "Raw files fare much better (Image credit: Peter Fenech) Youâ€™re also limited to Full HD (1080p), with no provision for 4K.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "This is also not a camera Iâ€™d recommend you buy for video features.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "You value image quality over versatility You shoot a lot of video You need to take selfies with an articulated LCD Alternatives Nikon Coolpix P1100 Another 1/2.3in sensor is equipped with a modest 16MP resolution, but this super-sized bridge camera comes accompanied by a massive 24-3000mm (equiv.)…",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "Other benefits are 4K video, 7fps burst shooting and an 3in articulating, 921k dot screen.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "When my kid was born, I bought a motion picture camera which I gave to my wife and said here, I really want to do the still pictures.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.684,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "NikonFirmwarePatch is a community firmware mod for the Nikon Z8 that adds 3:2 open-gate N-RAW recording in 8.3K, two more N-RAW quality levels, ProRes 422, LT and Proxy, lower H.265 bitrates, S-Log3 and Log3G10 recording, RAW pre-capture and in-camera pixel-shift merging.",
+        "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+        "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/"
+      }
+    },
+    {
       "axis_id": "sensor_performance",
       "display_name": "Sensor Performance",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
         "pos": 4,
-        "neu": 3,
+        "neu": 4,
         "neg": 3,
-        "total": 10,
+        "total": 11,
         "sources": [
           {
             "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
@@ -587,6 +801,14 @@
             "witness": "firsthand"
           },
           {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The same group adds two N-RAW quality levels, Fine and Basic, to Nikon’s High and Normal, plus an anamorphic desqueeze for the live view and playback with seven factors from 1.25x to 2.00x.",
+            "witness": "unattested"
+          },
+          {
             "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
             "source_type": "reviewer_blog",
             "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
@@ -622,10 +844,10 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.6,
+        "source_count": 6,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "neu",
-        "max_source_share": 0.2,
+        "max_source_share": 0.182,
         "contested": false
       },
       "notes": [],
@@ -633,6 +855,114 @@
         "quote_excerpt": "Excellent autofocus, rapid burst rates and exceptional high ISO performance allow photographers to work discreetly in difficult lighting without relying on flash.",
         "source_id": "rss-amateur-photographer-how-this-photo-showing-ice-officers-separating-a-family-came-2026",
         "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/"
+      }
+    },
+    {
+      "axis_id": "price",
+      "display_name": "Price & Value",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 4,
+        "neu": 4,
+        "neg": 2,
+        "total": 10,
+        "sources": [
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "is the easiest way to support Photography Life at no extra cost to you.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
+            "weight": 0.75,
+            "quote_excerpt": "The point is that when you first get into photography, you assume the best shots come from the best or most expensive camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
+            "weight": 0.75,
+            "quote_excerpt": "So if you think a big, expensive new camera is going to turn you into a really good photographer, you’re in for a shock.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
+            "weight": 0.75,
+            "quote_excerpt": "The post Skip Price Anxiety With This Budget-Friendly Camera appeared first on Adorama .",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The Nikon Z8 body currently costs $3,196.95 at B&H and €3,972.43 or £2,665.83 (both excluding VAT) at CVP.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "As far as sub-$500 cameras go, the AZ653 is decidedly premium in appearance and finish.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "As far as entry-level cameras go, it actually represents reasonable value.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "For less than $500, youâ€™re getting a feature set big enough for most beginners, enough resolution for online use, a sharp lens with an incredibly versatile focal range, and a premium handling experience.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "However, if you can look past the obvious shortcomings, there is very limited competition for the balance of price and lens reach.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "At some point they said if anyone wants to buy it…so I bought it.",
+            "witness": "reported"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.6,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.4,
+        "contested": false
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "The point is that when you first get into photography, you assume the best shots come from the best or most expensive camera.",
+        "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
+        "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/"
       }
     },
     {
@@ -731,38 +1061,54 @@
       "notes": []
     },
     {
-      "axis_id": "price",
-      "display_name": "Price & Value",
+      "axis_id": "image_quality",
+      "display_name": "Image Quality",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 3,
-        "neg": 2,
-        "total": 8,
+        "pos": 1,
+        "neu": 4,
+        "neg": 4,
+        "total": 9,
         "sources": [
           {
             "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
             "source_type": "retailer_review",
             "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
             "weight": 0.75,
-            "quote_excerpt": "The point is that when you first get into photography, you assume the best shots come from the best or most expensive camera.",
+            "quote_excerpt": "But part of figuring yourself out as a photographer is working out what makes a difference to your pictures, rather than what makes a difference to how you feel in a camera shop.",
             "witness": "unattested"
           },
           {
-            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
+            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
             "weight": 0.75,
-            "quote_excerpt": "So if you think a big, expensive new camera is going to turn you into a really good photographer, you’re in for a shock.",
+            "quote_excerpt": "The ability to shoot DNG raws is helpful and while, again, the latitude of a full-frame sensor obviously isn’t there in processing, I didn’t feel the need to push anything that hard in editing either.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The project publishes a color report in English and Chinese, setup notes for Resolve and Final Cut Pro, and an optional 65-point LUT for post.",
             "witness": "unattested"
           },
           {
-            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
             "weight": 0.75,
-            "quote_excerpt": "The post Skip Price Anxiety With This Budget-Friendly Camera appeared first on Adorama .",
+            "quote_excerpt": "Display color accuracy on the camera was not measured, and the project lists open questions about saturated cyan and blue tones and the shadows in S-Log3, so I would test this against a real Sony camera before trusting it on a shoot.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+            "weight": 0.75,
+            "quote_excerpt": "The lower N-RAW levels lose detail by design: Basic uses about 1.0 bit per pixel, and the developer reports visibly reduced fine texture in camera samples.",
             "witness": "unattested"
           },
           {
@@ -770,7 +1116,7 @@
             "source_type": "reviewer_blog",
             "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
             "weight": 0.75,
-            "quote_excerpt": "As far as sub-$500 cameras go, the AZ653 is decidedly premium in appearance and finish.",
+            "quote_excerpt": "By ISO3200, files are pretty mushy, although more texture can be extracted from the Raw files than out-of-camera Jpegs, which are subjectively bad across the board, even at the lowest sensitivities.",
             "witness": "unattested"
           },
           {
@@ -778,7 +1124,7 @@
             "source_type": "reviewer_blog",
             "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
             "weight": 0.75,
-            "quote_excerpt": "As far as entry-level cameras go, it actually represents reasonable value.",
+            "quote_excerpt": "Jpeg files tend to 'bleed' strong colors by clipping single channels, namely the reds.",
             "witness": "unattested"
           },
           {
@@ -786,15 +1132,7 @@
             "source_type": "reviewer_blog",
             "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
             "weight": 0.75,
-            "quote_excerpt": "For less than $500, youâ€™re getting a feature set big enough for most beginners, enough resolution for online use, a sharp lens with an incredibly versatile focal range, and a premium handling experience.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "However, if you can look past the obvious shortcomings, there is very limited competition for the balance of price and lens reach.",
+            "quote_excerpt": "Colors are impressively accurate in Raw files and auto white balance is actually effective in simple light Peter Fenech Peter Fenech The built-in flash isn't especially useful and is more like a light grenade, much like many built-in flash units Peter Fenech Peter Fenech With care, Raw files at…",
             "witness": "unattested"
           },
           {
@@ -802,8 +1140,189 @@
             "source_type": "reviewer_blog",
             "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
             "weight": 0.75,
-            "quote_excerpt": "At some point they said if anyone wants to buy it…so I bought it.",
-            "witness": "reported"
+            "quote_excerpt": "And it took eight pictures in black and white.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 5,
+        "polarity_agreement": 0.4,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": true
+      },
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "By ISO3200, files are pretty mushy, although more texture can be extracted from the Raw files than out-of-camera Jpegs, which are subjectively bad across the board, even at the lowest sensitivities.",
+        "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+        "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review"
+      }
+    },
+    {
+      "axis_id": "dimensions",
+      "display_name": "Dimensions",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 4,
+        "neg": 1,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "In practice, it&rsquo;s about the size of.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
+            "weight": 0.75,
+            "quote_excerpt": "Photo by Peter Dam I didn’t give up completely on the idea of having the luxury of a 600mm focal length.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
+            "source_type": "retailer_review",
+            "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
+            "weight": 0.75,
+            "quote_excerpt": "The photos are stunning once you get used to shooting with a prime lens and learn to overcome the shorter focal length by getting closer to your subject.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+            "weight": 0.75,
+            "quote_excerpt": "It was in 2016, with a Nikon D800 and a backpack the size of a house, and I didn’t feel the same urge to stock up on pictures I could use in articles and reviews this time.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+            "weight": 0.75,
+            "quote_excerpt": "And much like an all-in-one compact or when using a travel zoom on a bigger body, the choice of framing made reacting to different scenes quite easy, but with even less bulk to carry about.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "I mean sometimes I’ll pick up a macro lens that I want to fool around with something close, sometimes I’ll pick up a longer telephoto but basically, when I go out on the street it’s 28-300mm, that’s it.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "When they told me that they had a 70-300mm I was amazed.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "And when they told me they had a 28-300mm, well this one will probably be a compromise because, but it wasn’t.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 4,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.375,
+        "contested": false
+      },
+      "notes": []
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 3,
+        "neu": 4,
+        "neg": 1,
+        "total": 8,
+        "sources": [
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "Hands-On Images of the Nikon Z8 Home → Cameras and Lenses We&rsquo;ve gotten our hands on some hands-on photos of the Nikon Z8 being used.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "This should give you a sense of the camera&rsquo;s size, shape, weatherproofing, and illuminated buttons.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "Kodak Pixpro AZ653: Design & Handling (Image credit: Peter Fenech) Iâ€™ve always had a soft spot for the design of a Bridge camera, and the AZ653 is no exception.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "The Kodak features a pleasantly deep and sculpted handgrip, which allows a firm hold of the camera even if working single-handed.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "I get it, Kodak is trying to keep costs down, but using features like touch focus, touch shutter and even image and menu scrolling have become muscle memory for many photographers, all of whom will be frustrated by being stuck with the scroll wheel and rocker if they are anything like me.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "On a more positive note, all of the buttons are well placed, as is the PASM-style mode dial on the top right of the camera.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "What is your Nikon system philosophy, I know your mantra to a certain degree is “one camera, one lens – you’re going to shoot more.” But when you build a system or when you were building your system, how did you go about it?",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+            "weight": 0.75,
+            "quote_excerpt": "There is a tendency for each photographer to find a way of looking at things that he’s comfortable with.",
+            "witness": "unattested"
           }
         ]
       },
@@ -817,15 +1336,15 @@
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "The point is that when you first get into photography, you assume the best shots come from the best or most expensive camera.",
-        "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
-        "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/"
+        "quote_excerpt": "There is a tendency for each photographer to find a way of looking at things that he’s comfortable with.",
+        "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+        "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/"
       }
     },
     {
       "axis_id": "autofocus_body",
       "display_name": "Autofocus",
-      "axis_type": "lead",
+      "axis_type": "detail",
       "measurement": null,
       "sentiment": {
         "pos": 2,
@@ -902,46 +1421,54 @@
       "notes": []
     },
     {
-      "axis_id": "dimensions",
-      "display_name": "Dimensions",
-      "axis_type": "lead",
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 3,
+        "pos": 0,
+        "neu": 5,
         "neg": 1,
-        "total": 7,
+        "total": 6,
         "sources": [
           {
-            "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
             "weight": 0.75,
-            "quote_excerpt": "Photo by Peter Dam I didn’t give up completely on the idea of having the luxury of a 600mm focal length.",
+            "quote_excerpt": "It is the most ambitious camera mod I have seen this year, and it only works with one Nikon firmware version that Nikon has already replaced.",
             "witness": "firsthand"
           },
           {
-            "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
             "weight": 0.75,
-            "quote_excerpt": "The photos are stunning once you get used to shooting with a prime lens and learn to overcome the shorter focal length by getting closer to your subject.",
+            "quote_excerpt": "NikonFirmwarePatch , developed by Xinmiao Zhao with a group of contributors, released version 0.4.0 on November 10, 2026.",
             "witness": "unattested"
           },
           {
-            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
             "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
             "weight": 0.75,
-            "quote_excerpt": "It was in 2016, with a Nikon D800 and a backpack the size of a house, and I didn’t feel the same urge to stock up on pictures I could use in articles and reviews this time.",
-            "witness": "firsthand"
+            "quote_excerpt": "It builds a modified version of Nikon’s own firmware file on your computer, which you then install through the camera’s normal update menu.",
+            "witness": "unattested"
           },
           {
-            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+            "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
             "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+            "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
             "weight": 0.75,
-            "quote_excerpt": "And much like an all-in-one compact or when using a travel zoom on a bigger body, the choice of framing made reacting to different scenes quite easy, but with even less bulk to carry about.",
+            "quote_excerpt": "The toolkit cannot read which version is installed on the camera, so you need to keep track of your builds yourself.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+            "source_type": "reviewer_blog",
+            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+            "weight": 0.75,
+            "quote_excerpt": "Replacing the earlier AZ652, the new model has a very familiar specification; however, so the question is: has enough been changed, improved, or upgraded over the previous model?",
             "witness": "unattested"
           },
           {
@@ -949,24 +1476,8 @@
             "source_type": "reviewer_blog",
             "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
             "weight": 0.75,
-            "quote_excerpt": "I mean sometimes I’ll pick up a macro lens that I want to fool around with something close, sometimes I’ll pick up a longer telephoto but basically, when I go out on the street it’s 28-300mm, that’s it.",
+            "quote_excerpt": "The first camera I ever used was a borrowed Kodak 35…and the second camera was a Kine Exakta, which I borrowed from Buckminster Fuller.",
             "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "When they told me that they had a 70-300mm I was amazed.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "And when they told me they had a 28-300mm, well this one will probably be a compromise because, but it wasn’t.",
-            "witness": "unattested"
           }
         ]
       },
@@ -975,228 +1486,8 @@
         "source_count": 3,
         "polarity_agreement": 1.0,
         "dominant_polarity": "neu",
-        "max_source_share": 0.429,
-        "contested": false
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "handling",
-      "display_name": "Handling",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 3,
-        "neu": 2,
-        "neg": 1,
-        "total": 6,
-        "sources": [
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Kodak Pixpro AZ653: Design & Handling (Image credit: Peter Fenech) Iâ€™ve always had a soft spot for the design of a Bridge camera, and the AZ653 is no exception.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "The Kodak features a pleasantly deep and sculpted handgrip, which allows a firm hold of the camera even if working single-handed.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "I get it, Kodak is trying to keep costs down, but using features like touch focus, touch shutter and even image and menu scrolling have become muscle memory for many photographers, all of whom will be frustrated by being stuck with the scroll wheel and rocker if they are anything like me.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "On a more positive note, all of the buttons are well placed, as is the PASM-style mode dial on the top right of the camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "What is your Nikon system philosophy, I know your mantra to a certain degree is “one camera, one lens – you’re going to shoot more.” But when you build a system or when you were building your system, how did you go about it?",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "There is a tendency for each photographer to find a way of looking at things that he’s comfortable with.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
         "max_source_share": 0.667,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "Kodak Pixpro AZ653: Design & Handling (Image credit: Peter Fenech) Iâ€™ve always had a soft spot for the design of a Bridge camera, and the AZ653 is no exception.",
-        "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-        "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review"
-      }
-    }
-  ],
-  "detail_axes": [
-    {
-      "axis_id": "image_quality",
-      "display_name": "Image Quality",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 1,
-        "neu": 3,
-        "neg": 2,
-        "total": 6,
-        "sources": [
-          {
-            "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
-            "source_type": "retailer_review",
-            "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
-            "weight": 0.75,
-            "quote_excerpt": "But part of figuring yourself out as a photographer is working out what makes a difference to your pictures, rather than what makes a difference to how you feel in a camera shop.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
-            "weight": 0.75,
-            "quote_excerpt": "The ability to shoot DNG raws is helpful and while, again, the latitude of a full-frame sensor obviously isn’t there in processing, I didn’t feel the need to push anything that hard in editing either.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "By ISO3200, files are pretty mushy, although more texture can be extracted from the Raw files than out-of-camera Jpegs, which are subjectively bad across the board, even at the lowest sensitivities.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Jpeg files tend to 'bleed' strong colors by clipping single channels, namely the reds.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Colors are impressively accurate in Raw files and auto white balance is actually effective in simple light Peter Fenech Peter Fenech The built-in flash isn't especially useful and is more like a light grenade, much like many built-in flash units Peter Fenech Peter Fenech With care, Raw files at…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "And it took eight pictures in black and white.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.5,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "video_capability",
-      "display_name": "Video Capability",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 2,
-        "neu": 2,
-        "neg": 2,
-        "total": 6,
-        "sources": [
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Kodak has also been wise to limit the pixel count on the tiny sensor.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Raw files fare much better (Image credit: Peter Fenech) Youâ€™re also limited to Full HD (1080p), with no provision for 4K.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "This is also not a camera Iâ€™d recommend you buy for video features.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "You value image quality over versatility You shoot a lot of video You need to take selfies with an articulated LCD Alternatives Nikon Coolpix P1100 Another 1/2.3in sensor is equipped with a modest 16MP resolution, but this super-sized bridge camera comes accompanied by a massive 24-3000mm (equiv.)…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Other benefits are 4K video, 7fps burst shooting and an 3in articulating, 921k dot screen.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "When my kid was born, I bought a motion picture camera which I gave to my wife and said here, I really want to do the still pictures.",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.833,
-        "contested": true
+        "contested": false
       },
       "notes": []
     },
@@ -1390,10 +1681,18 @@
       "measurement": null,
       "sentiment": {
         "pos": 2,
-        "neu": 0,
+        "neu": 1,
         "neg": 1,
-        "total": 3,
+        "total": 4,
         "sources": [
+          {
+            "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+            "source_type": "reviewer_blog",
+            "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+            "weight": 0.75,
+            "quote_excerpt": "more sturdy IBIS/shaker to satisfy higer precision for smaller pixels and pixel shift?",
+            "witness": "unattested"
+          },
           {
             "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
             "source_type": "retailer_review",
@@ -1420,54 +1719,20 @@
           }
         ]
       },
-      "confidence": "low",
+      "confidence": "medium",
       "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.667,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "generation_context",
-      "display_name": "Generation Context",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 0,
-        "neu": 2,
-        "neg": 0,
-        "total": 2,
-        "sources": [
-          {
-            "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-            "weight": 0.75,
-            "quote_excerpt": "Replacing the earlier AZ652, the new model has a very familiar specification; however, so the question is: has enough been changed, improved, or upgraded over the previous model?",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-            "source_type": "reviewer_blog",
-            "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-            "weight": 0.75,
-            "quote_excerpt": "The first camera I ever used was a borrowed Kodak 35…and the second camera was a Kine Exakta, which I borrowed from Buckminster Fuller.",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 1.0,
+        "source_count": 3,
+        "polarity_agreement": 0.333,
         "dominant_polarity": "neu",
         "max_source_share": 0.5,
-        "contested": false
+        "contested": true
       },
-      "notes": []
+      "notes": [],
+      "face_quote": {
+        "quote_excerpt": "more sturdy IBIS/shaker to satisfy higer precision for smaller pixels and pixel shift?",
+        "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+        "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8"
+      }
     },
     {
       "axis_id": "connectivity",
@@ -1606,7 +1871,7 @@
       "specs.weight_g": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1618,7 +1883,7 @@
       "specs.dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1630,7 +1895,7 @@
       "specs.sensor_dimensions_mm": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1642,7 +1907,7 @@
       "specs.iso_native": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1654,7 +1919,7 @@
       "specs.shutter_speed_range": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1666,7 +1931,7 @@
       "specs.battery_model": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1678,7 +1943,7 @@
       "specs.card_formats": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1690,7 +1955,7 @@
       "specs.processor": {
         "source": "wikipedia",
         "url": "https://en.wikipedia.org/wiki/Nikon_Z8?action=raw",
-        "fetched_at": "2026-09-15T15:58:42.793426+00:00",
+        "fetched_at": "2026-09-09T15:36:41.947727+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -1758,42 +2023,39 @@
           "section": [],
           "via": "llm"
         }
-      },
-      "identity.mpn": {
-        "source": "wikidata",
-        "url": "https://www.wikidata.org/wiki/Q118287749",
-        "fetched_at": "2026-09-15T15:58:42.802242+00:00",
-        "license": "",
-        "reason": "",
-        "extraction": null
       }
     },
-    "conflicts": [
-      {
-        "field": "identity.image_thumb",
-        "canonical": "https://i.ebayimg.com/images/g/HTwAAOSw2uZkmo2-/s-l1600.jpg",
-        "divergent": "https://commons.wikimedia.org/wiki/Special:FilePath/Nikon_Z_8_27_may_2023b.jpg",
-        "canonical_source": "card",
-        "divergent_source": "wikidata",
-        "note": "fetched identity differs from curated card value; kept card"
-      }
-    ]
+    "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "",
+    "consensus_paragraph": "Reviewers are most positive about video capability (16% positive, 68% neutral, 16% negative across 19 claims).",
     "aspect_breakdown": [
       {
         "aspect": "mount_compat",
         "pos": 11,
-        "neu": 38,
-        "neg": 4,
-        "total": 53
+        "neu": 42,
+        "neg": 5,
+        "total": 58
+      },
+      {
+        "aspect": "video_capability",
+        "pos": 3,
+        "neu": 13,
+        "neg": 3,
+        "total": 19
       },
       {
         "aspect": "sensor_performance",
         "pos": 4,
-        "neu": 3,
+        "neu": 4,
         "neg": 3,
+        "total": 11
+      },
+      {
+        "aspect": "price",
+        "pos": 4,
+        "neu": 4,
+        "neg": 2,
         "total": 10
       },
       {
@@ -1804,10 +2066,24 @@
         "total": 9
       },
       {
-        "aspect": "price",
+        "aspect": "image_quality",
+        "pos": 1,
+        "neu": 4,
+        "neg": 4,
+        "total": 9
+      },
+      {
+        "aspect": "dimensions",
         "pos": 3,
-        "neu": 3,
-        "neg": 2,
+        "neu": 4,
+        "neg": 1,
+        "total": 8
+      },
+      {
+        "aspect": "handling",
+        "pos": 3,
+        "neu": 4,
+        "neg": 1,
         "total": 8
       },
       {
@@ -1818,31 +2094,10 @@
         "total": 7
       },
       {
-        "aspect": "dimensions",
-        "pos": 3,
-        "neu": 3,
+        "aspect": "generation_context",
+        "pos": 0,
+        "neu": 5,
         "neg": 1,
-        "total": 7
-      },
-      {
-        "aspect": "handling",
-        "pos": 3,
-        "neu": 2,
-        "neg": 1,
-        "total": 6
-      },
-      {
-        "aspect": "image_quality",
-        "pos": 1,
-        "neu": 3,
-        "neg": 2,
-        "total": 6
-      },
-      {
-        "aspect": "video_capability",
-        "pos": 2,
-        "neu": 2,
-        "neg": 2,
         "total": 6
       },
       {
@@ -1869,16 +2124,9 @@
       {
         "aspect": "stabilization",
         "pos": 2,
-        "neu": 0,
+        "neu": 1,
         "neg": 1,
-        "total": 3
-      },
-      {
-        "aspect": "generation_context",
-        "pos": 0,
-        "neu": 2,
-        "neg": 0,
-        "total": 2
+        "total": 4
       },
       {
         "aspect": "connectivity",
@@ -1890,11 +2138,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 133,
-      "evaluated": 66,
-      "non_evaluative": 67,
+      "examined": 165,
+      "evaluated": 73,
+      "non_evaluative": 92,
       "non_evaluative_breakdown": {
-        "non_claim": 67
+        "non_claim": 92
       },
       "off_axis": 0,
       "ruleset": {
@@ -1902,7 +2150,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "133 examined · 66 evaluated under askmaddi-polarity",
+      "receipt_line": "165 examined · 73 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -1915,10 +2163,32 @@
   "axis_roles": {
     "computed_by": "axis_roles@1",
     "most_discussed": "mount_compat",
-    "highest_rated": null,
+    "highest_rated": "video_capability",
     "lowest_rated": null
   },
   "sources": [
+    {
+      "source_id": "manufacturer-zhiyun-zhiyun-2026",
+      "source_type": "lab",
+      "reviewer": "Zhiyun",
+      "platform": "web",
+      "url": "https://zhiyun-website-shenzhen.oss-cn-shenzhen.aliyuncs.com/images/20241128/1732789808523-d3Z8fQyX.jpg",
+      "title": "Zhiyun",
+      "publication_date": "",
+      "ingested_at": "2026-11-19T08:19:05.443578+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "photographylife-hands-on-images-of-the-nikon-z8",
+      "source_type": "pro",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://photographylife.com/hands-on-images-of-the-nikon-z8",
+      "title": "Hands-On Images of the Nikon Z8",
+      "publication_date": "",
+      "ingested_at": "2026-11-19T08:19:05.443586+00:00",
+      "weight": 0.75
+    },
     {
       "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
       "source_type": "community",
@@ -1927,7 +2197,7 @@
       "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
       "title": "Nikon Z 400 f/4.5 VR S: A Wildlife Photographer’s 1-Year Field Report",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434443+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443590+00:00",
       "weight": 0.75
     },
     {
@@ -1938,7 +2208,7 @@
       "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
       "title": "Skip Price Anxiety With This Budget-Friendly Camera",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434458+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443593+00:00",
       "weight": 0.75
     },
     {
@@ -1949,7 +2219,7 @@
       "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/",
       "title": "How this photo showing ICE officers separating a family came to define the world’s best photojournalism contest",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434462+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443597+00:00",
       "weight": 0.75
     },
     {
@@ -1960,7 +2230,18 @@
       "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
       "title": "I left my proper camera at home while I went on vacation – my iPhone was all I needed",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434466+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443600+00:00",
+      "weight": 0.75
+    },
+    {
+      "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+      "source_type": "pro",
+      "reviewer": "CineD",
+      "platform": "web",
+      "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+      "title": "Nikon Z8 Firmware Mod NikonFirmwarePatch Adds 8.3K Open-Gate N-RAW, More ProRes Options and S-Log3",
+      "publication_date": "",
+      "ingested_at": "2026-11-19T08:19:05.443603+00:00",
       "weight": 0.75
     },
     {
@@ -1971,7 +2252,7 @@
       "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
       "title": "Kodak Pixpro AZ653 review: a bridge camera that punches above its weight with a massive 65x optical zoom",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434469+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443606+00:00",
       "weight": 0.75
     },
     {
@@ -1982,17 +2263,17 @@
       "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
       "title": "An interview with the legendary Jay Maisel – a lifelong Nikon photographer (1931-2026)",
       "publication_date": "",
-      "ingested_at": "2026-09-09T15:39:54.434472+00:00",
+      "ingested_at": "2026-11-19T08:19:05.443609+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/nikon-z8/",
-    "reddit": "Nikon Z8\n\nI pulled together all 6 reviews in one place: https://askmaddi.com/cards/nikon-z8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Nikon Z8**\nAll 6 reviews in one place: https://askmaddi.com/cards/nikon-z8/\n_(disclosure: I built this)_",
+    "reddit": "Nikon Z8\n\nReviewers are most positive about video capability (16% positive, 68% neutral, 16% negative across 19 claims).\n\nI pulled together all 9 reviews in one place: https://askmaddi.com/cards/nikon-z8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Nikon Z8**\nReviewers are most positive about video capability (16% positive, 68% neutral, 16% negative across 19 claims).\nAll 9 reviews in one place: https://askmaddi.com/cards/nikon-z8/\n_(disclosure: I built this)_",
     "og": {
       "title": "Nikon Z8 — Reviewed",
-      "description": "Nikon Z8 — all 6 reviews in one place.",
+      "description": "Reviewers are most positive about video capability (16% positive, 68% neutral, 16% negative across 19 claims).",
       "image": null,
       "url": "https://askmaddi.com/cards/nikon-z8/"
     }
@@ -2001,11 +2282,14 @@
     "driver": "build_card.py",
     "enrich_client": "forced_choice",
     "facts": {
-      "stage": "ran",
-      "artifact": "fresh"
+      "stage": "failed:1",
+      "artifact": "carried"
     },
     "blockers": [],
-    "warnings": [],
+    "warnings": [
+      "Facts stage exited 1 — specs may be incomplete. The corpus is unaffected; facts are additive.",
+      "Facts CARRIED from an earlier build — not re-fetched this run. The per-row dates in fact_provenance say how old they are."
+    ],
     "shippable": true,
     "note": "Real gemma enrichment via flask shim."
   }
