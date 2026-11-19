@@ -54,8 +54,12 @@ def test_parked_regathers_listed_with_delist_line(tmp_path, capsys, monkeypatch)
     q = tmp_path / 'q.json'
     q.write_text(json.dumps({'queue': {
         'thin-live': {'state': 'corpus_thin', 'requeued_at': 't',
-                      'last_error': 'own reviews 3 < 6'},
-        'thin-gone': {'state': 'corpus_thin', 'requeued_at': 't'},
+                      'requeued_from': 'promoted', 'last_error': 'own reviews 3 < 6'},
+        'thin-gone': {'state': 'corpus_thin', 'requeued_at': 't',
+                      'requeued_from': 'promoted'},
+        'thin-mint': {'state': 'corpus_thin', 'requeued_at': 't',
+                      'requeued_from': 'failed'},
+        'thin-unknown': {'state': 'corpus_thin', 'requeued_at': 't'},
         'crashed': {'state': 'failed', 'requeued_at': 't', 'last_error': 'boom'},
         'old-mint': {'state': 'corpus_thin'},          # never re-opened
         'still-going': {'state': 'resolved', 'requeued_at': 't'}}}))
@@ -63,14 +67,27 @@ def test_parked_regathers_listed_with_delist_line(tmp_path, capsys, monkeypatch)
     assert rr.main(['--queue', str(q), '--plans-dir', str(tmp_path),
                     '--cards-dir', str(cards)]) == 0
     out = capsys.readouterr().out
-    assert '2 re-opened card(s) parked corpus_thin, 1 failed' in out
-    assert 'thin   thin-live  [live card up]  own reviews 3 < 6' in out
-    assert 'thin   thin-gone  [no live card]' in out
-    assert 'failed crashed  [no live card]  boom' in out
+    assert '4 re-opened card(s) parked corpus_thin, 1 failed' in out
+    assert 'thin   thin-live  [live card up; from promoted]  own reviews 3 < 6' in out
+    assert 'thin   thin-gone  [no live card; from promoted]' in out
+    assert 'thin   thin-mint  [no live card; from failed]' in out
+    assert 'failed crashed  [no live card; from ?]  boom' in out
     assert 'old-mint' not in out and 'still-going' not in out
-    assert out.rstrip().endswith(
-        'sudo -u askmaddi python3 tools/delist_card.py '
-        '--slug thin-gone --slug thin-live')
+    delist = [ln for ln in out.splitlines() if 'delist_card.py' in ln]
+    assert delist == ['  delist (dry run; add --apply to write): '
+                      'sudo -u askmaddi python3 tools/delist_card.py '
+                      '--slug thin-gone --slug thin-live']
+    assert out.rstrip().endswith('is the door): thin-mint thin-unknown')
+
+
+def test_only_never_cards_prints_no_delist_line():
+    """2026-11-19: om-system-20mm-f1-4 re-opened from failed, both fetch legs
+    empty, no card ever — the digest offered to delist it. It must not."""
+    lines = rr.parked_lines({'om-system-20mm-f1-4': {
+        'state': 'corpus_thin', 'requeued_at': 't', 'requeued_from': 'failed'}},
+        '/nonexistent', 80)
+    assert not any('delist_card.py' in ln for ln in lines)
+    assert lines[-1].endswith('om-system-20mm-f1-4')
 
 
 def test_no_parked_no_delist_line(tmp_path):

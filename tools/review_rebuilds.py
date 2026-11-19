@@ -15,9 +15,16 @@ After the review_ready blocks it lists every DELIBERATELY RE-OPENED record
 (requeued_at set) that parked `corpus_thin` or `failed` instead. A regather that
 parks thin found too few reviews of its own product; the 2026-11-18 ruling is
 to delist it rather than keep serving the old card, so those slugs are printed
-as one delist_card dry-run line. `failed` is listed for diagnosis only: a crash
-says nothing about the product. Records that parked thin without ever being
-re-opened are old mints, never cards, and are not this digest's business.
+as one delist_card dry-run line. The ruling is about a CARD: only a record
+re-opened from `promoted` (requeue_promoted stamps requeued_from='promoted') was
+serving one, so only those slugs go on the delist line. A thin record re-opened
+from `failed` or `corpus_thin` was never a card; delisting it retires a mint and
+stops serving nothing, and zero corpus there usually means a fetch lane came back
+empty, not that the product is unreviewed (2026-11-19, om-system-20mm-f1-4: both
+legs empty). Those are listed as left parked; corpus_thin_recovery.py --refetch
+is their door. `failed` is listed for diagnosis only: a crash says nothing about
+the product. Records that parked thin without ever being re-opened are old
+mints, never cards, and are not this digest's business.
 
 It writes nothing. It exists so a batch of rebuilds can be reviewed from one
 paste instead of one command per card, and so the dropped titles can be held
@@ -94,12 +101,18 @@ def parked_lines(q, cards_dir, width):
     for label, rows in (('thin', thin), ('failed', failed)):
         for slug, rec in rows:
             live = 'live card up' if (Path(cards_dir) / f'{slug}.json').is_file() else 'no live card'
-            out.append(f'  {label:6} {slug}  [{live}]  '
+            out.append(f'  {label:6} {slug}  [{live}; from {rec.get("requeued_from") or "?"}]  '
                        f'{(rec.get("last_error") or "")[:width]}')
-    if thin:
+    was_card = [s for s, rec in thin if rec.get('requeued_from') == 'promoted']
+    never_card = [s for s, rec in thin if rec.get('requeued_from') != 'promoted']
+    if was_card:
         out.append('  delist (dry run; add --apply to write): '
                    'sudo -u askmaddi python3 tools/delist_card.py '
-                   + ' '.join(f'--slug {s}' for s, _ in thin))
+                   + ' '.join(f'--slug {s}' for s in was_card))
+    if never_card:
+        out.append('  left parked, never a card (not delisted; '
+                   'corpus_thin_recovery.py --refetch is the door): '
+                   + ' '.join(never_card))
     return out
 
 
