@@ -21,48 +21,42 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 29.99,
-        "open_box": 85.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 27,
-      "price_updated_at": "2026-11-20T10:10:32.134059+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-10-29T05:29:48.934576+00:00"
+    "price_updated_at": "2026-11-20T03:25:21.445984+00:00"
   },
   "freshness": {
     "created_at": "2026-10-29T05:29:48.929981+00:00",
-    "last_built": "2026-10-29T05:29:48.929981+00:00",
-    "last_checked": "2026-10-29T05:29:48.929981+00:00",
-    "source_count": 10,
+    "last_built": "2026-11-20T03:25:21.426376+00:00",
+    "last_checked": "2026-11-20T03:25:21.426376+00:00",
+    "source_count": 4,
     "source_types": {
-      "pro": 10
+      "pro": 4
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
   },
   "confidence": {
-    "overall": "medium",
+    "overall": "low",
     "per_axis": {
       "burst_buffer": "medium",
-      "video_capability": "medium",
-      "evf_lcd": "medium",
-      "handling": "medium",
       "image_quality": "medium",
-      "generation_context": "medium",
-      "stabilization": "medium",
-      "battery_life": "medium",
-      "price": "medium",
-      "autofocus_body": "medium",
-      "dimensions": "low",
-      "connectivity": "low",
-      "weight": "medium",
-      "mount_compat": "low",
+      "evf_lcd": "low",
       "sensor_performance": "low",
-      "build": "low"
+      "stabilization": "medium",
+      "video_capability": "medium",
+      "battery_life": "medium",
+      "autofocus_body": "medium",
+      "generation_context": "medium",
+      "handling": "low",
+      "mount_compat": "low",
+      "price": "low",
+      "dimensions": "low",
+      "build": "low",
+      "weight": "low"
     }
   },
   "tier": {
@@ -74,259 +68,40 @@
   },
   "lead_axes": [
     {
-      "axis_id": "video_capability",
-      "display_name": "Video Capability",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 6,
-        "neu": 7,
-        "neg": 2,
-        "total": 15,
-        "sources": [
-          {
-            "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DoqwCC6elKk",
-            "weight": 0.75,
-            "quote_excerpt": "And this Canon vlogging kit has everything you'll need to make your videos share-worthy.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DoqwCC6elKk",
-            "weight": 0.75,
-            "quote_excerpt": "It shoots in 4K without cropping your shot.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-electronikz-videos-tech-product-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
-            "weight": 0.75,
-            "quote_excerpt": "some in Atlanta limit 2.0 inch re angle LCD display 20 shooting modes and my colors photo effects digitated kiss EPS and flex his own f /a forecast [Music] the sleet powershot s3 is digital camera offers you high resolution and extra long zoom advanced yet easy to use smoothie functions plus great…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-power-shot-s31s-picture-and-video-quality-test",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=pjVJ1z3kUk8",
-            "weight": 0.75,
-            "quote_excerpt": "hey youtube madame roy back once again um this is the new cat my new canon powershot s3 one s that i picked up at the garage sale for uh eight dollars and i'm just doing a quick uh movie test to see what kind of video quality it's not high definition according to the specs it's just 640 by",
-            "witness": "reported"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "want to do a separate video about this because this is an excellent camera this cam was made between 2006 and 2007 it features six megapixels which is sufficient for me as long as you're not blowing your pictures up like poster size you keep them to about the size of a page eight and a half by…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "them on my YouTube page one was just a test video of this and then the other one was I think when I reviewed the quad core system so again very good video quality and it's amazing considering that this is only 640 by 480 this is not technically a high-definition camera up here you have your Flash…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "the function menu right here this lets you adjust your different resolutions right now it's in the video mode you can do 640 by 480 frames per second or if you want to do 15 you have that option and lower resolution will give you higher frame rates that you do 320 240 but with 60 frames per second…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "again would be 3 or 2 and then of course one not even a mega pixel then you also have an interesting widescreen option for taking pictures kind of the part of the panoramic features the one thing I do not like about taking video with this camera is it does not have a widescreen option so every…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "what's in here now is an 8 gigabyte card even though this is a 2006 this is high capacity capable let's see we have file numbering which leave that alone create a folder for your new pictures or videos auto-rotate so that means if you turn the camera sideways it'll take the picture in the proper…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "and it's this and then we're gonna keep that a feat because as we are in America language is English video system NTSC that's correct print mode I'm not sure what print method I'm not sure what that's about that's probably for pick bridge back then used to be able to plug your cameras directly into…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "you have about another eight that are actually built into the camera itself what I'm going to do is go ahead and attach a few pictures to the end of this just to show you the quality I'm not going to do a video because like I said the last couple of videos I did were actually shot with this",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "recommend keeping a tripod handy the video quality in general is pretty decent however it only shoots video in 720p which is somewhat disappointing considering that even smartphones shouldn't 4k these days Canon really ought to add 4k in more of its entry-level cameras the SX 430 does come equipped…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "I recommend buying the almost identical SX 420 instead I'll leave a link to both cameras below however if you're looking for a vlogging camera or a camera with 4k I recommend investing in the superb Panasonic FC 300 the FC 300 shoots in 4k and has a flip screen for vlogging I'll leave a link to…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-            "weight": 0.75,
-            "quote_excerpt": "Beyond stills, the PowerShot S3IS excels in video recording, offering 30 frame per second VGA movies with stereo sound and a photo and movie feature.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-            "weight": 0.75,
-            "quote_excerpt": "The widescreen 16:9 recording capability further enhances the video experience.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.467,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "It shoots in 4K without cropping your shot.",
-        "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-        "url": "https://www.youtube.com/watch?v=DoqwCC6elKk"
-      }
-    },
-    {
-      "axis_id": "handling",
-      "display_name": "Handling",
-      "axis_type": "lead",
-      "measurement": null,
-      "sentiment": {
-        "pos": 4,
-        "neu": 5,
-        "neg": 0,
-        "total": 9,
-        "sources": [
-          {
-            "source_id": "youtube-canonpowershotcamera-canon-powershot-camera-review-ratings",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=w8izvuXoou0",
-            "weight": 0.75,
-            "quote_excerpt": "The buttons feel uh a little bit more um a little bit better than the 20D and the 5D.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-            "weight": 0.75,
-            "quote_excerpt": "Um, one of the things that I found very interesting about this camera is the amount of buttons that are on this thing.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-            "weight": 0.75,
-            "quote_excerpt": "It also has the ability to punch in manual focus where you can push the manual focus button and change it and dial in your focus uh with the camera controls here as well.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DoqwCC6elKk",
-            "weight": 0.75,
-            "quote_excerpt": "And with the tripod grip, which is really easy to hold onto, you can control the camera using your thumb and even remotely with the built-in remote.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "the way that's planted because if you're holding the camera like this very convenient to have the zooom right there a lot of times they'll put them right on the back here you have your off button you push that to turn it off now to turn this on you either slide it left to take a picture video and",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "with one hand the cameras overall layout is also pretty intuitive and simple it has a 45 X zoom lens on the front more about its zoom capabilities in a moment the top face has an on/off button and a shutter button that's surrounded by the extremely important zoom toggle the tough face also has a…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "beneath it one thing to note is that the flash has to be flipped open manually there is no button to flip it open the rear face also continues with the theme of intuitive simplicity all the buttons are easy to reach I especially like the placement of the video record button the most important…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "cap to the body so you never end up losing your lens cap it's a tiny little thing but it's a very thoughtful touch so is the SX 430 worth buying well it really depends on what you're looking for if you're looking for a simple inexpensive zoom camera to take on vacation the canon sx40 is a decent…",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "as well hope this review was useful if it was please hit that like button and subscribe for more reviews unboxings and how-to videos and if you own any one of these cameras I'd like to hear about your experience so tell me about your experience in the comments section below thanks for watching and…",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.6,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.444,
-        "contested": false
-      },
-      "notes": []
-    },
-    {
       "axis_id": "image_quality",
       "display_name": "Image Quality",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 4,
-        "neu": 2,
-        "neg": 2,
-        "total": 8,
+        "pos": 2,
+        "neu": 4,
+        "neg": 3,
+        "total": 9,
         "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "White balance performance was also good, except for the auto mode under incandescent lighting.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "to its DiG!C II image processing system.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon-S3-IS_colorerror Canon-S3-IS_colors Canon-S3-IS_YBL71_ca Canon-S3-IS_YBL72_lwph &#160; Specifications Leadpic_Canon-S3-IS-low-res Image sensor : 5.76 x 4.29 mm CCD with 6.2 million photosites (6.0-megapixels effective) Lens.",
+            "witness": "unattested"
+          },
           {
             "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
             "source_type": "youtube",
@@ -368,22 +143,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-            "weight": 0.75,
-            "quote_excerpt": "Colors are warm, slightly saturated, and really nice straight out of the camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "leave a link right below this video so feel free to check that out the big question though is how does it perform the camera can take pictures as large as 20 megapixels and stores them as JPEGs the image quality as you can see from these test shots is pretty decent the colors are pleasantly…",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
@@ -395,52 +154,68 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.75,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.625,
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.556,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "All right, so now let's talk about the image quality.",
-        "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-        "url": "https://www.youtube.com/watch?v=zmVPp94ondk"
+        "quote_excerpt": "White balance performance was also good, except for the auto mode under incandescent lighting.",
+        "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+        "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/"
       }
     },
     {
-      "axis_id": "generation_context",
-      "display_name": "Generation Context",
+      "axis_id": "sensor_performance",
+      "display_name": "Sensor Performance",
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 4,
-        "neg": 0,
-        "total": 7,
+        "pos": 0,
+        "neu": 5,
+        "neg": 1,
+        "total": 6,
         "sources": [
           {
-            "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
             "weight": 0.75,
-            "quote_excerpt": "Compared to its predecessor, the PowersShot 51 and competitors in the super zoom category, the V3's combination of sensor size, zoom range, and burst speed positions it as a compelling choice for enthusiasts seeking portability without sacrificing performance.",
+            "quote_excerpt": "A new High ISO Auto setting boosts.",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
             "weight": 0.75,
-            "quote_excerpt": "Current PowersShot users, especially those with models like the SX70HS, should compare the rumored 1.4 4 in sensor and 20x zoom lens to their existing equipment to determine if the upgrade offers meaningful benefits.",
+            "quote_excerpt": "sensitivity when shooting in the full auto (where ISO adjustment is not available) and P modes.",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
             "weight": 0.75,
-            "quote_excerpt": "Since official details from Canon have not yet been released, staying updated through reputable news sources and Canon's announcements is essential to avoid relying solely on speculation.",
+            "quote_excerpt": "Imaging performance is similar to that of the.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "We found little evidence of image noise.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "up to ISO 200 but at ISO 400 noise was evident and the ISO 800 and &#8216;Hi&#8217; sensitivity settings were visibly noise affected.",
             "witness": "unattested"
           },
           {
@@ -448,23 +223,70 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
             "weight": 0.75,
-            "quote_excerpt": "And kind of one of the things about this camera that uh I had happened to me at one point is the older version of this camera, the S2IS, used to have the SD card slot with the batteries.",
-            "witness": "firsthand"
-          },
+            "quote_excerpt": "So, even in outdoor brightly lit shots, if you have it at ISO 400, you're going to see noise.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.833,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "stabilization",
+      "display_name": "Stabilization",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 5,
+        "neu": 1,
+        "neg": 0,
+        "total": 6,
+        "sources": [
           {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
             "weight": 0.75,
-            "quote_excerpt": "This is the Canon PowerShot G3, released in 2002, 4 megapixels, and a design that feels quite different from modern cameras.",
+            "quote_excerpt": "and optical image stabilisation system and range of manual controls as its predecessor.",
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
             "weight": 0.75,
-            "quote_excerpt": "The G3 definitely won't be replacing a modern camera, but if you like having a dedicated tool for everyday photography instead of using your phone, then the G3 could be a great option.",
+            "quote_excerpt": "Uh, it also has included optical image stabilization, which works pretty well to help you with camera shake, especially when you're zooming way out and trying to get those really long shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "You can uh it will automatically um try to stabilize the image for you while you're holding it, so you don't have camera shake.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-electronikz-videos-tech-product-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
+            "weight": 0.75,
+            "quote_excerpt": "stabilizer technologic images and movies taken with the s3 his are sharp and smooth even when the camera gets hustled it's everything you need to capture the funky excitement and beauty of your active life wherever it takes you the sleep power shot has free his digital camera offers you high…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "The inclusion of Canon's optical image stabilizer is a significant advantage, ensuring sharp and steady images and videos, even when shooting handheld or in challenging lighting conditions.",
             "witness": "unattested"
           },
           {
@@ -472,7 +294,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
             "weight": 0.75,
-            "quote_excerpt": "The Canon PowerShot S3IS, a blast from the past, emerges as a compelling option for photography enthusiasts seeking a blend of retro charm and capable performance.",
+            "quote_excerpt": "Its ease of use, versatile zoom range, and effective image stabilization make it a great option.",
             "witness": "unattested"
           }
         ]
@@ -481,29 +303,98 @@
       "convergence": {
         "source_count": 4,
         "polarity_agreement": 0.75,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.429,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.333,
         "contested": false
       },
       "notes": [],
       "face_quote": {
-        "quote_excerpt": "Compared to its predecessor, the PowersShot 51 and competitors in the super zoom category, the V3's combination of sensor size, zoom range, and burst speed positions it as a compelling choice for enthusiasts seeking portability without sacrificing performance.",
-        "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-        "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y"
+        "quote_excerpt": "Uh, it also has included optical image stabilization, which works pretty well to help you with camera shake, especially when you're zooming way out and trying to get those really long shots.",
+        "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+        "url": "https://www.youtube.com/watch?v=zmVPp94ondk"
       }
-    }
-  ],
-  "detail_axes": [
+    },
+    {
+      "axis_id": "video_capability",
+      "display_name": "Video Capability",
+      "axis_type": "lead",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 4,
+        "neg": 0,
+        "total": 6,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "With a high-capacity, high-speed card you can record up to 1GB of data &#8211; and even take a high-resolution still shot while.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "1584 pixel images for printing on roll paper or viewing on widescreen TV sets.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "You can now view a live histogram in record mode,.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-electronikz-videos-tech-product-review",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
+            "weight": 0.75,
+            "quote_excerpt": "some in Atlanta limit 2.0 inch re angle LCD display 20 shooting modes and my colors photo effects digitated kiss EPS and flex his own f /a forecast [Music] the sleet powershot s3 is digital camera offers you high resolution and extra long zoom advanced yet easy to use smoothie functions plus great…",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "Beyond stills, the PowerShot S3IS excels in video recording, offering 30 frame per second VGA movies with stereo sound and a photo and movie feature.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "The widescreen 16:9 recording capability further enhances the video experience.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.5,
+        "contested": false
+      },
+      "notes": []
+    },
     {
       "axis_id": "battery_life",
       "display_name": "Battery Life",
-      "axis_type": "detail",
+      "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
+        "pos": 2,
         "neu": 3,
         "neg": 0,
-        "total": 6,
+        "total": 5,
         "sources": [
           {
             "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
@@ -538,14 +429,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "camera unlike a lot of its competitors that come with just a USB cable to charge the camera the advantage of having a full size charger is that you can buy spare batteries and swap out your batteries and charge these depleted batteries while you continue to use your camera if you're looking for…",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
@@ -557,11 +440,11 @@
       },
       "confidence": "medium",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
+        "source_count": 3,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "neu",
-        "max_source_share": 0.333,
-        "contested": true
+        "max_source_share": 0.4,
+        "contested": false
       },
       "notes": [],
       "face_quote": {
@@ -569,6 +452,196 @@
         "source_id": "youtube-electronikz-videos-tech-product-review",
         "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8"
       }
+    }
+  ],
+  "detail_axes": [
+    {
+      "axis_id": "autofocus_body",
+      "display_name": "Autofocus",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 2,
+        "neu": 1,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "Focus system/range : TTL AF (continuous or single; 1-point centre AF or Flex Zone AF) plus Manual; range 50 cm to infinity; macro 10-50.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "And that's so close that you can pretty much touch your subject with the lens of this camera and still grab a focus and get a shot.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "The camera's DIGIC II processor, combined with iSAPS technology and FlexiZone AF/AE, contributes to fast and precise auto focus and exposure, resulting in well-exposed and sharp images.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "generation_context",
+      "display_name": "Generation Context",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "this upgrade to last year&#8217;s 5-megapixel S2-IS.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "And kind of one of the things about this camera that uh I had happened to me at one point is the older version of this camera, the S2IS, used to have the SD card slot with the batteries.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "The Canon PowerShot S3IS, a blast from the past, emerges as a compelling option for photography enthusiasts seeking a blend of retro charm and capable performance.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "medium",
+      "convergence": {
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "handling",
+      "display_name": "Handling",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "the S3-IS is comfortable to hold with a large hand grip and logical &#8211; albeit somewhat cluttered &#8211; control layout.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "Um, one of the things that I found very interesting about this camera is the amount of buttons that are on this thing.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "It also has the ability to punch in manual focus where you can push the manual focus button and change it and dial in your focus uh with the camera controls here as well.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "pos",
+        "max_source_share": 0.667,
+        "contested": true
+      },
+      "notes": []
+    },
+    {
+      "axis_id": "mount_compat",
+      "display_name": "Mount Compatibility",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 3,
+        "neg": 0,
+        "total": 3,
+        "sources": [
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "Canon PowerShot S3-IS - Photo Review Uncategorized Nathan Beard wins 2026 National Photographic Portrait Prize Sony unveils FE 100-400mm f/5.6-8 OSS super-telephoto zoom lens Fujifilm.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+            "weight": 0.75,
+            "quote_excerpt": "2nd Edition PRODUCT REVIEWS Tamron 16-50mm f/2.8 A lens (Model B091) OM System PEN camera Recommended cameras and lenses AD Blocker Detected Ads can be.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+            "weight": 0.75,
+            "quote_excerpt": "Paired with a versatile 12x optical zoom lens featuring USM and a UD lens element, the S3IS provides a broad focal range for various shooting scenarios.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": {
+        "source_count": 2,
+        "polarity_agreement": 1.0,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": false
+      },
+      "notes": []
     },
     {
       "axis_id": "price",
@@ -577,9 +650,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 0,
-        "neu": 4,
+        "neu": 2,
         "neg": 1,
-        "total": 5,
+        "total": 3,
         "sources": [
           {
             "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
@@ -598,22 +671,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-            "weight": 0.75,
-            "quote_excerpt": "This makes sense, because when the camera came out, it wasn't cheap.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "today I'm reviewing the Canon Powershot SX 430 superzoom camera this is canon's latest offering in its 400 series range of budget super zoom cameras and note to my US viewers the SX 430 isn't officially being sold in the US you can certainly buy the camera through third-party importers and I'll…",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
@@ -623,12 +680,12 @@
           }
         ]
       },
-      "confidence": "medium",
+      "confidence": "low",
       "convergence": {
-        "source_count": 4,
+        "source_count": 2,
         "polarity_agreement": 1.0,
         "dominant_polarity": "neu",
-        "max_source_share": 0.4,
+        "max_source_share": 0.667,
         "contested": false
       },
       "notes": [],
@@ -639,87 +696,16 @@
       }
     },
     {
-      "axis_id": "autofocus_body",
-      "display_name": "Autofocus",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 2,
-        "neu": 2,
-        "neg": 0,
-        "total": 4,
-        "sources": [
-          {
-            "source_id": "youtube-canonpowershotcamera-canon-powershot-camera-review-ratings",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=w8izvuXoou0",
-            "weight": 0.75,
-            "quote_excerpt": "Ah, when you're zoomed in, you can use the little multicontroller to move the area of interest around so you can focus exactly where you want.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-            "weight": 0.75,
-            "quote_excerpt": "And that's so close that you can pretty much touch your subject with the lens of this camera and still grab a focus and get a shot.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "on there on the side here we have two buttons here manual focus and looks like a quick button for the scene modes and this does have quite a few of them and as you can see if this will focus it does have the 12x optical zoom I think that's it for the front here this right here the",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-            "weight": 0.75,
-            "quote_excerpt": "The camera's DIGIC II processor, combined with iSAPS technology and FlexiZone AF/AE, contributes to fast and precise auto focus and exposure, resulting in well-exposed and sharp images.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.25,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
       "axis_id": "dimensions",
       "display_name": "Dimensions",
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 1,
+        "pos": 2,
+        "neu": 0,
         "neg": 0,
-        "total": 4,
+        "total": 2,
         "sources": [
-          {
-            "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
-            "weight": 0.75,
-            "quote_excerpt": "This sensor size, possibly derived from Canon's 32 megapixel technology, is expected to deliver sharper details and greater dynamic range.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
-            "weight": 0.75,
-            "quote_excerpt": "The 20x zoom lens, reaching up to a 500 mm equivalent focal length, offers remarkable versatility for capturing everything from wide landscapes to distant wildlife.",
-            "witness": "unattested"
-          },
           {
             "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
             "source_type": "youtube",
@@ -739,201 +725,8 @@
         ]
       },
       "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.5,
-        "contested": true
-      },
+      "convergence": null,
       "notes": []
-    },
-    {
-      "axis_id": "connectivity",
-      "display_name": "Connectivity",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 0,
-        "neu": 3,
-        "neg": 0,
-        "total": 3,
-        "sources": [
-          {
-            "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=DoqwCC6elKk",
-            "weight": 0.75,
-            "quote_excerpt": "You can use the app as a remote for when you want to control your camera from afar.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "flash for the pictures and then your microphone control if you're in video mode the flash pops up here very typical for this type of camera right there you have your redeye reduction I believe that is a mic for the video portion but there's also one right there as well so I think we have some…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-            "weight": 0.75,
-            "quote_excerpt": "do this one-handed I don't think I can but under here you basically have your USB out thank you guys to see that but it's very hard to do this one-handed unfortunately when I put the camera down for just a second there we go as you can see you have your standard mini USB and this would be for",
-            "witness": "firsthand"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 1.0,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.667,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "do this one-handed I don't think I can but under here you basically have your USB out thank you guys to see that but it's very hard to do this one-handed unfortunately when I put the camera down for just a second there we go as you can see you have your standard mini USB and this would be for",
-        "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-        "url": "https://www.youtube.com/watch?v=on3uXlAEZVM"
-      }
-    },
-    {
-      "axis_id": "weight",
-      "display_name": "Weight & Portability",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 2,
-        "neu": 1,
-        "neg": 0,
-        "total": 3,
-        "sources": [
-          {
-            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-            "weight": 0.75,
-            "quote_excerpt": "You don't have to worry about did I bring the right lens or do I have them all or carry a bunch of gear.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-            "weight": 0.75,
-            "quote_excerpt": "But in good light, I've taken photos that have really surprised me.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "is surprisingly compact and lightweight weighing in at a paltry 320 grams this is great since most people will probably want to use this camera while traveling the body is almost entirely built from plastic but feels very solid and balanced while the grip is on the smaller side due to its compact…",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "medium",
-      "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.333,
-        "contested": false
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "is surprisingly compact and lightweight weighing in at a paltry 320 grams this is great since most people will probably want to use this camera while traveling the body is almost entirely built from plastic but feels very solid and balanced while the grip is on the smaller side due to its compact…",
-        "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-        "url": "https://www.youtube.com/watch?v=3vv-75BPkEY"
-      }
-    },
-    {
-      "axis_id": "mount_compat",
-      "display_name": "Mount Compatibility",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 1,
-        "neu": 1,
-        "neg": 0,
-        "total": 2,
-        "sources": [
-          {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-            "weight": 0.75,
-            "quote_excerpt": "in this price range I can certainly suggest a few other options there is a USB AV port on the right hand side the battery and SD card are located in this compartment on the bottom and it does come with a standard sized tripod mount and I also like the fact that Canon provides a full-size charger…",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-            "weight": 0.75,
-            "quote_excerpt": "Paired with a versatile 12x optical zoom lens featuring USM and a UD lens element, the S3IS provides a broad focal range for various shooting scenarios.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.5,
-        "contested": true
-      },
-      "notes": []
-    },
-    {
-      "axis_id": "sensor_performance",
-      "display_name": "Sensor Performance",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 0,
-        "neu": 1,
-        "neg": 1,
-        "total": 2,
-        "sources": [
-          {
-            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-            "weight": 0.75,
-            "quote_excerpt": "So, even in outdoor brightly lit shots, if you have it at ISO 400, you're going to see noise.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-            "weight": 0.75,
-            "quote_excerpt": "Dynamic range is definitely an area where you really feel the age of the camera.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neu",
-        "max_source_share": 0.5,
-        "contested": true
-      },
-      "notes": [],
-      "face_quote": {
-        "quote_excerpt": "Dynamic range is definitely an area where you really feel the age of the camera.",
-        "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-        "url": "https://www.youtube.com/watch?v=I6UtFdshA5k"
-      }
     },
     {
       "axis_id": "build",
@@ -947,12 +740,37 @@
         "total": 1,
         "sources": [
           {
-            "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
+            "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+            "source_type": "reviewer_blog",
+            "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
             "weight": 0.75,
-            "quote_excerpt": "it's pretty well built takes good pictures and has quite an impressive zoom range and if you're in the u.s.",
+            "quote_excerpt": "Rating (out of 10): Build: 8.5 Ease of use: 8 Image quality: 8.5 OVERALL: 8.5 Buy PHOTO REVIEW NEWSLETTER Latest news, reviews, tips, and new.",
             "witness": "unattested"
+          }
+        ]
+      },
+      "confidence": "low",
+      "convergence": null,
+      "notes": []
+    },
+    {
+      "axis_id": "weight",
+      "display_name": "Weight & Portability",
+      "axis_type": "detail",
+      "measurement": null,
+      "sentiment": {
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1,
+        "sources": [
+          {
+            "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
+            "source_type": "youtube",
+            "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
+            "weight": 0.75,
+            "quote_excerpt": "You don't have to worry about did I bring the right lens or do I have them all or carry a bunch of gear.",
+            "witness": "firsthand"
           }
         ]
       },
@@ -976,7 +794,7 @@
       "specs.mount": {
         "source": "wikidata",
         "url": "https://www.wikidata.org/wiki/Q421121",
-        "fetched_at": "2026-10-29T05:29:46.544462+00:00",
+        "fetched_at": "2026-11-20T03:25:19.315295+00:00",
         "license": "",
         "reason": "",
         "extraction": null
@@ -988,87 +806,80 @@
     "consensus_paragraph": "",
     "aspect_breakdown": [
       {
-        "aspect": "video_capability",
-        "pos": 6,
-        "neu": 7,
-        "neg": 2,
-        "total": 15
-      },
-      {
-        "aspect": "handling",
-        "pos": 4,
-        "neu": 5,
-        "neg": 0,
+        "aspect": "image_quality",
+        "pos": 2,
+        "neu": 4,
+        "neg": 3,
         "total": 9
       },
       {
-        "aspect": "image_quality",
-        "pos": 4,
-        "neu": 2,
-        "neg": 2,
-        "total": 8
+        "aspect": "sensor_performance",
+        "pos": 0,
+        "neu": 5,
+        "neg": 1,
+        "total": 6
       },
       {
-        "aspect": "generation_context",
-        "pos": 3,
-        "neu": 4,
-        "neg": 0,
-        "total": 7
-      },
-      {
-        "aspect": "battery_life",
-        "pos": 3,
-        "neu": 3,
+        "aspect": "stabilization",
+        "pos": 5,
+        "neu": 1,
         "neg": 0,
         "total": 6
       },
       {
-        "aspect": "price",
-        "pos": 0,
+        "aspect": "video_capability",
+        "pos": 2,
         "neu": 4,
-        "neg": 1,
+        "neg": 0,
+        "total": 6
+      },
+      {
+        "aspect": "battery_life",
+        "pos": 2,
+        "neu": 3,
+        "neg": 0,
         "total": 5
       },
       {
         "aspect": "autofocus_body",
         "pos": 2,
-        "neu": 2,
-        "neg": 0,
-        "total": 4
-      },
-      {
-        "aspect": "dimensions",
-        "pos": 3,
         "neu": 1,
         "neg": 0,
-        "total": 4
+        "total": 3
       },
       {
-        "aspect": "connectivity",
+        "aspect": "generation_context",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "handling",
+        "pos": 1,
+        "neu": 2,
+        "neg": 0,
+        "total": 3
+      },
+      {
+        "aspect": "mount_compat",
         "pos": 0,
         "neu": 3,
         "neg": 0,
         "total": 3
       },
       {
-        "aspect": "weight",
-        "pos": 2,
-        "neu": 1,
-        "neg": 0,
+        "aspect": "price",
+        "pos": 0,
+        "neu": 2,
+        "neg": 1,
         "total": 3
       },
       {
-        "aspect": "mount_compat",
-        "pos": 1,
-        "neu": 1,
+        "aspect": "dimensions",
+        "pos": 2,
+        "neu": 0,
         "neg": 0,
-        "total": 2
-      },
-      {
-        "aspect": "sensor_performance",
-        "pos": 0,
-        "neu": 1,
-        "neg": 1,
         "total": 2
       },
       {
@@ -1077,15 +888,22 @@
         "neu": 0,
         "neg": 0,
         "total": 1
+      },
+      {
+        "aspect": "weight",
+        "pos": 0,
+        "neu": 1,
+        "neg": 0,
+        "total": 1
       }
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 102,
-      "evaluated": 57,
-      "non_evaluative": 45,
+      "examined": 72,
+      "evaluated": 31,
+      "non_evaluative": 41,
       "non_evaluative_breakdown": {
-        "non_claim": 45
+        "non_claim": 41
       },
       "off_axis": 0,
       "ruleset": {
@@ -1093,7 +911,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "102 examined · 57 evaluated under askmaddi-polarity",
+      "receipt_line": "72 examined · 31 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -1105,31 +923,20 @@
   },
   "axis_roles": {
     "computed_by": "axis_roles@1",
-    "most_discussed": "video_capability",
+    "most_discussed": null,
     "highest_rated": null,
     "lowest_rated": null
   },
   "sources": [
     {
-      "source_id": "youtube-canonpowershotcamera-canon-powershot-camera-review-ratings",
+      "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
       "source_type": "pro",
-      "reviewer": "CanonPowershotCamera",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=w8izvuXoou0",
-      "title": "Canon Powershot Camera Review & Ratings",
+      "reviewer": "",
+      "platform": "web",
+      "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+      "title": "Canon PowerShot S3-IS - Photo Review",
       "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932246+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-cincyphotographycom-canon-powershot-v3-burst-speed-that-crushes-competition",
-      "source_type": "pro",
-      "reviewer": "CincyPhotography.com",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=DgGzWFDZC3Y",
-      "title": "Canon PowerShot V3: Burst Speed That Crushes Competition",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932254+00:00",
+      "ingested_at": "2026-11-20T03:25:21.428184+00:00",
       "weight": 0.75
     },
     {
@@ -1140,18 +947,7 @@
       "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
       "title": "Cheap and Loaded with features!",
       "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932257+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-currys-canon-powershot-g7-x-mk-iii-compact-camera-vlogging-kit-quick-look",
-      "source_type": "pro",
-      "reviewer": "Currys",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=DoqwCC6elKk",
-      "title": "CANON PowerShot G7 X MK III Compact Camera Vlogging Kit - Quick Look",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932260+00:00",
+      "ingested_at": "2026-11-20T03:25:21.428193+00:00",
       "weight": 0.75
     },
     {
@@ -1162,51 +958,7 @@
       "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
       "title": "Tech Product Review",
       "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932262+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-matmroy-canon-power-shot-s31s-picture-and-video-quality-test",
-      "source_type": "pro",
-      "reviewer": "matmroy",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=pjVJ1z3kUk8",
-      "title": "Canon Power Shot S31S Picture and Video Quality Test",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932265+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-      "source_type": "pro",
-      "reviewer": "matmroy",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-      "title": "Canon PowerShot S31S Review",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932267+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-      "source_type": "pro",
-      "reviewer": "Ready Set Louis",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-      "title": "Canon PowerShot G3 in 2026 – Still Worth It? (Hands-On + Photo Samples)",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932270+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-      "source_type": "pro",
-      "reviewer": "ReviewLamp",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-      "title": "Canon Powershot SX430 IS Review and HD Test Videos and Photos",
-      "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932272+00:00",
+      "ingested_at": "2026-11-20T03:25:21.428196+00:00",
       "weight": 0.75
     },
     {
@@ -1217,17 +969,17 @@
       "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
       "title": "Canon PowerShot S3 IS: The Ultimate Retro Digital Camera?",
       "publication_date": "",
-      "ingested_at": "2026-10-29T05:29:48.932274+00:00",
+      "ingested_at": "2026-11-20T03:25:21.428198+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/canon-powershot-s3/",
-    "reddit": "Canon PowerShot S3 IS\n\nI pulled together all 10 reviews in one place: https://askmaddi.com/cards/canon-powershot-s3/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Canon PowerShot S3 IS**\nAll 10 reviews in one place: https://askmaddi.com/cards/canon-powershot-s3/\n_(disclosure: I built this)_",
+    "reddit": "Canon PowerShot S3 IS\n\nI pulled together all 4 reviews in one place: https://askmaddi.com/cards/canon-powershot-s3/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Canon PowerShot S3 IS**\nAll 4 reviews in one place: https://askmaddi.com/cards/canon-powershot-s3/\n_(disclosure: I built this)_",
     "og": {
       "title": "Canon PowerShot S3 IS — Reviewed",
-      "description": "Canon PowerShot S3 IS — all 10 reviews in one place.",
+      "description": "Canon PowerShot S3 IS — all 4 reviews in one place.",
       "image": null,
       "url": "https://askmaddi.com/cards/canon-powershot-s3/"
     }
