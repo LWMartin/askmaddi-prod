@@ -7642,111 +7642,6 @@
       "rank": 45
     },
     {
-      "card_id": "fujifilm-x100v",
-      "display_name": "Fujifilm X100V",
-      "rankable": true,
-      "score": 2.3855,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "sensor_performance",
-          "weight": 3,
-          "s": 0.28,
-          "pos": 10,
-          "neg": 3,
-          "total": 25,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.84,
-          "top_sources": [
-            {
-              "source_id": "rss-amateur-photographer-best-compact-camera-in-2026-perfect-point-and-shoots-for-pho-2026",
-              "url": "https://amateurphotographer.com/buying-advice/best-compact-camera/",
-              "witness": "unattested",
-              "quote": "Some have large imaging sensors that deliver more impressive levels of image detail and dynamic range than a phone can."
-            }
-          ],
-          "axis_display": "Sensor Performance"
-        },
-        {
-          "axis": "autofocus_body",
-          "weight": 2,
-          "s": 0.5,
-          "pos": 2,
-          "neg": 0,
-          "total": 4,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [],
-          "axis_display": "Autofocus"
-        },
-        {
-          "axis": "image_quality",
-          "weight": 2,
-          "s": 0.2727,
-          "pos": 4,
-          "neg": 1,
-          "total": 11,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.5455,
-          "top_sources": [
-            {
-              "source_id": "rss-amateur-photographer-best-compact-camera-in-2026-perfect-point-and-shoots-for-pho-2026",
-              "url": "https://amateurphotographer.com/buying-advice/best-compact-camera/",
-              "witness": "unattested",
-              "quote": "It’s lovely to use and produces downright gorgeous images."
-            }
-          ],
-          "axis_display": "Image Quality"
-        },
-        {
-          "axis": "connectivity",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "rss-amateur-photographer-this-is-the-compact-camera-everybody-wants-and-it-s-cheaper-2026",
-              "url": "https://amateurphotographer.com/latest/deals/this-is-the-compact-camera-everybody-wants-and-its-cheaper-than-a-fujifilm-x100vi/",
-              "witness": "firsthand",
-              "quote": "we said: ‘while the addition of a built-in external microphone input alongside a flip-up LCD display"
-            },
-            {
-              "source_id": "rss-amateur-photographer-best-compact-camera-in-2026-perfect-point-and-shoots-for-pho-2026",
-              "url": "https://amateurphotographer.com/buying-advice/best-compact-camera/",
-              "witness": "unattested",
-              "quote": "You also get Full HD video and easy image transfer via Wi-Fi or NFC to edit your images on your phone."
-            }
-          ],
-          "axis_display": "Connectivity"
-        }
-      ],
-      "missing_axes": [
-        "build"
-      ],
-      "thin_axes": [
-        "autofocus_body",
-        "image_quality",
-        "connectivity"
-      ],
-      "flags": [
-        "missing weighted axes: build",
-        "thin (< 15 claims): autofocus_body, image_quality, connectivity"
-      ],
-      "rank": 46
-    },
-    {
       "card_id": "fujifilm-x100vi",
       "display_name": "Fujifilm X100VI",
       "rankable": true,
@@ -7849,7 +7744,7 @@
         "missing weighted axes: build",
         "thin (< 15 claims): autofocus_body, image_quality, connectivity"
       ],
-      "rank": 47
+      "rank": 46
     },
     {
       "card_id": "minolta-maxxum-7000",
@@ -8004,7 +7899,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, image_quality, connectivity, build"
       ],
-      "rank": 48
+      "rank": 47
     },
     {
       "card_id": "sony-a6300",
@@ -8182,7 +8077,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 49
+      "rank": 48
     },
     {
       "card_id": "fujifilm-x-t50",
@@ -8364,7 +8259,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 50
+      "rank": 49
     },
     {
       "card_id": "fujifilm-x-t30",
@@ -8549,7 +8444,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, autofocus_body, connectivity, build"
       ],
-      "rank": 51
+      "rank": 50
     },
     {
       "card_id": "nikon-fe2",
@@ -8637,7 +8532,7 @@
         "missing weighted axes: sensor_performance, autofocus_body, connectivity",
         "thin (< 15 claims): image_quality"
       ],
-      "rank": 52
+      "rank": 51
     },
     {
       "card_id": "sony-a6600",
@@ -8804,7 +8699,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, image_quality, connectivity, build"
       ],
-      "rank": 53
+      "rank": 52
     },
     {
       "card_id": "sony-fx3",
@@ -8986,7 +8881,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 54
+      "rank": 53
     },
     {
       "card_id": "nikon-z50-ii",
@@ -9164,7 +9059,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 55
+      "rank": 54
     },
     {
       "card_id": "sony-rx100-v",
@@ -9286,7 +9181,7 @@
       "flags": [
         "thin (< 15 claims): build"
       ],
-      "rank": 56
+      "rank": 55
     },
     {
       "card_id": "fujifilm-x100f",
@@ -9470,7 +9365,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, autofocus_body, connectivity"
       ],
-      "rank": 57
+      "rank": 56
     },
     {
       "card_id": "nikon-d810",
@@ -9653,7 +9548,7 @@
       "flags": [
         "thin (< 15 claims): connectivity, build"
       ],
-      "rank": 58
+      "rank": 57
     },
     {
       "card_id": "canon-powershot-sd800",
@@ -9808,7 +9703,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, autofocus_body, connectivity, build"
       ],
-      "rank": 59
+      "rank": 58
     },
     {
       "card_id": "sony-a7",
@@ -9986,7 +9881,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 60
+      "rank": 59
     },
     {
       "card_id": "canon-eos-r5-c",
@@ -10144,6 +10039,189 @@
               "url": "https://www.youtube.com/watch?v=tRQeUhLpxQ8",
               "witness": "unattested",
               "quote": "which means this isn't going to be as good in a wet environment right it's not as environmentally sealed but there's always a trade-off and that's what you're getting because you wanted to add a fan the funny thing is if…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "connectivity",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): connectivity, build"
+      ],
+      "rank": 60
+    },
+    {
+      "card_id": "fujifilm-x100v",
+      "display_name": "Fujifilm X100V",
+      "rankable": true,
+      "score": 1.7337,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "sensor_performance",
+          "weight": 3,
+          "s": 0.3077,
+          "pos": 16,
+          "neg": 4,
+          "total": 39,
+          "confidence": "medium",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.9231,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x100v",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "f/11 on an APS-C camera like the X100V is going to start softening the image due to diffraction.."
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-long-term-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-long-term-review/",
+              "witness": "unattested",
+              "quote": "Assuming the lens can handle a higher resolution sensor &#8211; or is upgraded to do so."
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-review/",
+              "witness": "unattested",
+              "quote": "Above: In terms of photo quality, the X100V unsurprisingly features Fujifilm’s latest X-Trans IV sensor and X-Processor."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.1111,
+          "pos": 2,
+          "neg": 0,
+          "total": 18,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.2222,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x100v",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "the left side of the camera while using the optical finder will overlay a small electronic window showing the area of focus."
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-review/",
+              "witness": "unattested",
+              "quote": "predecessors, packs Fujifilm’s latest APSC sensor, in this case, the X-Trans 4, equipping it with 26 Megapixels, a broad array of embedded phase-detect autofocus points,."
+            },
+            {
+              "source_id": "photoreview-reviews-compact-fixed-lens-cameras-fujifilm-x100v",
+              "url": "https://www.photoreview.com.au/reviews/compact-fixed-lens-cameras/fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "including touch AF and touch shooting."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 2,
+          "s": 0.1458,
+          "pos": 12,
+          "neg": 5,
+          "total": 48,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.2917,
+          "top_sources": [
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x100v",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "What settings would give me the sharpness image?"
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-long-term-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-long-term-review/",
+              "witness": "unattested",
+              "quote": "are JPEGs straight out of camera without any adjustment."
+            },
+            {
+              "source_id": "photoreview-reviews-compact-fixed-lens-cameras-fujifilm-x100v",
+              "url": "https://www.photoreview.com.au/reviews/compact-fixed-lens-cameras/fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "The highest JPEG resolution was."
+            }
+          ],
+          "axis_display": "Image Quality"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": 0.1429,
+          "pos": 1,
+          "neg": 0,
+          "total": 7,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.1429,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-fujifilm-x100v-long-term-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-long-term-review/",
+              "witness": "firsthand",
+              "quote": "I have found myself caught out by the camera’s Wifi gobbling it up while trying to connect and transfer images to my phone."
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-review/",
+              "witness": "unattested",
+              "quote": "Above: In terms of connectivity, there’s a 2.5mm remote jack."
+            },
+            {
+              "source_id": "photoreview-reviews-compact-fixed-lens-cameras-fujifilm-x100v",
+              "url": "https://www.photoreview.com.au/reviews/compact-fixed-lens-cameras/fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "Ver 4.2 (Bluetooth low energy) plus IEEE802.11b/g/n Wi-Fi."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.1538,
+          "pos": 5,
+          "neg": 3,
+          "total": 13,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.1538,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-fujifilm-x100v-long-term-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-long-term-review/",
+              "witness": "firsthand",
+              "quote": "easy to identify what’s missing: stabilisation, a bigger battery and full sealing without accessories, but if they made the camera any larger or heavier, I."
+            },
+            {
+              "source_id": "cameralabs-fujifilm-x100v-review",
+              "url": "https://www.cameralabs.com/fujifilm-x100v-review/",
+              "witness": "firsthand",
+              "quote": "I think Fujifilm made the right choice."
+            },
+            {
+              "source_id": "admiringlight-blog-review-fujifilm-x100v",
+              "url": "https://admiringlight.com/blog/review-fujifilm-x100v/",
+              "witness": "unattested",
+              "quote": "The camera looks like it&#8217;s made of solid brass, but it is actually."
             }
           ],
           "axis_display": "Build Quality"
@@ -16907,180 +16985,6 @@
       "rank": 104
     },
     {
-      "card_id": "nikon-z8",
-      "display_name": "Nikon Z8",
-      "rankable": true,
-      "score": -0.3476,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "sensor_performance",
-          "weight": 3,
-          "s": 0.1,
-          "pos": 4,
-          "neg": 3,
-          "total": 10,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.3,
-          "top_sources": [
-            {
-              "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-              "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-              "witness": "firsthand",
-              "quote": "And I can shoot in low light levels."
-            },
-            {
-              "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
-              "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
-              "witness": "unattested",
-              "quote": "The results are evidence that the Nikon Z 400 f/4.5 VR S is sharp throughout the aperture range."
-            },
-            {
-              "source_id": "rss-amateur-photographer-how-this-photo-showing-ice-officers-separating-a-family-came-2026",
-              "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/",
-              "witness": "unattested",
-              "quote": "The ISO was high 8000."
-            }
-          ],
-          "axis_display": "Sensor Performance"
-        },
-        {
-          "axis": "autofocus_body",
-          "weight": 2,
-          "s": 0.1429,
-          "pos": 2,
-          "neg": 1,
-          "total": 7,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.2857,
-          "top_sources": [
-            {
-              "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
-              "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
-              "witness": "firsthand",
-              "quote": "But that says more about the availability of subjects in my area than it says about the lens."
-            },
-            {
-              "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
-              "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
-              "witness": "firsthand",
-              "quote": "During the trip, I also worked out how to lock focus and exposure, which is as simple as pressing on an area of the screen until an AE/AF Lock icon appears."
-            },
-            {
-              "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-              "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-              "witness": "firsthand",
-              "quote": "There are other areas that I can shoot that I couldn’t shoot in before."
-            }
-          ],
-          "axis_display": "Autofocus"
-        },
-        {
-          "axis": "image_quality",
-          "weight": 2,
-          "s": -0.1667,
-          "pos": 1,
-          "neg": 2,
-          "total": 6,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": -0.3333,
-          "top_sources": [
-            {
-              "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
-              "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
-              "witness": "firsthand",
-              "quote": "The ability to shoot DNG raws is helpful and while, again, the latitude of a full-frame sensor obviously isn’t there in processing, I didn’t feel the need to push anything that hard in editing either."
-            },
-            {
-              "source_id": "rss-adorama-learning-center-42west-skip-price-anxiety-with-this-budget-friendly-camera-2026",
-              "url": "https://www.adorama.com/alc/nikon-budget-friendly-camera/",
-              "witness": "unattested",
-              "quote": "But part of figuring yourself out as a photographer is working out what makes a difference to your pictures, rather than what makes a difference to how you feel in a camera shop."
-            },
-            {
-              "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-              "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-              "witness": "unattested",
-              "quote": "By ISO3200, files are pretty mushy, although more texture can be extracted from the Raw files than out-of-camera Jpegs, which are subjectively bad across the board, even at the lowest sensitivities."
-            }
-          ],
-          "axis_display": "Image Quality"
-        },
-        {
-          "axis": "connectivity",
-          "weight": 1,
-          "s": -1.0,
-          "pos": 0,
-          "neg": 1,
-          "total": 1,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -1.0,
-          "top_sources": [
-            {
-              "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
-              "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
-              "witness": "unattested",
-              "quote": "However, with no audio jack or accessory shoe to plug in an external mic, this basically renders the camera useless for video when the subject matter requires reframing mid-footage."
-            }
-          ],
-          "axis_display": "Connectivity"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.4,
-          "pos": 3,
-          "neg": 1,
-          "total": 5,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4,
-          "top_sources": [
-            {
-              "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
-              "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
-              "witness": "firsthand",
-              "quote": "I definitely felt freer and I made pictures that I probably wouldn’t have done with my regular camera."
-            },
-            {
-              "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
-              "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
-              "witness": "firsthand",
-              "quote": "“If you keep talking to our senior engineers about how the camera’s built upside down I will have you killed.” I said the camera is built wrong."
-            },
-            {
-              "source_id": "rss-amateur-photographer-how-this-photo-showing-ice-officers-separating-a-family-came-2026",
-              "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/",
-              "witness": "unattested",
-              "quote": "The most impactful news photographs may feel spontaneous but are rarely accidental."
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "sensor_performance",
-        "autofocus_body",
-        "image_quality",
-        "connectivity",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): sensor_performance, autofocus_body, image_quality, connectivity, build"
-      ],
-      "rank": 105
-    },
-    {
       "card_id": "panasonic-gh3",
       "display_name": "Panasonic Lumix DMC-GH3",
       "rankable": true,
@@ -17251,7 +17155,7 @@
       "flags": [
         "thin (< 15 claims): sensor_performance, autofocus_body, connectivity, build"
       ],
-      "rank": 106
+      "rank": 105
     },
     {
       "card_id": "sony-a9",
@@ -17392,6 +17296,156 @@
       ],
       "flags": [
         "thin (< 15 claims): sensor_performance, image_quality, build"
+      ],
+      "rank": 106
+    },
+    {
+      "card_id": "nikon-z8",
+      "display_name": "Nikon Z8",
+      "rankable": true,
+      "score": -0.7082,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "sensor_performance",
+          "weight": 3,
+          "s": 0.0909,
+          "pos": 4,
+          "neg": 3,
+          "total": 11,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2727,
+          "top_sources": [
+            {
+              "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+              "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+              "witness": "unattested",
+              "quote": "The same group adds two N-RAW quality levels, Fine and Basic, to Nikon’s High and Normal, plus an anamorphic desqueeze for the live view and playback with seven factors from 1.25x to 2.00x."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.1429,
+          "pos": 2,
+          "neg": 1,
+          "total": 7,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.2857,
+          "top_sources": [
+            {
+              "source_id": "rss-adorama-learning-center-42west-nikon-z-400-f-4-5-vr-s-a-wildlife-photographer-s-1-year-fiel-2026",
+              "url": "https://www.adorama.com/alc/nikon-z-400-f-4-5-vr-s-field-report/",
+              "witness": "firsthand",
+              "quote": "But that says more about the availability of subjects in my area than it says about the lens."
+            },
+            {
+              "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+              "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+              "witness": "firsthand",
+              "quote": "During the trip, I also worked out how to lock focus and exposure, which is as simple as pressing on an area of the screen until an AE/AF Lock icon appears."
+            },
+            {
+              "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+              "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+              "witness": "firsthand",
+              "quote": "There are other areas that I can shoot that I couldn’t shoot in before."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 2,
+          "s": -0.3333,
+          "pos": 1,
+          "neg": 4,
+          "total": 9,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.6667,
+          "top_sources": [
+            {
+              "source_id": "rss-cined-nikon-z8-firmware-mod-nikonfirmwarepatch-adds-8-3k-open-gate-2026",
+              "url": "https://www.cined.com/nikon-z8-firmware-mod-nikonfirmwarepatch-8-3k-open-gate-n-raw-prores-s-log3/",
+              "witness": "unattested",
+              "quote": "The project publishes a color report in English and Chinese, setup notes for Resolve and Final Cut Pro, and an optional 65-point LUT for post."
+            }
+          ],
+          "axis_display": "Image Quality"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 1,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "rss-digital-camera-world-kodak-pixpro-az653-review-a-bridge-camera-that-punches-above-2026",
+              "url": "https://www.digitalcameraworld.com/cameras/action-cameras/kodak-pixpro-az653-review",
+              "witness": "unattested",
+              "quote": "However, with no audio jack or accessory shoe to plug in an external mic, this basically renders the camera useless for video when the subject matter requires reframing mid-footage."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.4,
+          "pos": 3,
+          "neg": 1,
+          "total": 5,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "rss-amateur-photographer-i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-2026",
+              "url": "https://amateurphotographer.com/latest/opinion/i-left-my-proper-camera-at-home-while-i-went-on-vacation-my-iphone-was-all-i-needed/",
+              "witness": "firsthand",
+              "quote": "I definitely felt freer and I made pictures that I probably wouldn’t have done with my regular camera."
+            },
+            {
+              "source_id": "rss-nikon-rumors-an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-2026",
+              "url": "https://nikonrumors.com/2026/08/30/an-interview-with-the-legendary-jay-maisel-a-lifelong-nikon-photographer-1931-2026.aspx/",
+              "witness": "firsthand",
+              "quote": "“If you keep talking to our senior engineers about how the camera’s built upside down I will have you killed.” I said the camera is built wrong."
+            },
+            {
+              "source_id": "rss-amateur-photographer-how-this-photo-showing-ice-officers-separating-a-family-came-2026",
+              "url": "https://amateurphotographer.com/latest/photo-news/how-this-photo-showing-ice-officers-separating-a-family-came-to-define-the-worlds-best-photojournalism-contest/",
+              "witness": "unattested",
+              "quote": "The most impactful news photographs may feel spontaneous but are rarely accidental."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "sensor_performance",
+        "autofocus_body",
+        "image_quality",
+        "connectivity",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): sensor_performance, autofocus_body, image_quality, connectivity, build"
       ],
       "rank": 107
     },

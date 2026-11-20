@@ -5504,6 +5504,142 @@
       "rank": 40
     },
     {
+      "card_id": "canon-28-70mm-f2-8",
+      "display_name": "Canon RF 28-70mm f/2.8 IS STM",
+      "rankable": true,
+      "score": -1.0281,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.0526,
+          "pos": 6,
+          "neg": 5,
+          "total": 19,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.1053,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "witness": "firsthand",
+              "quote": "Ok now for a distant quality test, starting at 28mm f2.8, and due to my limited time with the lens so far, Iâve had to."
+            },
+            {
+              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+              "witness": "firsthand",
+              "quote": "MTF (resolution) at 45 megapixels The Canon RF 28-70mm f/2.8 IS STM has the weirdest resolution characteristic that we&#8217;ve."
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "witness": "unattested",
+              "quote": "And speaking of light, sunlight this time, the lens delivers pleasant and sharp sunbursts at all focal lengths.."
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "build",
+          "weight": 2,
+          "s": -0.4,
+          "pos": 0,
+          "neg": 2,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.8,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
+              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
+              "witness": "unattested",
+              "quote": "dust and moisture-resistant, including a rubber grommet at the mount as well as seals around the rings and switches."
+            },
+            {
+              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+              "witness": "unattested",
+              "quote": "few lenses that could well be."
+            },
+            {
+              "source_id": "photoreview-reviews-mirrorless-lenses-mirrorless-lenses-full-frame-canon-rf-28-7",
+              "url": "https://www.photoreview.com.au/reviews/mirrorless-lenses/mirrorless-lenses-full-frame/canon-rf-28-70mm-f-2-8-is-stm-lens/",
+              "witness": "unattested",
+              "quote": "(Source: Canon.) The RF 28-70mm f/2.8 IS STM lens has similar weather-resistant sealing to Canon’s L-series lenses."
+            }
+          ],
+          "axis_display": "Build Quality"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -0.3333,
+          "pos": 0,
+          "neg": 3,
+          "total": 9,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.3333,
+          "top_sources": [
+            {
+              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+              "witness": "unattested",
+              "quote": "Chromatic Aberrations (CAs) Lateral CAs mostly hover around 1px on average at the image borders."
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
+              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
+              "witness": "unattested",
+              "quote": "the zoom ring from its transport position."
+            },
+            {
+              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
+              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
+              "witness": "unattested",
+              "quote": "In order to operate the lens you need to &#8220;set the lens to the shooting position.&#8221; Appetizers: The Onion Rings Onion rings take."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "build",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): build, chromatic_aberration, handling"
+      ],
+      "rank": 41
+    },
+    {
       "card_id": "nikon-85mm-f1-8",
       "display_name": "Nikon AF Nikkor 85mm f/1.8D",
       "rankable": true,
@@ -5656,7 +5792,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, build, chromatic_aberration, handling"
       ],
-      "rank": 41
+      "rank": 42
     },
     {
       "card_id": "sigma-28-70mm-f2-8",
@@ -5776,137 +5912,6 @@
       "flags": [
         "missing weighted axes: af_performance, handling",
         "thin (< 15 claims): build, chromatic_aberration"
-      ],
-      "rank": 42
-    },
-    {
-      "card_id": "canon-28-70mm-f2-8",
-      "display_name": "Canon RF 28-70mm f/2.8 IS STM",
-      "rankable": true,
-      "score": -1.8333,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 2,
-          "s": 0.0,
-          "pos": 5,
-          "neg": 5,
-          "total": 12,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
-              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
-              "witness": "firsthand",
-              "quote": "Ok now for a distant quality test, starting at 28mm f2.8, and due to my limited time with the lens so far, Iâve had to."
-            },
-            {
-              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
-              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
-              "witness": "firsthand",
-              "quote": "MTF (resolution) at 45 megapixels The Canon RF 28-70mm f/2.8 IS STM has the weirdest resolution characteristic that we&#8217;ve."
-            },
-            {
-              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
-              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
-              "witness": "unattested",
-              "quote": "And speaking of light, sunlight this time, the lens delivers pleasant and sharp sunbursts at all focal lengths.."
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "build",
-          "weight": 2,
-          "s": -0.6667,
-          "pos": 0,
-          "neg": 2,
-          "total": 3,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": -1.3333,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-canon-rf-28-70mm-f2-8-is-stm-review",
-              "url": "https://www.cameralabs.com/canon-rf-28-70mm-f2-8-is-stm-review/",
-              "witness": "unattested",
-              "quote": "dust and moisture-resistant, including a rubber grommet at the mount as well as seals around the rings and switches."
-            },
-            {
-              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
-              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
-              "witness": "unattested",
-              "quote": "few lenses that could well be."
-            }
-          ],
-          "axis_display": "Build Quality"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": -0.5,
-          "pos": 0,
-          "neg": 2,
-          "total": 4,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.5,
-          "top_sources": [
-            {
-              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
-              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
-              "witness": "unattested",
-              "quote": "Chromatic Aberrations (CAs) Lateral CAs mostly hover around 1px on average at the image borders."
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "opticallimits-canon-canon-rf-canon-rf-28-70mm-f-2-8-is-stm-review",
-              "url": "https://opticallimits.com/canon/canon-rf/canon-rf-28-70mm-f-2-8-is-stm-review/",
-              "witness": "unattested",
-              "quote": "the zoom ring from its transport position."
-            },
-            {
-              "source_id": "provideocoalition-review-canon-rf-28-70mm-f2-8-is-stm-lens",
-              "url": "https://www.provideocoalition.com/review-canon-rf-28-70mm-f2-8-is-stm-lens/",
-              "witness": "unattested",
-              "quote": "In order to operate the lens you need to &#8220;set the lens to the shooting position.&#8221; Appetizers: The Onion Rings Onion rings take."
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "optical_performance",
-        "build",
-        "chromatic_aberration",
-        "handling"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): optical_performance, build, chromatic_aberration, handling"
       ],
       "rank": 43
     }
