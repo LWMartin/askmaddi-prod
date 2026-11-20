@@ -21,26 +21,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "refurbished": 344.14,
-        "pre_owned": 350.0,
-        "open_box": 499.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 37,
-      "price_updated_at": "2026-11-20T10:11:59.825837+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-11-08T09:09:41.027858+00:00"
+    "price_updated_at": "2026-11-20T05:20:32.706767+00:00"
   },
   "freshness": {
     "created_at": "2026-11-08T09:09:41.009837+00:00",
-    "last_built": "2026-11-08T09:09:41.009837+00:00",
-    "last_checked": "2026-11-08T09:09:41.009837+00:00",
-    "source_count": 4,
+    "last_built": "2026-11-20T05:20:32.687387+00:00",
+    "last_checked": "2026-11-20T05:20:32.687387+00:00",
+    "source_count": 3,
     "source_types": {
-      "pro": 4
+      "pro": 3
     },
     "build_model": "claude-sonnet-4-5-20250929",
     "build_version": "stage6-v0.1"
@@ -55,7 +49,6 @@
       "chromatic_aberration": "low",
       "coma": "low",
       "bokeh": "low",
-      "filter_thread": "low",
       "dimensions": "low",
       "handling": "low",
       "af_noise": "low"
@@ -76,26 +69,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 21,
-        "neu": 10,
-        "neg": 10,
-        "total": 41,
+        "neu": 9,
+        "neg": 9,
+        "total": 39,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Focus Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -412,10 +389,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.75,
+        "source_count": 3,
+        "polarity_agreement": 1.0,
         "dominant_polarity": "pos",
-        "max_source_share": 0.659,
+        "max_source_share": 0.692,
         "contested": false
       },
       "notes": [],
@@ -433,58 +410,10 @@
         "measurement": null,
         "sentiment": {
           "pos": 1,
-          "neu": 8,
+          "neu": 2,
           "neg": 2,
-          "total": 11,
+          "total": 5,
           "sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "Closest focus distance in manual focus is 0.20m (0.66ft.) with a working distance of only 7cm and a magnification of 1:5.0.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "[0] Auto focus: Yes, all three lenses in this comparison have autofocus.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "(the accuracy of focus on the same subject after repeated focus-acquisition) of this lens was measured 97.8% in Reikan FoCal.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "a series of 40 shots on the well lit and contrasty focus test target but I found that results depended a bit on whether the.",
-              "witness": "firsthand"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "Regarding focus speed: The Sigma focuses in around 0.5 sec from infinity to 0.3m (1:10 magnification) &#8211;.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "only 2% less magnified when I adjusted focus from infinity to 0.3m.",
-              "witness": "firsthand"
-            },
             {
               "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
               "source_type": "reviewer_blog",
@@ -528,63 +457,17 @@
           ]
         },
         "confidence": "low",
-        "convergence": {
-          "source_count": 2,
-          "polarity_agreement": 0.5,
-          "dominant_polarity": "neu",
-          "max_source_share": 0.545,
-          "contested": true
-        },
+        "convergence": null,
         "notes": []
       },
       "video": {
         "measurement": null,
         "sentiment": {
-          "pos": 1,
-          "neu": 6,
+          "pos": 0,
+          "neu": 2,
           "neg": 2,
-          "total": 9,
+          "total": 4,
           "sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "subject is positioned close to the minimum focusing distance of 20cm.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "turning the focus ring which offers no distance or dof scale.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "The focus ring has the usual variable gearing on the Sigmas while the Sony.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "This avoids accidentally moving focus position when handling the lens and is a boon especially once you have established an exact infinity focus.",
-              "witness": "unattested"
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "source_type": "reviewer_blog",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "weight": 0.75,
-              "quote_excerpt": "As you pull focus, you&#8217;ll notice pretty little focus breathing: the image became.",
-              "witness": "unattested"
-            },
             {
               "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
               "source_type": "reviewer_blog",
@@ -620,13 +503,7 @@
           ]
         },
         "confidence": "low",
-        "convergence": {
-          "source_count": 2,
-          "polarity_agreement": 1.0,
-          "dominant_polarity": "neu",
-          "max_source_share": 0.556,
-          "contested": false
-        },
+        "convergence": null,
         "notes": []
       }
     },
@@ -636,26 +513,10 @@
       "axis_type": "lead",
       "sentiment": {
         "pos": 3,
-        "neu": 3,
+        "neu": 1,
         "neg": 1,
-        "total": 7,
+        "total": 5,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Sealing: Yes, all three lenses have a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Aside from its bright f1.4 focal ratio and thorough weather sealing the lens offers some unique.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -700,10 +561,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
+        "source_count": 2,
+        "polarity_agreement": 1.0,
         "dominant_polarity": "pos",
-        "max_source_share": 0.571,
+        "max_source_share": 0.8,
         "contested": false
       },
       "notes": [],
@@ -711,9 +572,9 @@
       "materials": "composite",
       "mount_construction": "composite",
       "face_quote": {
-        "quote_excerpt": "Sealing: Yes, all three lenses have a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction.",
-        "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-        "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/"
+        "quote_excerpt": "The lens is made in Japan and the general impression of build quality is that of a pro-level.",
+        "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+        "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/"
       }
     },
     {
@@ -726,114 +587,10 @@
       "current_body_compatibility": [],
       "sentiment": {
         "pos": 7,
-        "neu": 36,
+        "neu": 23,
         "neg": 0,
-        "total": 43,
+        "total": 30,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "prime lens designed for mirrorless cameras with L-mount or Sony E-mount and corrected for full-frame sensors.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "used via adapter on a Sony E-mount camera.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "For this review I tested the Sigma 20mm f1.4 DG DN Art on the 42MP Sony A7R.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "which (ultra-)wide prime lens is right for your mirrorless Sony or L-mount camera, you&#8217;ve come to the right place!",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "For this comparison I use the Sony FE 20mm f1.8 G (&#8220;Sony&#8221; for short) and Sigma 24mm f1.4 DG DN Art.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The Sony is a 14/12 design, the Sigma 24mm f1.4 DG DN.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "[0] Sigma’s service can change the mount of the lens between Sony’s E-mount and L-mount (at a cost)..",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "And Sigma implemented a fully featured aperture ring: It&#8217;s de-clickable and you can prevent the ring going accidentally from.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Published in: L-mount lenses , Lenses , Sigma lenses , Sony lenses Tagged under: review permalink Recent Posts How to photograph fireworks Sigma FP2 review.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "APO-Lanthar review Nikon Z 70-200mm f2.8 VR S II review Panasonic Lumix TZ300 ZS300 review Canon RF 7-14mm f2.8-3.5L Fisheye review Canon RF 14mm f1.4L.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Lenses 2026 Best Sony lenses 2026 Manufacturers Canon gear Fujifilm gear Nikon gear Olympus gear Panasonic gear Sony gear Accessories About Camera Labs About Gordon.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Website design by Coolgrey X Camera reviews Canon camera reviews Fujifilm camera reviews.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Panasonic lenses Samyang lenses Sigma lenses Sony lenses Tamron lenses Zeiss lenses Best Camera Best mirrorless camera Best DSLR Best point and shoot Best vlogging.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1077,10 +834,10 @@
         ]
       },
       "convergence": {
-        "source_count": 4,
+        "source_count": 3,
         "polarity_agreement": 1.0,
         "dominant_polarity": "neu",
-        "max_source_share": 0.372,
+        "max_source_share": 0.533,
         "contested": false
       },
       "face_quote": {
@@ -1116,34 +873,10 @@
       },
       "sentiment": {
         "pos": 1,
-        "neu": 9,
+        "neu": 6,
         "neg": 2,
-        "total": 12,
+        "total": 9,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Check prices on the Sigma 20mm f1.4.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "f1.4 DG DN Art Price: The Sigma 20mm f1.4 DG DN Art is priced at 999 EUR (incl.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Check prices on the Sigma 20mm f1.4 DG DN Art at B&amp;H , Adorama , WEX UK or Calumet.de .",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1219,16 +952,11 @@
         ]
       },
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
+        "source_count": 3,
+        "polarity_agreement": 0.333,
         "dominant_polarity": "neu",
-        "max_source_share": 0.583,
+        "max_source_share": 0.778,
         "contested": true
-      },
-      "face_quote": {
-        "quote_excerpt": "19% VAT) which makes it the most expensive of their Art f1.4 lenses..",
-        "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
-        "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/"
       }
     },
     {
@@ -1240,18 +968,10 @@
       "siblings": [],
       "sentiment": {
         "pos": 0,
-        "neu": 3,
+        "neu": 2,
         "neg": 1,
-        "total": 4,
+        "total": 3,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "review Canon EOS R8 Mark II review Nikon Z 24-105mm f4-7.1 review Tamron 35-100mm f2.8 Di III review Epson R-D1 retro review Voigtlander 28mm f2.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1279,10 +999,10 @@
         ]
       },
       "convergence": {
-        "source_count": 3,
+        "source_count": 2,
         "polarity_agreement": 1.0,
         "dominant_polarity": "neu",
-        "max_source_share": 0.5,
+        "max_source_share": 0.667,
         "contested": false
       }
     },
@@ -1297,30 +1017,7 @@
         "category_label": "35mm f/1.4 full-frame primes"
       },
       "delta_from_baseline_pct": 0.0,
-      "sentiment": {
-        "pos": 0,
-        "neu": 2,
-        "neg": 0,
-        "total": 2,
-        "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "[0] Weight: 628g (22.2 oz.) plus 57g for the lens hood..",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The Sony is much lighter at 373g + 17g lens hood, the Sigma 24mm f1.4 DG DN Art is 509g + 48g lens hood.",
-            "witness": "unattested"
-          }
-        ]
-      },
+      "sentiment": null,
       "convergence": null
     }
   ],
@@ -1371,18 +1068,10 @@
       "measurement": null,
       "sentiment": {
         "pos": 1,
-        "neu": 4,
+        "neu": 3,
         "neg": 4,
-        "total": 9,
+        "total": 8,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "the front which might lead to vignetting.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1451,11 +1140,11 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
+        "source_count": 2,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neu",
-        "max_source_share": 0.444,
-        "contested": false
+        "max_source_share": 0.5,
+        "contested": true
       },
       "notes": []
     },
@@ -1520,19 +1209,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 2,
+        "pos": 1,
         "neu": 2,
         "neg": 0,
-        "total": 4,
+        "total": 3,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "And its bright f1.4 focal ratio, well controlled coma, and flat field at infinity.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1561,11 +1242,11 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.25,
-        "contested": true
+        "source_count": 3,
+        "polarity_agreement": 0.667,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.333,
+        "contested": false
       },
       "notes": []
     },
@@ -1575,27 +1256,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 3,
-        "neu": 2,
+        "pos": 2,
+        "neu": 1,
         "neg": 0,
-        "total": 5,
+        "total": 3,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The lens offers quite a nice Bokeh for an ultra-wide and.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "DN Art combines this coverage with a bright focal ratio that’s ideal for low-light use and can also deliver shallow depth-of-field effects, especially when the.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1624,85 +1289,12 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
-        "dominant_polarity": "pos",
-        "max_source_share": 0.4,
-        "contested": false
+        "source_count": 2,
+        "polarity_agreement": 0.5,
+        "dominant_polarity": "neu",
+        "max_source_share": 0.667,
+        "contested": true
       },
-      "notes": []
-    },
-    {
-      "axis_id": "filter_thread",
-      "display_name": "Filter Thread",
-      "axis_type": "detail",
-      "measurement": null,
-      "sentiment": {
-        "pos": 1,
-        "neu": 6,
-        "neg": 0,
-        "total": 7,
-        "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "a de-clickable aperture ring, and it can take filters at the front and rear.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "[+] Filter-thread: 82mm on the Sigma 20mm f1.4 DG DN Art, the Sony has 67mm, the Sigma 24mm f1.4 DG.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Both Sigma lenses also have a rear filter holder which is a nice addition as it helps avoid stacking multiple filters at.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "But you need different filters for them: The 20mm Sigma only takes sheet filters cut from plastic film.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "while the 24mm Sigma also takes sturdier rear lens glas filters like those from Haida and has a lever to hold them in place.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "supplies both lenses with a template to cut out sheet filters.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "[+] Above: Rear filter holder of Sigma 24mm f1.4 DG DN Art, Sigma 20mm.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      "confidence": "low",
-      "convergence": null,
       "notes": []
     },
     {
@@ -1711,43 +1303,11 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 2,
-        "neu": 8,
+        "pos": 1,
+        "neu": 5,
         "neg": 0,
-        "total": 10,
+        "total": 6,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "length): 88 x 113mm (3.5 x 4.4in.).",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The lens hood adds 37mm and is 106mm in diameter.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Sigma 24mm f1.4 DG DN Art is 78 x 97mm + 36mm lens hood.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "[++] Accessories: Comes with a well padded pouch with strap and the lens hood is.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1800,10 +1360,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 4,
-        "polarity_agreement": 0.75,
+        "source_count": 3,
+        "polarity_agreement": 0.667,
         "dominant_polarity": "neu",
-        "max_source_share": 0.4,
+        "max_source_share": 0.333,
         "contested": false
       },
       "notes": []
@@ -1816,17 +1376,9 @@
       "sentiment": {
         "pos": 1,
         "neu": 1,
-        "neg": 2,
-        "total": 4,
+        "neg": 1,
+        "total": 3,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "soft pouch and its lens hood has no lock.[+] Aperture ring: Yes, all three lenses in this comparison have a dedicated aperture ring with 1/3.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1854,13 +1406,7 @@
         ]
       },
       "confidence": "low",
-      "convergence": {
-        "source_count": 2,
-        "polarity_agreement": 0.5,
-        "dominant_polarity": "neg",
-        "max_source_share": 0.75,
-        "contested": true
-      },
+      "convergence": null,
       "notes": []
     },
     {
@@ -1871,17 +1417,9 @@
       "sentiment": {
         "pos": 0,
         "neu": 1,
-        "neg": 2,
-        "total": 3,
+        "neg": 1,
+        "total": 2,
         "sources": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "the Sigma is barely audible from the outside or if you record video with the built-in microphone.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1902,11 +1440,11 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
+        "source_count": 2,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neg",
-        "max_source_share": 0.333,
-        "contested": false
+        "max_source_share": 0.5,
+        "contested": true
       },
       "notes": []
     }
@@ -1959,31 +1497,15 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 4 reviewer sources for Sigma 20mm f/1.4 DG HSM Art. Optical performance draws the most discussion: 21 positive, 10 neutral, and 10 negative across 41 sentiment markers.",
+    "consensus_paragraph": "Synthesized from 3 reviewer sources for Sigma 20mm f1.4. Optical performance draws the most discussion: 21 positive, 9 neutral, and 9 negative across 39 sentiment markers.",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
         "pos": 21,
-        "neu": 10,
-        "neg": 10,
-        "total": 41,
+        "neu": 9,
+        "neg": 9,
+        "total": 39,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Focus Focus accuracy and repeatability is critical to consistently produce sharp shots especially with large aperture lenses.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -1991,96 +1513,46 @@
             "weight": 0.75,
             "quote_excerpt": "produce shots with image quality that were impossible at a wide open aperture of f1.4 not long ago.",
             "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "quality Focus accuracy and repeatability is critical to consistently produce sharp shots.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+            "weight": 0.75,
+            "quote_excerpt": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom.",
+            "witness": "unattested"
           }
         ]
       },
       {
         "aspect": "af_performance.stills",
         "pos": 1,
-        "neu": 8,
+        "neu": 2,
         "neg": 2,
-        "total": 11,
+        "total": 5,
         "top_quote_refs": [
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
-            "quote_excerpt": "Closest focus distance in manual focus is 0.20m (0.66ft.) with a working distance of only 7cm and a magnification of 1:5.0.",
-            "witness": "unattested"
+            "quote_excerpt": "Only the occasional misses of the AF (when using phase-detect autofocus on my D810) made me a bit nervous.",
+            "witness": "firsthand"
           },
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
-            "quote_excerpt": "[0] Auto focus: Yes, all three lenses in this comparison have autofocus.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "(the accuracy of focus on the same subject after repeated focus-acquisition) of this lens was measured 97.8% in Reikan FoCal.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      {
-        "aspect": "af_performance.video",
-        "pos": 1,
-        "neu": 6,
-        "neg": 2,
-        "total": 9,
-        "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "subject is positioned close to the minimum focusing distance of 20cm.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "turning the focus ring which offers no distance or dof scale.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The focus ring has the usual variable gearing on the Sigmas while the Sony.",
-            "witness": "unattested"
-          }
-        ]
-      },
-      {
-        "aspect": "build",
-        "pos": 3,
-        "neu": 3,
-        "neg": 1,
-        "total": 7,
-        "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Sealing: Yes, all three lenses have a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Aside from its bright f1.4 focal ratio and thorough weather sealing the lens offers some unique.",
+            "quote_excerpt": "Repeatability (the accuracy of focus on the same subject after repeated focus-acquisition) of.",
             "witness": "unattested"
           },
           {
@@ -2088,7 +1560,73 @@
             "source_type": "reviewer_blog",
             "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
+            "quote_excerpt": "where phase-detect AF did not lock correctly on target than I normally encounter.",
+            "witness": "firsthand"
+          }
+        ]
+      },
+      {
+        "aspect": "af_performance.video",
+        "pos": 0,
+        "neu": 2,
+        "neg": 2,
+        "total": 4,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "With manual focus I was able to get down to.",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "Without this the AF tuning in-camera with my D810 was not enough to focus optimally..",
+            "witness": "firsthand"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The focus ring is 30mm wide and has no slack/play between its.",
+            "witness": "unattested"
+          }
+        ]
+      },
+      {
+        "aspect": "build",
+        "pos": 3,
+        "neu": 1,
+        "neg": 1,
+        "total": 5,
+        "top_quote_refs": [
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
             "quote_excerpt": "Plus its resistance against flare and glare is pretty good which is quite.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The lens is made in Japan and the general impression of build quality is that of a pro-level.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "lens: A high quality metal/plastic construction with nine rounded aperture blades and a tight fitting lens hood.",
             "witness": "unattested"
           }
         ]
@@ -2121,18 +1659,10 @@
       {
         "aspect": "vignetting",
         "pos": 1,
-        "neu": 4,
+        "neu": 3,
         "neg": 4,
-        "total": 9,
+        "total": 8,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "the front which might lead to vignetting.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -2147,6 +1677,14 @@
             "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
             "quote_excerpt": "Still: shooting dim interiors or landscapes in fading light hand-held can.",
+            "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "due to its optical quality and the image stabilization that proved to be very effective to the equivalent of around 3 stops.",
             "witness": "unattested"
           }
         ]
@@ -2186,19 +1724,11 @@
       },
       {
         "aspect": "coma",
-        "pos": 2,
+        "pos": 1,
         "neu": 2,
         "neg": 0,
-        "total": 4,
+        "total": 3,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "And its bright f1.4 focal ratio, well controlled coma, and flat field at infinity.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -2214,32 +1744,24 @@
             "weight": 0.75,
             "quote_excerpt": "length for landscape or architectural work, and the fast f/1.4 aperture makes it a great option for low-light shooting, including astrophotography.",
             "witness": "unattested"
+          },
+          {
+            "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+            "source_type": "reviewer_blog",
+            "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+            "weight": 0.75,
+            "quote_excerpt": "The company says the new 20mm is highly-corrected for sagittal coma flare through the adoption of.",
+            "witness": "unattested"
           }
         ]
       },
       {
         "aspect": "bokeh",
-        "pos": 3,
-        "neu": 2,
+        "pos": 2,
+        "neu": 1,
         "neg": 0,
-        "total": 5,
+        "total": 3,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "The lens offers quite a nice Bokeh for an ultra-wide and.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "DN Art combines this coverage with a bright focal ratio that’s ideal for low-light use and can also deliver shallow depth-of-field effects, especially when the.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -2247,71 +1769,54 @@
             "weight": 0.75,
             "quote_excerpt": "&#8211; although don&#8217;t expect wonders regarding background blur.",
             "witness": "unattested"
-          }
-        ]
-      },
-      {
-        "aspect": "filter_thread",
-        "pos": 1,
-        "neu": 6,
-        "neg": 0,
-        "total": 7,
-        "top_quote_refs": [
+          },
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
             "weight": 0.75,
-            "quote_excerpt": "a de-clickable aperture ring, and it can take filters at the front and rear.",
+            "quote_excerpt": "Sigma HSM autofocus motor should ensure snappy AF performance, and the 9-rounded aperture blades will help render beautiful background bokeh .",
             "witness": "unattested"
           },
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
             "weight": 0.75,
-            "quote_excerpt": "[+] Filter-thread: 82mm on the Sigma 20mm f1.4 DG DN Art, the Sony has 67mm, the Sigma 24mm f1.4 DG.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "Both Sigma lenses also have a rear filter holder which is a nice addition as it helps avoid stacking multiple filters at.",
+            "quote_excerpt": "the better choice for creative shallow depth-of-field effects.",
             "witness": "unattested"
           }
         ]
       },
       {
         "aspect": "dimensions",
-        "pos": 2,
-        "neu": 8,
+        "pos": 1,
+        "neu": 5,
         "neg": 0,
-        "total": 10,
+        "total": 6,
         "top_quote_refs": [
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
-            "quote_excerpt": "length): 88 x 113mm (3.5 x 4.4in.).",
+            "quote_excerpt": "focal length from its acclaimed 24/1.4 Art Sigma gives landscape-, architecture-, and interior-shooters an extra wide coverage on full-frame bodies and still maintains its large.",
             "witness": "unattested"
           },
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
             "weight": 0.75,
-            "quote_excerpt": "The lens hood adds 37mm and is 106mm in diameter.",
+            "quote_excerpt": "in place when mounted: It&#8217;s just a medium-tight fit on the built-in lens hood and can work itself off when it rubs against your clothes..",
             "witness": "unattested"
           },
           {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
+            "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
             "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
+            "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
             "weight": 0.75,
-            "quote_excerpt": "Sigma 24mm f1.4 DG DN Art is 78 x 97mm + 36mm lens hood.",
+            "quote_excerpt": "Considering all EF options with a focal length of 24mm.",
             "witness": "unattested"
           }
         ]
@@ -2320,17 +1825,9 @@
         "aspect": "handling",
         "pos": 1,
         "neu": 1,
-        "neg": 2,
-        "total": 4,
+        "neg": 1,
+        "total": 3,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "soft pouch and its lens hood has no lock.[+] Aperture ring: Yes, all three lenses in this comparison have a dedicated aperture ring with 1/3.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -2346,6 +1843,14 @@
             "weight": 0.75,
             "quote_excerpt": "A slight disadvantage is that the front lens-cap does not arrest.",
             "witness": "unattested"
+          },
+          {
+            "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+            "source_type": "reviewer_blog",
+            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+            "weight": 0.75,
+            "quote_excerpt": "The focus ring is easy to.",
+            "witness": "unattested"
           }
         ]
       },
@@ -2353,17 +1858,9 @@
         "aspect": "af_noise",
         "pos": 0,
         "neu": 1,
-        "neg": 2,
-        "total": 3,
+        "neg": 1,
+        "total": 2,
         "top_quote_refs": [
-          {
-            "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-            "source_type": "reviewer_blog",
-            "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-            "weight": 0.75,
-            "quote_excerpt": "the Sigma is barely audible from the outside or if you record video with the built-in microphone.",
-            "witness": "unattested"
-          },
           {
             "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
             "source_type": "reviewer_blog",
@@ -2385,11 +1882,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 177,
-      "evaluated": 82,
-      "non_evaluative": 95,
+      "examined": 126,
+      "evaluated": 70,
+      "non_evaluative": 56,
       "non_evaluative_breakdown": {
-        "non_claim": 95
+        "non_claim": 56
       },
       "off_axis": 0,
       "ruleset": {
@@ -2397,7 +1894,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "177 examined · 82 evaluated under askmaddi-polarity",
+      "receipt_line": "126 examined · 70 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -2407,18 +1904,10 @@
     "siblings": [],
     "sentiment": {
       "pos": 0,
-      "neu": 3,
+      "neu": 2,
       "neg": 1,
-      "total": 4,
+      "total": 3,
       "sources": [
-        {
-          "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-          "source_type": "reviewer_blog",
-          "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-          "weight": 0.75,
-          "quote_excerpt": "review Canon EOS R8 Mark II review Nikon Z 24-105mm f4-7.1 review Tamron 35-100mm f2.8 Di III review Epson R-D1 retro review Voigtlander 28mm f2.",
-          "witness": "unattested"
-        },
         {
           "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
           "source_type": "reviewer_blog",
@@ -2448,22 +1937,11 @@
   },
   "axis_roles": {
     "computed_by": "axis_roles@1",
-    "most_discussed": "mount_compat",
-    "highest_rated": "optical_performance",
+    "most_discussed": "optical_performance",
+    "highest_rated": "mount_compat",
     "lowest_rated": null
   },
   "sources": [
-    {
-      "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-      "source_type": "pro",
-      "reviewer": "",
-      "platform": "web",
-      "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-      "title": "Sigma 20mm f1.4 DG DN Art review | Cameralabs",
-      "publication_date": "",
-      "ingested_at": "2026-11-08T09:09:41.014239+00:00",
-      "weight": 0.75
-    },
     {
       "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
       "source_type": "pro",
@@ -2472,7 +1950,7 @@
       "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
       "title": "Sigma 20mm f1.4 Art review | Cameralabs",
       "publication_date": "",
-      "ingested_at": "2026-11-08T09:09:41.014249+00:00",
+      "ingested_at": "2026-11-20T05:20:32.690641+00:00",
       "weight": 0.75
     },
     {
@@ -2483,7 +1961,7 @@
       "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
       "title": "Sigma 20mm f/1.4 DG HSM A Canon lens review: Picture-perfect - DXOMARK",
       "publication_date": "",
-      "ingested_at": "2026-11-08T09:09:41.014253+00:00",
+      "ingested_at": "2026-11-20T05:20:32.690650+00:00",
       "weight": 0.75
     },
     {
@@ -2494,17 +1972,17 @@
       "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
       "title": "Sigma 20mm F1.4 DG HSM A Canon mount review: Tempting new addition - DXOMARK",
       "publication_date": "",
-      "ingested_at": "2026-11-08T09:09:41.014256+00:00",
+      "ingested_at": "2026-11-20T05:20:32.690654+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/sigma-20mm-f1-4/",
-    "reddit": "Sigma 20mm f/1.4 DG HSM Art\n\nSynthesized from 4 reviewer sources for Sigma 20mm f/1.4 DG HSM Art. Optical performance draws the most discussion: 21 positive, 10 neutral, and 10 negative across 41 sentiment markers.\n\nI pulled together all 4 reviews in one place: https://askmaddi.com/cards/sigma-20mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Sigma 20mm f/1.4 DG HSM Art**\nSynthesized from 4 reviewer sources for Sigma 20mm f/1.4 DG HSM Art. Optical performance draws the most discussion: 21 positive, 10 neutral, and 10 negative across 41 sentiment markers.\nAll 4 reviews in one place: https://askmaddi.com/cards/sigma-20mm-f1-4/\n_(disclosure: I built this)_",
+    "reddit": "Sigma 20mm f/1.4 DG HSM Art\n\nSynthesized from 3 reviewer sources for Sigma 20mm f1.4. Optical performance draws the most discussion: 21 positive, 9 neutral, and 9 negative across 39 sentiment markers.\n\nI pulled together all 3 reviews in one place: https://askmaddi.com/cards/sigma-20mm-f1-4/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Sigma 20mm f/1.4 DG HSM Art**\nSynthesized from 3 reviewer sources for Sigma 20mm f1.4. Optical performance draws the most discussion: 21 positive, 9 neutral, and 9 negative across 39 sentiment markers.\nAll 3 reviews in one place: https://askmaddi.com/cards/sigma-20mm-f1-4/\n_(disclosure: I built this)_",
     "og": {
       "title": "Sigma 20mm f/1.4 DG HSM Art — Reviewed",
-      "description": "Synthesized from 4 reviewer sources for Sigma 20mm f/1.4 DG HSM Art. Optical performance draws the most discussion: 21 positive, 10 neutral, and 10 negative across 41 sentiment markers.",
+      "description": "Synthesized from 3 reviewer sources for Sigma 20mm f1.4. Optical performance draws the most discussion: 21 positive, 9 neutral, and 9 negative across 39 sentiment markers.",
       "image": null,
       "url": "https://askmaddi.com/cards/sigma-20mm-f1-4/"
     }
