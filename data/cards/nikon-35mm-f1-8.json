@@ -10,40 +10,28 @@
     "category": "lens",
     "subcategory": "prime",
     "year_introduced": null,
-    "image_thumb": "https://i.ebayimg.com/images/g/g44AAeSwp-ZqpI3P/s-l1600.jpg",
-    "image_source": "ebay_listing"
+    "image_thumb": "https://i.ebayimg.com/images/g/46wAAOSwSItjpDwC/s-l1600.jpg",
+    "image_source": "ebay_catalog"
   },
   "pricing": {
     "msrp_usd": 0.0,
-    "current_new_usd": 747,
-    "current_new_source": "adorama_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-nikkor-z-35-mm-f-1-8-s-lens%2Fp%2Fnkz3518",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-nikkor-z-35-mm-f-1-8-s-lens%2Fp%2Fnkz3518",
+    "current_new_usd": 0.0,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 335.0,
-        "refurbished": 448.8,
-        "open_box": 659.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 31,
-      "price_updated_at": "2026-11-20T10:11:19.195888+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-25T03:08:24.416855+00:00",
-    "withdrawn_pin": {
-      "url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-35-mm-f-1-8g-af-s-ed-nikkor-lens%2Fp%2Fnk3518edu",
-      "price": 567,
-      "evidence": "identity re-pointed: reviews 3/3 are the Z 35mm f/1.8 S; listing and new-price pin were the AF-S 35mm f/1.8G ED",
-      "withdrawn_at": "2026-11-18T18:28:15Z"
-    }
+    "price_updated_at": "2026-11-20T00:16:06.016817+00:00"
   },
   "freshness": {
     "created_at": "2026-09-25T03:08:24.410749+00:00",
-    "last_built": "2026-09-25T03:08:24.410749+00:00",
-    "last_checked": "2026-09-25T03:08:24.410749+00:00",
+    "last_built": "2026-11-20T00:16:06.010653+00:00",
+    "last_checked": "2026-11-20T00:16:06.010653+00:00",
     "source_count": 3,
     "source_types": {
       "pro": 3
@@ -117,6 +105,101 @@
         "quote_excerpt": "At f/1.8, the lens delivers good sharpness for portraits and available light work.",
         "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
         "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "Autofocus",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 4,
+          "neg": 0,
+          "total": 4,
+          "sources": [
+            {
+              "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "At 0.42m, magnification reaches 1:10 with 0.27m working distance including lens hood.Autofocus Behavior\n\nFocus speed measures approximately 0.5 seconds from infinity to 0.42m.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "cameralabs-com-nikon-z-35mm-f1-8s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
+              "weight": 0.75,
+              "quote_excerpt": "Testing revealed very good repeatability at 98.5% accuracy over 40 shots with no focus variation from near to infinity distances.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+              "weight": 0.75,
+              "quote_excerpt": "Dust and moisture resistance is integrated at multiple points, with internal focus preventing dust ingestion during focusing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "dpreview-com-reviews-nikon-z-35mm-f1-8-s-review",
+              "source_type": "reviewer_blog",
+              "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
+              "weight": 0.75,
+              "quote_excerpt": "Manual focus operates on a non-linear focus-by-wire system.Sharpness & Optical Performance\n\nMaximum sharpness peaks near f/4 in the center, with optimal cross-frame sharpness occurring between f/5.6-f/8.",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 2,
+          "polarity_agreement": 1.0,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.5,
+          "contested": false
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 0,
+          "neu": 3,
+          "neg": 0,
+          "total": 3,
+          "sources": [
+            {
+              "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "And as expected from a modern lens, the front section of the lens does not rotate when focusing, which.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "There&rsquo;s an autofocus/manual focus switch, and there&rsquo;s the focusing ring.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "photographylife-reviews-nikon-z-35mm-f1-8-s",
+              "source_type": "reviewer_blog",
+              "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
+              "weight": 0.75,
+              "quote_excerpt": "have benefited from a vibration reduction switch (even though it would only control the camera&rsquo;s in-body image stabilization system) and perhaps a focus limiter switch..",
+              "witness": "unattested"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": null,
+        "notes": []
       }
     },
     {
@@ -1351,7 +1434,7 @@
       "url": "https://www.cameralabs.com/nikon-z-35mm-f1-8s-review/",
       "title": "Nikon Z 35mm f1.8S review | Cameralabs",
       "publication_date": "",
-      "ingested_at": "2026-09-25T03:08:24.413116+00:00",
+      "ingested_at": "2026-11-20T00:16:06.013042+00:00",
       "weight": 0.75
     },
     {
@@ -1362,7 +1445,7 @@
       "url": "https://www.dpreview.com/reviews/nikon-z-35mm-f1-8-s-review",
       "title": "Nikon Z 35mm F1.8 S Review | DPReview",
       "publication_date": "",
-      "ingested_at": "2026-09-25T03:08:24.413124+00:00",
+      "ingested_at": "2026-11-20T00:16:06.013050+00:00",
       "weight": 0.75
     },
     {
@@ -1373,7 +1456,7 @@
       "url": "https://photographylife.com/reviews/nikon-z-35mm-f1-8-s",
       "title": "Nikon Z 35mm f/1.8 S Review",
       "publication_date": "",
-      "ingested_at": "2026-09-25T03:08:24.413128+00:00",
+      "ingested_at": "2026-11-20T00:16:06.013054+00:00",
       "weight": 0.75
     }
   ],
