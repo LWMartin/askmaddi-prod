@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-20",
+  "as_of": "2026-11-21",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -65787,8 +65787,8 @@
       "model": "16 35mm f2.8",
       "gtin": "00027242928763",
       "marketplace_ids": {
-        "ebay_epid": "25062552817",
-        "ebay_legacy_item_id": "225861598505",
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "840144895679",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -65798,7 +65798,7 @@
       },
       "identity": {
         "brand": "Sony",
-        "mpn": "SEL1635GM2",
+        "mpn": "",
         "gtin_provenance": {
           "chosen_source": "aspect",
           "conflict": false,
@@ -65812,23 +65812,23 @@
             }
           ]
         },
-        "market_title": "Sony FE 16-35mm f/2.8 GM II Lens SEL1635GM2",
-        "image": "https://i.ebayimg.com/images/g/rWUAAOSwpNRlSrpI/s-l1600.jpg",
+        "market_title": "Sony FE 16 35mm F2.8 GM G Master Lens SEL1635GM Used Once",
+        "image": "https://i.ebayimg.com/images/g/aX4AAeSw4xNq~mrR/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "1964.95",
+          "value": "1165.00",
           "currency": "USD",
-          "as_of": "2026-11-13T04:00:49Z"
+          "as_of": "2026-11-21T04:01:19Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/225861598505?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/840144895679?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-13T15:00:32Z"
+      "resolved_at": "2026-11-21T04:01:19Z"
     },
     "om-system-60mm-f2.8": {
       "contamination_key": "om-system-60mm-f2.8",
@@ -66000,7 +66000,7 @@
       "gtin": "00199284845138",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "158061231057",
+        "ebay_legacy_item_id": "198549959635",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -66009,11 +66009,11 @@
         "ebay_category_id": "179697"
       },
       "identity": {
-        "brand": "hover air",
-        "mpn": "SP06H075",
+        "brand": "HOVERAir",
+        "mpn": "SP06H006",
         "gtin_provenance": {
           "chosen_source": "aspect",
-          "conflict": false,
+          "conflict": true,
           "observations": [
             {
               "source": "aspect",
@@ -66022,25 +66022,38 @@
               "gtin14": "00199284845138",
               "valid": true
             }
-          ]
+          ],
+          "superseded": {
+            "chosen_source": "aspect",
+            "conflict": false,
+            "observations": [
+              {
+                "source": "aspect",
+                "identifier_type": "UPC",
+                "raw": "198715315851",
+                "gtin14": "00198715315851",
+                "valid": true
+              }
+            ]
+          }
         },
-        "market_title": "HOVERAir X1 Pro Max Retail Combo Drone (2 Batteries) 8K Camera  New SEALED",
-        "image": "https://i.ebayimg.com/images/g/G6IAAeSwHCBo~olI/s-l1600.jpg",
+        "market_title": "HOVERAir X1 Pro Max",
+        "image": "https://i.ebayimg.com/images/g/1A4AAeSwdhFqc3np/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "553.27",
+          "value": "664.05",
           "currency": "USD",
-          "as_of": "2026-11-13T04:45:26Z"
+          "as_of": "2026-11-21T04:45:45Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/158061231057?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/198549959635?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BCARycwwqPljzGlXS0aRdHe8ke295S502K7Y86uM%2Bxm8NZD26aMBee21svyqTWAEvcixaVvtAQMmGa5ihcWs0ryyGbkiwSlj9bjV67IXXBvAfA1T9v0vbaH7STzp5%2BnU0aowp7KnGUqnvfzi9IZga6GWsmSsZaUMT%2FtFUdxd4qIFSHW0kw28IZ%2FZ4ht2WHoP8%3D",
         "amazon_asin": null
       },
       "needs_review": true,
       "source": "resolved",
       "minted_needs_review": false,
-      "resolved_at": "2026-11-13T15:01:18Z"
+      "resolved_at": "2026-11-21T04:45:45Z"
     },
     "profoto-prohead-plus-flash-head": {
       "contamination_key": "profoto-prohead-plus-flash-head",
@@ -67771,6 +67784,227 @@
       "source": "resolved",
       "minted_needs_review": false,
       "resolved_at": "2026-11-20T15:48:56Z"
+    },
+    "manfrotto-gimbal-220": {
+      "contamination_key": "manfrotto-gimbal-220",
+      "vendor": "Manfrotto",
+      "model": "gimbal 220",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "267561292221",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "172511"
+      },
+      "identity": {
+        "brand": "MANFROTTO",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "MANFROTTO  3 Axis Stabilizer Gimbal MVG220",
+        "image": "https://i.ebayimg.com/images/g/QegAAeSwcsxpe7El/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "89.99",
+          "currency": "USD",
+          "as_of": "2026-11-21T06:00:15Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/267561292221?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-21T06:00:15Z"
+    },
+    "nikon-10-24mm-f3-5": {
+      "contamination_key": "nikon-10-24mm-f3-5",
+      "vendor": "Nikon",
+      "model": "10 24mm f3.5",
+      "gtin": "00018208021819",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198800647710",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "JAA804DA",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "018208021819",
+              "gtin14": "00018208021819",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Nikon AF-S DX NIKKOR 10-24mm f/3.5-4.5G ED Zoom Lens",
+        "image": "https://i.ebayimg.com/images/g/lEEAAeSwcuNq-2LP/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "350.00",
+          "currency": "USD",
+          "as_of": "2026-11-21T04:01:45Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198800647710?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-21T04:01:45Z"
+    },
+    "godox-mf12-macro-flash": {
+      "contamination_key": "godox-mf12-macro-flash",
+      "vendor": "Godox",
+      "model": "mf12 macro flash",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "236834679455",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Godox",
+        "mpn": "MF12",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Godox MF12 Macro Flash",
+        "image": "https://i.ebayimg.com/images/g/hKIAAeSwmmlqFxwQ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "109.00",
+          "currency": "USD",
+          "as_of": "2026-11-21T04:02:04Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/236834679455?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-21T04:02:04Z"
+    },
+    "vaonis-hestia-telescope": {
+      "contamination_key": "vaonis-hestia-telescope",
+      "vendor": "Vaonis",
+      "model": "hestia telescope",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "128084725487",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "74927"
+      },
+      "identity": {
+        "brand": "Vaonis Hestia",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "(NEW) Vaonis Hestia HE30-E (AC035) Smartphone Based Telescope and Tripod Set",
+        "image": "https://i.ebayimg.com/images/g/Gb4AAeSwZBRqrD4~/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "220.00",
+          "currency": "USD",
+          "as_of": "2026-11-21T04:02:43Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/128084725487?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-21T04:02:43Z"
+    },
+    "olympus-12-45mm-f4-0": {
+      "contamination_key": "olympus-12-45mm-f4-0",
+      "vendor": "Olympus",
+      "model": "12 45mm f4.0",
+      "gtin": "04545350053031",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377660878957",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Olympus",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "4545350053031",
+              "gtin14": "04545350053031",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Olympus M.Zuiko Digital ED 12-45mm F/4.0 PRO #230",
+        "image": "https://i.ebayimg.com/images/g/CcMAAeSwbWFq~~tx/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "352.00",
+          "currency": "USD",
+          "as_of": "2026-11-21T04:03:31Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377660878957?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-21T04:03:31Z"
     }
   },
   "substrate": [

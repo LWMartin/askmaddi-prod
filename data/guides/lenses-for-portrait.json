@@ -48,6 +48,147 @@
   "profile_notes": "Portrait glass — fast short-tele primes and portrait zooms. GATE: max_aperture <= 2.8 (a fast aperture IS the portrait-lens requirement — subject separation and low-light rendering; f/2.8-or-faster is the honest floor) AND focal_length_mm >= 50 (the classic portrait focal range is 50-135mm; the floor keeps out wide/standard fast zooms and wide primes that would otherwise win on bokeh mentions — a validation run without it put a 16-50 zoom at #1). CAVEAT (documented, lenses-for-wildlife): specs.py resolves focal as a first-number, so a wide-to-normal zoom like 24-70 stores 24 and is EXCLUDED (acceptable — 'best portrait lens' intent wants dedicated short-tele glass, not standard zooms; the honest-door still routes an unresolved focal to pending_backfill, not exclusion). The resulting roster is clean short-tele: 50/85/100/135 primes + 70-200-class tele zooms. CRUX at 3: bokeh — background rendering / subject isolation is to a portrait lens what coma is to an astro lens, the defining criterion. SECONDARY at 2: optical_performance (portraits want sharp-where-it-counts, eyes tack-sharp) and color_rendition (skin-tone rendering). SUPPORTING at 1: chromatic_aberration (purple fringing on high-contrast edges like backlit hair is a classic fast-prime failure), af_performance (eye-AF speed on the lens side), handling (weight/balance for sessions). Deliberately UNWEIGHTED: coma, vignetting, distortion, filter_thread, build — real but not portrait differentiators. gear_class excludes novelty only. DISTINCT-FINGERPRINT CHECK: differs from street lenses (optical 3, focal<=50 gate — the OPPOSITE focal band) and astro lenses (coma 3) by leading with bokeh and gating the long/fast end. Ratified by Lee 2026-09-15.",
   "ranked": [
     {
+      "card_id": "leica-100mm-f2-8",
+      "display_name": "Leica APO-Macro-Elmarit-R 100mm f/2.8",
+      "rankable": true,
+      "score": 8.1667,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "bokeh",
+          "weight": 3,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 3.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-mathphotographer-leica-apo-macro-elmarit-r-100-f28-on-fuji-gfx-100s-sharp-sharper-sharpe",
+              "url": "https://www.youtube.com/watch?v=c-_xvYIiEV8",
+              "witness": "firsthand",
+              "quote": "for quite some time because i was so fascinated by the level of detail and sharpness i created here by this image stacking and focus stacking procedure and this is absolutely fascinating what we get here so a 30 year old…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.75,
+          "pos": 3,
+          "neg": 0,
+          "total": 4,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 1.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-lukas-van-der-lende-unboxing-the-best-macro-ive-used-leica-apo-macro-elmarit-r-100mm",
+              "url": "https://www.youtube.com/watch?v=Prfj-oac_eA",
+              "witness": "firsthand",
+              "quote": "but if you're doing portraits or anything it works I've had a 100 Macro for every single camera that I've owned from my nikons to from Nikon Sony Canon now Leica and this is by far the sharpest and the best performing ma…"
+            },
+            {
+              "source_id": "youtube-mathphotographer-leica-apo-macro-elmarit-r-100-f28-on-fuji-gfx-100s-sharp-sharper-sharpe",
+              "url": "https://www.youtube.com/watch?v=c-_xvYIiEV8",
+              "witness": "firsthand",
+              "quote": "with this lens on the fuji gfx 100s and the right technology we can generate one of the sharpest images you've ever seen in your life so let's kick this off [Music] in order to get much more structure for testing the sha…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 2,
+          "s": 1.0,
+          "pos": 2,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-alec-langton-1800-for-a-33-year-old-lens-leica-100mm-apo-macro-elmarit-r-review",
+              "url": "https://www.youtube.com/watch?v=MenzitlESLE",
+              "witness": "firsthand",
+              "quote": "to test the macro functionality on this lens with but i can say that regardless of what i was shooting macro in this lens makes me feel good i shot portrait 400 specifically with this lens because i've been told by multi…"
+            }
+          ],
+          "axis_display": "Color Rendition"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-mathphotographer-leica-apo-macro-elmarit-r-100-f28-on-fuji-gfx-100s-sharp-sharper-sharpe",
+              "url": "https://www.youtube.com/watch?v=c-_xvYIiEV8",
+              "witness": "firsthand",
+              "quote": "and i've ever seen and looking at that green leaf here look how much structure and detail you get here and it looks very natural it's almost a microscopic structure you can generate with that 30 year old leica lens mount…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.6667,
+          "pos": 2,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-alec-langton-1800-for-a-33-year-old-lens-leica-100mm-apo-macro-elmarit-r-review",
+              "url": "https://www.youtube.com/watch?v=MenzitlESLE",
+              "witness": "firsthand",
+              "quote": "would i recommend buying it well if you're a portrait photographer with a lot of extra cash to spend on some different looks than maybe i mean this lens is adaptable to a variety of different modern digital cameras which…"
+            },
+            {
+              "source_id": "youtube-mathphotographer-leica-apo-macro-elmarit-r-100-f28-on-fuji-gfx-100s-sharp-sharper-sharpe",
+              "url": "https://www.youtube.com/watch?v=c-_xvYIiEV8",
+              "witness": "firsthand",
+              "quote": "very wide actually focus ring and that focus ring is special so i'm starting here at infinity and then i start to rotate and what you see here it's rotating by basically 360 degrees and then you can further rotate and yo…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "bokeh",
+        "optical_performance",
+        "color_rendition",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): bokeh, optical_performance, color_rendition, chromatic_aberration, handling"
+      ],
+      "rank": 1
+    },
+    {
       "card_id": "nikon-16-50mm-f2-8",
       "display_name": "Nikon NIKKOR Z DX 16-50mm f/2.8 VR",
       "rankable": true,
@@ -219,7 +360,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition, chromatic_aberration"
       ],
-      "rank": 1
+      "rank": 2
     },
     {
       "card_id": "leica-50mm-f2",
@@ -404,7 +545,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): chromatic_aberration"
       ],
-      "rank": 2
+      "rank": 3
     },
     {
       "card_id": "sony-100mm-f2-8",
@@ -589,7 +730,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 3
+      "rank": 4
     },
     {
       "card_id": "canon-70-200mm-f2-8",
@@ -762,7 +903,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): chromatic_aberration"
       ],
-      "rank": 4
+      "rank": 5
     },
     {
       "card_id": "sigma-85mm-f1-2",
@@ -948,7 +1089,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition, chromatic_aberration"
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "card_id": "nikon-120-300mm-f2-8",
@@ -1123,7 +1264,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition, chromatic_aberration"
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "card_id": "canon-50mm-f2-5",
@@ -1269,7 +1410,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition, chromatic_aberration, handling"
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "card_id": "canon-135mm-f2-0",
@@ -1409,180 +1550,6 @@
               "url": "https://www.youtube.com/watch?v=Gt3yWrU7r0o",
               "witness": "firsthand",
               "quote": "lens most of us are looking at the 50 mil 1.2 the 85 and this 1 3 5 as our go to portrait lens now the 1.2 aperture offered on the 50mm and the 85 at first appear very attractive because obviously the wider the aperture …"
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "color_rendition",
-        "chromatic_aberration"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): color_rendition, chromatic_aberration"
-      ],
-      "rank": 8
-    },
-    {
-      "card_id": "canon-85mm-f1-2",
-      "display_name": "Canon EF 85mm f/1.2L II USM",
-      "rankable": true,
-      "score": 4.11,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "bokeh",
-          "weight": 3,
-          "s": 0.3846,
-          "pos": 26,
-          "neg": 11,
-          "total": 39,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 1.1538,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-vs-ef-85mm-f12-l-lens-challenge",
-              "url": "https://www.youtube.com/watch?v=Q3NhhtHaI50",
-              "witness": "firsthand",
-              "quote": "you buy the defocus smoothing version has some of the most stunningly beautiful bcka that I've ever seen in my life I'm tempted to buy one of them just for the quality of their bcka but I could never spend £3,000 on a ca…"
-            },
-            {
-              "source_id": "youtube-james-reader-canon-rf-85mm-f2-review-for-portraits-vs-rf-85mm-f12-free-raw-files",
-              "url": "https://www.youtube.com/watch?v=E_OY7Mo5Afs",
-              "witness": "firsthand",
-              "quote": "although I might remember this time yeah these are really good light's perfect [Music] shooting these kinds of portraits at 85 millimeter I like to find little pockets of foreground detail to help me frame the subject wh…"
-            },
-            {
-              "source_id": "youtube-jared-polin-watch-this-before-buying-the-2799-canon-85mm-f12-rf-lens-review",
-              "url": "https://www.youtube.com/watch?v=h54GcLJezMM",
-              "witness": "firsthand",
-              "quote": "is in perfect focus his mouth is perfectly focused the ears fade out and the hair fades out the colors and the tones are sweet really love this lens I love the RF glass and as I said before I can't wait for Canon to put …"
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "optical_performance",
-          "weight": 2,
-          "s": 0.2281,
-          "pos": 32,
-          "neg": 19,
-          "total": 57,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.4561,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f12-l-usm-lens-review-with-samples",
-              "url": "https://www.youtube.com/watch?v=BMl-qT2MkHk",
-              "witness": "firsthand",
-              "quote": "have a 45 map EOS R5 on order but I only had this lens for testing for a few days and unfortunately it didn't arrive in time well anyway in the middle of the image straight from f1.2 we see spectacular image quality with…"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
-              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
-              "witness": "firsthand",
-              "quote": "1.2 wide open to 1.2 and while it is technically a tad slower than the RF lens here I'd say it makes little to no practical difference for this kind of work we're talking Split Second differences and if you need to lens …"
-            },
-            {
-              "source_id": "youtube-james-reader-canon-rf-85mm-f2-review-for-portraits-vs-rf-85mm-f12-free-raw-files",
-              "url": "https://www.youtube.com/watch?v=E_OY7Mo5Afs",
-              "witness": "firsthand",
-              "quote": "light portraits wide open throughout to get a feel for the lenses performance and after seeing the first images I was immediately impressed with the results from this lens more than enough really pop and the sharpness wa…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 2,
-          "s": 1.0,
-          "pos": 3,
-          "neg": 0,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 2.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-85mm-f12-l-ii-usm-review",
-              "url": "https://www.youtube.com/watch?v=ePywY1eAspI",
-              "witness": "unattested",
-              "quote": "Finally the colors and bokeh are what this Canon is all about."
-            }
-          ],
-          "axis_display": "Color Rendition"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 0.1667,
-          "pos": 3,
-          "neg": 2,
-          "total": 6,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1667,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-85mm-f12-usm-ii-l-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=Hc-VafhLu6M",
-              "witness": "firsthand",
-              "quote": "with color fringing But the lens is very impressively sharp it's a great performance let's take a look at vignetting and Distortion they're not really an issue on apsc cameras so we'll take a look at the full frame resul…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-rf-85mm-f12-l-usm-lens-review-with-samples",
-              "url": "https://www.youtube.com/watch?v=BMl-qT2MkHk",
-              "witness": "firsthand",
-              "quote": "can look a little jumbled and we also witness the typical cat siai shaped tobacco balls in the corners of your images and related to Baka is longitudinal chromatic aberration at f1.2 Baka highlights see a little color fr…"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
-              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
-              "witness": "firsthand",
-              "quote": "I'd say that closing the aperture on the EF lens to F2 has reduced some of the colored fringing from high contrast areas but the RF version on the right has started strong at f2 with the result that's a fraction crisper …"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.3333,
-          "pos": 12,
-          "neg": 5,
-          "total": 21,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-chris-oggy-the-holy-grail-of-portrait-lenses-canon-rf-85mm-f12-review",
-              "url": "https://www.youtube.com/watch?v=HLH_nIcutbQ",
-              "witness": "firsthand",
-              "quote": "was impressed because I looked at the photos I was like oh this is great like I'm glad that I stuck with the 85 and used it because um I think it made me stretch my creativity as far as what kind of shots I could get I h…"
-            },
-            {
-              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
-              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
-              "witness": "firsthand",
-              "quote": "Ibis alone here and I'd say it actually looks roughly as good as the previous example aided by the sheer heft of the lens making it less wobbly to hand hold to start with and here's a comparison when filming video with t…"
-            },
-            {
-              "source_id": "youtube-james-reader-canon-rf-85mm-f2-review-for-portraits-vs-rf-85mm-f12-free-raw-files",
-              "url": "https://www.youtube.com/watch?v=E_OY7Mo5Afs",
-              "witness": "firsthand",
-              "quote": "left and the broker looks really nice and smooth here with great colors and contrast in the image so this is where I had my first issue with auto focus with this lens I like to include little bits of foreground interest …"
             }
           ],
           "axis_display": "Handling"
@@ -1952,6 +1919,181 @@
       "rank": 11
     },
     {
+      "card_id": "canon-85mm-f1-2",
+      "display_name": "Canon EF 85mm f/1.2L II USM",
+      "rankable": true,
+      "score": 3.7636,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "bokeh",
+          "weight": 3,
+          "s": 0.1667,
+          "pos": 13,
+          "neg": 9,
+          "total": 24,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-vs-ef-85mm-f12-l-lens-challenge",
+              "url": "https://www.youtube.com/watch?v=Q3NhhtHaI50",
+              "witness": "firsthand",
+              "quote": "you buy the defocus smoothing version has some of the most stunningly beautiful bcka that I've ever seen in my life I'm tempted to buy one of them just for the quality of their bcka but I could never spend £3,000 on a ca…"
+            },
+            {
+              "source_id": "youtube-media-unlocked-canon-85mm-f12l-vs-f14l-vs-f18-who-wins",
+              "url": "https://www.youtube.com/watch?v=zGa9Er1JoWo",
+              "witness": "firsthand",
+              "quote": "kind of as a street lens because it was compact it fit my camera well and it performed beautifully as a street lens the 1.2 i used as i wanted to explore depth of field and i wanted to explore bokeh and i wanted to reall…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-85mm-f12-usm-ii-l-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=Hc-VafhLu6M",
+              "witness": "unattested",
+              "quote": "its extremely impressive maximum aperture of f1.2 that means it lets in twice as much light as an f1.8 lens and can give you backgrounds which are twice as blurry the blur potential of this lens is Extreme which is one o…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.25,
+          "pos": 20,
+          "neg": 11,
+          "total": 36,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.5,
+          "top_sources": [
+            {
+              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
+              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
+              "witness": "firsthand",
+              "quote": "1.2 wide open to 1.2 and while it is technically a tad slower than the RF lens here I'd say it makes little to no practical difference for this kind of work we're talking Split Second differences and if you need to lens …"
+            },
+            {
+              "source_id": "youtube-jessica-whitaker-canon-ef-ii-85mm-f12-lens-review-with-sample-photos",
+              "url": "https://www.youtube.com/watch?v=V90a7HilOGA",
+              "witness": "firsthand",
+              "quote": "if you're shooting wide open on 1.2 or 1.4 even 1.8 at the end of this video i will be sharing sample photos with this lens and there you'll be able to see what i mean even more about full body shots one more thing about…"
+            },
+            {
+              "source_id": "youtube-media-unlocked-canon-85mm-f12l-vs-f14l-vs-f18-who-wins",
+              "url": "https://www.youtube.com/watch?v=zGa9Er1JoWo",
+              "witness": "firsthand",
+              "quote": "what that means is that if i'm using this lens i've got a lot of capability that's being left unused but it is sharp as a tack oh i love that pose that is absolutely perfect so let's start off by just looking at the thre…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 2,
+          "s": 1.0,
+          "pos": 3,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-85mm-f12-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=ePywY1eAspI",
+              "witness": "unattested",
+              "quote": "Finally the colors and bokeh are what this Canon is all about."
+            }
+          ],
+          "axis_display": "Color Rendition"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.4,
+          "pos": 3,
+          "neg": 1,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-85mm-f12-usm-ii-l-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=Hc-VafhLu6M",
+              "witness": "firsthand",
+              "quote": "with color fringing But the lens is very impressively sharp it's a great performance let's take a look at vignetting and Distortion they're not really an issue on apsc cameras so we'll take a look at the full frame resul…"
+            },
+            {
+              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
+              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
+              "witness": "firsthand",
+              "quote": "I'd say that closing the aperture on the EF lens to F2 has reduced some of the colored fringing from high contrast areas but the RF version on the right has started strong at f2 with the result that's a fraction crisper …"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-rf-vs-ef-85mm-f12-l-lens-challenge",
+              "url": "https://www.youtube.com/watch?v=Q3NhhtHaI50",
+              "witness": "unattested",
+              "quote": "related to Baka is longitudinal chromatic aberration that's another area where the newer RF lens carries a huge Advantage here you can see a huge amount of color fringing on Baka highlights with the older lens that is mo…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3636,
+          "pos": 6,
+          "neg": 2,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.3636,
+          "top_sources": [
+            {
+              "source_id": "youtube-gordon-laing-canon-ef-85mm-f12l-vs-rf-85-f2-review-bokeh-monster-for-the-same-money",
+              "url": "https://www.youtube.com/watch?v=svDRlg1CRC4",
+              "witness": "firsthand",
+              "quote": "Ibis alone here and I'd say it actually looks roughly as good as the previous example aided by the sheer heft of the lens making it less wobbly to hand hold to start with and here's a comparison when filming video with t…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-85mm-f12-usm-ii-l-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=Hc-VafhLu6M",
+              "witness": "unattested",
+              "quote": "weighty in your hand the front element is absolutely beautiful you will definitely want to get a highquality UV filter to protected the focus mechanism on this lens is pretty unusual it's electronically coupled to the ca…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-l-lens-challenge-85mm-f12-l-vs-85mm-f18",
+              "url": "https://www.youtube.com/watch?v=M23pp6gRzCg",
+              "witness": "unattested",
+              "quote": "the focus ring is amazingly smooth and it has a very long travel to it so precise focusing is very easy indeed the cheaper f1.8 lens is also built nicely although more modestly it's made out of Cheaper plastic and it's m…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "color_rendition",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): color_rendition, chromatic_aberration, handling"
+      ],
+      "rank": 12
+    },
+    {
       "card_id": "olympus-75mm-f1-8",
       "display_name": "Olympus M.Zuiko Digital ED 75mm f/1.8",
       "rankable": true,
@@ -2135,7 +2277,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition, chromatic_aberration"
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "card_id": "olympus-50mm-f1-8",
@@ -2296,7 +2438,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): chromatic_aberration"
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "card_id": "fujifilm-63mm-f2-8",
@@ -2478,7 +2620,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition, chromatic_aberration, handling"
       ],
-      "rank": 14
+      "rank": 15
     },
     {
       "card_id": "fujifilm-50-140mm-f2-8",
@@ -2642,180 +2784,6 @@
               "url": "https://www.youtube.com/watch?v=VZHmK-m5Y5c",
               "witness": "firsthand",
               "quote": "few quirks of the lens let's jump in and let's take a look so first of all while this is in many ways a beautifully built lens there are a few little annoyances into it that i do want to highlight before we deal with som…"
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "color_rendition",
-        "chromatic_aberration"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): color_rendition, chromatic_aberration"
-      ],
-      "rank": 15
-    },
-    {
-      "card_id": "leica-100mm-f2-8",
-      "display_name": "Leica APO-Macro-Elmarit-R 100mm f/2.8",
-      "rankable": true,
-      "score": 3.0749,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "bokeh",
-          "weight": 3,
-          "s": 0.1111,
-          "pos": 16,
-          "neg": 12,
-          "total": 36,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-gordon-laing-lumix-s-100mm-f28-macro-review-in-depth",
-              "url": "https://www.youtube.com/watch?v=WnIsSbrwEQM",
-              "witness": "firsthand",
-              "quote": "where there's still some quite nice blurring beyond that surface plane here I've stuck with f8 to capture more of the fine details between the pages of this book although you may prefer the look of this version taken at …"
-            },
-            {
-              "source_id": "youtube-reddotforum-red-dot-forum-camera-talk-leica-apo-macro-elmarit-sl-100mm-f28",
-              "url": "https://www.youtube.com/watch?v=k9hOXdfwYJ8",
-              "witness": "firsthand",
-              "quote": "And what I'm going to do now is I am going to shoot it wide open because I want to see what our bokeh looks like."
-            },
-            {
-              "source_id": "youtube-geeky-nerdy-techy-panasonic-leica-35-100mm-f28-zoom-lens-tested-on-lumix-g9iigh7",
-              "url": "https://www.youtube.com/watch?v=pFuuMFbRw3c",
-              "witness": "unattested",
-              "quote": "In photos, it shines for portraits and head shots, delivering excellent compression and smooth bokeh, which in turn flatters the subject's features without distortion."
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "optical_performance",
-          "weight": 2,
-          "s": 0.4026,
-          "pos": 46,
-          "neg": 15,
-          "total": 77,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.8052,
-          "top_sources": [
-            {
-              "source_id": "youtube-gordon-laing-lumix-s-100mm-f28-macro-review-in-depth",
-              "url": "https://www.youtube.com/watch?v=WnIsSbrwEQM",
-              "witness": "firsthand",
-              "quote": "8 as I close the aperture there is some benefit to the ultimate sharpness and lifting vignetting in the corners but I was impressed by the quality f2.8 from the closest focusing distance here now for some more shots at t…"
-            },
-            {
-              "source_id": "youtube-geeky-nerdy-techy-panasonic-leica-35-100mm-f28-zoom-lens-tested-on-lumix-g9iigh7",
-              "url": "https://www.youtube.com/watch?v=pFuuMFbRw3c",
-              "witness": "unattested",
-              "quote": "Sharpness is excellent in real world tests."
-            },
-            {
-              "source_id": "youtube-reddotforum-red-dot-forum-camera-talk-leica-apo-macro-elmarit-sl-100mm-f28",
-              "url": "https://www.youtube.com/watch?v=k9hOXdfwYJ8",
-              "witness": "unattested",
-              "quote": "That was on the original SL 601 with 24 whole megapixels, >> which is still pretty killer, >> but a fraction of the resolution."
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 2,
-          "s": 0.6154,
-          "pos": 9,
-          "neg": 1,
-          "total": 13,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.2308,
-          "top_sources": [
-            {
-              "source_id": "youtube-geeky-nerdy-techy-panasonic-leica-35-100mm-f28-zoom-lens-tested-on-lumix-g9iigh7",
-              "url": "https://www.youtube.com/watch?v=pFuuMFbRw3c",
-              "witness": "unattested",
-              "quote": "As you can see, both images are nice and detailed, and the colors and contrast pop."
-            },
-            {
-              "source_id": "youtube-reddotforum-red-dot-forum-camera-talk-leica-apo-macro-elmarit-sl-100mm-f28",
-              "url": "https://www.youtube.com/watch?v=k9hOXdfwYJ8",
-              "witness": "unattested",
-              "quote": "[laughter] So, if you look at the 100R, it is a more yellowy green rendering >> on the left here >> on the left, >> uh, than the neutral SL lens on the right."
-            }
-          ],
-          "axis_display": "Color Rendition"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 0.1818,
-          "pos": 3,
-          "neg": 1,
-          "total": 11,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1818,
-          "top_sources": [
-            {
-              "source_id": "youtube-geeky-nerdy-techy-panasonic-leica-35-100mm-f28-zoom-lens-tested-on-lumix-g9iigh7",
-              "url": "https://www.youtube.com/watch?v=pFuuMFbRw3c",
-              "witness": "firsthand",
-              "quote": "One of the things I noticed immediately was the lack of chromatic aberration, which is the green or purple fringing you'd usually find in some of the out of focus areas in high contrast situations especially."
-            },
-            {
-              "source_id": "youtube-reddotforum-red-dot-forum-camera-talk-leica-apo-macro-elmarit-sl-100mm-f28",
-              "url": "https://www.youtube.com/watch?v=k9hOXdfwYJ8",
-              "witness": "unattested",
-              "quote": "But you might notice that there's a slight yellowy green tint on the R lens."
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.5238,
-          "pos": 14,
-          "neg": 3,
-          "total": 21,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.5238,
-          "top_sources": [
-            {
-              "source_id": "youtube-reddotforum-red-dot-forum-camera-talk-leica-apo-macro-elmarit-sl-100mm-f28",
-              "url": "https://www.youtube.com/watch?v=k9hOXdfwYJ8",
-              "witness": "firsthand",
-              "quote": "So it is significantly more flexible without any compromise which whereas the Apple R yes it's a great lens and we'll get into that more but and we can pop it on the art after here and you can see it on my SL3P here."
-            },
-            {
-              "source_id": "youtube-geeky-nerdy-techy-panasonic-leica-35-100mm-f28-zoom-lens-tested-on-lumix-g9iigh7",
-              "url": "https://www.youtube.com/watch?v=pFuuMFbRw3c",
-              "witness": "unattested",
-              "quote": "The zoom ring on this is huge and it's easy to handle thanks to its nice rubberized grip."
-            },
-            {
-              "source_id": "youtube-gordon-laing-lumix-s-100mm-f28-macro-review-in-depth",
-              "url": "https://www.youtube.com/watch?v=WnIsSbrwEQM",
-              "witness": "unattested",
-              "quote": "thread is the same across them all twoo in terms of designs and controls it's pretty simple matching the other primes in this series there's a generous and smooth manual focusing ring and a pair of switches including a f…"
             }
           ],
           "axis_display": "Handling"
@@ -5099,188 +5067,6 @@
       "rank": 31
     },
     {
-      "card_id": "nikon-50mm-f1-8",
-      "display_name": "Nikon AF Nikkor 50mm f/1.8D",
-      "rankable": true,
-      "score": 1.6221,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "bokeh",
-          "weight": 3,
-          "s": 0.1622,
-          "pos": 16,
-          "neg": 10,
-          "total": 37,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.4865,
-          "top_sources": [
-            {
-              "source_id": "youtube-brady-hommel-sharpest-lens-ive-owned-nikon-z-50mm-f18-review-with-sample-images",
-              "url": "https://www.youtube.com/watch?v=Kf2bnAmx0y0",
-              "witness": "firsthand",
-              "quote": "blurs the background a little more and then as you get closer to the camera it'll even blur it more and this is why I feel the 35 millimeter would have been a little better for my needs I have this camera right now like …"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-nikkor-z-50mm-f18-s-review-is-the-og-lens-still-the-best",
-              "url": "https://www.youtube.com/watch?v=wRLpxFGmQ0I",
-              "witness": "firsthand",
-              "quote": "Now, when I compared things like the uh the specular highlights, bokeh balls, if you want to call them that, I found that the f1.4 four lens has more pleasing roundness or geometry to them."
-            },
-            {
-              "source_id": "youtube-kieran-hayes-photography-nikon-z-50mm-f18-review-i-did-something-really-stupid-again",
-              "url": "https://www.youtube.com/watch?v=bT2wke6N5nE",
-              "witness": "firsthand",
-              "quote": "different apertures too as well of course so let's have a look at some test chart images of dbby here again and see how well this lens performs so here's our photograph of dubby shot at f1.8 with the focus on his closest…"
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "optical_performance",
-          "weight": 2,
-          "s": 0.1373,
-          "pos": 45,
-          "neg": 31,
-          "total": 102,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.2745,
-          "top_sources": [
-            {
-              "source_id": "youtube-adrian-alford-photography-nikon-50mm-f18g-lens-long-term-review",
-              "url": "https://www.youtube.com/watch?v=AVzEvLKsvcc",
-              "witness": "firsthand",
-              "quote": "terms of the quality images you can get from it the reason I bought this lens in the first place is because I was going on a trip to New Zealand and I intended to do a lot of video in low light and at nighttime and at th…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikkor-z-50mm-f18-s-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=i-PqTvcS1r0",
-              "witness": "firsthand",
-              "quote": "camera we'll start in the 45 map full frame mode in the middle of the image sharpness and contrast are absolutely perfect straight from f1.8 nice the good news is that unlike on less expensive 50 mm f1.8 lenses the corne…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "z7 with its very difficult 45 map sensor in the middle of the image we see pretty good sharpness but only a reasonable amount of contrast image quality in the corners is noticeably soft f2.8 shows a tiny bit more clarity…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 2,
-          "s": 0.5556,
-          "pos": 12,
-          "neg": 2,
-          "total": 18,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 1.1111,
-          "top_sources": [
-            {
-              "source_id": "photographylife-reviews-nikon-z-50mm-f1-8-s",
-              "url": "https://photographylife.com/reviews/nikon-z-50mm-f1-8-s",
-              "witness": "firsthand",
-              "quote": "To answer those questions and more, our team at Photography Life has tested the."
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "of color tinting in outer Focus areas at f2.8 those colors are tamed down and at F4 they're gone so overall as I mentioned before this particular lens is a tiny bit more expensive than some other very lowbudget Nifty 50s…"
-            },
-            {
-              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
-              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
-              "witness": "firsthand",
-              "quote": "one that I like more this lens delivers great color excellent contrast works well on both film and digital and has interesting though sometimes chaotic and blurry out of focus areas doing nothing now that can't be resear…"
-            }
-          ],
-          "axis_display": "Color Rendition"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": -0.5,
-          "pos": 3,
-          "neg": 13,
-          "total": 20,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.5,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-nikkor-z-50mm-f18-s-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=i-PqTvcS1r0",
-              "witness": "firsthand",
-              "quote": "eye shape to Baka highlight at f1.8 that's very common for most bright aperture lenses though and related to Baka is longitudinal chromatic aberation at f1.8 we can see some green and pink tints to Baka highlights common…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-nikkor-z-50mm-f18-s-review-is-the-og-lens-still-the-best",
-              "url": "https://www.youtube.com/watch?v=wRLpxFGmQ0I",
-              "witness": "firsthand",
-              "quote": "I also found that this lens has excellent fringing control whereas certainly both longit particularly longitudinal style chromatic aberrations were an obvious issue on the 50mm f1.4 as you can see in this comparison here…"
-            },
-            {
-              "source_id": "youtube-kieran-hayes-photography-nikon-z-50mm-f18-review-i-did-something-really-stupid-again",
-              "url": "https://www.youtube.com/watch?v=bT2wke6N5nE",
-              "witness": "firsthand",
-              "quote": "the two side by side here you can see f1.8 and F4 and there is more contrast in the F4 photograph so looking at chromatic aberation now next and even if I zoom into any part of this test chart you're not going to find an…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.25,
-          "pos": 8,
-          "neg": 3,
-          "total": 20,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.25,
-          "top_sources": [
-            {
-              "source_id": "youtube-brady-hommel-sharpest-lens-ive-owned-nikon-z-50mm-f18-review-with-sample-images",
-              "url": "https://www.youtube.com/watch?v=Kf2bnAmx0y0",
-              "witness": "firsthand",
-              "quote": "here we are so for starters this lens is built fantastic the focus ring is super smooth it's a really basic lens very minimalistic design all it has on it is a one switch to switch from auto focus to manual focus and the…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "G overall it's a bit nicer to handle than the cheaper Canon and Sony 50 mm f1.8 lenses which I've tested in the past nickon really tried to make something of this little lens well let's move on and look at its image qual…"
-            },
-            {
-              "source_id": "youtube-matt-osborne-best-nikon-50mm-lens-nikkor-micro-55mm-nikkor-50mm-f18-pancake-voigtlander",
-              "url": "https://www.youtube.com/watch?v=Y94ITPt3W4s",
-              "witness": "firsthand",
-              "quote": "obviously this is not a lens suited for every situation but i'll come on to that in more detail in a second okay and lastly before you unsubscribe because of this lens bear with me it could be better than you think this …"
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [],
-      "flags": [
-        "missing weighted axes: af_performance"
-      ],
-      "rank": 32
-    },
-    {
       "card_id": "sigma-60mm-f2-8",
       "display_name": "Sigma 60mm f/2.8 DN Art",
       "rankable": true,
@@ -5392,7 +5178,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): bokeh, optical_performance, chromatic_aberration, handling"
       ],
-      "rank": 33
+      "rank": 32
     },
     {
       "card_id": "ttartisan-85mm-f1-8",
@@ -5545,7 +5331,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, optical_performance, color_rendition, chromatic_aberration, handling"
       ],
-      "rank": 34
+      "rank": 33
     },
     {
       "card_id": "sony-70-200mm-f2-8",
@@ -5688,7 +5474,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): bokeh, chromatic_aberration, handling"
       ],
-      "rank": 35
+      "rank": 34
     },
     {
       "card_id": "sigma-20-60mm-f2-8",
@@ -5867,7 +5653,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 36
+      "rank": 35
     },
     {
       "card_id": "canon-85mm-f2",
@@ -5991,6 +5777,153 @@
       "flags": [
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): bokeh, chromatic_aberration, handling"
+      ],
+      "rank": 36
+    },
+    {
+      "card_id": "nikon-50mm-f1-8",
+      "display_name": "Nikon AF Nikkor 50mm f/1.8D",
+      "rankable": true,
+      "score": 0.4,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "bokeh",
+          "weight": 3,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "unattested",
+              "quote": "on something artistic and wonderful and world [Music] changing maybe some of these leaves over [Music] here you know when you come back to these old lenses you kind of forget that there was a time where boka balls were b…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "optical_performance",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 3,
+          "neg": 3,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "firsthand",
+              "quote": "so for a 50 mm to just be this just standing off of the out of focus areas You Don't See that a whole lot anymore it's of course a little soft at f1.8 as was common back in the day this is the one we took for sharpness w…"
+            },
+            {
+              "source_id": "youtube-marco-aries-af-nikkor-50mm-f18-vintage-lens-review-and-test",
+              "url": "https://www.youtube.com/watch?v=ea6uwr_LztU",
+              "witness": "unattested",
+              "quote": "it is but it is also very plasticky the controls turn smoothly but they are very light especially the focus ring wide open it is soft with some detail showing through and it gets progressively worse towards the corners b…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 2,
+          "s": 0.2,
+          "pos": 3,
+          "neg": 2,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
+              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
+              "witness": "firsthand",
+              "quote": "one that I like more this lens delivers great color excellent contrast works well on both film and digital and has interesting though sometimes chaotic and blurry out of focus areas doing nothing now that can't be resear…"
+            },
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "firsthand",
+              "quote": "I need something and then I'll tell you how much I paid for this lens in 2024 all right so we've got our first little check here of the red saturation red looks really good there's a lot of uh punch to this lens there's …"
+            },
+            {
+              "source_id": "youtube-marco-aries-af-nikkor-50mm-f18-vintage-lens-review-and-test",
+              "url": "https://www.youtube.com/watch?v=ea6uwr_LztU",
+              "witness": "unattested",
+              "quote": "usually softened by blooming colors are on the colder side with good contrast and lacking some saturation specular highlights have some hard edges but no artifacts and backgrounds can vary from smeared and painterly to s…"
+            }
+          ],
+          "axis_display": "Color Rendition"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": -1.0,
+          "pos": 0,
+          "neg": 1,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "firsthand",
+              "quote": "grain that you probably won't see on your end of YouTube but I do still see some fringing which is kind of just normal back then this has been mostly corrected out of modern Nikon lenses you don't see a whole lot of crin…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 2,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
+              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
+              "witness": "unattested",
+              "quote": "the plus side the focusing ring on this lens is stationary and that's a marked advantage over some of the other 50 millimeter lenses of this vintage that were designed for auto Focus use the next tip is that this is a re…"
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "bokeh",
+        "optical_performance",
+        "color_rendition",
+        "chromatic_aberration",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): bokeh, optical_performance, color_rendition, chromatic_aberration, handling"
       ],
       "rank": 37
     },

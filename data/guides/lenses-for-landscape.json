@@ -2043,6 +2043,159 @@
       "rank": 11
     },
     {
+      "card_id": "nikon-35mm-f2-8",
+      "display_name": "Nikon Nikkor-S Auto 35mm f/2.8",
+      "rankable": true,
+      "score": 2.0451,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.1579,
+          "pos": 6,
+          "neg": 3,
+          "total": 19,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.4737,
+          "top_sources": [
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "really tend to rely on but I do like the aesthetic effect that they give so a very nicely made lens for sure so this is a very sharp lens all the way from wide open at F 2.8 and it renders details very crisply and very c…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
+              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
+              "witness": "unattested",
+              "quote": "this one better compensates for other aberrations although its best feature is that it corrects Distortion almost entirely this model successfully overcomes the drawback of retro focus type lenses which in theory inheren…"
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.7143,
+          "pos": 0,
+          "neg": 5,
+          "total": 7,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -1.4286,
+          "top_sources": [
+            {
+              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
+              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
+              "witness": "unattested",
+              "quote": "element and thus failed to live up to expectations so the predecessor to this lens failed to live up to expectations the next version of the night grass this one adopted a master lens similar to a gal type to boost corre…"
+            },
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "unattested",
+              "quote": "the aadal and stop down those dark Corners become somewhat brighter they all show that effect to some extent maybe the gyen has less of it but if it does again it really isn't by much all show a little vignetting and in …"
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "chromatic_aberration",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "say that it's pretty much gone chromatic aberration well the nickon lens does show some of that seems to affect nickon lenses and I might be going out on a limb here please do correct me if you think I'm wrong but the ni…"
+            }
+          ],
+          "axis_display": "Chromatic Aberration"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
+              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
+              "witness": "unattested",
+              "quote": "Wars of the scallop metal focusing ring variety around 1971-72 or so they added multi coating this is a single coated lens nikon added multi coating beginning in 1971 and indicated that on these earlier version lenses wi…"
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "I've been shooting it on my Sony a7c so let's take all those bits off and see the lens in all of its unclothed wondrousness here it is it's a fairly small lens these are not large lenses it's very nicely made it's an all…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "chromatic_aberration",
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
+      ],
+      "rank": 12
+    },
+    {
       "card_id": "nikon-35mm-f1-4",
       "display_name": "Nikon NIKKOR Z 35mm f/1.4",
       "rankable": true,
@@ -2199,7 +2352,7 @@
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): optical_performance, distortion, vignetting, filter_thread, build"
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "card_id": "sigma-35mm-f1-4",
@@ -2416,7 +2569,7 @@
       "flags": [
         "thin (< 15 claims): distortion, filter_thread, build"
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "card_id": "viltrox-35mm-f1-4",
@@ -2623,7 +2776,149 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 14
+      "rank": 15
+    },
+    {
+      "card_id": "canon-28mm-f3-5",
+      "display_name": "Canon EF-M 28mm f/3.5 Macro IS STM",
+      "rankable": true,
+      "score": 1.6422,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.1724,
+          "pos": 14,
+          "neg": 9,
+          "total": 29,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.5172,
+          "top_sources": [
+            {
+              "source_id": "youtube-aperture-atlas-canon-22mm-f2-vs-canon-28mm-f35-sharpness-test-no5",
+              "url": "https://www.youtube.com/watch?v=WJw0ui9weF0",
+              "witness": "firsthand",
+              "quote": "in this video I will test the sharpness of two of the most popular lenses for the EOS M Mount at the ending of this clip we will find out which one wins first let me tell you a few things about the lenses the first one i…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-sharp-enough-for-325mp-canon-ef-m-28mm-f35-is-stm-macro-tested-on-a-ca",
+              "url": "https://www.youtube.com/watch?v=zM11G-1ZpxI",
+              "witness": "firsthand",
+              "quote": "[Music] howy you again everyone today let's get the Canon eosm 6 Mark I out again with its extremely high resolution 32.5 mapel apsc sensor and let's see how Canon's clever little native EFM macro lens can handle it toda…"
+            },
+            {
+              "source_id": "youtube-matti-sulanto-canon-ef-m-28mm-f35-macro-review",
+              "url": "https://www.youtube.com/watch?v=a9kGgT7b-58",
+              "witness": "firsthand",
+              "quote": "if I go inside or if I'm in a shade they really work as a conclusion I would say this is a very nice little lens very practical and versatile it's and it's very sharp and it can do some macro tool but then again I totall…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": 0.1875,
+          "pos": 7,
+          "neg": 4,
+          "total": 16,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": 0.375,
+          "top_sources": [
+            {
+              "source_id": "youtube-eric-rossi-you-have-to-check-out-this-macro-led-lens-canon-28mm-f35-led-lens",
+              "url": "https://www.youtube.com/watch?v=SJb4wwMuDXY",
+              "witness": "firsthand",
+              "quote": "know what that means uh buildin Macro Light it can automatically illuminate when needed so I guess that maybe kicks in to a certain point so you can use this as a 208 mm lens and it won't kick on but I guess as you proba…"
+            },
+            {
+              "source_id": "youtube-patricksreviews-canon-ef-m-28mm-f35-macro-is-stm-full-review-incl-sample-pictures-videos",
+              "url": "https://www.youtube.com/watch?v=m15QE2fSd8Y",
+              "witness": "firsthand",
+              "quote": "market features board market lens is the lights you see the little light bulb here so it has an LED light not a flash so a lot of people think it's a flash it's not it's a light and then we have 28 millimeters and you ha…"
+            },
+            {
+              "source_id": "youtube-peter-forsgård-canon-ef-m-28mm-f35-is-stm-macro-my-impression",
+              "url": "https://www.youtube.com/watch?v=xpXZZC9BirA",
+              "witness": "firsthand",
+              "quote": "can see from these examples it's quite powerful actually it surprised me a bit because usually i thought that you know a small macro light like this there's no use but as you can see from these images yes there is a use …"
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": -0.25,
+          "pos": 0,
+          "neg": 1,
+          "total": 4,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.25,
+          "top_sources": [
+            {
+              "source_id": "youtube-aperture-atlas-15-things-about-the-canon-ef-m-28mm-f35-macro-is-stm-lens",
+              "url": "https://www.youtube.com/watch?v=RsZ7a-JjKB0",
+              "witness": "firsthand",
+              "quote": "the tiny front element no other lens caps will work on this lens so be careful not to lose it the filter thread size is not indicated on the top side of the lens where we usually see it but it's indicated on this tiny le…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-m-28mm-f35-is-stm-macro-lens-review-with-samples",
+              "url": "https://www.youtube.com/watch?v=s8zX7OgMq_c",
+              "witness": "firsthand",
+              "quote": "about $10 if you want to use filters with this lens then you'll have to use the supplied lens Hood which also acts as a holder for 4 3 mm filters however it will blot out the lens's special light and look slightly unwiel…"
+            },
+            {
+              "source_id": "youtube-eric-rossi-you-have-to-check-out-this-macro-led-lens-canon-28mm-f35-led-lens",
+              "url": "https://www.youtube.com/watch?v=SJb4wwMuDXY",
+              "witness": "firsthand",
+              "quote": "the big play and this is something that we should have a discussion in the comments below is this something that you would like to see on future macro lenses or lenses in general especially like the uh 82mm filter thread…"
+            }
+          ],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-patricksreviews-canon-ef-m-28mm-f35-macro-is-stm-full-review-incl-sample-pictures-videos",
+              "url": "https://www.youtube.com/watch?v=m15QE2fSd8Y",
+              "witness": "firsthand",
+              "quote": "quality and feels at all very good honestly and what is good as well that it retracts and to keep everything safe we have this part that screws on and you can put a fill down in this well in case you shoot outside and Do…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [
+        "distortion",
+        "chromatic_aberration"
+      ],
+      "thin_axes": [
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: distortion, chromatic_aberration",
+        "thin (< 15 claims): filter_thread, build"
+      ],
+      "rank": 16
     },
     {
       "card_id": "sigma-23mm-f1-4",
@@ -2839,7 +3134,152 @@
       "flags": [
         "thin (< 15 claims): distortion, filter_thread"
       ],
-      "rank": 15
+      "rank": 17
+    },
+    {
+      "card_id": "canon-14mm-f2-8",
+      "display_name": "Canon EF 14mm f/2.8L II USM",
+      "rankable": true,
+      "score": 1.3409,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.3636,
+          "pos": 12,
+          "neg": 4,
+          "total": 22,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.0909,
+          "top_sources": [
+            {
+              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
+              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
+              "witness": "firsthand",
+              "quote": "face unless it's absolutely your intention looks pretty weird this lens just really the way it interprets light the way it interprets color it's really sharp it's really freeing in that you can shoot in smaller spaces um…"
+            },
+            {
+              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "witness": "firsthand",
+              "quote": "going to see how this lens is in terms of distortion so the edges do they fall really in the background compared to the 11 to 24 mil and I have birthday by the way in a couple days so if you have an extra Asos 1dx Mark I…"
+            },
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
+              "witness": "unattested",
+              "quote": "With a 14 elements in 11 groups optical formula, two large-diameter aspherical lenses to suppress distortion, and two ultra-low dispersion glass to deal with lateral chromatic aberrations, what the EF 14mm f/2.8 L II USM…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "distortion",
+          "weight": 2,
+          "s": 0.375,
+          "pos": 4,
+          "neg": 1,
+          "total": 8,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.75,
+          "top_sources": [
+            {
+              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
+              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
+              "witness": "firsthand",
+              "quote": "i'm gonna talk about my favorite thing about this lens which is you guessed it the distortion we love it i love the 14 millimeter specifically because i have found that it's still wide and you still get that look without…"
+            },
+            {
+              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "witness": "firsthand",
+              "quote": "hey guys it's October so it's three times showering till Christmas and then I will shave myself woohoo Canon was so kind and sent me a new wide angle lens it is the 14 mil f2.8 L Mark I USM and I will compare this super …"
+            }
+          ],
+          "axis_display": "Distortion"
+        },
+        {
+          "axis": "vignetting",
+          "weight": 2,
+          "s": -0.3333,
+          "pos": 0,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-cafetography-a-review-of-the-canon-14mm-l-f28-lens",
+              "url": "https://www.youtube.com/watch?v=KmojcVlPJnM",
+              "witness": "unattested",
+              "quote": "The corners of the image do look a bit dark, which is unsurprising considering how wide angle this lens is."
+            }
+          ],
+          "axis_display": "Vignetting"
+        },
+        {
+          "axis": "filter_thread",
+          "weight": 1,
+          "s": -0.5,
+          "pos": 0,
+          "neg": 3,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.5,
+          "top_sources": [],
+          "axis_display": "Filter Thread"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.6667,
+          "pos": 4,
+          "neg": 0,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.6667,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
+              "witness": "unattested",
+              "quote": "Canon also declares a great level of weather resistance against moisture and dust, compatible with selected EOS cameras, and it all feels super premium; one of those work-horse lenses that can withstand daily abuse."
+            },
+            {
+              "source_id": "youtube-theroadsidephotographer-canon-ef-14mm-f28l-ii-review-with-sample-imagesvideo",
+              "url": "https://www.youtube.com/watch?v=Y5LZ7FXqp5A",
+              "witness": "unattested",
+              "quote": "side things like a graduated neutral density or something because it'll lay flat against this and then barely has enough room so it doesn't touch the lens but it's extremely fast focusing great build and so if you do get…"
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [
+        "chromatic_aberration"
+      ],
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "filter_thread",
+        "build"
+      ],
+      "flags": [
+        "missing weighted axes: chromatic_aberration",
+        "thin (< 15 claims): distortion, vignetting, filter_thread, build"
+      ],
+      "rank": 18
     },
     {
       "card_id": "sony-12-24mm-f2-8",
@@ -3055,7 +3495,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, build"
       ],
-      "rank": 16
+      "rank": 19
     },
     {
       "card_id": "sony-35mm-f2-8",
@@ -3255,7 +3695,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread"
       ],
-      "rank": 17
+      "rank": 20
     },
     {
       "card_id": "canon-24mm-f2-8",
@@ -3461,7 +3901,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 18
+      "rank": 21
     },
     {
       "card_id": "sony-fe-35mm-f1-4-gm",
@@ -3612,7 +4052,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 19
+      "rank": 22
     },
     {
       "card_id": "sigma-19mm-f2-8",
@@ -3813,7 +4253,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 20
+      "rank": 23
     },
     {
       "card_id": "canon-32mm-f1-4",
@@ -3985,7 +4425,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 21
+      "rank": 24
     },
     {
       "card_id": "sigma-14-24mm-f2-8",
@@ -4200,7 +4640,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration"
       ],
-      "rank": 22
+      "rank": 25
     },
     {
       "card_id": "sony-28mm-f2",
@@ -4407,7 +4847,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 23
+      "rank": 26
     },
     {
       "card_id": "sony-8-14mm-f3-5",
@@ -4590,7 +5030,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 24
+      "rank": 27
     },
     {
       "card_id": "fujifilm-27mm-f2-8",
@@ -4756,194 +5196,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 25
-    },
-    {
-      "card_id": "canon-20mm-f2-8",
-      "display_name": "Canon EF 20mm f/2.8 USM",
-      "rankable": true,
-      "score": 0.3529,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.1014,
-          "pos": 30,
-          "neg": 23,
-          "total": 69,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.3043,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
-              "witness": "firsthand",
-              "quote": "then firstly on a fullframe camera a 20 megap Canon 6D peripheral illumination and chromatic aberration correction are turned on at f2.8 the image is nice and sharp in the middle over in the corners we're definitely seei…"
-            },
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "[Music] welcome to Doc's on photography and welcome to the canon EF 20 millimeter F 2.8 lens review I'm starting off the video by filming myself with that lens so you can see actually the angle and I'm shooting it wide o…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "up pretty much all of that 15 cm not leaving harl space beyond that so you have to get very close to your subject it also exaggerates any kind of distortion so you don't get a flat plan of focus at all I don't find that …"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -0.0769,
-          "pos": 4,
-          "neg": 5,
-          "total": 13,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": -0.1538,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
-              "witness": "firsthand",
-              "quote": "camera as for Distortion well there's some Barrel Distortion the good news is that it's not very strong uh certainly not as strong as you'd see on a zoom lens but the bad news is that it falls in a gentle but unusual mus…"
-            },
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "the settings I use which ISO which F stop with shutter speed 20 millimeter to point a let's take a look at editing so let's undo everything this is the image straight from the camera I straighten the horizon and when I e…"
-            },
-            {
-              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
-              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
-              "witness": "firsthand",
-              "quote": "is meant for ef and it's quite the old design it has a 20 mm which means it's 94 degrees field of view but uh what i like about this one doesn't distort much on the corners we'll show you the reference as opposed to the …"
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.125,
-          "pos": 4,
-          "neg": 6,
-          "total": 16,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.25,
-          "top_sources": [
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "I wanted something that's different in focal lengths now think too talking about technical specification now this is an F 2.8 lens which i think is great but you also get vignetting you probably cannot see it from the vi…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "this case on the wide end it took a plus 71 to correct for the vignette and then on the telephone end a plus 54 and by the way again both of these figures are much lower than what I saw with the sigma 10 to8 on Canon RF …"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
-              "witness": "unattested",
-              "quote": "dark Corners stop down to F4 and that darkness is pushed right into the edges and at f5.6 it's all gone you should certainly use peripheral illumination on your camera with this lens though the lens can focus as closely …"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 2,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": 0.1667,
-          "pos": 2,
-          "neg": 1,
-          "total": 6,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.1667,
-          "top_sources": [
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "angle - super wide angle lens with the 20 millimeter I have a small lens lightweight a nice filter size actually the same filter size as the 135 f/2 lens or the 51.2 lens so I had one filter could use it on all these cam…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "so I really do appreciate that because obviously being able to share filters is huge it's going to save you money but also save you room in packing those filters along the lens itself is 86 mm or 3.4 in length and it wei…"
-            },
-            {
-              "source_id": "youtube-maxreviews-pro-canon-ef-20mm-f28-usm-lens-review",
-              "url": "https://www.youtube.com/watch?v=elsf5i5vRs8",
-              "witness": "firsthand",
-              "quote": "stunning Clarity what I love about this lens is its versatility from Interiors to sprawling landscapes it delivers exceptional Optical performance and with full-time manual focus override you can fine-tune focus even in …"
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.2857,
-          "pos": 3,
-          "neg": 1,
-          "total": 7,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.2857,
-          "top_sources": [
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "saw fairly decent results as you can see here to where there's a minor bit of ghosting there but overall FL resistance actually seems quite good and I felt like contrast held up really well in images um in addition to th…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "distortion",
-        "chromatic_aberration",
-        "filter_thread",
-        "build"
-      ],
-      "flags": [
-        "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
-      ],
-      "rank": 26
+      "rank": 28
     },
     {
       "card_id": "panasonic-lumix-s-35mm",
@@ -5143,7 +5396,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 27
+      "rank": 29
     },
     {
       "card_id": "zeiss-35mm-f1-4",
@@ -5349,7 +5602,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 28
+      "rank": 30
     },
     {
       "card_id": "canon-24mm-f3-5",
@@ -5560,7 +5813,7 @@
       "flags": [
         "thin (< 15 claims): chromatic_aberration, filter_thread, build"
       ],
-      "rank": 29
+      "rank": 31
     },
     {
       "card_id": "rokinon-35mm",
@@ -5765,7 +6018,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread"
       ],
-      "rank": 30
+      "rank": 32
     },
     {
       "card_id": "viltrox-14mm-f4",
@@ -5983,7 +6236,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 31
+      "rank": 33
     },
     {
       "card_id": "leica-35mm-f2",
@@ -6135,7 +6388,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, filter_thread, build"
       ],
-      "rank": 32
+      "rank": 34
     },
     {
       "card_id": "nikon-35mm-f1-8",
@@ -6282,33 +6535,27 @@
         "missing weighted axes: distortion",
         "thin (< 15 claims): optical_performance, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 33
+      "rank": 35
     },
     {
       "card_id": "sigma-20mm-f1-4",
       "display_name": "Sigma 20mm f/1.4 DG HSM Art",
       "rankable": true,
-      "score": -0.1832,
+      "score": -0.1769,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.2683,
+          "s": 0.3077,
           "pos": 21,
-          "neg": 10,
-          "total": 41,
+          "neg": 9,
+          "total": 39,
           "confidence": "low",
           "contested": false,
           "thin": false,
-          "contribution": 0.8049,
+          "contribution": 0.9231,
           "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined."
-            },
             {
               "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
               "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
@@ -6320,6 +6567,12 @@
               "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
               "witness": "unattested",
               "quote": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom."
+            },
+            {
+              "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+              "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+              "witness": "unattested",
+              "quote": "9.84&rsquo;&nbsp;(25cm) minimum focus Measurements: High score and high peak sharpness With a DxO Mark lens score of 31 points and a peak sharpness of 18P-."
             }
           ],
           "axis_display": "Optical Performance"
@@ -6354,21 +6607,15 @@
         {
           "axis": "vignetting",
           "weight": 2,
-          "s": -0.3333,
+          "s": -0.375,
           "pos": 1,
           "neg": 4,
-          "total": 9,
+          "total": 8,
           "confidence": "low",
-          "contested": false,
+          "contested": true,
           "thin": true,
-          "contribution": -0.6667,
+          "contribution": -0.75,
           "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "the front which might lead to vignetting."
-            },
             {
               "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
               "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
@@ -6412,44 +6659,17 @@
           "axis_display": "Chromatic Aberration"
         },
         {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": 0.1429,
-          "pos": 1,
-          "neg": 0,
-          "total": 7,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.1429,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "a de-clickable aperture ring, and it can take filters at the front and rear."
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
           "axis": "build",
           "weight": 1,
-          "s": 0.2857,
+          "s": 0.4,
           "pos": 3,
           "neg": 1,
-          "total": 7,
+          "total": 5,
           "confidence": "low",
           "contested": false,
           "thin": true,
-          "contribution": 0.2857,
+          "contribution": 0.4,
           "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "Sealing: Yes, all three lenses have a rubber grommet at the lens-mount plus further special weather-sealing throughout the construction."
-            },
             {
               "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
               "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
@@ -6466,55 +6686,57 @@
           "axis_display": "Build Quality"
         }
       ],
-      "missing_axes": [],
+      "missing_axes": [
+        "filter_thread"
+      ],
       "thin_axes": [
         "distortion",
         "vignetting",
         "chromatic_aberration",
-        "filter_thread",
         "build"
       ],
       "flags": [
-        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
+        "missing weighted axes: filter_thread",
+        "thin (< 15 claims): distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 34
+      "rank": 36
     },
     {
-      "card_id": "canon-14mm-f2-8",
-      "display_name": "Canon EF 14mm f/2.8L II USM",
+      "card_id": "canon-20mm-f2-8",
+      "display_name": "Canon EF 20mm f/2.8 USM",
       "rankable": true,
-      "score": -0.2444,
+      "score": -0.299,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.2,
-          "pos": 32,
-          "neg": 18,
-          "total": 70,
+          "s": -0.36,
+          "pos": 4,
+          "neg": 13,
+          "total": 25,
           "confidence": "low",
           "contested": true,
           "thin": false,
-          "contribution": 0.6,
+          "contribution": -1.08,
           "top_sources": [
             {
-              "source_id": "youtube-christopher-frost-ttartisan-14mm-f28-lens-review",
-              "url": "https://www.youtube.com/watch?v=qDmet2FqOdM",
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
               "witness": "firsthand",
-              "quote": "I love that 14 mm ultra wide angle on a full-frame camera."
+              "quote": "then firstly on a fullframe camera a 20 megap Canon 6D peripheral illumination and chromatic aberration correction are turned on at f2.8 the image is nice and sharp in the middle over in the corners we're definitely seei…"
             },
             {
-              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
-              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
               "witness": "firsthand",
-              "quote": "face unless it's absolutely your intention looks pretty weird this lens just really the way it interprets light the way it interprets color it's really sharp it's really freeing in that you can shoot in smaller spaces um…"
+              "quote": "[Music] welcome to Doc's on photography and welcome to the canon EF 20 millimeter F 2.8 lens review I'm starting off the video by filming myself with that lens so you can see actually the angle and I'm shooting it wide o…"
             },
             {
-              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
+              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
               "witness": "firsthand",
-              "quote": "going to see how this lens is in terms of distortion so the edges do they fall really in the background compared to the 11 to 24 mil and I have birthday by the way in a couple days so if you have an extra Asos 1dx Mark I…"
+              "quote": "but we can compare it with the raw you can see will be less distortion and i technically prefer this in terms of photography whereas i find the 16 mm a bit over this top towards the edge you get stretch all your hands an…"
             }
           ],
           "axis_display": "Optical Performance"
@@ -6522,32 +6744,32 @@
         {
           "axis": "distortion",
           "weight": 2,
-          "s": -0.098,
-          "pos": 8,
-          "neg": 13,
-          "total": 51,
+          "s": -0.1429,
+          "pos": 2,
+          "neg": 3,
+          "total": 7,
           "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.1961,
+          "contested": true,
+          "thin": true,
+          "contribution": -0.2857,
           "top_sources": [
             {
-              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
-              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
               "witness": "firsthand",
-              "quote": "i'm gonna talk about my favorite thing about this lens which is you guessed it the distortion we love it i love the 14 millimeter specifically because i have found that it's still wide and you still get that look without…"
+              "quote": "camera as for Distortion well there's some Barrel Distortion the good news is that it's not very strong uh certainly not as strong as you'd see on a zoom lens but the bad news is that it falls in a gentle but unusual mus…"
             },
             {
-              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
               "witness": "firsthand",
-              "quote": "hey guys it's October so it's three times showering till Christmas and then I will shave myself woohoo Canon was so kind and sent me a new wide angle lens it is the 14 mil f2.8 L Mark I USM and I will compare this super …"
+              "quote": "the settings I use which ISO which F stop with shutter speed 20 millimeter to point a let's take a look at editing so let's undo everything this is the image straight from the camera I straighten the horizon and when I e…"
             },
             {
-              "source_id": "youtube-wilkinson-cameras-lens-review-canon-rf-7-14mm-f28-35l-fisheye-stm-pro-creator-tool-or-ex",
-              "url": "https://www.youtube.com/watch?v=-a45pqZySuk",
+              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
+              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
               "witness": "firsthand",
-              "quote": "Now, I was also testing the 14 mil VCM [music] lens the same day, and this is straight, distortionfree, and a gorgeous wide-angle lens."
+              "quote": "is meant for ef and it's quite the old design it has a 20 mm which means it's 94 degrees field of view but uh what i like about this one doesn't distort much on the corners we'll show you the reference as opposed to the …"
             }
           ],
           "axis_display": "Distortion"
@@ -6555,145 +6777,78 @@
         {
           "axis": "vignetting",
           "weight": 2,
-          "s": -0.2653,
-          "pos": 5,
-          "neg": 18,
-          "total": 49,
+          "s": 0.2,
+          "pos": 2,
+          "neg": 1,
+          "total": 5,
           "confidence": "low",
           "contested": true,
-          "thin": false,
-          "contribution": -0.5306,
+          "thin": true,
+          "contribution": 0.4,
           "top_sources": [
             {
-              "source_id": "youtube-camera-conspiracies-7-artisans-14mm-f28-any-advantages-over-laowa-12mm10mm",
-              "url": "https://www.youtube.com/watch?v=C6yE-BCSp9U",
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
               "witness": "firsthand",
-              "quote": "Like whenever I'm taking shots outside, I'm like that looks weird cuz it's not fisheye, so everything gets stretched real hard and far in the corners."
+              "quote": "I wanted something that's different in focal lengths now think too talking about technical specification now this is an F 2.8 lens which i think is great but you also get vignetting you probably cannot see it from the vi…"
             },
             {
-              "source_id": "youtube-christopher-frost-ttartisan-14mm-f28-lens-review",
-              "url": "https://www.youtube.com/watch?v=qDmet2FqOdM",
-              "witness": "firsthand",
-              "quote": "Although I have to tell you now, I did shoot with it for a while using one of my thinner Marumi Fit and Slim circular polarizing filters, and I did get some physical vignetting with it."
-            },
-            {
-              "source_id": "dxomark-samyang-14mm-f2-8-if-ed-mc-aspherical-canon-and-nikon-tested-on-dxomark",
-              "url": "https://www.dxomark.com/samyang-14mm-f2-8-if-ed-mc-aspherical-canon-and-nikon-tested-on-dxomark/",
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
               "witness": "unattested",
-              "quote": "On the other hand vignetting remains well under control."
+              "quote": "dark Corners stop down to F4 and that darkness is pushed right into the edges and at f5.6 it's all gone you should certainly use peripheral illumination on your camera with this lens though the lens can focus as closely …"
             }
           ],
           "axis_display": "Vignetting"
         },
         {
-          "axis": "chromatic_aberration",
+          "axis": "filter_thread",
           "weight": 1,
-          "s": -0.25,
-          "pos": 0,
-          "neg": 1,
-          "total": 4,
+          "s": 0.6667,
+          "pos": 2,
+          "neg": 0,
+          "total": 3,
           "confidence": "low",
           "contested": false,
           "thin": true,
-          "contribution": -0.25,
+          "contribution": 0.6667,
           "top_sources": [
             {
-              "source_id": "youtube-anthony-gugliotta-the-only-lens-of-its-kind-canon-14mm-f14-vcm",
-              "url": "https://www.youtube.com/watch?v=G7wISu10880",
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
               "witness": "firsthand",
-              "quote": "So, you might notice a little bit more chromatic aberration, and I turned off focus breathing compensation as well."
+              "quote": "angle - super wide angle lens with the 20 millimeter I have a small lens lightweight a nice filter size actually the same filter size as the 135 f/2 lens or the 51.2 lens so I had one filter could use it on all these cam…"
             },
             {
-              "source_id": "youtube-yev-zakharov-comparison-canon-14mm-vs-rokinon-14mm",
-              "url": "https://www.youtube.com/watch?v=-qJRiYRHBbE",
+              "source_id": "youtube-maxreviews-pro-canon-ef-20mm-f28-usm-lens-review",
+              "url": "https://www.youtube.com/watch?v=elsf5i5vRs8",
               "witness": "firsthand",
-              "quote": "case green line of chromatic aberration going on the can and while the Rokinon tends to be pretty clean otherwise I did focus on this little globe in the middle of the photo on both in both cases and everything in the mi…"
+              "quote": "stunning Clarity what I love about this lens is its versatility from Interiors to sprawling landscapes it delivers exceptional Optical performance and with full-time manual focus override you can fine-tune focus even in …"
             },
             {
-              "source_id": "youtube-petapixel-canon-rf-14mm-f14-l-vcm-review-ultra-wide-ultra-small-but-ultra-pricey",
-              "url": "https://www.youtube.com/watch?v=-V_YnxZ2Tg0",
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
               "witness": "unattested",
-              "quote": "But having that really bright f/1.4 aperture can also be an issue when it comes to local longitudinal chromatic aberration."
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": -0.2963,
-          "pos": 1,
-          "neg": 9,
-          "total": 27,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": -0.2963,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-conspiracies-7-artisans-14mm-f28-any-advantages-over-laowa-12mm10mm",
-              "url": "https://www.youtube.com/watch?v=C6yE-BCSp9U",
-              "witness": "unattested",
-              "quote": "You could put filters on your lens hood."
-            },
-            {
-              "source_id": "youtube-christian-möhrle-the-phlog-photography-budget-wide-angle-perfection-ttartisan-14mm-f28-r",
-              "url": "https://www.youtube.com/watch?v=57CDvmRbP8o",
-              "witness": "unattested",
-              "quote": "So there is no way to attach a filter here."
-            },
-            {
-              "source_id": "youtube-christopher-frost-brightin-star-14mm-f28-camera-lens-review",
-              "url": "https://www.youtube.com/watch?v=wjXrtiS9828",
-              "witness": "unattested",
-              "quote": "It also comes with a detachable metallic lens hood with a wide 82 mm filter thread."
+              "quote": "and accurate too and you can turn that Focus ring whenever you like for full-time manual focusing the front element doesn't extend or rotate so using filters is no problem at all in all this lens is a good size and it ha…"
             }
           ],
           "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.4286,
-          "pos": 7,
-          "neg": 1,
-          "total": 14,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4286,
-          "top_sources": [
-            {
-              "source_id": "youtube-christian-möhrle-the-phlog-photography-budget-wide-angle-perfection-ttartisan-14mm-f28-r",
-              "url": "https://www.youtube.com/watch?v=57CDvmRbP8o",
-              "witness": "unattested",
-              "quote": "The lens feels super robust with its full metal build."
-            },
-            {
-              "source_id": "youtube-christopher-frost-brightin-star-14mm-f28-camera-lens-review",
-              "url": "https://www.youtube.com/watch?v=wjXrtiS9828",
-              "witness": "unattested",
-              "quote": "The [music] lens has pretty typical build quality for an inexpensive fully manual optic."
-            },
-            {
-              "source_id": "youtube-christopher-frost-ttartisan-14mm-f28-lens-review",
-              "url": "https://www.youtube.com/watch?v=qDmet2FqOdM",
-              "witness": "unattested",
-              "quote": "The lens has pretty typical build quality for an inexpensive fully manual optic."
-            }
-          ],
-          "axis_display": "Build Quality"
         }
       ],
-      "missing_axes": [],
-      "thin_axes": [
+      "missing_axes": [
         "chromatic_aberration",
         "build"
       ],
-      "flags": [
-        "thin (< 15 claims): chromatic_aberration, build"
+      "thin_axes": [
+        "distortion",
+        "vignetting",
+        "filter_thread"
       ],
-      "rank": 35
+      "flags": [
+        "missing weighted axes: chromatic_aberration, build",
+        "thin (< 15 claims): distortion, vignetting, filter_thread"
+      ],
+      "rank": 37
     },
     {
       "card_id": "canon-11-24mm-f4",
@@ -6911,7 +7066,7 @@
       "flags": [
         "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 36
+      "rank": 38
     },
     {
       "card_id": "sigma-15mm-f1-4",
@@ -7126,7 +7281,7 @@
       "flags": [
         "thin (< 15 claims): filter_thread"
       ],
-      "rank": 37
+      "rank": 39
     },
     {
       "card_id": "canon-16-28mm-f2-8",
@@ -7321,7 +7476,7 @@
       "flags": [
         "thin (< 15 claims): distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 38
+      "rank": 40
     },
     {
       "card_id": "sony-16-25mm-f2-8",
@@ -7533,7 +7688,7 @@
       "flags": [
         "thin (< 15 claims): vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 39
+      "rank": 41
     },
     {
       "card_id": "canon-15mm-f2-8",
@@ -7674,7 +7829,7 @@
         "missing weighted axes: build",
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread"
       ],
-      "rank": 40
+      "rank": 42
     },
     {
       "card_id": "canon-22mm-f2",
@@ -7892,156 +8047,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 41
-    },
-    {
-      "card_id": "nikon-35mm-f2-8",
-      "display_name": "Nikon Nikkor-S Auto 35mm f/2.8",
-      "rankable": true,
-      "score": -0.8457,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.05,
-          "pos": 31,
-          "neg": 27,
-          "total": 80,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.15,
-          "top_sources": [
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "really tend to rely on but I do like the aesthetic effect that they give so a very nicely made lens for sure so this is a very sharp lens all the way from wide open at F 2.8 and it renders details very crisply and very c…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -0.125,
-          "pos": 3,
-          "neg": 5,
-          "total": 16,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.25,
-          "top_sources": [
-            {
-              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
-              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
-              "witness": "unattested",
-              "quote": "this one better compensates for other aberrations although its best feature is that it corrects Distortion almost entirely this model successfully overcomes the drawback of retro focus type lenses which in theory inheren…"
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.3103,
-          "pos": 5,
-          "neg": 14,
-          "total": 29,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.6207,
-          "top_sources": [
-            {
-              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
-              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
-              "witness": "unattested",
-              "quote": "element and thus failed to live up to expectations so the predecessor to this lens failed to live up to expectations the next version of the night grass this one adopted a master lens similar to a gal type to boost corre…"
-            },
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "unattested",
-              "quote": "the aadal and stop down those dark Corners become somewhat brighter they all show that effect to some extent maybe the gyen has less of it but if it does again it really isn't by much all show a little vignetting and in …"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "chromatic_aberration",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 5,
-          "neg": 5,
-          "total": 15,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "say that it's pretty much gone chromatic aberration well the nickon lens does show some of that seems to affect nickon lenses and I might be going out on a limb here please do correct me if you think I'm wrong but the ni…"
-            }
-          ],
-          "axis_display": "Chromatic Aberration"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": -0.125,
-          "pos": 0,
-          "neg": 1,
-          "total": 8,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.125,
-          "top_sources": [
-            {
-              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
-              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
-              "witness": "unattested",
-              "quote": "Wars of the scallop metal focusing ring variety around 1971-72 or so they added multi coating this is a single coated lens nikon added multi coating beginning in 1971 and indicated that on these earlier version lenses wi…"
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 6,
-          "neg": 6,
-          "total": 17,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "I've been shooting it on my Sony a7c so let's take all those bits off and see the lens in all of its unclothed wondrousness here it is it's a fairly small lens these are not large lenses it's very nicely made it's an all…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [],
-      "thin_axes": [
-        "filter_thread"
-      ],
-      "flags": [
-        "thin (< 15 claims): filter_thread"
-      ],
-      "rank": 42
+      "rank": 43
     },
     {
       "card_id": "nikon-20mm-f1-8",
@@ -8200,7 +8206,7 @@
         "missing weighted axes: chromatic_aberration",
         "thin (< 15 claims): optical_performance, distortion, vignetting, filter_thread, build"
       ],
-      "rank": 43
+      "rank": 44
     },
     {
       "card_id": "ttartisan-24mm-f3-8",
@@ -8346,7 +8352,7 @@
       "flags": [
         "thin (< 15 claims): distortion, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 44
+      "rank": 45
     },
     {
       "card_id": "sigma-16mm-f1-4",
@@ -8493,7 +8499,7 @@
         "missing weighted axes: filter_thread",
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, build"
       ],
-      "rank": 45
+      "rank": 46
     },
     {
       "card_id": "sony-16mm-f1-8",
@@ -8695,7 +8701,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 46
+      "rank": 47
     },
     {
       "card_id": "olympus-7-14mm-f2-8",
@@ -8897,7 +8903,7 @@
       "flags": [
         "thin (< 15 claims): optical_performance, distortion, vignetting, chromatic_aberration, filter_thread, build"
       ],
-      "rank": 47
+      "rank": 48
     },
     {
       "card_id": "panasonic-25mm-f1-7",
@@ -9113,169 +9119,6 @@
       ],
       "flags": [
         "thin (< 15 claims): distortion, vignetting, filter_thread"
-      ],
-      "rank": 48
-    },
-    {
-      "card_id": "canon-28mm-f3-5",
-      "display_name": "Canon EF-M 28mm f/3.5 Macro IS STM",
-      "rankable": true,
-      "score": -1.4248,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": -0.013,
-          "pos": 31,
-          "neg": 32,
-          "total": 77,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.039,
-          "top_sources": [
-            {
-              "source_id": "youtube-aperture-atlas-canon-22mm-f2-vs-canon-28mm-f35-sharpness-test-no5",
-              "url": "https://www.youtube.com/watch?v=WJw0ui9weF0",
-              "witness": "firsthand",
-              "quote": "in this video I will test the sharpness of two of the most popular lenses for the EOS M Mount at the ending of this clip we will find out which one wins first let me tell you a few things about the lenses the first one i…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-sharp-enough-for-325mp-canon-ef-m-28mm-f35-is-stm-macro-tested-on-a-ca",
-              "url": "https://www.youtube.com/watch?v=zM11G-1ZpxI",
-              "witness": "firsthand",
-              "quote": "[Music] howy you again everyone today let's get the Canon eosm 6 Mark I out again with its extremely high resolution 32.5 mapel apsc sensor and let's see how Canon's clever little native EFM macro lens can handle it toda…"
-            },
-            {
-              "source_id": "youtube-david-hancock-lens-showdown-vintage-28mm-f35-lenses-compared-and-tested-round-glass-revi",
-              "url": "https://www.youtube.com/watch?v=8FkDaxNk7Ts",
-              "witness": "firsthand",
-              "quote": "section and will use these scores to determine the best and worst lens at the end of this video to test sharpness I used a 100% crop of the dots test chart that I adapted from Lonely spec and have used in this series now…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "distortion",
-          "weight": 2,
-          "s": -1.0,
-          "pos": 0,
-          "neg": 3,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -2.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-david-hancock-lens-showdown-vintage-28mm-f35-lenses-compared-and-tested-round-glass-revi",
-              "url": "https://www.youtube.com/watch?v=8FkDaxNk7Ts",
-              "witness": "firsthand",
-              "quote": "shockingly similar I had expected Far More Sample variation in these lenses delivered accounting for slight lens misplacements on my part the Kuka appears a hair better than the rest in terms of distortion the Manola and…"
-            }
-          ],
-          "axis_display": "Distortion"
-        },
-        {
-          "axis": "vignetting",
-          "weight": 2,
-          "s": -0.1304,
-          "pos": 7,
-          "neg": 10,
-          "total": 23,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.2609,
-          "top_sources": [
-            {
-              "source_id": "youtube-eric-rossi-you-have-to-check-out-this-macro-led-lens-canon-28mm-f35-led-lens",
-              "url": "https://www.youtube.com/watch?v=SJb4wwMuDXY",
-              "witness": "firsthand",
-              "quote": "know what that means uh buildin Macro Light it can automatically illuminate when needed so I guess that maybe kicks in to a certain point so you can use this as a 208 mm lens and it won't kick on but I guess as you proba…"
-            },
-            {
-              "source_id": "youtube-patricksreviews-canon-ef-m-28mm-f35-macro-is-stm-full-review-incl-sample-pictures-videos",
-              "url": "https://www.youtube.com/watch?v=m15QE2fSd8Y",
-              "witness": "firsthand",
-              "quote": "market features board market lens is the lights you see the little light bulb here so it has an LED light not a flash so a lot of people think it's a flash it's not it's a light and then we have 28 millimeters and you ha…"
-            },
-            {
-              "source_id": "youtube-peter-forsgård-canon-ef-m-28mm-f35-is-stm-macro-my-impression",
-              "url": "https://www.youtube.com/watch?v=xpXZZC9BirA",
-              "witness": "firsthand",
-              "quote": "can see from these examples it's quite powerful actually it surprised me a bit because usually i thought that you know a small macro light like this there's no use but as you can see from these images yes there is a use …"
-            }
-          ],
-          "axis_display": "Vignetting"
-        },
-        {
-          "axis": "filter_thread",
-          "weight": 1,
-          "s": -0.125,
-          "pos": 0,
-          "neg": 1,
-          "total": 8,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": -0.125,
-          "top_sources": [
-            {
-              "source_id": "youtube-aperture-atlas-15-things-about-the-canon-ef-m-28mm-f35-macro-is-stm-lens",
-              "url": "https://www.youtube.com/watch?v=RsZ7a-JjKB0",
-              "witness": "firsthand",
-              "quote": "the tiny front element no other lens caps will work on this lens so be careful not to lose it the filter thread size is not indicated on the top side of the lens where we usually see it but it's indicated on this tiny le…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-m-28mm-f35-is-stm-macro-lens-review-with-samples",
-              "url": "https://www.youtube.com/watch?v=s8zX7OgMq_c",
-              "witness": "firsthand",
-              "quote": "about $10 if you want to use filters with this lens then you'll have to use the supplied lens Hood which also acts as a holder for 4 3 mm filters however it will blot out the lens's special light and look slightly unwiel…"
-            },
-            {
-              "source_id": "youtube-eric-rossi-you-have-to-check-out-this-macro-led-lens-canon-28mm-f35-led-lens",
-              "url": "https://www.youtube.com/watch?v=SJb4wwMuDXY",
-              "witness": "firsthand",
-              "quote": "the big play and this is something that we should have a discussion in the comments below is this something that you would like to see on future macro lenses or lenses in general especially like the uh 82mm filter thread…"
-            }
-          ],
-          "axis_display": "Filter Thread"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 1.0,
-          "pos": 6,
-          "neg": 0,
-          "total": 6,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-patricksreviews-canon-ef-m-28mm-f35-macro-is-stm-full-review-incl-sample-pictures-videos",
-              "url": "https://www.youtube.com/watch?v=m15QE2fSd8Y",
-              "witness": "firsthand",
-              "quote": "quality and feels at all very good honestly and what is good as well that it retracts and to keep everything safe we have this part that screws on and you can put a fill down in this well in case you shoot outside and Do…"
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [
-        "chromatic_aberration"
-      ],
-      "thin_axes": [
-        "distortion",
-        "filter_thread",
-        "build"
-      ],
-      "flags": [
-        "missing weighted axes: chromatic_aberration",
-        "thin (< 15 claims): distortion, filter_thread, build"
       ],
       "rank": 49
     },

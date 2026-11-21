@@ -602,6 +602,142 @@
       "rank": 4
     },
     {
+      "card_id": "canon-14mm-f2-8",
+      "display_name": "Canon EF 14mm f/2.8L II USM",
+      "rankable": true,
+      "score": 4.2159,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.3636,
+          "pos": 12,
+          "neg": 4,
+          "total": 22,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 1.0909,
+          "top_sources": [
+            {
+              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
+              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
+              "witness": "firsthand",
+              "quote": "face unless it's absolutely your intention looks pretty weird this lens just really the way it interprets light the way it interprets color it's really sharp it's really freeing in that you can shoot in smaller spaces um…"
+            },
+            {
+              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "witness": "firsthand",
+              "quote": "going to see how this lens is in terms of distortion so the edges do they fall really in the background compared to the 11 to 24 mil and I have birthday by the way in a couple days so if you have an extra Asos 1dx Mark I…"
+            },
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
+              "witness": "unattested",
+              "quote": "With a 14 elements in 11 groups optical formula, two large-diameter aspherical lenses to suppress distortion, and two ultra-low dispersion glass to deal with lateral chromatic aberrations, what the EF 14mm f/2.8 L II USM…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "handling",
+          "weight": 2,
+          "s": 1.0,
+          "pos": 5,
+          "neg": 0,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "witness": "firsthand",
+              "quote": "angle lens and you can use it perfectly for interior stuff and that's what I'm going to show you right now so stay tuned and as I promised this lens is perfect when you shoot architecture you're able to get everything in…"
+            },
+            {
+              "source_id": "youtube-theroadsidephotographer-canon-ef-14mm-f28l-ii-review-with-sample-imagesvideo",
+              "url": "https://www.youtube.com/watch?v=Y5LZ7FXqp5A",
+              "witness": "firsthand",
+              "quote": "it's great for walking around the lens itself great build quality you get a kind of like a full lens cap to protect it and of course has the bubbled front end which is one thing that I don't like about the lens because o…"
+            },
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
+              "witness": "unattested",
+              "quote": "This ring is well damped and precise for minor adjustments of the auto-focusing setting, as it supports full-time manual; even with the autofocus set to ON, the photographer can use the manual ring."
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 1,
+          "s": 0.125,
+          "pos": 4,
+          "neg": 3,
+          "total": 8,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.125,
+          "top_sources": [
+            {
+              "source_id": "youtube-theroadsidephotographer-canon-ef-14mm-f28l-ii-review-with-sample-imagesvideo",
+              "url": "https://www.youtube.com/watch?v=Y5LZ7FXqp5A",
+              "witness": "firsthand",
+              "quote": "really awesome blur and of course you can't put a neutral density or polarizer or any other kind of filter on the lens because it doesn't have a filter thread so those are probably only two things I don't like about the …"
+            },
+            {
+              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
+              "witness": "unattested",
+              "quote": "nice and round looking po bolt so a nice companion to have for micro shots as well the BKE on this lens looks just stunning shooting wide open gives you a really nice creamy blur background with some round Poké Balls if …"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 2,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
+              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
+              "witness": "unattested",
+              "quote": "But what matters the most is the overall wide-angle look, not compressing the image edges, for flattering compositions, and the color and contrast balance; one of the best in class."
+            }
+          ],
+          "axis_display": "Color Rendition"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "handling",
+        "bokeh",
+        "color_rendition"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): handling, bokeh, color_rendition"
+      ],
+      "rank": 5
+    },
+    {
       "card_id": "sony-fe-35mm-f1-4-gm",
       "display_name": "Sony FE 35mm f/1.4 GM",
       "rankable": true,
@@ -715,7 +851,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, color_rendition"
       ],
-      "rank": 5
+      "rank": 6
     },
     {
       "card_id": "tamron-12-20mm-f2-8",
@@ -868,7 +1004,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 6
+      "rank": 7
     },
     {
       "card_id": "sigma-35mm-f1-2-dg-dn-art",
@@ -999,7 +1135,7 @@
       "flags": [
         "missing weighted axes: af_performance"
       ],
-      "rank": 7
+      "rank": 8
     },
     {
       "card_id": "olympus-45mm-f1-8",
@@ -1124,7 +1260,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "card_id": "canon-50mm-f2-5",
@@ -1248,7 +1384,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 9
+      "rank": 10
     },
     {
       "card_id": "viltrox-35mm-f1-4",
@@ -1384,7 +1520,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "card_id": "sigma-28-45mm-f1-8",
@@ -1536,7 +1672,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "card_id": "sigma-14-24mm-f2-8",
@@ -1689,7 +1825,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "card_id": "canon-35mm-f1-4",
@@ -1838,7 +1974,7 @@
       "flags": [
         "missing weighted axes: af_performance"
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "card_id": "fujifilm-27mm-f2-8",
@@ -1951,7 +2087,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 14
+      "rank": 15
     },
     {
       "card_id": "sigma-16-28mm-f2-8",
@@ -2055,7 +2191,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh"
       ],
-      "rank": 15
+      "rank": 16
     },
     {
       "card_id": "nikon-28mm-f2-8",
@@ -2208,7 +2344,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 16
+      "rank": 17
     },
     {
       "card_id": "olympus-45mm-f1-2",
@@ -2360,7 +2496,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 17
+      "rank": 18
     },
     {
       "card_id": "canon-45mm-f1-2",
@@ -2512,7 +2648,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 18
+      "rank": 19
     },
     {
       "card_id": "nikon-35mm-f1-4",
@@ -2610,7 +2746,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh"
       ],
-      "rank": 19
+      "rank": 20
     },
     {
       "card_id": "sigma-50mm-f1-4",
@@ -2752,7 +2888,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 20
+      "rank": 21
     },
     {
       "card_id": "olympus-50mm-f1-8",
@@ -2889,7 +3025,7 @@
       "flags": [
         "missing weighted axes: af_performance"
       ],
-      "rank": 21
+      "rank": 22
     },
     {
       "card_id": "sigma-17-40mm-f1-8",
@@ -3041,7 +3177,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 22
+      "rank": 23
     },
     {
       "card_id": "sigma-15mm-f1-4",
@@ -3193,7 +3329,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 23
+      "rank": 24
     },
     {
       "card_id": "sony-35mm-f2-8",
@@ -3334,7 +3470,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 24
+      "rank": 25
     },
     {
       "card_id": "sigma-45mm-f2-8",
@@ -3486,7 +3622,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 25
+      "rank": 26
     },
     {
       "card_id": "fujifilm-16mm-f2-8",
@@ -3640,7 +3776,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 26
+      "rank": 27
     },
     {
       "card_id": "sony-50mm-f1-4",
@@ -3760,7 +3896,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): handling"
       ],
-      "rank": 27
+      "rank": 28
     },
     {
       "card_id": "sigma-35mm-f1-4",
@@ -3913,7 +4049,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, color_rendition"
       ],
-      "rank": 28
+      "rank": 29
     },
     {
       "card_id": "canon-22mm-f2",
@@ -4067,7 +4203,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 29
+      "rank": 30
     },
     {
       "card_id": "sony-16-25mm-f2-8",
@@ -4208,7 +4344,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 30
+      "rank": 31
     },
     {
       "card_id": "canon-24mm-f2-8",
@@ -4360,7 +4496,132 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 31
+      "rank": 32
+    },
+    {
+      "card_id": "nikon-50mm-f1-8",
+      "display_name": "Nikon AF Nikkor 50mm f/1.8D",
+      "rankable": true,
+      "score": 2.2,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.0,
+          "pos": 3,
+          "neg": 3,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "firsthand",
+              "quote": "so for a 50 mm to just be this just standing off of the out of focus areas You Don't See that a whole lot anymore it's of course a little soft at f1.8 as was common back in the day this is the one we took for sharpness w…"
+            },
+            {
+              "source_id": "youtube-marco-aries-af-nikkor-50mm-f18-vintage-lens-review-and-test",
+              "url": "https://www.youtube.com/watch?v=ea6uwr_LztU",
+              "witness": "unattested",
+              "quote": "it is but it is also very plasticky the controls turn smoothly but they are very light especially the focus ring wide open it is soft with some detail showing through and it gets progressively worse towards the corners b…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "handling",
+          "weight": 2,
+          "s": 1.0,
+          "pos": 2,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 2.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
+              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
+              "witness": "unattested",
+              "quote": "the plus side the focusing ring on this lens is stationary and that's a marked advantage over some of the other 50 millimeter lenses of this vintage that were designed for auto Focus use the next tip is that this is a re…"
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "unattested",
+              "quote": "on something artistic and wonderful and world [Music] changing maybe some of these leaves over [Music] here you know when you come back to these old lenses you kind of forget that there was a time where boka balls were b…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 1,
+          "s": 0.2,
+          "pos": 3,
+          "neg": 2,
+          "total": 5,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.2,
+          "top_sources": [
+            {
+              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
+              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
+              "witness": "firsthand",
+              "quote": "one that I like more this lens delivers great color excellent contrast works well on both film and digital and has interesting though sometimes chaotic and blurry out of focus areas doing nothing now that can't be resear…"
+            },
+            {
+              "source_id": "youtube-zwade-photo-the-best-value-50mm-lens-nikkor-50mm-f18-d-test-review",
+              "url": "https://www.youtube.com/watch?v=WiPrRR96e4U",
+              "witness": "firsthand",
+              "quote": "I need something and then I'll tell you how much I paid for this lens in 2024 all right so we've got our first little check here of the red saturation red looks really good there's a lot of uh punch to this lens there's …"
+            },
+            {
+              "source_id": "youtube-marco-aries-af-nikkor-50mm-f18-vintage-lens-review-and-test",
+              "url": "https://www.youtube.com/watch?v=ea6uwr_LztU",
+              "witness": "unattested",
+              "quote": "usually softened by blooming colors are on the colder side with good contrast and lacking some saturation specular highlights have some hard edges but no artifacts and backgrounds can vary from smeared and painterly to s…"
+            }
+          ],
+          "axis_display": "Color Rendition"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "optical_performance",
+        "handling",
+        "bokeh",
+        "color_rendition"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
+      ],
+      "rank": 33
     },
     {
       "card_id": "canon-40mm-f2-8",
@@ -4507,7 +4768,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, color_rendition"
       ],
-      "rank": 32
+      "rank": 34
     },
     {
       "card_id": "sony-28mm-f2",
@@ -4637,7 +4898,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 33
+      "rank": 35
     },
     {
       "card_id": "sigma-19mm-f2-8",
@@ -4785,7 +5046,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 34
+      "rank": 36
     },
     {
       "card_id": "sony-12-24mm-f2-8",
@@ -4932,7 +5193,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): bokeh, color_rendition"
       ],
-      "rank": 35
+      "rank": 37
     },
     {
       "card_id": "fujifilm-23mm-f1-4",
@@ -5068,7 +5329,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
-      "rank": 36
+      "rank": 38
     },
     {
       "card_id": "nikon-50mm-f2",
@@ -5205,160 +5466,7 @@
       "flags": [
         "missing weighted axes: af_performance"
       ],
-      "rank": 37
-    },
-    {
-      "card_id": "canon-20mm-f2-8",
-      "display_name": "Canon EF 20mm f/2.8 USM",
-      "rankable": true,
-      "score": 1.8738,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.1014,
-          "pos": 30,
-          "neg": 23,
-          "total": 69,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.3043,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
-              "witness": "firsthand",
-              "quote": "then firstly on a fullframe camera a 20 megap Canon 6D peripheral illumination and chromatic aberration correction are turned on at f2.8 the image is nice and sharp in the middle over in the corners we're definitely seei…"
-            },
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "[Music] welcome to Doc's on photography and welcome to the canon EF 20 millimeter F 2.8 lens review I'm starting off the video by filming myself with that lens so you can see actually the angle and I'm shooting it wide o…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "up pretty much all of that 15 cm not leaving harl space beyond that so you have to get very close to your subject it also exaggerates any kind of distortion so you don't get a flat plan of focus at all I don't find that …"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "handling",
-          "weight": 2,
-          "s": 0.5556,
-          "pos": 6,
-          "neg": 1,
-          "total": 9,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 1.1111,
-          "top_sources": [
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "taking pictures of yourself to not be so distant from the camera on lens I really like that you don't really see that it's a super wide angle lens use what I mean by that is when you use a super wide angle lens and you m…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "of the ergonomics it feels like a very natural fit when it comes to the autofocus very much like a native lens and obviously this is a much more Superior instrument optically compared to the native Canon lens that's avai…"
-            },
-            {
-              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
-              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
-              "witness": "firsthand",
-              "quote": "i'm going through but i just want to see how the field of view looks like with the 20mm and how the stabilization is this is with the ibis as well as the digital is on this is not enhanced stabilization it's just standar…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "bokeh",
-          "weight": 1,
-          "s": 0.3333,
-          "pos": 11,
-          "neg": 4,
-          "total": 21,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "a wide open aperture lens but on a wide angle or super wide angle lens you might not get that blurry background that much the closer you are the more blurry the background will be so now you see there is blurry backgroun…"
-            },
-            {
-              "source_id": "youtube-jozz-glass-canon-fd-20mm-f28-review",
-              "url": "https://www.youtube.com/watch?v=77-782_kAp0",
-              "witness": "firsthand",
-              "quote": "little more magic or it's almost like a painting or like really like film it's really actually beautiful and i'm going to show you some of the footage here so you're not just looking at me in this lens so i think uh with…"
-            },
-            {
-              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
-              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
-              "witness": "firsthand",
-              "quote": "maximum magnification goes up when you use this one is 0.14 times this one is 0.26 times so the rf has nine elements in seven groups and i have seven rounded plates whereas the ef 20mm has eleven elements in nine groups …"
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 1,
-          "s": 0.125,
-          "pos": 4,
-          "neg": 3,
-          "total": 8,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.125,
-          "top_sources": [
-            {
-              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
-              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
-              "witness": "firsthand",
-              "quote": "it colder so this can be normal but I like it warm and sometimes I like it a little bit different so let's do something different maybe like this or like this and I feel photography is very subjective you can do a lot if…"
-            },
-            {
-              "source_id": "youtube-dustin-abbott-tamron-11-20mm-f28-rxd-for-canon-rf-review-better-on-canon",
-              "url": "https://www.youtube.com/watch?v=ASWuxpH1MK4",
-              "witness": "firsthand",
-              "quote": "18 MIM on Sony my opinion is the opposite here on Canon I don't know what it is but it seems like tamron's colors are in this particular lens compared to the sigma just seemed to be a little bit better match for Canon's …"
-            },
-            {
-              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
-              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
-              "witness": "unattested",
-              "quote": "now how the lens works against Bright Lights the answer is poorly with plenty of colorful flaring and a major loss of contrast not surprising for an older lens but considering its wide angle that is rather a problem as t…"
-            }
-          ],
-          "axis_display": "Color Rendition"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "handling",
-        "color_rendition"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): handling, color_rendition"
-      ],
-      "rank": 38
+      "rank": 39
     },
     {
       "card_id": "canon-16-35mm-f2-8",
@@ -5477,7 +5585,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 39
+      "rank": 40
     },
     {
       "card_id": "sigma-23mm-f1-4",
@@ -5629,7 +5737,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 40
+      "rank": 41
     },
     {
       "card_id": "sony-50mm-f1-2",
@@ -5744,190 +5852,44 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): handling, bokeh"
       ],
-      "rank": 41
-    },
-    {
-      "card_id": "canon-14mm-f2-8",
-      "display_name": "Canon EF 14mm f/2.8L II USM",
-      "rankable": true,
-      "score": 1.6319,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.2,
-          "pos": 32,
-          "neg": 18,
-          "total": 70,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.6,
-          "top_sources": [
-            {
-              "source_id": "youtube-christopher-frost-ttartisan-14mm-f28-lens-review",
-              "url": "https://www.youtube.com/watch?v=qDmet2FqOdM",
-              "witness": "firsthand",
-              "quote": "I love that 14 mm ultra wide angle on a full-frame camera."
-            },
-            {
-              "source_id": "youtube-lindsey-ruth-my-favorite-lens-canon-14mm-f28-l",
-              "url": "https://www.youtube.com/watch?v=s2xW3VE0Ngo",
-              "witness": "firsthand",
-              "quote": "face unless it's absolutely your intention looks pretty weird this lens just really the way it interprets light the way it interprets color it's really sharp it's really freeing in that you can shoot in smaller spaces um…"
-            },
-            {
-              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
-              "witness": "firsthand",
-              "quote": "going to see how this lens is in terms of distortion so the edges do they fall really in the background compared to the 11 to 24 mil and I have birthday by the way in a couple days so if you have an extra Asos 1dx Mark I…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "handling",
-          "weight": 2,
-          "s": 0.2222,
-          "pos": 8,
-          "neg": 4,
-          "total": 18,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.4444,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-conspiracies-7-artisans-14mm-f28-any-advantages-over-laowa-12mm10mm",
-              "url": "https://www.youtube.com/watch?v=C6yE-BCSp9U",
-              "witness": "firsthand",
-              "quote": "We have a clicky or non-clicky aperture ring."
-            },
-            {
-              "source_id": "youtube-christian-möhrle-the-phlog-photography-budget-wide-angle-perfection-ttartisan-14mm-f28-r",
-              "url": "https://www.youtube.com/watch?v=57CDvmRbP8o",
-              "witness": "firsthand",
-              "quote": "But what I noticed due to its compact build, I do struggle adjusting the aperture ring as it's kind of close to the camera body."
-            },
-            {
-              "source_id": "youtube-the-daniel-life-canon-ef-14mm-f28l-ii-usm-vs-11-24mm-f4-super-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=Jag4468LAWo",
-              "witness": "firsthand",
-              "quote": "angle lens and you can use it perfectly for interior stuff and that's what I'm going to show you right now so stay tuned and as I promised this lens is perfect when you shoot architecture you're able to get everything in…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "bokeh",
-          "weight": 1,
-          "s": 0.1875,
-          "pos": 7,
-          "neg": 4,
-          "total": 16,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.1875,
-          "top_sources": [
-            {
-              "source_id": "youtube-camera-conspiracies-7-artisans-14mm-f28-any-advantages-over-laowa-12mm10mm",
-              "url": "https://www.youtube.com/watch?v=C6yE-BCSp9U",
-              "witness": "firsthand",
-              "quote": "But he noticed that I had hidden snacks under the lens and he just kept focusing on that."
-            },
-            {
-              "source_id": "youtube-christian-möhrle-the-phlog-photography-budget-wide-angle-perfection-ttartisan-14mm-f28-r",
-              "url": "https://www.youtube.com/watch?v=57CDvmRbP8o",
-              "witness": "firsthand",
-              "quote": "To get the water to look nice and smooth, I used a longer shutter speed of around 1.6 seconds."
-            },
-            {
-              "source_id": "youtube-theroadsidephotographer-canon-ef-14mm-f28l-ii-review-with-sample-imagesvideo",
-              "url": "https://www.youtube.com/watch?v=Y5LZ7FXqp5A",
-              "witness": "firsthand",
-              "quote": "really awesome blur and of course you can't put a neutral density or polarizer or any other kind of filter on the lens because it doesn't have a filter thread so those are probably only two things I don't like about the …"
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 1,
-          "s": 0.4,
-          "pos": 3,
-          "neg": 1,
-          "total": 5,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": 0.4,
-          "top_sources": [
-            {
-              "source_id": "youtube-lens-data-lens-data-canon-ef-14mm-f28-l-ii-usm-review",
-              "url": "https://www.youtube.com/watch?v=AxRxf1-hSck",
-              "witness": "unattested",
-              "quote": "But what matters the most is the overall wide-angle look, not compressing the image edges, for flattering compositions, and the color and contrast balance; one of the best in class."
-            },
-            {
-              "source_id": "youtube-wilkinson-cameras-lens-review-canon-rf-7-14mm-f28-35l-fisheye-stm-pro-creator-tool-or-ex",
-              "url": "https://www.youtube.com/watch?v=-a45pqZySuk",
-              "witness": "unattested",
-              "quote": "This works really well for subject separation, giving you softer and more natural looking backgrounds and [music] pleasing circular highlights, especially when shooting portraits or isolating details."
-            }
-          ],
-          "axis_display": "Color Rendition"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [
-        "color_rendition"
-      ],
-      "flags": [
-        "missing weighted axes: af_performance",
-        "thin (< 15 claims): color_rendition"
-      ],
       "rank": 42
     },
     {
-      "card_id": "nikon-50mm-f1-8",
-      "display_name": "Nikon AF Nikkor 50mm f/1.8D",
+      "card_id": "sigma-20mm-f1-4",
+      "display_name": "Sigma 20mm f/1.4 DG HSM Art",
       "rankable": true,
-      "score": 1.6295,
+      "score": 1.5897,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.1373,
-          "pos": 45,
-          "neg": 31,
-          "total": 102,
+          "s": 0.3077,
+          "pos": 21,
+          "neg": 9,
+          "total": 39,
           "confidence": "low",
-          "contested": true,
+          "contested": false,
           "thin": false,
-          "contribution": 0.4118,
+          "contribution": 0.9231,
           "top_sources": [
             {
-              "source_id": "youtube-adrian-alford-photography-nikon-50mm-f18g-lens-long-term-review",
-              "url": "https://www.youtube.com/watch?v=AVzEvLKsvcc",
-              "witness": "firsthand",
-              "quote": "terms of the quality images you can get from it the reason I bought this lens in the first place is because I was going on a trip to New Zealand and I intended to do a lot of video in low light and at nighttime and at th…"
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "produce shots with image quality that were impossible at a wide open aperture of f1.4 not long ago."
             },
             {
-              "source_id": "youtube-christopher-frost-nikkor-z-50mm-f18-s-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=i-PqTvcS1r0",
-              "witness": "firsthand",
-              "quote": "camera we'll start in the 45 map full frame mode in the middle of the image sharpness and contrast are absolutely perfect straight from f1.8 nice the good news is that unlike on less expensive 50 mm f1.8 lenses the corne…"
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom."
             },
             {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "z7 with its very difficult 45 map sensor in the middle of the image we see pretty good sharpness but only a reasonable amount of contrast image quality in the corners is noticeably soft f2.8 shows a tiny bit more clarity…"
+              "source_id": "dxomark-sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition",
+              "url": "https://www.dxomark.com/sigma-20mm-f1-4-dg-hsm-a-canon-mount-review-tempting-new-addition/",
+              "witness": "unattested",
+              "quote": "9.84&rsquo;&nbsp;(25cm) minimum focus Measurements: High score and high peak sharpness With a DxO Mark lens score of 31 points and a peak sharpness of 18P-."
             }
           ],
           "axis_display": "Optical Performance"
@@ -5935,32 +5897,20 @@
         {
           "axis": "handling",
           "weight": 2,
-          "s": 0.25,
-          "pos": 8,
-          "neg": 3,
-          "total": 20,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 3,
           "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.5,
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
           "top_sources": [
             {
-              "source_id": "youtube-brady-hommel-sharpest-lens-ive-owned-nikon-z-50mm-f18-review-with-sample-images",
-              "url": "https://www.youtube.com/watch?v=Kf2bnAmx0y0",
-              "witness": "firsthand",
-              "quote": "here we are so for starters this lens is built fantastic the focus ring is super smooth it's a really basic lens very minimalistic design all it has on it is a one switch to switch from auto focus to manual focus and the…"
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "G overall it's a bit nicer to handle than the cheaper Canon and Sony 50 mm f1.8 lenses which I've tested in the past nickon really tried to make something of this little lens well let's move on and look at its image qual…"
-            },
-            {
-              "source_id": "youtube-matt-osborne-best-nikon-50mm-lens-nikkor-micro-55mm-nikkor-50mm-f18-pancake-voigtlander",
-              "url": "https://www.youtube.com/watch?v=Y94ITPt3W4s",
-              "witness": "firsthand",
-              "quote": "obviously this is not a lens suited for every situation but i'll come on to that in more detail in a second okay and lastly before you unsubscribe because of this lens bear with me it could be better than you think this …"
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "find lenses with a less optimal manual override mechanism or even with manual focus only (like from Samyang)."
             }
           ],
           "axis_display": "Handling"
@@ -5968,76 +5918,42 @@
         {
           "axis": "bokeh",
           "weight": 1,
-          "s": 0.1622,
-          "pos": 16,
-          "neg": 10,
-          "total": 37,
+          "s": 0.6667,
+          "pos": 2,
+          "neg": 0,
+          "total": 3,
           "confidence": "low",
           "contested": true,
-          "thin": false,
-          "contribution": 0.1622,
+          "thin": true,
+          "contribution": 0.6667,
           "top_sources": [
             {
-              "source_id": "youtube-brady-hommel-sharpest-lens-ive-owned-nikon-z-50mm-f18-review-with-sample-images",
-              "url": "https://www.youtube.com/watch?v=Kf2bnAmx0y0",
-              "witness": "firsthand",
-              "quote": "blurs the background a little more and then as you get closer to the camera it'll even blur it more and this is why I feel the 35 millimeter would have been a little better for my needs I have this camera right now like …"
+              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
+              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
+              "witness": "unattested",
+              "quote": "&#8211; although don&#8217;t expect wonders regarding background blur."
             },
             {
-              "source_id": "youtube-dustin-abbott-nikkor-z-50mm-f18-s-review-is-the-og-lens-still-the-best",
-              "url": "https://www.youtube.com/watch?v=wRLpxFGmQ0I",
-              "witness": "firsthand",
-              "quote": "Now, when I compared things like the uh the specular highlights, bokeh balls, if you want to call them that, I found that the f1.4 four lens has more pleasing roundness or geometry to them."
-            },
-            {
-              "source_id": "youtube-kieran-hayes-photography-nikon-z-50mm-f18-review-i-did-something-really-stupid-again",
-              "url": "https://www.youtube.com/watch?v=bT2wke6N5nE",
-              "witness": "firsthand",
-              "quote": "different apertures too as well of course so let's have a look at some test chart images of dbby here again and see how well this lens performs so here's our photograph of dubby shot at f1.8 with the focus on his closest…"
+              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
+              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
+              "witness": "unattested",
+              "quote": "Sigma HSM autofocus motor should ensure snappy AF performance, and the 9-rounded aperture blades will help render beautiful background bokeh ."
             }
           ],
           "axis_display": "Bokeh"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 1,
-          "s": 0.5556,
-          "pos": 12,
-          "neg": 2,
-          "total": 18,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.5556,
-          "top_sources": [
-            {
-              "source_id": "photographylife-reviews-nikon-z-50mm-f1-8-s",
-              "url": "https://photographylife.com/reviews/nikon-z-50mm-f1-8-s",
-              "witness": "firsthand",
-              "quote": "To answer those questions and more, our team at Photography Life has tested the."
-            },
-            {
-              "source_id": "youtube-christopher-frost-nikon-af-s-50mm-f18-g-lens-review-with-samples-full-frame-aps-c",
-              "url": "https://www.youtube.com/watch?v=K8kUyze_lm4",
-              "witness": "firsthand",
-              "quote": "of color tinting in outer Focus areas at f2.8 those colors are tamed down and at F4 they're gone so overall as I mentioned before this particular lens is a tiny bit more expensive than some other very lowbudget Nifty 50s…"
-            },
-            {
-              "source_id": "youtube-david-hancock-nikon-af-nikkor-50mm-f18-classic-nikon-glass-round-glass-review",
-              "url": "https://www.youtube.com/watch?v=1ewXw5epPvw",
-              "witness": "firsthand",
-              "quote": "one that I like more this lens delivers great color excellent contrast works well on both film and digital and has interesting though sometimes chaotic and blurry out of focus areas doing nothing now that can't be resear…"
-            }
-          ],
-          "axis_display": "Color Rendition"
         }
       ],
       "missing_axes": [
+        "color_rendition",
         "af_performance"
       ],
-      "thin_axes": [],
+      "thin_axes": [
+        "handling",
+        "bokeh"
+      ],
       "flags": [
-        "missing weighted axes: af_performance"
+        "missing weighted axes: color_rendition, af_performance",
+        "thin (< 15 claims): handling, bokeh"
       ],
       "rank": 43
     },
@@ -7094,121 +7010,6 @@
       "rank": 52
     },
     {
-      "card_id": "sigma-20mm-f1-4",
-      "display_name": "Sigma 20mm f/1.4 DG HSM Art",
-      "rankable": true,
-      "score": 0.9049,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.2683,
-          "pos": 21,
-          "neg": 10,
-          "total": 41,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.8049,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "And although it is not quite as sharp as the Sony FE 20mm f1.8 G the combined."
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
-              "witness": "unattested",
-              "quote": "produce shots with image quality that were impossible at a wide open aperture of f1.4 not long ago."
-            },
-            {
-              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
-              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
-              "witness": "unattested",
-              "quote": "Lens&nbsp;Test Results Super-wide f/1.4 aperture prime In recent years Sigma has vastly expanded its &ldquo;Art&rdquo; (A) range of premium optics to include prime and zoom."
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "handling",
-          "weight": 2,
-          "s": -0.25,
-          "pos": 1,
-          "neg": 2,
-          "total": 4,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": -0.5,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "soft pouch and its lens hood has no lock.[+] Aperture ring: Yes, all three lenses in this comparison have a dedicated aperture ring with 1/3."
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
-              "witness": "unattested",
-              "quote": "find lenses with a less optimal manual override mechanism or even with manual focus only (like from Samyang)."
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "bokeh",
-          "weight": 1,
-          "s": 0.6,
-          "pos": 3,
-          "neg": 0,
-          "total": 5,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.6,
-          "top_sources": [
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-dn-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-dn-art-review/",
-              "witness": "unattested",
-              "quote": "The lens offers quite a nice Bokeh for an ultra-wide and."
-            },
-            {
-              "source_id": "cameralabs-sigma-20mm-f1-4-dg-hsm-art-review",
-              "url": "https://www.cameralabs.com/sigma-20mm-f1-4-dg-hsm-art-review/",
-              "witness": "unattested",
-              "quote": "&#8211; although don&#8217;t expect wonders regarding background blur."
-            },
-            {
-              "source_id": "dxomark-sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect",
-              "url": "https://www.dxomark.com/sigma-20mm-f-1-4-dg-hsm-a-canon-lens-review-picture-perfect/",
-              "witness": "unattested",
-              "quote": "Sigma HSM autofocus motor should ensure snappy AF performance, and the 9-rounded aperture blades will help render beautiful background bokeh ."
-            }
-          ],
-          "axis_display": "Bokeh"
-        }
-      ],
-      "missing_axes": [
-        "color_rendition",
-        "af_performance"
-      ],
-      "thin_axes": [
-        "handling",
-        "bokeh"
-      ],
-      "flags": [
-        "missing weighted axes: color_rendition, af_performance",
-        "thin (< 15 claims): handling, bokeh"
-      ],
-      "rank": 53
-    },
-    {
       "card_id": "olympus-25mm-f1-8",
       "display_name": "Olympus M.Zuiko Digital 25mm f/1.8",
       "rankable": true,
@@ -7331,7 +7132,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 54
+      "rank": 53
     },
     {
       "card_id": "canon-50mm-f1-2",
@@ -7456,7 +7257,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 55
+      "rank": 54
     },
     {
       "card_id": "canon-16mm-f2-8",
@@ -7576,7 +7377,7 @@
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): bokeh"
       ],
-      "rank": 56
+      "rank": 55
     },
     {
       "card_id": "sony-50mm-f2-8",
@@ -7728,7 +7529,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 57
+      "rank": 56
     },
     {
       "card_id": "sigma-16mm-f1-4",
@@ -7853,126 +7654,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 58
-    },
-    {
-      "card_id": "nikon-35mm-f2-8",
-      "display_name": "Nikon Nikkor-S Auto 35mm f/2.8",
-      "rankable": true,
-      "score": 0.3962,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "optical_performance",
-          "weight": 3,
-          "s": 0.05,
-          "pos": 31,
-          "neg": 27,
-          "total": 80,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.15,
-          "top_sources": [
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "really tend to rely on but I do like the aesthetic effect that they give so a very nicely made lens for sure so this is a very sharp lens all the way from wide open at F 2.8 and it renders details very crisply and very c…"
-            }
-          ],
-          "axis_display": "Optical Performance"
-        },
-        {
-          "axis": "handling",
-          "weight": 2,
-          "s": 0.125,
-          "pos": 6,
-          "neg": 4,
-          "total": 16,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.25,
-          "top_sources": [
-            {
-              "source_id": "youtube-gordon-laing-best-lens-for-a-vintage-dslr-nikon-35-f2d-vs-35-f18g",
-              "url": "https://www.youtube.com/watch?v=AARo-_1G1GU",
-              "witness": "firsthand",
-              "quote": "felt much smoother to the aperture control and all of those numbers printed on the barrel it hails from an era of nikon product design that i'm personally very fond of and to me simply looks much better when mounted on t…"
-            },
-            {
-              "source_id": "youtube-robin-wong-i-found-this-35mm-prime-for-40-i-love-it",
-              "url": "https://www.youtube.com/watch?v=5i0Ehw7J_2Y",
-              "witness": "firsthand",
-              "quote": "When it comes to lens handling, I've no issue using this lens on this Nikon D600, the camera is relatively so much larger than the lens."
-            },
-            {
-              "source_id": "youtube-theoria-apophasis-tale-of-two-35mm-nikkor-lenses-f2-d-af-and-f14g-af-s",
-              "url": "https://www.youtube.com/watch?v=JLXi1YHa4zk",
-              "witness": "firsthand",
-              "quote": "recently I reviewed a bunch of lenses and one of the questions I get asked most frequently is I thought you said some months ago that so-and-so is your favorite lens like well for what exact purpose I mean so they're an …"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "bokeh",
-          "weight": 1,
-          "s": -0.0455,
-          "pos": 7,
-          "neg": 8,
-          "total": 22,
-          "confidence": "low",
-          "contested": true,
-          "thin": false,
-          "contribution": -0.0455,
-          "top_sources": [
-            {
-              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
-              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
-              "witness": "firsthand",
-              "quote": "scale you can see on this lens are on the barrel and which extend up underneath the focusing ring you see as I turn the focusing ring it moves up to expose these hyper focal marks right here so that style is very charact…"
-            },
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "it all right let's think about background blur well now this or any other 35 mil come to that is not the kind of lens that you'd buy with background blur at the Forefront of your mind this is a wide angle lens designed r…"
-            }
-          ],
-          "axis_display": "Bokeh"
-        },
-        {
-          "axis": "color_rendition",
-          "weight": 1,
-          "s": 0.0417,
-          "pos": 12,
-          "neg": 11,
-          "total": 24,
-          "confidence": "low",
-          "contested": false,
-          "thin": false,
-          "contribution": 0.0417,
-          "top_sources": [
-            {
-              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
-              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
-              "witness": "firsthand",
-              "quote": "this lens has a 30 cm minimum Focus distance so it gets pretty nice and close to whatever subject you're shooting that's a usefully short minimum Focus distance and apertures run from f2.8 all the way up to F22 and as us…"
-            }
-          ],
-          "axis_display": "Color Rendition"
-        }
-      ],
-      "missing_axes": [
-        "af_performance"
-      ],
-      "thin_axes": [],
-      "flags": [
-        "missing weighted axes: af_performance"
-      ],
-      "rank": 59
+      "rank": 57
     },
     {
       "card_id": "canon-50mm-f1-8",
@@ -8124,7 +7806,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 60
+      "rank": 58
     },
     {
       "card_id": "panasonic-25mm-f1-7",
@@ -8277,7 +7959,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): handling, color_rendition"
       ],
-      "rank": 61
+      "rank": 59
     },
     {
       "card_id": "canon-50mm-f1-4",
@@ -8429,7 +8111,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): color_rendition"
       ],
-      "rank": 62
+      "rank": 60
     },
     {
       "card_id": "olympus-7-14mm-f2-8",
@@ -8548,7 +8230,7 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 63
+      "rank": 61
     },
     {
       "card_id": "nikon-24mm-f1-8",
@@ -8673,7 +8355,98 @@
         "missing weighted axes: af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh, color_rendition"
       ],
-      "rank": 64
+      "rank": 62
+    },
+    {
+      "card_id": "nikon-35mm-f2-8",
+      "display_name": "Nikon Nikkor-S Auto 35mm f/2.8",
+      "rankable": true,
+      "score": -0.2763,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": 0.1579,
+          "pos": 6,
+          "neg": 3,
+          "total": 19,
+          "confidence": "low",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.4737,
+          "top_sources": [
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "really tend to rely on but I do like the aesthetic effect that they give so a very nicely made lens for sure so this is a very sharp lens all the way from wide open at F 2.8 and it renders details very crisply and very c…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 1,
+          "s": -0.75,
+          "pos": 0,
+          "neg": 3,
+          "total": 4,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": -0.75,
+          "top_sources": [
+            {
+              "source_id": "youtube-brians-photo-show-history-of-the-nikkor-35mm-f28-the-various-versions",
+              "url": "https://www.youtube.com/watch?v=FcjHtVMcCJE",
+              "witness": "firsthand",
+              "quote": "scale you can see on this lens are on the barrel and which extend up underneath the focusing ring you see as I turn the focusing ring it moves up to expose these hyper focal marks right here so that style is very charact…"
+            },
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "it all right let's think about background blur well now this or any other 35 mil come to that is not the kind of lens that you'd buy with background blur at the Forefront of your mind this is a wide angle lens designed r…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 5,
+          "neg": 5,
+          "total": 11,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-zenography-nikon-35mm-f28-my-new-favourite-vintage-wide-angle-lens",
+              "url": "https://www.youtube.com/watch?v=kcQIdIoqiNI",
+              "witness": "firsthand",
+              "quote": "this lens has a 30 cm minimum Focus distance so it gets pretty nice and close to whatever subject you're shooting that's a usefully short minimum Focus distance and apertures run from f2.8 all the way up to F22 and as us…"
+            }
+          ],
+          "axis_display": "Color Rendition"
+        }
+      ],
+      "missing_axes": [
+        "handling",
+        "af_performance"
+      ],
+      "thin_axes": [
+        "bokeh",
+        "color_rendition"
+      ],
+      "flags": [
+        "missing weighted axes: handling, af_performance",
+        "thin (< 15 claims): bokeh, color_rendition"
+      ],
+      "rank": 63
     },
     {
       "card_id": "sony-16mm-f1-8",
@@ -8788,6 +8561,148 @@
       "flags": [
         "missing weighted axes: color_rendition, af_performance",
         "thin (< 15 claims): optical_performance, handling, bokeh"
+      ],
+      "rank": 64
+    },
+    {
+      "card_id": "canon-20mm-f2-8",
+      "display_name": "Canon EF 20mm f/2.8 USM",
+      "rankable": true,
+      "score": -0.68,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "optical_performance",
+          "weight": 3,
+          "s": -0.36,
+          "pos": 4,
+          "neg": 13,
+          "total": 25,
+          "confidence": "low",
+          "contested": true,
+          "thin": false,
+          "contribution": -1.08,
+          "top_sources": [
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
+              "witness": "firsthand",
+              "quote": "then firstly on a fullframe camera a 20 megap Canon 6D peripheral illumination and chromatic aberration correction are turned on at f2.8 the image is nice and sharp in the middle over in the corners we're definitely seei…"
+            },
+            {
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
+              "witness": "firsthand",
+              "quote": "[Music] welcome to Doc's on photography and welcome to the canon EF 20 millimeter F 2.8 lens review I'm starting off the video by filming myself with that lens so you can see actually the angle and I'm shooting it wide o…"
+            },
+            {
+              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
+              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
+              "witness": "firsthand",
+              "quote": "but we can compare it with the raw you can see will be less distortion and i technically prefer this in terms of photography whereas i find the 16 mm a bit over this top towards the edge you get stretch all your hands an…"
+            }
+          ],
+          "axis_display": "Optical Performance"
+        },
+        {
+          "axis": "handling",
+          "weight": 2,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 2,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
+              "witness": "firsthand",
+              "quote": "taking pictures of yourself to not be so distant from the camera on lens I really like that you don't really see that it's a super wide angle lens use what I mean by that is when you use a super wide angle lens and you m…"
+            },
+            {
+              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
+              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
+              "witness": "firsthand",
+              "quote": "i'm going through but i just want to see how the field of view looks like with the 20mm and how the stabilization is this is with the ibis as well as the digital is on this is not enhanced stabilization it's just standar…"
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "bokeh",
+          "weight": 1,
+          "s": 0.4,
+          "pos": 5,
+          "neg": 1,
+          "total": 10,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.4,
+          "top_sources": [
+            {
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
+              "witness": "firsthand",
+              "quote": "a wide open aperture lens but on a wide angle or super wide angle lens you might not get that blurry background that much the closer you are the more blurry the background will be so now you see there is blurry backgroun…"
+            },
+            {
+              "source_id": "youtube-richart-asia-canon-eos-r5-rf-16mm-f28-vs-ef-20mm-f28",
+              "url": "https://www.youtube.com/watch?v=YxOOsRvmN3o",
+              "witness": "firsthand",
+              "quote": "maximum magnification goes up when you use this one is 0.14 times this one is 0.26 times so the rf has nine elements in seven groups and i have seven rounded plates whereas the ef 20mm has eleven elements in nine groups …"
+            },
+            {
+              "source_id": "youtube-maxreviews-pro-canon-ef-20mm-f28-usm-lens-review",
+              "url": "https://www.youtube.com/watch?v=elsf5i5vRs8",
+              "witness": "unattested",
+              "quote": "a shallow depth of field when needed the lens construction incorporates a floating rear focusing system coupled with an ultrasonic motor USM ensuring Sharp Images across all subject distances at just 14.3 o it's incredib…"
+            }
+          ],
+          "axis_display": "Bokeh"
+        },
+        {
+          "axis": "color_rendition",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 1,
+          "neg": 1,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-dirksón-photography-canon-ef-20mm-f28-super-wide-angle-lens-review-for-2020-the-forgotte",
+              "url": "https://www.youtube.com/watch?v=wlIgbrUQ3Dk",
+              "witness": "firsthand",
+              "quote": "it colder so this can be normal but I like it warm and sometimes I like it a little bit different so let's do something different maybe like this or like this and I feel photography is very subjective you can do a lot if…"
+            },
+            {
+              "source_id": "youtube-christopher-frost-canon-ef-20mm-f28-usm-lens-review-with-samples-full-frame-and-aps-c",
+              "url": "https://www.youtube.com/watch?v=5kKA7IvCWWE",
+              "witness": "unattested",
+              "quote": "now how the lens works against Bright Lights the answer is poorly with plenty of colorful flaring and a major loss of contrast not surprising for an older lens but considering its wide angle that is rather a problem as t…"
+            }
+          ],
+          "axis_display": "Color Rendition"
+        }
+      ],
+      "missing_axes": [
+        "af_performance"
+      ],
+      "thin_axes": [
+        "handling",
+        "bokeh",
+        "color_rendition"
+      ],
+      "flags": [
+        "missing weighted axes: af_performance",
+        "thin (< 15 claims): handling, bokeh, color_rendition"
       ],
       "rank": 65
     },

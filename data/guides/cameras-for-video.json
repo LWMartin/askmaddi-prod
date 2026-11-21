@@ -1489,6 +1489,138 @@
       "rank": 7
     },
     {
+      "card_id": "canon-powershot-s3",
+      "display_name": "Canon PowerShot S3 IS",
+      "rankable": true,
+      "score": 4.3333,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "video_capability",
+          "weight": 3,
+          "s": 0.3333,
+          "pos": 2,
+          "neg": 0,
+          "total": 6,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "youtube-electronikz-videos-tech-product-review",
+              "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
+              "witness": "firsthand",
+              "quote": "some in Atlanta limit 2.0 inch re angle LCD display 20 shooting modes and my colors photo effects digitated kiss EPS and flex his own f /a forecast [Music] the sleet powershot s3 is digital camera offers you high resolut…"
+            },
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "With a high-capacity, high-speed card you can record up to 1GB of data &#8211; and even take a high-resolution still shot while."
+            },
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "Beyond stills, the PowerShot S3IS excels in video recording, offering 30 frame per second VGA movies with stereo sound and a photo and movie feature."
+            }
+          ],
+          "axis_display": "Video Capability"
+        },
+        {
+          "axis": "stabilization",
+          "weight": 2,
+          "s": 0.8333,
+          "pos": 5,
+          "neg": 0,
+          "total": 6,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.6667,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "and optical image stabilisation system and range of manual controls as its predecessor."
+            },
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "The inclusion of Canon's optical image stabilizer is a significant advantage, ensuring sharp and steady images and videos, even when shooting handheld or in challenging lighting conditions."
+            }
+          ],
+          "axis_display": "Stabilization"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.6667,
+          "pos": 2,
+          "neg": 0,
+          "total": 3,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.3333,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "Focus system/range : TTL AF (continuous or single; 1-point centre AF or Flex Zone AF) plus Manual; range 50 cm to infinity; macro 10-50."
+            },
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "The camera's DIGIC II processor, combined with iSAPS technology and FlexiZone AF/AE, contributes to fast and precise auto focus and exposure, resulting in well-exposed and sharp images."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.3333,
+          "pos": 1,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.3333,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "the S3-IS is comfortable to hold with a large hand grip and logical &#8211; albeit somewhat cluttered &#8211; control layout."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [
+        "evf_lcd",
+        "connectivity"
+      ],
+      "thin_axes": [
+        "video_capability",
+        "stabilization",
+        "autofocus_body",
+        "handling"
+      ],
+      "flags": [
+        "missing weighted axes: evf_lcd, connectivity",
+        "thin (< 15 claims): video_capability, stabilization, autofocus_body, handling"
+      ],
+      "rank": 8
+    },
+    {
       "card_id": "fujifilm-x100vi",
       "display_name": "Fujifilm X100VI",
       "rankable": true,
@@ -1631,7 +1763,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, autofocus_body, connectivity, handling"
       ],
-      "rank": 8
+      "rank": 9
     },
     {
       "card_id": "fujifilm-x-s20",
@@ -1842,7 +1974,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 9
+      "rank": 10
     },
     {
       "card_id": "sony-a7c",
@@ -2057,7 +2189,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 10
+      "rank": 11
     },
     {
       "card_id": "canon-r5",
@@ -2273,7 +2405,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity"
       ],
-      "rank": 11
+      "rank": 12
     },
     {
       "card_id": "canon-eos-r6-ii",
@@ -2471,7 +2603,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity"
       ],
-      "rank": 12
+      "rank": 13
     },
     {
       "card_id": "nikon-z5-ii",
@@ -2686,7 +2818,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 13
+      "rank": 14
     },
     {
       "card_id": "canon-powershot-sx70",
@@ -2895,7 +3027,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body"
       ],
-      "rank": 14
+      "rank": 15
     },
     {
       "card_id": "sony-a1",
@@ -3106,7 +3238,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 15
+      "rank": 16
     },
     {
       "card_id": "sony-a7-v",
@@ -3317,7 +3449,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 16
+      "rank": 17
     },
     {
       "card_id": "canon-eos-r50",
@@ -3520,7 +3652,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 17
+      "rank": 18
     },
     {
       "card_id": "canon-r6",
@@ -3735,7 +3867,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 18
+      "rank": 19
     },
     {
       "card_id": "sony-zv-e10",
@@ -3946,7 +4078,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 19
+      "rank": 20
     },
     {
       "card_id": "fujifilm-x-pro3",
@@ -4151,7 +4283,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 20
+      "rank": 21
     },
     {
       "card_id": "sony-a7r",
@@ -4336,7 +4468,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 21
+      "rank": 22
     },
     {
       "card_id": "insta360-go-ultra-4k-action",
@@ -4521,7 +4653,7 @@
         "missing weighted axes: evf_lcd",
         "thin (< 15 claims): autofocus_body"
       ],
-      "rank": 22
+      "rank": 23
     },
     {
       "card_id": "panasonic-lumix-gh6",
@@ -4732,7 +4864,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 23
+      "rank": 24
     },
     {
       "card_id": "fujifilm-x-t50",
@@ -4947,7 +5079,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 24
+      "rank": 25
     },
     {
       "card_id": "sony-a9-ii",
@@ -5158,7 +5290,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 25
+      "rank": 26
     },
     {
       "card_id": "nikon-z7",
@@ -5361,7 +5493,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 26
+      "rank": 27
     },
     {
       "card_id": "panasonic-s1-mirrorless",
@@ -5492,7 +5624,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity, handling"
       ],
-      "rank": 27
+      "rank": 28
     },
     {
       "card_id": "panasonic-lumix-l10",
@@ -5707,7 +5839,7 @@
       "flags": [
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 28
+      "rank": 29
     },
     {
       "card_id": "canon-eos-5d",
@@ -5867,7 +5999,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 29
+      "rank": 30
     },
     {
       "card_id": "nikon-d800",
@@ -6052,131 +6184,6 @@
       "flags": [
         "missing weighted axes: stabilization",
         "thin (< 15 claims): autofocus_body, connectivity"
-      ],
-      "rank": 30
-    },
-    {
-      "card_id": "canon-powershot-s3",
-      "display_name": "Canon PowerShot S3 IS",
-      "rankable": true,
-      "score": 2.2444,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "video_capability",
-          "weight": 3,
-          "s": 0.2667,
-          "pos": 6,
-          "neg": 2,
-          "total": 15,
-          "confidence": "medium",
-          "contested": true,
-          "thin": false,
-          "contribution": 0.8,
-          "top_sources": [
-            {
-              "source_id": "youtube-electronikz-videos-tech-product-review",
-              "url": "https://www.youtube.com/watch?v=W8ygLv0vOO8",
-              "witness": "firsthand",
-              "quote": "some in Atlanta limit 2.0 inch re angle LCD display 20 shooting modes and my colors photo effects digitated kiss EPS and flex his own f /a forecast [Music] the sleet powershot s3 is digital camera offers you high resolut…"
-            },
-            {
-              "source_id": "youtube-matmroy-canon-power-shot-s31s-picture-and-video-quality-test",
-              "url": "https://www.youtube.com/watch?v=pjVJ1z3kUk8",
-              "witness": "reported",
-              "quote": "hey youtube madame roy back once again um this is the new cat my new canon powershot s3 one s that i picked up at the garage sale for uh eight dollars and i'm just doing a quick uh movie test to see what kind of video qu…"
-            },
-            {
-              "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-              "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-              "witness": "unattested",
-              "quote": "want to do a separate video about this because this is an excellent camera this cam was made between 2006 and 2007 it features six megapixels which is sufficient for me as long as you're not blowing your pictures up like…"
-            }
-          ],
-          "axis_display": "Video Capability"
-        },
-        {
-          "axis": "autofocus_body",
-          "weight": 2,
-          "s": 0.5,
-          "pos": 2,
-          "neg": 0,
-          "total": 4,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-              "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-              "witness": "firsthand",
-              "quote": "on there on the side here we have two buttons here manual focus and looks like a quick button for the scene modes and this does have quite a few of them and as you can see if this will focus it does have the 12x optical …"
-            },
-            {
-              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-              "witness": "unattested",
-              "quote": "The camera's DIGIC II processor, combined with iSAPS technology and FlexiZone AF/AE, contributes to fast and precise auto focus and exposure, resulting in well-exposed and sharp images."
-            }
-          ],
-          "axis_display": "Autofocus"
-        },
-        {
-          "axis": "connectivity",
-          "weight": 1,
-          "s": 0.0,
-          "pos": 0,
-          "neg": 0,
-          "total": 3,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-              "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-              "witness": "firsthand",
-              "quote": "flash for the pictures and then your microphone control if you're in video mode the flash pops up here very typical for this type of camera right there you have your redeye reduction I believe that is a mic for the video…"
-            }
-          ],
-          "axis_display": "Connectivity"
-        },
-        {
-          "axis": "handling",
-          "weight": 1,
-          "s": 0.4444,
-          "pos": 4,
-          "neg": 0,
-          "total": 9,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.4444,
-          "top_sources": [
-            {
-              "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-              "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-              "witness": "unattested",
-              "quote": "the way that's planted because if you're holding the camera like this very convenient to have the zooom right there a lot of times they'll put them right on the back here you have your off button you push that to turn it…"
-            }
-          ],
-          "axis_display": "Handling"
-        }
-      ],
-      "missing_axes": [
-        "stabilization",
-        "evf_lcd"
-      ],
-      "thin_axes": [
-        "autofocus_body",
-        "connectivity",
-        "handling"
-      ],
-      "flags": [
-        "missing weighted axes: stabilization, evf_lcd",
-        "thin (< 15 claims): autofocus_body, connectivity, handling"
       ],
       "rank": 31
     },
@@ -17338,6 +17345,186 @@
       "rank": 92
     },
     {
+      "card_id": "sony-rx10-ii",
+      "display_name": "Sony rx10 ii",
+      "rankable": true,
+      "score": 0.4003,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "video_capability",
+          "weight": 3,
+          "s": 0.086,
+          "pos": 11,
+          "neg": 3,
+          "total": 93,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.2581,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sony-cyber-shot-rx10-mark-ii-review",
+              "url": "https://www.cameralabs.com/sony-cyber-shot-rx10-mark-ii-review/",
+              "witness": "unattested",
+              "quote": "and gives the RX10 II unprecedented speed for its class, boasting 4k video, stills at 14fps, an electronic shutter up to 1/32000 and new high."
+            },
+            {
+              "source_id": "dxomark-sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit",
+              "url": "https://www.dxomark.com/sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit/",
+              "witness": "unattested",
+              "quote": "high bit-rate 4K (UHD) video capture (up to 100 Mbps), albeit with 5-minute maximum clips (extendable to 29 minutes at lower bit-rates), and 960 fps."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "the camera for: stills or video."
+            }
+          ],
+          "axis_display": "Video Capability"
+        },
+        {
+          "axis": "stabilization",
+          "weight": 2,
+          "s": -0.0769,
+          "pos": 2,
+          "neg": 3,
+          "total": 13,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.1538,
+          "top_sources": [
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "From wide shots of both landscapes and cityscapes to close-ups and portraits, this."
+            }
+          ],
+          "axis_display": "Stabilization"
+        },
+        {
+          "axis": "autofocus_body",
+          "weight": 2,
+          "s": 0.0571,
+          "pos": 6,
+          "neg": 4,
+          "total": 35,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.1143,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sony-cyber-shot-rx10-mark-ii-review",
+              "url": "https://www.cameralabs.com/sony-cyber-shot-rx10-mark-ii-review/",
+              "witness": "unattested",
+              "quote": "same distance from the subject with the lens set to f2.8 at 200mm, The RX10 II&#8217;s larger sensor enables it to throw the background more."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "(24-200mm in 35mm format equivalence) Weatherproof : Partial (Splash and dust proof) Internal Stabilisation : Optical Steadyshot Autofocus : Contrast detection AF Continuous shooting :."
+            }
+          ],
+          "axis_display": "Autofocus"
+        },
+        {
+          "axis": "evf_lcd",
+          "weight": 1,
+          "s": 0.1818,
+          "pos": 5,
+          "neg": 1,
+          "total": 22,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.1818,
+          "top_sources": [
+            {
+              "source_id": "dxomark-sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit",
+              "url": "https://www.dxomark.com/sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit/",
+              "witness": "unattested",
+              "quote": "Other upgrades to the original model include a higher- resolution 2.35M-dot electronic viewfinder (up from the earlier 1.44M-dot panel) and."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "1/3200 to 30 seconds, up to 1/32000s with electronic shutter Viewfinder : XGA OLED 0.39 inch electronic viewfinder with 2,359k dots, approx."
+            }
+          ],
+          "axis_display": "EVF & LCD"
+        },
+        {
+          "axis": "connectivity",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 0,
+          "neg": 0,
+          "total": 15,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit",
+              "url": "https://www.dxomark.com/sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit/",
+              "witness": "unattested",
+              "quote": "WiFi with NFC, allowing users to share images and remotely control the camera from either an iOS or Android device."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "&nbsp; There is a mic input and headphone port if you want to record better audio."
+            }
+          ],
+          "axis_display": "Connectivity"
+        },
+        {
+          "axis": "handling",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 3,
+          "neg": 3,
+          "total": 14,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sony-cyber-shot-rx10-mark-ii-review",
+              "url": "https://www.cameralabs.com/sony-cyber-shot-rx10-mark-ii-review/",
+              "witness": "unattested",
+              "quote": "The RX10 II inherits the body, lens and tilting screen."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "Design, Ergonomics and Ease of Use 2."
+            }
+          ],
+          "axis_display": "Handling"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "stabilization",
+        "handling"
+      ],
+      "flags": [
+        "thin (< 15 claims): stabilization, handling"
+      ],
+      "rank": 93
+    },
+    {
       "card_id": "nikon-d3300",
       "display_name": "Nikon D3300",
       "rankable": true,
@@ -17485,7 +17672,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization"
       ],
-      "rank": 93
+      "rank": 94
     },
     {
       "card_id": "fujifilm-x-t3",
@@ -17657,7 +17844,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 94
+      "rank": 95
     },
     {
       "card_id": "hasselblad-500-cm",
@@ -17711,7 +17898,7 @@
       "flags": [
         "missing weighted axes: video_capability, stabilization, autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 95
+      "rank": 96
     },
     {
       "card_id": "panasonic-s1h",
@@ -17879,7 +18066,7 @@
       "flags": [
         "thin (< 15 claims): autofocus_body, connectivity"
       ],
-      "rank": 96
+      "rank": 97
     },
     {
       "card_id": "panasonic-gh2",
@@ -18064,7 +18251,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 97
+      "rank": 98
     },
     {
       "card_id": "canon-eos-r5-c",
@@ -18268,7 +18455,7 @@
       "flags": [
         "thin (< 15 claims): evf_lcd, connectivity"
       ],
-      "rank": 98
+      "rank": 99
     },
     {
       "card_id": "nikon-z50",
@@ -18451,7 +18638,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 99
+      "rank": 100
     },
     {
       "card_id": "nikon-d5600",
@@ -18556,7 +18743,7 @@
         "missing weighted axes: video_capability, stabilization, handling",
         "thin (< 15 claims): autofocus_body, evf_lcd, connectivity"
       ],
-      "rank": 100
+      "rank": 101
     },
     {
       "card_id": "fujifilm-x-e1",
@@ -18721,7 +18908,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 101
+      "rank": 102
     },
     {
       "card_id": "sony-rx100-iv",
@@ -18927,7 +19114,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity, handling"
       ],
-      "rank": 102
+      "rank": 103
     },
     {
       "card_id": "sony-a6000",
@@ -19138,7 +19325,7 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, connectivity"
       ],
-      "rank": 103
+      "rank": 104
     },
     {
       "card_id": "nikon-z8",
@@ -19297,7 +19484,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 104
+      "rank": 105
     },
     {
       "card_id": "canon-eos-250d",
@@ -19478,7 +19665,7 @@
       "flags": [
         "thin (< 15 claims): stabilization, autofocus_body, connectivity"
       ],
-      "rank": 105
+      "rank": 106
     },
     {
       "card_id": "nikon-z5",
@@ -19613,7 +19800,7 @@
         "missing weighted axes: connectivity",
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, handling"
       ],
-      "rank": 106
+      "rank": 107
     },
     {
       "card_id": "hasselblad-x1d",
@@ -19766,7 +19953,7 @@
         "missing weighted axes: video_capability, stabilization",
         "thin (< 15 claims): connectivity"
       ],
-      "rank": 107
+      "rank": 108
     },
     {
       "card_id": "fujifilm-x-t30-iii",
@@ -19956,14 +20143,14 @@
       "flags": [
         "thin (< 15 claims): video_capability, stabilization, autofocus_body, evf_lcd, connectivity, handling"
       ],
-      "rank": 108
+      "rank": 109
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 108,
-    "ranked": 108,
+    "in_scope": 109,
+    "ranked": 109,
     "excluded": 0,
     "pending_backfill": 0
   }

@@ -5490,141 +5490,6 @@
       "rank": 27
     },
     {
-      "card_id": "canon-powershot-s3",
-      "display_name": "Canon PowerShot S3 IS",
-      "rankable": true,
-      "score": 3.3333,
-      "mention_boost": 0.0,
-      "rationale": [
-        {
-          "axis": "handling",
-          "weight": 3,
-          "s": 0.4444,
-          "pos": 4,
-          "neg": 0,
-          "total": 9,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.3333,
-          "top_sources": [
-            {
-              "source_id": "youtube-matmroy-canon-powershot-s31s-review",
-              "url": "https://www.youtube.com/watch?v=on3uXlAEZVM",
-              "witness": "unattested",
-              "quote": "the way that's planted because if you're holding the camera like this very convenient to have the zooom right there a lot of times they'll put them right on the back here you have your off button you push that to turn it…"
-            }
-          ],
-          "axis_display": "Handling"
-        },
-        {
-          "axis": "image_quality",
-          "weight": 2,
-          "s": 0.25,
-          "pos": 4,
-          "neg": 2,
-          "total": 8,
-          "confidence": "medium",
-          "contested": false,
-          "thin": true,
-          "contribution": 0.5,
-          "top_sources": [
-            {
-              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-              "witness": "unattested",
-              "quote": "The inclusion of RAW and JPEG file format support caters to both casual shooters and those seeking greater control over image processing."
-            }
-          ],
-          "axis_display": "Image Quality"
-        },
-        {
-          "axis": "battery_life",
-          "weight": 2,
-          "s": 0.5,
-          "pos": 3,
-          "neg": 0,
-          "total": 6,
-          "confidence": "medium",
-          "contested": true,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
-              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
-              "witness": "unattested",
-              "quote": "This digital camera, powered by readily available AA batteries, offers a unique experience that sets it apart from modern smartphones and cameras."
-            }
-          ],
-          "axis_display": "Battery Life"
-        },
-        {
-          "axis": "sensor_performance",
-          "weight": 1,
-          "s": -0.5,
-          "pos": 0,
-          "neg": 1,
-          "total": 2,
-          "confidence": "low",
-          "contested": true,
-          "thin": true,
-          "contribution": -0.5,
-          "top_sources": [
-            {
-              "source_id": "youtube-classic-camera-review-cheap-and-loaded-with-features",
-              "url": "https://www.youtube.com/watch?v=zmVPp94ondk",
-              "witness": "unattested",
-              "quote": "So, even in outdoor brightly lit shots, if you have it at ISO 400, you're going to see noise."
-            },
-            {
-              "source_id": "youtube-ready-set-louis-canon-powershot-g3-in-2026-still-worth-it-hands-on-photo-samples",
-              "url": "https://www.youtube.com/watch?v=I6UtFdshA5k",
-              "witness": "unattested",
-              "quote": "Dynamic range is definitely an area where you really feel the age of the camera."
-            }
-          ],
-          "axis_display": "Sensor Performance"
-        },
-        {
-          "axis": "build",
-          "weight": 1,
-          "s": 1.0,
-          "pos": 1,
-          "neg": 0,
-          "total": 1,
-          "confidence": "low",
-          "contested": false,
-          "thin": true,
-          "contribution": 1.0,
-          "top_sources": [
-            {
-              "source_id": "youtube-reviewlamp-canon-powershot-sx430-is-review-and-hd-test-videos-and-photos",
-              "url": "https://www.youtube.com/watch?v=3vv-75BPkEY",
-              "witness": "unattested",
-              "quote": "it's pretty well built takes good pictures and has quite an impressive zoom range and if you're in the u.s."
-            }
-          ],
-          "axis_display": "Build Quality"
-        }
-      ],
-      "missing_axes": [
-        "stabilization"
-      ],
-      "thin_axes": [
-        "handling",
-        "image_quality",
-        "battery_life",
-        "sensor_performance",
-        "build"
-      ],
-      "flags": [
-        "missing weighted axes: stabilization",
-        "thin (< 15 claims): handling, image_quality, battery_life, sensor_performance, build"
-      ],
-      "rank": 28
-    },
-    {
       "card_id": "canon-r6",
       "display_name": "Canon EOS R6",
       "rankable": true,
@@ -5833,7 +5698,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 29
+      "rank": 28
     },
     {
       "card_id": "panasonic-s1r",
@@ -6022,7 +5887,7 @@
       "flags": [
         "thin (< 15 claims): handling, image_quality, battery_life, stabilization, build"
       ],
-      "rank": 30
+      "rank": 29
     },
     {
       "card_id": "nikon-d810",
@@ -6239,7 +6104,7 @@
       "flags": [
         "thin (< 15 claims): battery_life, stabilization, build"
       ],
-      "rank": 31
+      "rank": 30
     },
     {
       "card_id": "minolta-maxxum-70",
@@ -6413,6 +6278,166 @@
       "flags": [
         "missing weighted axes: stabilization",
         "thin (< 15 claims): image_quality, battery_life, sensor_performance"
+      ],
+      "rank": 31
+    },
+    {
+      "card_id": "canon-powershot-s3",
+      "display_name": "Canon PowerShot S3 IS",
+      "rankable": true,
+      "score": 3.2444,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "handling",
+          "weight": 3,
+          "s": 0.3333,
+          "pos": 1,
+          "neg": 0,
+          "total": 3,
+          "confidence": "low",
+          "contested": true,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "the S3-IS is comfortable to hold with a large hand grip and logical &#8211; albeit somewhat cluttered &#8211; control layout."
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 2,
+          "s": -0.1111,
+          "pos": 2,
+          "neg": 3,
+          "total": 9,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.2222,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "White balance performance was also good, except for the auto mode under incandescent lighting."
+            },
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "The inclusion of RAW and JPEG file format support caters to both casual shooters and those seeking greater control over image processing."
+            }
+          ],
+          "axis_display": "Image Quality"
+        },
+        {
+          "axis": "battery_life",
+          "weight": 2,
+          "s": 0.4,
+          "pos": 2,
+          "neg": 0,
+          "total": 5,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.8,
+          "top_sources": [
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "This digital camera, powered by readily available AA batteries, offers a unique experience that sets it apart from modern smartphones and cameras."
+            }
+          ],
+          "axis_display": "Battery Life"
+        },
+        {
+          "axis": "sensor_performance",
+          "weight": 1,
+          "s": -0.1667,
+          "pos": 0,
+          "neg": 1,
+          "total": 6,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.1667,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "A new High ISO Auto setting boosts."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "stabilization",
+          "weight": 1,
+          "s": 0.8333,
+          "pos": 5,
+          "neg": 0,
+          "total": 6,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.8333,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "and optical image stabilisation system and range of manual controls as its predecessor."
+            },
+            {
+              "source_id": "youtube-tech-perception-canon-powershot-s3-is-the-ultimate-retro-digital-camera",
+              "url": "https://www.youtube.com/watch?v=oICYnm7HKIk",
+              "witness": "unattested",
+              "quote": "The inclusion of Canon's optical image stabilizer is a significant advantage, ensuring sharp and steady images and videos, even when shooting handheld or in challenging lighting conditions."
+            }
+          ],
+          "axis_display": "Stabilization"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 1.0,
+          "pos": 1,
+          "neg": 0,
+          "total": 1,
+          "confidence": "low",
+          "contested": false,
+          "thin": true,
+          "contribution": 1.0,
+          "top_sources": [
+            {
+              "source_id": "photoreview-reviews-advanced-compact-cameras-canon-powershot-s3-is",
+              "url": "https://www.photoreview.com.au/reviews/advanced-compact-cameras/canon-powershot-s3-is/",
+              "witness": "unattested",
+              "quote": "Rating (out of 10): Build: 8.5 Ease of use: 8 Image quality: 8.5 OVERALL: 8.5 Buy PHOTO REVIEW NEWSLETTER Latest news, reviews, tips, and new."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "handling",
+        "image_quality",
+        "battery_life",
+        "sensor_performance",
+        "stabilization",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): handling, image_quality, battery_life, sensor_performance, stabilization, build"
       ],
       "rank": 32
     },
@@ -19579,6 +19604,170 @@
       "rank": 102
     },
     {
+      "card_id": "sony-rx10-ii",
+      "display_name": "Sony rx10 ii",
+      "rankable": true,
+      "score": 0.1443,
+      "mention_boost": 0.0,
+      "rationale": [
+        {
+          "axis": "handling",
+          "weight": 3,
+          "s": 0.0,
+          "pos": 3,
+          "neg": 3,
+          "total": 14,
+          "confidence": "medium",
+          "contested": true,
+          "thin": true,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "cameralabs-sony-cyber-shot-rx10-mark-ii-review",
+              "url": "https://www.cameralabs.com/sony-cyber-shot-rx10-mark-ii-review/",
+              "witness": "unattested",
+              "quote": "The RX10 II inherits the body, lens and tilting screen."
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "Design, Ergonomics and Ease of Use 2."
+            }
+          ],
+          "axis_display": "Handling"
+        },
+        {
+          "axis": "image_quality",
+          "weight": 2,
+          "s": 0.1333,
+          "pos": 7,
+          "neg": 3,
+          "total": 30,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.2667,
+          "top_sources": [
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "firsthand",
+              "quote": "My experience with it has been mixed but not because of the camera itself."
+            },
+            {
+              "source_id": "dxomark-sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit",
+              "url": "https://www.dxomark.com/sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit/",
+              "witness": "unattested",
+              "quote": "Despite that, with a color sensitivity score of 23 bits and."
+            }
+          ],
+          "axis_display": "Image Quality"
+        },
+        {
+          "axis": "battery_life",
+          "weight": 2,
+          "s": -0.2727,
+          "pos": 1,
+          "neg": 4,
+          "total": 11,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.5455,
+          "top_sources": [
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "The camera doesn’t come with a proper battery charger but can be charged via USB."
+            }
+          ],
+          "axis_display": "Battery Life"
+        },
+        {
+          "axis": "sensor_performance",
+          "weight": 1,
+          "s": 0.0,
+          "pos": 8,
+          "neg": 8,
+          "total": 50,
+          "confidence": "medium",
+          "contested": false,
+          "thin": false,
+          "contribution": 0.0,
+          "top_sources": [
+            {
+              "source_id": "dxomark-sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit",
+              "url": "https://www.dxomark.com/sony-cyber-shot-rx10-ii-sensor-review-stacked-to-the-limit/",
+              "witness": "unattested",
+              "quote": "Sony Cyber-shot RX10 II sensor review: Stacked to the limit?"
+            },
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "Reviews / The Sony RX10 II review – A powerful all-in-one camera solution The 1-inch sensor premium compact camera market is growing at a rapid."
+            }
+          ],
+          "axis_display": "Sensor Performance"
+        },
+        {
+          "axis": "stabilization",
+          "weight": 1,
+          "s": -0.0769,
+          "pos": 2,
+          "neg": 3,
+          "total": 13,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": -0.0769,
+          "top_sources": [
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "From wide shots of both landscapes and cityscapes to close-ups and portraits, this."
+            }
+          ],
+          "axis_display": "Stabilization"
+        },
+        {
+          "axis": "build",
+          "weight": 1,
+          "s": 0.5,
+          "pos": 2,
+          "neg": 0,
+          "total": 4,
+          "confidence": "medium",
+          "contested": false,
+          "thin": true,
+          "contribution": 0.5,
+          "top_sources": [
+            {
+              "source_id": "mirrorlessons-2016-03-02-sony-rx10-ii-review",
+              "url": "https://www.mirrorlessons.com/2016/03/02/sony-rx10-ii-review/",
+              "witness": "unattested",
+              "quote": "The camera features a magnesium alloy body and is resistant to."
+            }
+          ],
+          "axis_display": "Build Quality"
+        }
+      ],
+      "missing_axes": [],
+      "thin_axes": [
+        "handling",
+        "battery_life",
+        "stabilization",
+        "build"
+      ],
+      "flags": [
+        "thin (< 15 claims): handling, battery_life, stabilization, build"
+      ],
+      "rank": 103
+    },
+    {
       "card_id": "fujifilm-x-t200",
       "display_name": "Fujifilm X-T200",
       "rankable": true,
@@ -19787,7 +19976,7 @@
       "missing_axes": [],
       "thin_axes": [],
       "flags": [],
-      "rank": 103
+      "rank": 104
     },
     {
       "card_id": "nikon-d5600",
@@ -19859,7 +20048,7 @@
         "missing weighted axes: handling, image_quality, stabilization, build",
         "thin (< 15 claims): battery_life, sensor_performance"
       ],
-      "rank": 104
+      "rank": 105
     },
     {
       "card_id": "canon-eos-1d-ii",
@@ -19998,7 +20187,7 @@
         "missing weighted axes: stabilization",
         "thin (< 15 claims): handling, battery_life, build"
       ],
-      "rank": 105
+      "rank": 106
     },
     {
       "card_id": "nikon-z5",
@@ -20106,7 +20295,7 @@
         "missing weighted axes: image_quality, build",
         "thin (< 15 claims): handling, battery_life, sensor_performance, stabilization"
       ],
-      "rank": 106
+      "rank": 107
     },
     {
       "card_id": "sony-rx100-iv",
@@ -20300,7 +20489,7 @@
       "flags": [
         "thin (< 15 claims): handling, battery_life, stabilization, build"
       ],
-      "rank": 107
+      "rank": 108
     },
     {
       "card_id": "canon-eos-r10",
@@ -20471,14 +20660,14 @@
       "flags": [
         "thin (< 15 claims): handling, image_quality, sensor_performance, stabilization, build"
       ],
-      "rank": 108
+      "rank": 109
     }
   ],
   "excluded": [],
   "pending_backfill": [],
   "counts": {
-    "in_scope": 108,
-    "ranked": 108,
+    "in_scope": 109,
+    "ranked": 109,
     "excluded": 0,
     "pending_backfill": 0
   }
