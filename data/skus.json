@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-21",
+  "as_of": "2026-11-22",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -11881,6 +11881,27 @@
           "value": "293.99",
           "currency": "USD",
           "as_of": "2026-11-18T20:25:28Z"
+        },
+        "image_catalog": "https://i.ebayimg.com/images/g/H0EAAOSw~INe-ZTE/s-l640.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-22T04:32:19Z",
+          "query": "Sony SEL50M28",
+          "winner": {
+            "item_id": "v1|940110851153|0",
+            "epid": "1485358487",
+            "title": "Sony SEL50M28 FE 50mm F2.8 Full-frame E-mount Macro Lens"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|940110851153|0",
+              "epid": "1485358487",
+              "title": "Sony SEL50M28 FE 50mm F2.8 Full-frame E-mount Macro Lens",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -68005,6 +68026,96 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-21T04:03:31Z"
+    },
+    "360rize-pro10-v2-360-plug": {
+      "contamination_key": "360rize-pro10-v2-360-plug",
+      "vendor": "360RIZE",
+      "model": "pro10 v2 360 plug",
+      "gtin": "00683203892223",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "237186474652",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "30095"
+      },
+      "identity": {
+        "brand": "360RIZE",
+        "mpn": "PRO10MS-V2",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "683203892223",
+              "gtin14": "00683203892223",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "360RIZE Pro10 v2 360 Plug-n-Play Holder Kit - SKU#1053368",
+        "image": "https://i.ebayimg.com/images/g/vR0AAeSwyMNrALgi/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "7.00",
+          "currency": "USD",
+          "as_of": "2026-11-22T04:00:50Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/237186474652?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-22T04:00:50Z"
+    },
+    "neewer-z2": {
+      "contamination_key": "neewer-z2",
+      "vendor": "Neewer",
+      "model": "z2",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "940112246785",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Neewer",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "NEEWER (Z2-C) 2.4G TTL Round Head Flash Speedlite for Canon",
+        "image": "https://i.ebayimg.com/images/g/HuAAAeSwtbVqudbw/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "128.00",
+          "currency": "USD",
+          "as_of": "2026-11-22T04:02:44Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/940112246785?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-22T04:02:44Z"
     }
   },
   "substrate": [
