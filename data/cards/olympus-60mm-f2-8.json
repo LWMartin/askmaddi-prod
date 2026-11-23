@@ -21,26 +21,20 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 300.0,
-        "refurbished": 387.0,
-        "open_box": 523.96
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 25,
-      "price_updated_at": "2026-11-23T10:11:34.715648+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-03T18:08:07.376882+00:00"
+    "price_updated_at": "2026-11-22T07:05:32.306800+00:00"
   },
   "freshness": {
     "created_at": "2026-09-03T18:08:07.360776+00:00",
-    "last_built": "2026-09-03T18:08:07.360776+00:00",
-    "last_checked": "2026-09-03T18:08:07.360776+00:00",
-    "source_count": 19,
+    "last_built": "2026-11-22T07:05:32.286990+00:00",
+    "last_checked": "2026-11-22T07:05:32.286990+00:00",
+    "source_count": 18,
     "source_types": {
-      "pro": 19
+      "pro": 18
     },
     "build_model": "claude-sonnet-4-5-20250929",
     "build_version": "stage6-v0.1"
@@ -74,10 +68,10 @@
       "axis_type": "lead",
       "measurement": null,
       "sentiment": {
-        "pos": 31,
+        "pos": 30,
         "neu": 3,
-        "neg": 7,
-        "total": 41,
+        "neg": 4,
+        "total": 37,
         "sources": [
           {
             "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
@@ -256,38 +250,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "And at the time, it was my dream lens simply because um it was praised for being extremely sharp.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Originally, I was going to buy the 14 to 54 Mark II, but everybody told me to buy this instead because uh it was a little bit longer, sharper.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "It's it's a sharp lens, but obviously when I take it to the 12 to 14 mil, uh it's more of an artistic approach, which is something that is it's fun, but it's not for all the time.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "More info in another video when I get plus It's not even sharp at 12 to 18 anyway.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-omsystemcameras-om-system-olympus-mzuiko-60mm-f28-macro-product-review",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=kYKsytjEil8",
@@ -411,10 +373,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 14,
-        "polarity_agreement": 0.857,
+        "source_count": 13,
+        "polarity_agreement": 0.923,
         "dominant_polarity": "pos",
-        "max_source_share": 0.171,
+        "max_source_share": 0.189,
         "contested": false
       },
       "notes": [],
@@ -422,6 +384,731 @@
         "quote_excerpt": "It also implies a lens with minimal distortion where parallel lines remain parallel and with sharpness optimized for close focusing distances.",
         "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
         "url": "https://www.youtube.com/watch?v=uwd6votlsSI"
+      }
+    },
+    {
+      "axis_id": "af_performance",
+      "display_name": "Autofocus",
+      "axis_type": "lead",
+      "stills": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 8,
+          "neu": 8,
+          "neg": 12,
+          "total": 28,
+          "sources": [
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "of a negative overall for build quality we're going to go ahead and get this a seven out of 10 all right so up next is focus speed and accuracy if I have an issue with the 60mm macro it's with the autofocusing system the Focus motor is really fast but the lens tends to hunt a lot but at",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "least it does so quickly the limiter switch has four settings actually there's three the fourth one's a manual adjustment that you use to get the autofocus to focus in a one to1 situation which is really close um given how precise a distance meter is I found that too often I'm getting caught in…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "I find the AF sales pass the intended target a bit more often than I'd like the limiter switch can be really frustrating to use on the flip side I found that manually focusing the lens like most macro lenses was a better way to go when I was getting really close because in those situations the AF…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "with a lens on the bottom line though in summary given how cumbersome it is to use for its intended macro purpose that is the AF I can only give the AF speed and accuracy a seven out of 10 up next is Optical quality and the quality of the results this is where the 6 mm f2.8 macro really",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "lens is really tricky specifically in macro situations as we discussed on the flip side the autofocus works really great when you're using it as a traditional lens like for a portrait we gave it a seven out of 10 value it's about a third less expensive than its nearest competitor that's the 45mm…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "up a slightly better performance as an optic it's really good the focus works much better manually when you're shooting macro and the AF does quite well in non-macro situations on the downside the 60 mm doesn't come with a lens hood and with a fullframe field of view equivalent of 120 mm it limits…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "And that allows you to uh select the focus range of the lens.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "I'm very happy with the autofocus speed.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "Internal focusing is excellent on a macro lens.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "That's why it needs the 1 one focus setting position on the switch to avoid any uncertainty.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "It's very necessary because if a macro lens has to search for focus across the entire focusing range, that is a much greater span than with a non-m macro and will take much longer.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "Sometimes in dim light, this lens will hunt for focus, so you need to limit it.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "So to performance a macro lens is not just a lens with an extended close focus range.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "Here's a comparison between the 45mm f18 at f28 and the 60 mm at f2.8.8 at the 45 mm closest focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "You can definitely do some close-up and have more of the environment in your shot, uh and that's fine, but just know that you can get super close, you can get those type of shot with this lens by just putting yourself in MF and then moving back and forth to acquire the focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-which-macro-lens-should-you-buy-mzuiko-60mm-or-the-90mm-macro",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=k5ok3RacLuw",
+              "weight": 0.75,
+              "quote_excerpt": "If you're not in manual focus and you're going to half press your shutter, then you are going to get out of that one to one magnification, which is fine because maybe you don't want a true macro photo.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
+              "weight": 0.75,
+              "quote_excerpt": "CM you know minimum focus in distance or up to 1.2 1.5 M which is actually quite you know far and but being a macro lens they are designed to close Focus which means it is um really good for in terms of flexibility you know if I one of sudden just want to get close you know like from",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
+              "weight": 0.75,
+              "quote_excerpt": "designed for macro so the gearing is quite long so um what it means is uh the focusing speed can be a little bit slower compared to some of the primes um they need that because uh for the when you do macro shots you know the minute movement even like 001 of millimeters makes a big difference so that",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-omsystemcameras-om-system-olympus-mzuiko-60mm-f28-macro-product-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=kYKsytjEil8",
+              "weight": 0.75,
+              "quote_excerpt": "The Focus Limiter switch on the side is a useful feature as well so if you're only wanting to focus on something quite close up, then you can limit using the switch to focus between 19cm and 40 cm – which means it won't hunt outside of those distances, so basically your focusing will be much…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
+              "weight": 0.75,
+              "quote_excerpt": "lens has a switch on the side where you can choose two focusing range and this is very good so that the lens doesn't have to go through the whole focusing range if you know that your subject is between 20 centimetres and 40 centimetres you can choose this option and then if you want to have it at…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "scare the insects that you are trying to shoot away there are other options available for macro folders such as Olympus 30 mil F 3.5 or the Panasonic for the 5 mil f/2 these are very good macro lenses however the minimum focusing distance are much closer to achieve the higher magnification in your…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "sure we will get headaches and nauseous after a long shooting duration the 5 assists is not only boosts the confidence of getting the shot but improves the overall shooting experience making it a lot more pleasant and who less stressful we try to nail that critical focus besides 5 s this image…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "instant macro photography that I do finally reason number five order focus the olympus 60mm macro has incredible auto focus out of many macro lenses out there we were just talking about macro lenses if you have truly used olympus system you macro lens before you will know how much more reliable…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "should it makes the auto focus that much faster and a lot easier to nail your shot I started out macro photography not using the only persist emu lens I was using the old 50mm f/2 zuikou DSLR lens and in that lens autofocus was so slow it's so unreliable that most of the time I was using manual…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-olympus-60mm-macro-or-75mm-f18-which-is-better",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uamUkqwRzWA",
+              "weight": 0.75,
+              "quote_excerpt": "75 f 1.8 is not lens performance wise none of these lenses are the fastest when it comes to autofocus 4 micro four thirds there are faster lenses out there especially the olympus pro lenses however these lenses are not slow either they are definitely fast enough and more than reliable to get the…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-olympus-60mm-macro-or-75mm-f18-which-is-better",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uamUkqwRzWA",
+              "weight": 0.75,
+              "quote_excerpt": "the 75 f 1.8 for many years as a professional photographer and i've managed to nail critical moments successfully no issues using the 75 f 1.8 on my olympus omb cameras using autofocus for these situations the 16 macro will struggle when you go close to full magnification if you go really close to…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-thecameraproject-shooting-macro-with-the-olympus-60mm-f28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
+              "weight": 0.75,
+              "quote_excerpt": "away slowly give him some space sure there's going to be some like bug nerds writing in that of course that's a female and a male wouldn't be out here all right let's try to get the face so I'm just keeping the camera in autofocus right now is not the fastest focusing lens here's two of them but it",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-thecameraproject-shooting-macro-with-the-olympus-60mm-f28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
+              "weight": 0.75,
+              "quote_excerpt": "does have these Focus limiting switches so what it has is you can go to 1: one here where you could tell it I want to limit it between .19 and4 M which is its closest focusing range or 0.19 to Infinity so right now I have it on the 0.19 to4 keeping that focusing range a little more limited",
+              "witness": "firsthand"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 11,
+          "polarity_agreement": 0.455,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.214,
+          "contested": true
+        },
+        "notes": []
+      },
+      "video": {
+        "measurement": null,
+        "sentiment": {
+          "pos": 18,
+          "neu": 31,
+          "neg": 8,
+          "total": 57,
+          "sources": [
+            {
+              "source_id": "youtube-bart-jan-verhoef-the-olympus-60mm-f28-macro-lens-would-i-buy-this-again",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=soAU6BVw52c",
+              "weight": 0.75,
+              "quote_excerpt": "know if you can properly see that and here there's this switch which you can select the focal range with how far or how close it will be able to focus and then you can return to the 1.1 magnification which gets you to sort of the closest point in the focus so when you're using this on a camera",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-bart-jan-verhoef-the-olympus-60mm-f28-macro-lens-would-i-buy-this-again",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=soAU6BVw52c",
+              "weight": 0.75,
+              "quote_excerpt": "it's really opened the doorway into a new type of Photography that I did really know before it's something I'm very excited about learning more on macro photography so perhaps I'll do an update on this video in a year or so to show you some more footage and things that you can do with this lens but…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-chris-baitson-the-best-macro-lens-for-micro-four-thirds-olympus-60mm-28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=N_xXY-Vatkk",
+              "weight": 0.75,
+              "quote_excerpt": "at one to one you have to move the camera backwards and forwards and obviously you don't want to use the autofocus while you're doing this but it does put it at one to one maccro and I think we're going to use it to take this next photograph around here there are a lot of bushes with some little",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-chris-baitson-the-best-macro-lens-for-micro-four-thirds-olympus-60mm-28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=N_xXY-Vatkk",
+              "weight": 0.75,
+              "quote_excerpt": "it's been fun to get on the macro lens again it's been a long time since I've used it and this Olympus cm1 m 2 it never fails to let me down so thank you very much for watching if you did enjoyed today's video please do give it a like and a thumbs up it does help the video",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "here if you can see that which like almost everything else in the Micro 4 system it's really small and frankly I find this very cumbersome to use if you're going one to one you actually have to use this right here if you can see that to focus the camera and frankly doing this while holding a tripod…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "of all over the place and with the one toone setting I found that having to hold the onetoone switch in place while simultaneously keeping the camera still and taking the photo was a really cumbersome uh process of course many of the many of these issues are solved if you manually focus let me just…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "here real quick there's a bottle right here in front of the lens it's actually a bottle of off bug spray so I'm going to press and hold the AF here and let's see what it does I don't know if you saw that but the AF sail pass then came back and then it caught Focus that's pretty common",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "as far as how it actually operates that's usually what I'm seeing it's pretty consistent so it's not perfect it tends to punt a little bit but it does lock in when it does it's pretty accurate as a side note the focus works great when it's not in a macro situation like for example if I'm shooting a…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
+              "weight": 0.75,
+              "quote_excerpt": "needing to get up really close you may however want to manually focus and invest in a really sturdy tripod this is Darren miles with Darren miles photography and beautiful not so sunny mples Florida today thanks for watching oh and by the way if you like these reviews be sure to subscribe and until…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "There's no switch on the barrel, for instance, that allows you to switch between autofocus and manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "So, if you want to use manual focus entirely without recourse to autofocusing, then that needs to be selected within the camera body's menu system.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "That said, I tend to use AF plus MF, which allows me to switch between autofocus and manual focus just by turning the focusing ring.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "So, yeah, I'm quite happy to uh manually focus when need be.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "And this is the focus limit dial.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "So, with a bit of precise focusing, you can really sort of throw the background nicely out of focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
+              "weight": 0.75,
+              "quote_excerpt": "This lens is also compatible with uh the in-body focus stacking.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "It's sealed against dust and damp and the front lens doesn't rotate or extend when focusing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "It's about 5 1/2 turns from infinity to minimum focus, but it takes only one turn to cover the range of a non- macro lens.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "There's a focus limiter switch on the lens, too.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "If you're using the lens as a short telephoto, the 0.4 4 m to infinity setting gives you all the focal range you'll need and results in autofocus performance comparable with most other modern MFD lenses if not notably fast [Music] being Olympus it isn't stabilized on Panasonic bodies except for the…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "The focus limiting switch is very handy.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "It's great to push it forward and know you're at one:1 closest focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "I like to set it to one and then switch to manual focus.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "At that point, focus is easiest by moving the camera backwards and forwards.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
+              "weight": 0.75,
+              "quote_excerpt": "A better way is to use focus stacking if your imaging software has it.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-my-favorite-macro-lens-mzuiko-60mm-macro",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=VzB2Zzb6KX0",
+              "weight": 0.75,
+              "quote_excerpt": "really Lawless the dialogue between the camera and the lens the focus is very fast the focus stacking works extremely well the bracketing works extremely well and as a macro photographer being able to use Focus bracketing or to focus stack in camera is so important because sometimes you know with…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-my-favorite-macro-lens-mzuiko-60mm-macro",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=VzB2Zzb6KX0",
+              "weight": 0.75,
+              "quote_excerpt": "field so a little teeny tiny part of your subject will be in focus and sometimes I need more and if my subject is a Cooperative subject then I'll be able to focus stack and even focus stacking camera which is really amazing my camera is doing all the work because it's communicating with my lens…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": ">> [music] >> So, for this Sunday's educational video, a quick one, how do you tame the 60 mm macro lens?",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "I'm going to tell you all about it in this video, and that is going to change the way you're going to take your macro photo.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "your focus point might all of a sudden, cuz you're moving as well",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "Instead of C-AF, put yourself in MF, and then make sure that you're toggling again, and now that you are in MF, if you half press that shutter button, nothing happens cuz you're in manual focusing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "And how you're going to focus on your subject is you're going to slowly approach, and you're moving back and forth until you see that you are focusing correctly on your subject.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "That is my favorite technique, and that is going to make this lens way less frustrating to use, so it doesn't hunt back and forth and you're losing your subject.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-using-the-mzuiko-60mm-macro-to-its-full-potential",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
+              "weight": 0.75,
+              "quote_excerpt": "So, I hope this video was useful, and you're going to enjoy your 60 mm macro lens because it's truly a brilliant lens.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-which-macro-lens-should-you-buy-mzuiko-60mm-or-the-90mm-macro",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=k5ok3RacLuw",
+              "weight": 0.75,
+              "quote_excerpt": "And the trick is that here you need to put the lever like this and then you need to be in manual focus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-emilie-talpin-photography-which-macro-lens-should-you-buy-mzuiko-60mm-or-the-90mm-macro",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=k5ok3RacLuw",
+              "weight": 0.75,
+              "quote_excerpt": "And then I'll use a lot of focus bracketing and focus stacking probably to get the right depth of field.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
+              "weight": 0.75,
+              "quote_excerpt": "means the uh computer doesn't have to think too much they only know that you're only focusing that little bit there so it doesn't go all the way back and forth just to trying to find a focus and that way helps the speed a little bit um less work but a quicker capture right yeah you know but you",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
+              "weight": 0.75,
+              "quote_excerpt": "a minimum focusing of 1 M 1.2 M so you know when I sometime when I come close he just cannot capture it and I have to either change lens all together or you know just to basically change my distance you trying to work it out you know in terms of that but this I can just move in",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
+              "weight": 0.75,
+              "quote_excerpt": "and out freely without having to worry about you know stopping you know uh the focusing just [Applause] [Music] stopped so Jimmy you've told me a lot of great features about this lens it seems kind of like an all singing all dancing um why would you use it all the time well no because um first it's…",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-omsystemcameras-om-system-olympus-mzuiko-60mm-f28-macro-product-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=kYKsytjEil8",
+              "weight": 0.75,
+              "quote_excerpt": "So that's the three limiter modes – and if you do want to use the true one-to-one you just flip the switch to one-to-one, the focus will jump to a certain point to tell you how far away you need to be from that particular subject – and away you go!",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
+              "weight": 0.75,
+              "quote_excerpt": "Bell so you get notified when there is a new video online and remember my channel is all about you getting to be a better photographer and of course about Olympus gear and I usually post two videos a week Tuesdays and on Fridays but let's talk about this lens although impass has two macro lenses in…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
+              "weight": 0.75,
+              "quote_excerpt": "focus closer than it does without the extension tubes I have the Kenko extension tubes because Olympus doesn't have extension tube in its lineup and remember if you use the 30 millimeter F 3.5 or the extension tubes with any other lens your system is not weatherproof because the extension tubes are…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "blurry images so I hand hold all my images but while we compose the images through the viewfinder that view will be fully stabilized when we have pressed the shutter button that smooth stabilized viewfinder shot is a godsend when we are shooting a high magnification shot because without the…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "into the OMD cameras where the camera will take multiple shots and stack them together to maximize the depth of field I admit I seldom use the focus stacking feature because it doesn't work for my stuff shooting I don't use tripods and I just one single raw image and to me that's more than…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
+              "weight": 0.75,
+              "quote_excerpt": "since I've acquired only 260 mu I have to play macro almost all my insight macro shots were taken purely with the autofocus on the olympus om-d camera not having to worry too much about auto focus allows me to focus more on lighting and how to improve my composition when I approach the tiny…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "Number two, fix the focus breathing issue.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "A lot of photographers who shoot focus bracketing that in a series of raw images to be stacked later in software, they find that the focus reading issue can be a bit problematic to match all the frames together.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "They do need to revamp the optical construction to make sure that there's minimal focus breathing, but I'm sure it can be done.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "Well, back in 2012, focus stacking, focus bracketing wasn't exactly a huge thing.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "I think that updating this lens to fit the focus bracketing crowd, that would have been really awesome.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "And it's also a place for me to practice shooting discipline where I really have to be very, very careful about my focus accuracy.",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-robin-wong-om-system-60mm-f28-macro-mark-ii-make-this-happen",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
+              "weight": 0.75,
+              "quote_excerpt": "basically for better autofocus, fix the focus breathing issue and maybe have compatibility with insight subject detection AI autofocus.",
+              "witness": "unattested"
+            },
+            {
+              "source_id": "youtube-thecameraproject-shooting-macro-with-the-olympus-60mm-f28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
+              "weight": 0.75,
+              "quote_excerpt": "show you guys what it looks like through video on the camera so I'm just going to go over to video mode the thing you're going to find with macro is that it's this constant balance between depth of field shutter speed spe and ISO for a moving subject like this I can't let my shutter speed dip too…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-thecameraproject-shooting-macro-with-the-olympus-60mm-f28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
+              "weight": 0.75,
+              "quote_excerpt": "let's take a few more shots before I back away from these guys and give them some space so one thing I really do like about this lens is this focusing ring the focusing steps on it are so small that you can really dial in your focus and that's great for when I'm shooting video here if I switch",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-thecameraproject-shooting-macro-with-the-olympus-60mm-f28",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
+              "weight": 0.75,
+              "quote_excerpt": "it over to manual focus and I use the focus peaking to make sure everything's nicely in Focus this ring has such subtle adjustments that it really lets me dial in that focus at that really close level and of course it's a macro lens so yeah it makes sense but it does it really well combined with…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-trey-wardlaw-olympus-mzuiko-digital-ed-60mm-f28-macro-lens-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yuX9_QqgP9w",
+              "weight": 0.75,
+              "quote_excerpt": "cameras listed you will be able to use that feature with this lens I plan on doing a whole video covering everything about Focus bracking including the right settings to have and tips to improve hopefully I will have that video out within the next month so stay tuned for the working distance you…",
+              "witness": "firsthand"
+            },
+            {
+              "source_id": "youtube-trey-wardlaw-olympus-mzuiko-digital-ed-60mm-f28-macro-lens-review",
+              "source_type": "youtube",
+              "url": "https://www.youtube.com/watch?v=yuX9_QqgP9w",
+              "weight": 0.75,
+              "quote_excerpt": "motor in this lens is movie and still compatible and provides fast nearly silent focusing and aperture performance this pad with five AIS image stabilization would make recording macro subject so much easier if you are into videography when it comes to the photo quality the quality is top tier I've…",
+              "witness": "firsthand"
+            }
+          ]
+        },
+        "confidence": "low",
+        "convergence": {
+          "source_count": 15,
+          "polarity_agreement": 0.667,
+          "dominant_polarity": "neu",
+          "max_source_share": 0.158,
+          "contested": false
+        },
+        "notes": []
       }
     },
     {
@@ -607,10 +1294,10 @@
       "crop_factor_implications": "",
       "current_body_compatibility": [],
       "sentiment": {
-        "pos": 8,
-        "neu": 13,
+        "pos": 7,
+        "neu": 10,
         "neg": 3,
-        "total": 24,
+        "total": 20,
         "sources": [
           {
             "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
@@ -701,38 +1388,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "and might be a little bit misleading because it's on my E520 right now, but this video is actually going to be about this lens on micro four/ third bodies.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Who would I recommend this lens to?",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "I like using this lens on my E520, though.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "But now obviously the whole point of micro four thirds is small cameras, small bodies, and this lens still works uh with the EM1 line.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
@@ -807,16 +1462,11 @@
         ]
       },
       "convergence": {
-        "source_count": 12,
-        "polarity_agreement": 0.5,
+        "source_count": 11,
+        "polarity_agreement": 0.455,
         "dominant_polarity": "neu",
-        "max_source_share": 0.167,
+        "max_source_share": 0.2,
         "contested": true
-      },
-      "face_quote": {
-        "quote_excerpt": "But now obviously the whole point of micro four thirds is small cameras, small bodies, and this lens still works uh with the EM1 line.",
-        "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-        "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ"
       }
     },
     {
@@ -846,9 +1496,9 @@
       },
       "sentiment": {
         "pos": 4,
-        "neu": 8,
+        "neu": 7,
         "neg": 6,
-        "total": 18,
+        "total": 17,
         "sources": [
           {
             "source_id": "youtube-critical-reviews-om-system-olympus-mzuiko-60mm-review-10-reasons-not-to-buy",
@@ -923,14 +1573,6 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Uh, if you like lens reviews or you like budget photography, that is what I do here on this channel or starting a photography business, I've been doing that as well.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
@@ -997,10 +1639,10 @@
         ]
       },
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.5,
+        "source_count": 7,
+        "polarity_agreement": 0.571,
         "dominant_polarity": "neg",
-        "max_source_share": 0.333,
+        "max_source_share": 0.353,
         "contested": true
       },
       "face_quote": {
@@ -1017,10 +1659,10 @@
       "successor": null,
       "siblings": [],
       "sentiment": {
-        "pos": 5,
-        "neu": 3,
-        "neg": 2,
-        "total": 10,
+        "pos": 4,
+        "neu": 1,
+        "neg": 1,
+        "total": 6,
         "sources": [
           {
             "source_id": "youtube-emilie-talpin-photography-which-macro-lens-should-you-buy-mzuiko-60mm-or-the-90mm-macro",
@@ -1036,38 +1678,6 @@
             "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
             "weight": 0.75,
             "quote_excerpt": "welcome to R 35 and today we have Matt's evil twin Matt if you remember Matt from our previous Hatley one review and yeah this is the other version of him and what we looking at today is the Olympus 60 mm macro lens which is usually for bugs so today I'm the bug yes man you're the ladybug [Music]",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "So, I bought this lens because I wanted to upgrade from my kit zoom, the uh the Lumix G14 to42 Mark II.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "And I don't even know why Olympus even approved this because this being a prolevel lens from 2008, having the 14 to 54 Mark II and the original one released before this and they're not and they're pro lenses as well, but they're not as pro as this.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "I think if you wanted to get this lens, I more so recommend the 14 to 54 Mark II because the optics are more consistent and the f-stop is only goes to f3.5 versus f4.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "But yeah, anyways, um if you are planning on getting this lens, I recommend you look at the 14 to 54 Mark II or the newer Olympus 12 to 45 F4.0.",
             "witness": "firsthand"
           },
           {
@@ -1105,11 +1715,11 @@
         ]
       },
       "convergence": {
-        "source_count": 6,
-        "polarity_agreement": 0.5,
+        "source_count": 5,
+        "polarity_agreement": 0.6,
         "dominant_polarity": "pos",
-        "max_source_share": 0.4,
-        "contested": true
+        "max_source_share": 0.333,
+        "contested": false
       }
     },
     {
@@ -1125,9 +1735,9 @@
       "delta_from_baseline_pct": 0.0,
       "sentiment": {
         "pos": 5,
-        "neu": 10,
-        "neg": 3,
-        "total": 18,
+        "neu": 3,
+        "neg": 1,
+        "total": 9,
         "sources": [
           {
             "source_id": "youtube-critical-reviews-om-system-olympus-mzuiko-60mm-review-10-reasons-not-to-buy",
@@ -1144,78 +1754,6 @@
             "weight": 0.75,
             "quote_excerpt": "It has that machine from metal tort quality to it that makes Olympus Prime so attractive yet without actually being heavy rather like the 17mm F18.",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "I was more of just I want something that's super versatile and does better in low light.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "And now that moves me on to the next point, and that point is the pure size and weight of this lens.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "This lens weighs a total of 575 g, which is 1.2 lb.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "This lens right here weighs over a pound.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "But when you're using it with a camera like the EM1, which only weighs 497 grams and is a relatively small camera, plus you have to use it with an adapter, which adds an extra 30 to 40 g to the lens itself, which puts it at around 65 g, which puts it at a good 1.3 lb.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Plus more the weight is more over away from the camera body, which makes it more front heavy.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "And the camera already weighs less than the lens and is way smaller proportionally.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "So now your hand, even though the lens technically isn't that heavy, your hand is constantly shaking, unless you someone who's constantly handhelding 70 to 200s, you'll probably be fine.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "And they probably altogether are going to be at least the 25, 45, and 17 are literally going to be lighter in my bag than this one lens.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-omsystemcameras-om-system-olympus-mzuiko-60mm-f28-macro-product-review",
@@ -1276,10 +1814,10 @@
         ]
       },
       "convergence": {
-        "source_count": 8,
-        "polarity_agreement": 0.5,
+        "source_count": 7,
+        "polarity_agreement": 0.571,
         "dominant_polarity": "pos",
-        "max_source_share": 0.5,
+        "max_source_share": 0.333,
         "contested": true
       },
       "face_quote": {
@@ -1298,8 +1836,8 @@
       "sentiment": {
         "pos": 2,
         "neu": 0,
-        "neg": 2,
-        "total": 4,
+        "neg": 0,
+        "total": 2,
         "sources": [
           {
             "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
@@ -1308,22 +1846,6 @@
             "weight": 0.75,
             "quote_excerpt": "even head shots you know because for the compression and Distortion because for being a 60 it just you know has that very natural compressions and dist like free from Distortion so it makes your face look natural cuz if you use a wider angle lens you kind of have your face bulging forward so you…",
             "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Now, another thing is at the below the 18 mm range, especially at 12 mm wide open, the barrel distortion is absolutely insane.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Um, for a professional level lens, I shouldn't see that much barrel distortion at wide open.",
-            "witness": "firsthand"
           },
           {
             "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
@@ -1337,8 +1859,8 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 3,
-        "polarity_agreement": 0.667,
+        "source_count": 2,
+        "polarity_agreement": 1.0,
         "dominant_polarity": "pos",
         "max_source_share": 0.5,
         "contested": false
@@ -1358,8 +1880,8 @@
       "sentiment": {
         "pos": 1,
         "neu": 4,
-        "neg": 3,
-        "total": 8,
+        "neg": 2,
+        "total": 7,
         "sources": [
           {
             "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
@@ -1367,14 +1889,6 @@
             "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
             "weight": 0.75,
             "quote_excerpt": "no bowed vertical lines and no vignetting.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "There's just something about using this in low light that is just not all too great.",
             "witness": "unattested"
           },
           {
@@ -1429,10 +1943,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 5,
-        "polarity_agreement": 0.4,
+        "source_count": 4,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neu",
-        "max_source_share": 0.375,
+        "max_source_share": 0.429,
         "contested": true
       },
       "notes": []
@@ -1754,9 +2268,9 @@
       "measurement": null,
       "sentiment": {
         "pos": 5,
-        "neu": 10,
+        "neu": 9,
         "neg": 5,
-        "total": 20,
+        "total": 19,
         "sources": [
           {
             "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
@@ -1839,14 +2353,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Now, when I got it, I knew it was going to be a bigger lens.",
-            "witness": "firsthand"
-          },
-          {
             "source_id": "youtube-omsystemcameras-om-system-olympus-mzuiko-60mm-f28-macro-product-review",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=kYKsytjEil8",
@@ -1922,10 +2428,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.556,
+        "source_count": 8,
+        "polarity_agreement": 0.5,
         "dominant_polarity": "neu",
-        "max_source_share": 0.25,
+        "max_source_share": 0.263,
         "contested": true
       },
       "notes": [],
@@ -1941,10 +2447,10 @@
       "axis_type": "detail",
       "measurement": null,
       "sentiment": {
-        "pos": 14,
-        "neu": 6,
+        "pos": 13,
+        "neu": 5,
         "neg": 3,
-        "total": 23,
+        "total": 21,
         "sources": [
           {
             "source_id": "youtube-bart-jan-verhoef-the-olympus-60mm-f28-macro-lens-would-i-buy-this-again",
@@ -2075,22 +2581,6 @@
             "witness": "firsthand"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Like when I'm using it with this camera, it feels like absolutely nothing and it's great to use.",
-            "witness": "firsthand"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Plus, the lens is closer to the body.",
-            "witness": "unattested"
-          },
-          {
             "source_id": "youtube-robin-wong-olympus-60mm-macro-or-75mm-f18-which-is-better",
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=uamUkqwRzWA",
@@ -2134,10 +2624,10 @@
       },
       "confidence": "low",
       "convergence": {
-        "source_count": 9,
-        "polarity_agreement": 0.778,
+        "source_count": 8,
+        "polarity_agreement": 0.75,
         "dominant_polarity": "pos",
-        "max_source_share": 0.304,
+        "max_source_share": 0.333,
         "contested": false
       },
       "notes": [],
@@ -2196,14 +2686,14 @@
     "conflicts": []
   },
   "synthesis": {
-    "consensus_paragraph": "Synthesized from 19 reviewer sources for Olympus M.Zuiko Digital ED 60mm f/2.8 Macro. AF for video draws the most discussion: 18 positive, 38 neutral, and 8 negative across 64 sentiment markers. The most criticism lands on AF for stills: 30% positive, 27% neutral, 43% negative across 30 claims. Opinion is split on dimensions (5 positive, 10 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (9/8/13 across 30), while video sentiment runs net positive (18/38/8 across 64).",
+    "consensus_paragraph": "Synthesized from 18 reviewer sources for Olympus 60mm f2.8. AF for video draws the most discussion: 18 positive, 31 neutral, and 8 negative across 57 sentiment markers. The most criticism lands on AF for stills: 29% positive, 28% neutral, 43% negative across 28 claims. Opinion is split on dimensions (5 positive, 9 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (8/8/12 across 28), while video sentiment runs net positive (18/31/8 across 57).",
     "aspect_breakdown": [
       {
         "aspect": "optical_performance",
-        "pos": 31,
+        "pos": 30,
         "neu": 3,
-        "neg": 7,
-        "total": 41,
+        "neg": 4,
+        "total": 37,
         "top_quote_refs": [
           {
             "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
@@ -2233,10 +2723,10 @@
       },
       {
         "aspect": "af_performance.stills",
-        "pos": 9,
+        "pos": 8,
         "neu": 8,
-        "neg": 13,
-        "total": 30,
+        "neg": 12,
+        "total": 28,
         "top_quote_refs": [
           {
             "source_id": "youtube-darren-miles-olympus-60mm-f2-8-macro-review",
@@ -2267,9 +2757,9 @@
       {
         "aspect": "af_performance.video",
         "pos": 18,
-        "neu": 38,
+        "neu": 31,
         "neg": 8,
-        "total": 64,
+        "total": 57,
         "top_quote_refs": [
           {
             "source_id": "youtube-bart-jan-verhoef-the-olympus-60mm-f28-macro-lens-would-i-buy-this-again",
@@ -2334,8 +2824,8 @@
         "aspect": "distortion",
         "pos": 2,
         "neu": 0,
-        "neg": 2,
-        "total": 4,
+        "neg": 0,
+        "total": 2,
         "top_quote_refs": [
           {
             "source_id": "youtube-jimmy-cheng-red35-olympus-m-zuiko-digital-ed-60mm-f28-macro-red35-review",
@@ -2346,19 +2836,11 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
+            "source_id": "youtube-robin-wong-is-olympus-60mm-f28-the-best-macro-lens",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
+            "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
             "weight": 0.75,
-            "quote_excerpt": "Now, another thing is at the below the 18 mm range, especially at 12 mm wide open, the barrel distortion is absolutely insane.",
-            "witness": "unattested"
-          },
-          {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-            "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-            "weight": 0.75,
-            "quote_excerpt": "Um, for a professional level lens, I shouldn't see that much barrel distortion at wide open.",
+            "quote_excerpt": "to you may check out in the link below I put it in the descriptions to his article where it compares all these lenses you will see which lens it's the clear winner I'm not joking when I talk about the amazing macro lens from Olympus there is virtually no distortion the chromatic aberration is very…",
             "witness": "firsthand"
           }
         ]
@@ -2367,8 +2849,8 @@
         "aspect": "vignetting",
         "pos": 1,
         "neu": 4,
-        "neg": 3,
-        "total": 8,
+        "neg": 2,
+        "total": 7,
         "top_quote_refs": [
           {
             "source_id": "youtube-david-thorpe-a-look-a-the-olympus-60mm-f28-macro-lens-for-micro-four-thirds-cameras",
@@ -2379,11 +2861,11 @@
             "witness": "unattested"
           },
           {
-            "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
+            "source_id": "youtube-peter-forsgård-olympus-60mm-f28-macro-a-great-mft-macro-lens",
             "source_type": "youtube",
-            "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
+            "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
             "weight": 0.75,
-            "quote_excerpt": "There's just something about using this in low light that is just not all too great.",
+            "quote_excerpt": "that's a bad thing very bad because lens hoods are actually real really useful there are two things that lens hood are really good for they protect the lens if you accidentally hit something with the lens it protects the front element and it also blocks unwanted direct light to your lens and it's…",
             "witness": "unattested"
           },
           {
@@ -2391,7 +2873,7 @@
             "source_type": "youtube",
             "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
             "weight": 0.75,
-            "quote_excerpt": "that's a bad thing very bad because lens hoods are actually real really useful there are two things that lens hood are really good for they protect the lens if you accidentally hit something with the lens it protects the front element and it also blocks unwanted direct light to your lens and it's…",
+            "quote_excerpt": "job in session so and what about the image quality like always usually lenses are better if you stop down them a bit so this one is quite good at f/4 and usually if you do macro photography you might want to have some depth of field so stopping down is not a bad idea and remember in macro…",
             "witness": "unattested"
           }
         ]
@@ -2523,9 +3005,9 @@
       {
         "aspect": "dimensions",
         "pos": 5,
-        "neu": 10,
+        "neu": 9,
         "neg": 5,
-        "total": 20,
+        "total": 19,
         "top_quote_refs": [
           {
             "source_id": "youtube-david-taylor-photography-my-new-favourite-lens-the-olympusom-system-60mm-f28-macro-lens",
@@ -2555,10 +3037,10 @@
       },
       {
         "aspect": "handling",
-        "pos": 14,
-        "neu": 6,
+        "pos": 13,
+        "neu": 5,
         "neg": 3,
-        "total": 23,
+        "total": 21,
         "top_quote_refs": [
           {
             "source_id": "youtube-bart-jan-verhoef-the-olympus-60mm-f28-macro-lens-would-i-buy-this-again",
@@ -2589,11 +3071,11 @@
     ],
     "issue_clusters": [],
     "attestation": {
-      "examined": 304,
-      "evaluated": 211,
-      "non_evaluative": 93,
+      "examined": 267,
+      "evaluated": 190,
+      "non_evaluative": 77,
       "non_evaluative_breakdown": {
-        "non_claim": 93
+        "non_claim": 77
       },
       "off_axis": 0,
       "ruleset": {
@@ -2601,7 +3083,7 @@
         "version": "",
         "ref": ""
       },
-      "receipt_line": "304 examined · 211 evaluated under askmaddi-polarity",
+      "receipt_line": "267 examined · 190 evaluated under askmaddi-polarity",
       "off_axis_line": ""
     }
   },
@@ -2610,10 +3092,10 @@
     "successor": null,
     "siblings": [],
     "sentiment": {
-      "pos": 5,
-      "neu": 3,
-      "neg": 2,
-      "total": 10,
+      "pos": 4,
+      "neu": 1,
+      "neg": 1,
+      "total": 6,
       "sources": [
         {
           "source_id": "youtube-emilie-talpin-photography-which-macro-lens-should-you-buy-mzuiko-60mm-or-the-90mm-macro",
@@ -2629,38 +3111,6 @@
           "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
           "weight": 0.75,
           "quote_excerpt": "welcome to R 35 and today we have Matt's evil twin Matt if you remember Matt from our previous Hatley one review and yeah this is the other version of him and what we looking at today is the Olympus 60 mm macro lens which is usually for bugs so today I'm the bug yes man you're the ladybug [Music]",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-          "weight": 0.75,
-          "quote_excerpt": "So, I bought this lens because I wanted to upgrade from my kit zoom, the uh the Lumix G14 to42 Mark II.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-          "weight": 0.75,
-          "quote_excerpt": "And I don't even know why Olympus even approved this because this being a prolevel lens from 2008, having the 14 to 54 Mark II and the original one released before this and they're not and they're pro lenses as well, but they're not as pro as this.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-          "weight": 0.75,
-          "quote_excerpt": "I think if you wanted to get this lens, I more so recommend the 14 to 54 Mark II because the optics are more consistent and the f-stop is only goes to f3.5 versus f4.",
-          "witness": "firsthand"
-        },
-        {
-          "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-          "source_type": "youtube",
-          "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-          "weight": 0.75,
-          "quote_excerpt": "But yeah, anyways, um if you are planning on getting this lens, I recommend you look at the 14 to 54 Mark II or the newer Olympus 12 to 45 F4.0.",
           "witness": "firsthand"
         },
         {
@@ -2713,7 +3163,7 @@
       "url": "https://www.youtube.com/watch?v=soAU6BVw52c",
       "title": "The Olympus 60mm f/2.8 macro lens — Would I buy this again?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366913+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302523+00:00",
       "weight": 0.75
     },
     {
@@ -2724,7 +3174,7 @@
       "url": "https://www.youtube.com/watch?v=N_xXY-Vatkk",
       "title": "The BEST Macro lens for Micro Four Thirds: Olympus 60mm 2.8",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366922+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302538+00:00",
       "weight": 0.75
     },
     {
@@ -2735,7 +3185,7 @@
       "url": "https://www.youtube.com/watch?v=bkhIwkvWmn8",
       "title": "OM SYSTEM Olympus M.Zuiko 60mm Review | 10 Reasons NOT to Buy! 🤔📸",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366926+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302564+00:00",
       "weight": 0.75
     },
     {
@@ -2746,7 +3196,7 @@
       "url": "https://www.youtube.com/watch?v=Yq9fX340MrA",
       "title": "Olympus 60mm f2 8 Macro Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366929+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302567+00:00",
       "weight": 0.75
     },
     {
@@ -2757,7 +3207,7 @@
       "url": "https://www.youtube.com/watch?v=Zppk0B6Dwi8",
       "title": "My new favourite lens? The Olympus/OM System 60mm f/2.8 macro lens review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366931+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302570+00:00",
       "weight": 0.75
     },
     {
@@ -2768,7 +3218,7 @@
       "url": "https://www.youtube.com/watch?v=uwd6votlsSI",
       "title": "A Look A The Olympus 60mm f2.8 Macro Lens for Micro Four Thirds Cameras",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366934+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302573+00:00",
       "weight": 0.75
     },
     {
@@ -2779,7 +3229,7 @@
       "url": "https://www.youtube.com/watch?v=VzB2Zzb6KX0",
       "title": "My favorite macro lens? M.Zuiko 60mm macro",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366937+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302576+00:00",
       "weight": 0.75
     },
     {
@@ -2790,7 +3240,7 @@
       "url": "https://www.youtube.com/watch?v=6RNIzpHZfMI",
       "title": "Using the M.Zuiko 60mm macro to its full potential",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366939+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302579+00:00",
       "weight": 0.75
     },
     {
@@ -2801,7 +3251,7 @@
       "url": "https://www.youtube.com/watch?v=k5ok3RacLuw",
       "title": "Which macro lens should you buy? M.Zuiko 60mm or the 90mm macro?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366942+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302582+00:00",
       "weight": 0.75
     },
     {
@@ -2812,18 +3262,7 @@
       "url": "https://www.youtube.com/watch?v=G9sLTcFOHws",
       "title": "Olympus M. Zuiko Digital ED 60mm f2.8 Macro - Red35 Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366944+00:00",
-      "weight": 0.75
-    },
-    {
-      "source_id": "youtube-joseph-h-full-review-of-the-olympus-12-60mm-f28-4-and-why-im-selling-it",
-      "source_type": "pro",
-      "reviewer": "Joseph H.",
-      "platform": "youtube",
-      "url": "https://www.youtube.com/watch?v=7Jbn6_hrLjQ",
-      "title": "Full Review of The Olympus 12-60mm f2.8-4 and Why I'm Selling It.",
-      "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366947+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302584+00:00",
       "weight": 0.75
     },
     {
@@ -2834,7 +3273,7 @@
       "url": "https://www.youtube.com/watch?v=kYKsytjEil8",
       "title": "OM SYSTEM / Olympus M.Zuiko 60mm F2.8 Macro | Product Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366950+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302587+00:00",
       "weight": 0.75
     },
     {
@@ -2845,7 +3284,7 @@
       "url": "https://www.youtube.com/watch?v=yvirSlcyIrA",
       "title": "Olympus 60mm F2.8 Macro - a GREAT MFT macro lens",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366952+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302590+00:00",
       "weight": 0.75
     },
     {
@@ -2856,7 +3295,7 @@
       "url": "https://www.youtube.com/watch?v=4s3kaOMCWK8",
       "title": "Is Olympus 60mm F2.8 The Best Macro Lens?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366955+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302593+00:00",
       "weight": 0.75
     },
     {
@@ -2867,7 +3306,7 @@
       "url": "https://www.youtube.com/watch?v=uamUkqwRzWA",
       "title": "Olympus 60mm Macro or 75mm F1.8 - Which Is Better?",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366957+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302595+00:00",
       "weight": 0.75
     },
     {
@@ -2878,7 +3317,7 @@
       "url": "https://www.youtube.com/watch?v=aXv6PXUnZA4",
       "title": "OM System 60mm F2.8 Macro Mark II - Make This Happen!",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366960+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302598+00:00",
       "weight": 0.75
     },
     {
@@ -2889,7 +3328,7 @@
       "url": "https://www.youtube.com/watch?v=owWA4ioB3tE",
       "title": "Shooting Macro with the Olympus 60mm f/2.8",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366962+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302600+00:00",
       "weight": 0.75
     },
     {
@@ -2900,7 +3339,7 @@
       "url": "https://www.youtube.com/watch?v=TBthRHSj4Fo",
       "title": "Olympus 60mm f/2.8 Vs Olympus 90mm f/3.5 for Macro Photography",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366965+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302603+00:00",
       "weight": 0.75
     },
     {
@@ -2911,17 +3350,17 @@
       "url": "https://www.youtube.com/watch?v=yuX9_QqgP9w",
       "title": "Olympus M.Zuiko Digital ED 60mm f2.8 Macro Lens Review",
       "publication_date": "",
-      "ingested_at": "2026-09-03T18:08:07.366967+00:00",
+      "ingested_at": "2026-11-22T07:05:32.302606+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/olympus-60mm-f2-8/",
-    "reddit": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro\n\nSynthesized from 19 reviewer sources for Olympus M.Zuiko Digital ED 60mm f/2.8 Macro. AF for video draws the most discussion: 18 positive, 38 neutral, and 8 negative across 64 sentiment markers. The most criticism lands on AF for stills: 30% positive, 27% neutral, 43% negative across 30 claims. Opinion is split on dimensions (5 positive, 10 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (9/8/13 across 30), while video sentiment runs net positive (18/38/8 across 64).\n\nI pulled together all 19 reviews in one place: https://askmaddi.com/cards/olympus-60mm-f2-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Olympus M.Zuiko Digital ED 60mm f/2.8 Macro**\nSynthesized from 19 reviewer sources for Olympus M.Zuiko Digital ED 60mm f/2.8 Macro. AF for video draws the most discussion: 18 positive, 38 neutral, and 8 negative across 64 sentiment markers. The most criticism lands on AF for stills: 30% positive, 27% neutral, 43% negative across 30 claims. Opinion is split on dimensions (5 positive, 10 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (9/8/13 across 30), while video sentiment runs net positive (18/38/8 across 64).\nAll 19 reviews in one place: https://askmaddi.com/cards/olympus-60mm-f2-8/\n_(disclosure: I built this)_",
+    "reddit": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro\n\nSynthesized from 18 reviewer sources for Olympus 60mm f2.8. AF for video draws the most discussion: 18 positive, 31 neutral, and 8 negative across 57 sentiment markers. The most criticism lands on AF for stills: 29% positive, 28% neutral, 43% negative across 28 claims. Opinion is split on dimensions (5 positive, 9 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (8/8/12 across 28), while video sentiment runs net positive (18/31/8 across 57).\n\nI pulled together all 18 reviews in one place: https://askmaddi.com/cards/olympus-60mm-f2-8/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Olympus M.Zuiko Digital ED 60mm f/2.8 Macro**\nSynthesized from 18 reviewer sources for Olympus 60mm f2.8. AF for video draws the most discussion: 18 positive, 31 neutral, and 8 negative across 57 sentiment markers. The most criticism lands on AF for stills: 29% positive, 28% neutral, 43% negative across 28 claims. Opinion is split on dimensions (5 positive, 9 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (8/8/12 across 28), while video sentiment runs net positive (18/31/8 across 57).\nAll 18 reviews in one place: https://askmaddi.com/cards/olympus-60mm-f2-8/\n_(disclosure: I built this)_",
     "og": {
       "title": "Olympus M.Zuiko Digital ED 60mm f/2.8 Macro — Reviewed",
-      "description": "Synthesized from 19 reviewer sources for Olympus M.Zuiko Digital ED 60mm f/2.8 Macro. AF for video draws the most discussion: 18 positive, 38 neutral, and 8 negative across 64 sentiment markers. The most criticism lands on AF for stills: 30% positive, 27% neutral, 43% negative across 30 claims. Opinion is split on dimensions (5 positive, 10 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (9/8/13 across 30), while video sentiment runs net positive (18/38/8 across 64).",
+      "description": "Synthesized from 18 reviewer sources for Olympus 60mm f2.8. AF for video draws the most discussion: 18 positive, 31 neutral, and 8 negative across 57 sentiment markers. The most criticism lands on AF for stills: 29% positive, 28% neutral, 43% negative across 28 claims. Opinion is split on dimensions (5 positive, 9 neutral, 5 negative claims). AF performance splits by use case: stills sentiment runs net negative (8/8/12 across 28), while video sentiment runs net positive (18/31/8 across 57).",
       "image": null,
       "url": "https://askmaddi.com/cards/olympus-60mm-f2-8/"
     }
