@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-22",
+  "as_of": "2026-11-23",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -68116,6 +68116,55 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-22T04:02:44Z"
+    },
+    "om-system-12-45mm-f4": {
+      "contamination_key": "om-system-12-45mm-f4",
+      "vendor": "OM SYSTEM",
+      "model": "12 45mm f4",
+      "gtin": "04545350054014",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820383389877",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "OM SYSTEM",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "4545350054014",
+              "gtin14": "04545350054014",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "OM SYSTEM M.ZUIKO DIGITAL ED 12-45mm F4.0 PRO -Near Mint- #160",
+        "image": "https://i.ebayimg.com/images/g/us8AAeSwl3drAqcv/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "330.00",
+          "currency": "USD",
+          "as_of": "2026-11-23T04:02:57Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820383389877?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-23T04:02:57Z"
     }
   },
   "substrate": [
