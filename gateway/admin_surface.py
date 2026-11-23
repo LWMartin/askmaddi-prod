@@ -423,6 +423,12 @@ def _reason_badge(record):
         # if a true dup, reject the junior as `duplicate`; if a mis-stamp, fix
         # the wrong slug's identity. collision_with names the sibling slug.
         return ('duplicate identity', record.get('collision_with') or '?')
+    if reason == 'ambiguous_identity':
+        # The name may denote more than one product: across eras (multisource,
+        # L10 class), or an existing card's product (registry-name lookup,
+        # 2026-11-23; collision_with lists the existing slugs). Point the demand
+        # at the existing card, or promote as a genuinely new product.
+        return ('ambiguous identity', record.get('collision_with') or '')
     if reason == 'brand_mismatch':
         # The listing names another maker (often the MOUNT: 'Sony' on a
         # TTArtisan lens) or a placeholder ('Unbranded'). Promote with the right

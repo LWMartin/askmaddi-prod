@@ -49,10 +49,15 @@ from pathlib import Path
 # in-repo faithful copies (slug_common), kept identical to the phantom-ops
 # originals by the agreement test.
 from slug_common import slugify, _norm
+from brand_match import same_maker
 
 _THIS = Path(__file__).resolve().parent
 # The live spine: askmaddi-prod data/skus.json, beside data/cards/.
 _SKUS = _THIS.parent / "data" / "skus.json"
+# The registry's product names, projected in-repo (tools/build_identity_names.py),
+# read from BESIDE the spine in use: the projection describes that spine's keys,
+# and a fixture spine in a tmp dir sees no projection unless a test writes one.
+_NAMES_FILE = "identity_names.json"
 
 # Same length cap the cadre slugs and adapters use. slugify() guarantees no
 # trailing hyphen after truncation.
@@ -67,6 +72,11 @@ class SlugResolution:
     input_text: str       # the vendor+model text the generator saw
     needs_review: bool    # True for 'generated' — a proposal, not a fact
     collision: str | None = None   # existing slug this normalizes the same as
+    # Existing spine slugs this identity's NAME may denote (registry-name lookup,
+    # 2026-11-23): set only on a generated proposal whose name is a lenient name
+    # of a carded product, or a strict name shared by more than one. The mint
+    # path routes these to review (ambiguous_identity) instead of minting.
+    ambiguous_with: tuple = ()
 
     def line(self) -> str:
         tag = self.source.upper()
@@ -75,6 +85,8 @@ class SlugResolution:
             base += f"  (from {self.input_text!r} — REVIEW before freeze)"
         if self.collision:
             base += f"  \u26a0 normalizes same as existing '{self.collision}'"
+        if self.ambiguous_with:
+            base += f"  \u26a0 name may denote existing {', '.join(self.ambiguous_with)}"
         return base
 
 
@@ -131,12 +143,51 @@ def _load_override_table(skus_path: Path) -> tuple[set[str], dict[str, str]]:
     return slugs, by_identity
 
 
+def _spine_entries(skus_path: Path) -> dict:
+    if not skus_path.exists():
+        return {}
+    data = json.loads(skus_path.read_text())
+    if isinstance(data, dict) and isinstance(data.get("skus"), dict):
+        return data["skus"]
+    return {}
+
+
+def _name_matches(vendor: str, model: str, skus_path: Path,
+                  names_path: Path) -> tuple[tuple, tuple]:
+    """(strict_slugs, lenient_slugs): existing spine slugs whose registry product
+    is named EXACTLY (normalized) by this identity — 'vendor model' or the model
+    alone — and whose registry vendor is the same maker. Exact, never
+    containment: containment is how suffix twins form ('a7c' inside 'a7c ii').
+    Brand-level keys are not in the projection. A missing projection or spine
+    yields no matches, i.e. today's behaviour."""
+    if not names_path.exists():
+        return (), ()
+    products = (json.loads(names_path.read_text()).get("products") or {})
+    by_key: dict[str, list[str]] = {}
+    for slug, e in _spine_entries(skus_path).items():
+        key = (e or {}).get("contamination_key") or slug
+        if key in products:
+            by_key.setdefault(key, []).append(slug)
+    forms = {f for f in (_norm(f"{vendor} {model}"), _norm(model)) if f}
+    strict, lenient = set(), set()
+    for key, slugs in by_key.items():
+        p = products[key]
+        if not same_maker(vendor, p.get("vendor")):
+            continue
+        if forms & set(p.get("strict") or ()):
+            strict.update(slugs)
+        elif forms & set(p.get("lenient") or ()):
+            lenient.update(slugs)
+    return tuple(sorted(strict)), tuple(sorted(lenient))
+
+
 def resolve_slug(
     vendor: str,
     model: str,
     *,
     override: str | None = None,
     skus_path: Path = _SKUS,
+    names_path: Path | None = None,
 ) -> SlugResolution:
     """Resolve the canonical registry slug for one SKU.
 
@@ -148,8 +199,17 @@ def resolve_slug(
          mechanical form differs (sony-a7iv, sigma-35-art-dg-dn-ii): a Stage-6
          rebuild feeding vendor/model gets the FROZEN slug, never a fresh mint.
       3. Frozen by SLUG — the generated tail already exists verbatim; read it.
-      4. Generated tail — slugify(vendor + " " + model), UNCHANGED rule. Flagged
+      4. Frozen by REGISTRY NAME (2026-11-23) — the identity is exactly a strict
+         own name (self.aliases) of a registry product that one existing spine
+         slug carries as its contamination_key, same maker: return that slug.
+         Demand for 'Ulanzi Zero F38' finds ulanzi-f38-zero (model 'F38 / Zero')
+         instead of minting a twin. Override-table ADDITION, slugify untouched.
+      5. Generated tail — slugify(vendor + " " + model), UNCHANGED rule. Flagged
          needs_review=True: a proposal, because the rule can't match human taste.
+         If the name is only a LENIENT name of a carded product ('Ulanzi F38':
+         the Zero F38 and the F38 Video tripod share it), or a strict name more
+         than one slug carries, `ambiguous_with` lists those slugs so the mint
+         path sends it to review rather than building a possible duplicate.
 
     Collision note: if a generated slug normalizes (alphanumeric-only) to the
     same key as an existing-but-textually-different slug, that is surfaced — it
@@ -188,12 +248,22 @@ def resolve_slug(
             needs_review=False, collision=None,
         )
 
-    # 4. Genuinely new -> generated proposal, must be reviewed before freeze.
+    # 4. Frozen by registry name — exactly one existing slug's product.
+    names = Path(names_path) if names_path else Path(skus_path).with_name(_NAMES_FILE)
+    strict, lenient = _name_matches(vendor, model, Path(skus_path), names)
+    if len(strict) == 1:
+        return SlugResolution(
+            slug=strict[0], source="override", input_text=text,
+            needs_review=False, collision=None,
+        )
+
+    # 5. Genuinely new -> generated proposal, must be reviewed before freeze.
     coll = _collision(generated, frozen)
     return SlugResolution(
         slug=generated, source="generated", input_text=text,
         needs_review=True,
         collision=coll if coll and coll != generated else None,
+        ambiguous_with=strict or lenient,
     )
 
 

@@ -48,6 +48,7 @@ primitives it calls (which write to box-side, gitignored data/ stores). It does
 not touch the skus.json spine directly except through skus_registry.upsert (the
 one sanctioned writer).
 """
+import dataclasses
 import json
 import re
 import socket
@@ -238,6 +239,10 @@ def lookup_or_mint(slug, *, vendor=None, model=None,
             'source': 'generated',
             'minted': True,
             'resolution': res,
+            # Existing slugs this NAME may denote (lenient registry name, or a
+            # strict name more than one slug carries). resolve_proposal routes a
+            # non-empty value to review before anything is built (2026-11-23).
+            'ambiguous_with': tuple(getattr(res, 'ambiguous_with', ()) or ()),
         }
 
     # resolve_slug returned a FROZEN slug (override/identity/slug match) — the
@@ -550,37 +555,10 @@ def _model_family_agrees(brand_a, model_a, brand_b, model_b):
 # 'compatible with DJI' aftermarket builds minted as DJI products. correct_brand
 # repaired the data; this stops the class at mint: a listing whose brand does
 # not agree with the proposal's vendor goes to review, never straight to spine.
-_BRAND_PLACEHOLDERS = frozenset({
-    'unbranded', 'generic', 'doesnotapply', 'dosenotapply', 'na', 'none',
-    'unknown', 'notapplicable', 'nobrand', 'oem'})
-# Renames / trading names of ONE maker: either side may use any form.
-_BRAND_SAME = (frozenset({'fujifilm', 'fuji'}),
-               frozenset({'olympus', 'omsystem', 'omdigital', 'omdigitalsolutions'}))
-
-
-def _brand_words(b):
-    return set(re.findall(r'[a-z0-9]+', str(b or '').lower()))
-
-
-def _mint_brand_agrees(vendor, listing_brand):
-    """True when the listing's brand can stand for the vendor. An EMPTY brand is
-    no evidence (the extractor found none; the card falls back to the vendor) and
-    passes; an explicit placeholder ('Unbranded', 'Does not apply') does NOT -
-    it is what rendered as the PowerShot's brand. Agreement is word-level ('Paul
-    C Buff' / 'Paul C. Buff'; 'INSTA360 GO3' / 'Insta360') or a known rename."""
-    b = str(listing_brand or '').strip()
-    if not b:
-        return True
-    nb = re.sub(r'[^a-z0-9]', '', b.lower())
-    if nb in _BRAND_PLACEHOLDERS:
-        return False
-    nv = re.sub(r'[^a-z0-9]', '', str(vendor or '').lower())
-    if not nv:
-        return True
-    if any(nv in g and nb in g for g in _BRAND_SAME):
-        return True
-    wv, wb = _brand_words(vendor), _brand_words(b)
-    return wv <= wb or wb <= wv
+# The definition moved to brand_match (2026-11-23) so slug_normalizer can share
+# it without a circular import; these names stay for callers and tests.
+from brand_match import (_BRAND_PLACEHOLDERS, _BRAND_SAME, _brand_words,  # noqa: E402,F401
+                         mint_brand_agrees as _mint_brand_agrees)
 
 
 def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
@@ -658,6 +636,31 @@ def resolve_proposal(slug, *, ebay, gemma, demand_log, review_queue,
         return {
             'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
             'reason': 'collision', 'collision_with': resolution.collision,
+            'source': target['source'],
+        }
+
+    # ── Route 0b (mint only): the NAME may be an existing card -> review ────────
+    # 2026-11-23, the ulanzi-f38 twin class. resolve_slug found this identity's
+    # name among the registry names of existing spine slugs, but not as exactly
+    # one product's strict own name: a lenient name a sibling shares ('Ulanzi
+    # F38': the Zero F38 card and the F38 Video tripod), or a strict name two
+    # slugs carry. Minting would build a possible duplicate (ulanzi-f38 was
+    # built, reviewed and delisted 11-19). A human decides: the existing card,
+    # or a genuinely new product. Before eBay, like the collision route.
+    if target.get('minted') and resolution is not None and target.get('ambiguous_with'):
+        eq_kwargs = {} if review_queue_path is None else {'path': review_queue_path}
+        candidates_txt = ', '.join(target['ambiguous_with'])
+        record = review_queue.enqueue(
+            dataclasses.replace(resolution, collision=candidates_txt),
+            {}, target['vendor'], target['model'], target['category'],
+            contamination_key=target['contamination_key'],
+            reason_override='ambiguous_identity',
+            **eq_kwargs,
+        )
+        return {
+            'slug': slug, 'outcome': 'queued', 'detail': record['queue_id'],
+            'reason': 'ambiguous_identity',
+            'collision_with': candidates_txt,
             'source': target['source'],
         }
 
