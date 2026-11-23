@@ -21,31 +21,26 @@
   },
   "pricing": {
     "msrp_usd": null,
-    "current_new_usd": 720,
-    "current_new_source": "adorama_feed",
-    "current_new_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fpeak-design-aluminum-travel-tripod-ball-head%2Fp%2Fpdptsbk1",
-    "affiliate_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fpeak-design-aluminum-travel-tripod-ball-head%2Fp%2Fpdptsbk1",
+    "current_new_usd": null,
+    "current_new_source": null,
+    "current_new_url": null,
+    "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 739.99,
-        "open_box": 849.95
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 5,
-      "price_updated_at": "2026-11-23T10:11:47.829086+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-08-09T02:00:34.202634+00:00"
+    "price_updated_at": "2026-11-21T17:01:28.272937+00:00"
   },
   "freshness": {
     "created_at": "2026-06-23T00:33:03.446263+00:00",
-    "last_built": "2026-09-09T00:14:49.382593+00:00",
-    "last_checked": "2026-09-09T00:14:49.382593+00:00",
-    "source_count": 17,
+    "last_built": "2026-11-21T17:01:28.262261+00:00",
+    "last_checked": "2026-11-21T17:01:28.262261+00:00",
+    "source_count": 18,
     "source_types": {
-      "pro": 17
+      "pro": 18
     },
     "build_model": "classifier-v1",
     "build_version": "stage6-v0.2"
@@ -5623,7 +5618,7 @@
   "facts": {
     "specs": {
       "weight_g": {
-        "value": "1.9kg (4.2lb)",
+        "value": "1.7 kg / 3.7 lb (Pro Lite) · 1.9 kg / 4.2 lb (Pro) · 2.0 kg / 4.5 lb (Pro Tall)",
         "low": null,
         "high": null,
         "anchor": null,
@@ -5631,7 +5626,7 @@
         "unit": ""
       },
       "max_load_kg": {
-        "value": "18.1kg (40lb)",
+        "value": "15.9 kg / 35 lb (Pro Lite) · 18.1 kg / 40 lb (Pro, Pro Tall)",
         "low": null,
         "high": null,
         "anchor": null,
@@ -5639,7 +5634,7 @@
         "unit": ""
       },
       "folded_length_cm": {
-        "value": "50.1cm (19.7\")",
+        "value": "48.8 cm / 19.2 in (Pro Lite) · 50.1 cm / 19.7 in (Pro) · 58.1 cm / 22.9 in (Pro Tall)",
         "low": null,
         "high": null,
         "anchor": null,
@@ -5647,7 +5642,7 @@
         "unit": ""
       },
       "leg_sections": {
-        "value": "4",
+        "value": "4 (all three models)",
         "low": null,
         "high": null,
         "anchor": null,
@@ -5661,69 +5656,61 @@
         "anchor": null,
         "anchor_source": "",
         "unit": ""
+      },
+      "max_height_cm": {
+        "value": "168.4cm (66.3\")",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
+      },
+      "min_height_cm": {
+        "value": "15.9cm (6.3\")",
+        "low": null,
+        "high": null,
+        "anchor": null,
+        "anchor_source": "",
+        "unit": ""
       }
     },
     "provenance": {
       "specs.weight_g": {
-        "source": "manufacturer",
-        "url": "https://www.peakdesign.com/products/pro-tripod",
-        "fetched_at": "2026-09-15T15:58:45.706722+00:00",
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-11-19",
         "license": "",
-        "reason": "",
-        "extraction": {
-          "key": "Weight",
-          "section": [
-            "Specs"
-          ],
-          "via": "slot_name"
-        }
+        "reason": "Range card (06-22 ruling: Pro Lite / Pro / Pro Tall on one card). The manufacturer page scrape (peakdesign.com/products/pro-tripod, 2026-09-15) filled every slot with the middle Pro model's figure, presented as the range's; per-model values stated instead (verified 2026-11-19). Weights: Peak Design Pro series spec sheet (content.abt.com/documents/173341/peak-design-pro-series-tripod-spec-sheet.pdf); Pro Lite 1.7 kg also on retailer copies of the manufacturer spec text and GearJunkie (3.7 lb).",
+        "extraction": null
       },
       "specs.max_load_kg": {
-        "source": "manufacturer",
-        "url": "https://www.peakdesign.com/products/pro-tripod",
-        "fetched_at": "2026-09-15T15:58:45.706722+00:00",
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-11-19",
         "license": "",
-        "reason": "",
-        "extraction": {
-          "key": "Weight Capacity",
-          "section": [
-            "Specs"
-          ],
-          "via": "alias"
-        }
+        "reason": "Range card (06-22 ruling: Pro Lite / Pro / Pro Tall on one card). The manufacturer page scrape (peakdesign.com/products/pro-tripod, 2026-09-15) filled every slot with the middle Pro model's figure, presented as the range's; per-model values stated instead (verified 2026-11-19). Capacity: Peak Design Pro series spec sheet (content.abt.com/documents/173341/peak-design-pro-series-tripod-spec-sheet.pdf) (Pro 40 lb / 18.1 kg); Pro Lite 35 lb / 15.9 kg and Pro Tall 40 lb from retailer copies of the manufacturer text, Amateur Photographer, The-Digital-Picture.",
+        "extraction": null
       },
       "specs.folded_length_cm": {
-        "source": "manufacturer",
-        "url": "https://www.peakdesign.com/products/pro-tripod",
-        "fetched_at": "2026-09-15T15:58:45.706722+00:00",
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-11-19",
         "license": "",
-        "reason": "",
-        "extraction": {
-          "key": "Collapsed Length",
-          "section": [
-            "Specs"
-          ],
-          "via": "alias"
-        }
+        "reason": "Range card (06-22 ruling: Pro Lite / Pro / Pro Tall on one card). The manufacturer page scrape (peakdesign.com/products/pro-tripod, 2026-09-15) filled every slot with the middle Pro model's figure, presented as the range's; per-model values stated instead (verified 2026-11-19). Packed length: Peak Design Pro series spec sheet (content.abt.com/documents/173341/peak-design-pro-series-tripod-spec-sheet.pdf) (Pro 50.1 cm); Pro Tall 58.1 cm (retailer copy of manufacturer text, TechRadar, Shutter Muse). Pro Lite: 48.8 cm / 19.2 in per the manufacturer text on retailers, TechRadar, Shutter Muse, DCW; Amateur Photographer prints 48.4 cm, which disagrees with its own 19.2 in.",
+        "extraction": null
       },
       "specs.leg_sections": {
-        "source": "manufacturer",
-        "url": "https://www.peakdesign.com/products/pro-tripod",
-        "fetched_at": "2026-09-15T15:58:45.706722+00:00",
+        "source": "curated",
+        "url": "",
+        "fetched_at": "2026-11-19",
         "license": "",
-        "reason": "",
-        "extraction": {
-          "key": "Leg sections",
-          "section": [
-            "Specs"
-          ],
-          "via": "slot_name"
-        }
+        "reason": "Range card (06-22 ruling: Pro Lite / Pro / Pro Tall on one card). The manufacturer page scrape (peakdesign.com/products/pro-tripod, 2026-09-15) filled every slot with the middle Pro model's figure, presented as the range's; per-model values stated instead (verified 2026-11-19). Peak Design Pro series spec sheet (content.abt.com/documents/173341/peak-design-pro-series-tripod-spec-sheet.pdf) and GearJunkie: 4 leg sections on Pro Lite, Pro and Pro Tall.",
+        "extraction": null
       },
       "specs.leg_lock_type": {
         "source": "manufacturer",
         "url": "https://www.peakdesign.com/products/pro-tripod",
-        "fetched_at": "2026-09-15T15:58:45.706722+00:00",
+        "fetched_at": "2026-11-21T17:00:40.051741+00:00",
         "license": "",
         "reason": "",
         "extraction": {
@@ -5733,16 +5720,68 @@
           ],
           "via": "alias"
         }
+      },
+      "specs.max_height_cm": {
+        "source": "manufacturer",
+        "url": "https://www.peakdesign.com/products/pro-tripod",
+        "fetched_at": "2026-11-21T17:00:40.051741+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Max height (center column raised)",
+          "section": [
+            "Specs"
+          ],
+          "via": "llm"
+        }
+      },
+      "specs.min_height_cm": {
+        "source": "manufacturer",
+        "url": "https://www.peakdesign.com/products/pro-tripod",
+        "fetched_at": "2026-11-21T17:00:40.051741+00:00",
+        "license": "",
+        "reason": "",
+        "extraction": {
+          "key": "Min height (low mode)",
+          "section": [
+            "Specs"
+          ],
+          "via": "llm"
+        }
       }
     },
     "conflicts": [
       {
-        "field": "identity.image_thumb",
-        "canonical": "https://i.ebayimg.com/images/g/zEMAAeSwntxp2Fhk/s-l1600.jpg",
-        "divergent": "https://cdn.shopify.com/s/files/1/2986/1172/files/tripod-pro-Lite-Ground-Shadow.18.jpg?v=1763419149",
-        "canonical_source": "card",
+        "field": "specs.weight_g",
+        "canonical": "1.7 kg / 3.7 lb (Pro Lite) · 1.9 kg / 4.2 lb (Pro) · 2.0 kg / 4.5 lb (Pro Tall)",
+        "divergent": "1.9kg (4.2lb)",
+        "canonical_source": "curated",
         "divergent_source": "manufacturer",
-        "note": "fetched identity differs from curated card value; kept card"
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "specs.max_load_kg",
+        "canonical": "15.9 kg / 35 lb (Pro Lite) · 18.1 kg / 40 lb (Pro, Pro Tall)",
+        "divergent": "18.1kg (40lb)",
+        "canonical_source": "curated",
+        "divergent_source": "manufacturer",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "specs.folded_length_cm",
+        "canonical": "48.8 cm / 19.2 in (Pro Lite) · 50.1 cm / 19.7 in (Pro) · 58.1 cm / 22.9 in (Pro Tall)",
+        "divergent": "50.1cm (19.7\")",
+        "canonical_source": "curated",
+        "divergent_source": "manufacturer",
+        "note": "categorical disagreement; canonical is higher-authority"
+      },
+      {
+        "field": "specs.leg_sections",
+        "canonical": "4 (all three models)",
+        "divergent": "4",
+        "canonical_source": "curated",
+        "divergent_source": "manufacturer",
+        "note": "categorical disagreement; canonical is higher-authority"
       }
     ]
   },
@@ -5894,6 +5933,17 @@
   },
   "sources": [
     {
+      "source_id": "rss-sheclicks-how-to-shoot-long-exposure-images-in-daylight-with-nd-filter-2026",
+      "source_type": "pro",
+      "reviewer": "SheClicks",
+      "platform": "web",
+      "url": "https://sheclicks.net/how-to-shoot-long-exposure-images-in-daylight-with-nd-filters/?utm_source=rss&utm_medium=rss&utm_campaign=how-to-shoot-long-exposure-images-in-daylight-with-nd-filters",
+      "title": "How to Shoot Long Exposure Images in Daylight with ND Filters",
+      "publication_date": "",
+      "ingested_at": "2026-11-21T17:01:28.271847+00:00",
+      "weight": 0.75
+    },
+    {
       "source_id": "rss-shutter-muse-peak-design-pro-tripods-all-models-tested-and-reviewed-2025",
       "source_type": "pro",
       "reviewer": "Shutter Muse",
@@ -5901,7 +5951,7 @@
       "url": "https://shuttermuse.com/peak-design-pro-tripods-reviewed/",
       "title": "Peak Design Pro Tripods – All Models Tested and Reviewed",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389045+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271858+00:00",
       "weight": 0.75
     },
     {
@@ -5912,7 +5962,7 @@
       "url": "https://www.youtube.com/watch?v=DvqrWXm3bJU",
       "title": "Peak Design Pro Tripod Review – Ultimate Travel Tripod for Photography & Video",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389055+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271861+00:00",
       "weight": 0.75
     },
     {
@@ -5923,7 +5973,7 @@
       "url": "https://www.youtube.com/watch?v=ybu7-c1hK_0",
       "title": "REVIEW | Peak Design Pro tripods: The best tripods on the market?",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389058+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271864+00:00",
       "weight": 0.75
     },
     {
@@ -5934,7 +5984,7 @@
       "url": "https://www.youtube.com/watch?v=s1-HDkFP9o4",
       "title": "Peak Design Pro Tripod Review: The Best Built Tripod Yet? | Real-World Test",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389061+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271866+00:00",
       "weight": 0.75
     },
     {
@@ -5945,7 +5995,7 @@
       "url": "https://www.youtube.com/watch?v=xkP246bZSy0",
       "title": "Peak Design Pro Tripod Real World Testing – Is it worth it?",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389064+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271869+00:00",
       "weight": 0.75
     },
     {
@@ -5956,7 +6006,7 @@
       "url": "https://www.youtube.com/watch?v=jrGLsYY4tfc",
       "title": "Peak Design Pro Tripod Review: HYPE or LEGIT?",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389066+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271871+00:00",
       "weight": 0.75
     },
     {
@@ -5967,7 +6017,7 @@
       "url": "https://www.youtube.com/watch?v=Ch8pFBYOB4k",
       "title": "Peak Design's NEW Tripod Turns Into a Video Head! (Genius Design)",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389069+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271873+00:00",
       "weight": 0.75
     },
     {
@@ -5978,7 +6028,7 @@
       "url": "https://www.youtube.com/watch?v=9gyRhomkx-E",
       "title": "Is Peak Design Changing The Industry Again With Their New Pro Tripod?",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389074+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271876+00:00",
       "weight": 0.75
     },
     {
@@ -5989,7 +6039,7 @@
       "url": "https://www.youtube.com/watch?v=opIQNwZGL2M",
       "title": "An Actual Travel Tripod For Cinema Cameras?",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389077+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271878+00:00",
       "weight": 0.75
     },
     {
@@ -6000,7 +6050,7 @@
       "url": "https://www.youtube.com/watch?v=4yxbmvBW6F4",
       "title": "Peak Design Pro Tripod Review",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389080+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271881+00:00",
       "weight": 0.75
     },
     {
@@ -6011,7 +6061,7 @@
       "url": "https://www.youtube.com/watch?v=bIz8OHpYhpU",
       "title": "Peak Design Pro Tripod: 6 Months Later! Testing, Travel, Comparison & More",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389083+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271883+00:00",
       "weight": 0.75
     },
     {
@@ -6022,7 +6072,7 @@
       "url": "https://www.youtube.com/watch?v=bZUzD8GyPWc",
       "title": "Best Tripod - Peak Design Pro vs Falcam TreeRoot",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389085+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271885+00:00",
       "weight": 0.75
     },
     {
@@ -6033,7 +6083,7 @@
       "url": "https://www.youtube.com/watch?v=2Ai3EA5O5Tg",
       "title": "Peak Design Goes Pro",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389087+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271888+00:00",
       "weight": 0.75
     },
     {
@@ -6044,7 +6094,7 @@
       "url": "https://www.youtube.com/watch?v=U8GfxSpwVUE",
       "title": "Complete Guide to Peak Design Tripods",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389089+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271890+00:00",
       "weight": 0.75
     },
     {
@@ -6055,7 +6105,7 @@
       "url": "https://www.youtube.com/watch?v=SFXjU23pfmg",
       "title": "Pro Tripod Features feat. Jimmy Chin (and Mini Jimmy)",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389092+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271892+00:00",
       "weight": 0.75
     },
     {
@@ -6066,7 +6116,7 @@
       "url": "https://www.youtube.com/watch?v=5Y9SjaLKxsE",
       "title": "Pro Tripod is for Video, Too (The Guide To Accessories)",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389094+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271895+00:00",
       "weight": 0.75
     },
     {
@@ -6077,14 +6127,14 @@
       "url": "https://www.youtube.com/watch?v=jpYJMlxG6ZA",
       "title": "There Is a LOT to Like About Peak Design's NEW Pro Tripods!",
       "publication_date": "",
-      "ingested_at": "2026-09-09T00:14:49.389096+00:00",
+      "ingested_at": "2026-11-21T17:01:28.271897+00:00",
       "weight": 0.75
     }
   ],
   "export": {
     "permalink": "https://askmaddi.com/cards/peak-design-pro-tripod/",
-    "reddit": "Peak Design Pro Tripod\n\nReviewers are most positive about setup speed (70% positive, 25% neutral, 5% negative across 20 claims). The most criticism lands on stability: 64% positive, 11% neutral, 25% negative across 28 claims. Coverage of mount compatibility is mostly neutral: 32% positive, 58% neutral, 10% negative across 41 claims.\n\nI pulled together all 17 reviews in one place: https://askmaddi.com/cards/peak-design-pro-tripod/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
-    "discord": "**Peak Design Pro Tripod**\nReviewers are most positive about setup speed (70% positive, 25% neutral, 5% negative across 20 claims). The most criticism lands on stability: 64% positive, 11% neutral, 25% negative across 28 claims. Coverage of mount compatibility is mostly neutral: 32% positive, 58% neutral, 10% negative across 41 claims.\nAll 17 reviews in one place: https://askmaddi.com/cards/peak-design-pro-tripod/\n_(disclosure: I built this)_",
+    "reddit": "Peak Design Pro Tripod\n\nReviewers are most positive about setup speed (70% positive, 25% neutral, 5% negative across 20 claims). The most criticism lands on stability: 64% positive, 11% neutral, 25% negative across 28 claims. Coverage of mount compatibility is mostly neutral: 32% positive, 58% neutral, 10% negative across 41 claims.\n\nI pulled together all 18 reviews in one place: https://askmaddi.com/cards/peak-design-pro-tripod/\n\n(Disclosure: I built this — a review aggregator, not a reviewer.)",
+    "discord": "**Peak Design Pro Tripod**\nReviewers are most positive about setup speed (70% positive, 25% neutral, 5% negative across 20 claims). The most criticism lands on stability: 64% positive, 11% neutral, 25% negative across 28 claims. Coverage of mount compatibility is mostly neutral: 32% positive, 58% neutral, 10% negative across 41 claims.\nAll 18 reviews in one place: https://askmaddi.com/cards/peak-design-pro-tripod/\n_(disclosure: I built this)_",
     "og": {
       "title": "Peak Design Pro Tripod — Reviewed",
       "description": "Reviewers are most positive about setup speed (70% positive, 25% neutral, 5% negative across 20 claims). The most criticism lands on stability: 64% positive, 11% neutral, 25% negative across 28 claims. Coverage of mount compatibility is mostly neutral: 32% positive, 58% neutral, 10% negative across 41 claims.",
@@ -6094,7 +6144,7 @@
   },
   "_build_provenance": {
     "driver": "build_card.py",
-    "enrich_client": "flask",
+    "enrich_client": "forced_choice",
     "facts": {
       "stage": "ran",
       "artifact": "fresh"
