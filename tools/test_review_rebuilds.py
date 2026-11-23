@@ -31,8 +31,10 @@ def _setup(tmp_path):
 def test_digest(tmp_path, capsys, monkeypatch):
     q, plans = _setup(tmp_path)
     monkeypatch.setattr(rr, 'verify', lambda c, p: (0, ['VERDICT: safe to approve']))
+    skus = tmp_path / 'skus.json'
+    skus.write_text(json.dumps({'skus': {'a': {}, 'b': {}, 'c': {}}}))
     assert rr.main(['--queue', str(q), '--plans-dir', str(plans),
-                    '--cards-dir', str(tmp_path)]) == 0
+                    '--cards-dir', str(tmp_path), '--skus', str(skus)]) == 0
     out = capsys.readouterr().out
     assert '2 card(s) review_ready' in out
     assert '== a  [roster 2026-11-17-gated-rebuild.json]' in out
@@ -63,9 +65,13 @@ def test_parked_regathers_listed_with_delist_line(tmp_path, capsys, monkeypatch)
         'crashed': {'state': 'failed', 'requeued_at': 't', 'last_error': 'boom'},
         'old-mint': {'state': 'corpus_thin'},          # never re-opened
         'still-going': {'state': 'resolved', 'requeued_at': 't'}}}))
+    skus = tmp_path / 'skus.json'
+    skus.write_text(json.dumps({'skus': {s: {} for s in (
+        'thin-live', 'thin-gone', 'thin-mint', 'thin-unknown', 'crashed',
+        'old-mint', 'still-going')}}))
     monkeypatch.setattr(rr, 'verify', lambda c, p: (0, []))
     assert rr.main(['--queue', str(q), '--plans-dir', str(tmp_path),
-                    '--cards-dir', str(cards)]) == 0
+                    '--cards-dir', str(cards), '--skus', str(skus)]) == 0
     out = capsys.readouterr().out
     assert '4 re-opened card(s) parked corpus_thin, 1 failed' in out
     assert 'thin   thin-live  [live card up; from promoted]  own reviews 3 < 6' in out
@@ -129,3 +135,40 @@ def test_delist_is_printed_as_files_only_and_spine_only(tmp_path):
     assert '--files-only' in delist[0] and 'sudo' not in delist[0]
     assert delist[1].lstrip().startswith('box:') and '--spine-only' in delist[1]
     assert 'sudo -u askmaddi' in delist[1]
+
+
+def test_delisted_slugs_are_not_re_offered(tmp_path, capsys, monkeypatch):
+    """2026-11-23: delist_card leaves the queue record (inert by design). The
+    next morning's digest re-offered nikon-85mm-f1-8 for delisting. A slug no
+    longer on the spine is skipped; one still on it is listed as before."""
+    cards = tmp_path / 'cards'
+    cards.mkdir()
+    (cards / 'still-live.json').write_text('{}')
+    q = tmp_path / 'q.json'
+    q.write_text(json.dumps({'queue': {
+        'nikon-85mm-f1-8': {'state': 'corpus_thin', 'requeued_at': 't',
+                            'requeued_from': 'promoted'},
+        'libec-650ex-section-tripod-system': {'state': 'failed', 'requeued_at': 't'},
+        'still-live': {'state': 'corpus_thin', 'requeued_at': 't',
+                       'requeued_from': 'corpus_thin'}}}))
+    skus = tmp_path / 'skus.json'
+    skus.write_text(json.dumps({'skus': {'still-live': {}}}))
+    monkeypatch.setattr(rr, 'verify', lambda c, p: (0, []))
+    assert rr.main(['--queue', str(q), '--plans-dir', str(tmp_path),
+                    '--cards-dir', str(cards), '--skus', str(skus)]) == 0
+    out = capsys.readouterr().out
+    assert '1 re-opened card(s) parked corpus_thin, 0 failed' in out
+    assert 'nikon-85mm-f1-8' not in out and 'libec' not in out
+    assert '--slug still-live' in out
+
+
+def test_unreadable_spine_filters_nothing_and_says_so(tmp_path, capsys, monkeypatch):
+    q = tmp_path / 'q.json'
+    q.write_text(json.dumps({'queue': {'gone': {
+        'state': 'corpus_thin', 'requeued_at': 't', 'requeued_from': 'promoted'}}}))
+    monkeypatch.setattr(rr, 'verify', lambda c, p: (0, []))
+    rr.main(['--queue', str(q), '--plans-dir', str(tmp_path),
+             '--cards-dir', str(tmp_path), '--skus', str(tmp_path / 'missing.json')])
+    out = capsys.readouterr().out
+    assert 'unreadable: delisted records are not filtered' in out
+    assert '--slug gone' in out

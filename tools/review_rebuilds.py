@@ -91,13 +91,29 @@ def sidecar_lines(card_path, width):
     return out
 
 
-def parked_regathers(q):
+def spine_slugs(skus_path):
+    """Slugs on the spine, or None when it cannot be read (then nothing is
+    filtered: a digest that hides records on a read error would hide the
+    evidence of that error)."""
+    try:
+        return set((json.loads(Path(skus_path).read_text(encoding='utf-8'))
+                    .get('skus') or {}))
+    except (OSError, ValueError):
+        return None
+
+
+def parked_regathers(q, on_spine=None):
     """(thin, failed): re-opened records whose rebuild parked instead of
-    reaching review. Sorted slugs; each item is (slug, record)."""
+    reaching review. Sorted slugs; each item is (slug, record). A slug no
+    longer on the spine was delisted: delist_card leaves its queue record in
+    place (inert by design), so it is skipped here rather than re-offered for
+    delisting every morning (2026-11-23)."""
     thin, failed = [], []
     for slug in sorted(q):
         rec = q[slug]
         if not rec.get('requeued_at'):
+            continue
+        if on_spine is not None and slug not in on_spine:
             continue
         if rec.get('state') == 'corpus_thin':
             thin.append((slug, rec))
@@ -106,8 +122,8 @@ def parked_regathers(q):
     return thin, failed
 
 
-def parked_lines(q, cards_dir, width):
-    thin, failed = parked_regathers(q)
+def parked_lines(q, cards_dir, width, on_spine=None):
+    thin, failed = parked_regathers(q, on_spine)
     out = [f'{len(thin)} re-opened card(s) parked corpus_thin, '
            f'{len(failed)} failed']
     for label, rows in (('thin', thin), ('failed', failed)):
@@ -138,6 +154,8 @@ def main(argv=None):
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument('--queue', default='data/work_queue.json')
     ap.add_argument('--cards-dir', default='data/cards')
+    ap.add_argument('--skus', default='data/skus.json',
+                    help='the spine; records of delisted slugs are skipped')
     ap.add_argument('--plans-dir', default=str(HERE / 'rename_plans'))
     ap.add_argument('--width', type=int, default=90)
     args = ap.parse_args(argv)
@@ -165,7 +183,10 @@ def main(argv=None):
         print()
     print(f'summary: {tally[0]} safe, {tally[1]} do not approve, {tally[2]} could not check')
     print()
-    for ln in parked_lines(q, args.cards_dir, args.width):
+    on_spine = spine_slugs(args.skus)
+    if on_spine is None:
+        print(f'(spine {args.skus} unreadable: delisted records are not filtered)')
+    for ln in parked_lines(q, args.cards_dir, args.width, on_spine):
         print(ln)
     return 0
 
