@@ -74,9 +74,11 @@ def test_parked_regathers_listed_with_delist_line(tmp_path, capsys, monkeypatch)
     assert 'failed crashed  [no live card; from ?]  boom' in out
     assert 'old-mint' not in out and 'still-going' not in out
     delist = [ln for ln in out.splitlines() if 'delist_card.py' in ln]
-    assert delist == ['  delist (dry run; add --apply to write): '
-                      'sudo -u askmaddi python3 tools/delist_card.py '
-                      '--slug thin-gone --slug thin-live']
+    assert delist == [
+        '    work clone: python3 tools/delist_card.py --files-only '
+        '--slug thin-gone --slug thin-live',
+        '    box:        sudo -u askmaddi python3 tools/delist_card.py '
+        '--spine-only --slug thin-gone --slug thin-live']
     assert out.rstrip().endswith('is the door): thin-mint thin-unknown')
 
 
@@ -93,3 +95,37 @@ def test_only_never_cards_prints_no_delist_line():
 def test_no_parked_no_delist_line(tmp_path):
     lines = rr.parked_lines({'a': {'state': 'review_ready'}}, tmp_path, 80)
     assert lines == ['0 re-opened card(s) parked corpus_thin, 0 failed']
+
+
+def test_second_reopen_still_delists_the_live_card(tmp_path):
+    """2026-11-23: a live card parked thin on cached triples, then regathered.
+    regather_card re-opens a corpus_thin record through requeue(), which stamps
+    requeued_from='corpus_thin'. If the regather parks thin again the live page
+    is still serving, so it must stay on the delist lines, not be filed as a
+    never-card."""
+    cards = tmp_path / 'cards'
+    cards.mkdir()
+    (cards / 'zeiss-35mm-f1-4.json').write_text('{}')
+    lines = rr.parked_lines({
+        'zeiss-35mm-f1-4': {'state': 'corpus_thin', 'requeued_at': 't',
+                            'requeued_from': 'corpus_thin'},
+        'om-system-20mm-f1-4': {'state': 'corpus_thin', 'requeued_at': 't',
+                                'requeued_from': 'failed'}}, cards, 80)
+    delist = [ln for ln in lines if 'delist_card.py' in ln]
+    assert len(delist) == 2
+    assert all(ln.endswith('--slug zeiss-35mm-f1-4') for ln in delist)
+    assert lines[-1].endswith('is the door): om-system-20mm-f1-4')
+
+
+def test_delist_is_printed_as_files_only_and_spine_only(tmp_path):
+    """delist_card's docstring: tracked files go through a commit in the work
+    clone, the spine is mutated live on the box. Never one combined run."""
+    cards = tmp_path / 'cards'
+    cards.mkdir()
+    (cards / 'a.json').write_text('{}')
+    lines = rr.parked_lines({'a': {'state': 'corpus_thin', 'requeued_at': 't',
+                                   'requeued_from': 'promoted'}}, cards, 80)
+    delist = [ln for ln in lines if 'delist_card.py' in ln]
+    assert '--files-only' in delist[0] and 'sudo' not in delist[0]
+    assert delist[1].lstrip().startswith('box:') and '--spine-only' in delist[1]
+    assert 'sudo -u askmaddi' in delist[1]

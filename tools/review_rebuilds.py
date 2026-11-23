@@ -15,16 +15,28 @@ After the review_ready blocks it lists every DELIBERATELY RE-OPENED record
 (requeued_at set) that parked `corpus_thin` or `failed` instead. A regather that
 parks thin found too few reviews of its own product; the 2026-11-18 ruling is
 to delist it rather than keep serving the old card, so those slugs are printed
-as one delist_card dry-run line. The ruling is about a CARD: only a record
-re-opened from `promoted` (requeue_promoted stamps requeued_from='promoted') was
-serving one, so only those slugs go on the delist line. A thin record re-opened
-from `failed` or `corpus_thin` was never a card; delisting it retires a mint and
-stops serving nothing, and zero corpus there usually means a fetch lane came back
-empty, not that the product is unreviewed (2026-11-19, om-system-20mm-f1-4: both
-legs empty). Those are listed as left parked; corpus_thin_recovery.py --refetch
-is their door. `failed` is listed for diagnosis only: a crash says nothing about
-the product. Records that parked thin without ever being re-opened are old
-mints, never cards, and are not this digest's business.
+as delist_card dry-run lines. The ruling is about a CARD: a record is a card
+when its live card file exists in --cards-dir, or when it was re-opened from
+`promoted` (requeue_promoted stamps requeued_from='promoted'; the file may
+already be gone while its spine entry is not). requeued_from alone is not
+enough: a SECOND re-open of the same record (regather_card on a record already
+parked corpus_thin goes through requeue(), which stamps requeued_from=
+'corpus_thin') erases the 'promoted' mark while the live page keeps serving
+(2026-11-23: six held-identity cards parked thin on cached triples and needed
+a regather). A thin record with neither was never a card; delisting it
+retires a mint and stops serving nothing, and zero corpus there usually means a
+fetch lane came back empty, not that the product is unreviewed (2026-11-19,
+om-system-20mm-f1-4: both legs empty). Those are listed as left parked;
+corpus_thin_recovery.py --refetch is their door. `failed` is listed for
+diagnosis only: a crash says nothing about the product. Records that parked
+thin without ever being re-opened are old mints, never cards, and are not this
+digest's business.
+
+The delist is printed as delist_card's own two modes: --files-only in the work
+clone (the tracked card files, committed and landed by git pull) and
+--spine-only on the box as askmaddi (data/skus.json, live-written). One
+combined run on the box would delete tracked files out from under the
+checkout's git pull.
 
 It writes nothing. It exists so a batch of rebuilds can be reviewed from one
 paste instead of one command per card, and so the dropped titles can be held
@@ -103,12 +115,18 @@ def parked_lines(q, cards_dir, width):
             live = 'live card up' if (Path(cards_dir) / f'{slug}.json').is_file() else 'no live card'
             out.append(f'  {label:6} {slug}  [{live}; from {rec.get("requeued_from") or "?"}]  '
                        f'{(rec.get("last_error") or "")[:width]}')
-    was_card = [s for s, rec in thin if rec.get('requeued_from') == 'promoted']
-    never_card = [s for s, rec in thin if rec.get('requeued_from') != 'promoted']
+    def is_card(slug, rec):
+        return ((Path(cards_dir) / f'{slug}.json').is_file()
+                or rec.get('requeued_from') == 'promoted')
+    was_card = [s for s, rec in thin if is_card(s, rec)]
+    never_card = [s for s, rec in thin if not is_card(s, rec)]
     if was_card:
-        out.append('  delist (dry run; add --apply to write): '
-                   'sudo -u askmaddi python3 tools/delist_card.py '
-                   + ' '.join(f'--slug {s}' for s in was_card))
+        slugs = ' '.join(f'--slug {s}' for s in was_card)
+        out.append('  delist (dry runs; add --apply to each to write):')
+        out.append('    work clone: python3 tools/delist_card.py --files-only '
+                   + slugs)
+        out.append('    box:        sudo -u askmaddi python3 tools/delist_card.py '
+                   '--spine-only ' + slugs)
     if never_card:
         out.append('  left parked, never a card (not delisted; '
                    'corpus_thin_recovery.py --refetch is the door): '
