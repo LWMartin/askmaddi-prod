@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-23",
+  "as_of": "2026-11-24",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -67364,7 +67364,28 @@
         "mpn": "20118",
         "brand": "Nikon",
         "market_title": "Nikon NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR Lens",
-        "image": "https://www.adorama.com/images/Large/NKZ1228.jpg"
+        "image": "https://www.adorama.com/images/Large/NKZ1228.jpg",
+        "image_catalog": "https://i.ebayimg.com/images/g/NjIAAOSwZUplcw70/s-l960.jpg",
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-24T04:48:07Z",
+          "query": "Nikon 20118",
+          "winner": {
+            "item_id": "v1|307297507018|0",
+            "epid": "7064055549",
+            "title": "[20% OFF] Nikon NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR 20041597"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|307297507018|0",
+              "epid": "7064055549",
+              "title": "[20% OFF] Nikon NIKKOR Z DX 12-28mm f/3.5-5.6 PZ VR 20041597",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
+        }
       },
       "affiliate": {
         "ebay_epn_url": "https://adorama.prf.hn/click/camref:1101l5Pw9q/creativeref:1110l15401/destination:https%3A%2F%2Fwww.adorama.com%2Fnikon-nikkor-z-dx-12-28-mm-f-3-5-6-pz-vr-lens%2Fp%2Fnkz1228",
@@ -67864,6 +67885,96 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-23T04:02:57Z"
+    },
+    "godox-v1pro-flash-sony": {
+      "contamination_key": "godox-v1pro-flash-sony",
+      "vendor": "Godox",
+      "model": "v1pro flash sony",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "117392253694",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Godox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Godox V1 Pro S godox V1Pro-S V1Pro S TTL Flash for Sony 2980mAh 76W",
+        "image": "https://i.ebayimg.com/images/g/X48AAeSwc8FqmGTH/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "269.99",
+          "currency": "USD",
+          "as_of": "2026-11-24T04:01:21Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/117392253694?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8htgQNlENsMtQiZBupH9RK3IWPz1%2FGGzDff0PftTiYA%2FqJqr6JzAnh%2FJM3Q%2BXkkvLcTCneU2E%2FbQFWVWZsXkHy5OmEUhquMNeqz6pGPLER3dzoJ34e9GVZQUBx1RIU1%2BJvqFa6q%2FtHpyojXCF8%2FVt0O%2FKBr0XHJ5cHYJmH9QTjYY47Zg7%2BsNgAxkrBVE1BuUI%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-24T04:01:21Z"
+    },
+    "parrot-bebop-blue-complete": {
+      "contamination_key": "parrot-bebop-blue-complete",
+      "vendor": "Parrot",
+      "model": "Bebop - Blue - COMPLETE",
+      "gtin": "00792491093974",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "277893650520",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "Parrot",
+        "mpn": "PF722000",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "792491093974",
+              "gtin14": "00792491093974",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Parrot Bebop Drone Quadcopter - Blue - COMPLETE",
+        "image": "https://i.ebayimg.com/images/g/wwAAAOSw~1Rml~yJ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "151.00",
+          "currency": "USD",
+          "as_of": "2026-11-24T04:45:49Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/277893650520?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BghGkLu%2BV0Hy3UGRzpAsQwFbqpuNcbOdV90wBa9N75IkTAL3P95WkGYelkwhkaFexehNac103qgVTqY1D6cMxuB4zVdK1WeOefbTF%2BbiDdZRDuWKGbUmT%2FVjlaGlLGA6wISQI0bImyVEytqGI8EbvkH3rEWCI8k69MM78SUCUfRgH8L%2Bg65chuVE435RjHfkA%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-24T04:45:49Z"
     }
   },
   "substrate": [

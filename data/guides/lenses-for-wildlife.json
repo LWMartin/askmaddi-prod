@@ -1058,20 +1058,20 @@
       "card_id": "canon-200-400mm-f4",
       "display_name": "Canon EF 200-400mm f/4L IS USM Extender 1.4x",
       "rankable": true,
-      "score": 3.5,
+      "score": 3.465,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.4444,
-          "pos": 41,
-          "neg": 13,
-          "total": 63,
+          "s": 0.5536,
+          "pos": 40,
+          "neg": 9,
+          "total": 56,
           "confidence": "low",
           "contested": false,
           "thin": false,
-          "contribution": 1.3333,
+          "contribution": 1.6607,
           "top_sources": [
             {
               "source_id": "youtube-brendan-van-son-canon-200-400mm-f4-review-in-the-field-in-africa",
@@ -1097,14 +1097,14 @@
         {
           "axis": "handling",
           "weight": 2,
-          "s": 0.5455,
-          "pos": 8,
+          "s": 0.4545,
+          "pos": 7,
           "neg": 2,
           "total": 11,
           "confidence": "low",
-          "contested": false,
+          "contested": true,
           "thin": true,
-          "contribution": 1.0909,
+          "contribution": 0.9091,
           "top_sources": [
             {
               "source_id": "youtube-joe-whitnall-photography-canon-200-400mm-f4-how-am-i-getting-on-with-it-will-i-be-sellin",
@@ -1130,14 +1130,14 @@
         {
           "axis": "build",
           "weight": 2,
-          "s": 0.4545,
-          "pos": 7,
+          "s": 0.4,
+          "pos": 6,
           "neg": 2,
-          "total": 11,
+          "total": 10,
           "confidence": "low",
           "contested": true,
           "thin": true,
-          "contribution": 0.9091,
+          "contribution": 0.8,
           "top_sources": [
             {
               "source_id": "youtube-fox-fir-ultimate-wildlife-filmmaking-lens-canon-200400mm-f4-test",
@@ -1184,14 +1184,14 @@
         {
           "axis": "bokeh",
           "weight": 1,
-          "s": 0.5,
-          "pos": 5,
+          "s": 0.4286,
+          "pos": 4,
           "neg": 1,
-          "total": 8,
+          "total": 7,
           "confidence": "low",
           "contested": true,
           "thin": true,
-          "contribution": 0.5,
+          "contribution": 0.4286,
           "top_sources": [
             {
               "source_id": "youtube-fox-fir-ultimate-wildlife-filmmaking-lens-canon-200400mm-f4-test",
@@ -2008,20 +2008,20 @@
       "card_id": "canon-100-400mm-f5-6",
       "display_name": "Canon RF 100-400mm f/5.6-8 IS USM",
       "rankable": true,
-      "score": 0.458,
+      "score": -0.14,
       "mention_boost": 0.0,
       "rationale": [
         {
           "axis": "optical_performance",
           "weight": 3,
-          "s": 0.0745,
-          "pos": 42,
-          "neg": 35,
-          "total": 94,
+          "s": 0.1,
+          "pos": 36,
+          "neg": 28,
+          "total": 80,
           "confidence": "low",
           "contested": true,
           "thin": false,
-          "contribution": 0.2234,
+          "contribution": 0.3,
           "top_sources": [
             {
               "source_id": "youtube-christopher-frost-canon-rf-100-400mm-f56-8-is-usm-lens-review-with-samples",
@@ -2047,14 +2047,14 @@
         {
           "axis": "handling",
           "weight": 2,
-          "s": 0.2381,
-          "pos": 10,
-          "neg": 5,
-          "total": 21,
+          "s": 0.25,
+          "pos": 8,
+          "neg": 4,
+          "total": 16,
           "confidence": "low",
           "contested": true,
           "thin": false,
-          "contribution": 0.4762,
+          "contribution": 0.5,
           "top_sources": [
             {
               "source_id": "youtube-dustin-abbott-canon-rf-100-400mm-f56-8-is-usm-definitive-review-da",
@@ -2080,14 +2080,14 @@
         {
           "axis": "build",
           "weight": 2,
-          "s": -0.2222,
-          "pos": 6,
+          "s": -0.5714,
+          "pos": 2,
           "neg": 10,
-          "total": 18,
+          "total": 14,
           "confidence": "low",
           "contested": false,
-          "thin": false,
-          "contribution": -0.4444,
+          "thin": true,
+          "contribution": -1.1429,
           "top_sources": [
             {
               "source_id": "youtube-foxtailwhipz-canons-most-underrated-lens-rf-100-400mm-f56-8-is-usm",
@@ -2208,12 +2208,13 @@
         "af_performance"
       ],
       "thin_axes": [
+        "build",
         "chromatic_aberration",
         "color_rendition"
       ],
       "flags": [
         "missing weighted axes: af_performance",
-        "thin (< 15 claims): chromatic_aberration, color_rendition"
+        "thin (< 15 claims): build, chromatic_aberration, color_rendition"
       ],
       "rank": 11
     }
@@ -2315,6 +2316,13 @@
       "display_name": "Canon EF-M 22mm f/2 STM",
       "reasons": [
         "require focal_length_mm >= 300: got 22"
+      ]
+    },
+    {
+      "card_id": "canon-24mm-f1-4",
+      "display_name": "Canon 24mm f1.4",
+      "reasons": [
+        "require focal_length_mm >= 300: got 24"
       ]
     },
     {
@@ -2602,13 +2610,6 @@
       "display_name": "Nikon Noct-Nikkor 58mm f/1.2",
       "reasons": [
         "require focal_length_mm >= 300: got 58"
-      ]
-    },
-    {
-      "card_id": "nikon-85mm-f1-8",
-      "display_name": "Nikon AF Nikkor 85mm f/1.8D",
-      "reasons": [
-        "require focal_length_mm >= 300: got 85"
       ]
     },
     {
@@ -3037,13 +3038,6 @@
       "reasons": [
         "require focal_length_mm >= 300: got 35"
       ]
-    },
-    {
-      "card_id": "zeiss-35mm-f1-4",
-      "display_name": "Zeiss Contax Distagon T* 35mm f/1.4 (C/Y)",
-      "reasons": [
-        "require focal_length_mm >= 300: got 35"
-      ]
     }
   ],
   "pending_backfill": [
@@ -3056,9 +3050,9 @@
     }
   ],
   "counts": {
-    "in_scope": 130,
+    "in_scope": 129,
     "ranked": 11,
-    "excluded": 118,
+    "excluded": 117,
     "pending_backfill": 1
   }
 }
