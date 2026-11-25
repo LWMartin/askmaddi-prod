@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-24",
+  "as_of": "2026-11-25",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -67975,6 +67975,96 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-24T04:45:49Z"
+    },
+    "panasonic-lumix-s-28": {
+      "contamination_key": "panasonic-lumix-s-28",
+      "vendor": "Panasonic",
+      "model": "lumix s 28",
+      "gtin": "04549980763636",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820043683294",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "4549980763636",
+              "gtin14": "04549980763636",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Panasonic Lumix S 28-200mm F/4-7.1 Macro O.I.S. (L mount) -Near Mint- #256",
+        "image": "https://i.ebayimg.com/images/g/OUwAAeSw2Ztqj8RO/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "747.15",
+          "currency": "USD",
+          "as_of": "2026-11-25T04:01:38Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820043683294?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-25T04:01:38Z"
+    },
+    "panasonic-15mm-f1-7": {
+      "contamination_key": "panasonic-15mm-f1-7",
+      "vendor": "Panasonic",
+      "model": "15mm f1.7",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "336868414214",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "H-X015-K",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic LUMIX G LEICA DG SUMMILUX 15mm /F1.7 ASPH. H-X015-K BLACK",
+        "image": "https://i.ebayimg.com/images/g/MasAAeSwiAVq4uoS/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "318.99",
+          "currency": "USD",
+          "as_of": "2026-11-25T04:03:47Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/336868414214?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Bx38VtlQWNH0LEQMXQU9DEb4YSJUr8qMSaCsnfzVt4dvS3VcQ3EG8qqFhUm%2FcQnaQwAvzNsdYVakuh2dRYEBiL9ROA9OWidZUYM5c7XK7Iz1ZzPpU0l50CQPzSiZfgDCkngS9A%2FD4y2p98FHF6E1kSj%2FhZuCM3lqP341%2BXBFjgIW0maWFCpN6Np5sFnQ1yDOM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-25T04:03:47Z"
     }
   },
   "substrate": [
