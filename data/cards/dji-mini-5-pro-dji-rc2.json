@@ -21,22 +21,17 @@
     "affiliate_url": null,
     "used_market": {
       "source": "ebay",
-      "bands": {
-        "pre_owned": 625.0,
-        "open_box": 778.0
-      },
+      "bands": {},
       "sold_last_90d": 0,
       "search_url": null,
-      "affiliate_url": null,
-      "sample_size": 11,
-      "price_updated_at": "2026-11-25T10:10:41.611713+00:00"
+      "affiliate_url": null
     },
-    "price_updated_at": "2026-09-19T07:06:14.541143+00:00"
+    "price_updated_at": "2026-11-24T01:45:17.317047+00:00"
   },
   "freshness": {
     "created_at": "2026-09-19T07:06:14.526144+00:00",
-    "last_built": "2026-09-19T07:06:14.526144+00:00",
-    "last_checked": "2026-09-19T07:06:14.526144+00:00",
+    "last_built": "2026-11-24T01:45:17.310531+00:00",
+    "last_checked": "2026-11-24T01:45:17.310531+00:00",
     "source_count": 6,
     "source_types": {
       "pro": 6
@@ -193,7 +188,7 @@
     },
     {
       "axis_id": "af_performance",
-      "display_name": "af_performance",
+      "display_name": "Autofocus",
       "axis_type": "lead",
       "stills": {
         "measurement": null,
@@ -1095,138 +1090,8 @@
     }
   ],
   "facts": {
-    "specs": {
-      "takeoff_weight_g": {
-        "value": null,
-        "low": 249.9,
-        "high": 249.9,
-        "anchor": 249.9,
-        "anchor_source": "curated",
-        "unit": "g"
-      },
-      "max_flight_time_min": {
-        "value": null,
-        "low": 36,
-        "high": 36,
-        "anchor": 36,
-        "anchor_source": "curated",
-        "unit": "min"
-      },
-      "max_transmission_km": {
-        "value": null,
-        "low": 21,
-        "high": 21,
-        "anchor": 21,
-        "anchor_source": "curated",
-        "unit": "km"
-      },
-      "sensor_size": {
-        "value": "1-inch CMOS (50 MP)",
-        "low": null,
-        "high": null,
-        "anchor": null,
-        "anchor_source": "",
-        "unit": ""
-      },
-      "max_video_resolution": {
-        "value": "4K (3840x2160)",
-        "low": null,
-        "high": null,
-        "anchor": null,
-        "anchor_source": "",
-        "unit": ""
-      },
-      "max_frame_rate": {
-        "value": null,
-        "low": 240,
-        "high": 240,
-        "anchor": 240,
-        "anchor_source": "curated",
-        "unit": "fps"
-      },
-      "max_wind_ms": {
-        "value": null,
-        "low": 12,
-        "high": 12,
-        "anchor": 12,
-        "anchor_source": "curated",
-        "unit": "m/s"
-      },
-      "folded_dimensions": {
-        "value": "157x95x68 mm",
-        "low": null,
-        "high": null,
-        "anchor": null,
-        "anchor_source": "",
-        "unit": ""
-      }
-    },
-    "provenance": {
-      "specs.takeoff_weight_g": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications (dji.com/global/mini-5-pro/specs)",
-        "extraction": null
-      },
-      "specs.max_flight_time_min": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications - up to 36 min, standard Intelligent Flight Battery",
-        "extraction": null
-      },
-      "specs.max_transmission_km": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications - max flight distance 21 km, O4+ transmission",
-        "extraction": null
-      },
-      "specs.sensor_size": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications",
-        "extraction": null
-      },
-      "specs.max_video_resolution": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications - 4K up to 120fps",
-        "extraction": null
-      },
-      "specs.max_frame_rate": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications - Full HD up to 240fps (highest fps at any resolution)",
-        "extraction": null
-      },
-      "specs.max_wind_ms": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications - max wind resistance 12 m/s",
-        "extraction": null
-      },
-      "specs.folded_dimensions": {
-        "source": "curated",
-        "url": "",
-        "fetched_at": "2026-09-21",
-        "license": "",
-        "reason": "DJI Mini 5 Pro official specifications (folded, excluding propellers)",
-        "extraction": null
-      }
-    },
+    "specs": {},
+    "provenance": {},
     "conflicts": []
   },
   "synthesis": {
@@ -1634,7 +1499,7 @@
       "url": "https://www.digitalcameraworld.com/drones/dji-5-mini-pro-review",
       "title": "DJI Mini 5 Pro review &ndash; pro drone, pocket-sized, ultra-light. Why would anyone go bigger? | Digital Camera World",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528619+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312974+00:00",
       "weight": 0.75
     },
     {
@@ -1645,7 +1510,7 @@
       "url": "https://dronexl.co/2025/09/17/dji-mini-5-pro-review/",
       "title": "DJI Mini 5 Pro Review – The Mini Drone We have Been Waiting For",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528627+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312982+00:00",
       "weight": 0.75
     },
     {
@@ -1656,7 +1521,7 @@
       "url": "https://dronexl.co/2025/09/18/dji-mini-5-pro-compact-drone-review/",
       "title": "DJI Mini 5 Pro Review – BIG IMPROVEMENTS in ALL The Right Places!",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528631+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312986+00:00",
       "weight": 0.75
     },
     {
@@ -1667,7 +1532,7 @@
       "url": "https://dronexl.co/2025/09/22/dji-mini-5-pro-philip-bloom-review-drone/",
       "title": "DJI Mini 5 Pro: Philip Bloom’s Comprehensive Review Unveils Game-Changing Features for Drone Pilots",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528634+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312989+00:00",
       "weight": 0.75
     },
     {
@@ -1678,7 +1543,7 @@
       "url": "https://dronexl.co/2025/12/08/dji-mini-5-pro-long-term-review-battery/",
       "title": "DJI Mini 5 Pro Long-Term Review: Why Battery Life Is The Real Story",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528637+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312992+00:00",
       "weight": 0.75
     },
     {
@@ -1689,7 +1554,7 @@
       "url": "https://dronexl.co/2026/04/19/dji-mini-5-pro-review-at-six-months/",
       "title": "DJI Mini 5 Pro Review At Six Months: YouTuber Flying Filmmaker Says Camera Wins, Wind Still Hurts",
       "publication_date": "",
-      "ingested_at": "2026-09-19T07:06:14.528640+00:00",
+      "ingested_at": "2026-11-24T01:45:17.312995+00:00",
       "weight": 0.75
     }
   ],
