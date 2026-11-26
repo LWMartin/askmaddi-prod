@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-25",
+  "as_of": "2026-11-26",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -15982,7 +15982,7 @@
       "gtin": null,
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "298628479814",
+        "ebay_legacy_item_id": "147698286517",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -15991,7 +15991,7 @@
         "ebay_category_id": "179697"
       },
       "identity": {
-        "brand": "hover",
+        "brand": "HoverAir",
         "mpn": "",
         "gtin_provenance": {
           "chosen_source": null,
@@ -16083,23 +16083,23 @@
             ]
           }
         },
-        "market_title": "HOVERAir X1 PRO Standard, 4K Action Flying Camera, Foldable Follow-me Drone",
-        "image": "https://i.ebayimg.com/images/g/yOwAAeSwR7pqk82D/s-l1600.jpg",
+        "market_title": "HoverAir X1 Pro 4K Camera Drone – Brand New, Factory Sealed",
+        "image": "https://i.ebayimg.com/images/g/ozoAAeSwGxxrB5uB/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "429.00",
+          "value": "450.00",
           "currency": "USD",
-          "as_of": "2026-09-03T21:49:49Z"
+          "as_of": "2026-11-26T04:47:37Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/298628479814?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/147698286517?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-09-03T21:49:49Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-26T04:47:37Z"
     },
     "dji-mini-2-se": {
       "contamination_key": "dji-mini-2-se",
@@ -68050,11 +68050,31 @@
         },
         "market_title": "Panasonic LUMIX G LEICA DG SUMMILUX 15mm /F1.7 ASPH. H-X015-K BLACK",
         "image": "https://i.ebayimg.com/images/g/MasAAeSwiAVq4uoS/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/mrYAAOSws4JW8YFY/s-l640.jpg",
         "price_seen": {
           "value": "318.99",
           "currency": "USD",
           "as_of": "2026-11-25T04:03:47Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-26T04:47:22Z",
+          "query": "Panasonic H-X015-K",
+          "winner": {
+            "item_id": "v1|327477359987|0",
+            "epid": "219521321",
+            "title": "Panasonic Leica DG Summilux 15mm f/1.7 ASPH. Lens H-X015K MINT, FULLY FUNCTIONAL"
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|327477359987|0",
+              "epid": "219521321",
+              "title": "Panasonic Leica DG Summilux 15mm f/1.7 ASPH. Lens H-X015K MINT, FULLY FUNCTIONAL",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -68065,6 +68085,252 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-25T04:03:47Z"
+    },
+    "nikon-35mm": {
+      "contamination_key": "nikon-35mm",
+      "vendor": "Nikon",
+      "model": "35mm",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "377676838980",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "15230"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon Nikkormat FT2 (Non AI) 35mm Film SLR Camera Body without Cap",
+        "image": "https://i.ebayimg.com/images/g/-t4AAeSweMdrBzzq/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "39.99",
+          "currency": "USD",
+          "as_of": "2026-11-26T04:01:09Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/377676838980?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BwIBUNlrgGOM0g4njZCGCPD1mFTXyWQkPKLd2HTMlLhhTbYIKxpNmRMT%2FKzYR1unb21Ylbsf2CawWxJnbzxc%2FRmEk8F1T2PmMSry0IHJg7v2Ehf4v6Wb4shZ8QOz3t2C0n7mMTGJUwm1lBct3icWklFR1TLu803VK%2FNRuJ%2BpqPXssF90c11wTYzDj76TVHbRM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-26T04:01:09Z"
+    },
+    "pentax-35mm": {
+      "contamination_key": "pentax-35mm",
+      "vendor": "Pentax",
+      "model": "35mm",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "198816660106",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "15230"
+      },
+      "identity": {
+        "brand": "PENTAX",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Pentax PC35AF 35mm Film Camera",
+        "image": "https://i.ebayimg.com/images/g/5dIAAeSw2I5rA3xj/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "55.00",
+          "currency": "USD",
+          "as_of": "2026-11-26T04:01:31Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/198816660106?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-26T04:01:31Z"
+    },
+    "manfrotto-compact-action-aluminum-tripod": {
+      "contamination_key": "manfrotto-compact-action-aluminum-tripod",
+      "vendor": "Manfrotto",
+      "model": "compact action aluminum tripod",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "307287816603",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "support",
+      "marketplace_categories": {
+        "ebay_category_id": "30093"
+      },
+      "identity": {
+        "brand": "Manfrotto",
+        "mpn": "MKCOMPACTACN-BK",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Manfrotto MKCOMPACTACN-BK Compact Action Aluminum Tripod MINT CONDITION",
+        "image": "https://i.ebayimg.com/images/g/RDYAAeSwIZpq~NuM/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "34.99",
+          "currency": "USD",
+          "as_of": "2026-11-26T04:01:52Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/307287816603?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BBu7%2BImKX7ZE0iQvISQBziOOsLCIRAh34RC1IcpVfh%2F9TMoJ50fQVBp65k%2BE94EdAsHUvY2DVZburcSF1%2BcjS0yCgtnIxvTkxMnnvHUAirdd3C6mR8%2Fyyq7ynL31%2F4NxqRs3m%2F6cF1FQEPhnzWfYu2zKC07z29EdQbqm1a%2FlJj6axZKAgQY2LR7poEgaX0HOs%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-26T04:01:52Z"
+    },
+    "sony-18-70mm-f3-5": {
+      "contamination_key": "sony-18-70mm-f3-5",
+      "vendor": "Sony",
+      "model": "18 70mm f3.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "820394894750",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Sony",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Sony 18-70mm f/3.5-5.6 DT A-Mount Autofocus Lens [55] without Caps",
+        "image": "https://i.ebayimg.com/images/g/ULsAAeSwXuJrBk76/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "19.98",
+          "currency": "USD",
+          "as_of": "2026-11-26T06:00:25Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/820394894750?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-26T06:00:25Z"
+    },
+    "dji-sku-2120002": {
+      "contamination_key": "dji-sku-2120002",
+      "vendor": "DJI",
+      "model": "SKU#2120002",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "318380360109",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "CP.FP.00000179",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Genuine DJI Flip Drone ONLY with Gimbal Camera Protector & Propellers",
+        "image": "https://i.ebayimg.com/images/g/1p8AAeSw1rpqHGTh/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "170.99",
+          "currency": "USD",
+          "as_of": "2026-11-26T04:45:42Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318380360109?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2F2rYuSZwZtFmqoVRrB61PC47dXaaoH%2B8iDIJFhZg6vZcf7eWR3Tb22ALMeOsotROhiIvuCS7VNHtC88ku7Xz2smG47SwT3P11V%2BM38MzpR3%2BqJXds6OWwcaLLWBizgQ4B5DjIfC4ujmRfYeQgF%2B35DBep0eIidMMlEQUuCx3iG95i9lzl2G%2FcKaNu3zkNMKho%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-26T04:45:42Z"
+    },
+    "panasonic-lumix-g97": {
+      "contamination_key": "panasonic-lumix-g97",
+      "vendor": "Panasonic",
+      "model": "lumix g97",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "237203375917",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Panasonic",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Panasonic Lumix DC-G97 Mirrorless 20.3MP Digital Camera Only Body",
+        "image": "https://i.ebayimg.com/images/g/HwoAAeSwB9NrBWEC/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "469.80",
+          "currency": "USD",
+          "as_of": "2026-11-26T06:01:35Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/237203375917?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8h7bNmbHGDbrdkCDh7Se0TaMVond%2B6FD3Qc9lvPeRMJmJk5rO9f3I8oix7TEfKCvSjxy9hTv9CmD5xy%2BQfzGhzmySsfSDnKmiOL8rKvm2kBmOAkWufTlB0%2FFHsWXFUwgPj%2B89nMF0ddLK%2BiV%2BYBm5%2FhnpKT876l0jDDc7kdGGUyAGm6zX70WKysw73P7aaPE0%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-26T06:01:35Z"
     }
   },
   "substrate": [
