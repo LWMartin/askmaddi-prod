@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-26",
+  "as_of": "2026-11-27",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -68193,11 +68193,31 @@
         },
         "market_title": "Manfrotto MKCOMPACTACN-BK Compact Action Aluminum Tripod MINT CONDITION",
         "image": "https://i.ebayimg.com/images/g/RDYAAeSwIZpq~NuM/s-l1600.jpg",
-        "image_catalog": "",
+        "image_catalog": "https://i.ebayimg.com/images/g/gDwAAOSwWdVf~JgV/s-l640.jpg",
         "price_seen": {
           "value": "34.99",
           "currency": "USD",
           "as_of": "2026-11-26T04:01:52Z"
+        },
+        "image_provenance": {
+          "recovered_by": "image-second-pass",
+          "recovered_at": "2026-11-27T04:47:07Z",
+          "query": "Manfrotto MKCOMPACTACN-BK",
+          "winner": {
+            "item_id": "v1|860180834737|0",
+            "epid": "1028124458",
+            "title": "Manfrotto MKCOMPACTACN-BK Compact Action Aluminium Tripod with Hybrid Head "
+          },
+          "epid_match": false,
+          "inspected": [
+            {
+              "item_id": "v1|860180834737|0",
+              "epid": "1028124458",
+              "title": "Manfrotto MKCOMPACTACN-BK Compact Action Aluminium Tripod with Hybrid Head ",
+              "had_catalog": true,
+              "accepted": true
+            }
+          ]
         }
       },
       "affiliate": {
@@ -68331,6 +68351,145 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-26T06:01:35Z"
+    },
+    "nikon-70-300mm-f4-5": {
+      "contamination_key": "nikon-70-300mm-f4-5",
+      "vendor": "Nikon",
+      "model": "70 300mm f4.5",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "407384108488",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Nikon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Nikon Nikkor AF-S 70-300mm f4.5-5.6 G ED VR IF Lens AFS #853",
+        "image": "https://i.ebayimg.com/images/g/k~kAAeSw~j9rBKVu/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "194.84",
+          "currency": "USD",
+          "as_of": "2026-11-27T04:00:41Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/407384108488?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8Lwg77PzrxWqCPUO%2Fhh3wIBGpFBxcPVougszyp0MzaNu08hoYghWq7x41BkisbbtNYss362Gw2LE%2BxKrIqoYLTaiDKuoyxfrcIjeDmAKkk7e8KRtepLRIw16sIU3qcEC7kc6B%2F9%2FWAJpMSoqKO7IDiZXICP4tJya%2BSEHT2yKXqpMrRxSzh5Kgochmm8qIeQIg%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-27T04:00:41Z"
+    },
+    "sky-watcher-skywatchr-eq8-tripod-sold": {
+      "contamination_key": "sky-watcher-skywatchr-eq8-tripod-sold",
+      "vendor": "Sky-Watcher",
+      "model": "skywatchr eq8 tripod sold",
+      "gtin": "00050234306058",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "397950960485",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "31745"
+      },
+      "identity": {
+        "brand": "Sky-Watcher",
+        "mpn": "SKWS30605",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "050234306058",
+              "gtin14": "00050234306058",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Sky-Watcher SKYWATCHR EQ8-R TRIPOD(SOLD AS KIT ONL",
+        "image": "https://i.ebayimg.com/images/g/RqsAAeSws2pqx~v-/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "1169.25",
+          "currency": "USD",
+          "as_of": "2026-11-27T04:01:47Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/397950960485?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8MM13XSv6a9dx4UMCIqcq0GSzrWG2Ibeie5IhPVsf%2Fhe2iPTXMXttPKa%2FHkb1XjWjs4an68j5tAtgZ7yYkaRtVteIGf2lTalroJ5Wmmkmib9bufmIcfc6RWJ5QS%2FQzTvvgVLGK%2B%2BxlkPprent1%2FrCeRWTHjx2wunOW2VMQOAoQixOBebST3Xf72xLqV8ejivM%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-27T04:01:47Z"
+    },
+    "dji-avata360-motion-goggles-n3-3batteries": {
+      "contamination_key": "dji-avata360-motion-goggles-n3-3batteries",
+      "vendor": "DJI",
+      "model": "Avata360 Motion Goggles N3 + 3Batteries",
+      "gtin": "06937224137639",
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "318887072521",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "DJI",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": "aspect",
+          "conflict": false,
+          "observations": [
+            {
+              "source": "aspect",
+              "identifier_type": "UPC",
+              "raw": "6937224137639",
+              "gtin14": "06937224137639",
+              "valid": true
+            }
+          ]
+        },
+        "market_title": "Genuine DJI Avata 360 Drone ONLY - No Controller/No Battery - No Tariffs 95% New",
+        "image": "https://i.ebayimg.com/images/g/pgIAAeSwHg9qXeZK/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "417.99",
+          "currency": "USD",
+          "as_of": "2026-11-27T04:46:17Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/318887072521?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Fwox2YsAA85fzTDpmsKCRLzTEgQTWyVOn9N%2FeFTQKVWDzOL8wMO1yKkvd9gYQzXmyXuZwLyEjx2zeLbOBQSDaSjA8euukMS6T9yoA6URuTCULMciP0BT3o0g61t4RED8lBqHSw%2Fz%2F9ZLrQuxdKXPJuuWgthcvF7K3xZ%2Fqo4YFTXVKZL%2FHtmicr62d0Y%2F7O4aU%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-27T04:46:17Z"
     }
   },
   "substrate": [
