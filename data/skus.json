@@ -1,7 +1,7 @@
 {
   "_description": "eBay-resolved canonical identity layer. Bridges to the editorial contamination registry via contamination_key; does not subsume it.",
   "version": "0.1.0",
-  "as_of": "2026-11-27",
+  "as_of": "2026-11-28",
   "skus": {
     "peak-design-pro-tripod": {
       "contamination_key": "peak-design-pro-tripod",
@@ -66938,7 +66938,7 @@
       "gtin": "02205040016938",
       "marketplace_ids": {
         "ebay_epid": "",
-        "ebay_legacy_item_id": "377489652729",
+        "ebay_legacy_item_id": "920186212863",
         "amazon_asin": null
       },
       "unspsc": null,
@@ -66962,23 +66962,23 @@
             }
           ]
         },
-        "market_title": "Nikon W-NIKKOR C 35mm F/2.5 (S mount) #583",
-        "image": "https://i.ebayimg.com/images/g/~tcAAeSw2lNqpLCX/s-l1600.jpg",
+        "market_title": "[Near Mint] Nikon AF NIKKOR 35mm f/2 Wide Angle Lens From JAPAN #6077A",
+        "image": "https://i.ebayimg.com/images/g/SO8AAeSwmZhrB9fL/s-l1600.jpg",
         "image_catalog": "",
         "price_seen": {
-          "value": "315.29",
+          "value": "239.00",
           "currency": "USD",
-          "as_of": "2026-11-20T04:00:59Z"
+          "as_of": "2026-11-28T04:01:19Z"
         }
       },
       "affiliate": {
-        "ebay_epn_url": "https://www.ebay.com/itm/377489652729?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "ebay_epn_url": "https://www.ebay.com/itm/920186212863?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde8%2Fr1T6A%2FrDfofWiEp7Dm8HQkP4nIov7cgfnav2AKYZk%2B8126Yqxer%2FAICjv2GgOxx24QDYfKVh%2BNC9BYTFjFwt1j9TJ31R%2FzlejaNne0MRgiyTB6idxsiX9I8BbBWeO%2Bzbefc1mSmnzCft8thk4uvuwD%2F717BfkBo1DVtPj4TQicB1wCe4GN0vZtertQMvk6Q%3D",
         "amazon_asin": null
       },
       "needs_review": true,
-      "source": "generated",
-      "minted_needs_review": true,
-      "resolved_at": "2026-11-20T04:00:59Z"
+      "source": "resolved",
+      "minted_needs_review": false,
+      "resolved_at": "2026-11-28T04:01:19Z"
     },
     "nikon-80mm-f4": {
       "contamination_key": "nikon-80mm-f4",
@@ -68490,6 +68490,211 @@
       "source": "generated",
       "minted_needs_review": true,
       "resolved_at": "2026-11-27T04:46:17Z"
+    },
+    "godox-ving-v860iif-ttl-li": {
+      "contamination_key": "godox-ving-v860iif-ttl-li",
+      "vendor": "Godox",
+      "model": "ving v860iif ttl li",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "147634489405",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "",
+      "marketplace_categories": {
+        "ebay_category_id": "48515"
+      },
+      "identity": {
+        "brand": "Godox",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Godox VING V860IIF TTL Li-Ion Flash Kit for Fujifilm Cameras #773",
+        "image": "https://i.ebayimg.com/images/g/XTAAAeSwQYJqzqRB/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "82.05",
+          "currency": "USD",
+          "as_of": "2026-11-28T04:00:55Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/147634489405?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2Buh5twA6WjF7y2rdJiqpCjm7H5dAWq%2BjCBLlZiOmJeiPiPTPbmllbvMaDzFR8qRzQ6GmDSffkVUc8BES2ohNjyX0UUDy2GVUFUBsHhLXQxBbXTOcsLnbcLmkI7coRWC8YYKA6AkGngfLQ9wIDXHKwONOnpWKTN1MUaodzq0uQldhnJ7rNQVP1aJp3OAgQTXdk%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-28T04:00:55Z"
+    },
+    "canon-powershot-g11": {
+      "contamination_key": "canon-powershot-g11",
+      "vendor": "Canon",
+      "model": "powershot g11",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "840161690727",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "body",
+      "marketplace_categories": {
+        "ebay_category_id": "31388"
+      },
+      "identity": {
+        "brand": "Canon",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Canon PowerShot G11 10MP Black Compact Camera 5x Zoom 2.8\" USB w/Charger",
+        "image": "https://i.ebayimg.com/images/g/LbYAAeSwHS1rBX3F/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "399.99",
+          "currency": "USD",
+          "as_of": "2026-11-28T04:03:26Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/840161690727?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde820p%2FLIxeq4AzCtV3dHQUdWtax8JBZprSskk3lQR6lNjfbL9NUsqDGkUti35fEwiSzA0kMzk5qBKN5XGZVBikHAAqEYaqAIRkvOLR6r3ZkTm8dIS5nYNPK0F9bNS5Zcv6Irt569FutLmzDwRVPBWL9bBUg7T5QAe630Prwx8m5Db5msu9DH9mpeIsQTAq70ds%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-28T04:03:26Z"
+    },
+    "manfrotto-546b-aluminum-professional-video": {
+      "contamination_key": "manfrotto-546b-aluminum-professional-video",
+      "vendor": "Manfrotto",
+      "model": "546b aluminum professional video",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "840156752555",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "support",
+      "marketplace_categories": {
+        "ebay_category_id": "30093"
+      },
+      "identity": {
+        "brand": "Manfrotto",
+        "mpn": "546B",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Manfrotto 546B Pro Video Tripod Legs w/ 504HD Fluid Head",
+        "image": "https://i.ebayimg.com/images/g/srQAAeSwfZhq9huf/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "279.99",
+          "currency": "USD",
+          "as_of": "2026-11-28T04:03:48Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/840156752555?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-28T04:03:48Z"
+    },
+    "leica-35mm-f1-4": {
+      "contamination_key": "leica-35mm-f1-4",
+      "vendor": "Leica",
+      "model": "35mm f1.4",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "960221029309",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "lens",
+      "marketplace_categories": {
+        "ebay_category_id": "3323"
+      },
+      "identity": {
+        "brand": "Leica",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "Leica Summilux 35 V2",
+        "image": "https://i.ebayimg.com/images/g/2-AAAeSwMa9rAD9h/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2250.00",
+          "currency": "USD",
+          "as_of": "2026-11-28T04:04:13Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/960221029309?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-28T04:04:13Z"
+    },
+    "hoverair-aqua-orange-fly-fun-waterproof-ai-from-jp": {
+      "contamination_key": "hoverair-aqua-orange-fly-fun-waterproof-ai-from-jp",
+      "vendor": "HoverAir",
+      "model": "AQUA Orange Fly Fun Waterproof AI from JP",
+      "gtin": null,
+      "marketplace_ids": {
+        "ebay_epid": "",
+        "ebay_legacy_item_id": "398295073265",
+        "amazon_asin": null
+      },
+      "unspsc": null,
+      "facet": "drone",
+      "marketplace_categories": {
+        "ebay_category_id": "179697"
+      },
+      "identity": {
+        "brand": "HOVERAir",
+        "mpn": "",
+        "gtin_provenance": {
+          "chosen_source": null,
+          "conflict": false,
+          "observations": []
+        },
+        "market_title": "HOVERAir AQUA Orange Fly Fun Bundle Waterproof Drone AI Camera New from JP",
+        "image": "https://i.ebayimg.com/images/g/ML0AAeSwWihqgsIZ/s-l1600.jpg",
+        "image_catalog": "",
+        "price_seen": {
+          "value": "2176.72",
+          "currency": "USD",
+          "as_of": "2026-11-28T04:46:30Z"
+        }
+      },
+      "affiliate": {
+        "ebay_epn_url": "https://www.ebay.com/itm/398295073265?mkevt=1&mkcid=1&mkrid=711-53200-19255-0&campid=5339138080&customid=&toolid=10050&amdata=enc%3AAQALAAAAoCHNgUiiE%2FjQhlDTaMiAde%2BllgIdvaLV12QVFuTf58qXYlLk5qxnor%2BYW%2BjTC1Y4n8BPcNjKAqP1wPF7NeB7p4UKEXpNX2BYG2Kd9cRBPZbkV0Fp%2F1NBCP%2F%2B3Jux2Me4XdXfnPDnVZvRIfTmcilZMPBuneUwXcbBosuz7MYdWYfrL%2FxedQZKx69CPzrFBmEOCMaozStPwC%2Fgp8v6fkt4XSk%3D",
+        "amazon_asin": null
+      },
+      "needs_review": true,
+      "source": "generated",
+      "minted_needs_review": true,
+      "resolved_at": "2026-11-28T04:46:30Z"
     }
   },
   "substrate": [
